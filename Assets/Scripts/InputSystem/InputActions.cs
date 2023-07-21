@@ -24,7 +24,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     ""name"": ""InputActions"",
     ""maps"": [
         {
-            ""name"": ""InGame"",
+            ""name"": ""Game"",
             ""id"": ""49f89eb3-3731-4013-b482-811d9a50f464"",
             ""actions"": [
                 {
@@ -357,7 +357,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""MouseActions"",
+            ""name"": ""Mouse"",
             ""id"": ""896d2dea-d0ad-464e-9fd0-c4eef17aa433"",
             ""actions"": [
                 {
@@ -539,21 +539,21 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // InGame
-        m_InGame = asset.FindActionMap("InGame", throwIfNotFound: true);
-        m_InGame_Movement = m_InGame.FindAction("Movement", throwIfNotFound: true);
-        m_InGame_Run = m_InGame.FindAction("Run", throwIfNotFound: true);
-        m_InGame_Drop = m_InGame.FindAction("Drop", throwIfNotFound: true);
-        m_InGame_Interaction = m_InGame.FindAction("Interaction", throwIfNotFound: true);
-        m_InGame_ItemInteraction = m_InGame.FindAction("ItemInteraction", throwIfNotFound: true);
-        m_InGame_FocusChange = m_InGame.FindAction("FocusChange", throwIfNotFound: true);
-        m_InGame_TeleportBack = m_InGame.FindAction("TeleportBack", throwIfNotFound: true);
-        m_InGame_TeleportForward = m_InGame.FindAction("TeleportForward", throwIfNotFound: true);
-        // MouseActions
-        m_MouseActions = asset.FindActionMap("MouseActions", throwIfNotFound: true);
-        m_MouseActions_LeftClick = m_MouseActions.FindAction("LeftClick", throwIfNotFound: true);
-        m_MouseActions_RightClick = m_MouseActions.FindAction("RightClick", throwIfNotFound: true);
-        m_MouseActions_MiddleClick = m_MouseActions.FindAction("MiddleClick", throwIfNotFound: true);
+        // Game
+        m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
+        m_Game_Movement = m_Game.FindAction("Movement", throwIfNotFound: true);
+        m_Game_Run = m_Game.FindAction("Run", throwIfNotFound: true);
+        m_Game_Drop = m_Game.FindAction("Drop", throwIfNotFound: true);
+        m_Game_Interaction = m_Game.FindAction("Interaction", throwIfNotFound: true);
+        m_Game_ItemInteraction = m_Game.FindAction("ItemInteraction", throwIfNotFound: true);
+        m_Game_FocusChange = m_Game.FindAction("FocusChange", throwIfNotFound: true);
+        m_Game_TeleportBack = m_Game.FindAction("TeleportBack", throwIfNotFound: true);
+        m_Game_TeleportForward = m_Game.FindAction("TeleportForward", throwIfNotFound: true);
+        // Mouse
+        m_Mouse = asset.FindActionMap("Mouse", throwIfNotFound: true);
+        m_Mouse_LeftClick = m_Mouse.FindAction("LeftClick", throwIfNotFound: true);
+        m_Mouse_RightClick = m_Mouse.FindAction("RightClick", throwIfNotFound: true);
+        m_Mouse_MiddleClick = m_Mouse.FindAction("MiddleClick", throwIfNotFound: true);
         // Inventory
         m_Inventory = asset.FindActionMap("Inventory", throwIfNotFound: true);
         m_Inventory_PreviousItem = m_Inventory.FindAction("PreviousItem", throwIfNotFound: true);
@@ -615,64 +615,64 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // InGame
-    private readonly InputActionMap m_InGame;
-    private IInGameActions m_InGameActionsCallbackInterface;
-    private readonly InputAction m_InGame_Movement;
-    private readonly InputAction m_InGame_Run;
-    private readonly InputAction m_InGame_Drop;
-    private readonly InputAction m_InGame_Interaction;
-    private readonly InputAction m_InGame_ItemInteraction;
-    private readonly InputAction m_InGame_FocusChange;
-    private readonly InputAction m_InGame_TeleportBack;
-    private readonly InputAction m_InGame_TeleportForward;
-    public struct InGameActions
+    // Game
+    private readonly InputActionMap m_Game;
+    private IGameActions m_GameActionsCallbackInterface;
+    private readonly InputAction m_Game_Movement;
+    private readonly InputAction m_Game_Run;
+    private readonly InputAction m_Game_Drop;
+    private readonly InputAction m_Game_Interaction;
+    private readonly InputAction m_Game_ItemInteraction;
+    private readonly InputAction m_Game_FocusChange;
+    private readonly InputAction m_Game_TeleportBack;
+    private readonly InputAction m_Game_TeleportForward;
+    public struct GameActions
     {
         private @InputActions m_Wrapper;
-        public InGameActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_InGame_Movement;
-        public InputAction @Run => m_Wrapper.m_InGame_Run;
-        public InputAction @Drop => m_Wrapper.m_InGame_Drop;
-        public InputAction @Interaction => m_Wrapper.m_InGame_Interaction;
-        public InputAction @ItemInteraction => m_Wrapper.m_InGame_ItemInteraction;
-        public InputAction @FocusChange => m_Wrapper.m_InGame_FocusChange;
-        public InputAction @TeleportBack => m_Wrapper.m_InGame_TeleportBack;
-        public InputAction @TeleportForward => m_Wrapper.m_InGame_TeleportForward;
-        public InputActionMap Get() { return m_Wrapper.m_InGame; }
+        public GameActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_Game_Movement;
+        public InputAction @Run => m_Wrapper.m_Game_Run;
+        public InputAction @Drop => m_Wrapper.m_Game_Drop;
+        public InputAction @Interaction => m_Wrapper.m_Game_Interaction;
+        public InputAction @ItemInteraction => m_Wrapper.m_Game_ItemInteraction;
+        public InputAction @FocusChange => m_Wrapper.m_Game_FocusChange;
+        public InputAction @TeleportBack => m_Wrapper.m_Game_TeleportBack;
+        public InputAction @TeleportForward => m_Wrapper.m_Game_TeleportForward;
+        public InputActionMap Get() { return m_Wrapper.m_Game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(InGameActions set) { return set.Get(); }
-        public void SetCallbacks(IInGameActions instance)
+        public static implicit operator InputActionMap(GameActions set) { return set.Get(); }
+        public void SetCallbacks(IGameActions instance)
         {
-            if (m_Wrapper.m_InGameActionsCallbackInterface != null)
+            if (m_Wrapper.m_GameActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnMovement;
-                @Run.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnRun;
-                @Run.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnRun;
-                @Run.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnRun;
-                @Drop.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnDrop;
-                @Drop.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnDrop;
-                @Drop.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnDrop;
-                @Interaction.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnInteraction;
-                @Interaction.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnInteraction;
-                @Interaction.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnInteraction;
-                @ItemInteraction.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnItemInteraction;
-                @ItemInteraction.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnItemInteraction;
-                @ItemInteraction.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnItemInteraction;
-                @FocusChange.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnFocusChange;
-                @FocusChange.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnFocusChange;
-                @FocusChange.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnFocusChange;
-                @TeleportBack.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnTeleportBack;
-                @TeleportBack.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnTeleportBack;
-                @TeleportBack.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnTeleportBack;
-                @TeleportForward.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnTeleportForward;
-                @TeleportForward.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnTeleportForward;
-                @TeleportForward.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnTeleportForward;
+                @Movement.started -= m_Wrapper.m_GameActionsCallbackInterface.OnMovement;
+                @Movement.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnMovement;
+                @Movement.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnMovement;
+                @Run.started -= m_Wrapper.m_GameActionsCallbackInterface.OnRun;
+                @Run.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnRun;
+                @Run.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnRun;
+                @Drop.started -= m_Wrapper.m_GameActionsCallbackInterface.OnDrop;
+                @Drop.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnDrop;
+                @Drop.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnDrop;
+                @Interaction.started -= m_Wrapper.m_GameActionsCallbackInterface.OnInteraction;
+                @Interaction.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnInteraction;
+                @Interaction.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnInteraction;
+                @ItemInteraction.started -= m_Wrapper.m_GameActionsCallbackInterface.OnItemInteraction;
+                @ItemInteraction.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnItemInteraction;
+                @ItemInteraction.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnItemInteraction;
+                @FocusChange.started -= m_Wrapper.m_GameActionsCallbackInterface.OnFocusChange;
+                @FocusChange.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnFocusChange;
+                @FocusChange.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnFocusChange;
+                @TeleportBack.started -= m_Wrapper.m_GameActionsCallbackInterface.OnTeleportBack;
+                @TeleportBack.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnTeleportBack;
+                @TeleportBack.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnTeleportBack;
+                @TeleportForward.started -= m_Wrapper.m_GameActionsCallbackInterface.OnTeleportForward;
+                @TeleportForward.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnTeleportForward;
+                @TeleportForward.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnTeleportForward;
             }
-            m_Wrapper.m_InGameActionsCallbackInterface = instance;
+            m_Wrapper.m_GameActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @Movement.started += instance.OnMovement;
@@ -702,41 +702,41 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
             }
         }
     }
-    public InGameActions @InGame => new InGameActions(this);
+    public GameActions @Game => new GameActions(this);
 
-    // MouseActions
-    private readonly InputActionMap m_MouseActions;
-    private IMouseActionsActions m_MouseActionsActionsCallbackInterface;
-    private readonly InputAction m_MouseActions_LeftClick;
-    private readonly InputAction m_MouseActions_RightClick;
-    private readonly InputAction m_MouseActions_MiddleClick;
-    public struct MouseActionsActions
+    // Mouse
+    private readonly InputActionMap m_Mouse;
+    private IMouseActions m_MouseActionsCallbackInterface;
+    private readonly InputAction m_Mouse_LeftClick;
+    private readonly InputAction m_Mouse_RightClick;
+    private readonly InputAction m_Mouse_MiddleClick;
+    public struct MouseActions
     {
         private @InputActions m_Wrapper;
-        public MouseActionsActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @LeftClick => m_Wrapper.m_MouseActions_LeftClick;
-        public InputAction @RightClick => m_Wrapper.m_MouseActions_RightClick;
-        public InputAction @MiddleClick => m_Wrapper.m_MouseActions_MiddleClick;
-        public InputActionMap Get() { return m_Wrapper.m_MouseActions; }
+        public MouseActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @LeftClick => m_Wrapper.m_Mouse_LeftClick;
+        public InputAction @RightClick => m_Wrapper.m_Mouse_RightClick;
+        public InputAction @MiddleClick => m_Wrapper.m_Mouse_MiddleClick;
+        public InputActionMap Get() { return m_Wrapper.m_Mouse; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MouseActionsActions set) { return set.Get(); }
-        public void SetCallbacks(IMouseActionsActions instance)
+        public static implicit operator InputActionMap(MouseActions set) { return set.Get(); }
+        public void SetCallbacks(IMouseActions instance)
         {
-            if (m_Wrapper.m_MouseActionsActionsCallbackInterface != null)
+            if (m_Wrapper.m_MouseActionsCallbackInterface != null)
             {
-                @LeftClick.started -= m_Wrapper.m_MouseActionsActionsCallbackInterface.OnLeftClick;
-                @LeftClick.performed -= m_Wrapper.m_MouseActionsActionsCallbackInterface.OnLeftClick;
-                @LeftClick.canceled -= m_Wrapper.m_MouseActionsActionsCallbackInterface.OnLeftClick;
-                @RightClick.started -= m_Wrapper.m_MouseActionsActionsCallbackInterface.OnRightClick;
-                @RightClick.performed -= m_Wrapper.m_MouseActionsActionsCallbackInterface.OnRightClick;
-                @RightClick.canceled -= m_Wrapper.m_MouseActionsActionsCallbackInterface.OnRightClick;
-                @MiddleClick.started -= m_Wrapper.m_MouseActionsActionsCallbackInterface.OnMiddleClick;
-                @MiddleClick.performed -= m_Wrapper.m_MouseActionsActionsCallbackInterface.OnMiddleClick;
-                @MiddleClick.canceled -= m_Wrapper.m_MouseActionsActionsCallbackInterface.OnMiddleClick;
+                @LeftClick.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnLeftClick;
+                @LeftClick.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnLeftClick;
+                @LeftClick.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnLeftClick;
+                @RightClick.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnRightClick;
+                @RightClick.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnRightClick;
+                @RightClick.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnRightClick;
+                @MiddleClick.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnMiddleClick;
+                @MiddleClick.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnMiddleClick;
+                @MiddleClick.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnMiddleClick;
             }
-            m_Wrapper.m_MouseActionsActionsCallbackInterface = instance;
+            m_Wrapper.m_MouseActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @LeftClick.started += instance.OnLeftClick;
@@ -751,7 +751,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
             }
         }
     }
-    public MouseActionsActions @MouseActions => new MouseActionsActions(this);
+    public MouseActions @Mouse => new MouseActions(this);
 
     // Inventory
     private readonly InputActionMap m_Inventory;
@@ -801,7 +801,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         }
     }
     public InventoryActions @Inventory => new InventoryActions(this);
-    public interface IInGameActions
+    public interface IGameActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
@@ -812,7 +812,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnTeleportBack(InputAction.CallbackContext context);
         void OnTeleportForward(InputAction.CallbackContext context);
     }
-    public interface IMouseActionsActions
+    public interface IMouseActions
     {
         void OnLeftClick(InputAction.CallbackContext context);
         void OnRightClick(InputAction.CallbackContext context);
