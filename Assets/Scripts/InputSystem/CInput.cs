@@ -1,12 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace InputSystem {
-    public class CInput {
-        private static InputActions _inputActions;
+    public static class CInput {
+        public static readonly InputActions InputActions;
         
-        static CInput() {}
+        public static Vector2 MovementAxis => InputActions.InGame.Movement.ReadValue<Vector2>();
+        public static float Run => InputActions.InGame.Run.ReadValue<float>();
+
+        static CInput() {
+            InputActions = new InputActions();
+            InputActions.Enable();
+        }
     }
 }
 
