@@ -7,7 +7,12 @@ public class TeleportToAnotherLevel : MonoBehaviour
 	[SerializeField] private LevelInfoSO levelInfo;
 
 	private void OnTriggerEnter2D(Collider2D collision) {
-		LevelsManager.Instance.LoadLevels(levelInfo);
+		ChangeLevel(levelInfo);
+	}
+
+	private void ChangeLevel(LevelInfoSO levelInfo) {
+		LevelsManager.Instance.ChangeLevel(levelInfo);
+
 	}
 
 }
