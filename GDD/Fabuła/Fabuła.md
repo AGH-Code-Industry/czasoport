@@ -9,13 +9,15 @@
 
 ---
 
-## Główna Historia
+## Zarys Fabularny
 
-1. Ucieczka z kolonii kontrolowanej przez kosmitów
-1. Odnalezienie opuzczonego obozowiska ruchu oporu, w którym jest informacja o położeniu pracowni naukowca
-1. Wycieczka do pracowni naukowca
-1. Cofnięcie się do roku 2137 w pracowni
-1. Pokonanie naukowca- BOSSFIGHT
+Daleka przyszłość, Ziemia wynalazła technologię umożliwiającą podróż w czasoprzestrzeni, ale w tym czasie zaczęło brakować im surowców. Inne planety systemu słonecznego okazały się nieadekwatne do życia lub produkcji.
+Aby rozwiązać problem, Rada Czasoprzestrzeni wysyła swoich pracowników na inne planety, w innych czasoprzestrzeniach, aby przejęli ich surowce. 
+Ci funkcjonariusze potrafią przemieszczać się po różnych czasach cywilizacji na tej planecie, aby manipulować ich rozwój w taki sposób, aby produkowała ona duże ilości pożądanego surowca. Ostatecznie, Ziemianie kradną te surowce, przez co cywilizacje widzą ich jako kosmitów.
+
+Gracz jest aspirującym funkcjonariuszem Rady Czasoprzestrzeni i jako egzamin wstępny wysłany zostaje na planetę niskiej wartości, która bez pomocy ulegnie zagładzie. Jeżeli graczowi się uda ją uratować, Ziemia zyska surowce i nowego funkcjonariusza. Jeżeli nie, trudno, ta planeta nie jest tak ważna, a gracz najwyżej nie zostanie przyjęty do pracy :(.
+
+[Stworzenie szczegółowej fabuły zajmie trochę dłużej]
 
 ---
 
