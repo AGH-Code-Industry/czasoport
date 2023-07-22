@@ -12,12 +12,15 @@
 ## Zarys Fabularny
 
 Daleka przyszłość, Ziemia wynalazła technologię umożliwiającą podróż w czasoprzestrzeni, ale w tym czasie zaczęło brakować im surowców. Inne planety systemu słonecznego okazały się nieadekwatne do życia lub produkcji.
-Aby rozwiązać problem, Rada Czasoprzestrzeni wysyła swoich pracowników na inne planety, w innych czasoprzestrzeniach, aby przejęli ich surowce. 
-Ci funkcjonariusze potrafią przemieszczać się po różnych czasach cywilizacji na tej planecie, aby manipulować ich rozwój w taki sposób, aby produkowała ona duże ilości pożądanego surowca. Ostatecznie, Ziemianie kradną te surowce, przez co cywilizacje widzą ich jako kosmitów.
+Aby rozwiązać problem, Rada Czasoprzestrzeni, wysyła swoich pracowników na inne planety, w innych czasoprzestrzeniach, aby przejęli ich surowce. 
 
-Gracz jest aspirującym funkcjonariuszem Rady Czasoprzestrzeni i jako egzamin wstępny wysłany zostaje na planetę niskiej wartości, która bez pomocy ulegnie zagładzie. Jeżeli graczowi się uda ją uratować, Ziemia zyska surowce i nowego funkcjonariusza. Jeżeli nie, trudno, ta planeta nie jest tak ważna, a gracz najwyżej nie zostanie przyjęty do pracy :(.
+Ci funkcjonariusze potrafią przemieszczać się po różnych czasach cywilizacji na tej planecie, aby manipulować ich rozwój w taki sposób, aby produkowała ona duże ilości pożądanego surowca. Ostatecznie, Ziemianie kradną te surowce, przez co cywilizacje widzą ich jako kosmitów. (Przykładowo, ziemianie kradną zboże przenosząc je na Ziemie w sposób, który tworzy kręgi w zbożu).
+
+Gracz jest aspirującym funkcjonariuszem Rady Czasoprzestrzeni i jako egzamin wstępny wysłany zostaje na planetę niskiej wartości, która bez pomocy ulegnie zagładzie. Jeżeli graczowi się uda ją uratować, Ziemia zyska surowce i nowego funkcjonariusza. Jeżeli nie, trudno, ta planeta nie jest tak ważna, a gracz najwyżej nie zostanie przyjęty do pracy :(
 
 (Stworzenie szczegółowej fabuły zajmie trochę dłużej)
+
+(To, jak dokładnie działa i funkcjonuje Rada Czasoprzestrzeni nie jest zbyt ważne na ten moment. Jeżeli graficy chcą stworzyć jakiś concept art to mogą dać ponieść się wyobraźni, ale ważniejszy jest świat obcy, na którym gracz będzie przez praktycznie całą rozgrywkę)
 
 ---
 
