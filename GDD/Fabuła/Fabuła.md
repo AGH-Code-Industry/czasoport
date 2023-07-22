@@ -5,7 +5,7 @@
 ---
 
 ## Motyw
-***Powstrzymaj naukowca przed wynalezieniem podróży w czasie i zmień bieg wydarzeń, żeby ocalić świat przed inwazją kosmitów.***
+***Jesteś aspirującym funkcjonariuszem Rady Czasoprzestrzeni. Jako egzemin wstępny musisz "uratować" mało znaczący świat przed zagładą.***
 
 ---
 
@@ -17,27 +17,37 @@ Ci funkcjonariusze potrafią przemieszczać się po różnych czasach cywilizacj
 
 Gracz jest aspirującym funkcjonariuszem Rady Czasoprzestrzeni i jako egzamin wstępny wysłany zostaje na planetę niskiej wartości, która bez pomocy ulegnie zagładzie. Jeżeli graczowi się uda ją uratować, Ziemia zyska surowce i nowego funkcjonariusza. Jeżeli nie, trudno, ta planeta nie jest tak ważna, a gracz najwyżej nie zostanie przyjęty do pracy :(.
 
-[Stworzenie szczegółowej fabuły zajmie trochę dłużej]
+(Stworzenie szczegółowej fabuły zajmie trochę dłużej)
 
 ---
 
 ## Progresja Historii
-1. Naukowiec tak naprawdę stworzył czasoport żeby zapobiec apokalipsie - czy go zabijasz czy nie
+
+Do napisania
+
+(Stworzenie szczegółowej fabuły zajmie trochę dłużej)
 
 ---
 
 ## Miejsca Akcji
 
+Przykładowe pomysły:
+1. pola/przedmieścia/zrujnowane budynki
+1. wioska/miasto/zniszczona metropolia
+1. centrum wioski/rynek/pobojowisko
+1. las/park/spalony park
+1. jaskinia/kopalnia/zawalona jaskinia
+
 ### Intro
 
 Pierwsza lokalizacja z którą ma do czynienia gracz, jak również jedyna planowana lokacja do demo gry.
 
- - `Early` - chata małej rodziny uprawiającej pole, piesek, miła atmosfera, obok las
- - `Mid` - karczma, plac przed karczmą, miejsce dla koników, atmosfera przyjemna, gwarna, czuć toczące się wokół życie
- - `Late` - kolonia ludzi, druciane ogrodzenie, w tle krematorium, atmosfera niepewności, desperacji, smutku, śmierci
+ - `Początki` - pola rolnicze z namiotami nieopodal. 
+ - `Złoty Wiek` - przedmieścia tętniące życiem nie różniącym się zbytnio od dzisiejszego, ziemskiego.
+ - `Upadek` - zawalony mur graniczny, spalony punkt kontrolny. Kilka domów w złym stanie nieopodal.
 
 ---
 
 ## Lore
 
-Na skutek kontynuowania zakazanych prac nad podróżą w czasie, jednemu z naukowców udało się stworzyć urządzenie pozwalające posiadaczowi podróżować w czasoprzestrzeni. Spowodowało to liczne anomalie w czasoprzestrzeni, na skutek czego świat został zaatakowany i zajęty przez kosmitów. Ludzie żyją teraz w koloniach kontrolowanych przez kosmitów, a ci którzy nie chcą się podporządkować, ukrywają się w lasach i ruinach.
+To później.

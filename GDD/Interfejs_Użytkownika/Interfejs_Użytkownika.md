@@ -2,6 +2,9 @@
 ### [<-- GDD](/GDD/GDD.md)
 
 ---
+Minimalny, podobnie jak kontrole.
+Gracz na ekranie widzi hotbar (ekwipunek).
+Gdy zbliży się do obiektu z którym może wejść w interakcję, ten obiekt może otoczyć outline.
 ---
 
 ## Rozgrywka
