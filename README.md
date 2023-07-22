@@ -3,19 +3,19 @@
 ## Opis świata Gry
 
 Świat gry podzielony jest na 3 przestrzenie czasowe:
- - Okres osadnictwa, dominują tam wydeptane szlaki, lasy, pola, małe osady, domki z gliny, pierwsze uprawy, itp.
- - Okres średniowiecza, dominują tam twierdze, wioski, rycerze, wsie, konie, itp.
- - Apokaliptyczna przyszłość, dominują tam ruiny, wody zanieczyszczone kwasem, skażona atmosefera, itp.
+ - początki cywilizacji - dominują tam wydeptane szlaki, lasy, pola, małe osady, namioty z liści, domki z gliny, pierwsze uprawy, itp.
+ - złoty wiek cywilizacji - dominują tam twierdze, miasta, świątynie, wsie, itp.
+ - upadek cywilizacji - dominują tam ruiny, wody zanieczyszczone kwasem, skażona atmosefera, ogólny niepokój, itp.
 
 Składa się on z wielu plansz przedstawiających pojedyczne lokalizacje, pomiędzy którymi gracz może swobodnie się przemieszczać.
 
-Na niektórych planszach przeszkadzać nam będą przeciwnicy, których bohater musi konsekwentnie pokonywać, by przedostać się dalej.
+Niektóre plansze przeznaczone będą do eksploracji, a niektóre stawiać będą przed graczem przeszkody.
 
 ---
 
 ## Główny Bohater
 
-`Grizlok`, kandydat na stażystę `komisji czasoprzestrzennej`. Jest przedstawicielem rasy `Umugluboków`.
+Bezimienny kandydat na stażystę `Komisji Czasoprzestrzennej`. W przeciwieństwie do reszty postaci spotkanych podczas rozgrywki jest człowiekiem.
 
 ---
 
@@ -23,13 +23,15 @@ Na niektórych planszach przeszkadzać nam będą przeciwnicy, których bohater 
 
 ![view_example1](./GDD/assets/view_example.jpg)
 ![view_example2](./GDD/assets/view_example2.png)
+![view_example2](./GDD/assets/deathsdoor.jpg)
+![view_example2](./GDD/assets/tunic.png)
 
 ---
 
 ## Gatunek oraz Styl
 
-- **Gatunek** - Fantasy Adventure
-- **Rodzaj Grafiki** - 2.5D, do ustalanie z grafikami
+- **Gatunek** - Future Fantasy Adventure and Puzzle
+- **Rodzaj Grafiki** - 2.5D, styl wykonania do ustalanie z grafikami
 - **Widok** - Isometryczny
 
 ---
