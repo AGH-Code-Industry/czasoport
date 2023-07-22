@@ -24,11 +24,11 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     ""name"": ""InputActions"",
     ""maps"": [
         {
-            ""name"": ""Game"",
+            ""name"": ""Movement"",
             ""id"": ""49f89eb3-3731-4013-b482-811d9a50f464"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""Navigation"",
                     ""type"": ""Value"",
                     ""id"": ""b1198fdf-2896-4189-96b8-c10c220e96eb"",
                     ""expectedControlType"": ""Vector2"",
@@ -63,7 +63,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Navigation"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -74,7 +74,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -85,7 +85,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -96,7 +96,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -107,7 +107,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -118,7 +118,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Navigation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -575,11 +575,11 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // Game
-        m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
-        m_Game_Movement = m_Game.FindAction("Movement", throwIfNotFound: true);
-        m_Game_Run = m_Game.FindAction("Run", throwIfNotFound: true);
-        m_Game_FocusChange = m_Game.FindAction("FocusChange", throwIfNotFound: true);
+        // Movement
+        m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
+        m_Movement_Navigation = m_Movement.FindAction("Navigation", throwIfNotFound: true);
+        m_Movement_Run = m_Movement.FindAction("Run", throwIfNotFound: true);
+        m_Movement_FocusChange = m_Movement.FindAction("FocusChange", throwIfNotFound: true);
         // Mouse
         m_Mouse = asset.FindActionMap("Mouse", throwIfNotFound: true);
         m_Mouse_LeftClick = m_Mouse.FindAction("LeftClick", throwIfNotFound: true);
@@ -656,44 +656,44 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Game
-    private readonly InputActionMap m_Game;
-    private IGameActions m_GameActionsCallbackInterface;
-    private readonly InputAction m_Game_Movement;
-    private readonly InputAction m_Game_Run;
-    private readonly InputAction m_Game_FocusChange;
-    public struct GameActions
+    // Movement
+    private readonly InputActionMap m_Movement;
+    private IMovementActions m_MovementActionsCallbackInterface;
+    private readonly InputAction m_Movement_Navigation;
+    private readonly InputAction m_Movement_Run;
+    private readonly InputAction m_Movement_FocusChange;
+    public struct MovementActions
     {
         private @InputActions m_Wrapper;
-        public GameActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Game_Movement;
-        public InputAction @Run => m_Wrapper.m_Game_Run;
-        public InputAction @FocusChange => m_Wrapper.m_Game_FocusChange;
-        public InputActionMap Get() { return m_Wrapper.m_Game; }
+        public MovementActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Navigation => m_Wrapper.m_Movement_Navigation;
+        public InputAction @Run => m_Wrapper.m_Movement_Run;
+        public InputAction @FocusChange => m_Wrapper.m_Movement_FocusChange;
+        public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(GameActions set) { return set.Get(); }
-        public void SetCallbacks(IGameActions instance)
+        public static implicit operator InputActionMap(MovementActions set) { return set.Get(); }
+        public void SetCallbacks(IMovementActions instance)
         {
-            if (m_Wrapper.m_GameActionsCallbackInterface != null)
+            if (m_Wrapper.m_MovementActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_GameActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnMovement;
-                @Run.started -= m_Wrapper.m_GameActionsCallbackInterface.OnRun;
-                @Run.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnRun;
-                @Run.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnRun;
-                @FocusChange.started -= m_Wrapper.m_GameActionsCallbackInterface.OnFocusChange;
-                @FocusChange.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnFocusChange;
-                @FocusChange.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnFocusChange;
+                @Navigation.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnNavigation;
+                @Navigation.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnNavigation;
+                @Navigation.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnNavigation;
+                @Run.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnRun;
+                @Run.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnRun;
+                @Run.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnRun;
+                @FocusChange.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnFocusChange;
+                @FocusChange.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnFocusChange;
+                @FocusChange.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnFocusChange;
             }
-            m_Wrapper.m_GameActionsCallbackInterface = instance;
+            m_Wrapper.m_MovementActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
+                @Navigation.started += instance.OnNavigation;
+                @Navigation.performed += instance.OnNavigation;
+                @Navigation.canceled += instance.OnNavigation;
                 @Run.started += instance.OnRun;
                 @Run.performed += instance.OnRun;
                 @Run.canceled += instance.OnRun;
@@ -703,7 +703,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
             }
         }
     }
-    public GameActions @Game => new GameActions(this);
+    public MovementActions @Movement => new MovementActions(this);
 
     // Mouse
     private readonly InputActionMap m_Mouse;
@@ -900,9 +900,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         }
     }
     public InteractionsActions @Interactions => new InteractionsActions(this);
-    public interface IGameActions
+    public interface IMovementActions
     {
-        void OnMovement(InputAction.CallbackContext context);
+        void OnNavigation(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnFocusChange(InputAction.CallbackContext context);
     }
