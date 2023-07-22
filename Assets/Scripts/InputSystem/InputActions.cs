@@ -46,54 +46,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Drop"",
-                    ""type"": ""Button"",
-                    ""id"": ""3aeff08e-fbf7-44b3-99f0-b2581f919074"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Interaction"",
-                    ""type"": ""Button"",
-                    ""id"": ""43bda85d-a00d-4514-a112-958942853560"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""ItemInteraction"",
-                    ""type"": ""Button"",
-                    ""id"": ""58c047e7-7749-44ee-bd0a-5e19d5c9d74d"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""FocusChange"",
                     ""type"": ""Button"",
                     ""id"": ""78620b48-2da2-4144-a11a-779fed0bc172"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""TeleportBack"",
-                    ""type"": ""Button"",
-                    ""id"": ""0992c2cc-9831-473f-8c1d-631410f4c720"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""TeleportForward"",
-                    ""type"": ""Button"",
-                    ""id"": ""241f9ba6-1e29-424b-a35a-20d9a34dc0df"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -191,94 +146,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ef592088-b748-4cb8-8cbb-ea2cbfb1fc05"",
-                    ""path"": ""<Keyboard>/g"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Drop"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9152ba81-6ee1-4129-bf70-3107d9649fe7"",
-                    ""path"": ""<Gamepad>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Drop"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9785180c-4ce7-4c55-8847-abbceac9e519"",
-                    ""path"": ""<Keyboard>/f"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Interaction"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""daec9ef8-ec9a-4731-865b-6f5836bf6f85"",
-                    ""path"": ""<Keyboard>/j"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Interaction"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""949136cf-0e62-4b84-8396-ada91ea27294"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Interaction"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0186eb7e-ec43-489d-b8c6-d2c06b40fb29"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ItemInteraction"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""97644428-7cab-4a02-beeb-3e3305d61c6d"",
-                    ""path"": ""<Keyboard>/k"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ItemInteraction"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""509998dc-cd48-46a2-9cfc-2afd3be0c259"",
-                    ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ItemInteraction"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""3d252635-92c4-4f8f-b9a6-d7c56f47b60d"",
                     ""path"": ""<Keyboard>/v"",
                     ""interactions"": """",
@@ -307,50 +174,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""FocusChange"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f699573e-b6cf-41a1-af87-09b2fbdc5160"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""TeleportBack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""82b59ed7-5954-4c6c-b436-c399e9c7917e"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""TeleportBack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0e732f23-133a-4fab-9ada-73230c34c36b"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""TeleportForward"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0dfd71be-6913-4fac-953a-ccb51b2a2d72"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""TeleportForward"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -386,6 +209,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MousePosition"",
+                    ""type"": ""Value"",
+                    ""id"": ""708a0841-f61a-4bb3-81fa-74876be3d530"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -421,6 +253,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""MiddleClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""47faa8ef-3b9f-481c-987e-05b60ada6552"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -450,6 +293,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""name"": ""ChooseItem"",
                     ""type"": ""Button"",
                     ""id"": ""bd5a2519-8e0c-4e50-9277-29a60aed0704"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Drop"",
+                    ""type"": ""Button"",
+                    ""id"": ""a3434d3e-8c03-486c-a645-7cc926d60ab7"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -533,6 +385,190 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""ChooseItem"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0d4379f7-bcaf-41b7-99d9-e04d9c490500"",
+                    ""path"": ""<Keyboard>/g"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drop"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0f1326ce-b58b-4759-b807-14cde7ccef06"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drop"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Teleport"",
+            ""id"": ""6ccf2c11-001c-43f8-8527-693c643c409d"",
+            ""actions"": [
+                {
+                    ""name"": ""TeleportBack"",
+                    ""type"": ""Button"",
+                    ""id"": ""6507383e-b573-45f7-bb3b-21b5e8d37c6b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TeleportForward"",
+                    ""type"": ""Button"",
+                    ""id"": ""d2a680eb-4e3f-47d1-b0a7-c6b40fbe393b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""2610a022-4ed5-465f-823b-d9734c42ba08"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TeleportBack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6d3cd4d7-b0ec-451b-9405-307d5e7bbdb4"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TeleportBack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e254c626-ad00-43e0-b4fe-a27e3e13b3af"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TeleportForward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0f4f6676-6872-454a-9af5-253fc16f338c"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TeleportForward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Interactions"",
+            ""id"": ""4f600a2c-bc54-4477-97dc-41a103db97c8"",
+            ""actions"": [
+                {
+                    ""name"": ""Interaction"",
+                    ""type"": ""Button"",
+                    ""id"": ""cd0cc705-f3d7-4e40-b9ca-39aed3abc820"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ItemInteraction"",
+                    ""type"": ""Button"",
+                    ""id"": ""4d7a8354-4b10-40f6-8c8a-000e914a019b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""dab1e5ac-df9b-4a96-ba30-580c175dcf48"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9e758873-e747-4ceb-916c-0a207cbfd8a9"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5f95537c-2525-4a23-a3e2-37e5672e5bdd"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4aca212e-2e55-4f51-a83f-08a8fa032922"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f0e3eeb5-4383-4748-9ae5-e7bf829c4e54"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e6b69d0a-a5b0-4027-b597-3debd9f8330d"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -543,22 +579,27 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
         m_Game_Movement = m_Game.FindAction("Movement", throwIfNotFound: true);
         m_Game_Run = m_Game.FindAction("Run", throwIfNotFound: true);
-        m_Game_Drop = m_Game.FindAction("Drop", throwIfNotFound: true);
-        m_Game_Interaction = m_Game.FindAction("Interaction", throwIfNotFound: true);
-        m_Game_ItemInteraction = m_Game.FindAction("ItemInteraction", throwIfNotFound: true);
         m_Game_FocusChange = m_Game.FindAction("FocusChange", throwIfNotFound: true);
-        m_Game_TeleportBack = m_Game.FindAction("TeleportBack", throwIfNotFound: true);
-        m_Game_TeleportForward = m_Game.FindAction("TeleportForward", throwIfNotFound: true);
         // Mouse
         m_Mouse = asset.FindActionMap("Mouse", throwIfNotFound: true);
         m_Mouse_LeftClick = m_Mouse.FindAction("LeftClick", throwIfNotFound: true);
         m_Mouse_RightClick = m_Mouse.FindAction("RightClick", throwIfNotFound: true);
         m_Mouse_MiddleClick = m_Mouse.FindAction("MiddleClick", throwIfNotFound: true);
+        m_Mouse_MousePosition = m_Mouse.FindAction("MousePosition", throwIfNotFound: true);
         // Inventory
         m_Inventory = asset.FindActionMap("Inventory", throwIfNotFound: true);
         m_Inventory_PreviousItem = m_Inventory.FindAction("PreviousItem", throwIfNotFound: true);
         m_Inventory_NextItem = m_Inventory.FindAction("NextItem", throwIfNotFound: true);
         m_Inventory_ChooseItem = m_Inventory.FindAction("ChooseItem", throwIfNotFound: true);
+        m_Inventory_Drop = m_Inventory.FindAction("Drop", throwIfNotFound: true);
+        // Teleport
+        m_Teleport = asset.FindActionMap("Teleport", throwIfNotFound: true);
+        m_Teleport_TeleportBack = m_Teleport.FindAction("TeleportBack", throwIfNotFound: true);
+        m_Teleport_TeleportForward = m_Teleport.FindAction("TeleportForward", throwIfNotFound: true);
+        // Interactions
+        m_Interactions = asset.FindActionMap("Interactions", throwIfNotFound: true);
+        m_Interactions_Interaction = m_Interactions.FindAction("Interaction", throwIfNotFound: true);
+        m_Interactions_ItemInteraction = m_Interactions.FindAction("ItemInteraction", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -620,24 +661,14 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private IGameActions m_GameActionsCallbackInterface;
     private readonly InputAction m_Game_Movement;
     private readonly InputAction m_Game_Run;
-    private readonly InputAction m_Game_Drop;
-    private readonly InputAction m_Game_Interaction;
-    private readonly InputAction m_Game_ItemInteraction;
     private readonly InputAction m_Game_FocusChange;
-    private readonly InputAction m_Game_TeleportBack;
-    private readonly InputAction m_Game_TeleportForward;
     public struct GameActions
     {
         private @InputActions m_Wrapper;
         public GameActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Game_Movement;
         public InputAction @Run => m_Wrapper.m_Game_Run;
-        public InputAction @Drop => m_Wrapper.m_Game_Drop;
-        public InputAction @Interaction => m_Wrapper.m_Game_Interaction;
-        public InputAction @ItemInteraction => m_Wrapper.m_Game_ItemInteraction;
         public InputAction @FocusChange => m_Wrapper.m_Game_FocusChange;
-        public InputAction @TeleportBack => m_Wrapper.m_Game_TeleportBack;
-        public InputAction @TeleportForward => m_Wrapper.m_Game_TeleportForward;
         public InputActionMap Get() { return m_Wrapper.m_Game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -653,24 +684,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Run.started -= m_Wrapper.m_GameActionsCallbackInterface.OnRun;
                 @Run.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnRun;
                 @Run.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnRun;
-                @Drop.started -= m_Wrapper.m_GameActionsCallbackInterface.OnDrop;
-                @Drop.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnDrop;
-                @Drop.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnDrop;
-                @Interaction.started -= m_Wrapper.m_GameActionsCallbackInterface.OnInteraction;
-                @Interaction.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnInteraction;
-                @Interaction.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnInteraction;
-                @ItemInteraction.started -= m_Wrapper.m_GameActionsCallbackInterface.OnItemInteraction;
-                @ItemInteraction.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnItemInteraction;
-                @ItemInteraction.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnItemInteraction;
                 @FocusChange.started -= m_Wrapper.m_GameActionsCallbackInterface.OnFocusChange;
                 @FocusChange.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnFocusChange;
                 @FocusChange.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnFocusChange;
-                @TeleportBack.started -= m_Wrapper.m_GameActionsCallbackInterface.OnTeleportBack;
-                @TeleportBack.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnTeleportBack;
-                @TeleportBack.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnTeleportBack;
-                @TeleportForward.started -= m_Wrapper.m_GameActionsCallbackInterface.OnTeleportForward;
-                @TeleportForward.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnTeleportForward;
-                @TeleportForward.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnTeleportForward;
             }
             m_Wrapper.m_GameActionsCallbackInterface = instance;
             if (instance != null)
@@ -681,24 +697,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Run.started += instance.OnRun;
                 @Run.performed += instance.OnRun;
                 @Run.canceled += instance.OnRun;
-                @Drop.started += instance.OnDrop;
-                @Drop.performed += instance.OnDrop;
-                @Drop.canceled += instance.OnDrop;
-                @Interaction.started += instance.OnInteraction;
-                @Interaction.performed += instance.OnInteraction;
-                @Interaction.canceled += instance.OnInteraction;
-                @ItemInteraction.started += instance.OnItemInteraction;
-                @ItemInteraction.performed += instance.OnItemInteraction;
-                @ItemInteraction.canceled += instance.OnItemInteraction;
                 @FocusChange.started += instance.OnFocusChange;
                 @FocusChange.performed += instance.OnFocusChange;
                 @FocusChange.canceled += instance.OnFocusChange;
-                @TeleportBack.started += instance.OnTeleportBack;
-                @TeleportBack.performed += instance.OnTeleportBack;
-                @TeleportBack.canceled += instance.OnTeleportBack;
-                @TeleportForward.started += instance.OnTeleportForward;
-                @TeleportForward.performed += instance.OnTeleportForward;
-                @TeleportForward.canceled += instance.OnTeleportForward;
             }
         }
     }
@@ -710,6 +711,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Mouse_LeftClick;
     private readonly InputAction m_Mouse_RightClick;
     private readonly InputAction m_Mouse_MiddleClick;
+    private readonly InputAction m_Mouse_MousePosition;
     public struct MouseActions
     {
         private @InputActions m_Wrapper;
@@ -717,6 +719,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @LeftClick => m_Wrapper.m_Mouse_LeftClick;
         public InputAction @RightClick => m_Wrapper.m_Mouse_RightClick;
         public InputAction @MiddleClick => m_Wrapper.m_Mouse_MiddleClick;
+        public InputAction @MousePosition => m_Wrapper.m_Mouse_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_Mouse; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -735,6 +738,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @MiddleClick.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnMiddleClick;
                 @MiddleClick.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnMiddleClick;
                 @MiddleClick.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnMiddleClick;
+                @MousePosition.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnMousePosition;
+                @MousePosition.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnMousePosition;
+                @MousePosition.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnMousePosition;
             }
             m_Wrapper.m_MouseActionsCallbackInterface = instance;
             if (instance != null)
@@ -748,6 +754,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @MiddleClick.started += instance.OnMiddleClick;
                 @MiddleClick.performed += instance.OnMiddleClick;
                 @MiddleClick.canceled += instance.OnMiddleClick;
+                @MousePosition.started += instance.OnMousePosition;
+                @MousePosition.performed += instance.OnMousePosition;
+                @MousePosition.canceled += instance.OnMousePosition;
             }
         }
     }
@@ -759,6 +768,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Inventory_PreviousItem;
     private readonly InputAction m_Inventory_NextItem;
     private readonly InputAction m_Inventory_ChooseItem;
+    private readonly InputAction m_Inventory_Drop;
     public struct InventoryActions
     {
         private @InputActions m_Wrapper;
@@ -766,6 +776,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @PreviousItem => m_Wrapper.m_Inventory_PreviousItem;
         public InputAction @NextItem => m_Wrapper.m_Inventory_NextItem;
         public InputAction @ChooseItem => m_Wrapper.m_Inventory_ChooseItem;
+        public InputAction @Drop => m_Wrapper.m_Inventory_Drop;
         public InputActionMap Get() { return m_Wrapper.m_Inventory; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -784,6 +795,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @ChooseItem.started -= m_Wrapper.m_InventoryActionsCallbackInterface.OnChooseItem;
                 @ChooseItem.performed -= m_Wrapper.m_InventoryActionsCallbackInterface.OnChooseItem;
                 @ChooseItem.canceled -= m_Wrapper.m_InventoryActionsCallbackInterface.OnChooseItem;
+                @Drop.started -= m_Wrapper.m_InventoryActionsCallbackInterface.OnDrop;
+                @Drop.performed -= m_Wrapper.m_InventoryActionsCallbackInterface.OnDrop;
+                @Drop.canceled -= m_Wrapper.m_InventoryActionsCallbackInterface.OnDrop;
             }
             m_Wrapper.m_InventoryActionsCallbackInterface = instance;
             if (instance != null)
@@ -797,31 +811,123 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @ChooseItem.started += instance.OnChooseItem;
                 @ChooseItem.performed += instance.OnChooseItem;
                 @ChooseItem.canceled += instance.OnChooseItem;
+                @Drop.started += instance.OnDrop;
+                @Drop.performed += instance.OnDrop;
+                @Drop.canceled += instance.OnDrop;
             }
         }
     }
     public InventoryActions @Inventory => new InventoryActions(this);
+
+    // Teleport
+    private readonly InputActionMap m_Teleport;
+    private ITeleportActions m_TeleportActionsCallbackInterface;
+    private readonly InputAction m_Teleport_TeleportBack;
+    private readonly InputAction m_Teleport_TeleportForward;
+    public struct TeleportActions
+    {
+        private @InputActions m_Wrapper;
+        public TeleportActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @TeleportBack => m_Wrapper.m_Teleport_TeleportBack;
+        public InputAction @TeleportForward => m_Wrapper.m_Teleport_TeleportForward;
+        public InputActionMap Get() { return m_Wrapper.m_Teleport; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(TeleportActions set) { return set.Get(); }
+        public void SetCallbacks(ITeleportActions instance)
+        {
+            if (m_Wrapper.m_TeleportActionsCallbackInterface != null)
+            {
+                @TeleportBack.started -= m_Wrapper.m_TeleportActionsCallbackInterface.OnTeleportBack;
+                @TeleportBack.performed -= m_Wrapper.m_TeleportActionsCallbackInterface.OnTeleportBack;
+                @TeleportBack.canceled -= m_Wrapper.m_TeleportActionsCallbackInterface.OnTeleportBack;
+                @TeleportForward.started -= m_Wrapper.m_TeleportActionsCallbackInterface.OnTeleportForward;
+                @TeleportForward.performed -= m_Wrapper.m_TeleportActionsCallbackInterface.OnTeleportForward;
+                @TeleportForward.canceled -= m_Wrapper.m_TeleportActionsCallbackInterface.OnTeleportForward;
+            }
+            m_Wrapper.m_TeleportActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @TeleportBack.started += instance.OnTeleportBack;
+                @TeleportBack.performed += instance.OnTeleportBack;
+                @TeleportBack.canceled += instance.OnTeleportBack;
+                @TeleportForward.started += instance.OnTeleportForward;
+                @TeleportForward.performed += instance.OnTeleportForward;
+                @TeleportForward.canceled += instance.OnTeleportForward;
+            }
+        }
+    }
+    public TeleportActions @Teleport => new TeleportActions(this);
+
+    // Interactions
+    private readonly InputActionMap m_Interactions;
+    private IInteractionsActions m_InteractionsActionsCallbackInterface;
+    private readonly InputAction m_Interactions_Interaction;
+    private readonly InputAction m_Interactions_ItemInteraction;
+    public struct InteractionsActions
+    {
+        private @InputActions m_Wrapper;
+        public InteractionsActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Interaction => m_Wrapper.m_Interactions_Interaction;
+        public InputAction @ItemInteraction => m_Wrapper.m_Interactions_ItemInteraction;
+        public InputActionMap Get() { return m_Wrapper.m_Interactions; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(InteractionsActions set) { return set.Get(); }
+        public void SetCallbacks(IInteractionsActions instance)
+        {
+            if (m_Wrapper.m_InteractionsActionsCallbackInterface != null)
+            {
+                @Interaction.started -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnInteraction;
+                @Interaction.performed -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnInteraction;
+                @Interaction.canceled -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnInteraction;
+                @ItemInteraction.started -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnItemInteraction;
+                @ItemInteraction.performed -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnItemInteraction;
+                @ItemInteraction.canceled -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnItemInteraction;
+            }
+            m_Wrapper.m_InteractionsActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Interaction.started += instance.OnInteraction;
+                @Interaction.performed += instance.OnInteraction;
+                @Interaction.canceled += instance.OnInteraction;
+                @ItemInteraction.started += instance.OnItemInteraction;
+                @ItemInteraction.performed += instance.OnItemInteraction;
+                @ItemInteraction.canceled += instance.OnItemInteraction;
+            }
+        }
+    }
+    public InteractionsActions @Interactions => new InteractionsActions(this);
     public interface IGameActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
-        void OnDrop(InputAction.CallbackContext context);
-        void OnInteraction(InputAction.CallbackContext context);
-        void OnItemInteraction(InputAction.CallbackContext context);
         void OnFocusChange(InputAction.CallbackContext context);
-        void OnTeleportBack(InputAction.CallbackContext context);
-        void OnTeleportForward(InputAction.CallbackContext context);
     }
     public interface IMouseActions
     {
         void OnLeftClick(InputAction.CallbackContext context);
         void OnRightClick(InputAction.CallbackContext context);
         void OnMiddleClick(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
     }
     public interface IInventoryActions
     {
         void OnPreviousItem(InputAction.CallbackContext context);
         void OnNextItem(InputAction.CallbackContext context);
         void OnChooseItem(InputAction.CallbackContext context);
+        void OnDrop(InputAction.CallbackContext context);
+    }
+    public interface ITeleportActions
+    {
+        void OnTeleportBack(InputAction.CallbackContext context);
+        void OnTeleportForward(InputAction.CallbackContext context);
+    }
+    public interface IInteractionsActions
+    {
+        void OnInteraction(InputAction.CallbackContext context);
+        void OnItemInteraction(InputAction.CallbackContext context);
     }
 }

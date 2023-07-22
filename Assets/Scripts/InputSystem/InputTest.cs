@@ -8,9 +8,21 @@ using UnityEngine.InputSystem;
 namespace InputSystem {
     public class InputTest : MonoBehaviour
     {
-        private void Start() {
+        private void OnEnable() {
             CInput.InputActions.Inventory.ChooseItem.performed += OnChooseSlot;
             CInput.InputActions.Inventory.NextItem.performed += OnNextItem;
+            CInput.InputActions.Mouse.LeftClick.performed += OnPrimaryMouse;
+        }
+
+        private void OnDisable() {
+            CInput.InputActions.Inventory.ChooseItem.performed -= OnChooseSlot;
+            CInput.InputActions.Inventory.NextItem.performed -= OnNextItem;
+            CInput.InputActions.Mouse.LeftClick.performed -= OnPrimaryMouse;
+        }
+
+        private void OnPrimaryMouse(InputAction.CallbackContext ctx) {
+            CDebug.Log(ctx);
+            CDebug.Log(CInput.MousePosition);
         }
 
         private void OnChooseSlot(InputAction.CallbackContext ctx) {
@@ -18,7 +30,7 @@ namespace InputSystem {
         }
 
         private void OnNextItem(InputAction.CallbackContext ctx) {
-            CDebug.Log("Next item" % Colorize.Blue);
+            CDebug.Log("Next item" % Colorize.Cyan);
         }
     }
 }
