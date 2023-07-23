@@ -20,7 +20,7 @@ public class TimeChanger : MonoBehaviour{
 
     private void Start(){
         InputActions = InputSystem.CInput.InputActions;
-        FindTime();
+        //FindTime();
         PlayerTransform = Player.GetComponent<Transform>();
         InputActions.Teleport.TeleportBack.performed += TimeBack;
         InputActions.Teleport.TeleportForward.performed += TimeForward;
@@ -33,7 +33,7 @@ public class TimeChanger : MonoBehaviour{
 
     private void TimeBack(InputAction.CallbackContext ctx){ChangeTime(-1);}
     private void TimeForward(InputAction.CallbackContext ctx){ChangeTime(1);}
-
+    /*
     public void FindTime(){
         Times = new List<Transform>();
         Space = new List<Transform>();
@@ -48,12 +48,12 @@ public class TimeChanger : MonoBehaviour{
                 Times.Add(child);
             }
         }
-        /*
+    
         foreach(Transform t in Times){
             CDebug.Log("Czas " + t.name,Colorize.Magenta);
-        }*/
+        }
         
-    }
+    }*/
 
     private void ChangeTime(int change){
         if(ActualTimeId == 0 && change == -1) change = 2;
