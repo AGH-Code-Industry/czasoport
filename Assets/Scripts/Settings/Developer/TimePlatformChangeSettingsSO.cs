@@ -9,7 +9,9 @@ namespace Settings.Developer {
     /// </summary>
     [CreateAssetMenu(fileName = "TimePlatformChangeSettings", menuName = "Settings/DeveloperSettings/TimePlatformChangeSettings")]
     public class TimePlatformChangeSettingsSO : ScriptableObject {
+        
         [Header("Time Change Settings")]
+        
         [Tooltip("By what offset should Past and Future platforms' transform differ from Present platform.")]
         public Vector2 offsetFromPresentPlatform;
     }
