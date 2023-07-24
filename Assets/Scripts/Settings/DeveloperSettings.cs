@@ -14,7 +14,7 @@ namespace Settings {
         public ApplicationSettingsSO appSettings;
         
         private void Awake() {
-            if (Instance == this) {
+            if (Instance == this || Instance != null) {
                 CDebug.LogError($"{this} attempted to override DeveloperSettings singleton.", this);
                 return;
             }
