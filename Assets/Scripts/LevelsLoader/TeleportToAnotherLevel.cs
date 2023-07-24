@@ -1,21 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace  LevelsLoader {
+namespace LevelsLoader {
 	public class TeleportToAnotherLevel : MonoBehaviour
 	{
-		[SerializeField] private LevelInfoSO levelInfo;
+		[SerializeField] private LevelInfoSO destinedLevel;
 
 		private void OnTriggerEnter2D(Collider2D collision) {
-			ChangeLevel(levelInfo);
+			LevelsManager.Instance.ChangeLevel(destinedLevel);
 		}
-
-		private void ChangeLevel(LevelInfoSO levelInfo) {
-			LevelsManager.Instance.ChangeLevel(levelInfo);
-
-		}
-
 	}
 }
-
