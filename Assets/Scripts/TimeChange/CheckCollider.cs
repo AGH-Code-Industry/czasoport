@@ -5,11 +5,22 @@ using CoinPackage.Debugging;
 
 public class CheckCollider : MonoBehaviour
 {
-    [SerializeField]private float id;
-    private BoxCollider2D box;
-    public float GetId(){return id;}
-    private void Start(){
+    bool isTouching = false;
+    BoxCollider2D box;
+    private void Awake(){
         box = GetComponent<BoxCollider2D>();
+        box.isTrigger = true;
     }
-    public bool IsTouching(){return box.IsTouchingLayers();}
+
+    public bool isNotTouching(){
+        return !isTouching;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(!other.isTrigger) isTouching = true;    
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if(!other.isTrigger) isTouching = false;    
+    }
 }
