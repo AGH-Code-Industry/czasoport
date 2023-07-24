@@ -13,11 +13,11 @@ namespace LevelsLoader {
 		
 		[SerializeField] private LevelInfoSO startingLevel;
 
-		private List<AvailableLevels> loadedLevels = new();
+		private List<AvailableLevels> _loadedLevels = new();
 
 		private void Awake() {
 			if (Instance != null) {
-				CDebug.LogError("More than one Scene Manager in Main Scene");
+				CDebug.LogError($"{this} tried to overwrite current singleton instance.", this);
 			}
 			Instance = this;
 
@@ -43,14 +43,14 @@ namespace LevelsLoader {
 			}
 
 			ToogleVisibilityOfScene(level, visibility);
-			loadedLevels.Add(level);
+			_loadedLevels.Add(level);
 		}
 
 		private void LoadLevels(LevelInfoSO levelInfo) {
-			CDebug.Log("You are on " + levelInfo.level.ToString());
+			CDebug.Log("You are on " + levelInfo.level);
 			ToogleVisibilityOfScene(levelInfo.level, true);
 			foreach (AvailableLevels level in levelInfo.neighbourLevels) {
-				if (!loadedLevels.Contains(level)) {
+				if (!_loadedLevels.Contains(level)) {
 					StartCoroutine(LoadLevel(level, false));
 				}
 				else {
@@ -66,7 +66,7 @@ namespace LevelsLoader {
 		private void UnLoadLevels(LevelInfoSO levelInfo) {
 			List<AvailableLevels> scenesToRemove = new List<AvailableLevels>();
 
-			foreach (AvailableLevels level in loadedLevels) {
+			foreach (AvailableLevels level in _loadedLevels) {
 				if (!levelInfo.neighbourLevels.Contains(level) && levelInfo.level != level) {
 					UnLoadLevel(level);
 					scenesToRemove.Add(level);
@@ -74,7 +74,7 @@ namespace LevelsLoader {
 			}
 
 			foreach (AvailableLevels level in scenesToRemove) {
-				loadedLevels.Remove(level);
+				_loadedLevels.Remove(level);
 			}
 		}
 
