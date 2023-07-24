@@ -12,7 +12,7 @@ public class LevelsManager : MonoBehaviour
 	
 	[SerializeField] private LevelInfoSO startingLevel;
 
-	private List<LevelsList> loadedLevels = new();
+	private List<AvailableLevels> loadedLevels = new();
 
 	private void Awake() {
 		if (Instance != null) {
@@ -34,7 +34,7 @@ public class LevelsManager : MonoBehaviour
 		UnLoadLevels(levelInfo);
 	}
 
-	private IEnumerator LoadLevel(LevelsList level, bool visibility) {
+	private IEnumerator LoadLevel(AvailableLevels level, bool visibility) {
 		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level.ToString(), LoadSceneMode.Additive);
 
 		while (!asyncLoad.isDone) {
@@ -48,7 +48,7 @@ public class LevelsManager : MonoBehaviour
 	private void LoadLevels(LevelInfoSO levelInfo) {
 		CDebug.Log("You are on " + levelInfo.level.ToString());
 		ToogleVisibilityOfScene(levelInfo.level, true);
-		foreach (LevelsList level in levelInfo.neighbourLevels) {
+		foreach (AvailableLevels level in levelInfo.neighbourLevels) {
 			if (!loadedLevels.Contains(level)) {
 				StartCoroutine(LoadLevel(level, false));
 			}
@@ -58,26 +58,26 @@ public class LevelsManager : MonoBehaviour
 		}
 	}
 
-	private void UnLoadLevel(LevelsList level) {
+	private void UnLoadLevel(AvailableLevels level) {
 		SceneManager.UnloadSceneAsync(level.ToString());
 	}
 
 	private void UnLoadLevels(LevelInfoSO levelInfo) {
-		List<LevelsList> scenesToRemove = new List<LevelsList>();
+		List<AvailableLevels> scenesToRemove = new List<AvailableLevels>();
 
-		foreach (LevelsList level in loadedLevels) {
+		foreach (AvailableLevels level in loadedLevels) {
 			if (!levelInfo.neighbourLevels.Contains(level) && levelInfo.level != level) {
 				UnLoadLevel(level);
 				scenesToRemove.Add(level);
 			}
 		}
 
-		foreach (LevelsList level in scenesToRemove) {
+		foreach (AvailableLevels level in scenesToRemove) {
 			loadedLevels.Remove(level);
 		}
 	}
 
-	private void ToogleVisibilityOfScene(LevelsList level, bool visibility) {
+	private void ToogleVisibilityOfScene(AvailableLevels level, bool visibility) {
 		Scene sceneToHide = SceneManager.GetSceneByName(level.ToString());
 		if (sceneToHide.IsValid()) {
 			GameObject[] rootObjects = sceneToHide.GetRootGameObjects();
