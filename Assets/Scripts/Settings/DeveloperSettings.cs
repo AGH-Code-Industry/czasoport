@@ -11,6 +11,7 @@ namespace Settings {
         public static DeveloperSettings Instance;
 
         public TimePlatformChangeSettingsSO tpcSettings;
+        public ApplicationSettingsSO appSettings;
         
         private void Awake() {
             if (Instance == this) {

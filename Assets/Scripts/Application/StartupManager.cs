@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CoinPackage.Debugging;
+using Settings;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,7 +18,7 @@ namespace Application {
         }
 
         private void LoadGlobalObjects() {
-            StartCoroutine(LoadSceneAsynchronously("Persistent", LoadSceneMode.Additive));
+            StartCoroutine(LoadSceneAsynchronously("GlobalData", LoadSceneMode.Additive));
         }
 
         private IEnumerator LoadSceneAsynchronously(string sceneName, LoadSceneMode mode) {
