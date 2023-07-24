@@ -47,7 +47,7 @@ Rozgrywka w kilku przestrzeniach czasowych, pomiędzy którymi gracz może przem
 ## Używane Technologie
 
 - **Silnik**: `Unity 2021.3.12f1`
-- **Edytor Graficzny:** Według uznania grafików, wstępnie `GIMP`
+- **Edytor Graficzny:** Według uznania grafików
 
 ---
 
