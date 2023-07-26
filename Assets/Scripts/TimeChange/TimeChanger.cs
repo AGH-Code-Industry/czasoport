@@ -1,113 +1,114 @@
 using CoinPackage.Debugging;
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 using System.Collections.Generic;
+using InputSystem;
 using UnityEngine.InputSystem;
 
-public class TimeChanger : MonoBehaviour{
+namespace TimeChange
+{
+    public class TimeChanger : MonoBehaviour
+    {
+        [SerializeField] private Animator animator;
+        [SerializeField] private Vector3 timeJump;
+        [SerializeField] private float timeToChange = 0.3f;
 
-    private Transform _transform;
-    private List<CheckCollider> boxes;
-    [SerializeField]private Vector3 TimeJump;
-    private InputActions InputActions;
-    private Transform PlayerTransform;
+        public TimeLine actualTime = TimeLine.Present;
 
-    [SerializeField]private Animator animator;
-    private delegate void changeTime();
-    private changeTime TCT;
-    [SerializeField]private float timeToChange = 0.3f;
-    private float counterToChange;
-    private TimeMachine new_id;
-    private int change;
-    
+        private delegate void ChangingTime(); 
+        private ChangingTime TCT;
+        
+        private Transform _transform;
+        private List<CheckCollider> _boxes;
+        private Transform _playerTransform;
+        private TimeLine _newId;
+        private float _counterToChange;
+        private int _change;
+        
+        private void Start() {
+            _boxes = new List<CheckCollider>();
+            _transform = GetComponent<Transform>();
 
-    public enum TimeMachine : int{
-        Past = 0,
-        Present = 1,
-        Future = 2
-    }
+            for (int i = -2; i <= 2; i++)
+            {
+                if (i == 0)
+                {
+                    _boxes.Add(null);
+                    continue;
+                }
 
-    public TimeMachine actualTime = TimeMachine.Present;
+                GameObject objectToSpawn = new GameObject("ColliderToSpawn");
+                objectToSpawn.transform.parent = this.gameObject.transform;
+                objectToSpawn.AddComponent<BoxCollider2D>();
 
-    private void Start(){
-        boxes = new List<CheckCollider>();
-        InputActions = InputSystem.CInput.InputActions;
-        _transform = GetComponent<Transform>();
-
-        for(int i=-2;i<=2;i++){
-            if(i==0){
-                boxes.Add(null);
-                continue;
+                objectToSpawn.transform.position = i * timeJump + _transform.position;
+                _boxes.Add(objectToSpawn.AddComponent<CheckCollider>());
             }
-            GameObject objectToSpawn = new GameObject("ColliderToSpawn");
-            objectToSpawn.transform.parent = this.gameObject.transform;
-            objectToSpawn.AddComponent<BoxCollider2D>();
-            
-            objectToSpawn.transform.position = i * TimeJump + _transform.position;
-            boxes.Add(objectToSpawn.AddComponent<CheckCollider>());
+
+            CInput.InputActions.Teleport.TeleportBack.performed += TimeBack;
+            CInput.InputActions.Teleport.TeleportForward.performed += TimeForward;
+            _counterToChange = timeToChange;
         }
 
-        InputActions.Teleport.TeleportBack.performed += TimeBack;
-        InputActions.Teleport.TeleportForward.performed += TimeForward;
-        counterToChange = timeToChange;
-    }
-
-    private void Update() {
-        if(TCT != null)TCT();
-    }
-
-    private void OnDisable(){
-        InputActions.Teleport.TeleportBack.performed -= TimeBack;
-        InputActions.Teleport.TeleportForward.performed -= TimeForward;
-    }
-
-    private void TimeBack(InputAction.CallbackContext ctx){
-        change = -1;
-        TCT += TryChange;
-        InputActions.Teleport.TeleportBack.performed -= TimeBack;
-        InputActions.Teleport.TeleportForward.performed -= TimeForward;
-    }
-
-    private void TimeForward(InputAction.CallbackContext ctx){
-        change = 1;
-        TCT += TryChange;
-        InputActions.Teleport.TeleportBack.performed -= TimeBack;
-        InputActions.Teleport.TeleportForward.performed -= TimeForward;
-    }
-
-    private void TryChange(){
-        if(actualTime == 0 && change == -1) change = 2;
-        new_id = (TimeMachine)(((int)actualTime+change)%3);
-        //CDebug.Log(new_id,Colorize.Magenta);
-        change = 0;
-        if(CanChangeTime(new_id-actualTime)){
-            animator.SetTrigger("Start");
-            TCT += ChangeTime;
+        private void Update() {
+            if (TCT != null) TCT();
         }
-        else{
-            InputActions.Teleport.TeleportBack.performed += TimeBack;
-            InputActions.Teleport.TeleportForward.performed += TimeForward;
-        }
-        TCT -= TryChange;
-    }
 
-    private void ChangeTime(){
-        counterToChange -= Time.deltaTime;
-        if(counterToChange < 0f){
-            _transform.Translate(TimeJump * (int)(new_id-actualTime));
-            actualTime = new_id;
-            animator.SetTrigger("End");
-            
-            counterToChange = timeToChange;
-            
-            InputActions.Teleport.TeleportBack.performed += TimeBack;
-            InputActions.Teleport.TeleportForward.performed += TimeForward;
-            TCT -= ChangeTime;
+        private void OnDisable() {
+            CInput.InputActions.Teleport.TeleportBack.performed -= TimeBack;
+            CInput.InputActions.Teleport.TeleportForward.performed -= TimeForward;
         }
-    }
 
-    private bool CanChangeTime(int when){
-        return boxes[when+2].isNotTouching();
+        private void TimeBack(InputAction.CallbackContext ctx) {
+            _change = -1;
+            TCT += TryChange;
+            CInput.InputActions.Teleport.TeleportBack.performed -= TimeBack;
+            CInput.InputActions.Teleport.TeleportForward.performed -= TimeForward;
+        }
+
+        private void TimeForward(InputAction.CallbackContext ctx) {
+            _change = 1;
+            TCT += TryChange;
+            CInput.InputActions.Teleport.TeleportBack.performed -= TimeBack;
+            CInput.InputActions.Teleport.TeleportForward.performed -= TimeForward;
+        }
+
+        private void TryChange() {
+            if (actualTime == 0 && _change == -1) _change = 2;
+            _newId = (TimeLine)(((int)actualTime + _change) % 3);
+            //CDebug.Log(new_id,Colorize.Magenta);
+            _change = 0;
+            if (CanChangeTime(_newId - actualTime))
+            {
+                animator.SetTrigger("Start");
+                TCT += ChangeTime;
+            }
+            else
+            {
+                CInput.InputActions.Teleport.TeleportBack.performed += TimeBack;
+                CInput.InputActions.Teleport.TeleportForward.performed += TimeForward;
+            }
+
+            TCT -= TryChange;
+        }
+
+        private void ChangeTime() {
+            _counterToChange -= Time.deltaTime;
+            if (_counterToChange < 0f)
+            {
+                _transform.Translate(timeJump * (int)(_newId - actualTime));
+                actualTime = _newId;
+                animator.SetTrigger("End");
+
+                _counterToChange = timeToChange;
+
+                CInput.InputActions.Teleport.TeleportBack.performed += TimeBack;
+                CInput.InputActions.Teleport.TeleportForward.performed += TimeForward;
+                TCT -= ChangeTime;
+            }
+        }
+
+        private bool CanChangeTime(int when) {
+            return _boxes[when + 2].isNotTouching();
+        }
     }
 }

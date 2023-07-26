@@ -1561,8 +1561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021810cf912d7674481e7e2fba49c87b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeJump: {x: 100, y: 100, z: 0}
   animator: {fileID: 462107554}
+  timeJump: {x: 100, y: 100, z: 0}
   timeToChange: 0.4
   actualTime: 1
 --- !u!1 &1258690732
@@ -2086,7 +2086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf399a3aa5c256742a7627847956e93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1224720105}
+  player: {fileID: 1224720105}
 --- !u!1 &1661393399
 GameObject:
   m_ObjectHideFlags: 0

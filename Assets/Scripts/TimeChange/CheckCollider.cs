@@ -1,26 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using CoinPackage.Debugging;
 
-public class CheckCollider : MonoBehaviour
+namespace TimeChange
 {
-    bool isTouching = false;
-    BoxCollider2D box;
-    private void Awake(){
-        box = GetComponent<BoxCollider2D>();
-        box.isTrigger = true;
-    }
+    public class CheckCollider : MonoBehaviour
+    {
+        private BoxCollider2D _box;
+        private bool _isTouching = false;
 
-    public bool isNotTouching(){
-        return !isTouching;
-    }
+        private void Awake() {
+            _box = GetComponent<BoxCollider2D>();
+            _box.isTrigger = true;
+        }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(!other.isTrigger) isTouching = true;    
-    }
+        public bool isNotTouching() {
+            return !_isTouching;
+        }
 
-    private void OnTriggerExit2D(Collider2D other) {
-        if(!other.isTrigger) isTouching = false;    
+        private void OnTriggerEnter2D(Collider2D other) {
+            if (!other.isTrigger) _isTouching = true;
+        }
+
+        private void OnTriggerExit2D(Collider2D other) {
+            if (!other.isTrigger) _isTouching = false;
+        }
     }
 }
