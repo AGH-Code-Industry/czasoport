@@ -1,3 +1,4 @@
+using System;
 using CoinPackage.Debugging;
 using UnityEngine;
 using System.Collections.Generic;
@@ -43,14 +44,17 @@ namespace TimeChange
                 objectToSpawn.transform.position = i * timeJump + _transform.position;
                 _boxes.Add(objectToSpawn.AddComponent<CheckCollider>());
             }
-
-            CInput.InputActions.Teleport.TeleportBack.performed += TimeBack;
-            CInput.InputActions.Teleport.TeleportForward.performed += TimeForward;
             _counterToChange = timeToChange;
         }
 
         private void Update() {
             if (TCT != null) TCT();
+        }
+
+        private void OnEnable()
+        {
+            CInput.InputActions.Teleport.TeleportBack.performed += TimeBack;
+            CInput.InputActions.Teleport.TeleportForward.performed += TimeForward;
         }
 
         private void OnDisable() {
@@ -61,15 +65,13 @@ namespace TimeChange
         private void TimeBack(InputAction.CallbackContext ctx) {
             _change = -1;
             TCT += TryChange;
-            CInput.InputActions.Teleport.TeleportBack.performed -= TimeBack;
-            CInput.InputActions.Teleport.TeleportForward.performed -= TimeForward;
+            CInput.InputActions.Teleport.Disable();
         }
 
         private void TimeForward(InputAction.CallbackContext ctx) {
             _change = 1;
             TCT += TryChange;
-            CInput.InputActions.Teleport.TeleportBack.performed -= TimeBack;
-            CInput.InputActions.Teleport.TeleportForward.performed -= TimeForward;
+            CInput.InputActions.Teleport.Disable();
         }
 
         private void TryChange() {
@@ -84,8 +86,7 @@ namespace TimeChange
             }
             else
             {
-                CInput.InputActions.Teleport.TeleportBack.performed += TimeBack;
-                CInput.InputActions.Teleport.TeleportForward.performed += TimeForward;
+                CInput.InputActions.Teleport.Enable();
             }
 
             TCT -= TryChange;
@@ -101,8 +102,7 @@ namespace TimeChange
 
                 _counterToChange = timeToChange;
 
-                CInput.InputActions.Teleport.TeleportBack.performed += TimeBack;
-                CInput.InputActions.Teleport.TeleportForward.performed += TimeForward;
+                CInput.InputActions.Teleport.Enable();
                 TCT -= ChangeTime;
             }
         }
