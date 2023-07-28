@@ -20,7 +20,6 @@ namespace TimeChange
         
         private Transform _transform;
         private List<CheckCollider> _boxes;
-        private Transform _playerTransform;
         private TimeLine _newId;
         private float _counterToChange;
         private int _change;
