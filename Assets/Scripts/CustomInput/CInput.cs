@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace InputSystem {
+namespace CustomInput {
     public static class CInput {
         public static readonly InputActions InputActions;
         
