@@ -1,4 +1,4 @@
-using InputSystem;
+using CustomInput;
 using UnityEngine;
 
 namespace TimeChange.Test
