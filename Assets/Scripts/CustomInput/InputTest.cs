@@ -5,7 +5,7 @@ using CoinPackage.Debugging;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace InputSystem {
+namespace CustomInput {
     public class InputTest : MonoBehaviour
     {
         private void OnEnable() {
