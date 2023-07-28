@@ -5,7 +5,8 @@ class LevelsManager {
 }
 
 class LevelManager {
- - currentLevel: LevelInfoSO
+ - isLevelActive: bool
+ - thisLevel: LevelInfoSO
  - teleports: Teleport[]
  
  - MakeDiscoveries()
@@ -16,7 +17,7 @@ class Teleport {
  - teleportPoint: Transform
  - timeline: Timeline
 
- + Discover(currentLevel: LevelInfoSO)
+ + MakeDiscovery(currentLevel: LevelInfoSO)
  + Teleport()
 }
 

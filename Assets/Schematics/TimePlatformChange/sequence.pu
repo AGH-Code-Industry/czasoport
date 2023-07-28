@@ -1,0 +1,31 @@
+@startuml sequence_diagram
+
+entity LevelsManager as lvlsMng
+entity LevelManager as lvlMng
+entity Teleport as tp
+entity DestinedLevelManager as destLvl
+entity DestinedTeleport as destTp
+
+lvlsMng -> lvlsMng : LoadScenes()
+
+alt is_current_scene
+    lvlsMng -> lvlMng : ActivateScene()
+    lvlMng -> tp : MakeDiscovery()
+    tp -> destLvl : Discover()
+    group teleport matching
+        loop
+            destLvl -> destTp : IsMatch()
+            alt is_match
+                destTp -> destLvl : return True
+                destLvl -> tp : return Match
+            else
+                destTp -> destLvl : return False
+            end
+        end
+    end
+    ' Add teleport process (what class should handle player reposition etc.???)
+else
+    lvlsMng -> lvlMng : DeactivateScene()
+end
+
+@enduml
