@@ -13,7 +13,7 @@ namespace TimeChange
             _box.isTrigger = true;
         }
 
-        public bool isNotTouching() {
+        public bool IsNotTouching() {
             return !_isTouching;
         }
 

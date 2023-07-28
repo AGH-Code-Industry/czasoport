@@ -18,15 +18,13 @@ namespace TimeChange
         private delegate void ChangingTime(); 
         private ChangingTime TCT;
         
-        private Transform _transform;
         private List<CheckCollider> _boxes;
-        private TimeLine _newId;
+        private TimeLine _newTimeLine;
         private float _counterToChange;
         private int _change;
         
         private void Start() {
             _boxes = new List<CheckCollider>();
-            _transform = GetComponent<Transform>();
 
             for (int i = -2; i <= 2; i++)
             {
@@ -40,7 +38,7 @@ namespace TimeChange
                 objectToSpawn.transform.parent = this.gameObject.transform;
                 objectToSpawn.AddComponent<BoxCollider2D>();
 
-                objectToSpawn.transform.position = i * timeJump + _transform.position;
+                objectToSpawn.transform.position = i * timeJump + transform.position;
                 _boxes.Add(objectToSpawn.AddComponent<CheckCollider>());
             }
             _counterToChange = timeToChange;
@@ -75,10 +73,10 @@ namespace TimeChange
 
         private void TryChange() {
             if (actualTime == 0 && _change == -1) _change = 2;
-            _newId = (TimeLine)(((int)actualTime + _change) % 3);
+            _newTimeLine = (TimeLine)(((int)actualTime + _change) % 3);
             //CDebug.Log(new_id,Colorize.Magenta);
             _change = 0;
-            if (CanChangeTime(_newId - actualTime))
+            if (CanChangeTime(_newTimeLine - actualTime))
             {
                 animator.SetTrigger("Start");
                 TCT += ChangeTime;
@@ -95,8 +93,8 @@ namespace TimeChange
             _counterToChange -= Time.deltaTime;
             if (_counterToChange < 0f)
             {
-                _transform.Translate(timeJump * (int)(_newId - actualTime));
-                actualTime = _newId;
+                transform.Translate(timeJump * (int)(_newTimeLine - actualTime));
+                actualTime = _newTimeLine;
                 animator.SetTrigger("End");
 
                 _counterToChange = timeToChange;
@@ -107,7 +105,7 @@ namespace TimeChange
         }
 
         private bool CanChangeTime(int when) {
-            return _boxes[when + 2].isNotTouching();
+            return _boxes[when + 2].IsNotTouching();
         }
     }
 }
