@@ -15,14 +15,9 @@ namespace TimeChange
 
         public TimeLine actualTime = TimeLine.Present;
 
-        private delegate void ChangingTime(); 
-        private ChangingTime TCT;
-        
         private List<CheckCollider> _boxes;
         private TimeLine _newTimeLine;
-        private float _counterToChange;
-        private int _change;
-        
+
         private void Start() {
             _boxes = new List<CheckCollider>();
 
@@ -41,11 +36,6 @@ namespace TimeChange
                 objectToSpawn.transform.position = i * timeJump + transform.position;
                 _boxes.Add(objectToSpawn.AddComponent<CheckCollider>());
             }
-            _counterToChange = timeToChange;
-        }
-
-        private void Update() {
-            if (TCT != null) TCT();
         }
 
         private void OnEnable()
@@ -60,48 +50,32 @@ namespace TimeChange
         }
 
         private void TimeBack(InputAction.CallbackContext ctx) {
-            _change = -1;
-            TCT += TryChange;
-            CInput.InputActions.Teleport.Disable();
+            TryChange(-1);
+
         }
 
         private void TimeForward(InputAction.CallbackContext ctx) {
-            _change = 1;
-            TCT += TryChange;
-            CInput.InputActions.Teleport.Disable();
+            TryChange(1);
         }
 
-        private void TryChange() {
-            if (actualTime == 0 && _change == -1) _change = 2;
-            _newTimeLine = (TimeLine)(((int)actualTime + _change) % 3);
+        private void TryChange(int change) {
+            if (actualTime == 0 && change == -1) change = 2;
+            _newTimeLine = (TimeLine)(((int)actualTime + change) % 3);
             //CDebug.Log(new_id,Colorize.Magenta);
-            _change = 0;
             if (CanChangeTime(_newTimeLine - actualTime))
             {
-                animator.SetTrigger("Start");
-                TCT += ChangeTime;
+                StartCoroutine(ChangeTime());
             }
-            else
-            {
-                CInput.InputActions.Teleport.Enable();
-            }
-
-            TCT -= TryChange;
         }
 
-        private void ChangeTime() {
-            _counterToChange -= Time.deltaTime;
-            if (_counterToChange < 0f)
-            {
-                transform.Translate(timeJump * (int)(_newTimeLine - actualTime));
-                actualTime = _newTimeLine;
-                animator.SetTrigger("End");
-
-                _counterToChange = timeToChange;
-
-                CInput.InputActions.Teleport.Enable();
-                TCT -= ChangeTime;
-            }
+        private IEnumerator<WaitForSeconds> ChangeTime() {
+            CInput.InputActions.Teleport.Disable();
+            animator.SetTrigger("Start");
+            yield return new WaitForSeconds(timeToChange);
+            transform.Translate(timeJump * (int)(_newTimeLine - actualTime));
+            actualTime = _newTimeLine;
+            animator.SetTrigger("End");
+            CInput.InputActions.Teleport.Enable();
         }
 
         private bool CanChangeTime(int when) {
