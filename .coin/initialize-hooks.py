@@ -7,6 +7,6 @@
 import os
 import shutil
 
-for file in os.listdir("./hooks"):
-    shutil.copyfile("./hooks/" + file, "../.git/hooks/" + file)
+for file in os.listdir("./.coin/hooks"):
+    shutil.copyfile("./.coin/hooks/" + file, "./.git/hooks/" + file)
     print("Initialized: " + file)
