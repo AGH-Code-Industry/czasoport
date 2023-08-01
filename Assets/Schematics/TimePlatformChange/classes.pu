@@ -1,0 +1,24 @@
+@startuml
+
+class LevelsManager {
+ - loadedLevels: Dict<LevelInfoSO, object>
+}
+
+class LevelManager {
+ - isLevelActive: bool
+ - thisLevel: LevelInfoSO
+ - teleports: Teleport[]
+ 
+ - MakeDiscoveries()
+}
+
+class Teleport {
+ - destination: LevelInfoSO
+ - teleportPoint: Transform
+ - timeline: Timeline
+
+ + MakeDiscovery(currentLevel: LevelInfoSO)
+ + Teleport()
+}
+
+@enduml

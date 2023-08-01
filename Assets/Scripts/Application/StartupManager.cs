@@ -14,7 +14,7 @@ namespace Application {
 
             // Load scene with Single mode, all objects that should not be unloaded
             // must have non-destroyable class.
-            SceneManager.LoadSceneAsync("SampleScene", LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync("Game", LoadSceneMode.Single);
         }
 
         private void LoadGlobalObjects() {
