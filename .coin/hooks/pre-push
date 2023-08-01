@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Author: Patryk Lesiak
+# Date: 2023-08-01
+# In case of any questions, please contact me via Discord
+
+# This script is run before 'git push' is run.
+# If it exits with a non-zero exit code, the push is aborted.
+
+VALID_NAMES="^(feature|bugfix|spike|release)\/[a-z0-9-]$"
+
+BRANCH_NAME=$(git branch | grep '*' | cut -d ' ' -f2)
+
+echo "Validating branch name: $BRANCH_NAME"
+if [[ $BRANCH_NAME =~ $VALID_NAMES ]]; then
+    echo "Branch name is valid."
+    exit 0
+else
+    echo "Branch name is invalid, please use the following pattern: $VALID_NAMES."
+    echo "If you think this is a mistake, please contact the repository owner."
+    exit 1
+fi
