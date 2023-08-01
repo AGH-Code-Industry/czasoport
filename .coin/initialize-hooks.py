@@ -9,4 +9,4 @@ import shutil
 
 for file in os.listdir("./hooks"):
     shutil.copyfile("./hooks/" + file, "../.git/hooks/" + file)
-    print("Initialized hook: " + file)
+    print("Initialized: " + file)

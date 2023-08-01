@@ -7,12 +7,20 @@
 # This script is run before 'git push' is run.
 # If it exits with a non-zero exit code, the push is aborted.
 
-VALID_NAMES="^(feature|bugfix|spike|release)\/[a-z0-9-]$"
+# You can edit this regex, however you must comply with POSIX regex syntax.
+# https://www.gnu.org/software/findutils/manual/html_node/find_html/posix_002dbasic-regular-expression-syntax.html
+
+. ./.coin/hooks/hooks-properties
 
 BRANCH_NAME=$(git branch | grep '*' | cut -d ' ' -f2)
 
+if echo "$BRANCH_NAME" | grep -Eq "$EXCEPTIONS"; then
+    echo "Branch $BRANCH_NAME is an exception, skipping validation."
+    exit 0
+fi
+
 echo "Validating branch name: $BRANCH_NAME"
-if [[ $BRANCH_NAME =~ $VALID_NAMES ]]; then
+if echo "$BRANCH_NAME" | grep -Eq "$VALID_NAMES"; then
     echo "Branch name is valid."
     exit 0
 else
