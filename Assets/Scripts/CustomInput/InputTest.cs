@@ -22,7 +22,7 @@ namespace CustomInput {
 
         private void OnPrimaryMouse(InputAction.CallbackContext ctx) {
             CDebug.Log(ctx);
-            CDebug.Log(CInput.MousePosition);
+            CDebug.Log(CInput.MouseWorldPosition);
         }
 
         private void OnChooseSlot(InputAction.CallbackContext ctx) {
