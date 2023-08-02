@@ -26,7 +26,7 @@ public static class InitializeCoinAdditions
             return true;
         }
         string text = File.ReadAllText("./.coin/lastinit");
-        if (DateTime.Parse(text).AddHours(1) < DateTime.Now) {
+        if (DateTime.Parse(text).AddHours(12) < DateTime.Now) {
             return true;
         }
         return false;
