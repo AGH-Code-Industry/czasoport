@@ -12,13 +12,21 @@ namespace CustomInput {
         public static Vector2 MouseWorldPosition => GetMouseWorldPosition();
         public static float Run => InputActions.Movement.Run.ReadValue<float>();
 
+        public static readonly InputLock<InputActions.MovementActions> MovementLock;
+        public static readonly InputLock<InputActions.MouseActions> MouseLock;
+        public static readonly InputLock<InputActions.InventoryActions> InventoryLock;
         public static readonly InputLock<InputActions.TeleportActions> TeleportLock;
+        public static readonly InputLock<InputActions.InteractionsActions> InteractionsLock;
 
         static CInput() {
             InputActions = new InputActions();
             InputActions.Enable();
 
+            MovementLock = new InputLock<InputActions.MovementActions>(InputActions.Movement);
+            MouseLock = new InputLock<InputActions.MouseActions>(InputActions.Mouse);
+            InventoryLock = new InputLock<InputActions.InventoryActions>(InputActions.Inventory);
             TeleportLock = new InputLock<InputActions.TeleportActions>(InputActions.Teleport);
+            InteractionsLock = new InputLock<InputActions.InteractionsActions>(InputActions.Interactions);
         }
 
         private static Vector2 GetMouseWorldPosition() {
