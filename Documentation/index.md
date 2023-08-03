@@ -57,7 +57,3 @@ Rozgrywka w kilku przestrzeniach czasowych, pomiędzy którymi gracz może przem
 - **Monetyzacja** -  ...
 
 ---
-
-# [--> Pełna Dokumentacja <--](/GDD/GDD.md)
-
-
