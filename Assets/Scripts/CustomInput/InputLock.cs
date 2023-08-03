@@ -3,30 +3,33 @@ using System.Collections.Generic;
 using CoinPackage.Debugging;
 
 namespace CustomInput {
+    /// <summary>
+    /// Provides locking mechanism for user input. USE ONLY WITH INPUT ACTIONS
+    /// </summary>
+    /// <typeparam name="T">Input Actions</typeparam>
     public class InputLock<T> {
         private readonly dynamic _input;
-        private readonly List<int> _keys;
+        private readonly List<string> _keys;
+        private readonly string _tag;
         private ushort _keyID;
         
         public InputLock(T input) {
-            if (HasMethod(input, "Enable") && HasMethod(input, "Disable")) {
-                _input = input;
-            }
-            else {
-                throw new ArgumentException("Argument provided to InputLock is not an InputActions.");
-            }
+            _input = input;
+            _tag = _input.ToString();
+            CDebug.Log(_tag);
             _keyID = 2137;
-            _keys = new List<int>();
+            _keys = new List<string>();
         }
 
-        public int Lock() {
-            int key = _keyID++;
+        public string Lock() {
+            string key = _tag + _keyID++;
+            CDebug.Log("Generated key: " + key);
             _keys.Add(key);
             UpdateLock();
             return key;
         }
 
-        public void Unlock(int key) {
+        public void Unlock(string key) {
             if (_keys.Contains(key)) {
                 _keys.Remove(key);
                 UpdateLock();
@@ -45,11 +48,5 @@ namespace CustomInput {
             }
             CDebug.Log(_keys.Count);
         }
-        
-        private static bool HasMethod(object objectToCheck, string methodName)
-        {
-            var type = objectToCheck.GetType();
-            return type.GetMethod(methodName) != null;
-        } 
     }
 }
