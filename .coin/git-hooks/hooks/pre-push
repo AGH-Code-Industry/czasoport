@@ -2,15 +2,12 @@
 
 # Author: Patryk Lesiak
 # Date: 2023-08-01
-# In case of any questions, please contact me via Discord
+# In case of any questions, please contact me via Discord (vlesio)
 
 # This script is run before 'git push' is run.
 # If it exits with a non-zero exit code, the push is aborted.
 
-# You can edit this regex, however you must comply with POSIX regex syntax.
-# https://www.gnu.org/software/findutils/manual/html_node/find_html/posix_002dbasic-regular-expression-syntax.html
-
-. ./.coin/hooks/hooks-properties
+. ./.coin/git-hooks/hooks-properties
 
 BRANCH_NAME=$(git branch | grep '*' | cut -d ' ' -f2)
 

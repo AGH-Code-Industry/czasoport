@@ -7,25 +7,24 @@ using CoinPackage.Debugging;
 using UnityEditor;
 using Debug = UnityEngine.Debug;
 
-
 [InitializeOnLoad]
-public static class InitializeCoinAdditions
+public static class InitializeHooks
 {
-    static InitializeCoinAdditions() {
+    static InitializeHooks() {
         if (CheckIfShouldRun()) {
             Initialize();
         }
     }
 
     private static bool CheckIfShouldRun() {
-        if (!Directory.Exists("./.coin")) {
-            CDebug.LogError("Coin Additions are missing!");
+        if (!Directory.Exists("./.coin/git-hooks")) {
+            CDebug.LogError("Directory .coin/git-hooks could not be found, hooks will not be initialized.");
             return false;
         }
-        if (!File.Exists("./.coin/lastinit")) {
+        if (!File.Exists("./.coin/git-hooks/lastinit")) {
             return true;
         }
-        string text = File.ReadAllText("./.coin/lastinit");
+        string text = File.ReadAllText("./.coin/git-hooks/lastinit");
         if (DateTime.Parse(text).AddHours(12) < DateTime.Now) {
             return true;
         }
@@ -33,9 +32,9 @@ public static class InitializeCoinAdditions
     }
 
     private static void Initialize() {
-        CDebug.Log("Running Coin Additions.");
+        CDebug.Log("Initializing hooks...");
         Process p = new Process();
-        p.StartInfo = new ProcessStartInfo("python", "./.coin/coin-initializer.py");
+        p.StartInfo = new ProcessStartInfo("python", "./.coin/git-hooks/load-hooks.py");
         p.Start();
         while(!p.HasExited){}
     }
