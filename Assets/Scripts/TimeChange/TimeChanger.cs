@@ -73,10 +73,11 @@ namespace TimeChange
         private IEnumerator<WaitForSeconds> ChangeTime() {
             var key = CInput.TeleportLock.Lock();
             animator.SetTrigger("Start");
-            yield return new WaitForSeconds(timeToChange);
+            yield return new WaitForSeconds(timeToChange/2);
             transform.Translate(_timeJump * (int)(_newTimeLine - actualTime));
             actualTime = _newTimeLine;
             animator.SetTrigger("End");
+            yield return new WaitForSeconds(timeToChange/2);
             CInput.TeleportLock.Unlock(key);
         }
 
