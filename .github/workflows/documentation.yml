@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feature/documentation
 
 jobs:
   # Build the documentation
