@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Generating Documentation Manually | Czasoport Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Generating Documentation Manually | Czasoport Documentation ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/blob/feature/documentation/Documentation/manual/tutorials-info/generating-docs.md/#L1">
+  </head>
+
+  <script type="module">
+    import options from './../../public/main.js'
+    import { init } from './../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="generating-documentation-manually">Generating Documentation Manually</h1>
+
+<p>Project uses <code>DocFX</code> to generate documentation.</p>
+<p>GitHub will generate documentation automatically on each push to <code>master</code> branch. However, before merging branch you are currently working to <code>master</code>, it is recommended to generate documentation locally and check if everything is fine.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Updating the documentation after making relevant changes is required by anyone working on the project.</p>
+</div>
+<h2 id="installing-docfx">Installing DocFX</h2>
+<p>Please follow steps described in section <code>Create New Website</code> in <a href="https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool">DocFX installation guide</a>.</p>
+<h2 id="czasoport-documentation-structure">Czasoport documentation structure</h2>
+<p>Two important folders in <code>Documentation</code> folder are: <code>manual</code> and <code>resources</code>.</p>
+<p><code>Manual</code> folder contains Markdown files, that are basically standalone articles published on the site. In order to add new article, create new .md file in one of the subfolders and add link to it in <code>manual/toc.yml</code> file. Structure of toc.yml file is self-explanatory.</p>
+<p><code>Resources</code> folder contains images and other files that are used in articles. Folder structure should follow structure of <code>manual</code> folder, but resources for each article should be placed in additional folder with the name of the article.</p>
+<p>Please check how this picture of a cute cat is placed in the folders in order to understand how it works:</p>
+<p><code>![Cute cat](~/resources/tutorials-info/generating-docs/cat.jpg)</code></p>
+<p><img src="../../resources/tutorials-info/generating-docs/cat.jpg" alt="Cute cat"></p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/feature/documentation/Documentation/manual/tutorials-info/generating-docs.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          I was generated automatically
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

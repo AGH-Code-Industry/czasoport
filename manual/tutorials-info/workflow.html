@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Workflow | Czasoport Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Workflow | Czasoport Documentation ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/blob/feature/documentation/Documentation/manual/tutorials-info/workflow.md/#L1">
+  </head>
+
+  <script type="module">
+    import options from './../../public/main.js'
+    import { init } from './../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="workflow">Workflow</h1>
+
+<h2 id="git">Git</h2>
+<h3 id="branches">Branches</h3>
+<p>Pushes to <code>master</code> branch are protected. Each change, addition, hotfix etc. must be done on separate branch and then merged to <code>master</code> via pull request.</p>
+<p>Branch names must follow this pattern: <code>type/short-description</code>. For example: <code>feature/adding-new-weapon</code>. Available types are:</p>
+<ul>
+<li><code>feature</code> - new addition, system, interaction, item, etc.</li>
+<li><code>bugfix</code> - fixing a known bug, error, etc.</li>
+<li><code>hotfix</code> - fixing a bug that is critical and needs to be fixed as soon as possible</li>
+<li><code>refactor</code> - refactoring code, changing code structure, etc.</li>
+<li><code>documentation</code> - adding new documentation, changing existing documentation, etc.</li>
+<li><code>spike</code> - trying out new idea, testing new system, etc.</li>
+</ul>
+<p><code>short-description</code> must be short, but descriptive. For example: <code>feature/adding-new-weapon</code> is good, but <code>feature/weapon</code> is not. Only <em>kebab-case</em> is allowed.</p>
+<h3 id="commits">Commits</h3>
+<p>There are no enforced rules on commit messages, but please use descriptive ones.</p>
+<h3 id="pull-requests">Pull Requests</h3>
+<p>Please provide good name and at least short description of your pull request. If you are adding new feature, describe it as good as you can. If you are fixing a bug, describe what was the bug and how did you fix it.</p>
+<p>Pull Requests must be approved by at least one <strong>code owner</strong>. <strong>Code owners</strong> are automatically added to each pull request.</p>
+<p><strong>Merge commits</strong> are disabled. Each pull request must be merged via <strong>squash and merge</strong>.</p>
+<h3 id="resolving-conflicts">Resolving conflicts</h3>
+<p>If you are resolving conflicts, please use <strong>rebase</strong> instead of <strong>merge</strong>. This will keep commit history clean. If you are not sure how to do it, please ask for help.</p>
+<h3 id="pair-programming">Pair programming</h3>
+<p>If you are working on the same branch with someone else, please also use <strong>rebase</strong> instead of normal pull.</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/feature/documentation/Documentation/manual/tutorials-info/workflow.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          I was generated automatically
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
