@@ -1,0 +1,207 @@
+{
+  "api/Application.html": {
+    "href": "api/Application.html",
+    "title": "Namespace Application | Czasoport Documentation",
+    "keywords": "Namespace Application Classes StartupManager"
+  },
+  "api/Application.StartupManager.html": {
+    "href": "api/Application.StartupManager.html",
+    "title": "Class StartupManager | Czasoport Documentation",
+    "keywords": "Class StartupManager Inheritance Object StartupManager Namespace : Application Assembly : cs.temp.dll.dll Syntax public class StartupManager : MonoBehaviour"
+  },
+  "api/CustomInput.CInput.html": {
+    "href": "api/CustomInput.CInput.html",
+    "title": "Class CInput | Czasoport Documentation",
+    "keywords": "Class CInput Inheritance Object CInput Inherited Members Object.ToString() Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Namespace : CustomInput Assembly : cs.temp.dll.dll Syntax public static class CInput Fields InputActions Declaration public static readonly InputActions InputActions Field Value Type Description InputActions Properties MousePosition Declaration public static Vector2 MousePosition { get; } Property Value Type Description Vector2 MouseWorldPosition Declaration public static Vector2 MouseWorldPosition { get; } Property Value Type Description Vector2 NavigationAxis Declaration public static Vector2 NavigationAxis { get; } Property Value Type Description Vector2 Run Declaration public static float Run { get; } Property Value Type Description Single"
+  },
+  "api/CustomInput.Exceptions.html": {
+    "href": "api/CustomInput.Exceptions.html",
+    "title": "Namespace CustomInput.Exceptions | Czasoport Documentation",
+    "keywords": "Namespace CustomInput.Exceptions Classes NoMainCameraException"
+  },
+  "api/CustomInput.Exceptions.NoMainCameraException.html": {
+    "href": "api/CustomInput.Exceptions.NoMainCameraException.html",
+    "title": "Class NoMainCameraException | Czasoport Documentation",
+    "keywords": "Class NoMainCameraException Inheritance Object Exception NoMainCameraException Implements ISerializable _Exception Inherited Members Exception.GetBaseException() Exception.ToString() Exception.GetObjectData(SerializationInfo, StreamingContext) Exception.GetType() Exception.Message Exception.Data Exception.InnerException Exception.TargetSite Exception.StackTrace Exception.HelpLink Exception.Source Exception.HResult Exception.SerializeObjectState Object.Equals(Object) Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetHashCode() Object.MemberwiseClone() Namespace : CustomInput.Exceptions Assembly : cs.temp.dll.dll Syntax public class NoMainCameraException : Exception, ISerializable, _Exception Constructors NoMainCameraException() Declaration public NoMainCameraException() NoMainCameraException(String) Declaration public NoMainCameraException(string message) Parameters Type Name Description String message NoMainCameraException(String, Exception) Declaration public NoMainCameraException(string message, Exception inner) Parameters Type Name Description String message Exception inner Implements System.Runtime.Serialization.ISerializable System.Runtime.InteropServices._Exception"
+  },
+  "api/CustomInput.html": {
+    "href": "api/CustomInput.html",
+    "title": "Namespace CustomInput | Czasoport Documentation",
+    "keywords": "Namespace CustomInput Classes CInput InputTest"
+  },
+  "api/CustomInput.InputTest.html": {
+    "href": "api/CustomInput.InputTest.html",
+    "title": "Class InputTest | Czasoport Documentation",
+    "keywords": "Class InputTest Inheritance Object InputTest Namespace : CustomInput Assembly : cs.temp.dll.dll Syntax public class InputTest : MonoBehaviour"
+  },
+  "api/Global.html": {
+    "href": "api/Global.html",
+    "title": "Namespace Global | Czasoport Documentation",
+    "keywords": "Namespace Global Classes InputActions SettingsTests Structs InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions"
+  },
+  "api/Global.InputActions.html": {
+    "href": "api/Global.InputActions.html",
+    "title": "Class InputActions | Czasoport Documentation",
+    "keywords": "Class InputActions Inheritance Object InputActions Implements IDisposable Namespace : Global Assembly : cs.temp.dll.dll Syntax public class InputActions : IInputActionCollection2, IDisposable Constructors InputActions() Declaration public InputActions() Properties asset Declaration public InputActionAsset asset { get; } Property Value Type Description InputActionAsset bindingMask Declaration public InputBinding? bindingMask { get; set; } Property Value Type Description Nullable < InputBinding > bindings Declaration public IEnumerable<InputBinding> bindings { get; } Property Value Type Description IEnumerable < InputBinding > controlSchemes Declaration public ReadOnlyArray<InputControlScheme> controlSchemes { get; } Property Value Type Description ReadOnlyArray < InputControlScheme > devices Declaration public ReadOnlyArray<InputDevice>? devices { get; set; } Property Value Type Description Nullable < ReadOnlyArray < InputDevice >> Interactions Declaration public InputActions.InteractionsActions Interactions { get; } Property Value Type Description InputActions.InteractionsActions Inventory Declaration public InputActions.InventoryActions Inventory { get; } Property Value Type Description InputActions.InventoryActions Mouse Declaration public InputActions.MouseActions Mouse { get; } Property Value Type Description InputActions.MouseActions Movement Declaration public InputActions.MovementActions Movement { get; } Property Value Type Description InputActions.MovementActions Teleport Declaration public InputActions.TeleportActions Teleport { get; } Property Value Type Description InputActions.TeleportActions Methods Contains(InputAction) Declaration public bool Contains(InputAction action) Parameters Type Name Description InputAction action Returns Type Description Boolean Disable() Declaration public void Disable() Dispose() Declaration public void Dispose() Enable() Declaration public void Enable() FindAction(String, Boolean) Declaration public InputAction FindAction(string actionNameOrId, bool throwIfNotFound = false) Parameters Type Name Description String actionNameOrId Boolean throwIfNotFound Returns Type Description InputAction FindBinding(InputBinding, out InputAction) Declaration public int FindBinding(InputBinding bindingMask, out InputAction action) Parameters Type Name Description InputBinding bindingMask InputAction action Returns Type Description Int32 GetEnumerator() Declaration public IEnumerator<InputAction> GetEnumerator() Returns Type Description IEnumerator < InputAction > Explicit Interface Implementations IEnumerable.GetEnumerator() Declaration IEnumerator IEnumerable.GetEnumerator() Returns Type Description IEnumerator Implements System.IDisposable"
+  },
+  "api/Global.InputActions.IInteractionsActions.html": {
+    "href": "api/Global.InputActions.IInteractionsActions.html",
+    "title": "Interface InputActions.IInteractionsActions | Czasoport Documentation",
+    "keywords": "Interface InputActions.IInteractionsActions Namespace : Global Assembly : cs.temp.dll.dll Syntax public interface IInteractionsActions Methods OnInteraction(InputAction.CallbackContext) Declaration void OnInteraction(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context OnItemInteraction(InputAction.CallbackContext) Declaration void OnItemInteraction(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context"
+  },
+  "api/Global.InputActions.IInventoryActions.html": {
+    "href": "api/Global.InputActions.IInventoryActions.html",
+    "title": "Interface InputActions.IInventoryActions | Czasoport Documentation",
+    "keywords": "Interface InputActions.IInventoryActions Namespace : Global Assembly : cs.temp.dll.dll Syntax public interface IInventoryActions Methods OnChooseItem(InputAction.CallbackContext) Declaration void OnChooseItem(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context OnDrop(InputAction.CallbackContext) Declaration void OnDrop(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context OnNextItem(InputAction.CallbackContext) Declaration void OnNextItem(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context OnPreviousItem(InputAction.CallbackContext) Declaration void OnPreviousItem(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context"
+  },
+  "api/Global.InputActions.IMouseActions.html": {
+    "href": "api/Global.InputActions.IMouseActions.html",
+    "title": "Interface InputActions.IMouseActions | Czasoport Documentation",
+    "keywords": "Interface InputActions.IMouseActions Namespace : Global Assembly : cs.temp.dll.dll Syntax public interface IMouseActions Methods OnLeftClick(InputAction.CallbackContext) Declaration void OnLeftClick(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context OnMiddleClick(InputAction.CallbackContext) Declaration void OnMiddleClick(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context OnMousePosition(InputAction.CallbackContext) Declaration void OnMousePosition(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context OnRightClick(InputAction.CallbackContext) Declaration void OnRightClick(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context"
+  },
+  "api/Global.InputActions.IMovementActions.html": {
+    "href": "api/Global.InputActions.IMovementActions.html",
+    "title": "Interface InputActions.IMovementActions | Czasoport Documentation",
+    "keywords": "Interface InputActions.IMovementActions Namespace : Global Assembly : cs.temp.dll.dll Syntax public interface IMovementActions Methods OnFocusChange(InputAction.CallbackContext) Declaration void OnFocusChange(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context OnNavigation(InputAction.CallbackContext) Declaration void OnNavigation(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context OnRun(InputAction.CallbackContext) Declaration void OnRun(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context"
+  },
+  "api/Global.InputActions.InteractionsActions.html": {
+    "href": "api/Global.InputActions.InteractionsActions.html",
+    "title": "Struct InputActions.InteractionsActions | Czasoport Documentation",
+    "keywords": "Struct InputActions.InteractionsActions Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : Global Assembly : cs.temp.dll.dll Syntax public struct InteractionsActions Constructors InteractionsActions(InputActions) Declaration public InteractionsActions(InputActions wrapper) Parameters Type Name Description InputActions wrapper Properties enabled Declaration public readonly bool enabled { get; } Property Value Type Description Boolean Interaction Declaration public readonly InputAction Interaction { get; } Property Value Type Description InputAction ItemInteraction Declaration public readonly InputAction ItemInteraction { get; } Property Value Type Description InputAction Methods Disable() Declaration public void Disable() Enable() Declaration public void Enable() Get() Declaration public InputActionMap Get() Returns Type Description InputActionMap SetCallbacks(InputActions.IInteractionsActions) Declaration public void SetCallbacks(InputActions.IInteractionsActions instance) Parameters Type Name Description InputActions.IInteractionsActions instance Operators Implicit(InputActions.InteractionsActions to InputActionMap) Declaration public static implicit operator InputActionMap(InputActions.InteractionsActions set) Parameters Type Name Description InputActions.InteractionsActions set Returns Type Description InputActionMap"
+  },
+  "api/Global.InputActions.InventoryActions.html": {
+    "href": "api/Global.InputActions.InventoryActions.html",
+    "title": "Struct InputActions.InventoryActions | Czasoport Documentation",
+    "keywords": "Struct InputActions.InventoryActions Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : Global Assembly : cs.temp.dll.dll Syntax public struct InventoryActions Constructors InventoryActions(InputActions) Declaration public InventoryActions(InputActions wrapper) Parameters Type Name Description InputActions wrapper Properties ChooseItem Declaration public readonly InputAction ChooseItem { get; } Property Value Type Description InputAction Drop Declaration public readonly InputAction Drop { get; } Property Value Type Description InputAction enabled Declaration public readonly bool enabled { get; } Property Value Type Description Boolean NextItem Declaration public readonly InputAction NextItem { get; } Property Value Type Description InputAction PreviousItem Declaration public readonly InputAction PreviousItem { get; } Property Value Type Description InputAction Methods Disable() Declaration public void Disable() Enable() Declaration public void Enable() Get() Declaration public InputActionMap Get() Returns Type Description InputActionMap SetCallbacks(InputActions.IInventoryActions) Declaration public void SetCallbacks(InputActions.IInventoryActions instance) Parameters Type Name Description InputActions.IInventoryActions instance Operators Implicit(InputActions.InventoryActions to InputActionMap) Declaration public static implicit operator InputActionMap(InputActions.InventoryActions set) Parameters Type Name Description InputActions.InventoryActions set Returns Type Description InputActionMap"
+  },
+  "api/Global.InputActions.ITeleportActions.html": {
+    "href": "api/Global.InputActions.ITeleportActions.html",
+    "title": "Interface InputActions.ITeleportActions | Czasoport Documentation",
+    "keywords": "Interface InputActions.ITeleportActions Namespace : Global Assembly : cs.temp.dll.dll Syntax public interface ITeleportActions Methods OnTeleportBack(InputAction.CallbackContext) Declaration void OnTeleportBack(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context OnTeleportForward(InputAction.CallbackContext) Declaration void OnTeleportForward(InputAction.CallbackContext context) Parameters Type Name Description InputAction.CallbackContext context"
+  },
+  "api/Global.InputActions.MouseActions.html": {
+    "href": "api/Global.InputActions.MouseActions.html",
+    "title": "Struct InputActions.MouseActions | Czasoport Documentation",
+    "keywords": "Struct InputActions.MouseActions Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : Global Assembly : cs.temp.dll.dll Syntax public struct MouseActions Constructors MouseActions(InputActions) Declaration public MouseActions(InputActions wrapper) Parameters Type Name Description InputActions wrapper Properties enabled Declaration public readonly bool enabled { get; } Property Value Type Description Boolean LeftClick Declaration public readonly InputAction LeftClick { get; } Property Value Type Description InputAction MiddleClick Declaration public readonly InputAction MiddleClick { get; } Property Value Type Description InputAction MousePosition Declaration public readonly InputAction MousePosition { get; } Property Value Type Description InputAction RightClick Declaration public readonly InputAction RightClick { get; } Property Value Type Description InputAction Methods Disable() Declaration public void Disable() Enable() Declaration public void Enable() Get() Declaration public InputActionMap Get() Returns Type Description InputActionMap SetCallbacks(InputActions.IMouseActions) Declaration public void SetCallbacks(InputActions.IMouseActions instance) Parameters Type Name Description InputActions.IMouseActions instance Operators Implicit(InputActions.MouseActions to InputActionMap) Declaration public static implicit operator InputActionMap(InputActions.MouseActions set) Parameters Type Name Description InputActions.MouseActions set Returns Type Description InputActionMap"
+  },
+  "api/Global.InputActions.MovementActions.html": {
+    "href": "api/Global.InputActions.MovementActions.html",
+    "title": "Struct InputActions.MovementActions | Czasoport Documentation",
+    "keywords": "Struct InputActions.MovementActions Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : Global Assembly : cs.temp.dll.dll Syntax public struct MovementActions Constructors MovementActions(InputActions) Declaration public MovementActions(InputActions wrapper) Parameters Type Name Description InputActions wrapper Properties enabled Declaration public readonly bool enabled { get; } Property Value Type Description Boolean FocusChange Declaration public readonly InputAction FocusChange { get; } Property Value Type Description InputAction Navigation Declaration public readonly InputAction Navigation { get; } Property Value Type Description InputAction Run Declaration public readonly InputAction Run { get; } Property Value Type Description InputAction Methods Disable() Declaration public void Disable() Enable() Declaration public void Enable() Get() Declaration public InputActionMap Get() Returns Type Description InputActionMap SetCallbacks(InputActions.IMovementActions) Declaration public void SetCallbacks(InputActions.IMovementActions instance) Parameters Type Name Description InputActions.IMovementActions instance Operators Implicit(InputActions.MovementActions to InputActionMap) Declaration public static implicit operator InputActionMap(InputActions.MovementActions set) Parameters Type Name Description InputActions.MovementActions set Returns Type Description InputActionMap"
+  },
+  "api/Global.InputActions.TeleportActions.html": {
+    "href": "api/Global.InputActions.TeleportActions.html",
+    "title": "Struct InputActions.TeleportActions | Czasoport Documentation",
+    "keywords": "Struct InputActions.TeleportActions Inherited Members ValueType.Equals(Object) ValueType.GetHashCode() ValueType.ToString() Object.Equals(Object, Object) Object.ReferenceEquals(Object, Object) Object.GetType() Namespace : Global Assembly : cs.temp.dll.dll Syntax public struct TeleportActions Constructors TeleportActions(InputActions) Declaration public TeleportActions(InputActions wrapper) Parameters Type Name Description InputActions wrapper Properties enabled Declaration public readonly bool enabled { get; } Property Value Type Description Boolean TeleportBack Declaration public readonly InputAction TeleportBack { get; } Property Value Type Description InputAction TeleportForward Declaration public readonly InputAction TeleportForward { get; } Property Value Type Description InputAction Methods Disable() Declaration public void Disable() Enable() Declaration public void Enable() Get() Declaration public InputActionMap Get() Returns Type Description InputActionMap SetCallbacks(InputActions.ITeleportActions) Declaration public void SetCallbacks(InputActions.ITeleportActions instance) Parameters Type Name Description InputActions.ITeleportActions instance Operators Implicit(InputActions.TeleportActions to InputActionMap) Declaration public static implicit operator InputActionMap(InputActions.TeleportActions set) Parameters Type Name Description InputActions.TeleportActions set Returns Type Description InputActionMap"
+  },
+  "api/Global.SettingsTests.html": {
+    "href": "api/Global.SettingsTests.html",
+    "title": "Class SettingsTests | Czasoport Documentation",
+    "keywords": "Class SettingsTests Inheritance Object SettingsTests Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SettingsTests : MonoBehaviour"
+  },
+  "api/LevelsLoader.AvailableLevels.html": {
+    "href": "api/LevelsLoader.AvailableLevels.html",
+    "title": "Enum AvailableLevels | Czasoport Documentation",
+    "keywords": "Enum AvailableLevels Namespace : LevelsLoader Assembly : cs.temp.dll.dll Syntax public enum AvailableLevels Fields Name Description Level1 Level2 Level3 Level4 Level5"
+  },
+  "api/LevelsLoader.html": {
+    "href": "api/LevelsLoader.html",
+    "title": "Namespace LevelsLoader | Czasoport Documentation",
+    "keywords": "Namespace LevelsLoader Classes LevelInfoSO LevelsManager TeleportToAnotherLevel Enums AvailableLevels"
+  },
+  "api/LevelsLoader.LevelInfoSO.html": {
+    "href": "api/LevelsLoader.LevelInfoSO.html",
+    "title": "Class LevelInfoSO | Czasoport Documentation",
+    "keywords": "Class LevelInfoSO Inheritance Object LevelInfoSO Namespace : LevelsLoader Assembly : cs.temp.dll.dll Syntax public class LevelInfoSO : ScriptableObject Fields level Declaration public AvailableLevels level Field Value Type Description AvailableLevels neighbourLevels Declaration public AvailableLevels[] neighbourLevels Field Value Type Description AvailableLevels []"
+  },
+  "api/LevelsLoader.LevelsManager.html": {
+    "href": "api/LevelsLoader.LevelsManager.html",
+    "title": "Class LevelsManager | Czasoport Documentation",
+    "keywords": "Class LevelsManager Inheritance Object LevelsManager Namespace : LevelsLoader Assembly : cs.temp.dll.dll Syntax public class LevelsManager : MonoBehaviour Properties Instance Declaration public static LevelsManager Instance { get; } Property Value Type Description LevelsManager Methods ChangeLevel(LevelInfoSO) Declaration public void ChangeLevel(LevelInfoSO levelInfo) Parameters Type Name Description LevelInfoSO levelInfo"
+  },
+  "api/LevelsLoader.TeleportToAnotherLevel.html": {
+    "href": "api/LevelsLoader.TeleportToAnotherLevel.html",
+    "title": "Class TeleportToAnotherLevel | Czasoport Documentation",
+    "keywords": "Class TeleportToAnotherLevel Inheritance Object TeleportToAnotherLevel Namespace : LevelsLoader Assembly : cs.temp.dll.dll Syntax public class TeleportToAnotherLevel : MonoBehaviour"
+  },
+  "api/Settings.Developer.ApplicationSettingsSO.html": {
+    "href": "api/Settings.Developer.ApplicationSettingsSO.html",
+    "title": "Class ApplicationSettingsSO | Czasoport Documentation",
+    "keywords": "Class ApplicationSettingsSO Settings for entire application that defines variables for startup, core processes and shutdown Inheritance Object ApplicationSettingsSO Namespace : Settings.Developer Assembly : cs.temp.dll.dll Syntax public class ApplicationSettingsSO : ScriptableObject Fields globalDataSceneName Declaration public string globalDataSceneName Field Value Type Description String"
+  },
+  "api/Settings.Developer.html": {
+    "href": "api/Settings.Developer.html",
+    "title": "Namespace Settings.Developer | Czasoport Documentation",
+    "keywords": "Namespace Settings.Developer Classes ApplicationSettingsSO Settings for entire application that defines variables for startup, core processes and shutdown TimePlatformChangeSettingsSO Settings for scene changing and time changing systems."
+  },
+  "api/Settings.Developer.TimePlatformChangeSettingsSO.html": {
+    "href": "api/Settings.Developer.TimePlatformChangeSettingsSO.html",
+    "title": "Class TimePlatformChangeSettingsSO | Czasoport Documentation",
+    "keywords": "Class TimePlatformChangeSettingsSO Settings for scene changing and time changing systems. Inheritance Object TimePlatformChangeSettingsSO Namespace : Settings.Developer Assembly : cs.temp.dll.dll Syntax public class TimePlatformChangeSettingsSO : ScriptableObject Fields offsetFromPresentPlatform Declaration public Vector2 offsetFromPresentPlatform Field Value Type Description Vector2"
+  },
+  "api/Settings.DeveloperSettings.html": {
+    "href": "api/Settings.DeveloperSettings.html",
+    "title": "Class DeveloperSettings | Czasoport Documentation",
+    "keywords": "Class DeveloperSettings Manages different setting sets used for internal settings. Inheritance Object DeveloperSettings Namespace : Settings Assembly : cs.temp.dll.dll Syntax public class DeveloperSettings : MonoBehaviour Fields appSettings Declaration public ApplicationSettingsSO appSettings Field Value Type Description ApplicationSettingsSO Instance Declaration public static DeveloperSettings Instance Field Value Type Description DeveloperSettings tpcSettings Declaration public TimePlatformChangeSettingsSO tpcSettings Field Value Type Description TimePlatformChangeSettingsSO"
+  },
+  "api/Settings.html": {
+    "href": "api/Settings.html",
+    "title": "Namespace Settings | Czasoport Documentation",
+    "keywords": "Namespace Settings Classes DeveloperSettings Manages different setting sets used for internal settings."
+  },
+  "api/TimeChange.CheckCollider.html": {
+    "href": "api/TimeChange.CheckCollider.html",
+    "title": "Class CheckCollider | Czasoport Documentation",
+    "keywords": "Class CheckCollider Inheritance Object CheckCollider Namespace : TimeChange Assembly : cs.temp.dll.dll Syntax public class CheckCollider : MonoBehaviour Methods IsNotTouching() Declaration public bool IsNotTouching() Returns Type Description Boolean"
+  },
+  "api/TimeChange.html": {
+    "href": "api/TimeChange.html",
+    "title": "Namespace TimeChange | Czasoport Documentation",
+    "keywords": "Namespace TimeChange Classes CheckCollider TimeChanger Enums TimeLine"
+  },
+  "api/TimeChange.Test.CameraTest.html": {
+    "href": "api/TimeChange.Test.CameraTest.html",
+    "title": "Class CameraTest | Czasoport Documentation",
+    "keywords": "Class CameraTest Inheritance Object CameraTest Namespace : TimeChange.Test Assembly : cs.temp.dll.dll Syntax public class CameraTest : MonoBehaviour"
+  },
+  "api/TimeChange.Test.html": {
+    "href": "api/TimeChange.Test.html",
+    "title": "Namespace TimeChange.Test | Czasoport Documentation",
+    "keywords": "Namespace TimeChange.Test Classes CameraTest PlayerTTCtest"
+  },
+  "api/TimeChange.Test.PlayerTTCtest.html": {
+    "href": "api/TimeChange.Test.PlayerTTCtest.html",
+    "title": "Class PlayerTTCtest | Czasoport Documentation",
+    "keywords": "Class PlayerTTCtest Inheritance Object PlayerTTCtest Namespace : TimeChange.Test Assembly : cs.temp.dll.dll Syntax public class PlayerTTCtest : MonoBehaviour"
+  },
+  "api/TimeChange.TimeChanger.html": {
+    "href": "api/TimeChange.TimeChanger.html",
+    "title": "Class TimeChanger | Czasoport Documentation",
+    "keywords": "Class TimeChanger Inheritance Object TimeChanger Namespace : TimeChange Assembly : cs.temp.dll.dll Syntax public class TimeChanger : MonoBehaviour Fields actualTime Declaration public TimeLine actualTime Field Value Type Description TimeLine"
+  },
+  "api/TimeChange.TimeLine.html": {
+    "href": "api/TimeChange.TimeLine.html",
+    "title": "Enum TimeLine | Czasoport Documentation",
+    "keywords": "Enum TimeLine Namespace : TimeChange Assembly : cs.temp.dll.dll Syntax public enum TimeLine Fields Name Description Future Past Present"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Nazwa gry: Timeport | Czasoport Documentation",
+    "keywords": "Nazwa gry: Timeport Opis świata Gry Świat gry podzielony jest na 3 przestrzenie czasowe: początki cywilizacji - dominują tam wydeptane szlaki, lasy, pola, małe osady, namioty z liści, domki z gliny, pierwsze uprawy, itp. złoty wiek cywilizacji - dominują tam twierdze, miasta, świątynie, wsie, itp. upadek cywilizacji - dominują tam ruiny, wody zanieczyszczone kwasem, skażona atmosefera, ogólny niepokój, itp. Składa się on z wielu plansz przedstawiających pojedyczne lokalizacje, pomiędzy którymi gracz może swobodnie się przemieszczać. Niektóre plansze przeznaczone będą do eksploracji, a niektóre stawiać będą przed graczem przeszkody. Główny Bohater Bezimienny kandydat na stażystę Komisji Czasoprzestrzennej . W przeciwieństwie do reszty postaci spotkanych podczas rozgrywki jest człowiekiem. Grafiki koncepcyjne Gatunek oraz Styl Gatunek - Future Fantasy Adventure and Puzzle Rodzaj Grafiki - 2.5D, styl wykonania do ustalanie z grafikami Widok - Isometryczny Mechanika wyróżniająca grę Rozgrywka w kilku przestrzeniach czasowych, pomiędzy którymi gracz może przemieszczać się w dowolnym momencie. Pozwala to na obchodzenie przejść, używanie przedmiotów z jednej przestrzeni w innej, zmianie stanu przestrzeni znajdującej się dalej w przyszłość, itp. <!-- Drogi sa bezpieczne, na ekranie jest wskaźnik bezpieczeństwa teleportacji. --> Używane Technologie Silnik : Unity 2021.3.12f1 Edytor Graficzny: Według uznania grafików Marketing oraz Monetyzacja Grupa Docelowa - Gen z Monetyzacja - ..."
+  },
+  "manual/cinput-manual.html": {
+    "href": "manual/cinput-manual.html",
+    "title": "Coniunctis nec qui et lanient monticolae vitae | Czasoport Documentation",
+    "keywords": "Coniunctis nec qui et lanient monticolae vitae Opem ille Lorem markdownum cavis exululat inutile. Illi quem caeli, vola patruo difficili Iuppiter Patraeque, est ardebant ingeniis Troica intus Amore tibi mirantem superfusis, multum. Ut Achilles Et sitim Tibi modo ait temptant crinita daret Pariter in removi offensasque Lenaeo damno terra Phoebes ut damnosa classis ignes templo; tua ulla capillos ultima. Videre percusso plectro templa fuit diva minimum debere, quid nomen Philomela animis. Verbis istis flagrat vulnera inpediique ignes. Gravi filo obvius arte Amphionis Panes emisitque iubet. Latona te timens Latentia ante, eundem meritorum sunto ! Elige in timuit templa ferrea, qui arma ligati stagnum turbant. Fraternaque aeternus, dedisse, naufragus corripiens ranas Amathunta et quod laetior culpa nec semper scorpius fuit vicem corpora ardere. Fallit in artus primordia, fratres per aliis , ipsi manu Asiae quod marmorea . mountain(googleVga, pngIphone); var radcabBitrate = dnsCronRecursion; gui(2); ipImageAix += vle(drm_cisc, horizontal + computer_key); jre(vaporware_adc_multi); Lumina ut tamen praesentia vidistis nymphae auroque Bromumque in portant furorem. Visa init resurgere praevitiat canibus et, dedignata turea, ilia. Pisenore mensura insula aere nec per o gladium causa: Alcidae. Veris sentes pallet, alta melius nostra amborum probant, deam. Iuventae dedimus nitidaque hunc traxisse sermonibus pectine flecti an pateres, hac ore gelidis foret semper. Sithon pelle. Bracchia Hippason videntur fateri hosti: palpitat animo est reliquit anne nam confusaque. Interea rex altis munera quem quae quoque rorant, rauco albescere scopulo moriensque parvo, pectus illa, quadrupedes. Notavit haec. Vertit pars quem Euryte casu usta iterum! Ablatum pectus corripiunt neu humus tamquam; ducens stellarum amore. Pulsisque latet, ad tamen victor fulva Tirynthius posco; qui inque in poena quidem enses !"
+  },
+  "manual/etiam.html": {
+    "href": "manual/etiam.html",
+    "title": "Etiam nantemque exul | Czasoport Documentation",
+    "keywords": "Etiam nantemque exul Cum tulit Lorem markdownum quos stimulosque altos . Putat nubes molle Troiae vero dea; nostraque plurima . Vos de mihi, credidit: salibus et iacuit, volvitur sunt unda fronti deriguisse refert . Sumpsisse viso Nubila nomine. Purpura se o et causa parva ripas, adsonat saevaque; quid modo ambo et venere voveo. Sine et esse, illa tempore, sive tibi roseo, ministerio altos. Trepident medicamine, primasque cum et peregit dapibusque quoslibet hominis quoque insula. Tepentibus ut Cecropios ab turba, est auro ferventi aliter duratos feres differtis Ausoniis potes, non noctis Laertaque iuvenes. Caelumque vestigia Et promissa fila sentiet leges; Phrygiae et levatus ferire? Salutifer coniugis fierent ante fecissent post vultumque ultima, per radios currere; tandem. Fuerat qua, ne foedera reformatus nunc diu dea audet nonne. Ut utinam mitia tenuerunt movent spectans Mavortis nulla ite, somnos exsiccata dixit Aeetias. Binas Trinacriam album ex ipse. Quoque una utraque tardius placetque gerere; mariti sed dare ludunt memorante Delphice corpora. Caret quantum intellegat venis gaudent eurus. Et suos crista; has et ferarum quid audit omine; mea cum praemia quae duris, suspicor. Adflati qui Spiro conata supprimit diemque; ora oblitus ensem alti non quo lacrimis ferunt, ageret Cebrenida rutilis delendaque? Terras lata modus: nec fas, misi utque adpositis Iunonis. Fide vidit, ferox Schoeneia mundi, voce, tellus pariterque pedum, sic Celadon securior corpora partesque posito. Potest faxo unda pendulaque ille rostro, haesit pars: formidine captat, viseret simulaverat! Sequi est peragit flumineae pallent simulatas formae avulsa, imagine undis; formam. Et nec sed adeunt, huic aequa et ignes nec, medere terram. Move ipsum abnuat retemptat retinebat duabus diu Iovi est pluma. Tecum non deducit Pelops Inachus: arcet aliquemque, regia telo. Tollens altore nec semel qui voce Palatinae Apertis et dei duo inquit ; luna secundo, fervida terret. In haec dextra septima Tydides tibi: congelat hospes nativum radice tegumenque membris Hesperio ne Libys, est vocabula siqua. Dumque stet mulces , ut fontem dea atricolor, est pronos, clarissimus poterat cum intrare sidere templi. cut_metadata(whitelistSequenceUnit.thick.of_bezel_cdma( address_suffix_troubleshooting), sram_trojan(4, hdmi_network - 1)); flash.apache -= web_gps_plug; if (offline.dac_bridge(scrollEbookRom, parameter.internal_target_superscalar(2)) < qwerty + 2 - ipvCgiContextual) { certificateIdeAsp = overclocking + app; supplyCard = siteRaster; } Sagitta curvum quoque petisti opibusque proximitas in, illa vestrum, mihi domum nescia flexit sacra in. Magni vive sim crescente causam saxo voluit, mens, quod. Tela ter ulterius similis illos nato refugit ait verbaque nec fatigatum penates iaculatricemque cecidit pinnas, cum. Misso contigit caelo dedissent lumina; nympha ad vobis occidat, malo sacra utrumque cunctos Diomedeos addita. Virgineus autumnos, ait mitissima curru: fuit sed fessi se habebat hactenus Ultor; meus."
+  },
+  "manual/major-settings-changes.html": {
+    "href": "manual/major-settings-changes.html",
+    "title": "Major settings changes | Czasoport Documentation",
+    "keywords": "Major settings changes Some settings chages might be the key to game performance, stability and quality. Some settings may break the game entirely. This page will list the most important settings that have been changed, why they were changed and what the old values were. In case of any errors in the future, please refer to this page and check if some change might be the reason for it. Important Each time an important setting is changed, MSC should be created and documented here and on corresponding pull request. Template for MSC can be found at the end of source code for this page. [MSC #1] Api Compatability Level MSC #1 Api Compatability Level Pull Request Input Lock Setting Project Settings -> Player -> Other Settings -> Configuration -> Api Compatability Level Old Value .NET Standard 2.1 New Value .NET Framework Reason for change Ability to use dynamic type Possible implications Worse cross-platform compatibility, problems with building for different platforms might arise <!-- TEMPLATE |MSC #1|Api Compatability Level| |:---:|:---:| |**Pull Request**|[NAME OF PR](LINK TO PR)| |**Setting**|`PATH -> TO -> SETTING`| |**Old Value**|OLD VALUE| |**New Value**|NEW VALUE| |**Reason for change**|WHY DID U CHANGE THAT| |**Possible implications**|WHAT MIGHT HAPPEN BECAUSE OF THAT| -->"
+  }
+}
