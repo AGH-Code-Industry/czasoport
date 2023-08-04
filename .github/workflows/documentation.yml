@@ -1,4 +1,4 @@
-name: Example documentation
+name: Generate project documentation
 
 on:
   push:
@@ -12,15 +12,17 @@ jobs:
     runs-on: windows-latest # Required by DocFX
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         # with:
         #   submodules: true
 
-      - name: Install DocFX
-        run: choco install -y docfx
+      - name: Install dotnet
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
 
-      # - name: Use README.md as index.md
-      #   run: cp README.md Documentation/index.md
+      - name: Install DocFX
+        run: dotnet tool install -g docfx
 
       - name: Build
         run: docfx Documentation/docfx.json
