@@ -42,7 +42,8 @@
                 "src": "manual",
                 "files": [
                     "toc.yml",
-                    "*.md"
+                    "*.md",
+                    "**/*.md"
                 ],
                 "dest": "manual"
             }
