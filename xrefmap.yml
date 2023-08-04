@@ -99,27 +99,39 @@ references:
   name: NoMainCameraException()
   href: api/CustomInput.Exceptions.NoMainCameraException.html#CustomInput_Exceptions_NoMainCameraException__ctor
   commentId: M:CustomInput.Exceptions.NoMainCameraException.#ctor
+  name.vb: New()
   fullName: CustomInput.Exceptions.NoMainCameraException.NoMainCameraException()
+  fullName.vb: CustomInput.Exceptions.NoMainCameraException.New()
   nameWithType: NoMainCameraException.NoMainCameraException()
+  nameWithType.vb: NoMainCameraException.New()
 - uid: CustomInput.Exceptions.NoMainCameraException.#ctor(System.String)
-  name: NoMainCameraException(String)
+  name: NoMainCameraException(string)
   href: api/CustomInput.Exceptions.NoMainCameraException.html#CustomInput_Exceptions_NoMainCameraException__ctor_System_String_
   commentId: M:CustomInput.Exceptions.NoMainCameraException.#ctor(System.String)
-  fullName: CustomInput.Exceptions.NoMainCameraException.NoMainCameraException(System.String)
-  nameWithType: NoMainCameraException.NoMainCameraException(String)
+  name.vb: New(String)
+  fullName: CustomInput.Exceptions.NoMainCameraException.NoMainCameraException(string)
+  fullName.vb: CustomInput.Exceptions.NoMainCameraException.New(String)
+  nameWithType: NoMainCameraException.NoMainCameraException(string)
+  nameWithType.vb: NoMainCameraException.New(String)
 - uid: CustomInput.Exceptions.NoMainCameraException.#ctor(System.String,System.Exception)
-  name: NoMainCameraException(String, Exception)
+  name: NoMainCameraException(string, Exception)
   href: api/CustomInput.Exceptions.NoMainCameraException.html#CustomInput_Exceptions_NoMainCameraException__ctor_System_String_System_Exception_
   commentId: M:CustomInput.Exceptions.NoMainCameraException.#ctor(System.String,System.Exception)
-  fullName: CustomInput.Exceptions.NoMainCameraException.NoMainCameraException(System.String, System.Exception)
-  nameWithType: NoMainCameraException.NoMainCameraException(String, Exception)
+  name.vb: New(String, Exception)
+  fullName: CustomInput.Exceptions.NoMainCameraException.NoMainCameraException(string, System.Exception)
+  fullName.vb: CustomInput.Exceptions.NoMainCameraException.New(String, System.Exception)
+  nameWithType: NoMainCameraException.NoMainCameraException(string, Exception)
+  nameWithType.vb: NoMainCameraException.New(String, Exception)
 - uid: CustomInput.Exceptions.NoMainCameraException.#ctor*
   name: NoMainCameraException
   href: api/CustomInput.Exceptions.NoMainCameraException.html#CustomInput_Exceptions_NoMainCameraException__ctor_
   commentId: Overload:CustomInput.Exceptions.NoMainCameraException.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: CustomInput.Exceptions.NoMainCameraException.NoMainCameraException
+  fullName.vb: CustomInput.Exceptions.NoMainCameraException.New
   nameWithType: NoMainCameraException.NoMainCameraException
+  nameWithType.vb: NoMainCameraException.New
 - uid: CustomInput.InputTest
   name: InputTest
   href: api/CustomInput.InputTest.html
@@ -127,13 +139,8 @@ references:
   fullName: CustomInput.InputTest
   nameWithType: InputTest
 - uid: Global
-  name: Global
+  name: ''
   href: api/Global.html
-  name.vb: ''
-  fullName: Global
-  fullName.vb: ''
-  nameWithType: Global
-  nameWithType.vb: ''
 - uid: Global.InputActions
   name: InputActions
   href: api/Global.InputActions.html
@@ -144,54 +151,21 @@ references:
   name: InputActions()
   href: api/Global.InputActions.html#Global_InputActions__ctor
   commentId: M:Global.InputActions.#ctor
+  name.vb: New()
   fullName: InputActions.InputActions()
+  fullName.vb: InputActions.New()
   nameWithType: InputActions.InputActions()
+  nameWithType.vb: InputActions.New()
 - uid: Global.InputActions.#ctor*
   name: InputActions
   href: api/Global.InputActions.html#Global_InputActions__ctor_
   commentId: Overload:Global.InputActions.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: InputActions.InputActions
+  fullName.vb: InputActions.New
   nameWithType: InputActions.InputActions
-- uid: Global.InputActions.asset
-  name: asset
-  href: api/Global.InputActions.html#Global_InputActions_asset
-  commentId: P:Global.InputActions.asset
-  fullName: InputActions.asset
-  nameWithType: InputActions.asset
-- uid: Global.InputActions.asset*
-  name: asset
-  href: api/Global.InputActions.html#Global_InputActions_asset_
-  commentId: Overload:Global.InputActions.asset
-  isSpec: "True"
-  fullName: InputActions.asset
-  nameWithType: InputActions.asset
-- uid: Global.InputActions.bindingMask
-  name: bindingMask
-  href: api/Global.InputActions.html#Global_InputActions_bindingMask
-  commentId: P:Global.InputActions.bindingMask
-  fullName: InputActions.bindingMask
-  nameWithType: InputActions.bindingMask
-- uid: Global.InputActions.bindingMask*
-  name: bindingMask
-  href: api/Global.InputActions.html#Global_InputActions_bindingMask_
-  commentId: Overload:Global.InputActions.bindingMask
-  isSpec: "True"
-  fullName: InputActions.bindingMask
-  nameWithType: InputActions.bindingMask
-- uid: Global.InputActions.bindings
-  name: bindings
-  href: api/Global.InputActions.html#Global_InputActions_bindings
-  commentId: P:Global.InputActions.bindings
-  fullName: InputActions.bindings
-  nameWithType: InputActions.bindings
-- uid: Global.InputActions.bindings*
-  name: bindings
-  href: api/Global.InputActions.html#Global_InputActions_bindings_
-  commentId: Overload:Global.InputActions.bindings
-  isSpec: "True"
-  fullName: InputActions.bindings
-  nameWithType: InputActions.bindings
+  nameWithType.vb: InputActions.New
 - uid: Global.InputActions.Contains(InputAction)
   name: Contains(InputAction)
   href: api/Global.InputActions.html#Global_InputActions_Contains_InputAction_
@@ -205,32 +179,6 @@ references:
   isSpec: "True"
   fullName: InputActions.Contains
   nameWithType: InputActions.Contains
-- uid: Global.InputActions.controlSchemes
-  name: controlSchemes
-  href: api/Global.InputActions.html#Global_InputActions_controlSchemes
-  commentId: P:Global.InputActions.controlSchemes
-  fullName: InputActions.controlSchemes
-  nameWithType: InputActions.controlSchemes
-- uid: Global.InputActions.controlSchemes*
-  name: controlSchemes
-  href: api/Global.InputActions.html#Global_InputActions_controlSchemes_
-  commentId: Overload:Global.InputActions.controlSchemes
-  isSpec: "True"
-  fullName: InputActions.controlSchemes
-  nameWithType: InputActions.controlSchemes
-- uid: Global.InputActions.devices
-  name: devices
-  href: api/Global.InputActions.html#Global_InputActions_devices
-  commentId: P:Global.InputActions.devices
-  fullName: InputActions.devices
-  nameWithType: InputActions.devices
-- uid: Global.InputActions.devices*
-  name: devices
-  href: api/Global.InputActions.html#Global_InputActions_devices_
-  commentId: Overload:Global.InputActions.devices
-  isSpec: "True"
-  fullName: InputActions.devices
-  nameWithType: InputActions.devices
 - uid: Global.InputActions.Disable
   name: Disable()
   href: api/Global.InputActions.html#Global_InputActions_Disable
@@ -271,11 +219,14 @@ references:
   fullName: InputActions.Enable
   nameWithType: InputActions.Enable
 - uid: Global.InputActions.FindAction(System.String,System.Boolean)
-  name: FindAction(String, Boolean)
+  name: FindAction(string, bool)
   href: api/Global.InputActions.html#Global_InputActions_FindAction_System_String_System_Boolean_
   commentId: M:Global.InputActions.FindAction(System.String,System.Boolean)
-  fullName: InputActions.FindAction(System.String, System.Boolean)
-  nameWithType: InputActions.FindAction(String, Boolean)
+  name.vb: FindAction(String, Boolean)
+  fullName: InputActions.FindAction(string, bool)
+  fullName.vb: InputActions.FindAction(String, Boolean)
+  nameWithType: InputActions.FindAction(string, bool)
+  nameWithType.vb: InputActions.FindAction(String, Boolean)
 - uid: Global.InputActions.FindAction*
   name: FindAction
   href: api/Global.InputActions.html#Global_InputActions_FindAction_
@@ -287,11 +238,11 @@ references:
   name: FindBinding(InputBinding, out InputAction)
   href: api/Global.InputActions.html#Global_InputActions_FindBinding_InputBinding_InputAction__
   commentId: M:Global.InputActions.FindBinding(InputBinding,InputAction@)
-  name.vb: FindBinding(InputBinding, ByRef InputAction)
+  name.vb: FindBinding(InputBinding, InputAction)
   fullName: InputActions.FindBinding(InputBinding, out InputAction)
-  fullName.vb: InputActions.FindBinding(InputBinding, ByRef InputAction)
+  fullName.vb: InputActions.FindBinding(InputBinding, InputAction)
   nameWithType: InputActions.FindBinding(InputBinding, out InputAction)
-  nameWithType.vb: InputActions.FindBinding(InputBinding, ByRef InputAction)
+  nameWithType.vb: InputActions.FindBinding(InputBinding, InputAction)
 - uid: Global.InputActions.FindBinding*
   name: FindBinding
   href: api/Global.InputActions.html#Global_InputActions_FindBinding_
@@ -319,7 +270,7 @@ references:
   fullName: InputActions.IInteractionsActions
   nameWithType: InputActions.IInteractionsActions
 - uid: Global.InputActions.IInteractionsActions.OnInteraction(InputAction.CallbackContext)
-  name: OnInteraction(InputAction.CallbackContext)
+  name: OnInteraction(CallbackContext)
   href: api/Global.InputActions.IInteractionsActions.html#Global_InputActions_IInteractionsActions_OnInteraction_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IInteractionsActions.OnInteraction(InputAction.CallbackContext)
   fullName: InputActions.IInteractionsActions.OnInteraction(InputAction.CallbackContext)
@@ -332,7 +283,7 @@ references:
   fullName: InputActions.IInteractionsActions.OnInteraction
   nameWithType: InputActions.IInteractionsActions.OnInteraction
 - uid: Global.InputActions.IInteractionsActions.OnItemInteraction(InputAction.CallbackContext)
-  name: OnItemInteraction(InputAction.CallbackContext)
+  name: OnItemInteraction(CallbackContext)
   href: api/Global.InputActions.IInteractionsActions.html#Global_InputActions_IInteractionsActions_OnItemInteraction_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IInteractionsActions.OnItemInteraction(InputAction.CallbackContext)
   fullName: InputActions.IInteractionsActions.OnItemInteraction(InputAction.CallbackContext)
@@ -351,7 +302,7 @@ references:
   fullName: InputActions.IInventoryActions
   nameWithType: InputActions.IInventoryActions
 - uid: Global.InputActions.IInventoryActions.OnChooseItem(InputAction.CallbackContext)
-  name: OnChooseItem(InputAction.CallbackContext)
+  name: OnChooseItem(CallbackContext)
   href: api/Global.InputActions.IInventoryActions.html#Global_InputActions_IInventoryActions_OnChooseItem_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IInventoryActions.OnChooseItem(InputAction.CallbackContext)
   fullName: InputActions.IInventoryActions.OnChooseItem(InputAction.CallbackContext)
@@ -364,7 +315,7 @@ references:
   fullName: InputActions.IInventoryActions.OnChooseItem
   nameWithType: InputActions.IInventoryActions.OnChooseItem
 - uid: Global.InputActions.IInventoryActions.OnDrop(InputAction.CallbackContext)
-  name: OnDrop(InputAction.CallbackContext)
+  name: OnDrop(CallbackContext)
   href: api/Global.InputActions.IInventoryActions.html#Global_InputActions_IInventoryActions_OnDrop_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IInventoryActions.OnDrop(InputAction.CallbackContext)
   fullName: InputActions.IInventoryActions.OnDrop(InputAction.CallbackContext)
@@ -377,7 +328,7 @@ references:
   fullName: InputActions.IInventoryActions.OnDrop
   nameWithType: InputActions.IInventoryActions.OnDrop
 - uid: Global.InputActions.IInventoryActions.OnNextItem(InputAction.CallbackContext)
-  name: OnNextItem(InputAction.CallbackContext)
+  name: OnNextItem(CallbackContext)
   href: api/Global.InputActions.IInventoryActions.html#Global_InputActions_IInventoryActions_OnNextItem_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IInventoryActions.OnNextItem(InputAction.CallbackContext)
   fullName: InputActions.IInventoryActions.OnNextItem(InputAction.CallbackContext)
@@ -390,7 +341,7 @@ references:
   fullName: InputActions.IInventoryActions.OnNextItem
   nameWithType: InputActions.IInventoryActions.OnNextItem
 - uid: Global.InputActions.IInventoryActions.OnPreviousItem(InputAction.CallbackContext)
-  name: OnPreviousItem(InputAction.CallbackContext)
+  name: OnPreviousItem(CallbackContext)
   href: api/Global.InputActions.IInventoryActions.html#Global_InputActions_IInventoryActions_OnPreviousItem_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IInventoryActions.OnPreviousItem(InputAction.CallbackContext)
   fullName: InputActions.IInventoryActions.OnPreviousItem(InputAction.CallbackContext)
@@ -409,7 +360,7 @@ references:
   fullName: InputActions.IMouseActions
   nameWithType: InputActions.IMouseActions
 - uid: Global.InputActions.IMouseActions.OnLeftClick(InputAction.CallbackContext)
-  name: OnLeftClick(InputAction.CallbackContext)
+  name: OnLeftClick(CallbackContext)
   href: api/Global.InputActions.IMouseActions.html#Global_InputActions_IMouseActions_OnLeftClick_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IMouseActions.OnLeftClick(InputAction.CallbackContext)
   fullName: InputActions.IMouseActions.OnLeftClick(InputAction.CallbackContext)
@@ -422,7 +373,7 @@ references:
   fullName: InputActions.IMouseActions.OnLeftClick
   nameWithType: InputActions.IMouseActions.OnLeftClick
 - uid: Global.InputActions.IMouseActions.OnMiddleClick(InputAction.CallbackContext)
-  name: OnMiddleClick(InputAction.CallbackContext)
+  name: OnMiddleClick(CallbackContext)
   href: api/Global.InputActions.IMouseActions.html#Global_InputActions_IMouseActions_OnMiddleClick_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IMouseActions.OnMiddleClick(InputAction.CallbackContext)
   fullName: InputActions.IMouseActions.OnMiddleClick(InputAction.CallbackContext)
@@ -435,7 +386,7 @@ references:
   fullName: InputActions.IMouseActions.OnMiddleClick
   nameWithType: InputActions.IMouseActions.OnMiddleClick
 - uid: Global.InputActions.IMouseActions.OnMousePosition(InputAction.CallbackContext)
-  name: OnMousePosition(InputAction.CallbackContext)
+  name: OnMousePosition(CallbackContext)
   href: api/Global.InputActions.IMouseActions.html#Global_InputActions_IMouseActions_OnMousePosition_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IMouseActions.OnMousePosition(InputAction.CallbackContext)
   fullName: InputActions.IMouseActions.OnMousePosition(InputAction.CallbackContext)
@@ -448,7 +399,7 @@ references:
   fullName: InputActions.IMouseActions.OnMousePosition
   nameWithType: InputActions.IMouseActions.OnMousePosition
 - uid: Global.InputActions.IMouseActions.OnRightClick(InputAction.CallbackContext)
-  name: OnRightClick(InputAction.CallbackContext)
+  name: OnRightClick(CallbackContext)
   href: api/Global.InputActions.IMouseActions.html#Global_InputActions_IMouseActions_OnRightClick_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IMouseActions.OnRightClick(InputAction.CallbackContext)
   fullName: InputActions.IMouseActions.OnRightClick(InputAction.CallbackContext)
@@ -467,7 +418,7 @@ references:
   fullName: InputActions.IMovementActions
   nameWithType: InputActions.IMovementActions
 - uid: Global.InputActions.IMovementActions.OnFocusChange(InputAction.CallbackContext)
-  name: OnFocusChange(InputAction.CallbackContext)
+  name: OnFocusChange(CallbackContext)
   href: api/Global.InputActions.IMovementActions.html#Global_InputActions_IMovementActions_OnFocusChange_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IMovementActions.OnFocusChange(InputAction.CallbackContext)
   fullName: InputActions.IMovementActions.OnFocusChange(InputAction.CallbackContext)
@@ -480,7 +431,7 @@ references:
   fullName: InputActions.IMovementActions.OnFocusChange
   nameWithType: InputActions.IMovementActions.OnFocusChange
 - uid: Global.InputActions.IMovementActions.OnNavigation(InputAction.CallbackContext)
-  name: OnNavigation(InputAction.CallbackContext)
+  name: OnNavigation(CallbackContext)
   href: api/Global.InputActions.IMovementActions.html#Global_InputActions_IMovementActions_OnNavigation_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IMovementActions.OnNavigation(InputAction.CallbackContext)
   fullName: InputActions.IMovementActions.OnNavigation(InputAction.CallbackContext)
@@ -493,7 +444,7 @@ references:
   fullName: InputActions.IMovementActions.OnNavigation
   nameWithType: InputActions.IMovementActions.OnNavigation
 - uid: Global.InputActions.IMovementActions.OnRun(InputAction.CallbackContext)
-  name: OnRun(InputAction.CallbackContext)
+  name: OnRun(CallbackContext)
   href: api/Global.InputActions.IMovementActions.html#Global_InputActions_IMovementActions_OnRun_InputAction_CallbackContext_
   commentId: M:Global.InputActions.IMovementActions.OnRun(InputAction.CallbackContext)
   fullName: InputActions.IMovementActions.OnRun(InputAction.CallbackContext)
@@ -505,6 +456,38 @@ references:
   isSpec: "True"
   fullName: InputActions.IMovementActions.OnRun
   nameWithType: InputActions.IMovementActions.OnRun
+- uid: Global.InputActions.ITeleportActions
+  name: InputActions.ITeleportActions
+  href: api/Global.InputActions.ITeleportActions.html
+  commentId: T:Global.InputActions.ITeleportActions
+  fullName: InputActions.ITeleportActions
+  nameWithType: InputActions.ITeleportActions
+- uid: Global.InputActions.ITeleportActions.OnTeleportBack(InputAction.CallbackContext)
+  name: OnTeleportBack(CallbackContext)
+  href: api/Global.InputActions.ITeleportActions.html#Global_InputActions_ITeleportActions_OnTeleportBack_InputAction_CallbackContext_
+  commentId: M:Global.InputActions.ITeleportActions.OnTeleportBack(InputAction.CallbackContext)
+  fullName: InputActions.ITeleportActions.OnTeleportBack(InputAction.CallbackContext)
+  nameWithType: InputActions.ITeleportActions.OnTeleportBack(InputAction.CallbackContext)
+- uid: Global.InputActions.ITeleportActions.OnTeleportBack*
+  name: OnTeleportBack
+  href: api/Global.InputActions.ITeleportActions.html#Global_InputActions_ITeleportActions_OnTeleportBack_
+  commentId: Overload:Global.InputActions.ITeleportActions.OnTeleportBack
+  isSpec: "True"
+  fullName: InputActions.ITeleportActions.OnTeleportBack
+  nameWithType: InputActions.ITeleportActions.OnTeleportBack
+- uid: Global.InputActions.ITeleportActions.OnTeleportForward(InputAction.CallbackContext)
+  name: OnTeleportForward(CallbackContext)
+  href: api/Global.InputActions.ITeleportActions.html#Global_InputActions_ITeleportActions_OnTeleportForward_InputAction_CallbackContext_
+  commentId: M:Global.InputActions.ITeleportActions.OnTeleportForward(InputAction.CallbackContext)
+  fullName: InputActions.ITeleportActions.OnTeleportForward(InputAction.CallbackContext)
+  nameWithType: InputActions.ITeleportActions.OnTeleportForward(InputAction.CallbackContext)
+- uid: Global.InputActions.ITeleportActions.OnTeleportForward*
+  name: OnTeleportForward
+  href: api/Global.InputActions.ITeleportActions.html#Global_InputActions_ITeleportActions_OnTeleportForward_
+  commentId: Overload:Global.InputActions.ITeleportActions.OnTeleportForward
+  isSpec: "True"
+  fullName: InputActions.ITeleportActions.OnTeleportForward
+  nameWithType: InputActions.ITeleportActions.OnTeleportForward
 - uid: Global.InputActions.Interactions
   name: Interactions
   href: api/Global.InputActions.html#Global_InputActions_Interactions
@@ -528,15 +511,21 @@ references:
   name: InteractionsActions(InputActions)
   href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions__ctor_InputActions_
   commentId: M:Global.InputActions.InteractionsActions.#ctor(InputActions)
+  name.vb: New(InputActions)
   fullName: InputActions.InteractionsActions.InteractionsActions(InputActions)
+  fullName.vb: InputActions.InteractionsActions.New(InputActions)
   nameWithType: InputActions.InteractionsActions.InteractionsActions(InputActions)
+  nameWithType.vb: InputActions.InteractionsActions.New(InputActions)
 - uid: Global.InputActions.InteractionsActions.#ctor*
   name: InteractionsActions
   href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions__ctor_
   commentId: Overload:Global.InputActions.InteractionsActions.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: InputActions.InteractionsActions.InteractionsActions
+  fullName.vb: InputActions.InteractionsActions.New
   nameWithType: InputActions.InteractionsActions.InteractionsActions
+  nameWithType.vb: InputActions.InteractionsActions.New
 - uid: Global.InputActions.InteractionsActions.Disable
   name: Disable()
   href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_Disable
@@ -563,19 +552,6 @@ references:
   isSpec: "True"
   fullName: InputActions.InteractionsActions.Enable
   nameWithType: InputActions.InteractionsActions.Enable
-- uid: Global.InputActions.InteractionsActions.enabled
-  name: enabled
-  href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_enabled
-  commentId: P:Global.InputActions.InteractionsActions.enabled
-  fullName: InputActions.InteractionsActions.enabled
-  nameWithType: InputActions.InteractionsActions.enabled
-- uid: Global.InputActions.InteractionsActions.enabled*
-  name: enabled
-  href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_enabled_
-  commentId: Overload:Global.InputActions.InteractionsActions.enabled
-  isSpec: "True"
-  fullName: InputActions.InteractionsActions.enabled
-  nameWithType: InputActions.InteractionsActions.enabled
 - uid: Global.InputActions.InteractionsActions.Get
   name: Get()
   href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_Get
@@ -615,27 +591,8 @@ references:
   isSpec: "True"
   fullName: InputActions.InteractionsActions.ItemInteraction
   nameWithType: InputActions.InteractionsActions.ItemInteraction
-- uid: Global.InputActions.InteractionsActions.op_Implicit(InputActions.InteractionsActions)~InputActionMap
-  name: Implicit(InputActions.InteractionsActions to InputActionMap)
-  href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_op_Implicit_InputActions_InteractionsActions__InputActionMap
-  commentId: M:Global.InputActions.InteractionsActions.op_Implicit(InputActions.InteractionsActions)~InputActionMap
-  name.vb: Widening(InputActions.InteractionsActions to InputActionMap)
-  fullName: InputActions.InteractionsActions.Implicit(InputActions.InteractionsActions to InputActionMap)
-  fullName.vb: InputActions.InteractionsActions.Widening(InputActions.InteractionsActions to InputActionMap)
-  nameWithType: InputActions.InteractionsActions.Implicit(InputActions.InteractionsActions to InputActionMap)
-  nameWithType.vb: InputActions.InteractionsActions.Widening(InputActions.InteractionsActions to InputActionMap)
-- uid: Global.InputActions.InteractionsActions.op_Implicit*
-  name: Implicit
-  href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_op_Implicit_
-  commentId: Overload:Global.InputActions.InteractionsActions.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: InputActions.InteractionsActions.Implicit
-  fullName.vb: InputActions.InteractionsActions.Widening
-  nameWithType: InputActions.InteractionsActions.Implicit
-  nameWithType.vb: InputActions.InteractionsActions.Widening
 - uid: Global.InputActions.InteractionsActions.SetCallbacks(InputActions.IInteractionsActions)
-  name: SetCallbacks(InputActions.IInteractionsActions)
+  name: SetCallbacks(IInteractionsActions)
   href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_SetCallbacks_InputActions_IInteractionsActions_
   commentId: M:Global.InputActions.InteractionsActions.SetCallbacks(InputActions.IInteractionsActions)
   fullName: InputActions.InteractionsActions.SetCallbacks(InputActions.IInteractionsActions)
@@ -647,6 +604,38 @@ references:
   isSpec: "True"
   fullName: InputActions.InteractionsActions.SetCallbacks
   nameWithType: InputActions.InteractionsActions.SetCallbacks
+- uid: Global.InputActions.InteractionsActions.enabled
+  name: enabled
+  href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_enabled
+  commentId: P:Global.InputActions.InteractionsActions.enabled
+  fullName: InputActions.InteractionsActions.enabled
+  nameWithType: InputActions.InteractionsActions.enabled
+- uid: Global.InputActions.InteractionsActions.enabled*
+  name: enabled
+  href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_enabled_
+  commentId: Overload:Global.InputActions.InteractionsActions.enabled
+  isSpec: "True"
+  fullName: InputActions.InteractionsActions.enabled
+  nameWithType: InputActions.InteractionsActions.enabled
+- uid: Global.InputActions.InteractionsActions.op_Implicit(InputActions.InteractionsActions)~InputActionMap
+  name: implicit operator InputActionMap(InteractionsActions)
+  href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_op_Implicit_InputActions_InteractionsActions__InputActionMap
+  commentId: M:Global.InputActions.InteractionsActions.op_Implicit(InputActions.InteractionsActions)~InputActionMap
+  name.vb: CType(InteractionsActions)
+  fullName: InputActions.InteractionsActions.implicit operator InputActionMap(InputActions.InteractionsActions)
+  fullName.vb: InputActions.InteractionsActions.CType(InputActions.InteractionsActions)
+  nameWithType: InputActions.InteractionsActions.implicit operator InputActionMap(InputActions.InteractionsActions)
+  nameWithType.vb: InputActions.InteractionsActions.CType(InputActions.InteractionsActions)
+- uid: Global.InputActions.InteractionsActions.op_Implicit*
+  name: implicit operator
+  href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_op_Implicit_
+  commentId: Overload:Global.InputActions.InteractionsActions.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: InputActions.InteractionsActions.implicit operator
+  fullName.vb: InputActions.InteractionsActions.CType
+  nameWithType: InputActions.InteractionsActions.implicit operator
+  nameWithType.vb: InputActions.InteractionsActions.CType
 - uid: Global.InputActions.Inventory
   name: Inventory
   href: api/Global.InputActions.html#Global_InputActions_Inventory
@@ -670,15 +659,21 @@ references:
   name: InventoryActions(InputActions)
   href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions__ctor_InputActions_
   commentId: M:Global.InputActions.InventoryActions.#ctor(InputActions)
+  name.vb: New(InputActions)
   fullName: InputActions.InventoryActions.InventoryActions(InputActions)
+  fullName.vb: InputActions.InventoryActions.New(InputActions)
   nameWithType: InputActions.InventoryActions.InventoryActions(InputActions)
+  nameWithType.vb: InputActions.InventoryActions.New(InputActions)
 - uid: Global.InputActions.InventoryActions.#ctor*
   name: InventoryActions
   href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions__ctor_
   commentId: Overload:Global.InputActions.InventoryActions.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: InputActions.InventoryActions.InventoryActions
+  fullName.vb: InputActions.InventoryActions.New
   nameWithType: InputActions.InventoryActions.InventoryActions
+  nameWithType.vb: InputActions.InventoryActions.New
 - uid: Global.InputActions.InventoryActions.ChooseItem
   name: ChooseItem
   href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions_ChooseItem
@@ -731,19 +726,6 @@ references:
   isSpec: "True"
   fullName: InputActions.InventoryActions.Enable
   nameWithType: InputActions.InventoryActions.Enable
-- uid: Global.InputActions.InventoryActions.enabled
-  name: enabled
-  href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions_enabled
-  commentId: P:Global.InputActions.InventoryActions.enabled
-  fullName: InputActions.InventoryActions.enabled
-  nameWithType: InputActions.InventoryActions.enabled
-- uid: Global.InputActions.InventoryActions.enabled*
-  name: enabled
-  href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions_enabled_
-  commentId: Overload:Global.InputActions.InventoryActions.enabled
-  isSpec: "True"
-  fullName: InputActions.InventoryActions.enabled
-  nameWithType: InputActions.InventoryActions.enabled
 - uid: Global.InputActions.InventoryActions.Get
   name: Get()
   href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions_Get
@@ -770,25 +752,6 @@ references:
   isSpec: "True"
   fullName: InputActions.InventoryActions.NextItem
   nameWithType: InputActions.InventoryActions.NextItem
-- uid: Global.InputActions.InventoryActions.op_Implicit(InputActions.InventoryActions)~InputActionMap
-  name: Implicit(InputActions.InventoryActions to InputActionMap)
-  href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions_op_Implicit_InputActions_InventoryActions__InputActionMap
-  commentId: M:Global.InputActions.InventoryActions.op_Implicit(InputActions.InventoryActions)~InputActionMap
-  name.vb: Widening(InputActions.InventoryActions to InputActionMap)
-  fullName: InputActions.InventoryActions.Implicit(InputActions.InventoryActions to InputActionMap)
-  fullName.vb: InputActions.InventoryActions.Widening(InputActions.InventoryActions to InputActionMap)
-  nameWithType: InputActions.InventoryActions.Implicit(InputActions.InventoryActions to InputActionMap)
-  nameWithType.vb: InputActions.InventoryActions.Widening(InputActions.InventoryActions to InputActionMap)
-- uid: Global.InputActions.InventoryActions.op_Implicit*
-  name: Implicit
-  href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions_op_Implicit_
-  commentId: Overload:Global.InputActions.InventoryActions.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: InputActions.InventoryActions.Implicit
-  fullName.vb: InputActions.InventoryActions.Widening
-  nameWithType: InputActions.InventoryActions.Implicit
-  nameWithType.vb: InputActions.InventoryActions.Widening
 - uid: Global.InputActions.InventoryActions.PreviousItem
   name: PreviousItem
   href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions_PreviousItem
@@ -803,7 +766,7 @@ references:
   fullName: InputActions.InventoryActions.PreviousItem
   nameWithType: InputActions.InventoryActions.PreviousItem
 - uid: Global.InputActions.InventoryActions.SetCallbacks(InputActions.IInventoryActions)
-  name: SetCallbacks(InputActions.IInventoryActions)
+  name: SetCallbacks(IInventoryActions)
   href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions_SetCallbacks_InputActions_IInventoryActions_
   commentId: M:Global.InputActions.InventoryActions.SetCallbacks(InputActions.IInventoryActions)
   fullName: InputActions.InventoryActions.SetCallbacks(InputActions.IInventoryActions)
@@ -815,38 +778,38 @@ references:
   isSpec: "True"
   fullName: InputActions.InventoryActions.SetCallbacks
   nameWithType: InputActions.InventoryActions.SetCallbacks
-- uid: Global.InputActions.ITeleportActions
-  name: InputActions.ITeleportActions
-  href: api/Global.InputActions.ITeleportActions.html
-  commentId: T:Global.InputActions.ITeleportActions
-  fullName: InputActions.ITeleportActions
-  nameWithType: InputActions.ITeleportActions
-- uid: Global.InputActions.ITeleportActions.OnTeleportBack(InputAction.CallbackContext)
-  name: OnTeleportBack(InputAction.CallbackContext)
-  href: api/Global.InputActions.ITeleportActions.html#Global_InputActions_ITeleportActions_OnTeleportBack_InputAction_CallbackContext_
-  commentId: M:Global.InputActions.ITeleportActions.OnTeleportBack(InputAction.CallbackContext)
-  fullName: InputActions.ITeleportActions.OnTeleportBack(InputAction.CallbackContext)
-  nameWithType: InputActions.ITeleportActions.OnTeleportBack(InputAction.CallbackContext)
-- uid: Global.InputActions.ITeleportActions.OnTeleportBack*
-  name: OnTeleportBack
-  href: api/Global.InputActions.ITeleportActions.html#Global_InputActions_ITeleportActions_OnTeleportBack_
-  commentId: Overload:Global.InputActions.ITeleportActions.OnTeleportBack
+- uid: Global.InputActions.InventoryActions.enabled
+  name: enabled
+  href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions_enabled
+  commentId: P:Global.InputActions.InventoryActions.enabled
+  fullName: InputActions.InventoryActions.enabled
+  nameWithType: InputActions.InventoryActions.enabled
+- uid: Global.InputActions.InventoryActions.enabled*
+  name: enabled
+  href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions_enabled_
+  commentId: Overload:Global.InputActions.InventoryActions.enabled
   isSpec: "True"
-  fullName: InputActions.ITeleportActions.OnTeleportBack
-  nameWithType: InputActions.ITeleportActions.OnTeleportBack
-- uid: Global.InputActions.ITeleportActions.OnTeleportForward(InputAction.CallbackContext)
-  name: OnTeleportForward(InputAction.CallbackContext)
-  href: api/Global.InputActions.ITeleportActions.html#Global_InputActions_ITeleportActions_OnTeleportForward_InputAction_CallbackContext_
-  commentId: M:Global.InputActions.ITeleportActions.OnTeleportForward(InputAction.CallbackContext)
-  fullName: InputActions.ITeleportActions.OnTeleportForward(InputAction.CallbackContext)
-  nameWithType: InputActions.ITeleportActions.OnTeleportForward(InputAction.CallbackContext)
-- uid: Global.InputActions.ITeleportActions.OnTeleportForward*
-  name: OnTeleportForward
-  href: api/Global.InputActions.ITeleportActions.html#Global_InputActions_ITeleportActions_OnTeleportForward_
-  commentId: Overload:Global.InputActions.ITeleportActions.OnTeleportForward
+  fullName: InputActions.InventoryActions.enabled
+  nameWithType: InputActions.InventoryActions.enabled
+- uid: Global.InputActions.InventoryActions.op_Implicit(InputActions.InventoryActions)~InputActionMap
+  name: implicit operator InputActionMap(InventoryActions)
+  href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions_op_Implicit_InputActions_InventoryActions__InputActionMap
+  commentId: M:Global.InputActions.InventoryActions.op_Implicit(InputActions.InventoryActions)~InputActionMap
+  name.vb: CType(InventoryActions)
+  fullName: InputActions.InventoryActions.implicit operator InputActionMap(InputActions.InventoryActions)
+  fullName.vb: InputActions.InventoryActions.CType(InputActions.InventoryActions)
+  nameWithType: InputActions.InventoryActions.implicit operator InputActionMap(InputActions.InventoryActions)
+  nameWithType.vb: InputActions.InventoryActions.CType(InputActions.InventoryActions)
+- uid: Global.InputActions.InventoryActions.op_Implicit*
+  name: implicit operator
+  href: api/Global.InputActions.InventoryActions.html#Global_InputActions_InventoryActions_op_Implicit_
+  commentId: Overload:Global.InputActions.InventoryActions.op_Implicit
   isSpec: "True"
-  fullName: InputActions.ITeleportActions.OnTeleportForward
-  nameWithType: InputActions.ITeleportActions.OnTeleportForward
+  name.vb: CType
+  fullName: InputActions.InventoryActions.implicit operator
+  fullName.vb: InputActions.InventoryActions.CType
+  nameWithType: InputActions.InventoryActions.implicit operator
+  nameWithType.vb: InputActions.InventoryActions.CType
 - uid: Global.InputActions.Mouse
   name: Mouse
   href: api/Global.InputActions.html#Global_InputActions_Mouse
@@ -870,15 +833,21 @@ references:
   name: MouseActions(InputActions)
   href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions__ctor_InputActions_
   commentId: M:Global.InputActions.MouseActions.#ctor(InputActions)
+  name.vb: New(InputActions)
   fullName: InputActions.MouseActions.MouseActions(InputActions)
+  fullName.vb: InputActions.MouseActions.New(InputActions)
   nameWithType: InputActions.MouseActions.MouseActions(InputActions)
+  nameWithType.vb: InputActions.MouseActions.New(InputActions)
 - uid: Global.InputActions.MouseActions.#ctor*
   name: MouseActions
   href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions__ctor_
   commentId: Overload:Global.InputActions.MouseActions.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: InputActions.MouseActions.MouseActions
+  fullName.vb: InputActions.MouseActions.New
   nameWithType: InputActions.MouseActions.MouseActions
+  nameWithType.vb: InputActions.MouseActions.New
 - uid: Global.InputActions.MouseActions.Disable
   name: Disable()
   href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions_Disable
@@ -905,19 +874,6 @@ references:
   isSpec: "True"
   fullName: InputActions.MouseActions.Enable
   nameWithType: InputActions.MouseActions.Enable
-- uid: Global.InputActions.MouseActions.enabled
-  name: enabled
-  href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions_enabled
-  commentId: P:Global.InputActions.MouseActions.enabled
-  fullName: InputActions.MouseActions.enabled
-  nameWithType: InputActions.MouseActions.enabled
-- uid: Global.InputActions.MouseActions.enabled*
-  name: enabled
-  href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions_enabled_
-  commentId: Overload:Global.InputActions.MouseActions.enabled
-  isSpec: "True"
-  fullName: InputActions.MouseActions.enabled
-  nameWithType: InputActions.MouseActions.enabled
 - uid: Global.InputActions.MouseActions.Get
   name: Get()
   href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions_Get
@@ -970,25 +926,6 @@ references:
   isSpec: "True"
   fullName: InputActions.MouseActions.MousePosition
   nameWithType: InputActions.MouseActions.MousePosition
-- uid: Global.InputActions.MouseActions.op_Implicit(InputActions.MouseActions)~InputActionMap
-  name: Implicit(InputActions.MouseActions to InputActionMap)
-  href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions_op_Implicit_InputActions_MouseActions__InputActionMap
-  commentId: M:Global.InputActions.MouseActions.op_Implicit(InputActions.MouseActions)~InputActionMap
-  name.vb: Widening(InputActions.MouseActions to InputActionMap)
-  fullName: InputActions.MouseActions.Implicit(InputActions.MouseActions to InputActionMap)
-  fullName.vb: InputActions.MouseActions.Widening(InputActions.MouseActions to InputActionMap)
-  nameWithType: InputActions.MouseActions.Implicit(InputActions.MouseActions to InputActionMap)
-  nameWithType.vb: InputActions.MouseActions.Widening(InputActions.MouseActions to InputActionMap)
-- uid: Global.InputActions.MouseActions.op_Implicit*
-  name: Implicit
-  href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions_op_Implicit_
-  commentId: Overload:Global.InputActions.MouseActions.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: InputActions.MouseActions.Implicit
-  fullName.vb: InputActions.MouseActions.Widening
-  nameWithType: InputActions.MouseActions.Implicit
-  nameWithType.vb: InputActions.MouseActions.Widening
 - uid: Global.InputActions.MouseActions.RightClick
   name: RightClick
   href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions_RightClick
@@ -1003,7 +940,7 @@ references:
   fullName: InputActions.MouseActions.RightClick
   nameWithType: InputActions.MouseActions.RightClick
 - uid: Global.InputActions.MouseActions.SetCallbacks(InputActions.IMouseActions)
-  name: SetCallbacks(InputActions.IMouseActions)
+  name: SetCallbacks(IMouseActions)
   href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions_SetCallbacks_InputActions_IMouseActions_
   commentId: M:Global.InputActions.MouseActions.SetCallbacks(InputActions.IMouseActions)
   fullName: InputActions.MouseActions.SetCallbacks(InputActions.IMouseActions)
@@ -1015,6 +952,38 @@ references:
   isSpec: "True"
   fullName: InputActions.MouseActions.SetCallbacks
   nameWithType: InputActions.MouseActions.SetCallbacks
+- uid: Global.InputActions.MouseActions.enabled
+  name: enabled
+  href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions_enabled
+  commentId: P:Global.InputActions.MouseActions.enabled
+  fullName: InputActions.MouseActions.enabled
+  nameWithType: InputActions.MouseActions.enabled
+- uid: Global.InputActions.MouseActions.enabled*
+  name: enabled
+  href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions_enabled_
+  commentId: Overload:Global.InputActions.MouseActions.enabled
+  isSpec: "True"
+  fullName: InputActions.MouseActions.enabled
+  nameWithType: InputActions.MouseActions.enabled
+- uid: Global.InputActions.MouseActions.op_Implicit(InputActions.MouseActions)~InputActionMap
+  name: implicit operator InputActionMap(MouseActions)
+  href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions_op_Implicit_InputActions_MouseActions__InputActionMap
+  commentId: M:Global.InputActions.MouseActions.op_Implicit(InputActions.MouseActions)~InputActionMap
+  name.vb: CType(MouseActions)
+  fullName: InputActions.MouseActions.implicit operator InputActionMap(InputActions.MouseActions)
+  fullName.vb: InputActions.MouseActions.CType(InputActions.MouseActions)
+  nameWithType: InputActions.MouseActions.implicit operator InputActionMap(InputActions.MouseActions)
+  nameWithType.vb: InputActions.MouseActions.CType(InputActions.MouseActions)
+- uid: Global.InputActions.MouseActions.op_Implicit*
+  name: implicit operator
+  href: api/Global.InputActions.MouseActions.html#Global_InputActions_MouseActions_op_Implicit_
+  commentId: Overload:Global.InputActions.MouseActions.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: InputActions.MouseActions.implicit operator
+  fullName.vb: InputActions.MouseActions.CType
+  nameWithType: InputActions.MouseActions.implicit operator
+  nameWithType.vb: InputActions.MouseActions.CType
 - uid: Global.InputActions.Movement
   name: Movement
   href: api/Global.InputActions.html#Global_InputActions_Movement
@@ -1038,15 +1007,21 @@ references:
   name: MovementActions(InputActions)
   href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions__ctor_InputActions_
   commentId: M:Global.InputActions.MovementActions.#ctor(InputActions)
+  name.vb: New(InputActions)
   fullName: InputActions.MovementActions.MovementActions(InputActions)
+  fullName.vb: InputActions.MovementActions.New(InputActions)
   nameWithType: InputActions.MovementActions.MovementActions(InputActions)
+  nameWithType.vb: InputActions.MovementActions.New(InputActions)
 - uid: Global.InputActions.MovementActions.#ctor*
   name: MovementActions
   href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions__ctor_
   commentId: Overload:Global.InputActions.MovementActions.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: InputActions.MovementActions.MovementActions
+  fullName.vb: InputActions.MovementActions.New
   nameWithType: InputActions.MovementActions.MovementActions
+  nameWithType.vb: InputActions.MovementActions.New
 - uid: Global.InputActions.MovementActions.Disable
   name: Disable()
   href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions_Disable
@@ -1073,19 +1048,6 @@ references:
   isSpec: "True"
   fullName: InputActions.MovementActions.Enable
   nameWithType: InputActions.MovementActions.Enable
-- uid: Global.InputActions.MovementActions.enabled
-  name: enabled
-  href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions_enabled
-  commentId: P:Global.InputActions.MovementActions.enabled
-  fullName: InputActions.MovementActions.enabled
-  nameWithType: InputActions.MovementActions.enabled
-- uid: Global.InputActions.MovementActions.enabled*
-  name: enabled
-  href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions_enabled_
-  commentId: Overload:Global.InputActions.MovementActions.enabled
-  isSpec: "True"
-  fullName: InputActions.MovementActions.enabled
-  nameWithType: InputActions.MovementActions.enabled
 - uid: Global.InputActions.MovementActions.FocusChange
   name: FocusChange
   href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions_FocusChange
@@ -1125,25 +1087,6 @@ references:
   isSpec: "True"
   fullName: InputActions.MovementActions.Navigation
   nameWithType: InputActions.MovementActions.Navigation
-- uid: Global.InputActions.MovementActions.op_Implicit(InputActions.MovementActions)~InputActionMap
-  name: Implicit(InputActions.MovementActions to InputActionMap)
-  href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions_op_Implicit_InputActions_MovementActions__InputActionMap
-  commentId: M:Global.InputActions.MovementActions.op_Implicit(InputActions.MovementActions)~InputActionMap
-  name.vb: Widening(InputActions.MovementActions to InputActionMap)
-  fullName: InputActions.MovementActions.Implicit(InputActions.MovementActions to InputActionMap)
-  fullName.vb: InputActions.MovementActions.Widening(InputActions.MovementActions to InputActionMap)
-  nameWithType: InputActions.MovementActions.Implicit(InputActions.MovementActions to InputActionMap)
-  nameWithType.vb: InputActions.MovementActions.Widening(InputActions.MovementActions to InputActionMap)
-- uid: Global.InputActions.MovementActions.op_Implicit*
-  name: Implicit
-  href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions_op_Implicit_
-  commentId: Overload:Global.InputActions.MovementActions.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: InputActions.MovementActions.Implicit
-  fullName.vb: InputActions.MovementActions.Widening
-  nameWithType: InputActions.MovementActions.Implicit
-  nameWithType.vb: InputActions.MovementActions.Widening
 - uid: Global.InputActions.MovementActions.Run
   name: Run
   href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions_Run
@@ -1158,7 +1101,7 @@ references:
   fullName: InputActions.MovementActions.Run
   nameWithType: InputActions.MovementActions.Run
 - uid: Global.InputActions.MovementActions.SetCallbacks(InputActions.IMovementActions)
-  name: SetCallbacks(InputActions.IMovementActions)
+  name: SetCallbacks(IMovementActions)
   href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions_SetCallbacks_InputActions_IMovementActions_
   commentId: M:Global.InputActions.MovementActions.SetCallbacks(InputActions.IMovementActions)
   fullName: InputActions.MovementActions.SetCallbacks(InputActions.IMovementActions)
@@ -1170,23 +1113,38 @@ references:
   isSpec: "True"
   fullName: InputActions.MovementActions.SetCallbacks
   nameWithType: InputActions.MovementActions.SetCallbacks
-- uid: Global.InputActions.System#Collections#IEnumerable#GetEnumerator
-  name: IEnumerable.GetEnumerator()
-  href: api/Global.InputActions.html#Global_InputActions_System_Collections_IEnumerable_GetEnumerator
-  commentId: M:Global.InputActions.System#Collections#IEnumerable#GetEnumerator
-  name.vb: System.Collections.IEnumerable.GetEnumerator()
-  fullName: InputActions.System.Collections.IEnumerable.GetEnumerator()
-  nameWithType: InputActions.IEnumerable.GetEnumerator()
-  nameWithType.vb: InputActions.System.Collections.IEnumerable.GetEnumerator()
-- uid: Global.InputActions.System#Collections#IEnumerable#GetEnumerator*
-  name: IEnumerable.GetEnumerator
-  href: api/Global.InputActions.html#Global_InputActions_System_Collections_IEnumerable_GetEnumerator_
-  commentId: Overload:Global.InputActions.System#Collections#IEnumerable#GetEnumerator
+- uid: Global.InputActions.MovementActions.enabled
+  name: enabled
+  href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions_enabled
+  commentId: P:Global.InputActions.MovementActions.enabled
+  fullName: InputActions.MovementActions.enabled
+  nameWithType: InputActions.MovementActions.enabled
+- uid: Global.InputActions.MovementActions.enabled*
+  name: enabled
+  href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions_enabled_
+  commentId: Overload:Global.InputActions.MovementActions.enabled
   isSpec: "True"
-  name.vb: System.Collections.IEnumerable.GetEnumerator
-  fullName: InputActions.System.Collections.IEnumerable.GetEnumerator
-  nameWithType: InputActions.IEnumerable.GetEnumerator
-  nameWithType.vb: InputActions.System.Collections.IEnumerable.GetEnumerator
+  fullName: InputActions.MovementActions.enabled
+  nameWithType: InputActions.MovementActions.enabled
+- uid: Global.InputActions.MovementActions.op_Implicit(InputActions.MovementActions)~InputActionMap
+  name: implicit operator InputActionMap(MovementActions)
+  href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions_op_Implicit_InputActions_MovementActions__InputActionMap
+  commentId: M:Global.InputActions.MovementActions.op_Implicit(InputActions.MovementActions)~InputActionMap
+  name.vb: CType(MovementActions)
+  fullName: InputActions.MovementActions.implicit operator InputActionMap(InputActions.MovementActions)
+  fullName.vb: InputActions.MovementActions.CType(InputActions.MovementActions)
+  nameWithType: InputActions.MovementActions.implicit operator InputActionMap(InputActions.MovementActions)
+  nameWithType.vb: InputActions.MovementActions.CType(InputActions.MovementActions)
+- uid: Global.InputActions.MovementActions.op_Implicit*
+  name: implicit operator
+  href: api/Global.InputActions.MovementActions.html#Global_InputActions_MovementActions_op_Implicit_
+  commentId: Overload:Global.InputActions.MovementActions.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: InputActions.MovementActions.implicit operator
+  fullName.vb: InputActions.MovementActions.CType
+  nameWithType: InputActions.MovementActions.implicit operator
+  nameWithType.vb: InputActions.MovementActions.CType
 - uid: Global.InputActions.Teleport
   name: Teleport
   href: api/Global.InputActions.html#Global_InputActions_Teleport
@@ -1210,15 +1168,21 @@ references:
   name: TeleportActions(InputActions)
   href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions__ctor_InputActions_
   commentId: M:Global.InputActions.TeleportActions.#ctor(InputActions)
+  name.vb: New(InputActions)
   fullName: InputActions.TeleportActions.TeleportActions(InputActions)
+  fullName.vb: InputActions.TeleportActions.New(InputActions)
   nameWithType: InputActions.TeleportActions.TeleportActions(InputActions)
+  nameWithType.vb: InputActions.TeleportActions.New(InputActions)
 - uid: Global.InputActions.TeleportActions.#ctor*
   name: TeleportActions
   href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions__ctor_
   commentId: Overload:Global.InputActions.TeleportActions.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: InputActions.TeleportActions.TeleportActions
+  fullName.vb: InputActions.TeleportActions.New
   nameWithType: InputActions.TeleportActions.TeleportActions
+  nameWithType.vb: InputActions.TeleportActions.New
 - uid: Global.InputActions.TeleportActions.Disable
   name: Disable()
   href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions_Disable
@@ -1245,19 +1209,6 @@ references:
   isSpec: "True"
   fullName: InputActions.TeleportActions.Enable
   nameWithType: InputActions.TeleportActions.Enable
-- uid: Global.InputActions.TeleportActions.enabled
-  name: enabled
-  href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions_enabled
-  commentId: P:Global.InputActions.TeleportActions.enabled
-  fullName: InputActions.TeleportActions.enabled
-  nameWithType: InputActions.TeleportActions.enabled
-- uid: Global.InputActions.TeleportActions.enabled*
-  name: enabled
-  href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions_enabled_
-  commentId: Overload:Global.InputActions.TeleportActions.enabled
-  isSpec: "True"
-  fullName: InputActions.TeleportActions.enabled
-  nameWithType: InputActions.TeleportActions.enabled
 - uid: Global.InputActions.TeleportActions.Get
   name: Get()
   href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions_Get
@@ -1271,27 +1222,8 @@ references:
   isSpec: "True"
   fullName: InputActions.TeleportActions.Get
   nameWithType: InputActions.TeleportActions.Get
-- uid: Global.InputActions.TeleportActions.op_Implicit(InputActions.TeleportActions)~InputActionMap
-  name: Implicit(InputActions.TeleportActions to InputActionMap)
-  href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions_op_Implicit_InputActions_TeleportActions__InputActionMap
-  commentId: M:Global.InputActions.TeleportActions.op_Implicit(InputActions.TeleportActions)~InputActionMap
-  name.vb: Widening(InputActions.TeleportActions to InputActionMap)
-  fullName: InputActions.TeleportActions.Implicit(InputActions.TeleportActions to InputActionMap)
-  fullName.vb: InputActions.TeleportActions.Widening(InputActions.TeleportActions to InputActionMap)
-  nameWithType: InputActions.TeleportActions.Implicit(InputActions.TeleportActions to InputActionMap)
-  nameWithType.vb: InputActions.TeleportActions.Widening(InputActions.TeleportActions to InputActionMap)
-- uid: Global.InputActions.TeleportActions.op_Implicit*
-  name: Implicit
-  href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions_op_Implicit_
-  commentId: Overload:Global.InputActions.TeleportActions.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: InputActions.TeleportActions.Implicit
-  fullName.vb: InputActions.TeleportActions.Widening
-  nameWithType: InputActions.TeleportActions.Implicit
-  nameWithType.vb: InputActions.TeleportActions.Widening
 - uid: Global.InputActions.TeleportActions.SetCallbacks(InputActions.ITeleportActions)
-  name: SetCallbacks(InputActions.ITeleportActions)
+  name: SetCallbacks(ITeleportActions)
   href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions_SetCallbacks_InputActions_ITeleportActions_
   commentId: M:Global.InputActions.TeleportActions.SetCallbacks(InputActions.ITeleportActions)
   fullName: InputActions.TeleportActions.SetCallbacks(InputActions.ITeleportActions)
@@ -1329,6 +1261,103 @@ references:
   isSpec: "True"
   fullName: InputActions.TeleportActions.TeleportForward
   nameWithType: InputActions.TeleportActions.TeleportForward
+- uid: Global.InputActions.TeleportActions.enabled
+  name: enabled
+  href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions_enabled
+  commentId: P:Global.InputActions.TeleportActions.enabled
+  fullName: InputActions.TeleportActions.enabled
+  nameWithType: InputActions.TeleportActions.enabled
+- uid: Global.InputActions.TeleportActions.enabled*
+  name: enabled
+  href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions_enabled_
+  commentId: Overload:Global.InputActions.TeleportActions.enabled
+  isSpec: "True"
+  fullName: InputActions.TeleportActions.enabled
+  nameWithType: InputActions.TeleportActions.enabled
+- uid: Global.InputActions.TeleportActions.op_Implicit(InputActions.TeleportActions)~InputActionMap
+  name: implicit operator InputActionMap(TeleportActions)
+  href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions_op_Implicit_InputActions_TeleportActions__InputActionMap
+  commentId: M:Global.InputActions.TeleportActions.op_Implicit(InputActions.TeleportActions)~InputActionMap
+  name.vb: CType(TeleportActions)
+  fullName: InputActions.TeleportActions.implicit operator InputActionMap(InputActions.TeleportActions)
+  fullName.vb: InputActions.TeleportActions.CType(InputActions.TeleportActions)
+  nameWithType: InputActions.TeleportActions.implicit operator InputActionMap(InputActions.TeleportActions)
+  nameWithType.vb: InputActions.TeleportActions.CType(InputActions.TeleportActions)
+- uid: Global.InputActions.TeleportActions.op_Implicit*
+  name: implicit operator
+  href: api/Global.InputActions.TeleportActions.html#Global_InputActions_TeleportActions_op_Implicit_
+  commentId: Overload:Global.InputActions.TeleportActions.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: InputActions.TeleportActions.implicit operator
+  fullName.vb: InputActions.TeleportActions.CType
+  nameWithType: InputActions.TeleportActions.implicit operator
+  nameWithType.vb: InputActions.TeleportActions.CType
+- uid: Global.InputActions.asset
+  name: asset
+  href: api/Global.InputActions.html#Global_InputActions_asset
+  commentId: P:Global.InputActions.asset
+  fullName: InputActions.asset
+  nameWithType: InputActions.asset
+- uid: Global.InputActions.asset*
+  name: asset
+  href: api/Global.InputActions.html#Global_InputActions_asset_
+  commentId: Overload:Global.InputActions.asset
+  isSpec: "True"
+  fullName: InputActions.asset
+  nameWithType: InputActions.asset
+- uid: Global.InputActions.bindingMask
+  name: bindingMask
+  href: api/Global.InputActions.html#Global_InputActions_bindingMask
+  commentId: P:Global.InputActions.bindingMask
+  fullName: InputActions.bindingMask
+  nameWithType: InputActions.bindingMask
+- uid: Global.InputActions.bindingMask*
+  name: bindingMask
+  href: api/Global.InputActions.html#Global_InputActions_bindingMask_
+  commentId: Overload:Global.InputActions.bindingMask
+  isSpec: "True"
+  fullName: InputActions.bindingMask
+  nameWithType: InputActions.bindingMask
+- uid: Global.InputActions.bindings
+  name: bindings
+  href: api/Global.InputActions.html#Global_InputActions_bindings
+  commentId: P:Global.InputActions.bindings
+  fullName: InputActions.bindings
+  nameWithType: InputActions.bindings
+- uid: Global.InputActions.bindings*
+  name: bindings
+  href: api/Global.InputActions.html#Global_InputActions_bindings_
+  commentId: Overload:Global.InputActions.bindings
+  isSpec: "True"
+  fullName: InputActions.bindings
+  nameWithType: InputActions.bindings
+- uid: Global.InputActions.controlSchemes
+  name: controlSchemes
+  href: api/Global.InputActions.html#Global_InputActions_controlSchemes
+  commentId: P:Global.InputActions.controlSchemes
+  fullName: InputActions.controlSchemes
+  nameWithType: InputActions.controlSchemes
+- uid: Global.InputActions.controlSchemes*
+  name: controlSchemes
+  href: api/Global.InputActions.html#Global_InputActions_controlSchemes_
+  commentId: Overload:Global.InputActions.controlSchemes
+  isSpec: "True"
+  fullName: InputActions.controlSchemes
+  nameWithType: InputActions.controlSchemes
+- uid: Global.InputActions.devices
+  name: devices
+  href: api/Global.InputActions.html#Global_InputActions_devices
+  commentId: P:Global.InputActions.devices
+  fullName: InputActions.devices
+  nameWithType: InputActions.devices
+- uid: Global.InputActions.devices*
+  name: devices
+  href: api/Global.InputActions.html#Global_InputActions_devices_
+  commentId: Overload:Global.InputActions.devices
+  isSpec: "True"
+  fullName: InputActions.devices
+  nameWithType: InputActions.devices
 - uid: Global.SettingsTests
   name: SettingsTests
   href: api/Global.SettingsTests.html
@@ -1475,18 +1504,18 @@ references:
   commentId: T:Settings.DeveloperSettings
   fullName: Settings.DeveloperSettings
   nameWithType: DeveloperSettings
-- uid: Settings.DeveloperSettings.appSettings
-  name: appSettings
-  href: api/Settings.DeveloperSettings.html#Settings_DeveloperSettings_appSettings
-  commentId: F:Settings.DeveloperSettings.appSettings
-  fullName: Settings.DeveloperSettings.appSettings
-  nameWithType: DeveloperSettings.appSettings
 - uid: Settings.DeveloperSettings.Instance
   name: Instance
   href: api/Settings.DeveloperSettings.html#Settings_DeveloperSettings_Instance
   commentId: F:Settings.DeveloperSettings.Instance
   fullName: Settings.DeveloperSettings.Instance
   nameWithType: DeveloperSettings.Instance
+- uid: Settings.DeveloperSettings.appSettings
+  name: appSettings
+  href: api/Settings.DeveloperSettings.html#Settings_DeveloperSettings_appSettings
+  commentId: F:Settings.DeveloperSettings.appSettings
+  fullName: Settings.DeveloperSettings.appSettings
+  nameWithType: DeveloperSettings.appSettings
 - uid: Settings.DeveloperSettings.tpcSettings
   name: tpcSettings
   href: api/Settings.DeveloperSettings.html#Settings_DeveloperSettings_tpcSettings
