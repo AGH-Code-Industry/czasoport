@@ -8,6 +8,9 @@ using UnityEngine.InputSystem;
 
 namespace TimeChange
 {
+    /// <summary>
+    /// Provides time changing mechanic.
+    /// </summary>
     public class TimeChanger : MonoBehaviour
     {
         [SerializeField] private Animator animator;
@@ -60,6 +63,10 @@ namespace TimeChange
             TryChange(1);
         }
 
+        /// <summary>
+        /// Managing time changing mechanic. If Player can change time, calls ChangeTime().
+        /// </summary>
+        /// <param name="change">-1 to go back in TimeLine or 1 to go forward in TimeLine.</param>
         private void TryChange(int change) {
             if (actualTime == 0 && change == -1) change = 2;
             _newTimeLine = (TimeLine)(((int)actualTime + change) % 3);
@@ -70,6 +77,9 @@ namespace TimeChange
             }
         }
 
+        /// <summary>
+        /// Changes time to _newTimeline
+        /// </summary>
         private IEnumerator<WaitForSeconds> ChangeTime() {
             var key = CInput.TeleportLock.Lock();
             animator.SetTrigger("Start");
@@ -81,6 +91,11 @@ namespace TimeChange
             CInput.TeleportLock.Unlock(key);
         }
 
+        /// <summary>
+        /// Asks appropriate CheckCollider if Player can change time.
+        /// </summary>
+        /// <param name="when">Difference between _newTimeLine and actualTime.</param>
+        /// <returns>Bool</returns>
         private bool CanChangeTime(int when) {
             return _boxes[when + 2].IsNotTouching();
         }
