@@ -3,9 +3,8 @@ using UnityEngine.InputSystem;
 namespace CustomInput.Interactions
 {
 	public class CustomHold : IInputInteraction
-	{
-		public float duration = 0.4f;
-		public float pressPoint = 0.5f;
+	{	
+		public float minimalTime = 0.2f;
 
 		private double timePressed;
 		public void Process(ref InputInteractionContext context)
@@ -19,20 +18,16 @@ namespace CustomInput.Interactions
 			switch (context.phase)
 			{
 				case InputActionPhase.Waiting:
-					if (context.ControlIsActuated(pressPoint))
+					if (context.ControlIsActuated(minimalTime))
 					{
 						timePressed = context.time;
 
 						context.Started();
-						context.SetTimeout(duration);
+						context.SetTimeout(minimalTime);
 					}
 					break;
 
 				case InputActionPhase.Started:
-					if (context.time - timePressed >= duration)
-					{
-						context.PerformedAndStayPerformed();
-					}
 					if (!context.ControlIsActuated())
 					{
 						context.Waiting();
@@ -40,7 +35,7 @@ namespace CustomInput.Interactions
 					break;
 
 				case InputActionPhase.Performed:
-					if (!context.ControlIsActuated(pressPoint))
+					if (!context.ControlIsActuated(minimalTime))
 						context.Canceled();
 					break;
 			}
