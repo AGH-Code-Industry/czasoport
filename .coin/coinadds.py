@@ -2,7 +2,7 @@
 # Date: 2023-08-01
 # In case of any questions, please contact me via Discord (vlesio)
 
-# This script runs all scripts that start with "initialize-" in the .coin folder
+# This script is used for installing Coin Additions
 
 import os
 import sys
