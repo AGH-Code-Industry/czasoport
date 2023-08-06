@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Pre-push properties
+
+# Regex for valid branch names, must be valid Extended Regular Expression (ERE)
+VALID_NAMES="^(feature|bugfix|hotfix|refactor|documentation|spike)\/[a-z0-9]+(-[a-z0-9]+)*$"
+# Do not include these branches in validation
+EXCEPTIONS="^(master|develop)$"
