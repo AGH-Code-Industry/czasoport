@@ -16,7 +16,6 @@ namespace CustomInput.Locks {
         public InventoryLock(InputActions.InventoryActions input) {
             _input = input;
             _tag = _input.ToString();
-            CDebug.Log(_tag);
             _keyID = 2137;
             _keys = new List<string>();
         }
@@ -28,7 +27,6 @@ namespace CustomInput.Locks {
         /// <returns>Key that is needed to unlock the actions.</returns>
         public string Lock() {
             string key = _tag + _keyID++;
-            CDebug.Log("Generated key: " + key);
             _keys.Add(key);
             UpdateLock();
             return key;
