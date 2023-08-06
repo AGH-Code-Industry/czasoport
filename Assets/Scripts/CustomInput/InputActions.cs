@@ -490,7 +490,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""id"": ""cd0cc705-f3d7-4e40-b9ca-39aed3abc820"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Tap"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -499,7 +499,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""id"": ""d6af5767-8d5c-498e-a3ad-4f188035148f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": ""CustomHold(duration=0.4,pressPoint=0.5)"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -508,7 +508,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""id"": ""4d7a8354-4b10-40f6-8c8a-000e914a019b"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Tap"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -517,7 +517,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""id"": ""d3246bfa-964c-4c8e-a9a7-d2c148a6c2c6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": ""CustomHold"",
                     ""initialStateCheck"": false
                 }
             ],
