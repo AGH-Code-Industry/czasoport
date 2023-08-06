@@ -1,6 +1,3 @@
-using System;
-using CoinPackage.Debugging;
-using Settings;
 using UnityEngine;
 using System.Collections.Generic;
 using CustomInput;
@@ -9,23 +6,25 @@ using UnityEngine.InputSystem;
 namespace TimeChange
 {
     /// <summary>
-    /// Provides time changing mechanic.
+    /// Manages time changing mechanic.
     /// </summary>
     public class TimeChanger : MonoBehaviour
     {
         [SerializeField] private Animator animator;
         [Tooltip("Duration of the jump")] 
         [SerializeField] private float timeToChange = 0.3f;
-
+        
+        /// <summary>
+        /// Actual time line
+        /// </summary>
         public TimeLine actualTime = TimeLine.Present;
 
         private List<CheckCollider> _boxes;
-        [SerializeField]private Vector3 _timeJump; //PÓKI NIE MA ŁADOWANIE GRY
+        [SerializeField]private Vector3 _timeJump;
         private TimeLine _newTimeLine;
 
         private void Start() {
             _boxes = new List<CheckCollider>();
-            //_timeJump = DeveloperSettings.Instance.tpcSettings.offsetFromPresentPlatform; // JAK BĘDZIE ŁADOWANIE GRY
             for (int i = -2; i <= 2; i++)
             {
                 if (i == 0)
@@ -35,7 +34,7 @@ namespace TimeChange
                 }
 
                 GameObject objectToSpawn = new GameObject("ColliderToSpawn");
-                objectToSpawn.transform.parent = this.gameObject.transform;
+                objectToSpawn.transform.parent = transform;
                 objectToSpawn.AddComponent<BoxCollider2D>();
 
                 objectToSpawn.transform.position = i * _timeJump + transform.position;
@@ -70,7 +69,6 @@ namespace TimeChange
         private void TryChange(int change) {
             if (actualTime == 0 && change == -1) change = 2;
             _newTimeLine = (TimeLine)(((int)actualTime + change) % 3);
-            //CDebug.Log(new_id,Colorize.Magenta);
             if (CanChangeTime(_newTimeLine - actualTime))
             {
                 StartCoroutine(ChangeTime());
