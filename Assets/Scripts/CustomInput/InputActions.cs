@@ -499,7 +499,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""id"": ""d6af5767-8d5c-498e-a3ad-4f188035148f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""CustomHold(duration=0.4,pressPoint=0.5)"",
+                    ""interactions"": ""CustomHold"",
                     ""initialStateCheck"": false
                 },
                 {
