@@ -3,7 +3,7 @@ name: Generate project documentation
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   # Build the documentation
