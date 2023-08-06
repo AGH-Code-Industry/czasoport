@@ -12,7 +12,7 @@
   "api/CustomInput.CInput.html": {
     "href": "api/CustomInput.CInput.html",
     "title": "Class CInput | Czasoport Documentation",
-    "keywords": "Class CInput Namespace CustomInput public static class CInput Inheritance object CInput Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields InputActions public static readonly InputActions InputActions Field Value InputActions Properties MousePosition public static Vector2 MousePosition { get; } Property Value Vector2 MouseWorldPosition public static Vector2 MouseWorldPosition { get; } Property Value Vector2 NavigationAxis public static Vector2 NavigationAxis { get; } Property Value Vector2 Run public static float Run { get; } Property Value float"
+    "keywords": "Class CInput Namespace CustomInput Wrapper for automatically generated InputActions. Provides easier access to reading values from input, takes care of processing for common input values. Incorporates locking mechanism. public static class CInput Inheritance object CInput Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields InputActions InputActions object that CInput is based on. Should be used if there is no wrapper implemented by CInput. public static readonly InputActions InputActions Field Value InputActions InteractionsLock public static readonly InteractionsLock InteractionsLock Field Value InteractionsLock InventoryLock public static readonly InventoryLock InventoryLock Field Value InventoryLock MouseLock public static readonly MouseLock MouseLock Field Value MouseLock MovementLock public static readonly MovementLock MovementLock Field Value MovementLock TeleportLock public static readonly TeleportLock TeleportLock Field Value TeleportLock Properties MousePosition Normal mouse position from InputActions. If you want point in game over which mouse is hovering, use MouseWorldPosition. public static Vector2 MousePosition { get; } Property Value Vector2 MouseWorldPosition Mouse position casted to world coordinates. public static Vector2 MouseWorldPosition { get; } Property Value Vector2 NavigationAxis Vector2 desired player direction/ public static Vector2 NavigationAxis { get; } Property Value Vector2 Run Whether player is running, and how fast he is running (effective on gamepads). public static float Run { get; } Property Value float"
   },
   "api/CustomInput.Exceptions.NoMainCameraException.html": {
     "href": "api/CustomInput.Exceptions.NoMainCameraException.html",
@@ -29,10 +29,40 @@
     "title": "Class InputTest | Czasoport Documentation",
     "keywords": "Class InputTest Namespace CustomInput public class InputTest : MonoBehaviour Inheritance object InputTest"
   },
+  "api/CustomInput.Locks.InteractionsLock.html": {
+    "href": "api/CustomInput.Locks.InteractionsLock.html",
+    "title": "Class InteractionsLock | Czasoport Documentation",
+    "keywords": "Class InteractionsLock Namespace CustomInput.Locks Provides locking mechanism for Interactions actions. public class InteractionsLock Inheritance object InteractionsLock Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors InteractionsLock(InteractionsActions) public InteractionsLock(InputActions.InteractionsActions input) Parameters input InputActions.InteractionsActions Methods Lock() Lets CustomInput know that current thread is not ready to receive input from user. 'Thread' safe, use instead of Enable and Disable on individual actions. public string Lock() Returns string Key that is needed to unlock the actions. Unlock(string) Lets CustomInput know that current thread is ready to receive input from user. public void Unlock(string key) Parameters key string Obtained by invoking Lock(). Exceptions Exception"
+  },
+  "api/CustomInput.Locks.InventoryLock.html": {
+    "href": "api/CustomInput.Locks.InventoryLock.html",
+    "title": "Class InventoryLock | Czasoport Documentation",
+    "keywords": "Class InventoryLock Namespace CustomInput.Locks Provides locking mechanism for user Inventory actions. public class InventoryLock Inheritance object InventoryLock Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors InventoryLock(InventoryActions) public InventoryLock(InputActions.InventoryActions input) Parameters input InputActions.InventoryActions Methods Lock() Lets CustomInput know that current thread is not ready to receive input from user. 'Thread' safe, use instead of Enable and Disable on individual actions. public string Lock() Returns string Key that is needed to unlock the actions. Unlock(string) Lets CustomInput know that current thread is ready to receive input from user. public void Unlock(string key) Parameters key string Obtained by invoking Lock(). Exceptions Exception"
+  },
+  "api/CustomInput.Locks.MouseLock.html": {
+    "href": "api/CustomInput.Locks.MouseLock.html",
+    "title": "Class MouseLock | Czasoport Documentation",
+    "keywords": "Class MouseLock Namespace CustomInput.Locks Provides locking mechanism for Mouse actions. public class MouseLock Inheritance object MouseLock Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors MouseLock(MouseActions) public MouseLock(InputActions.MouseActions input) Parameters input InputActions.MouseActions Methods Lock() Lets CustomInput know that current thread is not ready to receive input from user. 'Thread' safe, use instead of Enable and Disable on individual actions. public string Lock() Returns string Key that is needed to unlock the actions. Unlock(string) Lets CustomInput know that current thread is ready to receive input from user. public void Unlock(string key) Parameters key string Obtained by invoking Lock(). Exceptions Exception"
+  },
+  "api/CustomInput.Locks.MovementLock.html": {
+    "href": "api/CustomInput.Locks.MovementLock.html",
+    "title": "Class MovementLock | Czasoport Documentation",
+    "keywords": "Class MovementLock Namespace CustomInput.Locks Provides locking mechanism for Movement actions. public class MovementLock Inheritance object MovementLock Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors MovementLock(MovementActions) public MovementLock(InputActions.MovementActions input) Parameters input InputActions.MovementActions Methods Lock() Lets CustomInput know that current thread is not ready to receive input from user. 'Thread' safe, use instead of Enable and Disable on individual actions. public string Lock() Returns string Key that is needed to unlock the actions. Unlock(string) Lets CustomInput know that current thread is ready to receive input from user. public void Unlock(string key) Parameters key string Obtained by invoking Lock(). Exceptions Exception"
+  },
+  "api/CustomInput.Locks.TeleportLock.html": {
+    "href": "api/CustomInput.Locks.TeleportLock.html",
+    "title": "Class TeleportLock | Czasoport Documentation",
+    "keywords": "Class TeleportLock Namespace CustomInput.Locks Provides locking mechanism for Teleport actions. public class TeleportLock Inheritance object TeleportLock Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors TeleportLock(TeleportActions) public TeleportLock(InputActions.TeleportActions input) Parameters input InputActions.TeleportActions Methods Lock() Lets CustomInput know that current thread is not ready to receive input from user. 'Thread' safe, use instead of Enable and Disable on individual actions. public string Lock() Returns string Key that is needed to unlock the actions. Unlock(string) Lets CustomInput know that current thread is ready to receive input from user. public void Unlock(string key) Parameters key string Obtained by invoking Lock(). Exceptions Exception"
+  },
+  "api/CustomInput.Locks.html": {
+    "href": "api/CustomInput.Locks.html",
+    "title": "Namespace CustomInput.Locks | Czasoport Documentation",
+    "keywords": "Namespace CustomInput.Locks Classes InteractionsLock Provides locking mechanism for Interactions actions. InventoryLock Provides locking mechanism for user Inventory actions. MouseLock Provides locking mechanism for Mouse actions. MovementLock Provides locking mechanism for Movement actions. TeleportLock Provides locking mechanism for Teleport actions."
+  },
   "api/CustomInput.html": {
     "href": "api/CustomInput.html",
     "title": "Namespace CustomInput | Czasoport Documentation",
-    "keywords": "Namespace CustomInput Classes CInput InputTest"
+    "keywords": "Namespace CustomInput Classes CInput Wrapper for automatically generated InputActions. Provides easier access to reading values from input, takes care of processing for common input values. Incorporates locking mechanism. InputTest"
   },
   "api/Global.InputActions.IInteractionsActions.html": {
     "href": "api/Global.InputActions.IInteractionsActions.html",
