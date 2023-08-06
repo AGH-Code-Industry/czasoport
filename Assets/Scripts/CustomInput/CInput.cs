@@ -1,4 +1,5 @@
 using CustomInput.Exceptions;
+using CoinPackage.Debugging;
 using UnityEngine;
 using UnityEngine.Events;
 
