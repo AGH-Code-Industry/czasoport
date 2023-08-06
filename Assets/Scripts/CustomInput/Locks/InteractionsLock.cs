@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using CoinPackage.Debugging;
 
-namespace CustomInput {
+namespace CustomInput.Locks {
     /// <summary>
-    /// Provides locking mechanism for user input. USE ONLY WITH INPUT ACTIONS
+    /// Provides locking mechanism for Interactions actions.
     /// </summary>
-    /// <typeparam name="T">Input Actions</typeparam>
-    public class InputLock<T> {
-        private readonly dynamic _input;
+    public class InteractionsLock {
         private readonly List<string> _keys;
         private readonly string _tag;
+        
+        private InputActions.InteractionsActions _input;
         private ushort _keyID;
         
-        public InputLock(T input) {
+        public InteractionsLock(InputActions.InteractionsActions input) {
             _input = input;
             _tag = _input.ToString();
             CDebug.Log(_tag);
@@ -21,6 +21,11 @@ namespace CustomInput {
             _keys = new List<string>();
         }
 
+        /// <summary>
+        /// Lets CustomInput know that current thread is not ready to receive input from user.
+        /// 'Thread' safe, use instead of `Enable` and `Disable` on individual actions.
+        /// </summary>
+        /// <returns>Key that is needed to unlock the actions.</returns>
         public string Lock() {
             string key = _tag + _keyID++;
             CDebug.Log("Generated key: " + key);
@@ -29,6 +34,11 @@ namespace CustomInput {
             return key;
         }
 
+        /// <summary>
+        /// Lets CustomInput know that current thread is ready to receive input from user.
+        /// </summary>
+        /// <param name="key">Obtained by invoking Lock().</param>
+        /// <exception cref="Exception"></exception>
         public void Unlock(string key) {
             if (_keys.Contains(key)) {
                 _keys.Remove(key);
