@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LevelsLoader {
+namespace LevelTimeChange.LevelsLoader {
 	[CreateAssetMenu()]
 	public class LevelInfoSO : ScriptableObject
 	{

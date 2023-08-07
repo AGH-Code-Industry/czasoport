@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LevelsLoader {
+namespace LevelTimeChange.LevelsLoader {
 	public enum AvailableLevels {
 		Level1,
 		Level2,

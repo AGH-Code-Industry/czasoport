@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace LevelsLoader {
-	public class TeleportToAnotherLevel : MonoBehaviour
+namespace LevelTimeChange.LevelsLoader {
+	public class LevelPortal : MonoBehaviour
 	{
 		[SerializeField] private LevelInfoSO destinedLevel;
 
-		private void OnTriggerEnter2D(Collider2D collision) {
+		private void OnTriggerEnter2D(Collider2D other) {
 			LevelsManager.Instance.ChangeLevel(destinedLevel);
 		}
 	}

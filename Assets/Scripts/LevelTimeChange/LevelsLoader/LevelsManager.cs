@@ -4,15 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
-namespace LevelsLoader {
+namespace LevelTimeChange.LevelsLoader {
 	public class LevelsManager : MonoBehaviour
 	{
 		public static LevelsManager Instance { get; private set; }
 		
 		[SerializeField] private LevelInfoSO startingLevel;
-
+		
 		private List<AvailableLevels> _loadedLevels = new();
 
 		private void Awake() {
