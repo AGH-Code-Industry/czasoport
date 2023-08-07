@@ -46,6 +46,15 @@
                     "**/*.md"
                 ],
                 "dest": "manual"
+            },
+            {
+                "src": "GDD",
+                "files": [
+                    "toc.yml",
+                    "*.md",
+                    "**/*.md"
+                ],
+                "dest": "gdd"
             }
         ],
         "overwrite": [
@@ -59,7 +68,8 @@
         "resource": [
             {
                 "files": [
-                    "resources/**/*"
+                    "resources/**/*",
+                    "GDD/assets/**/**/*"
                 ]
             }
         ],

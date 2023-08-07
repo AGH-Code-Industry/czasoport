@@ -1,5 +1,5 @@
 # Rozgrywka
-### [<-- GDD](/GDD/GDD.md)
+### [<-- GDD](../GDD.md)
 
 ---
 ---

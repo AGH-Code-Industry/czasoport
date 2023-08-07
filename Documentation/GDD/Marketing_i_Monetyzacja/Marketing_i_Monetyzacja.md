@@ -1,5 +1,5 @@
-# Marketing i Monetyzacja
-### [<-- GDD](/GDD/GDD.md)
+Documentation\GDD\Marketing_i_Monetyzacja\Marketing_i_Monetyzacja.md# Marketing i Monetyzacja
+### [<-- GDD](../GDD.md)
 
 ---
 ---

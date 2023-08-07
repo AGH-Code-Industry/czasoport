@@ -1,5 +1,5 @@
 # Nowe Pomysły
-### [<-- GDD](/GDD/GDD.md)
+### [<-- GDD](../GDD.md)
 
 ---
 ---

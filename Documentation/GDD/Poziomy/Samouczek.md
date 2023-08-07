@@ -1,5 +1,5 @@
 # Samouczek
-### [<-- GDD](/GDD/GDD.md)
+### [<-- GDD](../GDD.md)
 
 ---
 Tekst w nawiasach () to prompty, które będą się wyświetlać na ekranie gracza podczas samouczka, aby pokazać mu kontrole. W akcjach uwzględniony jest tylko jeden przycisk (np. LPM), ale mogą wyświetlać się wszystkie możliwości (LPM, J, F, South)

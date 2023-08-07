@@ -1,5 +1,5 @@
 # Interfejs Użytkownika
-### [<-- GDD](/GDD/GDD.md)
+### [<-- GDD](../GDD.md)
 
 ---
 Minimalny, podobnie jak kontrole.

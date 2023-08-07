@@ -1,5 +1,5 @@
 # Opis Techniczny
-### [<-- GDD](/GDD/GDD.md)
+### [<-- GDD](../GDD.md)
 
 ---
 ---

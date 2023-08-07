@@ -1,5 +1,5 @@
 # Grafika
-### [<-- GDD](/GDD/GDD.md)
+### [<-- GDD](../GDD.md)
 
 ---
 Zależna od grafików, ale gra przedstawiona będzie w 2.5D w widoku od góry/izometrycznym.

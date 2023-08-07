@@ -6,7 +6,7 @@
 
 ---
 
-## [--> Fabuła <--](/GDD/Fabuła/Fabuła.md)
+## [--> Fabuła <--](../GDD/Fabuła/Fabuła.md)
 
 **Zawiera:**
 
@@ -18,7 +18,7 @@
 
 ---
 
-## [--> Rozgrywka <--](/GDD/Rozgrywka/Rozgrywka.md)
+## [--> Rozgrywka <--](../GDD/Rozgrywka/Rozgrywka.md)
 
 **Zawiera:**
 
@@ -31,7 +31,7 @@
 
 ---
 
-## [--> Postacie i Obiekty <--](/GDD/Postacie_i_Obiekty/Postacie_i_Obiekty.md)
+## [--> Postacie i Obiekty <--](../GDD/Postacie_i_Obiekty/Postacie_i_Obiekty.md)
 
 **Zawiera:**
 
@@ -43,7 +43,7 @@
 
 ---
 
-## [--> Poziomy <--](/GDD/Poziomy/Poziomy.md)
+## [--> Poziomy <--](../GDD/Poziomy/Poziomy.md)
 
 **Zawiera:**
 
@@ -53,7 +53,7 @@
 
 ---
 
-## [--> Interfejs_Użytkownika <--](/GDD/Interfejs_Użytkownika/Interfejs_Użytkownika.md)
+## [--> Interfejs_Użytkownika <--](../GDD/Interfejs_Użytkownika/Interfejs_Użytkownika.md)
 
 **Zawiera:**
 
@@ -64,7 +64,7 @@
 
 ---
 
-## [--> Grafika <--](/GDD/Grafika/Grafika.md)
+## [--> Grafika <--](../GDD/Grafika/Grafika.md)
 
 **Zawiera:**
 
@@ -77,7 +77,7 @@
 
 ---
 
-## [--> Muzyka <--](/GDD/Muzyka/Muzyka.md)
+## [--> Muzyka <--](../GDD/Muzyka/Muzyka.md)
 
 **Zawiera:**
 
@@ -88,7 +88,7 @@
 
 ---
 
-## [--> Opis Techniczny <--](/GDD/Opis_Techniczny/Opis_Techniczny.md)
+## [--> Opis Techniczny <--](../GDD/Opis_Techniczny/Opis_Techniczny.md)
 
 **Zawiera:**
 
@@ -101,7 +101,7 @@
 
 ---
 
-## [--> Marketing i Monetyzacja <--](/GDD/Marketing_i_Monetyzacja/Marketing_i_Monetyzacja.md)
+## [--> Marketing i Monetyzacja <--](../GDD/Marketing_i_Monetyzacja/Marketing_i_Monetyzacja.md)
 
 **Zawiera:**
 
@@ -113,7 +113,7 @@
 
 ---
 
-## [--> Nowe Pomysły <--](/GDD/Nowe_Pomysły/Nowe_Pomysły.md)
+## [--> Nowe Pomysły <--](../GDD/Nowe_Pomysły/Nowe_Pomysły.md)
 
 **Zawiera:**
 
