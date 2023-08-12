@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using CoinPackage.Debugging;
 
 namespace Inventory.UI {
     /// <summary>
@@ -9,7 +10,7 @@ namespace Inventory.UI {
         private Image _frame;
         private Image _item;
 
-        private void Start() {
+        private void Awake() {
             _item = transform.Find("Item").GetComponent<Image>();
             _frame = transform.Find("Frame").GetComponent<Image>();
         }
@@ -23,6 +24,9 @@ namespace Inventory.UI {
             var tempColor = _item.color;
             tempColor.a = 1f;
             _item.color = tempColor;
+            
+            RemoveItem();
+            Disactive();
         }
 
         /// <summary>
