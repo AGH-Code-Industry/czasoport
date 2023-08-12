@@ -1,7 +1,6 @@
-﻿namespace TimeChange
-{
+﻿namespace TimeChange {
     /// <summary>
-    /// Variable type for time line.
+    /// Defines available timelines.
     /// </summary>
     public enum TimeLine : int {
         Past = 0,

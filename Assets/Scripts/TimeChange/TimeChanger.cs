@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using CustomInput;
 using UnityEngine.InputSystem;
 
-namespace TimeChange
-{
+namespace TimeChange {
     /// <summary>
     /// Manages time changing mechanic.
     /// </summary>
@@ -15,7 +14,7 @@ namespace TimeChange
         [SerializeField] private float timeToChange = 0.3f;
         
         /// <summary>
-        /// Actual time line
+        /// Actual timeline
         /// </summary>
         public TimeLine actualTime = TimeLine.Present;
 

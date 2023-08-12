@@ -1,8 +1,7 @@
 using UnityEngine;
 using CoinPackage.Debugging;
 
-namespace TimeChange
-{
+namespace TimeChange {
     /// <summary>
     /// Provides checking collision for time change mechanic.
     /// </summary>
