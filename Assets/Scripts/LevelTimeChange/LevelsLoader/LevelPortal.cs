@@ -34,11 +34,22 @@ namespace LevelTimeChange.LevelsLoader {
 			return _teleportPoint.transform.position;
 		}
 
+		/// <summary>
+		/// Start discovery process with destined level. Invoking this function on it's own will not ensure
+		/// that destined level is loaded and can take part in discovery process.
+		/// </summary>
+		/// <param name="currentLevel">Source level of discovery.</param>
 		public void MakeDiscovery(LevelInfoSO currentLevel) {
-			var destinedLevelManager = LevelsManager.Instance.LoadedLevelsDict[destinedLevel];
-			_matchingPortal = destinedLevelManager.ReturnMatchingPortal(currentLevel, this);
+			_matchingPortal = LevelsManager.Instance.LoadedLevels[destinedLevel]
+				.ReturnMatchingPortal(currentLevel, this);
 		}
 
+		/// <summary>
+		/// Check if provided portal matches this portal.
+		/// </summary>
+		/// <param name="sourceLevel">Source level.</param>
+		/// <param name="sourcePortal">Potential level match.</param>
+		/// <returns>`True` if portal is a match, `False` otherwise.</returns>
 		public bool IsMatch(LevelInfoSO sourceLevel, LevelPortal sourcePortal) {
 			if (sourceLevel == destinedLevel && sourcePortal.teleportTimeline == this.teleportTimeline) {
 				return true;

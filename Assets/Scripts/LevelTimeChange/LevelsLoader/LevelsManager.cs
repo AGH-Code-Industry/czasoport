@@ -8,11 +8,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace LevelTimeChange.LevelsLoader {
+	/// <summary>
+	/// Manager of levels loading and switching system. Central point of communication between rest of
+	/// included components. It is a singleton, attached to object present through the `game`.
+	/// </summary>
 	public class LevelsManager : MonoBehaviour
 	{
+		/// <summary>
+		/// Singleton instance of this class.
+		/// </summary>
 		public static LevelsManager Instance { get; private set; }
 
-		public Dictionary<LevelInfoSO, LevelManager> LoadedLevelsDict;
+		/// <summary>
+		/// All currently loaded levels.
+		/// </summary>
+		public Dictionary<LevelInfoSO, LevelManager> LoadedLevels;
 		
 		[SerializeField] private LevelInfoSO startingLevel; // TODO: This must be dynamic based on level save
 
@@ -29,7 +39,7 @@ namespace LevelTimeChange.LevelsLoader {
 			}
 			Instance = this;
 			
-			LoadedLevelsDict = new Dictionary<LevelInfoSO, LevelManager>();
+			LoadedLevels = new Dictionary<LevelInfoSO, LevelManager>();
 			
 			_logger.Log("Loading starting scene.");
 			SceneManager.LoadScene(startingLevel.sceneName, LoadSceneMode.Additive);
@@ -37,16 +47,23 @@ namespace LevelTimeChange.LevelsLoader {
 
 		private void Start() {
 			_logger.Log("Activating starting scene.");
-			_currentLevelManager = LoadedLevelsDict[startingLevel];
+			_currentLevelManager = LoadedLevels[startingLevel];
 			_currentLevelManager.ActivateLevel();
 			_isLoading = false;
 			LoadLevels(startingLevel);
 		}
 
+		/// <summary>
+		/// Change active level.
+		/// </summary>
+		/// <param name="destinedLevelInfo">Level to be switched to.</param>
+		/// <param name="destinationPortal">Portal to be switched to.</param>
 		public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) {
 			_logger.Log($"Changing scene, destination: {destinedLevelInfo.sceneName}");
 			
-			var newLevel = LoadedLevelsDict[destinedLevelInfo];
+			// Order of actions in this function is crucial, do not change it unless
+			// you know what you are doing
+			var newLevel = LoadedLevels[destinedLevelInfo];
 			var oldLevel = _currentLevelManager;
 			
 			newLevel.ActivateLevel();
@@ -59,6 +76,11 @@ namespace LevelTimeChange.LevelsLoader {
 			UnloadLevels(destinedLevelInfo);
 		}
 
+		/// <summary>
+		/// This method is used by the `LevelManager` of some scene to let the system know
+		/// that the scene has been loaded and is ready for discovery process from current scene.
+		/// </summary>
+		/// <param name="level"></param>
 		public void ReportForDiscovery(LevelInfoSO level) {
 			if (_isLoading) {
 				_logger.Log($"Level {level.sceneName} reported for discovery, {"omitted" % Colorize.Red}.");
@@ -76,7 +98,7 @@ namespace LevelTimeChange.LevelsLoader {
 		private void LoadLevels(LevelInfoSO destinedLevel) {
 			_logger.Log($"Loading new scenes.");
 			foreach (var level in destinedLevel.neighbourLevels) {
-				if (!LoadedLevelsDict.ContainsKey(level)) {
+				if (!LoadedLevels.ContainsKey(level)) {
 					LoadLevel(level);
 				}
 			}
@@ -85,14 +107,14 @@ namespace LevelTimeChange.LevelsLoader {
 		private void UnLoadLevel(LevelInfoSO level) {
 			_logger.Log($"Scene is being unloaded: {level.sceneName % Colorize.Magenta}");
 			SceneManager.UnloadSceneAsync(level.sceneName);
-			LoadedLevelsDict.Remove(level);
+			LoadedLevels.Remove(level);
 		}
 
 		private void UnloadLevels(LevelInfoSO levelInfo) {
 			var scenesToRemove = new List<LevelInfoSO>();
 			
 			_logger.Log($"Unloading scenes.");
-			foreach (LevelInfoSO level in LoadedLevelsDict.Keys) {
+			foreach (LevelInfoSO level in LoadedLevels.Keys) {
 				if (!levelInfo.neighbourLevels.Contains(level) && levelInfo != level) {
 					scenesToRemove.Add(level);
 				}
@@ -100,14 +122,6 @@ namespace LevelTimeChange.LevelsLoader {
 			foreach (var scene in scenesToRemove) {
 				UnLoadLevel(scene);
 			}
-		}
-
-		private LevelManager GetLevelManager(LevelInfoSO levelInfo) {
-			// TODO: Exception when LevelManager could not be loaded
-			var newLevelManager = SceneManager.GetSceneByName(levelInfo.sceneName)
-				.GetRootGameObjects()[0]
-				.GetComponent<LevelManager>();
-			return newLevelManager;
 		}
 	}	
 }
