@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Application;
+using CoinPackage.Debugging;
 using UnityEngine;
 
 namespace LevelTimeChange.LevelsLoader {
@@ -12,25 +14,35 @@ namespace LevelTimeChange.LevelsLoader {
         [SerializeField] private GameObject[] teleportsHolders;
 
         private List<LevelPortal> _teleports;
+        private CLogger _logger = Loggers.LoggersList["LEVEL_SYSTEM"];
 
         private void Awake() {
             _teleports = new List<LevelPortal>();
+
+            LevelsManager.Instance.LoadedLevelsDict.Add(currentLevel, this);
+            _logger.Log($"New scene has awoken: {currentLevel.sceneName % Colorize.Cyan}");
             
             FindTeleportsOnScene();
             DeactivateLevel();
         }
 
         public void ActivateLevel() {
+            _logger.Log($"Scene {currentLevel.sceneName} is {"activating" % Colorize.Green}");
             levelContent.SetActive(true);
         }
 
         public void DeactivateLevel() {
+            _logger.Log($"Scene {currentLevel.sceneName} is {"deactivating" % Colorize.Red}");
             levelContent.SetActive(false);
+            LevelsManager.Instance.ReportForDiscovery(currentLevel);
         }
 
-        public void MakeDiscovery() {
+        public void MakeDiscovery(LevelInfoSO levelToDiscover) {
+            _logger.Log($"Scene {currentLevel.sceneName % Colorize.Cyan} is making discovery with {levelToDiscover.sceneName % Colorize.Cyan}");
             foreach (var levelPortal in _teleports) {
-                levelPortal.MakeDiscovery(currentLevel);
+                if (levelPortal.destinedLevel == levelToDiscover) {
+                    levelPortal.MakeDiscovery(currentLevel);
+                }
             }
         }
 

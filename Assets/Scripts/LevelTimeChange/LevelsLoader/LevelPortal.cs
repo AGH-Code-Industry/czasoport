@@ -35,7 +35,7 @@ namespace LevelTimeChange.LevelsLoader {
 		}
 
 		public void MakeDiscovery(LevelInfoSO currentLevel) {
-			var destinedLevelManager = LevelsManager.Instance.LoadedLevelsDict[currentLevel];
+			var destinedLevelManager = LevelsManager.Instance.LoadedLevelsDict[destinedLevel];
 			_matchingPortal = destinedLevelManager.ReturnMatchingPortal(currentLevel, this);
 		}
 
@@ -51,7 +51,7 @@ namespace LevelTimeChange.LevelsLoader {
 		}
 
 		private void OnTriggerEnter2D(Collider2D other) {
-			LevelsManager.Instance.ChangeLevel(destinedLevel, this);
+			LevelsManager.Instance.ChangeLevel(destinedLevel, _matchingPortal);
 		}
 	}
 }
