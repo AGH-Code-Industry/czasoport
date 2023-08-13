@@ -19,14 +19,11 @@ namespace Inventory.UI {
         /// Add item to slot
         /// </summary>
         /// <param name="newItem"></param>
-        public void AddItem(Image newItem) {
-            _item = newItem;
+        public void AddItem(Sprite newItem) {
+            _item.sprite = newItem;
             var tempColor = _item.color;
             tempColor.a = 1f;
             _item.color = tempColor;
-            
-            RemoveItem();
-            Disactive();
         }
 
         /// <summary>

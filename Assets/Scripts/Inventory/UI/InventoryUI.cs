@@ -47,7 +47,7 @@ namespace Inventory.UI {
         /// </summary>
         /// <param name="id"></param>
         /// <param name="newItem"></param>
-        public void OnItemAdded(int id, Image newItem) {
+        public void OnItemAdded(int id, Sprite newItem) {
             _slots[id].AddItem(newItem);
         }
 
