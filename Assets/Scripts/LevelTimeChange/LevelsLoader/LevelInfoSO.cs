@@ -6,8 +6,8 @@ namespace LevelTimeChange.LevelsLoader {
 	[CreateAssetMenu()]
 	public class LevelInfoSO : ScriptableObject
 	{
-		public AvailableLevels level;
-		public AvailableLevels[] neighbourLevels;
+		public string sceneName;
+		public LevelInfoSO[] neighbourLevels;
 	}
 }
 

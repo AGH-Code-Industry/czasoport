@@ -1,7 +1,9 @@
+using System;
 using CoinPackage.Debugging;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,10 +11,15 @@ namespace LevelTimeChange.LevelsLoader {
 	public class LevelsManager : MonoBehaviour
 	{
 		public static LevelsManager Instance { get; private set; }
+
+		public Dictionary<LevelInfoSO, LevelManager> LoadedLevelsDict;
 		
-		[SerializeField] private LevelInfoSO startingLevel;
+		[SerializeField] private LevelInfoSO startingLevel; // TODO: This must be dynamic based on level save
+
+		private LevelManager _currentLevelManager;
 		
-		private List<AvailableLevels> _loadedLevels = new();
+		//TODO: Remove this temporary abomination
+		public Transform player;
 
 		private void Awake() {
 			if (Instance != null) {
@@ -20,72 +27,80 @@ namespace LevelTimeChange.LevelsLoader {
 			}
 			Instance = this;
 
+			//_loadedLevels = new List<LevelInfoSO>();
+			LoadedLevelsDict = new Dictionary<LevelInfoSO, LevelManager>();
+
 			SetUpStartLevel();
 		}
 
+		private void Start() {
+			LoadedLevelsDict.Add(startingLevel, GetLevelManager(startingLevel));
+			_currentLevelManager = LoadedLevelsDict[startingLevel];
+			_currentLevelManager.ActivateLevel();
+		}
+
 		private void SetUpStartLevel() {
-			StartCoroutine(LoadLevel(startingLevel.level, true));
+			SceneManager.LoadScene(startingLevel.sceneName, LoadSceneMode.Additive);
 			LoadLevels(startingLevel);
 		}
 
-		public void ChangeLevel(LevelInfoSO levelInfo) {
-			LoadLevels(levelInfo);
-
-			UnLoadLevels(levelInfo);
+		public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal sourcePortal) {
+			var newLevelManager = LoadedLevelsDict[destinedLevelInfo];
+			
+			_currentLevelManager.DeactivateLevel();
+			newLevelManager.ActivateLevel();
+			_currentLevelManager = newLevelManager;
+			
+			// TODO: Change how we move the player
+			player.position = sourcePortal.GetTeleportPoint();
+			
+			LoadLevels(destinedLevelInfo);
+			_currentLevelManager.MakeDiscovery(); // WARNING: This will not ensure that discovery is performed after scenes have loaded.
+			UnloadLevels(destinedLevelInfo);
 		}
 
-		private IEnumerator LoadLevel(AvailableLevels level, bool visibility) {
-			AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level.ToString(), LoadSceneMode.Additive);
+		private IEnumerator LoadLevel(LevelInfoSO level) {
+			AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(level.sceneName, LoadSceneMode.Additive);
 
 			while (!asyncLoad.isDone) {
 				yield return null;
 			}
-
-			ToogleVisibilityOfScene(level, visibility);
-			_loadedLevels.Add(level);
+			
+			LoadedLevelsDict.Add(level, GetLevelManager(level));
 		}
 
-		private void LoadLevels(LevelInfoSO levelInfo) {
-			CDebug.Log("You are on " + levelInfo.level);
-			ToogleVisibilityOfScene(levelInfo.level, true);
-			foreach (AvailableLevels level in levelInfo.neighbourLevels) {
-				if (!_loadedLevels.Contains(level)) {
-					StartCoroutine(LoadLevel(level, false));
-				}
-				else {
-					ToogleVisibilityOfScene(level, false);
+		private void LoadLevels(LevelInfoSO destinedLevel) {
+			foreach (var level in destinedLevel.neighbourLevels) {
+				if (!LoadedLevelsDict.ContainsKey(level)) {
+					Coroutine asyncOperation = StartCoroutine(LoadLevel(level));
 				}
 			}
 		}
 
-		private void UnLoadLevel(AvailableLevels level) {
-			SceneManager.UnloadSceneAsync(level.ToString());
+		private void UnLoadLevel(LevelInfoSO level) {
+			SceneManager.UnloadSceneAsync(level.sceneName);
+			LoadedLevelsDict.Remove(level);
 		}
 
-		private void UnLoadLevels(LevelInfoSO levelInfo) {
-			List<AvailableLevels> scenesToRemove = new List<AvailableLevels>();
-
-			foreach (AvailableLevels level in _loadedLevels) {
-				if (!levelInfo.neighbourLevels.Contains(level) && levelInfo.level != level) {
+		private void UnloadLevels(LevelInfoSO levelInfo) {
+			foreach (LevelInfoSO level in LoadedLevelsDict.Keys) {
+				if (!levelInfo.neighbourLevels.Contains(level) && levelInfo != level) {
 					UnLoadLevel(level);
-					scenesToRemove.Add(level);
 				}
-			}
-
-			foreach (AvailableLevels level in scenesToRemove) {
-				_loadedLevels.Remove(level);
 			}
 		}
 
-		private void ToogleVisibilityOfScene(AvailableLevels level, bool visibility) {
-			Scene sceneToHide = SceneManager.GetSceneByName(level.ToString());
-			if (sceneToHide.IsValid()) {
-				GameObject[] rootObjects = sceneToHide.GetRootGameObjects();
-
-				foreach (GameObject rootObject in rootObjects) {
-					rootObject.SetActive(visibility);
-				}
+		private LevelManager GetLevelManager(LevelInfoSO levelInfo) {
+			// TODO: Exception when LevelManager could not be loaded
+			var x = SceneManager.GetSceneByName(levelInfo.sceneName)
+				.GetRootGameObjects();
+			foreach (var xc in x) {
+				CDebug.Log(xc);
 			}
+			var newLevelManager = SceneManager.GetSceneByName(levelInfo.sceneName)
+				.GetRootGameObjects()[0]
+				.GetComponent<LevelManager>();
+			return newLevelManager;
 		}
 	}	
 }
