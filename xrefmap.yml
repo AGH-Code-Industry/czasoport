@@ -168,6 +168,53 @@ references:
   commentId: T:CustomInput.InputTest
   fullName: CustomInput.InputTest
   nameWithType: InputTest
+- uid: CustomInput.Interactions
+  name: CustomInput.Interactions
+  href: api/CustomInput.Interactions.html
+  commentId: N:CustomInput.Interactions
+  fullName: CustomInput.Interactions
+  nameWithType: CustomInput.Interactions
+- uid: CustomInput.Interactions.CustomHold
+  name: CustomHold
+  href: api/CustomInput.Interactions.CustomHold.html
+  commentId: T:CustomInput.Interactions.CustomHold
+  fullName: CustomInput.Interactions.CustomHold
+  nameWithType: CustomHold
+- uid: CustomInput.Interactions.CustomHold.MinimalTime
+  name: MinimalTime
+  href: api/CustomInput.Interactions.CustomHold.html#CustomInput_Interactions_CustomHold_MinimalTime
+  commentId: F:CustomInput.Interactions.CustomHold.MinimalTime
+  fullName: CustomInput.Interactions.CustomHold.MinimalTime
+  nameWithType: CustomHold.MinimalTime
+- uid: CustomInput.Interactions.CustomHold.Process(InputInteractionContext@)
+  name: Process(ref InputInteractionContext)
+  href: api/CustomInput.Interactions.CustomHold.html#CustomInput_Interactions_CustomHold_Process_InputInteractionContext__
+  commentId: M:CustomInput.Interactions.CustomHold.Process(InputInteractionContext@)
+  name.vb: Process(InputInteractionContext)
+  fullName: CustomInput.Interactions.CustomHold.Process(ref InputInteractionContext)
+  fullName.vb: CustomInput.Interactions.CustomHold.Process(InputInteractionContext)
+  nameWithType: CustomHold.Process(ref InputInteractionContext)
+  nameWithType.vb: CustomHold.Process(InputInteractionContext)
+- uid: CustomInput.Interactions.CustomHold.Process*
+  name: Process
+  href: api/CustomInput.Interactions.CustomHold.html#CustomInput_Interactions_CustomHold_Process_
+  commentId: Overload:CustomInput.Interactions.CustomHold.Process
+  isSpec: "True"
+  fullName: CustomInput.Interactions.CustomHold.Process
+  nameWithType: CustomHold.Process
+- uid: CustomInput.Interactions.CustomHold.Reset
+  name: Reset()
+  href: api/CustomInput.Interactions.CustomHold.html#CustomInput_Interactions_CustomHold_Reset
+  commentId: M:CustomInput.Interactions.CustomHold.Reset
+  fullName: CustomInput.Interactions.CustomHold.Reset()
+  nameWithType: CustomHold.Reset()
+- uid: CustomInput.Interactions.CustomHold.Reset*
+  name: Reset
+  href: api/CustomInput.Interactions.CustomHold.html#CustomInput_Interactions_CustomHold_Reset_
+  commentId: Overload:CustomInput.Interactions.CustomHold.Reset
+  isSpec: "True"
+  fullName: CustomInput.Interactions.CustomHold.Reset
+  nameWithType: CustomHold.Reset
 - uid: CustomInput.Locks
   name: CustomInput.Locks
   href: api/CustomInput.Locks.html
@@ -601,6 +648,32 @@ references:
   isSpec: "True"
   fullName: InputActions.IInteractionsActions.OnItemInteraction
   nameWithType: InputActions.IInteractionsActions.OnItemInteraction
+- uid: Global.InputActions.IInteractionsActions.OnLongInteraction(InputAction.CallbackContext)
+  name: OnLongInteraction(CallbackContext)
+  href: api/Global.InputActions.IInteractionsActions.html#Global_InputActions_IInteractionsActions_OnLongInteraction_InputAction_CallbackContext_
+  commentId: M:Global.InputActions.IInteractionsActions.OnLongInteraction(InputAction.CallbackContext)
+  fullName: InputActions.IInteractionsActions.OnLongInteraction(InputAction.CallbackContext)
+  nameWithType: InputActions.IInteractionsActions.OnLongInteraction(InputAction.CallbackContext)
+- uid: Global.InputActions.IInteractionsActions.OnLongInteraction*
+  name: OnLongInteraction
+  href: api/Global.InputActions.IInteractionsActions.html#Global_InputActions_IInteractionsActions_OnLongInteraction_
+  commentId: Overload:Global.InputActions.IInteractionsActions.OnLongInteraction
+  isSpec: "True"
+  fullName: InputActions.IInteractionsActions.OnLongInteraction
+  nameWithType: InputActions.IInteractionsActions.OnLongInteraction
+- uid: Global.InputActions.IInteractionsActions.OnLongItemInteraction(InputAction.CallbackContext)
+  name: OnLongItemInteraction(CallbackContext)
+  href: api/Global.InputActions.IInteractionsActions.html#Global_InputActions_IInteractionsActions_OnLongItemInteraction_InputAction_CallbackContext_
+  commentId: M:Global.InputActions.IInteractionsActions.OnLongItemInteraction(InputAction.CallbackContext)
+  fullName: InputActions.IInteractionsActions.OnLongItemInteraction(InputAction.CallbackContext)
+  nameWithType: InputActions.IInteractionsActions.OnLongItemInteraction(InputAction.CallbackContext)
+- uid: Global.InputActions.IInteractionsActions.OnLongItemInteraction*
+  name: OnLongItemInteraction
+  href: api/Global.InputActions.IInteractionsActions.html#Global_InputActions_IInteractionsActions_OnLongItemInteraction_
+  commentId: Overload:Global.InputActions.IInteractionsActions.OnLongItemInteraction
+  isSpec: "True"
+  fullName: InputActions.IInteractionsActions.OnLongItemInteraction
+  nameWithType: InputActions.IInteractionsActions.OnLongItemInteraction
 - uid: Global.InputActions.IInventoryActions
   name: InputActions.IInventoryActions
   href: api/Global.InputActions.IInventoryActions.html
@@ -897,6 +970,32 @@ references:
   isSpec: "True"
   fullName: InputActions.InteractionsActions.ItemInteraction
   nameWithType: InputActions.InteractionsActions.ItemInteraction
+- uid: Global.InputActions.InteractionsActions.LongInteraction
+  name: LongInteraction
+  href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_LongInteraction
+  commentId: P:Global.InputActions.InteractionsActions.LongInteraction
+  fullName: InputActions.InteractionsActions.LongInteraction
+  nameWithType: InputActions.InteractionsActions.LongInteraction
+- uid: Global.InputActions.InteractionsActions.LongInteraction*
+  name: LongInteraction
+  href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_LongInteraction_
+  commentId: Overload:Global.InputActions.InteractionsActions.LongInteraction
+  isSpec: "True"
+  fullName: InputActions.InteractionsActions.LongInteraction
+  nameWithType: InputActions.InteractionsActions.LongInteraction
+- uid: Global.InputActions.InteractionsActions.LongItemInteraction
+  name: LongItemInteraction
+  href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_LongItemInteraction
+  commentId: P:Global.InputActions.InteractionsActions.LongItemInteraction
+  fullName: InputActions.InteractionsActions.LongItemInteraction
+  nameWithType: InputActions.InteractionsActions.LongItemInteraction
+- uid: Global.InputActions.InteractionsActions.LongItemInteraction*
+  name: LongItemInteraction
+  href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_LongItemInteraction_
+  commentId: Overload:Global.InputActions.InteractionsActions.LongItemInteraction
+  isSpec: "True"
+  fullName: InputActions.InteractionsActions.LongItemInteraction
+  nameWithType: InputActions.InteractionsActions.LongItemInteraction
 - uid: Global.InputActions.InteractionsActions.SetCallbacks(InputActions.IInteractionsActions)
   name: SetCallbacks(IInteractionsActions)
   href: api/Global.InputActions.InteractionsActions.html#Global_InputActions_InteractionsActions_SetCallbacks_InputActions_IInteractionsActions_
