@@ -4,9 +4,8 @@ namespace CustomInput.Interactions
 {
 	public class CustomHold : IInputInteraction
 	{	
-		public float minimalTime = 0.2f;
+		public float MinimalTime = 0.2f;
 
-		private double timePressed;
 		public void Process(ref InputInteractionContext context)
 		{
 			if (context.timerHasExpired)
@@ -18,12 +17,10 @@ namespace CustomInput.Interactions
 			switch (context.phase)
 			{
 				case InputActionPhase.Waiting:
-					if (context.ControlIsActuated(minimalTime))
+					if (context.ControlIsActuated(MinimalTime))
 					{
-						timePressed = context.time;
-
 						context.Started();
-						context.SetTimeout(minimalTime);
+						context.SetTimeout(MinimalTime);
 					}
 					break;
 
@@ -35,16 +32,13 @@ namespace CustomInput.Interactions
 					break;
 
 				case InputActionPhase.Performed:
-					if (!context.ControlIsActuated(minimalTime))
+					if (!context.ControlIsActuated(MinimalTime))
 						context.Canceled();
 					break;
 			}
 		}
 
-		public void Reset()
-		{
-			timePressed = 0;
-		}
+		public void Reset()	{	}
 
 	}
 }
