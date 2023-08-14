@@ -10,5 +10,8 @@ namespace Settings.Developer {
     public class ApplicationSettingsSO : ScriptableObject {
         [Tooltip("Name of the scene that loads global objects at the start of the application.")]
         public string globalDataSceneName;
+
+        [Tooltip("Name of the scene to load when press Play button on menu.")]
+        public string sceneToLoadName;
     }
 }
