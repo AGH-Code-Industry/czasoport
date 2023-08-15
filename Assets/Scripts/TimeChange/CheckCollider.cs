@@ -18,7 +18,7 @@ namespace TimeChange {
         /// <summary>
         /// Checking if Player can change time. CheckCollider's collider isn't touching any not trigger collider.
         /// </summary>
-        /// <returns>Bool</returns>
+        /// <returns>Whether Player can change time or not</returns>
         public bool IsNotTouching() {
             return !_isTouching;
         }

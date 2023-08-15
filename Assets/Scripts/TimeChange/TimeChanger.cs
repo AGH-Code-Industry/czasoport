@@ -14,12 +14,12 @@ namespace TimeChange {
         [SerializeField] private float timeToChange = 0.3f;
         
         /// <summary>
-        /// Actual timeline
+        /// Timeline the player is currently on.
         /// </summary>
         public TimeLine actualTime = TimeLine.Present;
 
         private List<CheckCollider> _boxes;
-        [SerializeField]private Vector3 _timeJump;
+        [SerializeField]private Vector3 _timeJump; //PÓKI NIE MA SKŁADANIA PLANSZY
         private TimeLine _newTimeLine;
 
         private void Start() {
