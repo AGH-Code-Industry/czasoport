@@ -36,10 +36,15 @@ namespace Inventory.UI {
         /// Highlight choosed slot.
         /// </summary>
         /// <param name="newId"></param>
-        public void OnItemStateChange(int newId) {   
-            _slots[_activeId].Disactive();
-            _activeId = newId;
-            _slots[_activeId].Active();
+        public void OnItemStateChange(int id, int new_durability = -1) {
+            if (id != _activeId) {
+                _slots[_activeId].Disactive();
+                _activeId = id;
+                _slots[_activeId].Active();
+            }
+            else if (new_durability != -1){
+                _slots[id].SetDurabilty(new_durability);
+            }
         }
 
         /// <summary>
@@ -47,8 +52,9 @@ namespace Inventory.UI {
         /// </summary>
         /// <param name="id"></param>
         /// <param name="newItem"></param>
-        public void OnItemAdded(int id, Sprite newItem) {
+        public void OnItemAdded(int id, Sprite newItem, int durability) {
             _slots[id].AddItem(newItem);
+            _slots[id].SetDurabilty(durability);
         }
 
         /// <summary>

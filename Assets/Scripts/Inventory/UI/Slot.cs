@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using CoinPackage.Debugging;
+using TMPro;
 
 namespace Inventory.UI {
     /// <summary>
@@ -9,10 +10,12 @@ namespace Inventory.UI {
     public class Slot : MonoBehaviour {
         private Image _frame;
         private Image _item;
+        private TextMeshProUGUI _text;
 
         private void Awake() {
             _item = transform.Find("Item").GetComponent<Image>();
             _frame = transform.Find("Frame").GetComponent<Image>();
+            _text = transform.Find("Durability").GetComponent<TextMeshProUGUI>();
         }
         
         /// <summary>
@@ -33,6 +36,7 @@ namespace Inventory.UI {
             var tempColor = _item.color;
             tempColor.a = 0f;
             _item.color = tempColor;
+            _text.text = "";
         }
 
         /// <summary>
@@ -51,6 +55,17 @@ namespace Inventory.UI {
             var tempColor = _frame.color;
             tempColor.a = 0f;
             _frame.color = tempColor;
+        }
+
+        /// <summary>
+        /// Change slot's text to new_durability or ""
+        /// </summary>
+        /// <param name="new_durability"></param>
+        public void SetDurabilty(int new_durability) {
+            if (new_durability > 1) {
+                _text.text = new_durability.ToString();
+            }
+            else _text.text = "";
         }
     }
 }
