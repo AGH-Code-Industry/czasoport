@@ -29,16 +29,6 @@
     "title": "Class InputTest | Czasoport Documentation",
     "keywords": "Class InputTest Namespace CustomInput public class InputTest : MonoBehaviour Inheritance object InputTest"
   },
-  "api/CustomInput.Interactions.CustomHold.html": {
-    "href": "api/CustomInput.Interactions.CustomHold.html",
-    "title": "Class CustomHold | Czasoport Documentation",
-    "keywords": "Class CustomHold Namespace CustomInput.Interactions public class CustomHold : IInputInteraction Inheritance object CustomHold Fields MinimalTime public float MinimalTime Field Value float Methods Process(ref InputInteractionContext) public void Process(ref InputInteractionContext context) Parameters context InputInteractionContext Reset() public void Reset()"
-  },
-  "api/CustomInput.Interactions.html": {
-    "href": "api/CustomInput.Interactions.html",
-    "title": "Namespace CustomInput.Interactions | Czasoport Documentation",
-    "keywords": "Namespace CustomInput.Interactions Classes CustomHold"
-  },
   "api/CustomInput.Locks.InteractionsLock.html": {
     "href": "api/CustomInput.Locks.InteractionsLock.html",
     "title": "Class InteractionsLock | Czasoport Documentation",
@@ -77,7 +67,7 @@
   "api/Global.InputActions.IInteractionsActions.html": {
     "href": "api/Global.InputActions.IInteractionsActions.html",
     "title": "Interface InputActions.IInteractionsActions | Czasoport Documentation",
-    "keywords": "Interface InputActions.IInteractionsActions Namespace Global public interface InputActions.IInteractionsActions Methods OnInteraction(CallbackContext) void OnInteraction(InputAction.CallbackContext context) Parameters context CallbackContext OnItemInteraction(CallbackContext) void OnItemInteraction(InputAction.CallbackContext context) Parameters context CallbackContext OnLongInteraction(CallbackContext) void OnLongInteraction(InputAction.CallbackContext context) Parameters context CallbackContext OnLongItemInteraction(CallbackContext) void OnLongItemInteraction(InputAction.CallbackContext context) Parameters context CallbackContext"
+    "keywords": "Interface InputActions.IInteractionsActions Namespace Global public interface InputActions.IInteractionsActions Methods OnInteraction(CallbackContext) void OnInteraction(InputAction.CallbackContext context) Parameters context CallbackContext OnItemInteraction(CallbackContext) void OnItemInteraction(InputAction.CallbackContext context) Parameters context CallbackContext"
   },
   "api/Global.InputActions.IInventoryActions.html": {
     "href": "api/Global.InputActions.IInventoryActions.html",
@@ -102,7 +92,7 @@
   "api/Global.InputActions.InteractionsActions.html": {
     "href": "api/Global.InputActions.InteractionsActions.html",
     "title": "Struct InputActions.InteractionsActions | Czasoport Documentation",
-    "keywords": "Struct InputActions.InteractionsActions Namespace Global public struct InputActions.InteractionsActions Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors InteractionsActions(InputActions) public InteractionsActions(InputActions wrapper) Parameters wrapper InputActions Properties Interaction public InputAction Interaction { get; } Property Value InputAction ItemInteraction public InputAction ItemInteraction { get; } Property Value InputAction LongInteraction public InputAction LongInteraction { get; } Property Value InputAction LongItemInteraction public InputAction LongItemInteraction { get; } Property Value InputAction enabled public bool enabled { get; } Property Value bool Methods Disable() public void Disable() Enable() public void Enable() Get() public InputActionMap Get() Returns InputActionMap SetCallbacks(IInteractionsActions) public void SetCallbacks(InputActions.IInteractionsActions instance) Parameters instance InputActions.IInteractionsActions Operators implicit operator InputActionMap(InteractionsActions) public static implicit operator InputActionMap(InputActions.InteractionsActions set) Parameters set InputActions.InteractionsActions Returns InputActionMap"
+    "keywords": "Struct InputActions.InteractionsActions Namespace Global public struct InputActions.InteractionsActions Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors InteractionsActions(InputActions) public InteractionsActions(InputActions wrapper) Parameters wrapper InputActions Properties Interaction public InputAction Interaction { get; } Property Value InputAction ItemInteraction public InputAction ItemInteraction { get; } Property Value InputAction enabled public bool enabled { get; } Property Value bool Methods Disable() public void Disable() Enable() public void Enable() Get() public InputActionMap Get() Returns InputActionMap SetCallbacks(IInteractionsActions) public void SetCallbacks(InputActions.IInteractionsActions instance) Parameters instance InputActions.IInteractionsActions Operators implicit operator InputActionMap(InteractionsActions) public static implicit operator InputActionMap(InputActions.InteractionsActions set) Parameters set InputActions.InteractionsActions Returns InputActionMap"
   },
   "api/Global.InputActions.InventoryActions.html": {
     "href": "api/Global.InputActions.InventoryActions.html",
