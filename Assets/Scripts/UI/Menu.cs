@@ -23,7 +23,7 @@ namespace UI {
 		/// Action called when user press Play button
 		/// </summary>
 		void PlayAction() {
-			SceneManager.LoadSceneAsync(DeveloperSettings.Instance.appSettings.sceneToLoadName, LoadSceneMode.Additive);
+			SceneManager.LoadScene(DeveloperSettings.Instance.appSettings.sceneToLoadName, LoadSceneMode.Additive);
 			SceneManager.UnloadSceneAsync(gameObject.scene);
 		}
 	}
