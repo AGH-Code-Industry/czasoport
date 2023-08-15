@@ -14,5 +14,6 @@ namespace Items
         public string itemName;
         public string description;
         public int durability;
+        public float interactionDistance;
     }
 }
