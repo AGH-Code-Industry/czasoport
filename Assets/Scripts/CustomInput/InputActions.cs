@@ -490,7 +490,16 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""id"": ""cd0cc705-f3d7-4e40-b9ca-39aed3abc820"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Tap"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LongInteraction"",
+                    ""type"": ""Button"",
+                    ""id"": ""d6af5767-8d5c-498e-a3ad-4f188035148f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""CustomHold"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -499,7 +508,16 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""id"": ""4d7a8354-4b10-40f6-8c8a-000e914a019b"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Tap"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LongItemInteraction"",
+                    ""type"": ""Button"",
+                    ""id"": ""d3246bfa-964c-4c8e-a9a7-d2c148a6c2c6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""CustomHold"",
                     ""initialStateCheck"": false
                 }
             ],
@@ -569,6 +587,72 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""ItemInteraction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e1cc700-1cf0-4573-98f2-7ecde3f240f2"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LongInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""93c373fc-7549-4049-9ac4-cea7aa455a72"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LongInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7fdc9889-9f10-4df2-af9f-790166a247fa"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LongInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c0ec4eae-0496-41b3-85bc-908089996f2b"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LongItemInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c4907b09-ed4b-4cc5-bcb1-266959bcc867"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LongItemInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c7e7a06e-2b30-45d6-b7dd-b13bac2d1700"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LongItemInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -599,7 +683,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         // Interactions
         m_Interactions = asset.FindActionMap("Interactions", throwIfNotFound: true);
         m_Interactions_Interaction = m_Interactions.FindAction("Interaction", throwIfNotFound: true);
+        m_Interactions_LongInteraction = m_Interactions.FindAction("LongInteraction", throwIfNotFound: true);
         m_Interactions_ItemInteraction = m_Interactions.FindAction("ItemInteraction", throwIfNotFound: true);
+        m_Interactions_LongItemInteraction = m_Interactions.FindAction("LongItemInteraction", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -864,13 +950,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Interactions;
     private IInteractionsActions m_InteractionsActionsCallbackInterface;
     private readonly InputAction m_Interactions_Interaction;
+    private readonly InputAction m_Interactions_LongInteraction;
     private readonly InputAction m_Interactions_ItemInteraction;
+    private readonly InputAction m_Interactions_LongItemInteraction;
     public struct InteractionsActions
     {
         private @InputActions m_Wrapper;
         public InteractionsActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Interaction => m_Wrapper.m_Interactions_Interaction;
+        public InputAction @LongInteraction => m_Wrapper.m_Interactions_LongInteraction;
         public InputAction @ItemInteraction => m_Wrapper.m_Interactions_ItemInteraction;
+        public InputAction @LongItemInteraction => m_Wrapper.m_Interactions_LongItemInteraction;
         public InputActionMap Get() { return m_Wrapper.m_Interactions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -883,9 +973,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Interaction.started -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnInteraction;
                 @Interaction.performed -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnInteraction;
                 @Interaction.canceled -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnInteraction;
+                @LongInteraction.started -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnLongInteraction;
+                @LongInteraction.performed -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnLongInteraction;
+                @LongInteraction.canceled -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnLongInteraction;
                 @ItemInteraction.started -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnItemInteraction;
                 @ItemInteraction.performed -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnItemInteraction;
                 @ItemInteraction.canceled -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnItemInteraction;
+                @LongItemInteraction.started -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnLongItemInteraction;
+                @LongItemInteraction.performed -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnLongItemInteraction;
+                @LongItemInteraction.canceled -= m_Wrapper.m_InteractionsActionsCallbackInterface.OnLongItemInteraction;
             }
             m_Wrapper.m_InteractionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -893,9 +989,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Interaction.started += instance.OnInteraction;
                 @Interaction.performed += instance.OnInteraction;
                 @Interaction.canceled += instance.OnInteraction;
+                @LongInteraction.started += instance.OnLongInteraction;
+                @LongInteraction.performed += instance.OnLongInteraction;
+                @LongInteraction.canceled += instance.OnLongInteraction;
                 @ItemInteraction.started += instance.OnItemInteraction;
                 @ItemInteraction.performed += instance.OnItemInteraction;
                 @ItemInteraction.canceled += instance.OnItemInteraction;
+                @LongItemInteraction.started += instance.OnLongItemInteraction;
+                @LongItemInteraction.performed += instance.OnLongItemInteraction;
+                @LongItemInteraction.canceled += instance.OnLongItemInteraction;
             }
         }
     }
@@ -928,6 +1030,8 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     public interface IInteractionsActions
     {
         void OnInteraction(InputAction.CallbackContext context);
+        void OnLongInteraction(InputAction.CallbackContext context);
         void OnItemInteraction(InputAction.CallbackContext context);
+        void OnLongItemInteraction(InputAction.CallbackContext context);
     }
 }
