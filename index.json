@@ -192,37 +192,22 @@
   "api/TimeChange.CheckCollider.html": {
     "href": "api/TimeChange.CheckCollider.html",
     "title": "Class CheckCollider | Czasoport Documentation",
-    "keywords": "Class CheckCollider Namespace TimeChange public class CheckCollider : MonoBehaviour Inheritance object CheckCollider Methods IsNotTouching() public bool IsNotTouching() Returns bool"
-  },
-  "api/TimeChange.Test.CameraTest.html": {
-    "href": "api/TimeChange.Test.CameraTest.html",
-    "title": "Class CameraTest | Czasoport Documentation",
-    "keywords": "Class CameraTest Namespace TimeChange.Test public class CameraTest : MonoBehaviour Inheritance object CameraTest"
-  },
-  "api/TimeChange.Test.PlayerTTCtest.html": {
-    "href": "api/TimeChange.Test.PlayerTTCtest.html",
-    "title": "Class PlayerTTCtest | Czasoport Documentation",
-    "keywords": "Class PlayerTTCtest Namespace TimeChange.Test public class PlayerTTCtest : MonoBehaviour Inheritance object PlayerTTCtest"
-  },
-  "api/TimeChange.Test.html": {
-    "href": "api/TimeChange.Test.html",
-    "title": "Namespace TimeChange.Test | Czasoport Documentation",
-    "keywords": "Namespace TimeChange.Test Classes CameraTest PlayerTTCtest"
+    "keywords": "Class CheckCollider Namespace TimeChange Provides checking collision for time change mechanic. public class CheckCollider : MonoBehaviour Inheritance object CheckCollider Methods IsNotTouching() Checking if Player can change time. CheckCollider's collider isn't touching any not trigger collider. public bool IsNotTouching() Returns bool Whether Player can change time or not"
   },
   "api/TimeChange.TimeChanger.html": {
     "href": "api/TimeChange.TimeChanger.html",
     "title": "Class TimeChanger | Czasoport Documentation",
-    "keywords": "Class TimeChanger Namespace TimeChange public class TimeChanger : MonoBehaviour Inheritance object TimeChanger Fields actualTime public TimeLine actualTime Field Value TimeLine"
+    "keywords": "Class TimeChanger Namespace TimeChange Manages time changing mechanic. public class TimeChanger : MonoBehaviour Inheritance object TimeChanger Fields actualTime Timeline the player is currently on. public TimeLine actualTime Field Value TimeLine"
   },
   "api/TimeChange.TimeLine.html": {
     "href": "api/TimeChange.TimeLine.html",
     "title": "Enum TimeLine | Czasoport Documentation",
-    "keywords": "Enum TimeLine Namespace TimeChange public enum TimeLine Fields Future = 2 Past = 0 Present = 1"
+    "keywords": "Enum TimeLine Namespace TimeChange Defines available timelines. public enum TimeLine Fields Future = 2 Past = 0 Present = 1"
   },
   "api/TimeChange.html": {
     "href": "api/TimeChange.html",
     "title": "Namespace TimeChange | Czasoport Documentation",
-    "keywords": "Namespace TimeChange Classes CheckCollider TimeChanger Enums TimeLine"
+    "keywords": "Namespace TimeChange Classes CheckCollider Provides checking collision for time change mechanic. TimeChanger Manages time changing mechanic. Enums TimeLine Defines available timelines."
   },
   "api/UI.Menu.html": {
     "href": "api/UI.Menu.html",
