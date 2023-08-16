@@ -2,19 +2,28 @@ using System;
 using UnityEngine;
 using Interactions.Interfaces;
 
-public class Item : MonoBehaviour, IInteractableHand, ILongInteractableHand
+namespace Items
 {
-    //[SerializeField] private ItemSO _itemSO;
+    public class Item : MonoBehaviour, IInteractableHand, ILongInteractableHand
+    {
+        [SerializeField] private ItemSO _itemSO;
+        private SpriteRenderer _spriteRenderer;
+        private void Awake()
+        {
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer.sprite = _itemSO.image;
+        }
 
-    public void ToogleHighlight() {
-        throw new NotImplementedException();
-    }
+        public void ToogleHighlight() {
+            throw new NotImplementedException();
+        }
     
-    public void InteractionHand() {
-        throw new NotImplementedException();
-    }
+        public void InteractionHand() {
+            throw new NotImplementedException();
+        }
     
-    public void LongInteractionHand() {
-        throw new NotImplementedException();
+        public void LongInteractionHand() {
+            throw new NotImplementedException();
+        }
     }
 }
