@@ -1,8 +1,10 @@
 using UnityEngine;
 using CoinPackage.Debugging;
 
-namespace TimeChange
-{
+namespace TimeChange {
+    /// <summary>
+    /// Provides checking collision for time change mechanic.
+    /// </summary>
     public class CheckCollider : MonoBehaviour
     {
         private BoxCollider2D _box;
@@ -13,6 +15,10 @@ namespace TimeChange
             _box.isTrigger = true;
         }
 
+        /// <summary>
+        /// Checking if Player can change time. CheckCollider's collider isn't touching any not trigger collider.
+        /// </summary>
+        /// <returns>Whether Player can change time or not</returns>
         public bool IsNotTouching() {
             return !_isTouching;
         }
