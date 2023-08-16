@@ -10,7 +10,7 @@ namespace Inventory.UI {
     {
         [SerializeField] private GameObject slotPrefab;
         [SerializeField] private int slotCount;
-        [SerializeField] private float slotMargintX;
+        [SerializeField] private float slotMarginX;
         [SerializeField] private float slotMarginY;
         
         private List<Slot> _slots;
@@ -24,7 +24,7 @@ namespace Inventory.UI {
             float slotRealMarginY = (slotPrefab.GetComponent<RectTransform>().rect.height / 2) + slotMarginY;
             for (int i = 0; i < slotCount; i++) {
                 slot = Instantiate(slotPrefab, transform);
-                slot.transform.position = new Vector3((slotW * (1 + 2*i)) + (slotMargintX * (i+1)), slotRealMarginY, 0);
+                slot.transform.position = new Vector3((slotW * (1 + 2*i)) + (slotMarginX * (i+1)), slotRealMarginY, 0);
                 _slots.Add(slot.GetComponent<Slot>());
                 _slots[i].RemoveItem();
                 _slots[i].Disactive();
