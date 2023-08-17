@@ -1,21 +1,41 @@
 using System;
 using UnityEngine;
 using Interactions.Interfaces;
+using CustomInput;
 
 namespace Items
 {
     public class Item : MonoBehaviour, IInteractableHand, ILongInteractableHand
     {
-        [SerializeField] private ItemSO _itemSO;
+        [SerializeField] private ItemSO itemSO;
+        [SerializeField] private Color outlineColor;
+        [SerializeField] private float border = 1f;
         private SpriteRenderer _spriteRenderer;
+        private int _toogleOutline = 0;
+        
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
-            _spriteRenderer.sprite = _itemSO.image;
+            _spriteRenderer.material.SetTexture("_MainTex",itemSO.texture);
+            _spriteRenderer.material.SetColor("_color",new Color(0,0,0));
+            _spriteRenderer.material.SetFloat("_thickness",border);
+            _spriteRenderer.sprite = itemSO.image;
         }
 
-        public void ToogleHighlight() {
-            throw new NotImplementedException();
+        private void OnEnable()
+        {
+            CInput.InputActions.Teleport.TeleportBack.performed += ctx => {ToogleHighlight();};
+        }
+
+        private void OnDisable() {
+            CInput.InputActions.Teleport.TeleportBack.performed -= ctx => {ToogleHighlight();};
+        }
+        
+        public void ToogleHighlight()
+        {
+            _toogleOutline = (_toogleOutline + 1) % 2;
+            if (_toogleOutline == 0) _spriteRenderer.material.SetColor("_color",new Color(0,0,0));
+            else _spriteRenderer.material.SetColor("_color",outlineColor);
         }
     
         public void InteractionHand() {
