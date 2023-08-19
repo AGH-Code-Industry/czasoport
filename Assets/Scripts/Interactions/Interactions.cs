@@ -18,10 +18,6 @@ namespace Interactions {
             _interactableObjects = new List<GameObject>();
         }
 
-        private void Update() {
-            throw new NotImplementedException();
-        }
-
         private void OnEnable() {
             CInput.InputActions.Interactions.Interaction.performed += OnInteractionPerformed;
             CInput.InputActions.Interactions.LongInteraction.performed += OnLongInteractionPerformed;
