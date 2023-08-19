@@ -47,11 +47,19 @@ namespace Items
                 _spriteRenderer.material.SetFloat("_alpha",1f);
             }
         }
-    
+
+        public ItemSO GetItemSO() {
+            return itemSO;
+        }
+
+        public void GetItem() {
+            PlayerInteract.Instance.SetHoldingItem(this);
+        }
+
         public void InteractionHand() {
             throw new NotImplementedException();
         }
-    
+
         public void LongInteractionHand() {
             throw new NotImplementedException();
         }

@@ -1,8 +1,9 @@
-﻿
+﻿using Items;
+
 namespace Interactions.Interfaces
 {
     public interface IInteractableItem
     {
-        public void InteractionItem();
+        public void InteractionItem(Item item);
     }
 }
