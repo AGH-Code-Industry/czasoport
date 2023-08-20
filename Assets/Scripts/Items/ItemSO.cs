@@ -11,7 +11,6 @@ namespace Items
     {
         public int id;
         public Sprite image;
-        public Texture2D texture;
         public string itemName;
         public string description;
         public int durability;

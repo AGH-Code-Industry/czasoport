@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Outline
-  m_Shader: {fileID: -6465566751694194690, guid: 95d38b859678abc46bac34f23d9b4ef2, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: b238a8a59484533418af52802fe873c7, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -20,12 +20,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Hole:
+        m_Texture: {fileID: 2800000, guid: 5b56cb1a6bd97f348b3a3b6f875aafd6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _texture:
-        m_Texture: {fileID: 2800000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
+    - _Outline:
+        m_Texture: {fileID: 2800000, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -43,8 +47,6 @@ Material:
     m_Ints: []
     m_Floats:
     - _alpha: 0
-    - _border: 1
-    - _thickness: 1
     m_Colors:
-    - _color: {r: 0, g: 0, b: 0, a: 1}
+    - _color: {r: 0.7490196, g: 0, b: 0.7286215, a: 1}
   m_BuildTextureStacks: []
