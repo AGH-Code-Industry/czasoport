@@ -20,8 +20,8 @@ namespace UI {
 		/// Action called when user press Play button
 		/// </summary>
 		void PlayAction() {
-			SceneManager.LoadScene(DeveloperSettings.Instance.appSettings.sceneToLoadName, LoadSceneMode.Additive);
-			SceneManager.UnloadSceneAsync(gameObject.scene);
+			SceneManager.LoadScene(DeveloperSettings.Instance.appSettings.sceneToLoadName, LoadSceneMode.Single);
+			// SceneManager.UnloadSceneAsync(gameObject.scene);
 		}
 	}
 }
