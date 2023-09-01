@@ -1,4 +1,9 @@
 {
+  "api/Application.Loggers.html": {
+    "href": "api/Application.Loggers.html",
+    "title": "Class Loggers | Czasoport Documentation",
+    "keywords": "Class Loggers Namespace Application public static class Loggers Inheritance object Loggers Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields LoggersList public static Dictionary<string, CLogger> LoggersList Field Value Dictionary<string, CLogger>"
+  },
   "api/Application.StartupManager.html": {
     "href": "api/Application.StartupManager.html",
     "title": "Class StartupManager | Czasoport Documentation",
@@ -7,7 +12,7 @@
   "api/Application.html": {
     "href": "api/Application.html",
     "title": "Namespace Application | Czasoport Documentation",
-    "keywords": "Namespace Application Classes StartupManager"
+    "keywords": "Namespace Application Classes Loggers StartupManager"
   },
   "api/CustomInput.CInput.html": {
     "href": "api/CustomInput.CInput.html",
@@ -139,30 +144,70 @@
     "title": "Namespace | Czasoport Documentation",
     "keywords": "Namespace Classes InputActions SettingsTests Structs InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions"
   },
-  "api/LevelsLoader.AvailableLevels.html": {
-    "href": "api/LevelsLoader.AvailableLevels.html",
-    "title": "Enum AvailableLevels | Czasoport Documentation",
-    "keywords": "Enum AvailableLevels Namespace LevelsLoader public enum AvailableLevels Fields Level1 = 0 Level2 = 1 Level3 = 2 Level4 = 3 Level5 = 4"
-  },
-  "api/LevelsLoader.LevelInfoSO.html": {
-    "href": "api/LevelsLoader.LevelInfoSO.html",
+  "api/LevelTimeChange.LevelsLoader.LevelInfoSO.html": {
+    "href": "api/LevelTimeChange.LevelsLoader.LevelInfoSO.html",
     "title": "Class LevelInfoSO | Czasoport Documentation",
-    "keywords": "Class LevelInfoSO Namespace LevelsLoader public class LevelInfoSO : ScriptableObject Inheritance object LevelInfoSO Fields level public AvailableLevels level Field Value AvailableLevels neighbourLevels public AvailableLevels[] neighbourLevels Field Value AvailableLevels[]"
+    "keywords": "Class LevelInfoSO Namespace LevelTimeChange.LevelsLoader Stores information about one 'platform' in the game. public class LevelInfoSO : ScriptableObject Inheritance object LevelInfoSO Fields neighbourLevels public LevelInfoSO[] neighbourLevels Field Value LevelInfoSO[] sceneName public string sceneName Field Value string"
   },
-  "api/LevelsLoader.LevelsManager.html": {
-    "href": "api/LevelsLoader.LevelsManager.html",
+  "api/LevelTimeChange.LevelsLoader.LevelManager.html": {
+    "href": "api/LevelTimeChange.LevelsLoader.LevelManager.html",
+    "title": "Class LevelManager | Czasoport Documentation",
+    "keywords": "Class LevelManager Namespace LevelTimeChange.LevelsLoader LevelManager is responsible for managing one 'level platform'. It activates and deactivates level content, talks with LevelsManager and LevelPortals to perform Discovery process. public class LevelManager : MonoBehaviour Inheritance object LevelManager Methods ActivateLevel() It will set all level content to be active. Use it only when this level is going to be one played on by the player. public void ActivateLevel() DeactivateLevel() It will set all level content to be inactive and report to LevelsManager that this scene is ready for Discovery process. It is automatically called when scene is loaded. public void DeactivateLevel() MakeDiscovery(LevelInfoSO) Start discovery process with specified level. It tells portals on this scene to try to match with portals on another one. public void MakeDiscovery(LevelInfoSO levelToDiscover) Parameters levelToDiscover LevelInfoSO Level ready for discovery process. ReturnMatchingPortal(LevelInfoSO, LevelPortal) Used in discovery process. For specified portal and source level, return matching portal on this scene. public LevelPortal ReturnMatchingPortal(LevelInfoSO sourceLevel, LevelPortal sourcePortal) Parameters sourceLevel LevelInfoSO Level that asks for discovery. sourcePortal LevelPortal Specific portal that asks for discovery. Returns LevelPortal Matching portal. Exceptions Exception Exception is thrown when there is no matching portal."
+  },
+  "api/LevelTimeChange.LevelsLoader.LevelPortal.html": {
+    "href": "api/LevelTimeChange.LevelsLoader.LevelPortal.html",
+    "title": "Class LevelPortal | Czasoport Documentation",
+    "keywords": "Class LevelPortal Namespace LevelTimeChange.LevelsLoader This component is used to define teleport to another platform. Based on information provided to it, it tries to discover matching teleport on another scene. When successful, it is able to teleport player to this scene. public class LevelPortal : MonoBehaviour Inheritance object LevelPortal Fields destinedLevel public LevelInfoSO destinedLevel Field Value LevelInfoSO teleportTimeline public TimeLine teleportTimeline Field Value TimeLine Methods GetTeleportPoint() Returns point in the world this teleports point to. public Vector3 GetTeleportPoint() Returns Vector3 Point in game. IsMatch(LevelInfoSO, LevelPortal) Check if provided portal matches this portal. public bool IsMatch(LevelInfoSO sourceLevel, LevelPortal sourcePortal) Parameters sourceLevel LevelInfoSO Source level. sourcePortal LevelPortal Potential level match. Returns bool True if portal is a match, False otherwise. MakeDiscovery(LevelInfoSO) Start discovery process with destined level. Invoking this function on it's own will not ensure that destined level is loaded and can take part in discovery process. public void MakeDiscovery(LevelInfoSO currentLevel) Parameters currentLevel LevelInfoSO Source level of discovery."
+  },
+  "api/LevelTimeChange.LevelsLoader.LevelsManager.html": {
+    "href": "api/LevelTimeChange.LevelsLoader.LevelsManager.html",
     "title": "Class LevelsManager | Czasoport Documentation",
-    "keywords": "Class LevelsManager Namespace LevelsLoader public class LevelsManager : MonoBehaviour Inheritance object LevelsManager Properties Instance public static LevelsManager Instance { get; } Property Value LevelsManager Methods ChangeLevel(LevelInfoSO) public void ChangeLevel(LevelInfoSO levelInfo) Parameters levelInfo LevelInfoSO"
+    "keywords": "Class LevelsManager Namespace LevelTimeChange.LevelsLoader Manager of levels loading and switching system. Central point of communication between rest of included components. It is a singleton, attached to object present through the game. public class LevelsManager : MonoBehaviour Inheritance object LevelsManager Fields LoadedLevels All currently loaded levels. public Dictionary<LevelInfoSO, LevelManager> LoadedLevels Field Value Dictionary<LevelInfoSO, LevelManager> player public Transform player Field Value Transform Properties Instance Singleton instance of this class. public static LevelsManager Instance { get; } Property Value LevelsManager Methods ChangeLevel(LevelInfoSO, LevelPortal) Change active level. public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) Parameters destinedLevelInfo LevelInfoSO Level to be switched to. destinationPortal LevelPortal Portal to be switched to. ReportForDiscovery(LevelInfoSO) This method is used by the LevelManager of some scene to let the system know that the scene has been loaded and is ready for discovery process from current scene. public void ReportForDiscovery(LevelInfoSO level) Parameters level LevelInfoSO"
   },
-  "api/LevelsLoader.TeleportToAnotherLevel.html": {
-    "href": "api/LevelsLoader.TeleportToAnotherLevel.html",
-    "title": "Class TeleportToAnotherLevel | Czasoport Documentation",
-    "keywords": "Class TeleportToAnotherLevel Namespace LevelsLoader public class TeleportToAnotherLevel : MonoBehaviour Inheritance object TeleportToAnotherLevel"
+  "api/LevelTimeChange.LevelsLoader.html": {
+    "href": "api/LevelTimeChange.LevelsLoader.html",
+    "title": "Namespace LevelTimeChange.LevelsLoader | Czasoport Documentation",
+    "keywords": "Namespace LevelTimeChange.LevelsLoader Classes LevelInfoSO Stores information about one 'platform' in the game. LevelManager LevelManager is responsible for managing one 'level platform'. It activates and deactivates level content, talks with LevelsManager and LevelPortals to perform Discovery process. LevelPortal This component is used to define teleport to another platform. Based on information provided to it, it tries to discover matching teleport on another scene. When successful, it is able to teleport player to this scene. LevelsManager Manager of levels loading and switching system. Central point of communication between rest of included components. It is a singleton, attached to object present through the game."
   },
-  "api/LevelsLoader.html": {
-    "href": "api/LevelsLoader.html",
-    "title": "Namespace LevelsLoader | Czasoport Documentation",
-    "keywords": "Namespace LevelsLoader Classes LevelInfoSO LevelsManager TeleportToAnotherLevel Enums AvailableLevels"
+  "api/LevelTimeChange.TimeChange.CheckCollider.html": {
+    "href": "api/LevelTimeChange.TimeChange.CheckCollider.html",
+    "title": "Class CheckCollider | Czasoport Documentation",
+    "keywords": "Class CheckCollider Namespace LevelTimeChange.TimeChange Provides checking collision for time change mechanic. public class CheckCollider : MonoBehaviour Inheritance object CheckCollider Methods IsNotTouching() Checking if Player can change time. CheckCollider's collider isn't touching any not trigger collider. public bool IsNotTouching() Returns bool Whether Player can change time or not"
+  },
+  "api/LevelTimeChange.TimeChange.Tests.CameraTest.html": {
+    "href": "api/LevelTimeChange.TimeChange.Tests.CameraTest.html",
+    "title": "Class CameraTest | Czasoport Documentation",
+    "keywords": "Class CameraTest Namespace LevelTimeChange.TimeChange.Tests public class CameraTest : MonoBehaviour Inheritance object CameraTest"
+  },
+  "api/LevelTimeChange.TimeChange.Tests.PlayerTTCtest.html": {
+    "href": "api/LevelTimeChange.TimeChange.Tests.PlayerTTCtest.html",
+    "title": "Class PlayerTTCtest | Czasoport Documentation",
+    "keywords": "Class PlayerTTCtest Namespace LevelTimeChange.TimeChange.Tests public class PlayerTTCtest : MonoBehaviour Inheritance object PlayerTTCtest"
+  },
+  "api/LevelTimeChange.TimeChange.Tests.html": {
+    "href": "api/LevelTimeChange.TimeChange.Tests.html",
+    "title": "Namespace LevelTimeChange.TimeChange.Tests | Czasoport Documentation",
+    "keywords": "Namespace LevelTimeChange.TimeChange.Tests Classes CameraTest PlayerTTCtest"
+  },
+  "api/LevelTimeChange.TimeChange.TimeChanger.html": {
+    "href": "api/LevelTimeChange.TimeChange.TimeChanger.html",
+    "title": "Class TimeChanger | Czasoport Documentation",
+    "keywords": "Class TimeChanger Namespace LevelTimeChange.TimeChange Manages time changing mechanic. public class TimeChanger : MonoBehaviour Inheritance object TimeChanger Fields actualTime Timeline the player is currently on. public TimeLine actualTime Field Value TimeLine"
+  },
+  "api/LevelTimeChange.TimeChange.html": {
+    "href": "api/LevelTimeChange.TimeChange.html",
+    "title": "Namespace LevelTimeChange.TimeChange | Czasoport Documentation",
+    "keywords": "Namespace LevelTimeChange.TimeChange Classes CheckCollider Provides checking collision for time change mechanic. TimeChanger Manages time changing mechanic."
+  },
+  "api/LevelTimeChange.TimeLine.html": {
+    "href": "api/LevelTimeChange.TimeLine.html",
+    "title": "Enum TimeLine | Czasoport Documentation",
+    "keywords": "Enum TimeLine Namespace LevelTimeChange public enum TimeLine Fields Future = 2 Past = 0 Present = 1"
+  },
+  "api/LevelTimeChange.html": {
+    "href": "api/LevelTimeChange.html",
+    "title": "Namespace LevelTimeChange | Czasoport Documentation",
+    "keywords": "Namespace LevelTimeChange Enums TimeLine"
   },
   "api/Settings.Developer.ApplicationSettingsSO.html": {
     "href": "api/Settings.Developer.ApplicationSettingsSO.html",
@@ -188,26 +233,6 @@
     "href": "api/Settings.html",
     "title": "Namespace Settings | Czasoport Documentation",
     "keywords": "Namespace Settings Classes DeveloperSettings Manages different setting sets used for internal settings."
-  },
-  "api/TimeChange.CheckCollider.html": {
-    "href": "api/TimeChange.CheckCollider.html",
-    "title": "Class CheckCollider | Czasoport Documentation",
-    "keywords": "Class CheckCollider Namespace TimeChange Provides checking collision for time change mechanic. public class CheckCollider : MonoBehaviour Inheritance object CheckCollider Methods IsNotTouching() Checking if Player can change time. CheckCollider's collider isn't touching any not trigger collider. public bool IsNotTouching() Returns bool Whether Player can change time or not"
-  },
-  "api/TimeChange.TimeChanger.html": {
-    "href": "api/TimeChange.TimeChanger.html",
-    "title": "Class TimeChanger | Czasoport Documentation",
-    "keywords": "Class TimeChanger Namespace TimeChange Manages time changing mechanic. public class TimeChanger : MonoBehaviour Inheritance object TimeChanger Fields actualTime Timeline the player is currently on. public TimeLine actualTime Field Value TimeLine"
-  },
-  "api/TimeChange.TimeLine.html": {
-    "href": "api/TimeChange.TimeLine.html",
-    "title": "Enum TimeLine | Czasoport Documentation",
-    "keywords": "Enum TimeLine Namespace TimeChange Defines available timelines. public enum TimeLine Fields Future = 2 Past = 0 Present = 1"
-  },
-  "api/TimeChange.html": {
-    "href": "api/TimeChange.html",
-    "title": "Namespace TimeChange | Czasoport Documentation",
-    "keywords": "Namespace TimeChange Classes CheckCollider Provides checking collision for time change mechanic. TimeChanger Manages time changing mechanic. Enums TimeLine Defines available timelines."
   },
   "api/UI.Menu.html": {
     "href": "api/UI.Menu.html",

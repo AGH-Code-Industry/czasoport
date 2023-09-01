@@ -23,6 +23,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Application.Loggers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Application.Loggers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Application.StartupManager.yml",
       "output": {
         ".html": {
@@ -303,50 +313,130 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/LevelsLoader.AvailableLevels.yml",
+      "source_relative_path": "api/LevelTimeChange.LevelsLoader.LevelInfoSO.yml",
       "output": {
         ".html": {
-          "relative_path": "api/LevelsLoader.AvailableLevels.html"
+          "relative_path": "api/LevelTimeChange.LevelsLoader.LevelInfoSO.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/LevelsLoader.LevelInfoSO.yml",
+      "source_relative_path": "api/LevelTimeChange.LevelsLoader.LevelManager.yml",
       "output": {
         ".html": {
-          "relative_path": "api/LevelsLoader.LevelInfoSO.html"
+          "relative_path": "api/LevelTimeChange.LevelsLoader.LevelManager.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/LevelsLoader.LevelsManager.yml",
+      "source_relative_path": "api/LevelTimeChange.LevelsLoader.LevelPortal.yml",
       "output": {
         ".html": {
-          "relative_path": "api/LevelsLoader.LevelsManager.html"
+          "relative_path": "api/LevelTimeChange.LevelsLoader.LevelPortal.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/LevelsLoader.TeleportToAnotherLevel.yml",
+      "source_relative_path": "api/LevelTimeChange.LevelsLoader.LevelsManager.yml",
       "output": {
         ".html": {
-          "relative_path": "api/LevelsLoader.TeleportToAnotherLevel.html"
+          "relative_path": "api/LevelTimeChange.LevelsLoader.LevelsManager.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/LevelsLoader.yml",
+      "source_relative_path": "api/LevelTimeChange.LevelsLoader.yml",
       "output": {
         ".html": {
-          "relative_path": "api/LevelsLoader.html"
+          "relative_path": "api/LevelTimeChange.LevelsLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LevelTimeChange.TimeChange.CheckCollider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LevelTimeChange.TimeChange.CheckCollider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LevelTimeChange.TimeChange.Tests.CameraTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LevelTimeChange.TimeChange.Tests.CameraTest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LevelTimeChange.TimeChange.Tests.PlayerTTCtest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LevelTimeChange.TimeChange.Tests.PlayerTTCtest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LevelTimeChange.TimeChange.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LevelTimeChange.TimeChange.Tests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LevelTimeChange.TimeChange.TimeChanger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LevelTimeChange.TimeChange.TimeChanger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LevelTimeChange.TimeChange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LevelTimeChange.TimeChange.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LevelTimeChange.TimeLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LevelTimeChange.TimeLine.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LevelTimeChange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LevelTimeChange.html"
         }
       },
       "version": ""
@@ -397,46 +487,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Settings.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TimeChange.CheckCollider.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TimeChange.CheckCollider.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TimeChange.TimeChanger.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TimeChange.TimeChanger.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TimeChange.TimeLine.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TimeChange.TimeLine.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TimeChange.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TimeChange.html"
         }
       },
       "version": ""
