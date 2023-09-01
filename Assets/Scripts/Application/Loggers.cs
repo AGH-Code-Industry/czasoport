@@ -8,12 +8,21 @@ namespace Application {
         static Loggers() {
             LoggersList = new Dictionary<string, CLogger>();
             
+            // Logger for platform (level) changing system
             LoggersList.Add(
                 "LEVEL_SYSTEM",
                 new CLogger("LEVEL_SYSTEM") {
-                    LogEnabled = true
+                    LogEnabled = false
                 }
                 );
+            
+            // Logger for Inventory system
+            LoggersList.Add(
+                "INVENTORY",
+                new CLogger("INVENTORY") {
+                    LogEnabled = true
+                }
+            );
         }
     }
 }

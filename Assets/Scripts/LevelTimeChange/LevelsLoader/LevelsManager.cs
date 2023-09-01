@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Application;
+using Application.GlobalExceptions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -36,6 +37,7 @@ namespace LevelTimeChange.LevelsLoader {
 		private void Awake() {
 			if (Instance != null) {
 				CDebug.LogError($"{this} tried to overwrite current singleton instance.", this);
+				throw new SingletonOverrideException($"{this} tried to overwrite current singleton instance.");
 			}
 			Instance = this;
 			
