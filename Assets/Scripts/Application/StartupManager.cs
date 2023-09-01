@@ -21,7 +21,6 @@ namespace Application {
         [Obsolete]
         private void LoadGlobalObjects() {
             StartCoroutine(LoadSceneAsynchronously("GlobalData", LoadSceneMode.Additive));
-            // StartCoroutine(LoadSceneAsynchronously("Main", LoadSceneMode.Additive));
         }
 
         [Obsolete]
