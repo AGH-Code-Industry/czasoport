@@ -1,0 +1,17 @@
+name: EditorConfig Checker
+on: [pull_request]
+jobs:
+  editorconfig:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+          
+      - name: Run dotnet format
+        run: dotnet format ./czasoport.sln
+        with:
+          only-changed-files: "true"
