@@ -1,6 +1,6 @@
 # Game Design Document
 
-### [<-- ReadMe](/README.md)
+### [<-- ReadMe](../GDD/README.md)
 
 ---
 
