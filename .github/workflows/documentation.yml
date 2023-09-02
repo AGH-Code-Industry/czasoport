@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - hotfix/fixing-documentation
 
 jobs:
   # Build the documentation
