@@ -27,8 +27,7 @@
         "content": [
             {
                 "files": [
-                    "toc.yml",
-                    "index.md"
+                    "toc.yml"
                 ]
             },
             {
@@ -46,6 +45,14 @@
                     "**/*.md"
                 ],
                 "dest": "manual"
+            },
+            {
+                "src": "home",
+                "files": [
+                    "toc.yml",
+                    "*.md"
+                ],
+                "dest": "home"
             },
             {
                 "src": "GDD",
