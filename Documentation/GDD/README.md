@@ -21,10 +21,10 @@ Bezimienny kandydat na stażystę `Komisji Czasoprzestrzennej`. W przeciwieństw
 
 ## Grafiki koncepcyjne
 
-![view_example1](./GDD/assets/view_example.jpg)
-![view_example2](./GDD/assets/view_example2.png)
-![view_example2](./GDD/assets/deathsdoor.jpg)
-![view_example2](./GDD/assets/tunic.png)
+![view_example1](./assets/view_example.jpg)
+![view_example2](./assets/view_example2.png)
+![view_example2](./assets/deathsdoor.jpg)
+![view_example2](./assets/tunic.png)
 
 ---
 
@@ -58,6 +58,6 @@ Rozgrywka w kilku przestrzeniach czasowych, pomiędzy którymi gracz może przem
 
 ---
 
-# [--> Pełna Dokumentacja <--](/GDD/GDD.md)
+# [--> Pełna Dokumentacja <--](../GDD/GDD.md)
 
 

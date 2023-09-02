@@ -1,5 +1,5 @@
 # Fabuła
-### [<-- GDD](/GDD/GDD.md)
+### [<-- GDD](../GDD.md)
 
 ---
 ---

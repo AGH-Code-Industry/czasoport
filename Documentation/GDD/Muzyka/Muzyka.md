@@ -1,5 +1,5 @@
 # Muzyka
-### [<-- GDD](/GDD/GDD.md)
+### [<-- GDD](../GDD.md)
 
 ---
 Do ustalenia.
