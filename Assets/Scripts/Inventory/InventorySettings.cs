@@ -4,5 +4,6 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "Settings/SystemsSettings/InventorySettings", fileName = "InventorySettings")]
 public class InventorySettings : ScriptableObject {
+    [Tooltip("How many slots is available in inventory.")]
     public int itemsCount = 6;
 }

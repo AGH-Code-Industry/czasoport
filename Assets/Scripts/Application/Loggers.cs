@@ -23,6 +23,14 @@ namespace Application {
                     LogEnabled = true
                 }
             );
+            
+            // 
+            LoggersList.Add(
+                "INTERACTIONS",
+                new CLogger("INTERACTIONS") {
+                    LogEnabled = true
+                }
+            );
         }
     }
 }
