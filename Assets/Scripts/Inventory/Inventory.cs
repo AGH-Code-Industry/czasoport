@@ -40,7 +40,7 @@ namespace Inventory {
             Instance = this;
 
             SelectedSlotChanged += slot =>
-                _logger.Log($"{"SelectedSlotChanged" % Colorize.Cyan} event fired, slot {slot % Colorize.Magenta}.");
+                _logger.Log($"Selected slot changed, new slot: {slot % Colorize.Magenta}.");
             ItemInserted += (slot, item) =>
                 _logger.Log($"Item {item % Colorize.Cyan} {"inserted" % Colorize.Green} into the {slot % Colorize.Magenta} slot.");
             ItemRemoved += (slot, item) => 

@@ -16,15 +16,19 @@ namespace Interactions {
 
         [SerializeField] private InteractionsSettings settings;
         
-        private HashSet<GameObject> _interactableObjects;
+        // Objects near the player that we can interact with
+        private List<GameObject> _interactableObjects;
+        // Object that will be the subject of the interaction if _focusedObject is not selected
         [CanBeNull] private GameObject _selectedObject = null;
+        // Object that will be the subject of the interaction if player used 'FocusChange' - specified object
+        // he want to be focused on
         [CanBeNull] private GameObject _focusedObject = null;
         private readonly CLogger _logger = Loggers.LoggersList["INTERACTIONS"];
 
         private float _lastInteractablesUpdate = 0;
 
         private void Awake() {
-            _interactableObjects = new HashSet<GameObject>();
+            _interactableObjects = new List<GameObject>();
         }
 
         private void OnEnable() {
@@ -48,6 +52,10 @@ namespace Interactions {
             UpdateSelectedInteractables();
         }
 
+        /// <summary>
+        /// Get all interactable objects around the player, update available interactables
+        /// and highlight available objects
+        /// </summary>
         private void UpdateInteractables() {
             if (Time.time - _lastInteractablesUpdate < settings.interactionCheckInterval) {
                 return;
@@ -59,16 +67,18 @@ namespace Interactions {
                 settings.defaultInteractionRadius,
                 new ContactFilter2D() {
                     layerMask = LayerMask.GetMask(settings.interactablesLayer),
-                    useLayerMask = true
+                    useLayerMask = true,
+                    useTriggers = true
                 },
                 result);
-            var interactables = new HashSet<GameObject>(result.Select(x => x.gameObject));
+            var oldInteractables = new HashSet<GameObject>(_interactableObjects);
+            var newInteractables = new HashSet<GameObject>(result.Select(x => x.gameObject));
             
-            _interactableObjects.ExceptWith(interactables);
-            foreach (var oldInteractable in _interactableObjects) {
+            oldInteractables.ExceptWith(newInteractables);
+            foreach (var oldInteractable in oldInteractables) {
                 oldInteractable.GetComponent<IHighlightable>()?.DisableHighlight();
             }
-            _interactableObjects = new HashSet<GameObject>(interactables);
+            _interactableObjects = new List<GameObject>(newInteractables);
             foreach (var interactableObject in _interactableObjects) {
                 interactableObject.GetComponent<IHighlightable>()?.EnableHighlight();
             }
@@ -79,6 +89,9 @@ namespace Interactions {
             }
         }
 
+        /// <summary>
+        /// Update selected object
+        /// </summary>
         private void UpdateSelectedInteractables() {
             if (_interactableObjects.Count == 0) {
                 _focusedObject = null;
@@ -88,13 +101,17 @@ namespace Interactions {
 
             if (_focusedObject is null) {
                 _selectedObject = GetNearestInteractable();
-                _selectedObject.GetComponent<IHighlightable>()?.EnableFocusedHighlight();
             }
             else {
                 _selectedObject = _focusedObject;
             }
+            _selectedObject.GetComponent<IHighlightable>()?.EnableFocusedHighlight();
         }
 
+        /// <summary>
+        /// Get nearest object that can be interacted with
+        /// </summary>
+        /// <returns>Interactable or null if no object was found</returns>
         [CanBeNull]
         private GameObject GetNearestInteractable() {
             GameObject? nearest = null;
@@ -110,7 +127,15 @@ namespace Interactions {
         }
 
         private void OnFocusChangePerformed(InputAction.CallbackContext ctx) {
-            
+            if (_focusedObject is null || _interactableObjects.Count < 2) {
+                _focusedObject = _selectedObject;
+                return;
+            }
+
+            var index = _interactableObjects.IndexOf(_selectedObject);
+            index = index >= _interactableObjects.Count - 1 ? 0 : index + 1;
+            _focusedObject = _interactableObjects[index];
+            UpdateSelectedInteractables();
         }
 
         private void OnInteractionPerformed(InputAction.CallbackContext ctx) {
