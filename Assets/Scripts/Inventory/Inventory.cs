@@ -23,7 +23,7 @@ namespace Inventory {
 
         [SerializeField] private InventorySettings settings;
         
-        private readonly CLogger _logger = Loggers.LoggersList["INVENTORY"];
+        private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INVENTORY];
         private Item[] _items;
         private int _itemsCount = 0;
         private int _selectedSlot = 0;

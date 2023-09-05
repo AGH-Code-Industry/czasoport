@@ -28,7 +28,7 @@ namespace LevelTimeChange.LevelsLoader {
 		[SerializeField] private LevelInfoSO startingLevel; // TODO: This must be dynamic based on level save
 
 		private LevelManager _currentLevelManager;
-		private readonly CLogger _logger = Loggers.LoggersList["LEVEL_SYSTEM"];
+		private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.LEVEL_SYSTEM];
 		private bool _isLoading = true;
 		
 		//TODO: Remove this temporary abomination

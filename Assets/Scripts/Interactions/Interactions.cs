@@ -23,7 +23,7 @@ namespace Interactions {
         // Object that will be the subject of the interaction if player used 'FocusChange' - specified object
         // he want to be focused on
         [CanBeNull] private GameObject _focusedObject = null;
-        private readonly CLogger _logger = Loggers.LoggersList["INTERACTIONS"];
+        private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INTERACTIONS];
 
         private float _lastInteractablesUpdate = 0;
 
