@@ -37,10 +37,6 @@ namespace Items
             return itemSO;
         }
 
-        public void GetItem() {
-            PlayerInteract.Instance.SetHoldingItem(this);
-        }
-
         public void InteractionHand() {
             throw new NotImplementedException();
         }

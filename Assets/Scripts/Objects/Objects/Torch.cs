@@ -1,15 +1,13 @@
 using CoinPackage.Debugging;
 using CustomInput;
 using Items;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Objects {
-    public class Torch : Object {
+namespace Objects.Objects {
+    public class Torch : InteractableObject {
 
-        [SerializeField] private Sprite TorchLighting;
-        [SerializeField] private Sprite TorchNotLighting;
+        [SerializeField] private Sprite torchLighting;
+        [SerializeField] private Sprite torchNotLighting;
 
         enum State {
             Lighting,
@@ -20,33 +18,10 @@ namespace Objects {
 
         private SpriteRenderer spriteRenderer;
 
-        //for test
-        private bool Interactable;
-
-        private void OnEnable() {
-            CInput.InputActions.Teleport.TeleportForward.performed += ToogleThisItem;
-        }
-
-        private void ToogleThisItem(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
-            Interactable = !Interactable;
-            if (Interactable) {
-                CDebug.Log("You interacting with torch");
-            }
-            else {
-                CDebug.Log("You dont interacting with torch");
-            }
-        }
-
         private void Awake() {
             state = State.Lighting;
             spriteRenderer = GetComponent<SpriteRenderer>();
             UpdateVisual();
-        }
-
-        public override void InteractionItem(Item item) {
-            if (item.GetItemSO().id == 9) {
-                ChangeStateToNotLighing();
-            }
         }
 
         private void ChangeStateToLighting() {
@@ -62,10 +37,10 @@ namespace Objects {
         private void UpdateVisual() {
             switch (state) {
                 case State.Lighting:
-                    spriteRenderer.sprite = TorchLighting;
+                    spriteRenderer.sprite = torchLighting;
                     break;
                 case State.NotLighting:
-                    spriteRenderer.sprite = TorchNotLighting;
+                    spriteRenderer.sprite = torchNotLighting;
                     break;
             }
         }

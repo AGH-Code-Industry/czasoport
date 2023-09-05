@@ -19,7 +19,7 @@ namespace LevelTimeChange.LevelsLoader {
         [SerializeField] private GameObject[] teleportsHolders;
 
         private List<LevelPortal> _teleports;
-        private CLogger _logger = Loggers.LoggersList["LEVEL_SYSTEM"];
+        private CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.LEVEL_SYSTEM];
 
         private void Awake() {
             _teleports = new List<LevelPortal>();

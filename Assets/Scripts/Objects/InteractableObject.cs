@@ -1,0 +1,26 @@
+using UnityEngine;
+using Interactions.Interfaces;
+using CoinPackage.Debugging;
+using Items;
+using Application;
+
+
+namespace Objects {
+    public abstract class InteractableObject : MonoBehaviour, IInteractableItem, IInteractableHand, ILongInteractableHand, ILongInteractableItem {
+
+        private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INTERACTABLE_OBJECTS];
+        
+        public virtual void InteractionItem(Item item) {
+            CDebug.LogError("Not implemented InteractionItem");
+        }
+        public virtual void InteractionHand() {
+            CDebug.LogError("Not implemented InteractionHand");
+        }
+        public virtual void LongInteractionHand() {
+            CDebug.LogError("Not implemented LongInteractionHand");
+        }
+        public virtual void LongInteractionItem(Item item) {
+            CDebug.LogError("Not implemented LongInteractionItem");
+        }
+    }
+}
