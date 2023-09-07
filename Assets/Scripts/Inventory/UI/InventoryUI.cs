@@ -46,12 +46,15 @@ namespace Inventory.UI {
         }
         
         /// <summary>
-        /// Change slot's item durability.
+        /// Change slot's image and durability.
         /// <param name="sender"></param>
         /// <param name="args"></param>
         /// </summary>
-        public void OnItemChangeDurability(object sender,ItemStateChangedEventArgs args) {
-            if (args.Item.GetItemSO().durability > 0) _slots[args.Slot].SetDurability(args.Item.GetItemSO().durability);
+        public void OnItemChangeState(object sender,ItemStateChangedEventArgs args) {
+            if (args.Item.GetItemSO().durability > 0) {
+                _slots[args.Slot].AddItem(args.Item.GetItemSO().image);
+                _slots[args.Slot].SetDurability(args.Item.GetItemSO().durability);
+            }
             else _slots[args.Slot].RemoveItem();
         }
         
