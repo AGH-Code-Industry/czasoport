@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using Inventory.EventArguments;
 
 namespace Inventory.UI {
     /// <summary>
@@ -33,36 +33,45 @@ namespace Inventory.UI {
         }
 
         /// <summary>
-        /// Highlight choosed slot or/and set durabilty for active slot.
+        /// Highlight choosed slot
         /// </summary>
-        /// <param name="newId"></param>
-        public void OnItemStateChange(int id, int new_durability = -1) {
-            if (id != _activeId) {
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        public void OnChangeSelectedSlot(object sender, SelectedSlotChangedEventArgs args) {
+            if (args.Slot != _activeId) {
                 _slots[_activeId].Disactive();
-                _activeId = id;
+                _activeId = args.Slot;
                 _slots[_activeId].Active();
             }
-            if (new_durability != -1){
-                _slots[id].SetDurabilty(new_durability);
-            }
         }
-
+        
+        /// <summary>
+        /// Change slot's item durability.
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        /// </summary>
+        public void OnItemChangeDurability(object sender,ItemStateChangedEventArgs args) {
+            if (args.Item.GetItemSO().durability > 0) _slots[args.Slot].SetDurability(args.Item.GetItemSO().durability);
+            else _slots[args.Slot].RemoveItem();
+        }
+        
         /// <summary>
         /// Change slot's image to newItem and set durability.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="newItem"></param>
-        public void OnItemAdded(int id, Sprite newItem, int durability) {
-            _slots[id].AddItem(newItem);
-            _slots[id].SetDurabilty(durability);
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        public void OnItemAdded(object sender,ItemInsertedEventArgs args) {
+            _slots[args.Slot].AddItem(args.Item.GetItemSO().image);
+            _slots[args.Slot].SetDurability(args.Item.GetItemSO().durability);
         }
 
         /// <summary>
         /// Change slot's image.apha to 0 and set text responsible for durability to "".
         /// </summary>
-        /// <param name="id"></param>
-        public void OnItemRemoved(int id) {
-            _slots[id].RemoveItem();
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        public void OnItemRemoved(object sender,ItemRemovedEventArgs args) {
+            _slots[args.Slot].RemoveItem();
         }
     }
 }

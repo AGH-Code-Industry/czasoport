@@ -30,24 +30,24 @@ namespace Inventory.UI.Test
         private void PreviousItem(InputAction.CallbackContext ctx) {
             _activeId --;
             if (_activeId == -1) _activeId = 3;
-            InventoryUIManager.OnItemRemoved(_activeId);
-            InventoryUIManager.OnItemStateChange(_activeId);
+            //InventoryUIManager.OnItemRemoved(_activeId);
+            //InventoryUIManager.OnItemStateChange(_activeId);
         }
     
         private void NextItem(InputAction.CallbackContext ctx) {
             _activeId++;
             if (_activeId == 4) _activeId = 0;
-            InventoryUIManager.OnItemAdded(_activeId, test, _activeId);
-            InventoryUIManager.OnItemStateChange(_activeId);
+            //InventoryUIManager.OnItemAdded(_activeId, test, _activeId);
+            //InventoryUIManager.OnItemStateChange(_activeId);
         }
 
         private void DropItem(InputAction.CallbackContext ctx) {
-            InventoryUIManager.OnItemRemoved(_activeId);   
+            //InventoryUIManager.OnItemRemoved(_activeId);   
         }
         
         private void ChangeItemState(InputAction.CallbackContext ctx) {
-            _activeId = (int)ctx.ReadValue<float>() - 1;
-            InventoryUIManager.OnItemStateChange(_activeId);
+            //_activeId = (int)ctx.ReadValue<float>() - 1;
+            //InventoryUIManager.OnItemStateChange(_activeId);
         }
     }
 }

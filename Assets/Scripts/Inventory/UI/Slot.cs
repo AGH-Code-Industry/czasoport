@@ -61,7 +61,7 @@ namespace Inventory.UI {
         /// Change slot's text to new_durability or ""
         /// </summary>
         /// <param name="new_durability"></param>
-        public void SetDurabilty(int new_durability) {
+        public void SetDurability(int new_durability) {
             if (new_durability > 1) {
                 _text.text = new_durability.ToString();
             }
