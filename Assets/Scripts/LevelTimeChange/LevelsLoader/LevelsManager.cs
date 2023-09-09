@@ -104,7 +104,7 @@ namespace LevelTimeChange.LevelsLoader {
 			}
 		}
 
-		private void UnLoadLevel(LevelInfoSO level) {
+		private void UnloadLevel(LevelInfoSO level) {
 			_logger.Log($"Scene is being unloaded: {level.sceneName % Colorize.Magenta}");
 			SceneManager.UnloadSceneAsync(level.sceneName);
 			LoadedLevels.Remove(level);
@@ -120,7 +120,7 @@ namespace LevelTimeChange.LevelsLoader {
 				}
 			}
 			foreach (var scene in scenesToRemove) {
-				UnLoadLevel(scene);
+				UnloadLevel(scene);
 			}
 		}
 	}	
