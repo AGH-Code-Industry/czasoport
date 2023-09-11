@@ -28,7 +28,7 @@ namespace LevelTimeChange.LevelsLoader {
             _logger.Log($"New scene has awoken: {currentLevel.sceneName % Colorize.Cyan}");
             
             FindTeleportsOnScene();
-            PrepareLevelContent();
+            SetTimelinesPositions();
             DeactivateLevel();
         }
 
@@ -91,7 +91,7 @@ namespace LevelTimeChange.LevelsLoader {
             }
         }
 
-		private void PrepareLevelContent() {
+		private void SetTimelinesPositions() {
 			var timelines = FindTimelineMaps();
 			if (timelines == null) {
 				_logger.LogError($"Failed to find timelines in level {currentLevel.sceneName}." +
@@ -101,9 +101,9 @@ namespace LevelTimeChange.LevelsLoader {
 		}
 
 		private TimelineMaps FindTimelineMaps() {
-			var past = levelContent.transform.Find("Past")?.gameObject;
-			var present = levelContent.transform.Find("Present")?.gameObject;
-			var future = levelContent.transform.Find("Future")?.gameObject;
+			var past = levelContent.transform.Find("Past");
+			var present = levelContent.transform.Find("Present");
+			var future = levelContent.transform.Find("Future");
 			if (past == null || present == null || future == null) {
 				return null;
 			}
@@ -111,17 +111,17 @@ namespace LevelTimeChange.LevelsLoader {
 		}
 
 		private void MoveTimelines(TimelineMaps timelines, Vector3 offset) {
-			timelines.past.transform.position = timelines.present.transform.position - offset;
-			timelines.future.transform.position = timelines.present.transform.position + offset;
+			timelines.past.position = timelines.present.position - offset;
+			timelines.future.position = timelines.present.position + offset;
 		}
     }
 
 	class TimelineMaps {
-		public GameObject past {get; set;}
-		public GameObject present {get; set;}
-		public GameObject future {get; set;}
+		public Transform past {get; set;}
+		public Transform present {get; set;}
+		public Transform future {get; set;}
 
-		public TimelineMaps(GameObject past, GameObject present, GameObject future) {
+		public TimelineMaps(Transform past, Transform present, Transform future) {
 			this.past = past;
 			this.present = present;
 			this.future = future;
