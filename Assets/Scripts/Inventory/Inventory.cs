@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Application;
@@ -23,9 +23,8 @@ namespace Inventory {
         public event EventHandler<ItemStateChangedEventArgs> ItemStateChanged;
         
         [SerializeField] private InventorySettings settings;
-        [SerializeField] private InventoryUI slotsUI;
-        
-        private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INVENTORY];
+
+        private readonly CLogger _logger = Loggers.LoggersList["INVENTORY"];
         private Item[] _items;
         private int _itemsCount = 0;
         private int _selectedSlot = 0;
@@ -46,12 +45,6 @@ namespace Inventory {
             ItemStateChanged += (sender, args) =>
                 _logger.Log($"Item {args.Item % Colorize.Cyan} state {"changed" % Colorize.Orange}, {args.Slot % Colorize.Magenta} slot.");
 
-            //InventoryUI functions
-            SelectedSlotChanged += slotsUI.OnChangeSelectedSlot;
-            ItemInserted += slotsUI.OnItemAdded;
-            ItemRemoved += slotsUI.OnItemRemoved;
-            ItemStateChanged += slotsUI.OnItemChangeState;
-            
             _items = new Item[settings.itemsCount];
         }
 

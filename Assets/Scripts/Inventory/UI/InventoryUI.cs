@@ -30,6 +30,10 @@ namespace Inventory.UI {
                 _slots[i].Disactive();
             }
             _slots[_activeId].Active();
+            Inventory.Instance.SelectedSlotChanged += OnChangeSelectedSlot;
+            Inventory.Instance.ItemInserted += OnItemAdded;
+            Inventory.Instance.ItemRemoved += OnItemRemoved;
+            Inventory.Instance.ItemStateChanged += OnItemChangeState;
         }
 
         /// <summary>
