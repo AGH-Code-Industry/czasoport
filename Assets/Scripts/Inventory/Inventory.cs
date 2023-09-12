@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Application;
@@ -6,6 +6,7 @@ using Application.GlobalExceptions;
 using CoinPackage.Debugging;
 using CustomInput;
 using Inventory.EventArguments;
+using Inventory.UI;
 using Items;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -20,10 +21,10 @@ namespace Inventory {
         public event EventHandler<ItemInsertedEventArgs> ItemInserted;
         public event EventHandler<ItemRemovedEventArgs> ItemRemoved;
         public event EventHandler<ItemStateChangedEventArgs> ItemStateChanged;
-
-        [SerializeField] private InventorySettings settings;
         
-        private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INVENTORY];
+        [SerializeField] private InventorySettings settings;
+
+        private readonly CLogger _logger = Loggers.LoggersList["INVENTORY"];
         private Item[] _items;
         private int _itemsCount = 0;
         private int _selectedSlot = 0;
@@ -43,7 +44,7 @@ namespace Inventory {
                 _logger.Log($"Item {args.Item % Colorize.Cyan} {"removed" % Colorize.Red} from the {args.Slot % Colorize.Magenta} slot.");
             ItemStateChanged += (sender, args) =>
                 _logger.Log($"Item {args.Item % Colorize.Cyan} state {"changed" % Colorize.Orange}, {args.Slot % Colorize.Magenta} slot.");
-            
+
             _items = new Item[settings.itemsCount];
         }
 
