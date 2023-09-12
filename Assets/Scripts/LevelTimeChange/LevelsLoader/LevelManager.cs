@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Application;
 using CoinPackage.Debugging;
 using UnityEngine;
@@ -33,6 +34,7 @@ namespace LevelTimeChange.LevelsLoader {
             FindTeleportsOnScene();
             SetTimelinesPositions();
             DeactivateLevel();
+            FindNeighbouringLevels();
         }
 
         /// <summary>
@@ -145,6 +147,25 @@ namespace LevelTimeChange.LevelsLoader {
 			timelines.past.position = timelines.present.position - offset;
 			timelines.future.position = timelines.present.position + offset;
 		}
+
+
+        /// <summary>
+        /// Finds neighboring levels based on where portals are in the current level lead.
+        /// </summary>
+        private void FindNeighbouringLevels()
+        {
+            var neighourLevelsList = currentLevel.neighbourLevels.ToList();
+            neighourLevelsList.Clear();
+            foreach (Transform teleport in teleportsHolders[0].transform)
+            {
+                LevelPortal currentPortal = teleport.gameObject.GetComponent<LevelPortal>();
+                if (currentPortal)
+                {
+                    neighourLevelsList.Add(currentPortal.destinedLevel);
+                }
+            }
+            currentLevel.neighbourLevels = neighourLevelsList.ToArray();
+        }
     }
 
 	class TimelineMaps {
