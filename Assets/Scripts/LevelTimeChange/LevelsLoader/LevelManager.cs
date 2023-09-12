@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Application;
 using CoinPackage.Debugging;
 using UnityEngine;
@@ -34,7 +33,6 @@ namespace LevelTimeChange.LevelsLoader {
             FindTeleportsOnScene();
             SetTimelinesPositions();
             DeactivateLevel();
-            FindNeighbouringLevels();
         }
 
         /// <summary>
