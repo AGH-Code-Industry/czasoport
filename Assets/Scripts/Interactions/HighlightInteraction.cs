@@ -11,15 +11,15 @@ namespace Interactions {
         }
 
         public void EnableHighlight() {
-            _sprite.color = Color.cyan;
+            _sprite.color = Color.green;
         }
 
         public void EnableFocusedHighlight() {
-            _sprite.color = Color.blue;
+            _sprite.color = Color.red;
         }
 
         public void DisableHighlight() {
-            _sprite.color = Color.red;
+            _sprite.color = Color.white;
         }
     }
 }

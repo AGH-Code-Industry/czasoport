@@ -3,7 +3,7 @@ using CoinPackage.Debugging;
 using Items;
 using UnityEngine;
 
-namespace Inventory.Tests {
+namespace InventorySystem.Tests {
     public class InventoryGeneralTests : MonoBehaviour {
         public void Start() {
             Item item;

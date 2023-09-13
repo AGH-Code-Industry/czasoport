@@ -1,48 +1,40 @@
 using System;
+using Application;
+using CoinPackage.Debugging;
+using Interactions;
 using UnityEngine;
 using Interactions.Interfaces;
-using CustomInput;
+using InventorySystem;
 
 namespace Items
 {
+    [RequireComponent(typeof(CircleCollider2D))]
+    [RequireComponent(typeof(HighlightInteraction))]
     public class Item : MonoBehaviour, IHandInteractable, ILongHandInteractable
     {
         [SerializeField] private ItemSO itemSO;
-        private SpriteRenderer _spriteRenderer;
-        private int _toogleOutline = 0;
 
-        private void Awake()
-        {
-            _spriteRenderer = GetComponent<SpriteRenderer>();
-            _spriteRenderer.sprite = itemSO.image;
-            _spriteRenderer.material.SetTexture("_MainTex",_spriteRenderer.sprite.texture);
-            _spriteRenderer.material.SetFloat("_alpha",0f);
-        }
+        public ItemSO ItemSO => itemSO;
 
-        private void OnEnable()
-        {
-            CInput.InputActions.Teleport.TeleportBack.performed += ctx => {ToogleHighlight();};
-        }
+        private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.ITEMS];
 
-        private void OnDisable() {
-            CInput.InputActions.Teleport.TeleportBack.performed -= ctx => {ToogleHighlight();};
-        }
-        
-        public void ToogleHighlight() {
-            _toogleOutline = (_toogleOutline + 1) % 2;
-            _spriteRenderer.material.SetFloat("_alpha",_toogleOutline);
-        }
-
-        public ItemSO GetItemSO() {
-            return itemSO;
+        private void Awake() {
+            // GetComponent<CircleCollider2D>().isTrigger = true;
+            if (gameObject.layer != LayerMask.NameToLayer("Interactables")) {
+                _logger.LogWarning(
+                    $"Item {itemSO.itemName % Colorize.Magenta} {"is not" % Colorize.Red} in {"Interactables" % Colorize.Green} layer.",
+                    this
+                    );
+            }
         }
 
         public void InteractionHand() {
-            throw new NotImplementedException();
+            _logger.Log($"Item {itemSO.itemName % Colorize.Magenta} is being {"short interacted" % Colorize.Green} with.", this);
+            Inventory.Instance.InsertItem(this);
         }
 
         public void LongInteractionHand() {
-            throw new NotImplementedException();
+            _logger.Log($"Item {itemSO.itemName % Colorize.Magenta} is being {"long interacted" % Colorize.Cyan} with.", this);
         }
     }
 }
