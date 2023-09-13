@@ -9,7 +9,8 @@ namespace Application {
             LEVEL_SYSTEM,
             INVENTORY,
             INTERACTIONS,
-            INTERACTABLE_OBJECTS
+            INTERACTABLE_OBJECTS,
+            ITEMS
         }
         
         static Loggers() {
@@ -43,6 +44,14 @@ namespace Application {
             LoggersList.Add(
                 LoggerType.INTERACTABLE_OBJECTS,
                 new CLogger(LoggerType.INTERACTABLE_OBJECTS) {
+                    LogEnabled = true
+                }
+            );
+            
+            // Logger for item objects
+            LoggersList.Add(
+                LoggerType.ITEMS,
+                new CLogger(LoggerType.ITEMS) {
                     LogEnabled = true
                 }
             );

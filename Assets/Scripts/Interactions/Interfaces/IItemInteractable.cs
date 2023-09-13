@@ -2,7 +2,7 @@
 
 namespace Interactions.Interfaces
 {
-    public interface IInteractableItem
+    public interface IItemInteractable
     {
         public void InteractionItem(Item item);
     }
