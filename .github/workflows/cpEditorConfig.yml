@@ -12,4 +12,4 @@ jobs:
           dotnet-version: 6.0.x
           
       - name: Run dotnet format
-        run: dotnet format style --verify-no-changes --include ./Assets/Scripts/
+        run: dotnet format style --verify-no-changes czasoport.sln
