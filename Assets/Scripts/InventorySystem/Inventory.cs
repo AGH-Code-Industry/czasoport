@@ -5,14 +5,12 @@ using Application;
 using Application.GlobalExceptions;
 using CoinPackage.Debugging;
 using CustomInput;
-using Inventory.EventArguments;
+using InventorySystem.EventArguments;
 using Items;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-namespace Inventory {
+namespace InventorySystem {
     public class Inventory : MonoBehaviour {
         public static Inventory Instance;
         
@@ -21,7 +19,7 @@ namespace Inventory {
         public event EventHandler<ItemRemovedEventArgs> ItemRemoved;
         public event EventHandler<ItemStateChangedEventArgs> ItemStateChanged;
         
-        [SerializeField] private InventorySettings settings;
+        public InventorySettings settings;
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INVENTORY];
         private Item[] _items;
@@ -38,11 +36,11 @@ namespace Inventory {
             SelectedSlotChanged += (sender, args) => 
                 _logger.Log($"Selected slot changed, new slot: {args.Slot % Colorize.Magenta}.");
             ItemInserted += (sender, args) =>
-                _logger.Log($"Item {args.Item % Colorize.Cyan} {"inserted" % Colorize.Green} into the {args.Slot % Colorize.Magenta} slot.");
+                _logger.Log($"Item {args.Item.ItemSO.itemName % Colorize.Cyan} {"inserted" % Colorize.Green} into the {args.Slot % Colorize.Magenta} slot.");
             ItemRemoved += (sender, args) => 
-                _logger.Log($"Item {args.Item % Colorize.Cyan} {"removed" % Colorize.Red} from the {args.Slot % Colorize.Magenta} slot.");
+                _logger.Log($"Item {args.Item.ItemSO.itemName % Colorize.Cyan} {"removed" % Colorize.Red} from the {args.Slot % Colorize.Magenta} slot.");
             ItemStateChanged += (sender, args) =>
-                _logger.Log($"Item {args.Item % Colorize.Cyan} state {"changed" % Colorize.Orange}, {args.Slot % Colorize.Magenta} slot.");
+                _logger.Log($"Item {args.Item.ItemSO.itemName % Colorize.Cyan} state {"changed" % Colorize.Orange}, {args.Slot % Colorize.Magenta} slot.");
 
             _items = new Item[settings.itemsCount];
         }

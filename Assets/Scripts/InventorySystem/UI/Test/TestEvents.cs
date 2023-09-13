@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
-namespace Inventory.UI.Test
+namespace InventorySystem.UI.Test
 {
     /// <summary>
     /// Script to test InventoryUI

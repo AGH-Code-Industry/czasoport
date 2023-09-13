@@ -8,12 +8,13 @@ using Interactions.Interfaces;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using InventorySystem;
 
 namespace Interactions {
     public class Interactions : MonoBehaviour {
         public static Interactions Instance;
 
-        [SerializeField] private InteractionsSettings settings;
+        public InteractionsSettings settings;
         
         // Objects near the player that we can interact with
         private List<GameObject> _interactableObjects;
@@ -155,8 +156,7 @@ namespace Interactions {
             if (!_selectedObject) {
                 return;
             }
-            // I dont know why Rider wants me to include namespace here, I can't use `using Inventory;` for some reason
-            if (Inventory.Inventory.Instance.GetSelectedItem(out var item)) {
+            if (Inventory.Instance.GetSelectedItem(out var item)) {
                 _selectedObject.GetComponent<IItemInteractable>()?.InteractionItem(item);
             }
         }
@@ -165,8 +165,7 @@ namespace Interactions {
             if (!_selectedObject) {
                 return;
             }
-
-            if (Inventory.Inventory.Instance.GetSelectedItem(out var item)) {
+            if (Inventory.Instance.GetSelectedItem(out var item)) {
                 _selectedObject.GetComponent<ILongItemInteractable>().LongInteractionItem(item);
             }
         }

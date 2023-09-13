@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using CoinPackage.Debugging;
 using TMPro;
 
-namespace Inventory.UI {
+namespace InventorySystem.UI {
     /// <summary>
     /// UI slot class.
     /// </summary>

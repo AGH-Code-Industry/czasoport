@@ -1,7 +1,7 @@
 ﻿using System;
 using Items;
 
-namespace Inventory.EventArguments {
+namespace InventorySystem.EventArguments {
     public class ItemRemovedEventArgs : EventArgs {
         // Slot from which item was removed
         public int Slot;

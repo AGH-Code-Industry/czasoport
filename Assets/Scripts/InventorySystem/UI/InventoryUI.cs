@@ -1,16 +1,15 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Inventory.EventArguments;
+using InventorySystem.EventArguments;
 
-namespace Inventory.UI {
+namespace InventorySystem.UI {
     /// <summary>
     /// Manages UI of inventory slots.
     /// </summary>
     public class InventoryUI : MonoBehaviour
     {
         [SerializeField] private GameObject slotPrefab;
-        [SerializeField] private int slotCount;
         [SerializeField] private float slotMarginX;
         [SerializeField] private float slotMarginY;
         
@@ -23,7 +22,7 @@ namespace Inventory.UI {
             GameObject slot;
             float slotW = (slotPrefab.GetComponent<RectTransform>().rect.width / 2);
             float slotRealMarginY = (slotPrefab.GetComponent<RectTransform>().rect.height / 2) + slotMarginY;
-            for (int i = 0; i < slotCount; i++) {
+            for (int i = 0; i < Inventory.Instance.settings.itemsCount; i++) {
                 slot = Instantiate(slotPrefab, transform);
                 slot.transform.position = new Vector3((slotW * (1 + 2 * i)) + (slotMarginX * (i + 1)), slotRealMarginY, 0);
                 _slots.Add(slot.GetComponent<Slot>());
@@ -67,9 +66,9 @@ namespace Inventory.UI {
         /// <param name="args"></param>
         /// </summary>
         public void OnItemChangeState(object sender,ItemStateChangedEventArgs args) {
-            if (args.Item.GetItemSO().durability > 0) {
-                _slots[args.Slot].AddItem(args.Item.GetItemSO().image);
-                _slots[args.Slot].SetDurability(args.Item.GetItemSO().durability);
+            if (args.Item.ItemSO.durability > 0) {
+                _slots[args.Slot].AddItem(args.Item.ItemSO.image);
+                _slots[args.Slot].SetDurability(args.Item.ItemSO.durability);
             }
             else _slots[args.Slot].RemoveItem();
         }
@@ -80,8 +79,8 @@ namespace Inventory.UI {
         /// <param name="sender"></param>
         /// <param name="args"></param>
         public void OnItemAdded(object sender,ItemInsertedEventArgs args) {
-            _slots[args.Slot].AddItem(args.Item.GetItemSO().image);
-            _slots[args.Slot].SetDurability(args.Item.GetItemSO().durability);
+            _slots[args.Slot].AddItem(args.Item.ItemSO.image);
+            _slots[args.Slot].SetDurability(args.Item.ItemSO.durability);
         }
 
         /// <summary>

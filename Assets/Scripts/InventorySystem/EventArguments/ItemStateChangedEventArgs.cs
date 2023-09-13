@@ -1,6 +1,6 @@
 ﻿using Items;
 
-namespace Inventory.EventArguments {
+namespace InventorySystem.EventArguments {
     public class ItemStateChangedEventArgs {
         // Slot that hold the item
         public int Slot;

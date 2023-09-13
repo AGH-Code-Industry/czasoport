@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429582183}
   - component: {fileID: 429582184}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +597,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotPrefab: {fileID: 2331055161561051305, guid: c740a02885e9e404eb944dc3b58bc969, type: 3}
-  slotCount: 4
   slotMarginX: 40
   slotMarginY: 40
 --- !u!114 &875634690
@@ -694,9 +693,8 @@ GameObject:
   - component: {fileID: 902486985}
   - component: {fileID: 902486988}
   - component: {fileID: 902486987}
-  - component: {fileID: 902486986}
   - component: {fileID: 902486989}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,18 +753,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80ae42a911708764d865c24fc97d5796, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &902486986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902486981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fd43b235cdc4ab7a0955add806f3f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &902486987
