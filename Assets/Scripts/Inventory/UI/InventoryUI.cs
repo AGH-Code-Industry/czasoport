@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Inventory.EventArguments;
@@ -24,18 +25,29 @@ namespace Inventory.UI {
             float slotRealMarginY = (slotPrefab.GetComponent<RectTransform>().rect.height / 2) + slotMarginY;
             for (int i = 0; i < slotCount; i++) {
                 slot = Instantiate(slotPrefab, transform);
-                slot.transform.position = new Vector3((slotW * (1 + 2*i)) + (slotMarginX * (i+1)), slotRealMarginY, 0);
+                slot.transform.position = new Vector3((slotW * (1 + 2 * i)) + (slotMarginX * (i + 1)), slotRealMarginY, 0);
                 _slots.Add(slot.GetComponent<Slot>());
                 _slots[i].RemoveItem();
                 _slots[i].Disactive();
             }
+
             _slots[_activeId].Active();
+        }
+
+        private void OnEnable() {
             Inventory.Instance.SelectedSlotChanged += OnChangeSelectedSlot;
             Inventory.Instance.ItemInserted += OnItemAdded;
             Inventory.Instance.ItemRemoved += OnItemRemoved;
             Inventory.Instance.ItemStateChanged += OnItemChangeState;
         }
 
+        private void OnDisable() {
+            Inventory.Instance.SelectedSlotChanged -= OnChangeSelectedSlot;
+            Inventory.Instance.ItemInserted -= OnItemAdded;
+            Inventory.Instance.ItemRemoved -= OnItemRemoved;
+            Inventory.Instance.ItemStateChanged -= OnItemChangeState;
+        }
+        
         /// <summary>
         /// Highlight choosed slot
         /// </summary>
