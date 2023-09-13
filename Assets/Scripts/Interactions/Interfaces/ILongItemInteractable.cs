@@ -2,7 +2,7 @@ using Items;
 
 namespace Interactions.Interfaces
 {
-    public interface ILongInteractableItem
+    public interface ILongItemInteractable
     {
         public void LongInteractionItem(Item item);
     }

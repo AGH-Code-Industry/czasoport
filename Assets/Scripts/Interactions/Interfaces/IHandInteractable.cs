@@ -1,7 +1,7 @@
 
 namespace Interactions.Interfaces
 {
-    public interface IInteractableHand
+    public interface IHandInteractable
     {
         public void InteractionHand();
     }

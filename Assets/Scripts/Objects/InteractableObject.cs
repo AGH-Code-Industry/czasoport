@@ -6,7 +6,7 @@ using Application;
 
 
 namespace Objects {
-    public abstract class InteractableObject : MonoBehaviour, IInteractableItem, IInteractableHand, ILongInteractableHand, ILongInteractableItem {
+    public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable {
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INTERACTABLE_OBJECTS];
         

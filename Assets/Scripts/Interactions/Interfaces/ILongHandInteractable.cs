@@ -1,7 +1,7 @@
 
 namespace Interactions.Interfaces
 {
-    public interface ILongInteractableHand
+    public interface ILongHandInteractable
     {
         public void LongInteractionHand();
     }

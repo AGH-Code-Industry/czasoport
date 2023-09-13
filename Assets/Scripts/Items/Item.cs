@@ -5,7 +5,7 @@ using CustomInput;
 
 namespace Items
 {
-    public class Item : MonoBehaviour, IInteractableHand, ILongInteractableHand
+    public class Item : MonoBehaviour, IHandInteractable, ILongHandInteractable
     {
         [SerializeField] private ItemSO itemSO;
         private SpriteRenderer _spriteRenderer;

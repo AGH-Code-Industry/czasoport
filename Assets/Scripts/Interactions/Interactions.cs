@@ -6,7 +6,6 @@ using CoinPackage.Debugging;
 using CustomInput;
 using Interactions.Interfaces;
 using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -105,6 +104,8 @@ namespace Interactions {
             else {
                 _selectedObject = _focusedObject;
             }
+            
+            // Despite warning, `_selectedObject` will never be null in this context
             _selectedObject.GetComponent<IHighlightable>()?.EnableFocusedHighlight();
         }
 
@@ -139,19 +140,35 @@ namespace Interactions {
         }
 
         private void OnInteractionPerformed(InputAction.CallbackContext ctx) {
-            
+            if (_selectedObject) { // This is shortcut for checking if gameObject is not null
+                _selectedObject.GetComponent<IHandInteractable>()?.InteractionHand();
+            }
         }
         
         private void OnLongInteractionPerformed(InputAction.CallbackContext ctx) {
-            
+            if (_selectedObject) {
+                _selectedObject.GetComponent<ILongHandInteractable>()?.LongInteractionHand();
+            }
         }
         
         private void OnItemInteractionPerformed(InputAction.CallbackContext ctx) {
-            
+            if (!_selectedObject) {
+                return;
+            }
+            // I dont know why Rider wants me to include namespace here, I can't use `using Inventory;` for some reason
+            if (Inventory.Inventory.Instance.GetSelectedItem(out var item)) {
+                _selectedObject.GetComponent<IItemInteractable>()?.InteractionItem(item);
+            }
         }
         
         private void OnLongItemInteractionPerformed(InputAction.CallbackContext ctx) {
-            
+            if (!_selectedObject) {
+                return;
+            }
+
+            if (Inventory.Inventory.Instance.GetSelectedItem(out var item)) {
+                _selectedObject.GetComponent<ILongItemInteractable>().LongInteractionItem(item);
+            }
         }
     }
 }
