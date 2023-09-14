@@ -2,26 +2,20 @@ using UnityEngine;
 
 namespace Player {
     public class Player : MonoBehaviour {
-        private static Player _instance;
+        public static Player Instance = null;
 
         private void Awake() {
-            if (_instance == null) {
-                _instance = this;
+            if (Instance == null) {
+                Instance = this;
             }
             else {
                 Destroy(gameObject);
             }
         }
 
-        public static Player Instance {
-            get {
-                return _instance;
-            }
-        }
-
         private void OnDestroy() {
-            if (_instance == this) {
-                _instance = null;
+            if (Instance == this) {
+                Instance = null;
             }
         }
     }
