@@ -13,12 +13,12 @@ using UnityEngine.InputSystem;
 namespace InventorySystem {
     public class Inventory : MonoBehaviour {
         public static Inventory Instance;
-        
+
         public event EventHandler<SelectedSlotChangedEventArgs> SelectedSlotChanged;
         public event EventHandler<ItemInsertedEventArgs> ItemInserted;
         public event EventHandler<ItemRemovedEventArgs> ItemRemoved;
         public event EventHandler<ItemStateChangedEventArgs> ItemStateChanged;
-        
+
         public InventorySettings settings;
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INVENTORY];
@@ -31,17 +31,21 @@ namespace InventorySystem {
                 _logger.LogError($"{this} tried to overwrite current singleton instance.", this);
                 throw new SingletonOverrideException($"{this} tried to overwrite current singleton instance.");
             }
+
             Instance = this;
-            
-            SelectedSlotChanged += (sender, args) => 
+
+            SelectedSlotChanged += (sender, args) =>
                 _logger.Log($"Selected slot changed, new slot: {args.Slot % Colorize.Magenta}.");
             ItemInserted += (sender, args) =>
-                _logger.Log($"Item {args.Item.ItemSO.itemName % Colorize.Cyan} {"inserted" % Colorize.Green} into the {args.Slot % Colorize.Magenta} slot.");
-            ItemRemoved += (sender, args) => 
-                _logger.Log($"Item {args.Item.ItemSO.itemName % Colorize.Cyan} {"removed" % Colorize.Red} from the {args.Slot % Colorize.Magenta} slot.");
+                _logger.Log(
+                    $"Item {args.Item.ItemSO.itemName % Colorize.Cyan} {"inserted" % Colorize.Green} into the {args.Slot % Colorize.Magenta} slot.");
+            ItemRemoved += (sender, args) =>
+                _logger.Log(
+                    $"Item {args.Item.ItemSO.itemName % Colorize.Cyan} {"removed" % Colorize.Red} from the {args.Slot % Colorize.Magenta} slot.");
             ItemStateChanged += (sender, args) =>
-                _logger.Log($"Item {args.Item.ItemSO.itemName % Colorize.Cyan} state {"changed" % Colorize.Orange}, {args.Slot % Colorize.Magenta} slot.");
-
+                _logger.Log(
+                    $"Item {args.Item.ItemSO.itemName % Colorize.Cyan} state {"changed" % Colorize.Orange}, {args.Slot % Colorize.Magenta} slot.");
+            CDebug.Log($"Loaded Inventory, events instantiated.");
             _items = new Item[settings.itemsCount];
         }
 
@@ -107,6 +111,7 @@ namespace InventorySystem {
                 });
                 return true;
             }
+
             // Put item into first empty slot
             for (int i = 0; i < settings.itemsCount; i++) {
                 if (_items[i] is null) {
@@ -116,10 +121,11 @@ namespace InventorySystem {
                         Slot = i,
                         Item = item
                     });
-                    
+
                     return true;
                 }
             }
+
             return false;
         }
 
@@ -145,7 +151,7 @@ namespace InventorySystem {
                 Slot = _selectedSlot
             });
         }
-        
+
         private void OnPreviousItemClicked(InputAction.CallbackContext ctx) {
             _selectedSlot--;
             _selectedSlot = _selectedSlot < 0 ? settings.itemsCount - 1 : _selectedSlot;
@@ -153,16 +159,14 @@ namespace InventorySystem {
                 Slot = _selectedSlot
             });
         }
-        
+
         private void OnChooseItemClicked(InputAction.CallbackContext ctx) {
             _selectedSlot = Math.Clamp((int)ctx.ReadValue<float>(), 0, _items.Length - 1);
             SelectedSlotChanged?.Invoke(this, new SelectedSlotChangedEventArgs() {
                 Slot = _selectedSlot
             });
         }
-        
-        private void OnDropItemClicked(InputAction.CallbackContext ctx) {
-            
-        }
+
+        private void OnDropItemClicked(InputAction.CallbackContext ctx) { }
     }
 }
