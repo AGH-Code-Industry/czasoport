@@ -7,6 +7,7 @@ using Application;
 using Application.GlobalExceptions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using PlayerScripts;
 
 namespace LevelTimeChange.LevelsLoader {
 	/// <summary>
@@ -33,8 +34,7 @@ namespace LevelTimeChange.LevelsLoader {
 		private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.LEVEL_SYSTEM];
 		private bool _isLoading = true;
 		
-		//TODO: Remove this temporary abomination
-		public Transform player;
+		private Transform _player;
 
 		private void Awake() {
 			if (Instance != null) {
@@ -42,7 +42,6 @@ namespace LevelTimeChange.LevelsLoader {
 				throw new SingletonOverrideException($"{this} tried to overwrite current singleton instance.");
 			}
 			Instance = this;
-			
 			LoadedLevels = new Dictionary<LevelInfoSO, LevelManager>();
 			
 			_logger.Log("Loading starting scene.");
@@ -51,6 +50,7 @@ namespace LevelTimeChange.LevelsLoader {
 
 		private void Start() {
 			_logger.Log("Activating starting scene.");
+			_player = Player.Instance.GetComponent<Transform>();
 			_currentLevelManager = LoadedLevels[startingLevel];
 			_currentLevelManager.ActivateLevel();
 			_isLoading = false;
