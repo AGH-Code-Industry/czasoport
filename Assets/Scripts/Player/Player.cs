@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Player {
@@ -16,7 +15,6 @@ namespace Player {
 
         public static Player Instance {
             get {
-                if (_instance == null) throw new NullReferenceException();
                 return _instance;
             }
         }
