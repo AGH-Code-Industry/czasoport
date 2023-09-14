@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using CoinPackage.Debugging;
 using UnityEngine;
 using InventorySystem.EventArguments;
 
@@ -29,24 +30,17 @@ namespace InventorySystem.UI {
                 _slots[i].RemoveItem();
                 _slots[i].Disactive();
             }
-
             _slots[_activeId].Active();
-        }
-
-        private void OnEnable() {
+            
+            // We need to subscribe to Inventory event in Start() script, because OnEnable() is run just
+            // after Awake(). This means that Inventory might not be yet present (its Awake is run later),
+            // and we will try to subscribe to its events.
             Inventory.Instance.SelectedSlotChanged += OnChangeSelectedSlot;
             Inventory.Instance.ItemInserted += OnItemAdded;
             Inventory.Instance.ItemRemoved += OnItemRemoved;
             Inventory.Instance.ItemStateChanged += OnItemChangeState;
         }
 
-        private void OnDisable() {
-            Inventory.Instance.SelectedSlotChanged -= OnChangeSelectedSlot;
-            Inventory.Instance.ItemInserted -= OnItemAdded;
-            Inventory.Instance.ItemRemoved -= OnItemRemoved;
-            Inventory.Instance.ItemStateChanged -= OnItemChangeState;
-        }
-        
         /// <summary>
         /// Highlight choosed slot
         /// </summary>
