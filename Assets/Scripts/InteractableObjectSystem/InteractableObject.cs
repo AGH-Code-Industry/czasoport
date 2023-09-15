@@ -3,21 +3,24 @@ using Interactions.Interfaces;
 using CoinPackage.Debugging;
 using Items;
 using Application;
+using Interactions;
 
 
-namespace Objects {
+namespace InteractableObjectSystem {
+    [RequireComponent(typeof(CircleCollider2D))]
+    [RequireComponent(typeof(HighlightInteraction))]
     public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable {
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INTERACTABLE_OBJECTS];
         
-        [SerializeField] private ObjectSO objectSO;
-        
-        public virtual void InteractionItem(Item item) {
+        public virtual bool InteractionItem(Item item) {
             CDebug.LogError("Not implemented InteractionItem");
+            return false;
         }
         
-        public virtual void LongInteractionItem(Item item) {
+        public virtual bool LongInteractionItem(Item item) {
             CDebug.LogError("Not implemented LongInteractionItem");
+            return false;
         }
         
         public virtual void InteractionHand() {
@@ -26,11 +29,6 @@ namespace Objects {
         
         public virtual void LongInteractionHand() {
             CDebug.LogError("Not implemented LongInteractionHand");
-        }
-        
-        public ObjectSO GetObjectSO()
-        {
-            return objectSO;
         }
     }
 }
