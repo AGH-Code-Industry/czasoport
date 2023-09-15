@@ -4,6 +4,6 @@ namespace Interactions.Interfaces
 {
     public interface ILongItemInteractable
     {
-        public void LongInteractionItem(Item item);
+        public bool LongInteractionItem(Item item);
     }
 }
