@@ -15,8 +15,11 @@ namespace LevelTimeChange.LevelsLoader {
         [SerializeField] private LevelInfoSO currentLevel;
         [Tooltip("Content object of this level.")]
         [SerializeField] private GameObject levelContent;
-        [Tooltip("References to GameObjects that holds teleports.")]
-        [SerializeField] private GameObject[] teleportsHolders;
+
+        [Header("References to GameObjects that holds teleports.")]
+        [SerializeField] private GameObject pastPortalHolder;
+        [SerializeField] private GameObject presentPortalHolder;
+        [SerializeField] private GameObject futurePortalHolder;
 
         private List<LevelPortal> _teleports;
         private CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.LEVEL_SYSTEM];
@@ -24,9 +27,9 @@ namespace LevelTimeChange.LevelsLoader {
         private void Awake() {
             _teleports = new List<LevelPortal>();
 
+            _logger.Log($"New scene has awoken: {currentLevel}");
             LevelsManager.Instance.LoadedLevels.Add(currentLevel, this);
-            _logger.Log($"New scene has awoken: {currentLevel.sceneName % Colorize.Cyan}");
-            
+
             FindTeleportsOnScene();
             SetTimelinesPositions();
             DeactivateLevel();
@@ -37,7 +40,7 @@ namespace LevelTimeChange.LevelsLoader {
         /// Use it only when this level is going to be one played on by the player.
         /// </summary>
         public void ActivateLevel() {
-            _logger.Log($"Scene {currentLevel.sceneName} is {"activating" % Colorize.Green}");
+            _logger.Log($"Scene {currentLevel} is {"activating" % Colorize.Green}");
             levelContent.SetActive(true);
         }
 
@@ -47,7 +50,7 @@ namespace LevelTimeChange.LevelsLoader {
         /// scene is loaded.
         /// </summary>
         public void DeactivateLevel() {
-            _logger.Log($"Scene {currentLevel.sceneName} is {"deactivating" % Colorize.Red}");
+            _logger.Log($"Scene {currentLevel} is {"deactivating" % Colorize.Red}");
             levelContent.SetActive(false);
             LevelsManager.Instance.ReportForDiscovery(currentLevel);
         }
@@ -58,12 +61,17 @@ namespace LevelTimeChange.LevelsLoader {
         /// </summary>
         /// <param name="levelToDiscover">Level ready for discovery process.</param>
         public void MakeDiscovery(LevelInfoSO levelToDiscover) {
-            _logger.Log($"Scene {currentLevel.sceneName % Colorize.Cyan} is making discovery with {levelToDiscover.sceneName % Colorize.Cyan}");
+            _logger.Log($"Scene {currentLevel} {"started" % Colorize.Green} discovery with {levelToDiscover}");
             foreach (var levelPortal in _teleports) {
                 if (levelPortal.destinedLevel == levelToDiscover) {
                     levelPortal.MakeDiscovery(currentLevel);
                 }
             }
+            _logger.Log($"Scene {currentLevel} {"finished" % Colorize.Orange} discovery with {levelToDiscover}");
+            // TODO: Remove
+            // foreach (var teleport in _teleports) {
+            //     _logger.Log($"Match for portal {teleport} is {teleport._matchingPortal}");
+            // }
         }
 
         /// <summary>
@@ -79,13 +87,36 @@ namespace LevelTimeChange.LevelsLoader {
                     return portal;
                 }
             }
-            throw new Exception($"No match found for portal {sourceLevel} on {this}");
+            throw new Exception($"No match found for portal {sourcePortal} on {currentLevel}");
+        }
+
+        /// <summary>
+        /// Sets object's parent to current scene's content.
+        /// </summary>
+        /// <param name="levelObject">Object that should be part of the current scene</param>
+        public void AddLevelObject(GameObject levelObject) {
+            levelObject.transform.SetParent(levelContent.transform);
         }
 
         private void FindTeleportsOnScene() {
-            foreach (var teleportsHolder in teleportsHolders) {
-                var children = teleportsHolder.GetComponentsInChildren<LevelPortal>();
+            if (pastPortalHolder) {
+                var children = pastPortalHolder.GetComponentsInChildren<LevelPortal>();
                 foreach (var levelPortal in children) {
+                    levelPortal.SetTimeLine(TimeLine.Past);
+                    _teleports.Add(levelPortal);
+                }
+            }
+            if (presentPortalHolder) {
+                var children = presentPortalHolder.GetComponentsInChildren<LevelPortal>();
+                foreach (var levelPortal in children) {
+                    levelPortal.SetTimeLine(TimeLine.Present);
+                    _teleports.Add(levelPortal);
+                }
+            }
+            if (futurePortalHolder) {
+                var children = futurePortalHolder.GetComponentsInChildren<LevelPortal>();
+                foreach (var levelPortal in children) {
+                    levelPortal.SetTimeLine(TimeLine.Future);
                     _teleports.Add(levelPortal);
                 }
             }

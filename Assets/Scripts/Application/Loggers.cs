@@ -10,7 +10,8 @@ namespace Application {
             INVENTORY,
             INTERACTIONS,
             INTERACTABLE_OBJECTS,
-            ITEMS
+            ITEMS,
+            PORTALS
         }
         
         static Loggers() {
@@ -20,9 +21,17 @@ namespace Application {
             LoggersList.Add(
                 LoggerType.LEVEL_SYSTEM,
                 new CLogger(LoggerType.LEVEL_SYSTEM) {
-                    LogEnabled = false
+                    LogEnabled = true
                 }
                 );
+            
+            // Logger for platform (level) changing system
+            LoggersList.Add(
+                LoggerType.PORTALS,
+                new CLogger(LoggerType.PORTALS) {
+                    LogEnabled = true
+                }
+            );
             
             // Logger for Inventory system
             LoggersList.Add(

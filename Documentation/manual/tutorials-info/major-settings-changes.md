@@ -16,6 +16,15 @@ This page will list the most important settings that have been changed, why they
 |**Reason for change**|Ability to use `dynamic` type|
 |**Possible implications**|Worse cross-platform compatibility, problems with building for different platforms might arise|
 
+|MSC #2|Gravity|
+|:---:|:---:|
+|**Pull Request**|[NAME OF PR](LINK TO PR)|
+|**Setting**|`Project Settings -> Physics 2D -> Gravity`|
+|**Old Value**|X:0 Y:-9.81|
+|**New Value**|X:0 Y:0|
+|**Reason for change**|We don't need gravity in our game.|
+|**Possible implications**|Object with RigidBody will not fall by default.|
+
 <!-- TEMPLATE
 
 |MSC #1|Api Compatability Level|

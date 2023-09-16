@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Application;
+using CoinPackage.Debugging;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -10,28 +12,39 @@ namespace LevelTimeChange.LevelsLoader {
 	/// it tries to discover matching teleport on another scene. When successful, it is able to teleport
 	/// player to this scene.
 	/// </summary>
-	public class LevelPortal : MonoBehaviour {
-		[Tooltip("On which Timeline this teleport is.")]
-		[SerializeField] public TimeLine teleportTimeline;
-		[Tooltip("To what level this teleport teleports.")]
+    public class LevelPortal : MonoBehaviour {
+        [Tooltip("To what level this teleport teleports.")]
 		[SerializeField] public LevelInfoSO destinedLevel;
+        [FormerlySerializedAs("_teleportPoint")]
+        [Tooltip("Object that marks where player should be teleported to.")]
+        [SerializeField] private Transform teleportPoint;
 
-		/// <summary>
-		/// GameObject to which this teleports teleport.
-		/// </summary>
-		private Transform _teleportPoint;
-
-		/// <summary>
+        /// <summary>
 		/// Portal that matches this portal on another scene.
 		/// </summary>
 		private LevelPortal _matchingPortal;
+        
+        /// <summary>
+        /// TimeLine the portal is on
+        /// </summary>
+        private TimeLine _teleportTimeline;
 
-		/// <summary>
+        private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.PORTALS];
+
+        /// <summary>
+        /// Set the timeline of the portal. Used during loading scenes.
+        /// </summary>
+        /// <param name="timeLine"></param>
+        public void SetTimeLine(TimeLine timeLine) {
+            _teleportTimeline = timeLine;
+        }
+
+        /// <summary>
 		/// Returns point in the world this teleports point to.
 		/// </summary>
 		/// <returns>Point in game.</returns>
 		public Vector3 GetTeleportPoint() {
-			return _teleportPoint.transform.position;
+			return teleportPoint.transform.position;
 		}
 
 		/// <summary>
@@ -42,7 +55,8 @@ namespace LevelTimeChange.LevelsLoader {
 		public void MakeDiscovery(LevelInfoSO currentLevel) {
 			_matchingPortal = LevelsManager.Instance.LoadedLevels[destinedLevel]
 				.ReturnMatchingPortal(currentLevel, this);
-		}
+            _logger.Log($"Discovery match for portal {this}: {_matchingPortal}");
+        }
 
 		/// <summary>
 		/// Check if provided portal matches this portal.
@@ -51,18 +65,19 @@ namespace LevelTimeChange.LevelsLoader {
 		/// <param name="sourcePortal">Potential level match.</param>
 		/// <returns>`True` if portal is a match, `False` otherwise.</returns>
 		public bool IsMatch(LevelInfoSO sourceLevel, LevelPortal sourcePortal) {
-			if (sourceLevel == destinedLevel && sourcePortal.teleportTimeline == this.teleportTimeline) {
-				return true;
+            if (sourceLevel == destinedLevel && sourcePortal._teleportTimeline == this._teleportTimeline) {
+                return true;
 			}
 			return false;
 		}
-		
-		private void Awake() {
-			_teleportPoint = transform.GetChild(0);
-		}
 
-		private void OnTriggerEnter2D(Collider2D other) {
+        private void OnTriggerEnter2D(Collider2D other) {
+            _logger.Log($"Portal {this} activated, teleporting to {_matchingPortal}");
 			LevelsManager.Instance.ChangeLevel(destinedLevel, _matchingPortal);
 		}
+
+        public override string ToString() {
+            return $"[Portal, TL: {_teleportTimeline}, DST: {destinedLevel}]" % Colorize.Cyan;
+        }
 	}
 }
