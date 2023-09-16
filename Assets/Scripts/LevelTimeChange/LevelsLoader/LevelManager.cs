@@ -25,12 +25,14 @@ namespace LevelTimeChange.LevelsLoader {
         private List<LevelPortal> _teleports;
         private CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.LEVEL_SYSTEM];
 
+        public List<LevelInfoSO> neighborLevels = new List<LevelInfoSO>();
+
         private void Awake() {
             _teleports = new List<LevelPortal>();
 
             _logger.Log($"New scene has awoken: {currentLevel}");
             LevelsManager.Instance.LoadedLevels.Add(currentLevel, this);
-
+            _logger.Log($"New scene has awoken: {currentLevel.sceneName % Colorize.Cyan}");
             FindTeleportsOnScene();
             SetTimelinesPositions();
             DeactivateLevel();
@@ -164,7 +166,7 @@ namespace LevelTimeChange.LevelsLoader {
                     neighourLevelsList.Add(currentPortal.destinedLevel);
                 }
             }
-            currentLevel.neighbourLevels = neighourLevelsList.ToArray();
+            neighborLevels = neighourLevelsList.ToList();
         }
     }
 
