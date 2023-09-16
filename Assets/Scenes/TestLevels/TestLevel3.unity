@@ -188,12 +188,20 @@ PrefabInstance:
       objectReference: {fileID: 490441855}
     - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
       propertyPath: teleportsHolders.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
       propertyPath: teleportsHolders.Array.data[0]
       value: 
       objectReference: {fileID: 1846353121}
+    - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
+      propertyPath: teleportsHolders.Array.data[1]
+      value: 
+      objectReference: {fileID: 33477789}
+    - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
+      propertyPath: teleportsHolders.Array.data[2]
+      value: 
+      objectReference: {fileID: 1560480499}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
 --- !u!1 &33477789
@@ -726,6 +734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 457612523}
   - component: {fileID: 457612524}
+  - component: {fileID: 457612525}
   m_Layer: 0
   m_Name: TeleportSouth
   m_TagString: Untagged
@@ -744,7 +753,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1140527272}
   m_Father: {fileID: 33477790}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -800,6 +810,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &457612525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457612522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b058de1a6a3fd4681235c96be079fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportTimeline: 0
+  destinedLevel: {fileID: 11400000, guid: 8b206097dbe4f384187ebfb5db2cd1c7, type: 2}
+  teleportPoint: {fileID: 1140527272}
 --- !u!1 &490441855
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +849,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490441855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.417999, y: 14.639084, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1762,6 +1787,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1140527271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1140527272}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1140527272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140527271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.14, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 457612523}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1153847052
 GameObject:
   m_ObjectHideFlags: 0
@@ -2374,6 +2430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1411404433}
   - component: {fileID: 1411404434}
+  - component: {fileID: 1411404435}
   m_Layer: 0
   m_Name: TeleportSouth
   m_TagString: Untagged
@@ -2392,7 +2449,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1740665217}
   m_Father: {fileID: 1560480500}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -2448,6 +2506,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1411404435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411404432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b058de1a6a3fd4681235c96be079fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportTimeline: 2
+  destinedLevel: {fileID: 11400000, guid: 8b206097dbe4f384187ebfb5db2cd1c7, type: 2}
+  teleportPoint: {fileID: 1740665217}
 --- !u!1 &1560480499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,6 +2626,37 @@ Transform:
   - {fileID: 114425176}
   - {fileID: 782484241}
   m_Father: {fileID: 490441856}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1740665216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1740665217}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1740665217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740665216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.47, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1411404433}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1756826931
@@ -2972,6 +3076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportTimeline: 1
   destinedLevel: {fileID: 11400000, guid: 8b206097dbe4f384187ebfb5db2cd1c7, type: 2}
+  teleportPoint: {fileID: 709695692}
 --- !u!61 &1907062609
 BoxCollider2D:
   m_ObjectHideFlags: 0

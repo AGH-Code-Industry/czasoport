@@ -22,19 +22,24 @@ namespace Items
             // GetComponent<CircleCollider2D>().isTrigger = true;
             if (gameObject.layer != LayerMask.NameToLayer("Interactables")) {
                 _logger.LogWarning(
-                    $"Item {itemSO.itemName % Colorize.Magenta} {"is not" % Colorize.Red} in {"Interactables" % Colorize.Green} layer.",
+                    $"Item {this} {"is not" % Colorize.Red} in {"Interactables" % Colorize.Green} layer.",
                     this
                     );
             }
         }
 
         public void InteractionHand() {
-            _logger.Log($"Item {itemSO.itemName % Colorize.Magenta} is being {"short interacted" % Colorize.Green} with.", this);
-            Inventory.Instance.InsertItem(this);
+            _logger.Log($"Item {this} is being {"short interacted" % Colorize.Green} with.", this);
         }
 
         public void LongInteractionHand() {
-            _logger.Log($"Item {itemSO.itemName % Colorize.Magenta} is being {"long interacted" % Colorize.Cyan} with.", this);
+            _logger.Log($"Item {this} is being {"long interacted" % Colorize.Cyan} with.", this);
+        }
+        
+        
+
+        public override string ToString() {
+            return $"[Item, {itemSO.name}]" % Colorize.Purple;
         }
     }
 }

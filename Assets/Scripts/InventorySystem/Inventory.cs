@@ -7,6 +7,7 @@ using CoinPackage.Debugging;
 using CustomInput;
 using InventorySystem.EventArguments;
 using Items;
+using LevelTimeChange.LevelsLoader;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,6 +21,7 @@ namespace InventorySystem {
         public event EventHandler<ItemStateChangedEventArgs> ItemStateChanged;
 
         public InventorySettings settings;
+        public GameObject itemHideout;
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INVENTORY];
         private Item[] _items;
@@ -167,6 +169,8 @@ namespace InventorySystem {
             });
         }
 
-        private void OnDropItemClicked(InputAction.CallbackContext ctx) { }
+        private void OnDropItemClicked(InputAction.CallbackContext ctx) {
+            
+        }
     }
 }

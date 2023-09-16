@@ -1,3 +1,4 @@
+using CoinPackage.Debugging;
 using UnityEngine;
 
 namespace LevelTimeChange.LevelsLoader {
@@ -12,6 +13,10 @@ namespace LevelTimeChange.LevelsLoader {
 		
 		[Tooltip("All levels to which player can get from this level.")]
 		public LevelInfoSO[] neighbourLevels;
+
+        public override string ToString() {
+            return $"[Level: {sceneName}]" % Colorize.Magenta;
+        }
 	}
 }
 
