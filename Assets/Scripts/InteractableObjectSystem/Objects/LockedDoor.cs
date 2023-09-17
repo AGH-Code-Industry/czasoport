@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CoinPackage.Debugging;
 using Items;
 using UnityEngine;
 
@@ -25,11 +26,13 @@ namespace InteractableObjectSystem.Objects {
                 OpenDoor();
                 return true;
             }
+            CDebug.Log("Bad key");
             return false;
         }
 
         private void OpenDoor() {
             state = DoorState.Unlocked;
+            CDebug.Log("Door unlocked");
         }
     }
 }

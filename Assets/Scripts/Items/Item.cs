@@ -22,7 +22,6 @@ namespace Items
         private CircleCollider2D _collider;
         
         private void Awake() {
-            // GetComponent<CircleCollider2D>().isTrigger = true;
             if (gameObject.layer != LayerMask.NameToLayer("Interactables")) {
                 _logger.LogWarning(
                     $"Item {this} {"is not" % Colorize.Red} in {"Interactables" % Colorize.Green} layer.",
