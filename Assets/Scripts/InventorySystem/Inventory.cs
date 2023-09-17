@@ -21,7 +21,7 @@ namespace InventorySystem {
         public event EventHandler<ItemStateChangedEventArgs> ItemStateChanged;
 
         public InventorySettings settings;
-        public GameObject itemHideout;
+        public Transform itemHideout;
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INVENTORY];
         private Item[] _items;
@@ -111,24 +111,28 @@ namespace InventorySystem {
                     Slot = _selectedSlot,
                     Item = item
                 });
-                return true;
             }
-
-            // Put item into first empty slot
-            for (int i = 0; i < settings.itemsCount; i++) {
-                if (_items[i] is null) {
-                    _items[i] = item;
-                    _itemsCount++;
-                    ItemInserted?.Invoke(this, new ItemInsertedEventArgs() {
-                        Slot = i,
-                        Item = item
-                    });
-
-                    return true;
+            else { // Put item into first empty slot
+                for (int i = 0; i < settings.itemsCount; i++) {
+                    if (_items[i] is null) {
+                        _items[i] = item;
+                        _itemsCount++;
+                        ItemInserted?.Invoke(this, new ItemInsertedEventArgs() {
+                            Slot = i,
+                            Item = item
+                        });
+                        break;
+                    }
                 }
             }
-
-            return false;
+            
+            // Hide item
+            item.transform.SetParent(itemHideout);
+            item.transform.position = new Vector3(0f, 0f, 0f);
+            item.GetComponent<SpriteRenderer>().enabled = false;
+            item.GetComponent<CircleCollider2D>().enabled = false;
+            
+            return true;
         }
 
         /// <summary>

@@ -9,6 +9,7 @@ using InventorySystem;
 namespace Items
 {
     [RequireComponent(typeof(CircleCollider2D))]
+    [RequireComponent(typeof(SpriteRenderer))]
     [RequireComponent(typeof(HighlightInteraction))]
     public class Item : MonoBehaviour, IHandInteractable, ILongHandInteractable
     {
@@ -17,7 +18,9 @@ namespace Items
         public ItemSO ItemSO => itemSO;
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.ITEMS];
-
+        private SpriteRenderer _spriteRenderer;
+        private CircleCollider2D _collider;
+        
         private void Awake() {
             // GetComponent<CircleCollider2D>().isTrigger = true;
             if (gameObject.layer != LayerMask.NameToLayer("Interactables")) {
@@ -30,13 +33,12 @@ namespace Items
 
         public void InteractionHand() {
             _logger.Log($"Item {this} is being {"short interacted" % Colorize.Green} with.", this);
+            Inventory.Instance.InsertItem(this);
         }
 
         public void LongInteractionHand() {
             _logger.Log($"Item {this} is being {"long interacted" % Colorize.Cyan} with.", this);
         }
-        
-        
 
         public override string ToString() {
             return $"[Item, {itemSO.name}]" % Colorize.Purple;
