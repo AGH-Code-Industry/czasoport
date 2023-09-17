@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Application;
 using CoinPackage.Debugging;
 using UnityEngine;
+using Settings;
 
 namespace LevelTimeChange.LevelsLoader {
     /// <summary>
@@ -27,6 +28,7 @@ namespace LevelTimeChange.LevelsLoader {
             _logger.Log($"New scene has awoken: {currentLevel.sceneName % Colorize.Cyan}");
             
             FindTeleportsOnScene();
+            SetTimelinesPositions();
             DeactivateLevel();
         }
 
@@ -88,5 +90,41 @@ namespace LevelTimeChange.LevelsLoader {
                 }
             }
         }
+
+		private void SetTimelinesPositions() {
+			var timelines = FindTimelineMaps();
+			if (timelines == null) {
+				_logger.LogError($"Failed to find timelines in level {currentLevel.sceneName}." +
+                                  "Please make sure there are Past, Present, Future game objects under Content game object.");
+			}
+			MoveTimelines(timelines, DeveloperSettings.Instance.tpcSettings.offsetFromPresentPlatform);
+		}
+
+		private TimelineMaps FindTimelineMaps() {
+			var past = levelContent.transform.Find("Past");
+			var present = levelContent.transform.Find("Present");
+			var future = levelContent.transform.Find("Future");
+			if (past == null || present == null || future == null) {
+				return null;
+			}
+			return new TimelineMaps(past, present, future);
+		}
+
+		private void MoveTimelines(TimelineMaps timelines, Vector3 offset) {
+			timelines.past.position = timelines.present.position - offset;
+			timelines.future.position = timelines.present.position + offset;
+		}
     }
+
+	class TimelineMaps {
+		public Transform past {get; set;}
+		public Transform present {get; set;}
+		public Transform future {get; set;}
+
+		public TimelineMaps(Transform past, Transform present, Transform future) {
+			this.past = past;
+			this.present = present;
+			this.future = future;
+		}
+	}
 }
