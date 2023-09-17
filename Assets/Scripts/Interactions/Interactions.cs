@@ -90,7 +90,21 @@ namespace Interactions {
         }
 
         void OnDrawGizmos() {
-            Gizmos.DrawSphere(transform.position, settings.defaultInteractionRadius);
+            DrawInteractablesAreaGizmos();
+            DrawLinesToInteractablesGizmos();
+        }
+
+        private void DrawLinesToInteractablesGizmos() {
+            var lines = new Vector3[_interactableObjects.Count() * 2];
+            for (int i = 0; i < _interactableObjects.Count(); i++) {
+                lines[i * 2] = transform.position;
+                lines[i * 2 + 1] = _interactableObjects[i].transform.position;
+            }
+            Gizmos.DrawLineList(lines);
+        }
+
+        private void DrawInteractablesAreaGizmos() {
+            Gizmos.DrawSphere(transform.position, settings.defaultInteractionRadius);            
         }
 
         /// <summary>
