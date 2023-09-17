@@ -89,6 +89,21 @@ namespace Interactions {
             }
         }
 
+        void OnDrawGizmos() {
+            DrawInteractablesAreaGizmos();
+            DrawLinesToInteractablesGizmos();
+        }
+
+        private void DrawLinesToInteractablesGizmos() {
+            foreach(var interactable in _interactableObjects) {
+                Gizmos.DrawLine(transform.position, interactable.transform.position);
+            }
+        }
+
+        private void DrawInteractablesAreaGizmos() {
+            Gizmos.DrawWireSphere(transform.position, settings.defaultInteractionRadius);            
+        }
+
         /// <summary>
         /// Update selected object
         /// </summary>
