@@ -75,7 +75,7 @@ namespace LevelTimeChange.LevelsLoader {
             _currentLevelManager = newLevel;
             oldLevel.DeactivateLevel();
 
-            player.position = destinationPortal.GetTeleportPoint(); // TODO: Change how we move the player
+            _player.position = destinationPortal.GetTeleportPoint(); // TODO: Change how we move the player
 
             // oldLevel.DeactivateLevel();
 
