@@ -337,7 +337,7 @@
   "api/LevelTimeChange.LevelsLoader.LevelsManager.html": {
     "href": "api/LevelTimeChange.LevelsLoader.LevelsManager.html",
     "title": "Class LevelsManager | Czasoport Documentation",
-    "keywords": "Class LevelsManager Namespace LevelTimeChange.LevelsLoader Manager of levels loading and switching system. Central point of communication between rest of included components. It is a singleton, attached to object present through the game. public class LevelsManager : MonoBehaviour Inheritance object LevelsManager Fields LoadedLevels All currently loaded levels. public Dictionary<LevelInfoSO, LevelManager> LoadedLevels Field Value Dictionary<LevelInfoSO, LevelManager> player public Transform player Field Value Transform Properties CurrentLevelManager public LevelManager CurrentLevelManager { get; } Property Value LevelManager Instance Singleton instance of this class. public static LevelsManager Instance { get; } Property Value LevelsManager Methods ChangeLevel(LevelInfoSO, LevelPortal) Change active level. public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) Parameters destinedLevelInfo LevelInfoSO Level to be switched to. destinationPortal LevelPortal Portal to be switched to. ReportForDiscovery(LevelInfoSO) This method is used by the LevelManager of some scene to let the system know that the scene has been loaded and is ready for discovery process from current scene. public void ReportForDiscovery(LevelInfoSO level) Parameters level LevelInfoSO"
+    "keywords": "Class LevelsManager Namespace LevelTimeChange.LevelsLoader Manager of levels loading and switching system. Central point of communication between rest of included components. It is a singleton, attached to object present through the game. public class LevelsManager : MonoBehaviour Inheritance object LevelsManager Fields LoadedLevels All currently loaded levels. public Dictionary<LevelInfoSO, LevelManager> LoadedLevels Field Value Dictionary<LevelInfoSO, LevelManager> Properties CurrentLevelManager public LevelManager CurrentLevelManager { get; } Property Value LevelManager Instance Singleton instance of this class. public static LevelsManager Instance { get; } Property Value LevelsManager Methods ChangeLevel(LevelInfoSO, LevelPortal) Change active level. public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) Parameters destinedLevelInfo LevelInfoSO Level to be switched to. destinationPortal LevelPortal Portal to be switched to. ReportForDiscovery(LevelInfoSO) This method is used by the LevelManager of some scene to let the system know that the scene has been loaded and is ready for discovery process from current scene. public void ReportForDiscovery(LevelInfoSO level) Parameters level LevelInfoSO"
   },
   "api/LevelTimeChange.LevelsLoader.html": {
     "href": "api/LevelTimeChange.LevelsLoader.html",
@@ -383,6 +383,16 @@
     "href": "api/LevelTimeChange.html",
     "title": "Namespace LevelTimeChange | Czasoport Documentation",
     "keywords": "Namespace LevelTimeChange Enums TimeLine"
+  },
+  "api/PlayerScripts.Player.html": {
+    "href": "api/PlayerScripts.Player.html",
+    "title": "Class Player | Czasoport Documentation",
+    "keywords": "Class Player Namespace PlayerScripts public class Player : MonoBehaviour Inheritance object Player Fields Instance public static Player Instance Field Value Player"
+  },
+  "api/PlayerScripts.html": {
+    "href": "api/PlayerScripts.html",
+    "title": "Namespace PlayerScripts | Czasoport Documentation",
+    "keywords": "Namespace PlayerScripts Classes Player"
   },
   "api/Settings.Developer.ApplicationSettingsSO.html": {
     "href": "api/Settings.Developer.ApplicationSettingsSO.html",
