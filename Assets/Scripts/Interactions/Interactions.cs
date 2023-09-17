@@ -89,6 +89,10 @@ namespace Interactions {
             }
         }
 
+        void OnDrawGizmos() {
+            Gizmos.DrawSphere(transform.position, settings.defaultInteractionRadius);
+        }
+
         /// <summary>
         /// Update selected object
         /// </summary>
