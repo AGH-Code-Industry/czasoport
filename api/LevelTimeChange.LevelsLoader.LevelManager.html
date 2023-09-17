@@ -138,7 +138,7 @@ level content, talks with <code>LevelsManager</code> and <code>LevelPortal</code
 
   <h3 id="LevelTimeChange_LevelsLoader_LevelManager_ActivateLevel" data-uid="LevelTimeChange.LevelsLoader.LevelManager.ActivateLevel">
   ActivateLevel()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>It will set all level content to be active.
@@ -162,11 +162,44 @@ Use it only when this level is going to be one played on by the player.</p>
 
 
 
+  <a id="LevelTimeChange_LevelsLoader_LevelManager_AddLevelObject_" data-uid="LevelTimeChange.LevelsLoader.LevelManager.AddLevelObject*"></a>
+
+  <h3 id="LevelTimeChange_LevelsLoader_LevelManager_AddLevelObject_GameObject_" data-uid="LevelTimeChange.LevelsLoader.LevelManager.AddLevelObject(GameObject)">
+  AddLevelObject(GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets object's parent to current scene's content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddLevelObject(GameObject levelObject)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>levelObject</code> <span class="xref">GameObject</span></dt>
+    <dd><p>Object that should be part of the current scene</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="LevelTimeChange_LevelsLoader_LevelManager_DeactivateLevel_" data-uid="LevelTimeChange.LevelsLoader.LevelManager.DeactivateLevel*"></a>
 
   <h3 id="LevelTimeChange_LevelsLoader_LevelManager_DeactivateLevel" data-uid="LevelTimeChange.LevelsLoader.LevelManager.DeactivateLevel">
   DeactivateLevel()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>It will set all level content to be inactive and report to <code>LevelsManager</code> that
@@ -195,7 +228,7 @@ scene is loaded.</p>
 
   <h3 id="LevelTimeChange_LevelsLoader_LevelManager_MakeDiscovery_LevelTimeChange_LevelsLoader_LevelInfoSO_" data-uid="LevelTimeChange.LevelsLoader.LevelManager.MakeDiscovery(LevelTimeChange.LevelsLoader.LevelInfoSO)">
   MakeDiscovery(LevelInfoSO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Start discovery process with specified level. It tells portals on this scene
@@ -229,7 +262,7 @@ to try to match with portals on another one.</p>
 
   <h3 id="LevelTimeChange_LevelsLoader_LevelManager_ReturnMatchingPortal_LevelTimeChange_LevelsLoader_LevelInfoSO_LevelTimeChange_LevelsLoader_LevelPortal_" data-uid="LevelTimeChange.LevelsLoader.LevelManager.ReturnMatchingPortal(LevelTimeChange.LevelsLoader.LevelInfoSO,LevelTimeChange.LevelsLoader.LevelPortal)">
   ReturnMatchingPortal(LevelInfoSO, LevelPortal)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Used in discovery process. For specified portal and source level, return matching portal on this scene.</p>
