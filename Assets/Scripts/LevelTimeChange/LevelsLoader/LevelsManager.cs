@@ -127,7 +127,7 @@ namespace LevelTimeChange.LevelsLoader {
 				}
 			}
 			foreach (var scene in scenesToRemove) {
-				UnloadLevel(scene);
+				UnLoadLevel(scene);
 			}
 		}
 	}	
