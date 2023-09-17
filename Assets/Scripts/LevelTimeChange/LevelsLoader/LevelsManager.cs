@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Application;
+using Application.GlobalExceptions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,6 +20,8 @@ namespace LevelTimeChange.LevelsLoader {
 		/// </summary>
 		public static LevelsManager Instance { get; private set; }
 
+        public LevelManager CurrentLevelManager => _currentLevelManager;
+
 		/// <summary>
 		/// All currently loaded levels.
 		/// </summary>
@@ -27,7 +30,7 @@ namespace LevelTimeChange.LevelsLoader {
 		[SerializeField] private LevelInfoSO startingLevel; // TODO: This must be dynamic based on level save
 
 		private LevelManager _currentLevelManager;
-		private readonly CLogger _logger = Loggers.LoggersList["LEVEL_SYSTEM"];
+		private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.LEVEL_SYSTEM];
 		private bool _isLoading = true;
 		
 		//TODO: Remove this temporary abomination
@@ -36,6 +39,7 @@ namespace LevelTimeChange.LevelsLoader {
 		private void Awake() {
 			if (Instance != null) {
 				CDebug.LogError($"{this} tried to overwrite current singleton instance.", this);
+				throw new SingletonOverrideException($"{this} tried to overwrite current singleton instance.");
 			}
 			Instance = this;
 			
@@ -59,18 +63,21 @@ namespace LevelTimeChange.LevelsLoader {
 		/// <param name="destinedLevelInfo">Level to be switched to.</param>
 		/// <param name="destinationPortal">Portal to be switched to.</param>
 		public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) {
-			_logger.Log($"Changing scene, destination: {destinedLevelInfo.sceneName}");
+			_logger.Log($"Changing level to {destinedLevelInfo}, destined portal: {destinationPortal}");
 			
 			// Order of actions in this function is crucial, do not change it unless
 			// you know what you are doing
+            // FOR REAL, I WROTE THIS, THEN CHANGED IT AND IT BROKE
 			var newLevel = LoadedLevels[destinedLevelInfo];
 			var oldLevel = _currentLevelManager;
-			
-			newLevel.ActivateLevel();
-			_currentLevelManager = newLevel;
-			player.position = destinationPortal.GetTeleportPoint(); // TODO: Change how we move the player
-			
-			oldLevel.DeactivateLevel();
+
+            newLevel.ActivateLevel();
+            _currentLevelManager = newLevel;
+            oldLevel.DeactivateLevel();
+
+            player.position = destinationPortal.GetTeleportPoint(); // TODO: Change how we move the player
+
+            // oldLevel.DeactivateLevel();
 
 			LoadLevels(destinedLevelInfo);
 			UnloadLevels(destinedLevelInfo);
@@ -83,15 +90,15 @@ namespace LevelTimeChange.LevelsLoader {
 		/// <param name="level"></param>
 		public void ReportForDiscovery(LevelInfoSO level) {
 			if (_isLoading) {
-				_logger.Log($"Level {level.sceneName} reported for discovery, {"omitted" % Colorize.Red}.");
+				_logger.Log($"Level {level} reported for discovery, {"omitted" % Colorize.Red}.");
 				return;
 			}
-			_logger.Log($"Level {level.sceneName} reported for discovery, {"discovering" % Colorize.Green}.");
+			_logger.Log($"Level {level} reported for discovery, {"discovering" % Colorize.Green}.");
 			_currentLevelManager.MakeDiscovery(level);
 		}
 
 		private void LoadLevel(LevelInfoSO level) { 
-			_logger.Log($"New scene is being loaded: {level.sceneName % Colorize.Magenta}");
+			_logger.Log($"New scene is being loaded: {level}");
 			SceneManager.LoadSceneAsync(level.sceneName, LoadSceneMode.Additive);
 		}
 
@@ -104,8 +111,8 @@ namespace LevelTimeChange.LevelsLoader {
 			}
 		}
 
-		private void UnloadLevel(LevelInfoSO level) {
-			_logger.Log($"Scene is being unloaded: {level.sceneName % Colorize.Magenta}");
+		private void UnLoadLevel(LevelInfoSO level) {
+			_logger.Log($"Scene is being unloaded: {level}");
 			SceneManager.UnloadSceneAsync(level.sceneName);
 			LoadedLevels.Remove(level);
 		}
@@ -120,7 +127,7 @@ namespace LevelTimeChange.LevelsLoader {
 				}
 			}
 			foreach (var scene in scenesToRemove) {
-				UnloadLevel(scene);
+				UnLoadLevel(scene);
 			}
 		}
 	}	
