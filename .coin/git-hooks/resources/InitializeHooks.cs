@@ -8,8 +8,11 @@ using UnityEditor;
 using Debug = UnityEngine.Debug;
 
 [InitializeOnLoad]
-public static class InitializeHooks
-{
+public static class InitializeHooks {
+    private static readonly char Sep = Path.DirectorySeparatorChar;
+    private static readonly string Source = $".{Sep}.coin{Sep}git-hooks{Sep}hooks";
+    private static readonly string Destination = $".{Sep}.git{Sep}hooks";
+    
     static InitializeHooks() {
         if (CheckIfShouldRun()) {
             Initialize();
@@ -18,7 +21,7 @@ public static class InitializeHooks
 
     private static bool CheckIfShouldRun() {
         if (!Directory.Exists("./.coin/git-hooks")) {
-            CDebug.LogError("Directory .coin/git-hooks could not be found, hooks will not be initialized.");
+            Debug.LogError("Directory .coin/git-hooks could not be found, hooks will not be initialized.");
             return false;
         }
         if (!File.Exists("./.coin/git-hooks/lastinit")) {
@@ -32,11 +35,16 @@ public static class InitializeHooks
     }
 
     private static void Initialize() {
-        CDebug.Log("Initializing hooks...");
-        Process p = new Process();
-        p.StartInfo = new ProcessStartInfo("python", "./.coin/git-hooks/load-hooks.py");
-        p.Start();
-        while(!p.HasExited){}
+        Debug.Log("Initializing hooks...");
+        var files = Directory.GetFiles(Source);
+        foreach (var file in files) {
+            var hook = file.Split(Sep)[^1];
+            var sourceFile = new FileInfo(file);
+            var newFile = $"{Destination}{Sep}{hook}";
+            Debug.Log($"Hook initialized: {hook}");
+            sourceFile.CopyTo(newFile, true);
+        }
+        Debug.Log("Hook initialization finished!");
     }
 }
 
