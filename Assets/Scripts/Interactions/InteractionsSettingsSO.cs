@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
 namespace Interactions {
-    [CreateAssetMenu(menuName = "Settings/SystemsSettings/InteractionsSettings", fileName = "InteractionsSettings")]
-    public class InteractionsSettings : ScriptableObject {
+    [CreateAssetMenu(menuName = "Settings/InteractionsSettings", fileName = "InteractionsSettings")]
+    public class InteractionsSettingsSO : ScriptableObject {
         [Tooltip("What layer name is used to find interactable items on map.")]
         public string interactablesLayer = "Interactables";
 

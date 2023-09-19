@@ -1,6 +1,12 @@
+using Application;
 using CoinPackage.Debugging;
-using Settings.Developer;
+using Interactions;
+using InventorySystem;
+using LevelTimeChange;
+using PlayerScripts;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Settings {
     
@@ -10,7 +16,29 @@ namespace Settings {
     public class DeveloperSettings : MonoBehaviour {
         public static DeveloperSettings Instance;
 
+        /// <summary>
+        /// Settings for Time Change and Platform Change systems
+        /// </summary>
         public TimePlatformChangeSettingsSO tpcSettings;
+        
+        /// <summary>
+        /// Player settings
+        /// </summary>
+        public PlayerSettingsSO playerSettings;
+        
+        /// <summary>
+        /// Inventory settings
+        /// </summary>
+        public InventorySettingsSO invSettings;
+        
+        /// <summary>
+        /// Interactions settings
+        /// </summary>
+        public InteractionsSettingsSO intSettings;
+        
+        /// <summary>
+        /// Application settings
+        /// </summary>
         public ApplicationSettingsSO appSettings;
         
         private void Awake() {

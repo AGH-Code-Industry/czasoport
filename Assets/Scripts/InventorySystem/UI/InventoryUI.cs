@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using CoinPackage.Debugging;
 using UnityEngine;
 using InventorySystem.EventArguments;
+using Settings;
 
 namespace InventorySystem.UI {
     /// <summary>
@@ -23,7 +24,7 @@ namespace InventorySystem.UI {
             GameObject slot;
             float slotW = (slotPrefab.GetComponent<RectTransform>().rect.width / 2);
             float slotRealMarginY = (slotPrefab.GetComponent<RectTransform>().rect.height / 2) + slotMarginY;
-            for (int i = 0; i < Inventory.Instance.settings.itemsCount; i++) {
+            for (int i = 0; i < DeveloperSettings.Instance.invSettings.itemsCount; i++) {
                 slot = Instantiate(slotPrefab, transform);
                 slot.transform.position = new Vector3((slotW * (1 + 2 * i)) + (slotMarginX * (i + 1)), slotRealMarginY, 0);
                 _slots.Add(slot.GetComponent<Slot>());
