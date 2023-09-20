@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using CustomInput;
 using UnityEngine.InputSystem;
+using Settings;
 
 namespace LevelTimeChange.TimeChange {
     /// <summary>
@@ -19,10 +20,13 @@ namespace LevelTimeChange.TimeChange {
         public TimeLine actualTime = TimeLine.Present;
 
         private List<CheckCollider> _boxes;
-        [SerializeField]private Vector3 _timeJump; //PÓKI NIE MA SKŁADANIA PLANSZY
+        private DeveloperSettings _settings;
+        private Vector3 _timeJump;
         private TimeLine _newTimeLine;
 
         private void Start() {
+            _settings = DeveloperSettings.Instance;
+            _timeJump = _settings.tpcSettings.offsetFromPresentPlatform;
             _boxes = new List<CheckCollider>();
             for (int i = -2; i <= 2; i++)
             {
