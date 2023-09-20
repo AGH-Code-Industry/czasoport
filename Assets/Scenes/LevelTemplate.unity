@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 586979987}
   - component: {fileID: 586979988}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 756422942}
   - component: {fileID: 756422943}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 1149341673}
   - component: {fileID: 1149341674}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -538,11 +538,11 @@ PrefabInstance:
     - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
       propertyPath: currentLevel
       value: 
-      objectReference: {fileID: 11400000, guid: ba29c3c907770284e9ce4703aa5a466d, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
       propertyPath: levelContent
       value: 
-      objectReference: {fileID: 1902030874}
+      objectReference: {fileID: 0}
     - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
       propertyPath: teleportsHolders.Array.size
       value: 3
@@ -573,7 +573,7 @@ GameObject:
   - component: {fileID: 1473396003}
   - component: {fileID: 1473396002}
   m_Layer: 0
-  m_Name: Present
+  m_Name: PresentGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -632,8 +632,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 587717043
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -1721,7 +1721,7 @@ GameObject:
   - component: {fileID: 1704053654}
   - component: {fileID: 1704053653}
   m_Layer: 0
-  m_Name: Future
+  m_Name: FutureGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2869,7 +2869,7 @@ GameObject:
   - component: {fileID: 1799315710}
   - component: {fileID: 1799315709}
   m_Layer: 0
-  m_Name: Past
+  m_Name: PastGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2928,8 +2928,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 587717043
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
