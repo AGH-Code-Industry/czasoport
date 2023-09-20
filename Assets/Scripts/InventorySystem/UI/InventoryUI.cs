@@ -12,21 +12,17 @@ namespace InventorySystem.UI {
     public class InventoryUI : MonoBehaviour
     {
         [SerializeField] private GameObject slotPrefab;
-        [SerializeField] private float slotMarginX;
-        [SerializeField] private float slotMarginY;
-        
+        [SerializeField] private Transform container;
+
         private List<Slot> _slots;
         
-        private int _activeId = 0;
+        private int _activeId;
 
         private void Start() {
             _slots = new List<Slot>();
-            GameObject slot;
-            float slotW = (slotPrefab.GetComponent<RectTransform>().rect.width / 2);
-            float slotRealMarginY = (slotPrefab.GetComponent<RectTransform>().rect.height / 2) + slotMarginY;
+            
             for (int i = 0; i < DeveloperSettings.Instance.invSettings.itemsCount; i++) {
-                slot = Instantiate(slotPrefab, transform);
-                slot.transform.position = new Vector3((slotW * (1 + 2 * i)) + (slotMarginX * (i + 1)), slotRealMarginY, 0);
+                GameObject slot = Instantiate(slotPrefab, container);
                 _slots.Add(slot.GetComponent<Slot>());
                 _slots[i].RemoveItem();
                 _slots[i].Disactive();
