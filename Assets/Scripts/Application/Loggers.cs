@@ -11,7 +11,8 @@ namespace Application {
             INTERACTIONS,
             INTERACTABLE_OBJECTS,
             ITEMS,
-            PORTALS
+            PORTALS,
+            PAUSE
         }
         
         static Loggers() {
@@ -61,6 +62,14 @@ namespace Application {
             LoggersList.Add(
                 LoggerType.ITEMS,
                 new CLogger(LoggerType.ITEMS) {
+                    LogEnabled = true
+                }
+            );
+            
+            // Logger for pause menu
+            LoggersList.Add(
+                LoggerType.PAUSE,
+                new CLogger(LoggerType.PAUSE) {
                     LogEnabled = true
                 }
             );

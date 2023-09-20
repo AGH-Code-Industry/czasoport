@@ -655,6 +655,34 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Game"",
+            ""id"": ""19e46316-6712-4054-9454-eb4211345833"",
+            ""actions"": [
+                {
+                    ""name"": ""TogglePause"",
+                    ""type"": ""Button"",
+                    ""id"": ""7088c9b2-580d-4d34-b28e-06c8ea872416"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""819c33cf-b8c8-49cc-b772-fbf5a6883d82"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -686,6 +714,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_Interactions_LongInteraction = m_Interactions.FindAction("LongInteraction", throwIfNotFound: true);
         m_Interactions_ItemInteraction = m_Interactions.FindAction("ItemInteraction", throwIfNotFound: true);
         m_Interactions_LongItemInteraction = m_Interactions.FindAction("LongItemInteraction", throwIfNotFound: true);
+        // Game
+        m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
+        m_Game_TogglePause = m_Game.FindAction("TogglePause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1002,6 +1033,39 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         }
     }
     public InteractionsActions @Interactions => new InteractionsActions(this);
+
+    // Game
+    private readonly InputActionMap m_Game;
+    private IGameActions m_GameActionsCallbackInterface;
+    private readonly InputAction m_Game_TogglePause;
+    public struct GameActions
+    {
+        private @InputActions m_Wrapper;
+        public GameActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @TogglePause => m_Wrapper.m_Game_TogglePause;
+        public InputActionMap Get() { return m_Wrapper.m_Game; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GameActions set) { return set.Get(); }
+        public void SetCallbacks(IGameActions instance)
+        {
+            if (m_Wrapper.m_GameActionsCallbackInterface != null)
+            {
+                @TogglePause.started -= m_Wrapper.m_GameActionsCallbackInterface.OnTogglePause;
+                @TogglePause.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnTogglePause;
+                @TogglePause.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnTogglePause;
+            }
+            m_Wrapper.m_GameActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @TogglePause.started += instance.OnTogglePause;
+                @TogglePause.performed += instance.OnTogglePause;
+                @TogglePause.canceled += instance.OnTogglePause;
+            }
+        }
+    }
+    public GameActions @Game => new GameActions(this);
     public interface IMovementActions
     {
         void OnNavigation(InputAction.CallbackContext context);
@@ -1033,5 +1097,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnLongInteraction(InputAction.CallbackContext context);
         void OnItemInteraction(InputAction.CallbackContext context);
         void OnLongItemInteraction(InputAction.CallbackContext context);
+    }
+    public interface IGameActions
+    {
+        void OnTogglePause(InputAction.CallbackContext context);
     }
 }
