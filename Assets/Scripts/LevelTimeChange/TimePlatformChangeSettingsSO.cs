@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Settings.Developer {
+namespace LevelTimeChange {
     
     /// <summary>
     /// Settings for scene changing and time changing systems.
     /// </summary>
-    [CreateAssetMenu(fileName = "TimePlatformChangeSettings", menuName = "Settings/DeveloperSettings/TimePlatformChangeSettings")]
+    [CreateAssetMenu(fileName = "TimePlatformChangeSettings", menuName = "Settings/TimePlatformChangeSettings")]
     public class TimePlatformChangeSettingsSO : ScriptableObject {
         
         [Header("Time Change Settings")]

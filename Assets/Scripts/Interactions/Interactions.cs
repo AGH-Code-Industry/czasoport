@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Application;
+using Application.GlobalExceptions;
 using CoinPackage.Debugging;
 using CustomInput;
 using Interactions.Interfaces;
@@ -9,13 +10,13 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using InventorySystem;
+using Settings;
+using UnityEngine.Serialization;
 
 namespace Interactions {
     public class Interactions : MonoBehaviour {
         public static Interactions Instance;
 
-        public InteractionsSettings settings;
-        
         // Objects near the player that we can interact with
         private List<GameObject> _interactableObjects;
         // Object that will be the subject of the interaction if _focusedObject is not selected
@@ -23,11 +24,18 @@ namespace Interactions {
         // Object that will be the subject of the interaction if player used 'FocusChange' - specified object
         // he want to be focused on
         [CanBeNull] private GameObject _focusedObject = null;
+        
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INTERACTIONS];
-
+        private InteractionsSettingsSO _settings;
         private float _lastInteractablesUpdate = 0;
 
         private void Awake() {
+            if (Instance != null) {
+                _logger.LogError($"{this} tried to overwrite current singleton instance.", this);
+                throw new SingletonOverrideException($"{this} tried to overwrite current singleton instance.");
+            }
+            Instance = this;
+            _settings = DeveloperSettings.Instance.intSettings;
             _interactableObjects = new List<GameObject>();
         }
 
@@ -57,16 +65,16 @@ namespace Interactions {
         /// and highlight available objects
         /// </summary>
         private void UpdateInteractables() {
-            if (Time.time - _lastInteractablesUpdate < settings.interactionCheckInterval) {
+            if (Time.time - _lastInteractablesUpdate < _settings.interactionCheckInterval) {
                 return;
             }
             _lastInteractablesUpdate = Time.time;
             
             List<Collider2D> result = new List<Collider2D>();
             Physics2D.OverlapCircle(transform.position,
-                settings.defaultInteractionRadius,
+                _settings.defaultInteractionRadius,
                 new ContactFilter2D() {
-                    layerMask = LayerMask.GetMask(settings.interactablesLayer),
+                    layerMask = LayerMask.GetMask(_settings.interactablesLayer),
                     useLayerMask = true,
                     useTriggers = true
                 },
@@ -101,7 +109,7 @@ namespace Interactions {
         }
 
         private void DrawInteractablesAreaGizmos() {
-            Gizmos.DrawWireSphere(transform.position, settings.defaultInteractionRadius);            
+            Gizmos.DrawWireSphere(transform.position, _settings.defaultInteractionRadius);            
         }
 
         /// <summary>

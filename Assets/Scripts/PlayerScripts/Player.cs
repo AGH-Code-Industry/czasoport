@@ -1,12 +1,14 @@
+using System;
 using UnityEngine;
 using CustomInput;
+using Settings;
 
 namespace PlayerScripts {
     public class Player : MonoBehaviour {
         public static Player Instance = null;
-        private Transform _transform;
-        private Vector2 _movement;
-        
+
+        private PlayerSettingsSO _settings;
+
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
@@ -16,19 +18,19 @@ namespace PlayerScripts {
             }
         }
 
+        private void Start() {
+            _settings = DeveloperSettings.Instance.playerSettings;
+        }
+
         private void OnDestroy() {
             if (Instance == this) {
                 Instance = null;
             }
         }
-        
-        private void Start() {
-            _transform = GetComponent<Transform>();
-        }
 
         private void Update() {
-            _movement = CInput.NavigationAxis;
-            _transform.Translate(Time.deltaTime * 5 * new Vector2(_movement.x, _movement.y));
+            var movement = CInput.NavigationAxis;
+            transform.Translate(Time.deltaTime * _settings.movementSpeed * new Vector2(movement.x, movement.y));
         }
     }
 }

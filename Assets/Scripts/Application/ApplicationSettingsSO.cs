@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Settings.Developer {
+namespace Application {
     /// <summary>
     /// Settings for entire application that defines variables for startup, core processes and shutdown
     /// </summary>
-    [CreateAssetMenu(fileName = "ApplicationSettings", menuName = "Settings/DeveloperSettings/ApplicationSettings")]
+    [CreateAssetMenu(fileName = "ApplicationSettings", menuName = "Settings/ApplicationSettings")]
     public class ApplicationSettingsSO : ScriptableObject {
         [Tooltip("Name of the scene that loads global objects at the start of the application.")]
         public string globalDataSceneName;

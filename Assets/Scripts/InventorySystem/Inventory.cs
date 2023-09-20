@@ -8,8 +8,10 @@ using CustomInput;
 using InventorySystem.EventArguments;
 using Items;
 using LevelTimeChange.LevelsLoader;
+using Settings;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace InventorySystem {
     public class Inventory : MonoBehaviour {
@@ -19,11 +21,11 @@ namespace InventorySystem {
         public event EventHandler<ItemInsertedEventArgs> ItemInserted;
         public event EventHandler<ItemRemovedEventArgs> ItemRemoved;
         public event EventHandler<ItemStateChangedEventArgs> ItemStateChanged;
-
-        public InventorySettings settings;
+        
         public Transform itemHideout;
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INVENTORY];
+        private InventorySettingsSO _settings;
         private Item[] _items;
         private int _itemsCount = 0;
         private int _selectedSlot = 0;
@@ -35,6 +37,7 @@ namespace InventorySystem {
             }
 
             Instance = this;
+            _settings = DeveloperSettings.Instance.invSettings;
 
             SelectedSlotChanged += (sender, args) =>
                 _logger.Log($"Selected slot changed, new slot: {args.Slot % Colorize.Magenta}.");
@@ -48,7 +51,7 @@ namespace InventorySystem {
                 _logger.Log(
                     $"Item {args.Item.ItemSO.itemName % Colorize.Cyan} state {"changed" % Colorize.Orange}, {args.Slot % Colorize.Magenta} slot.");
             CDebug.Log($"Loaded Inventory, events instantiated.");
-            _items = new Item[settings.itemsCount];
+            _items = new Item[_settings.itemsCount];
         }
 
         private void OnEnable() {
@@ -100,7 +103,7 @@ namespace InventorySystem {
         /// <param name="item">`Item` to insert.</param>
         /// <returns></returns>
         public bool InsertItem(Item item) {
-            if (_itemsCount == settings.itemsCount) { // Inventory full
+            if (_itemsCount == _settings.itemsCount) { // Inventory full
                 return false;
             }
 
@@ -113,7 +116,7 @@ namespace InventorySystem {
                 });
             }
             else { // Put item into first empty slot
-                for (int i = 0; i < settings.itemsCount; i++) {
+                for (int i = 0; i < _settings.itemsCount; i++) {
                     if (_items[i] is null) {
                         _items[i] = item;
                         _itemsCount++;
@@ -152,7 +155,7 @@ namespace InventorySystem {
 
         private void OnNextItemClicked(InputAction.CallbackContext ctx) {
             _selectedSlot++;
-            _selectedSlot = _selectedSlot < settings.itemsCount ? _selectedSlot : 0;
+            _selectedSlot = _selectedSlot < _settings.itemsCount ? _selectedSlot : 0;
             SelectedSlotChanged?.Invoke(this, new SelectedSlotChangedEventArgs() {
                 Slot = _selectedSlot
             });
@@ -160,7 +163,7 @@ namespace InventorySystem {
 
         private void OnPreviousItemClicked(InputAction.CallbackContext ctx) {
             _selectedSlot--;
-            _selectedSlot = _selectedSlot < 0 ? settings.itemsCount - 1 : _selectedSlot;
+            _selectedSlot = _selectedSlot < 0 ? _settings.itemsCount - 1 : _selectedSlot;
             SelectedSlotChanged?.Invoke(this, new SelectedSlotChangedEventArgs() {
                 Slot = _selectedSlot
             });
