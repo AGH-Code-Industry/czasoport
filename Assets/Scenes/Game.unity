@@ -946,7 +946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4766e1040c8248b281cf01ff499cc58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settings: {fileID: 11400000, guid: 91eb1fd1cc2508f4d8014c441a401caa, type: 2}
   itemHideout: {fileID: 2046400794}
 --- !u!114 &902486988
 MonoBehaviour:
@@ -960,7 +959,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63755d6925a344d0a76db7f66f65ebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settings: {fileID: 11400000, guid: 5c7db21c6aeae6241b0bb3e938b91b22, type: 2}
 --- !u!50 &902486989
 Rigidbody2D:
   serializedVersion: 4
@@ -994,6 +992,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b03f165bbbc9544e9ed3c02c98daee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &902486991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902486981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021810cf912d7674481e7e2fba49c87b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 799859447}
+  timeToChange: 0.3
+  actualTime: 1
 --- !u!1 &1544671738
 GameObject:
   m_ObjectHideFlags: 3

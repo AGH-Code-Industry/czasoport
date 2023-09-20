@@ -20,13 +20,13 @@ namespace LevelTimeChange.TimeChange {
         public TimeLine actualTime = TimeLine.Present;
 
         private List<CheckCollider> _boxes;
-        private DeveloperSettings _settings;
+        private TimePlatformChangeSettingsSO _settings;
         private Vector3 _timeJump;
         private TimeLine _newTimeLine;
 
         private void Start() {
-            _settings = DeveloperSettings.Instance;
-            _timeJump = _settings.tpcSettings.offsetFromPresentPlatform;
+            _settings = DeveloperSettings.Instance.tpcSettings;
+            _timeJump = _settings.offsetFromPresentPlatform;
             _boxes = new List<CheckCollider>();
             for (int i = -2; i <= 2; i++)
             {
