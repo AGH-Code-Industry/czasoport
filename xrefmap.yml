@@ -7,6 +7,24 @@ references:
   commentId: N:Application
   fullName: Application
   nameWithType: Application
+- uid: Application.ApplicationSettingsSO
+  name: ApplicationSettingsSO
+  href: api/Application.ApplicationSettingsSO.html
+  commentId: T:Application.ApplicationSettingsSO
+  fullName: Application.ApplicationSettingsSO
+  nameWithType: ApplicationSettingsSO
+- uid: Application.ApplicationSettingsSO.globalDataSceneName
+  name: globalDataSceneName
+  href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_globalDataSceneName
+  commentId: F:Application.ApplicationSettingsSO.globalDataSceneName
+  fullName: Application.ApplicationSettingsSO.globalDataSceneName
+  nameWithType: ApplicationSettingsSO.globalDataSceneName
+- uid: Application.ApplicationSettingsSO.sceneToLoadName
+  name: sceneToLoadName
+  href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_sceneToLoadName
+  commentId: F:Application.ApplicationSettingsSO.sceneToLoadName
+  fullName: Application.ApplicationSettingsSO.sceneToLoadName
+  nameWithType: ApplicationSettingsSO.sceneToLoadName
 - uid: Application.GlobalExceptions
   name: Application.GlobalExceptions
   href: api/Application.GlobalExceptions.html
@@ -2024,36 +2042,30 @@ references:
   commentId: F:Interactions.Interactions.Instance
   fullName: Interactions.Interactions.Instance
   nameWithType: Interactions.Instance
-- uid: Interactions.Interactions.settings
-  name: settings
-  href: api/Interactions.Interactions.html#Interactions_Interactions_settings
-  commentId: F:Interactions.Interactions.settings
-  fullName: Interactions.Interactions.settings
-  nameWithType: Interactions.settings
-- uid: Interactions.InteractionsSettings
-  name: InteractionsSettings
-  href: api/Interactions.InteractionsSettings.html
-  commentId: T:Interactions.InteractionsSettings
-  fullName: Interactions.InteractionsSettings
-  nameWithType: InteractionsSettings
-- uid: Interactions.InteractionsSettings.defaultInteractionRadius
+- uid: Interactions.InteractionsSettingsSO
+  name: InteractionsSettingsSO
+  href: api/Interactions.InteractionsSettingsSO.html
+  commentId: T:Interactions.InteractionsSettingsSO
+  fullName: Interactions.InteractionsSettingsSO
+  nameWithType: InteractionsSettingsSO
+- uid: Interactions.InteractionsSettingsSO.defaultInteractionRadius
   name: defaultInteractionRadius
-  href: api/Interactions.InteractionsSettings.html#Interactions_InteractionsSettings_defaultInteractionRadius
-  commentId: F:Interactions.InteractionsSettings.defaultInteractionRadius
-  fullName: Interactions.InteractionsSettings.defaultInteractionRadius
-  nameWithType: InteractionsSettings.defaultInteractionRadius
-- uid: Interactions.InteractionsSettings.interactablesLayer
+  href: api/Interactions.InteractionsSettingsSO.html#Interactions_InteractionsSettingsSO_defaultInteractionRadius
+  commentId: F:Interactions.InteractionsSettingsSO.defaultInteractionRadius
+  fullName: Interactions.InteractionsSettingsSO.defaultInteractionRadius
+  nameWithType: InteractionsSettingsSO.defaultInteractionRadius
+- uid: Interactions.InteractionsSettingsSO.interactablesLayer
   name: interactablesLayer
-  href: api/Interactions.InteractionsSettings.html#Interactions_InteractionsSettings_interactablesLayer
-  commentId: F:Interactions.InteractionsSettings.interactablesLayer
-  fullName: Interactions.InteractionsSettings.interactablesLayer
-  nameWithType: InteractionsSettings.interactablesLayer
-- uid: Interactions.InteractionsSettings.interactionCheckInterval
+  href: api/Interactions.InteractionsSettingsSO.html#Interactions_InteractionsSettingsSO_interactablesLayer
+  commentId: F:Interactions.InteractionsSettingsSO.interactablesLayer
+  fullName: Interactions.InteractionsSettingsSO.interactablesLayer
+  nameWithType: InteractionsSettingsSO.interactablesLayer
+- uid: Interactions.InteractionsSettingsSO.interactionCheckInterval
   name: interactionCheckInterval
-  href: api/Interactions.InteractionsSettings.html#Interactions_InteractionsSettings_interactionCheckInterval
-  commentId: F:Interactions.InteractionsSettings.interactionCheckInterval
-  fullName: Interactions.InteractionsSettings.interactionCheckInterval
-  nameWithType: InteractionsSettings.interactionCheckInterval
+  href: api/Interactions.InteractionsSettingsSO.html#Interactions_InteractionsSettingsSO_interactionCheckInterval
+  commentId: F:Interactions.InteractionsSettingsSO.interactionCheckInterval
+  fullName: Interactions.InteractionsSettingsSO.interactionCheckInterval
+  nameWithType: InteractionsSettingsSO.interactionCheckInterval
 - uid: Interactions.Interfaces
   name: Interactions.Interfaces
   href: api/Interactions.Interfaces.html
@@ -2372,24 +2384,18 @@ references:
   commentId: F:InventorySystem.Inventory.itemHideout
   fullName: InventorySystem.Inventory.itemHideout
   nameWithType: Inventory.itemHideout
-- uid: InventorySystem.Inventory.settings
-  name: settings
-  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_settings
-  commentId: F:InventorySystem.Inventory.settings
-  fullName: InventorySystem.Inventory.settings
-  nameWithType: Inventory.settings
-- uid: InventorySystem.InventorySettings
-  name: InventorySettings
-  href: api/InventorySystem.InventorySettings.html
-  commentId: T:InventorySystem.InventorySettings
-  fullName: InventorySystem.InventorySettings
-  nameWithType: InventorySettings
-- uid: InventorySystem.InventorySettings.itemsCount
+- uid: InventorySystem.InventorySettingsSO
+  name: InventorySettingsSO
+  href: api/InventorySystem.InventorySettingsSO.html
+  commentId: T:InventorySystem.InventorySettingsSO
+  fullName: InventorySystem.InventorySettingsSO
+  nameWithType: InventorySettingsSO
+- uid: InventorySystem.InventorySettingsSO.itemsCount
   name: itemsCount
-  href: api/InventorySystem.InventorySettings.html#InventorySystem_InventorySettings_itemsCount
-  commentId: F:InventorySystem.InventorySettings.itemsCount
-  fullName: InventorySystem.InventorySettings.itemsCount
-  nameWithType: InventorySettings.itemsCount
+  href: api/InventorySystem.InventorySettingsSO.html#InventorySystem_InventorySettingsSO_itemsCount
+  commentId: F:InventorySystem.InventorySettingsSO.itemsCount
+  fullName: InventorySystem.InventorySettingsSO.itemsCount
+  nameWithType: InventorySettingsSO.itemsCount
 - uid: InventorySystem.Tests
   name: InventorySystem.Tests
   href: api/InventorySystem.Tests.html
@@ -3011,6 +3017,18 @@ references:
   commentId: F:LevelTimeChange.TimeLine.Present
   fullName: LevelTimeChange.TimeLine.Present
   nameWithType: TimeLine.Present
+- uid: LevelTimeChange.TimePlatformChangeSettingsSO
+  name: TimePlatformChangeSettingsSO
+  href: api/LevelTimeChange.TimePlatformChangeSettingsSO.html
+  commentId: T:LevelTimeChange.TimePlatformChangeSettingsSO
+  fullName: LevelTimeChange.TimePlatformChangeSettingsSO
+  nameWithType: TimePlatformChangeSettingsSO
+- uid: LevelTimeChange.TimePlatformChangeSettingsSO.offsetFromPresentPlatform
+  name: offsetFromPresentPlatform
+  href: api/LevelTimeChange.TimePlatformChangeSettingsSO.html#LevelTimeChange_TimePlatformChangeSettingsSO_offsetFromPresentPlatform
+  commentId: F:LevelTimeChange.TimePlatformChangeSettingsSO.offsetFromPresentPlatform
+  fullName: LevelTimeChange.TimePlatformChangeSettingsSO.offsetFromPresentPlatform
+  nameWithType: TimePlatformChangeSettingsSO.offsetFromPresentPlatform
 - uid: PlayerScripts
   name: PlayerScripts
   href: api/PlayerScripts.html
@@ -3029,48 +3047,24 @@ references:
   commentId: F:PlayerScripts.Player.Instance
   fullName: PlayerScripts.Player.Instance
   nameWithType: Player.Instance
+- uid: PlayerScripts.PlayerSettingsSO
+  name: PlayerSettingsSO
+  href: api/PlayerScripts.PlayerSettingsSO.html
+  commentId: T:PlayerScripts.PlayerSettingsSO
+  fullName: PlayerScripts.PlayerSettingsSO
+  nameWithType: PlayerSettingsSO
+- uid: PlayerScripts.PlayerSettingsSO.movementSpeed
+  name: movementSpeed
+  href: api/PlayerScripts.PlayerSettingsSO.html#PlayerScripts_PlayerSettingsSO_movementSpeed
+  commentId: F:PlayerScripts.PlayerSettingsSO.movementSpeed
+  fullName: PlayerScripts.PlayerSettingsSO.movementSpeed
+  nameWithType: PlayerSettingsSO.movementSpeed
 - uid: Settings
   name: Settings
   href: api/Settings.html
   commentId: N:Settings
   fullName: Settings
   nameWithType: Settings
-- uid: Settings.Developer
-  name: Settings.Developer
-  href: api/Settings.Developer.html
-  commentId: N:Settings.Developer
-  fullName: Settings.Developer
-  nameWithType: Settings.Developer
-- uid: Settings.Developer.ApplicationSettingsSO
-  name: ApplicationSettingsSO
-  href: api/Settings.Developer.ApplicationSettingsSO.html
-  commentId: T:Settings.Developer.ApplicationSettingsSO
-  fullName: Settings.Developer.ApplicationSettingsSO
-  nameWithType: ApplicationSettingsSO
-- uid: Settings.Developer.ApplicationSettingsSO.globalDataSceneName
-  name: globalDataSceneName
-  href: api/Settings.Developer.ApplicationSettingsSO.html#Settings_Developer_ApplicationSettingsSO_globalDataSceneName
-  commentId: F:Settings.Developer.ApplicationSettingsSO.globalDataSceneName
-  fullName: Settings.Developer.ApplicationSettingsSO.globalDataSceneName
-  nameWithType: ApplicationSettingsSO.globalDataSceneName
-- uid: Settings.Developer.ApplicationSettingsSO.sceneToLoadName
-  name: sceneToLoadName
-  href: api/Settings.Developer.ApplicationSettingsSO.html#Settings_Developer_ApplicationSettingsSO_sceneToLoadName
-  commentId: F:Settings.Developer.ApplicationSettingsSO.sceneToLoadName
-  fullName: Settings.Developer.ApplicationSettingsSO.sceneToLoadName
-  nameWithType: ApplicationSettingsSO.sceneToLoadName
-- uid: Settings.Developer.TimePlatformChangeSettingsSO
-  name: TimePlatformChangeSettingsSO
-  href: api/Settings.Developer.TimePlatformChangeSettingsSO.html
-  commentId: T:Settings.Developer.TimePlatformChangeSettingsSO
-  fullName: Settings.Developer.TimePlatformChangeSettingsSO
-  nameWithType: TimePlatformChangeSettingsSO
-- uid: Settings.Developer.TimePlatformChangeSettingsSO.offsetFromPresentPlatform
-  name: offsetFromPresentPlatform
-  href: api/Settings.Developer.TimePlatformChangeSettingsSO.html#Settings_Developer_TimePlatformChangeSettingsSO_offsetFromPresentPlatform
-  commentId: F:Settings.Developer.TimePlatformChangeSettingsSO.offsetFromPresentPlatform
-  fullName: Settings.Developer.TimePlatformChangeSettingsSO.offsetFromPresentPlatform
-  nameWithType: TimePlatformChangeSettingsSO.offsetFromPresentPlatform
 - uid: Settings.DeveloperSettings
   name: DeveloperSettings
   href: api/Settings.DeveloperSettings.html
@@ -3089,6 +3083,24 @@ references:
   commentId: F:Settings.DeveloperSettings.appSettings
   fullName: Settings.DeveloperSettings.appSettings
   nameWithType: DeveloperSettings.appSettings
+- uid: Settings.DeveloperSettings.intSettings
+  name: intSettings
+  href: api/Settings.DeveloperSettings.html#Settings_DeveloperSettings_intSettings
+  commentId: F:Settings.DeveloperSettings.intSettings
+  fullName: Settings.DeveloperSettings.intSettings
+  nameWithType: DeveloperSettings.intSettings
+- uid: Settings.DeveloperSettings.invSettings
+  name: invSettings
+  href: api/Settings.DeveloperSettings.html#Settings_DeveloperSettings_invSettings
+  commentId: F:Settings.DeveloperSettings.invSettings
+  fullName: Settings.DeveloperSettings.invSettings
+  nameWithType: DeveloperSettings.invSettings
+- uid: Settings.DeveloperSettings.playerSettings
+  name: playerSettings
+  href: api/Settings.DeveloperSettings.html#Settings_DeveloperSettings_playerSettings
+  commentId: F:Settings.DeveloperSettings.playerSettings
+  fullName: Settings.DeveloperSettings.playerSettings
+  nameWithType: DeveloperSettings.playerSettings
 - uid: Settings.DeveloperSettings.tpcSettings
   name: tpcSettings
   href: api/Settings.DeveloperSettings.html#Settings_DeveloperSettings_tpcSettings

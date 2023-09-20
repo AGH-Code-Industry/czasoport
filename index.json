@@ -1,4 +1,9 @@
 {
+  "api/Application.ApplicationSettingsSO.html": {
+    "href": "api/Application.ApplicationSettingsSO.html",
+    "title": "Class ApplicationSettingsSO | Czasoport Documentation",
+    "keywords": "Class ApplicationSettingsSO Namespace Application Settings for entire application that defines variables for startup, core processes and shutdown public class ApplicationSettingsSO : ScriptableObject Inheritance object ApplicationSettingsSO Fields globalDataSceneName public string globalDataSceneName Field Value string sceneToLoadName public string sceneToLoadName Field Value string"
+  },
   "api/Application.GlobalExceptions.SingletonOverrideException.html": {
     "href": "api/Application.GlobalExceptions.SingletonOverrideException.html",
     "title": "Class SingletonOverrideException | Czasoport Documentation",
@@ -27,7 +32,7 @@
   "api/Application.html": {
     "href": "api/Application.html",
     "title": "Namespace Application | Czasoport Documentation",
-    "keywords": "Namespace Application Classes Loggers StartupManager Enums Loggers.LoggerType"
+    "keywords": "Namespace Application Classes ApplicationSettingsSO Settings for entire application that defines variables for startup, core processes and shutdown Loggers StartupManager Enums Loggers.LoggerType"
   },
   "api/CustomInput.CInput.html": {
     "href": "api/CustomInput.CInput.html",
@@ -187,12 +192,12 @@
   "api/Interactions.Interactions.html": {
     "href": "api/Interactions.Interactions.html",
     "title": "Class Interactions | Czasoport Documentation",
-    "keywords": "Class Interactions Namespace Interactions public class Interactions : MonoBehaviour Inheritance object Interactions Fields Instance public static Interactions Instance Field Value Interactions settings public InteractionsSettings settings Field Value InteractionsSettings"
+    "keywords": "Class Interactions Namespace Interactions public class Interactions : MonoBehaviour Inheritance object Interactions Fields Instance public static Interactions Instance Field Value Interactions"
   },
-  "api/Interactions.InteractionsSettings.html": {
-    "href": "api/Interactions.InteractionsSettings.html",
-    "title": "Class InteractionsSettings | Czasoport Documentation",
-    "keywords": "Class InteractionsSettings Namespace Interactions public class InteractionsSettings : ScriptableObject Inheritance object InteractionsSettings Fields defaultInteractionRadius public float defaultInteractionRadius Field Value float interactablesLayer public string interactablesLayer Field Value string interactionCheckInterval public float interactionCheckInterval Field Value float"
+  "api/Interactions.InteractionsSettingsSO.html": {
+    "href": "api/Interactions.InteractionsSettingsSO.html",
+    "title": "Class InteractionsSettingsSO | Czasoport Documentation",
+    "keywords": "Class InteractionsSettingsSO Namespace Interactions public class InteractionsSettingsSO : ScriptableObject Inheritance object InteractionsSettingsSO Fields defaultInteractionRadius public float defaultInteractionRadius Field Value float interactablesLayer public string interactablesLayer Field Value string interactionCheckInterval public float interactionCheckInterval Field Value float"
   },
   "api/Interactions.Interfaces.IHandInteractable.html": {
     "href": "api/Interactions.Interfaces.IHandInteractable.html",
@@ -227,7 +232,7 @@
   "api/Interactions.html": {
     "href": "api/Interactions.html",
     "title": "Namespace Interactions | Czasoport Documentation",
-    "keywords": "Namespace Interactions Classes HighlightInteraction Interactions InteractionsSettings"
+    "keywords": "Namespace Interactions Classes HighlightInteraction Interactions InteractionsSettingsSO"
   },
   "api/InventorySystem.EventArguments.ItemInsertedEventArgs.html": {
     "href": "api/InventorySystem.EventArguments.ItemInsertedEventArgs.html",
@@ -257,12 +262,12 @@
   "api/InventorySystem.Inventory.html": {
     "href": "api/InventorySystem.Inventory.html",
     "title": "Class Inventory | Czasoport Documentation",
-    "keywords": "Class Inventory Namespace InventorySystem public class Inventory : MonoBehaviour Inheritance object Inventory Fields Instance public static Inventory Instance Field Value Inventory itemHideout public Transform itemHideout Field Value Transform settings public InventorySettings settings Field Value InventorySettings Methods GetAllItems() Get list of items in inventory without removing them. All null values are removed, so items won't keep their original indexes. public List<Item> GetAllItems() Returns List<Item> List of Items, without including empty slots. GetInventory() Get inventory, including empty slots, without removing items in it. Items are placed on their corresponding indexes. public Item[] GetInventory() Returns Item[] Array of Item objects including empty slots. GetSelectedItem(out Item) Get currently selected item, but do not remove this item from inventory. public bool GetSelectedItem(out Item item) Parameters item Item Retrieved item if slot was not empty. Returns bool True if slot was not empty, false if slot was empty. If empty, then item will be null. InsertItem(Item) Insert item into inventory. If the selected slot is empty, then item is placed into that slot. public bool InsertItem(Item item) Parameters item Item Item to insert. Returns bool RemoveItem(out Item) Retrieve and remove item from the Inventory. Empty slot is always the result. public bool RemoveItem(out Item item) Parameters item Item Removed item if selected slot was not empty. Returns bool True if item was removed, false if slot was empty. If false, retrieved item will be null. Events ItemInserted public event EventHandler<ItemInsertedEventArgs> ItemInserted Event Type EventHandler<ItemInsertedEventArgs> ItemRemoved public event EventHandler<ItemRemovedEventArgs> ItemRemoved Event Type EventHandler<ItemRemovedEventArgs> ItemStateChanged public event EventHandler<ItemStateChangedEventArgs> ItemStateChanged Event Type EventHandler<ItemStateChangedEventArgs> SelectedSlotChanged public event EventHandler<SelectedSlotChangedEventArgs> SelectedSlotChanged Event Type EventHandler<SelectedSlotChangedEventArgs>"
+    "keywords": "Class Inventory Namespace InventorySystem public class Inventory : MonoBehaviour Inheritance object Inventory Fields Instance public static Inventory Instance Field Value Inventory itemHideout public Transform itemHideout Field Value Transform Methods GetAllItems() Get list of items in inventory without removing them. All null values are removed, so items won't keep their original indexes. public List<Item> GetAllItems() Returns List<Item> List of Items, without including empty slots. GetInventory() Get inventory, including empty slots, without removing items in it. Items are placed on their corresponding indexes. public Item[] GetInventory() Returns Item[] Array of Item objects including empty slots. GetSelectedItem(out Item) Get currently selected item, but do not remove this item from inventory. public bool GetSelectedItem(out Item item) Parameters item Item Retrieved item if slot was not empty. Returns bool True if slot was not empty, false if slot was empty. If empty, then item will be null. InsertItem(Item) Insert item into inventory. If the selected slot is empty, then item is placed into that slot. public bool InsertItem(Item item) Parameters item Item Item to insert. Returns bool RemoveItem(out Item) Retrieve and remove item from the Inventory. Empty slot is always the result. public bool RemoveItem(out Item item) Parameters item Item Removed item if selected slot was not empty. Returns bool True if item was removed, false if slot was empty. If false, retrieved item will be null. Events ItemInserted public event EventHandler<ItemInsertedEventArgs> ItemInserted Event Type EventHandler<ItemInsertedEventArgs> ItemRemoved public event EventHandler<ItemRemovedEventArgs> ItemRemoved Event Type EventHandler<ItemRemovedEventArgs> ItemStateChanged public event EventHandler<ItemStateChangedEventArgs> ItemStateChanged Event Type EventHandler<ItemStateChangedEventArgs> SelectedSlotChanged public event EventHandler<SelectedSlotChangedEventArgs> SelectedSlotChanged Event Type EventHandler<SelectedSlotChangedEventArgs>"
   },
-  "api/InventorySystem.InventorySettings.html": {
-    "href": "api/InventorySystem.InventorySettings.html",
-    "title": "Class InventorySettings | Czasoport Documentation",
-    "keywords": "Class InventorySettings Namespace InventorySystem public class InventorySettings : ScriptableObject Inheritance object InventorySettings Fields itemsCount public int itemsCount Field Value int"
+  "api/InventorySystem.InventorySettingsSO.html": {
+    "href": "api/InventorySystem.InventorySettingsSO.html",
+    "title": "Class InventorySettingsSO | Czasoport Documentation",
+    "keywords": "Class InventorySettingsSO Namespace InventorySystem public class InventorySettingsSO : ScriptableObject Inheritance object InventorySettingsSO Fields itemsCount public int itemsCount Field Value int"
   },
   "api/InventorySystem.Tests.InventoryGeneralTests.html": {
     "href": "api/InventorySystem.Tests.InventoryGeneralTests.html",
@@ -302,7 +307,7 @@
   "api/InventorySystem.html": {
     "href": "api/InventorySystem.html",
     "title": "Namespace InventorySystem | Czasoport Documentation",
-    "keywords": "Namespace InventorySystem Classes Inventory InventorySettings"
+    "keywords": "Namespace InventorySystem Classes Inventory InventorySettingsSO"
   },
   "api/Items.Item.html": {
     "href": "api/Items.Item.html",
@@ -374,40 +379,35 @@
     "title": "Enum TimeLine | Czasoport Documentation",
     "keywords": "Enum TimeLine Namespace LevelTimeChange public enum TimeLine Fields Future = 2 Past = 0 Present = 1"
   },
+  "api/LevelTimeChange.TimePlatformChangeSettingsSO.html": {
+    "href": "api/LevelTimeChange.TimePlatformChangeSettingsSO.html",
+    "title": "Class TimePlatformChangeSettingsSO | Czasoport Documentation",
+    "keywords": "Class TimePlatformChangeSettingsSO Namespace LevelTimeChange Settings for scene changing and time changing systems. public class TimePlatformChangeSettingsSO : ScriptableObject Inheritance object TimePlatformChangeSettingsSO Fields offsetFromPresentPlatform public Vector2 offsetFromPresentPlatform Field Value Vector2"
+  },
   "api/LevelTimeChange.html": {
     "href": "api/LevelTimeChange.html",
     "title": "Namespace LevelTimeChange | Czasoport Documentation",
-    "keywords": "Namespace LevelTimeChange Enums TimeLine"
+    "keywords": "Namespace LevelTimeChange Classes TimePlatformChangeSettingsSO Settings for scene changing and time changing systems. Enums TimeLine"
   },
   "api/PlayerScripts.Player.html": {
     "href": "api/PlayerScripts.Player.html",
     "title": "Class Player | Czasoport Documentation",
     "keywords": "Class Player Namespace PlayerScripts public class Player : MonoBehaviour Inheritance object Player Fields Instance public static Player Instance Field Value Player"
   },
+  "api/PlayerScripts.PlayerSettingsSO.html": {
+    "href": "api/PlayerScripts.PlayerSettingsSO.html",
+    "title": "Class PlayerSettingsSO | Czasoport Documentation",
+    "keywords": "Class PlayerSettingsSO Namespace PlayerScripts Settings for scene changing and time changing systems. public class PlayerSettingsSO : ScriptableObject Inheritance object PlayerSettingsSO Fields movementSpeed public float movementSpeed Field Value float"
+  },
   "api/PlayerScripts.html": {
     "href": "api/PlayerScripts.html",
     "title": "Namespace PlayerScripts | Czasoport Documentation",
-    "keywords": "Namespace PlayerScripts Classes Player"
-  },
-  "api/Settings.Developer.ApplicationSettingsSO.html": {
-    "href": "api/Settings.Developer.ApplicationSettingsSO.html",
-    "title": "Class ApplicationSettingsSO | Czasoport Documentation",
-    "keywords": "Class ApplicationSettingsSO Namespace Settings.Developer Settings for entire application that defines variables for startup, core processes and shutdown public class ApplicationSettingsSO : ScriptableObject Inheritance object ApplicationSettingsSO Fields globalDataSceneName public string globalDataSceneName Field Value string sceneToLoadName public string sceneToLoadName Field Value string"
-  },
-  "api/Settings.Developer.TimePlatformChangeSettingsSO.html": {
-    "href": "api/Settings.Developer.TimePlatformChangeSettingsSO.html",
-    "title": "Class TimePlatformChangeSettingsSO | Czasoport Documentation",
-    "keywords": "Class TimePlatformChangeSettingsSO Namespace Settings.Developer Settings for scene changing and time changing systems. public class TimePlatformChangeSettingsSO : ScriptableObject Inheritance object TimePlatformChangeSettingsSO Fields offsetFromPresentPlatform public Vector2 offsetFromPresentPlatform Field Value Vector2"
-  },
-  "api/Settings.Developer.html": {
-    "href": "api/Settings.Developer.html",
-    "title": "Namespace Settings.Developer | Czasoport Documentation",
-    "keywords": "Namespace Settings.Developer Classes ApplicationSettingsSO Settings for entire application that defines variables for startup, core processes and shutdown TimePlatformChangeSettingsSO Settings for scene changing and time changing systems."
+    "keywords": "Namespace PlayerScripts Classes Player PlayerSettingsSO Settings for scene changing and time changing systems."
   },
   "api/Settings.DeveloperSettings.html": {
     "href": "api/Settings.DeveloperSettings.html",
     "title": "Class DeveloperSettings | Czasoport Documentation",
-    "keywords": "Class DeveloperSettings Namespace Settings Manages different setting sets used for internal settings. public class DeveloperSettings : MonoBehaviour Inheritance object DeveloperSettings Fields Instance public static DeveloperSettings Instance Field Value DeveloperSettings appSettings public ApplicationSettingsSO appSettings Field Value ApplicationSettingsSO tpcSettings public TimePlatformChangeSettingsSO tpcSettings Field Value TimePlatformChangeSettingsSO"
+    "keywords": "Class DeveloperSettings Namespace Settings Manages different setting sets used for internal settings. public class DeveloperSettings : MonoBehaviour Inheritance object DeveloperSettings Fields Instance public static DeveloperSettings Instance Field Value DeveloperSettings appSettings Application settings public ApplicationSettingsSO appSettings Field Value ApplicationSettingsSO intSettings Interactions settings public InteractionsSettingsSO intSettings Field Value InteractionsSettingsSO invSettings Inventory settings public InventorySettingsSO invSettings Field Value InventorySettingsSO playerSettings Player settings public PlayerSettingsSO playerSettings Field Value PlayerSettingsSO tpcSettings Settings for Time Change and Platform Change systems public TimePlatformChangeSettingsSO tpcSettings Field Value TimePlatformChangeSettingsSO"
   },
   "api/Settings.html": {
     "href": "api/Settings.html",
