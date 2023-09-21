@@ -638,7 +638,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -744,7 +745,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1320,7 +1322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc4e58c8a0e8214694d0216a6af3828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotPrefab: {fileID: 2331055161561051305, guid: c740a02885e9e404eb944dc3b58bc969, type: 3}
+  slotPrefab: {fileID: 2331055161561051305, guid: c740a02885e9e404eb944dc3b58bc969,
+    type: 3}
   container: {fileID: 905373029}
 --- !u!1 &799859445
 GameObject:
@@ -1604,6 +1607,7 @@ GameObject:
   - component: {fileID: 902486987}
   - component: {fileID: 902486989}
   - component: {fileID: 902486990}
+  - component: {fileID: 902486991}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -1666,7 +1670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4766e1040c8248b281cf01ff499cc58f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemHideout: {fileID: 2046400793}
+  itemHideout: {fileID: 2046400794}
 --- !u!114 &902486988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2017,6 +2021,21 @@ MonoBehaviour:
   m_EffectColor: {r: 0.10124922, g: 0, b: 1, a: 0.5}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
+--- !u!114 &902486991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902486981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021810cf912d7674481e7e2fba49c87b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 799859447}
+  timeToChange: 0.3
+  actualTime: 1
 --- !u!1 &1544671738
 GameObject:
   m_ObjectHideFlags: 3
@@ -2453,7 +2472,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2711,7 +2731,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
