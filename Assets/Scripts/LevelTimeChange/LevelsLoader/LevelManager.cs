@@ -13,7 +13,7 @@ namespace LevelTimeChange.LevelsLoader {
     /// </summary>
     public class LevelManager : MonoBehaviour {
         [Tooltip("Asset for current level.")]
-        [SerializeField] private LevelInfoSO currentLevel;
+        public LevelInfoSO currentLevel;
         [Tooltip("Content object of this level.")]
         [SerializeField] private GameObject levelContent;
 
@@ -156,8 +156,7 @@ namespace LevelTimeChange.LevelsLoader {
         /// </summary>
         private void FindNeighbouringLevels()
         {
-            var neighourLevelsList = currentLevel.neighbourLevels.ToList();
-            neighourLevelsList.Clear();
+            List<LevelInfoSO> neighourLevelsList = new List<LevelInfoSO>();
             foreach (Transform teleport in teleportsHolders[0].transform)
             {
                 LevelPortal currentPortal = teleport.gameObject.GetComponent<LevelPortal>();
