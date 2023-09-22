@@ -5,7 +5,9 @@ using Settings;
 
 namespace PlayerScripts {
     public class Player : MonoBehaviour {
-        public static Player Instance = null;
+        public static Player Instance { get; private set; }
+
+        public event EventHandler OnPlayerMoved;
 
         private PlayerSettingsSO _settings;
 
@@ -31,6 +33,8 @@ namespace PlayerScripts {
         private void Update() {
             var movement = CInput.NavigationAxis;
             transform.Translate(Time.deltaTime * _settings.movementSpeed * new Vector2(movement.x, movement.y));
+            if (movement != Vector2.zero)
+                OnPlayerMoved?.Invoke(this, EventArgs.Empty);
         }
     }
 }
