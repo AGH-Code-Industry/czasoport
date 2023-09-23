@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using CustomInput;
 using Settings;
@@ -19,6 +19,7 @@ namespace PlayerScripts {
         }
 
         private void Start() {
+            NotificationManager.Instance.RaiseNotification(NotificationManager.notification.NoInventoryRoom);
             _settings = DeveloperSettings.Instance.playerSettings;
         }
 
