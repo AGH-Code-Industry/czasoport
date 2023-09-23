@@ -26,6 +26,7 @@ namespace PlayerScripts {
         }
 
         private void Start() {
+            NotificationManager.Instance.RaiseNotification(NotificationManager.notification.NoInventoryRoom);
             _settings = DeveloperSettings.Instance.playerSettings;
             _animator = GetComponent<Animator>();
         }
