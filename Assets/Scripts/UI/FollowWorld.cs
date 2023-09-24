@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class FollowWorld : MonoBehaviour
 {
-    [SerializeField]
-    public Transform lookAt;
-    [SerializeField]
-    public Vector3 offset;
+    [SerializeField] Transform lookAt;
+    [SerializeField] Vector3 offset;
 
     private Camera _cam;
 
