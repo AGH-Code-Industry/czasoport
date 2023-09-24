@@ -98,8 +98,10 @@ namespace Interactions {
         }
 
         void OnDrawGizmos() {
-            DrawInteractablesAreaGizmos();
-            DrawLinesToInteractablesGizmos();
+            if (UnityEngine.Application.isPlaying) {
+                DrawInteractablesAreaGizmos();
+                DrawLinesToInteractablesGizmos();
+            }
         }
 
         private void DrawLinesToInteractablesGizmos() {
