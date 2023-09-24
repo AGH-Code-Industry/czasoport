@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,5 +13,8 @@ namespace Application {
 
         [Tooltip("Name of the scene to load when press Play button on menu.")]
         public string sceneToLoadName;
+
+        [Tooltip("Time that the notificatino will be desplaying on screen")]
+        public float notificationDuration;
     }
 }

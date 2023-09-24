@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Items
 {
@@ -15,5 +15,6 @@ namespace Items
         public string description;
         public int durability;
         public float interactionDistance;
+        public string pickUpNotification = "I say this when I'm picked up";
     }
 }
