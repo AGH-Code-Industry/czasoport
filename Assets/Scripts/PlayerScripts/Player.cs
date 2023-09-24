@@ -26,7 +26,7 @@ namespace PlayerScripts {
         }
 
         private void Start() {
-            NotificationManager.Instance.RaiseNotification(NotificationManager.notification.NoInventoryRoom);
+            //NotificationManager.Instance.RaiseNotification("testowe powiadomienie");
             _settings = DeveloperSettings.Instance.playerSettings;
             _animator = GetComponent<Animator>();
         }
