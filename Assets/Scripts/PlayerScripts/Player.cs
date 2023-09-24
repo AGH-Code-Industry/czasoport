@@ -19,7 +19,6 @@ namespace PlayerScripts {
         }
 
         private void Start() {
-            //NotificationManager.Instance.RaiseNotification("testowe powiadomienie");
             _settings = DeveloperSettings.Instance.playerSettings;
         }
 

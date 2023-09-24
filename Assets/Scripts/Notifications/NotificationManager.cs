@@ -8,8 +8,6 @@ public class NotificationManager : MonoBehaviour {
     public static NotificationManager Instance;
 
     [SerializeField]
-    Transform _player;
-    [SerializeField]
     GameObject _notificationWindow;
     [SerializeField]
     TMP_Text _notificationMessage;
