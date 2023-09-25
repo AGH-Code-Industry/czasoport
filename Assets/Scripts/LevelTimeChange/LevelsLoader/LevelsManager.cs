@@ -54,7 +54,7 @@ namespace LevelTimeChange.LevelsLoader {
 			_currentLevelManager = LoadedLevels[startingLevel];
 			_currentLevelManager.ActivateLevel();
 			_isLoading = false;
-			LoadLevels(startingLevel);
+			LoadLevels(_currentLevelManager);
 		}
 
 		/// <summary>
@@ -79,8 +79,8 @@ namespace LevelTimeChange.LevelsLoader {
 
             // oldLevel.DeactivateLevel();
 
-			LoadLevels(destinedLevelInfo);
-			UnloadLevels(destinedLevelInfo);
+			LoadLevels(newLevel);
+			UnloadLevels(newLevel);
 		}
 
 		/// <summary>
@@ -102,9 +102,9 @@ namespace LevelTimeChange.LevelsLoader {
 			SceneManager.LoadSceneAsync(level.sceneName, LoadSceneMode.Additive);
 		}
 
-		private void LoadLevels(LevelInfoSO destinedLevel) {
+		private void LoadLevels(LevelManager destinedLevel) {
 			_logger.Log($"Loading new scenes.");
-			foreach (var level in destinedLevel.neighbourLevels) {
+			foreach (var level in destinedLevel.neighborLevels) {
 				if (!LoadedLevels.ContainsKey(level)) {
 					LoadLevel(level);
 				}
@@ -117,12 +117,12 @@ namespace LevelTimeChange.LevelsLoader {
 			LoadedLevels.Remove(level);
 		}
 
-		private void UnloadLevels(LevelInfoSO levelInfo) {
+		private void UnloadLevels(LevelManager levelInfo) {
 			var scenesToRemove = new List<LevelInfoSO>();
 			
 			_logger.Log($"Unloading scenes.");
 			foreach (LevelInfoSO level in LoadedLevels.Keys) {
-				if (!levelInfo.neighbourLevels.Contains(level) && levelInfo != level) {
+				if (!levelInfo.neighborLevels.Contains(level) && levelInfo.currentLevel != level) {
 					scenesToRemove.Add(level);
 				}
 			}
