@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Application;
@@ -157,12 +157,10 @@ namespace LevelTimeChange.LevelsLoader {
         private void FindNeighbouringLevels()
         {
             List<LevelInfoSO> neighourLevelsList = new List<LevelInfoSO>();
-            foreach (Transform teleport in teleportsHolders[0].transform)
-            {
-                LevelPortal currentPortal = teleport.gameObject.GetComponent<LevelPortal>();
-                if (currentPortal)
-                {
-                    neighourLevelsList.Add(currentPortal.destinedLevel);
+
+            foreach (LevelPortal teleport in _teleports) {
+                if (!neighourLevelsList.Contains(teleport.destinedLevel)) {
+                    neighourLevelsList.Add(teleport.destinedLevel);
                 }
             }
             neighborLevels = neighourLevelsList.ToList();
