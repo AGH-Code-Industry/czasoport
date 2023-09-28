@@ -8,7 +8,7 @@ namespace LevelTimeChange.TimeChange {
     public class CheckCollider : MonoBehaviour
     {
         private BoxCollider2D _box;
-        private bool _isTouching = false;
+        private bool _isTouching;
 
         private void Awake() {
             _box = GetComponent<BoxCollider2D>();

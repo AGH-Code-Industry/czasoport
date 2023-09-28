@@ -85,7 +85,7 @@ namespace LevelTimeChange.TimeChange {
             if (actualTime == 0 && change == -1) 
                 change = 2;
             _newTimeLine = (TimeLine)(((int)actualTime + change) % 3);
-            if (CanChangeTime(_newTimeLine - actualTime))
+            if (CanChangeTime(_newTimeLine))
             {
                 StartCoroutine(ChangeTime());
             }
@@ -112,10 +112,8 @@ namespace LevelTimeChange.TimeChange {
         /// <summary>
         /// Asks appropriate CheckCollider if Player can change time.
         /// </summary>
-        /// <param name="when">Difference between _newTimeLine and actualTime.</param>
-        /// <returns>Bool</returns>
-        public bool CanChangeTime(int when) {
-            return _boxes[when + 2].IsNotTouching();
+        public bool CanChangeTime(TimeLine timeToCheck) {
+            return _boxes[(int)timeToCheck - (int)actualTime + 2].IsNotTouching();
         }
     }
 }

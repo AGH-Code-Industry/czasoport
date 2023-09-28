@@ -19,18 +19,22 @@ namespace UI {
 
         private void Start() {
             TimeChanger.Instance.OnTimeChange += TimeChanger_OnTimeChange;
-            // Player.Instance.OnPlayerMoved += Player_OnPlayerMoved;
+            Player.Instance.OnPlayerMoved += Player_OnPlayerMoved;
             
             ChangeSelectedTime(TimeChanger.Instance.actualTime);
         }
         private void Player_OnPlayerMoved(object sender, EventArgs e) {
+            CheckTeleportAbilities();
+        }
+
+        private void CheckTeleportAbilities() {
             CheckTeleportAbility(past, TimeLine.Past);
             CheckTeleportAbility(present, TimeLine.Present);
             CheckTeleportAbility(future, TimeLine.Future);
-
         }
         private void TimeChanger_OnTimeChange(object sender, TimeChanger.OnTimeChangeEventArgs e) {
             ChangeSelectedTime(e.time);
+            CheckTeleportAbilities();
         }
 
         private void ChangeSelectedTime(TimeLine actualTime) {
@@ -47,7 +51,7 @@ namespace UI {
             if (time == TimeChanger.Instance.actualTime)
                 return;
             
-            ToggleBlockedTime(timeImage, TimeChanger.Instance.CanChangeTime((int)time));
+            ToggleBlockedTime(timeImage, !TimeChanger.Instance.CanChangeTime(time));
         }
 
         private void ToggleBlockedTime(Image timeImage, bool block) {
