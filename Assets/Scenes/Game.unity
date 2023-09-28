@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: b3d9072300000000c1ab6331
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1716,6 +1716,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b03f165bbbc9544e9ed3c02c98daee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &902486991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902486981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021810cf912d7674481e7e2fba49c87b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 799859447}
+  timeToChange: 0.3
+  actualTime: 1
 --- !u!1 &905373028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,21 +1848,6 @@ MonoBehaviour:
   future: {fileID: 422257280}
   selectedColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 0.6666667}
   disableTeleportColor: {r: 1, g: 0, b: 0, a: 0.59607846}
---- !u!114 &902486991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902486981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021810cf912d7674481e7e2fba49c87b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 799859447}
-  timeToChange: 0.3
-  actualTime: 1
 --- !u!1 &1428350584
 GameObject:
   m_ObjectHideFlags: 0
