@@ -73,8 +73,8 @@ namespace Interactions {
             List<Collider2D> result = new List<Collider2D>();
             Physics2D.OverlapCircle(transform.position,
                 _settings.defaultInteractionRadius,
-                new ContactFilter2D() {
-                    layerMask = LayerMask.GetMask(_settings.interactablesLayer),
+                new () {
+                    layerMask = LayerMask.GetMask(_settings.interactablesItemsLayer,_settings.interactablesObjectsLayer),
                     useLayerMask = true,
                     useTriggers = true
                 },
