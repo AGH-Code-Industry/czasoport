@@ -11,6 +11,7 @@ namespace Items
     {
         public int id;
         public Sprite image;
+        public Sprite inventoryImage;
         public string itemName;
         public string description;
         public int durability;

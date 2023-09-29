@@ -74,7 +74,8 @@ namespace InventorySystem.UI {
         /// <param name="sender"></param>
         /// <param name="args"></param>
         public void OnItemAdded(object sender,ItemInsertedEventArgs args) {
-            _slots[args.Slot].AddItem(args.Item.ItemSO.image);
+            if (args.Item.ItemSO.inventoryImage != null) _slots[args.Slot].AddItem(args.Item.ItemSO.inventoryImage);
+            else _slots[args.Slot].AddItem(args.Item.ItemSO.image);
             _slots[args.Slot].SetDurability(args.Item.ItemSO.durability);
         }
 
