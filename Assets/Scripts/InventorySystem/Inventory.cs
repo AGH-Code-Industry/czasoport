@@ -50,7 +50,6 @@ namespace InventorySystem {
             ItemStateChanged += (sender, args) =>
                 _logger.Log(
                     $"Item {args.Item.ItemSO.itemName % Colorize.Cyan} state {"changed" % Colorize.Orange}, {args.Slot % Colorize.Magenta} slot.");
-            CDebug.Log($"Loaded Inventory, events instantiated.");
             _items = new Item[_settings.itemsCount];
         }
 

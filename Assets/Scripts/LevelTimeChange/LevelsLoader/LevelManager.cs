@@ -32,11 +32,10 @@ namespace LevelTimeChange.LevelsLoader {
 
             _logger.Log($"New scene has awoken: {currentLevel}");
             LevelsManager.Instance.LoadedLevels.Add(currentLevel, this);
-            _logger.Log($"New scene has awoken: {currentLevel.sceneName % Colorize.Cyan}");
             FindTeleportsOnScene();
             SetTimelinesPositions();
-            DeactivateLevel();
             FindNeighbouringLevels();
+            DeactivateLevel();
         }
 
         /// <summary>
@@ -164,6 +163,10 @@ namespace LevelTimeChange.LevelsLoader {
                 }
             }
             neighborLevels = neighourLevelsList.ToList();
+        }
+        
+        public override string ToString() {
+            return $"[LvlManager: {currentLevel}]" % Colorize.Cyan;
         }
     }
 

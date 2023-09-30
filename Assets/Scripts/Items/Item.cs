@@ -1,18 +1,20 @@
 using System;
+using System.Xml;
 using Application;
 using CoinPackage.Debugging;
 using Interactions;
 using UnityEngine;
 using Interactions.Interfaces;
 using InventorySystem;
+using Utils.Attributes;
 
 namespace Items
 {
     [RequireComponent(typeof(CircleCollider2D))]
     [RequireComponent(typeof(SpriteRenderer))]
     [RequireComponent(typeof(HighlightInteraction))]
-    public class Item : MonoBehaviour, IHandInteractable, ILongHandInteractable
-    {
+    public class Item : MonoBehaviour, IHandInteractable, ILongHandInteractable {
+        [ObjectIdentifier] public string uniqueId;
         [SerializeField] private ItemSO itemSO;
 
         public ItemSO ItemSO => itemSO;
@@ -40,7 +42,7 @@ namespace Items
         }
 
         public override string ToString() {
-            return $"[Item, {itemSO.name}]" % Colorize.Purple;
+            return itemSO.ToString();
         }
     }
 }

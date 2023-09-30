@@ -5,6 +5,7 @@ using Application;
 using Application.GlobalExceptions;
 using CoinPackage.Debugging;
 using CustomInput;
+using DataPersistence;
 using Interactions.Interfaces;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -178,6 +179,9 @@ namespace Interactions {
         }
         
         private void OnItemInteractionPerformed(InputAction.CallbackContext ctx) {
+            // TEST TO SAVESYSTEM
+            DataPersistenceManager.Instance.SaveGame();
+            
             if (!_selectedObject) {
                 return;
             }

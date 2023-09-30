@@ -1,7 +1,9 @@
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using CoinPackage.Debugging;
 using CustomInput;
+using DataPersistence;
 using UnityEngine.InputSystem;
 using Settings;
 
@@ -9,7 +11,8 @@ namespace LevelTimeChange.TimeChange {
     /// <summary>
     /// Manages time changing mechanic.
     /// </summary>
-    public class TimeChanger : MonoBehaviour {
+    public class TimeChanger : MonoBehaviour, IDataPersistence
+    {
         public static TimeChanger Instance { get; private set; }
 
         public event EventHandler<OnTimeChangeEventArgs> OnTimeChange;
@@ -114,6 +117,18 @@ namespace LevelTimeChange.TimeChange {
         /// </summary>
         public bool CanChangeTime(TimeLine timeToCheck) {
             return _boxes[(int)timeToCheck - (int)actualTime + 2].IsNotTouching();
+        }
+
+        public void LoadPersistentData(GameData gameData) {
+            actualTime = gameData.currentTimeline;
+        }
+
+        public void SavePersistentData(ref GameData gameData) {
+            gameData.currentTimeline = actualTime;
+        }
+
+        public override string ToString() {
+            return $"[TimeChange]" % Colorize.Gold;
         }
     }
 }

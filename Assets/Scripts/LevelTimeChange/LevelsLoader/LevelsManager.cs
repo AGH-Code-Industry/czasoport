@@ -5,16 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using Application;
 using Application.GlobalExceptions;
+using DataPersistence;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using PlayerScripts;
+using Settings;
 
 namespace LevelTimeChange.LevelsLoader {
 	/// <summary>
 	/// Manager of levels loading and switching system. Central point of communication between rest of
 	/// included components. It is a singleton, attached to object present through the `game`.
 	/// </summary>
-	public class LevelsManager : MonoBehaviour
+	public class LevelsManager : MonoBehaviour, IDataPersistence
 	{
 		/// <summary>
 		/// Singleton instance of this class.
@@ -27,12 +29,11 @@ namespace LevelTimeChange.LevelsLoader {
 		/// All currently loaded levels.
 		/// </summary>
 		public Dictionary<LevelInfoSO, LevelManager> LoadedLevels;
-		
-		[SerializeField] private LevelInfoSO startingLevel; // TODO: This must be dynamic based on level save
 
-		private LevelManager _currentLevelManager;
+        private LevelManager _currentLevelManager;
+        private LevelInfoSO _currentLevel;
 		private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.LEVEL_SYSTEM];
-		private bool _isLoading = true;
+		private bool _isFirstLevelLoading = true;
 		
 		private Transform _player;
 
@@ -43,19 +44,21 @@ namespace LevelTimeChange.LevelsLoader {
 			}
 			Instance = this;
 			LoadedLevels = new Dictionary<LevelInfoSO, LevelManager>();
-			
-			_logger.Log("Loading starting scene.");
-			SceneManager.LoadScene(startingLevel.sceneName, LoadSceneMode.Additive);
-		}
+        }
 
 		private void Start() {
-			_logger.Log("Activating starting scene.");
-			_player = Player.Instance.GetComponent<Transform>();
-			_currentLevelManager = LoadedLevels[startingLevel];
-			_currentLevelManager.ActivateLevel();
-			_isLoading = false;
-			LoadLevels(_currentLevelManager);
-		}
+            _player = Player.Instance.GetComponent<Transform>();
+        }
+
+        /// <summary>
+        /// Load first scene after joining the game
+        /// </summary>
+        public void LoadFirstLevel() {
+            _logger.Log($"Loading {_currentLevel} as the current level.");
+            _isFirstLevelLoading = true;
+            SceneManager.LoadScene(_currentLevel.sceneName, LoadSceneMode.Additive);
+            // Wait for discovery process from loading level and then do rest of the setup
+        }
 
 		/// <summary>
 		/// Change active level.
@@ -73,6 +76,7 @@ namespace LevelTimeChange.LevelsLoader {
 
             newLevel.ActivateLevel();
             _currentLevelManager = newLevel;
+            _currentLevel = destinedLevelInfo;
             oldLevel.DeactivateLevel();
 
             _player.position = destinationPortal.GetTeleportPoint(); // TODO: Change how we move the player
@@ -89,8 +93,16 @@ namespace LevelTimeChange.LevelsLoader {
 		/// </summary>
 		/// <param name="level"></param>
 		public void ReportForDiscovery(LevelInfoSO level) {
-			if (_isLoading) {
-				_logger.Log($"Level {level} reported for discovery, {"omitted" % Colorize.Red}.");
+			if (_isFirstLevelLoading) { // Level reporting for discovery is the first loaded level
+                _logger.Log($"Level {level} reported for discovery, {"omitted" % Colorize.Red} because it is starting level.");
+                _logger.Log($"Finishing setup of the first level.");
+                
+                _currentLevelManager = LoadedLevels[_currentLevel];
+                _currentLevelManager.ActivateLevel();
+                _isFirstLevelLoading = false;
+                _logger.Log($"Finished setup of the first level loading level.");
+            
+                LoadLevels(_currentLevelManager);
 				return;
 			}
 			_logger.Log($"Level {level} reported for discovery, {"discovering" % Colorize.Green}.");
@@ -103,7 +115,7 @@ namespace LevelTimeChange.LevelsLoader {
 		}
 
 		private void LoadLevels(LevelManager destinedLevel) {
-			_logger.Log($"Loading new scenes.");
+			_logger.Log($"Loading additional scenes.");
 			foreach (var level in destinedLevel.neighborLevels) {
 				if (!LoadedLevels.ContainsKey(level)) {
 					LoadLevel(level);
@@ -130,5 +142,18 @@ namespace LevelTimeChange.LevelsLoader {
 				UnLoadLevel(scene);
 			}
 		}
-	}	
+
+        public void LoadPersistentData(GameData gameData) {
+            _currentLevel = Resources.Load<LevelInfoSO>($"{DeveloperSettings.Instance.appSettings.lvlDefinitionsResPath}/{gameData.currentLevel}");
+            _logger.Log($"Loaded from save: {_currentLevel}");
+        }
+
+        public void SavePersistentData(ref GameData gameData) {
+            gameData.currentLevel = _currentLevel.sceneName;
+        }
+        
+        public override string ToString() {
+            return $"[LevelsManager]" % Colorize.Gold;
+        }
+    }	
 }
