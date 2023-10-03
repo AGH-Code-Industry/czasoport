@@ -5,6 +5,11 @@ using TMPro;
 using Settings;
 
 public class NotificationManager : MonoBehaviour {
+
+    /* If you want to display a notification use this formula:
+     NotificationManager.Instance.RaiseNotification(new Notification(string message, float displayTime));
+    You can always change the Nofication class to change it's properties.
+    */
     public static NotificationManager Instance;
 
     [SerializeField]
@@ -20,10 +25,10 @@ public class NotificationManager : MonoBehaviour {
         }
     }
 
-    public void RaiseNotification(string notificationToDisplay) {
-        _notificationMessage.text = notificationToDisplay;
+    public void RaiseNotification(Notification notificationToDisplay) {
+        _notificationMessage.text = notificationToDisplay.message;
         _notificationWindow.SetActive(true);
-        Invoke("DisableNotificationWindow", DeveloperSettings.Instance.appSettings.notificationDuration);
+        Invoke("DisableNotificationWindow", notificationToDisplay.displayTime);
     }
 
     void DisableNotificationWindow() {
