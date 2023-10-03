@@ -35,7 +35,6 @@ namespace Items
         public void InteractionHand() {
             _logger.Log($"Item {this} is being {"short interacted" % Colorize.Green} with.", this);
             Inventory.Instance.InsertItem(this);
-            NotificationManager.Instance.RaiseNotification(itemSO.pickUpNotification);
         }
 
         public void LongInteractionHand() {
