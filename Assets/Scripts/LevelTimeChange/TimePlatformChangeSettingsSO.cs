@@ -14,5 +14,8 @@ namespace LevelTimeChange {
         
         [Tooltip("By what offset should Past and Future platforms' transform differ from Present platform.")]
         public Vector2 offsetFromPresentPlatform;
+        
+        [Tooltip("Do you want to go back to Past by trying to go forward in TimeLine by being in Future (and vice versa)?")]
+        public bool loopTimeChange;
     }
 }

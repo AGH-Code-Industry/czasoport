@@ -22,18 +22,21 @@ namespace LevelTimeChange.TimeChange {
         }
         
         [SerializeField] private Animator animator;
-        [Tooltip("Duration of the jump")] 
-        [SerializeField] private float timeToChange = 0.3f;
-        
+
+        [Tooltip("Duration of the jump")] [SerializeField]
+        private float timeToChange = 0.3f;
+
         /// <summary>
         /// Timeline the player is currently on.
         /// </summary>
+        [Range(0, 2)]
         public TimeLine actualTime = TimeLine.Present;
 
         private List<CheckCollider> _boxes;
         private TimePlatformChangeSettingsSO _settings;
         private Vector3 _timeJump;
         private TimeLine _newTimeLine;
+        private bool _loop;
 
         private void Awake() {
             Instance = this;
@@ -42,11 +45,11 @@ namespace LevelTimeChange.TimeChange {
         private void Start() {
             _settings = DeveloperSettings.Instance.tpcSettings;
             _timeJump = _settings.offsetFromPresentPlatform;
+            _loop = _settings.loopTimeChange;
+
             _boxes = new List<CheckCollider>();
-            for (int i = -2; i <= 2; i++)
-            {
-                if (i == 0)
-                {
+            for (int i = -2; i <= 2; i++) {
+                if (i == 0) {
                     _boxes.Add(null);
                     continue;
                 }
@@ -60,8 +63,7 @@ namespace LevelTimeChange.TimeChange {
             }
         }
 
-        private void OnEnable()
-        {
+        private void OnEnable() {
             CInput.InputActions.Teleport.TeleportBack.performed += TimeBack;
             CInput.InputActions.Teleport.TeleportForward.performed += TimeForward;
         }
@@ -85,11 +87,15 @@ namespace LevelTimeChange.TimeChange {
         /// </summary>
         /// <param name="change">-1 to go back in TimeLine or 1 to go forward in TimeLine.</param>
         private void TryChange(int change) {
-            if (actualTime == 0 && change == -1) 
-                change = 2;
-            _newTimeLine = (TimeLine)(((int)actualTime + change) % 3);
-            if (CanChangeTime(_newTimeLine))
-            {
+            if (_loop) {
+                if (actualTime == 0 && change == -1) change = 2;
+                _newTimeLine = (TimeLine)(((int)actualTime + change) % 3);
+            }
+            else {
+                if ((actualTime == TimeLine.Future && change == 1) || (actualTime == TimeLine.Past && change == -1)) return;
+                _newTimeLine = actualTime + change;
+            }
+            if (CanChangeTime(_newTimeLine - actualTime)) {
                 StartCoroutine(ChangeTime());
             }
         }
