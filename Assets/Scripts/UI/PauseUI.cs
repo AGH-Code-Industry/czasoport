@@ -13,6 +13,7 @@ namespace UI {
         
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.PAUSE];
 
+        [SerializeField] private GameObject menuPanel;
         [SerializeField] private Button resumeButton;
         [SerializeField] private Button saveButton;
         [SerializeField] private Button quitButton;
@@ -49,11 +50,11 @@ namespace UI {
         }
 
         private void Show() {
-            gameObject.SetActive(true);
+            menuPanel.SetActive(true);
         }
 
         private void Hide() {
-            gameObject.SetActive(false);
+            menuPanel.SetActive(false);
         }
     }
 }
