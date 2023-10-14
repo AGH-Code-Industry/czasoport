@@ -42,6 +42,7 @@ namespace CustomInput {
         public static readonly InventoryLock InventoryLock;
         public static readonly TeleportLock TeleportLock;
         public static readonly InteractionsLock InteractionsLock;
+        public static readonly GameInputLock GameInputLock;
 
         static CInput() {
             InputActions = new InputActions();
@@ -52,6 +53,7 @@ namespace CustomInput {
             InventoryLock = new InventoryLock(InputActions.Inventory);
             TeleportLock = new TeleportLock(InputActions.Teleport);
             InteractionsLock = new InteractionsLock(InputActions.Interactions);
+            GameInputLock = new GameInputLock(InputActions.Game);
         }
 
         private static Vector2 GetMouseWorldPosition() {

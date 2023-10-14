@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 using CustomInput;
@@ -8,8 +9,15 @@ namespace LevelTimeChange.TimeChange {
     /// <summary>
     /// Manages time changing mechanic.
     /// </summary>
-    public class TimeChanger : MonoBehaviour
-    {
+    public class TimeChanger : MonoBehaviour {
+        public static TimeChanger Instance { get; private set; }
+
+        public event EventHandler<OnTimeChangeEventArgs> OnTimeChange;
+
+        public class OnTimeChangeEventArgs : EventArgs {
+            public TimeLine time;
+        }
+        
         [SerializeField] private Animator animator;
         [Tooltip("Duration of the jump")] 
         [SerializeField] private float timeToChange = 0.3f;
@@ -23,6 +31,10 @@ namespace LevelTimeChange.TimeChange {
         private TimePlatformChangeSettingsSO _settings;
         private Vector3 _timeJump;
         private TimeLine _newTimeLine;
+
+        private void Awake() {
+            Instance = this;
+        }
 
         private void Start() {
             _settings = DeveloperSettings.Instance.tpcSettings;
@@ -70,9 +82,10 @@ namespace LevelTimeChange.TimeChange {
         /// </summary>
         /// <param name="change">-1 to go back in TimeLine or 1 to go forward in TimeLine.</param>
         private void TryChange(int change) {
-            if (actualTime == 0 && change == -1) change = 2;
+            if (actualTime == 0 && change == -1) 
+                change = 2;
             _newTimeLine = (TimeLine)(((int)actualTime + change) % 3);
-            if (CanChangeTime(_newTimeLine - actualTime))
+            if (CanChangeTime(_newTimeLine))
             {
                 StartCoroutine(ChangeTime());
             }
@@ -90,15 +103,17 @@ namespace LevelTimeChange.TimeChange {
             animator.SetTrigger("End");
             yield return new WaitForSeconds(timeToChange/2);
             CInput.TeleportLock.Unlock(key);
+            
+            OnTimeChange?.Invoke(this, new OnTimeChangeEventArgs {
+                time = actualTime
+            });
         }
 
         /// <summary>
         /// Asks appropriate CheckCollider if Player can change time.
         /// </summary>
-        /// <param name="when">Difference between _newTimeLine and actualTime.</param>
-        /// <returns>Bool</returns>
-        private bool CanChangeTime(int when) {
-            return _boxes[when + 2].IsNotTouching();
+        public bool CanChangeTime(TimeLine timeToCheck) {
+            return _boxes[(int)timeToCheck - (int)actualTime + 2].IsNotTouching();
         }
     }
 }
