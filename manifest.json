@@ -9,7 +9,6 @@
     "baseUrl": "https://normanderwan.github.io/DocFxForUnity/",
     "changefreq": "weekly"
   },
-  "homepages": [],
   "source_base_path": "D:/a/czasoport/czasoport/Documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -426,6 +425,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CustomInput.Locks.GameInputLock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CustomInput.Locks.GameInputLock.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CustomInput.Locks.InteractionsLock.yml",
       "output": {
         ".html": {
@@ -490,6 +499,26 @@
       "output": {
         ".html": {
           "relative_path": "api/CustomInput.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.InputActions.GameActions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.InputActions.GameActions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.InputActions.IGameActions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.InputActions.IGameActions.html"
         }
       },
       "version": ""
@@ -1026,6 +1055,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LevelTimeChange.TimeChange.TimeChanger.yml",
       "output": {
         ".html": {
@@ -1130,6 +1169,26 @@
       "output": {
         ".html": {
           "relative_path": "api/UI.Menu.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UI.PauseUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UI.PauseUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/UI.TimeChangeUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/UI.TimeChangeUI.html"
         }
       },
       "version": ""
@@ -1254,7 +1313,6 @@
       "version": ""
     }
   ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"

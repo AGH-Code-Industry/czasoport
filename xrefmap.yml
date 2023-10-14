@@ -116,6 +116,12 @@ references:
   commentId: F:Application.Loggers.LoggerType.LEVEL_SYSTEM
   fullName: Application.Loggers.LoggerType.LEVEL_SYSTEM
   nameWithType: Loggers.LoggerType.LEVEL_SYSTEM
+- uid: Application.Loggers.LoggerType.PAUSE
+  name: PAUSE
+  href: api/Application.Loggers.LoggerType.html#Application_Loggers_LoggerType_PAUSE
+  commentId: F:Application.Loggers.LoggerType.PAUSE
+  fullName: Application.Loggers.LoggerType.PAUSE
+  nameWithType: Loggers.LoggerType.PAUSE
 - uid: Application.Loggers.LoggerType.PORTALS
   name: PORTALS
   href: api/Application.Loggers.LoggerType.html#Application_Loggers_LoggerType_PORTALS
@@ -146,6 +152,12 @@ references:
   commentId: T:CustomInput.CInput
   fullName: CustomInput.CInput
   nameWithType: CInput
+- uid: CustomInput.CInput.GameInputLock
+  name: GameInputLock
+  href: api/CustomInput.CInput.html#CustomInput_CInput_GameInputLock
+  commentId: F:CustomInput.CInput.GameInputLock
+  fullName: CustomInput.CInput.GameInputLock
+  nameWithType: CInput.GameInputLock
 - uid: CustomInput.CInput.InputActions
   name: InputActions
   href: api/CustomInput.CInput.html#CustomInput_CInput_InputActions
@@ -342,6 +354,60 @@ references:
   commentId: N:CustomInput.Locks
   fullName: CustomInput.Locks
   nameWithType: CustomInput.Locks
+- uid: CustomInput.Locks.GameInputLock
+  name: GameInputLock
+  href: api/CustomInput.Locks.GameInputLock.html
+  commentId: T:CustomInput.Locks.GameInputLock
+  fullName: CustomInput.Locks.GameInputLock
+  nameWithType: GameInputLock
+- uid: CustomInput.Locks.GameInputLock.#ctor(InputActions.GameActions)
+  name: GameInputLock(GameActions)
+  href: api/CustomInput.Locks.GameInputLock.html#CustomInput_Locks_GameInputLock__ctor_InputActions_GameActions_
+  commentId: M:CustomInput.Locks.GameInputLock.#ctor(InputActions.GameActions)
+  name.vb: New(GameActions)
+  fullName: CustomInput.Locks.GameInputLock.GameInputLock(InputActions.GameActions)
+  fullName.vb: CustomInput.Locks.GameInputLock.New(InputActions.GameActions)
+  nameWithType: GameInputLock.GameInputLock(InputActions.GameActions)
+  nameWithType.vb: GameInputLock.New(InputActions.GameActions)
+- uid: CustomInput.Locks.GameInputLock.#ctor*
+  name: GameInputLock
+  href: api/CustomInput.Locks.GameInputLock.html#CustomInput_Locks_GameInputLock__ctor_
+  commentId: Overload:CustomInput.Locks.GameInputLock.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: CustomInput.Locks.GameInputLock.GameInputLock
+  fullName.vb: CustomInput.Locks.GameInputLock.New
+  nameWithType: GameInputLock.GameInputLock
+  nameWithType.vb: GameInputLock.New
+- uid: CustomInput.Locks.GameInputLock.Lock
+  name: Lock()
+  href: api/CustomInput.Locks.GameInputLock.html#CustomInput_Locks_GameInputLock_Lock
+  commentId: M:CustomInput.Locks.GameInputLock.Lock
+  fullName: CustomInput.Locks.GameInputLock.Lock()
+  nameWithType: GameInputLock.Lock()
+- uid: CustomInput.Locks.GameInputLock.Lock*
+  name: Lock
+  href: api/CustomInput.Locks.GameInputLock.html#CustomInput_Locks_GameInputLock_Lock_
+  commentId: Overload:CustomInput.Locks.GameInputLock.Lock
+  isSpec: "True"
+  fullName: CustomInput.Locks.GameInputLock.Lock
+  nameWithType: GameInputLock.Lock
+- uid: CustomInput.Locks.GameInputLock.Unlock(System.String)
+  name: Unlock(string)
+  href: api/CustomInput.Locks.GameInputLock.html#CustomInput_Locks_GameInputLock_Unlock_System_String_
+  commentId: M:CustomInput.Locks.GameInputLock.Unlock(System.String)
+  name.vb: Unlock(String)
+  fullName: CustomInput.Locks.GameInputLock.Unlock(string)
+  fullName.vb: CustomInput.Locks.GameInputLock.Unlock(String)
+  nameWithType: GameInputLock.Unlock(string)
+  nameWithType.vb: GameInputLock.Unlock(String)
+- uid: CustomInput.Locks.GameInputLock.Unlock*
+  name: Unlock
+  href: api/CustomInput.Locks.GameInputLock.html#CustomInput_Locks_GameInputLock_Unlock_
+  commentId: Overload:CustomInput.Locks.GameInputLock.Unlock
+  isSpec: "True"
+  fullName: CustomInput.Locks.GameInputLock.Unlock
+  nameWithType: GameInputLock.Unlock
 - uid: CustomInput.Locks.InteractionsLock
   name: InteractionsLock
   href: api/CustomInput.Locks.InteractionsLock.html
@@ -724,6 +790,141 @@ references:
   isSpec: "True"
   fullName: InputActions.FindBinding
   nameWithType: InputActions.FindBinding
+- uid: Global.InputActions.Game
+  name: Game
+  href: api/Global.InputActions.html#Global_InputActions_Game
+  commentId: P:Global.InputActions.Game
+  fullName: InputActions.Game
+  nameWithType: InputActions.Game
+- uid: Global.InputActions.Game*
+  name: Game
+  href: api/Global.InputActions.html#Global_InputActions_Game_
+  commentId: Overload:Global.InputActions.Game
+  isSpec: "True"
+  fullName: InputActions.Game
+  nameWithType: InputActions.Game
+- uid: Global.InputActions.GameActions
+  name: InputActions.GameActions
+  href: api/Global.InputActions.GameActions.html
+  commentId: T:Global.InputActions.GameActions
+  fullName: InputActions.GameActions
+  nameWithType: InputActions.GameActions
+- uid: Global.InputActions.GameActions.#ctor(InputActions)
+  name: GameActions(InputActions)
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions__ctor_InputActions_
+  commentId: M:Global.InputActions.GameActions.#ctor(InputActions)
+  name.vb: New(InputActions)
+  fullName: InputActions.GameActions.GameActions(InputActions)
+  fullName.vb: InputActions.GameActions.New(InputActions)
+  nameWithType: InputActions.GameActions.GameActions(InputActions)
+  nameWithType.vb: InputActions.GameActions.New(InputActions)
+- uid: Global.InputActions.GameActions.#ctor*
+  name: GameActions
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions__ctor_
+  commentId: Overload:Global.InputActions.GameActions.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: InputActions.GameActions.GameActions
+  fullName.vb: InputActions.GameActions.New
+  nameWithType: InputActions.GameActions.GameActions
+  nameWithType.vb: InputActions.GameActions.New
+- uid: Global.InputActions.GameActions.Disable
+  name: Disable()
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_Disable
+  commentId: M:Global.InputActions.GameActions.Disable
+  fullName: InputActions.GameActions.Disable()
+  nameWithType: InputActions.GameActions.Disable()
+- uid: Global.InputActions.GameActions.Disable*
+  name: Disable
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_Disable_
+  commentId: Overload:Global.InputActions.GameActions.Disable
+  isSpec: "True"
+  fullName: InputActions.GameActions.Disable
+  nameWithType: InputActions.GameActions.Disable
+- uid: Global.InputActions.GameActions.Enable
+  name: Enable()
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_Enable
+  commentId: M:Global.InputActions.GameActions.Enable
+  fullName: InputActions.GameActions.Enable()
+  nameWithType: InputActions.GameActions.Enable()
+- uid: Global.InputActions.GameActions.Enable*
+  name: Enable
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_Enable_
+  commentId: Overload:Global.InputActions.GameActions.Enable
+  isSpec: "True"
+  fullName: InputActions.GameActions.Enable
+  nameWithType: InputActions.GameActions.Enable
+- uid: Global.InputActions.GameActions.Get
+  name: Get()
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_Get
+  commentId: M:Global.InputActions.GameActions.Get
+  fullName: InputActions.GameActions.Get()
+  nameWithType: InputActions.GameActions.Get()
+- uid: Global.InputActions.GameActions.Get*
+  name: Get
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_Get_
+  commentId: Overload:Global.InputActions.GameActions.Get
+  isSpec: "True"
+  fullName: InputActions.GameActions.Get
+  nameWithType: InputActions.GameActions.Get
+- uid: Global.InputActions.GameActions.SetCallbacks(InputActions.IGameActions)
+  name: SetCallbacks(IGameActions)
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_SetCallbacks_InputActions_IGameActions_
+  commentId: M:Global.InputActions.GameActions.SetCallbacks(InputActions.IGameActions)
+  fullName: InputActions.GameActions.SetCallbacks(InputActions.IGameActions)
+  nameWithType: InputActions.GameActions.SetCallbacks(InputActions.IGameActions)
+- uid: Global.InputActions.GameActions.SetCallbacks*
+  name: SetCallbacks
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_SetCallbacks_
+  commentId: Overload:Global.InputActions.GameActions.SetCallbacks
+  isSpec: "True"
+  fullName: InputActions.GameActions.SetCallbacks
+  nameWithType: InputActions.GameActions.SetCallbacks
+- uid: Global.InputActions.GameActions.TogglePause
+  name: TogglePause
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_TogglePause
+  commentId: P:Global.InputActions.GameActions.TogglePause
+  fullName: InputActions.GameActions.TogglePause
+  nameWithType: InputActions.GameActions.TogglePause
+- uid: Global.InputActions.GameActions.TogglePause*
+  name: TogglePause
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_TogglePause_
+  commentId: Overload:Global.InputActions.GameActions.TogglePause
+  isSpec: "True"
+  fullName: InputActions.GameActions.TogglePause
+  nameWithType: InputActions.GameActions.TogglePause
+- uid: Global.InputActions.GameActions.enabled
+  name: enabled
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_enabled
+  commentId: P:Global.InputActions.GameActions.enabled
+  fullName: InputActions.GameActions.enabled
+  nameWithType: InputActions.GameActions.enabled
+- uid: Global.InputActions.GameActions.enabled*
+  name: enabled
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_enabled_
+  commentId: Overload:Global.InputActions.GameActions.enabled
+  isSpec: "True"
+  fullName: InputActions.GameActions.enabled
+  nameWithType: InputActions.GameActions.enabled
+- uid: Global.InputActions.GameActions.op_Implicit(InputActions.GameActions)~InputActionMap
+  name: implicit operator InputActionMap(GameActions)
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_op_Implicit_InputActions_GameActions__InputActionMap
+  commentId: M:Global.InputActions.GameActions.op_Implicit(InputActions.GameActions)~InputActionMap
+  name.vb: CType(GameActions)
+  fullName: InputActions.GameActions.implicit operator InputActionMap(InputActions.GameActions)
+  fullName.vb: InputActions.GameActions.CType(InputActions.GameActions)
+  nameWithType: InputActions.GameActions.implicit operator InputActionMap(InputActions.GameActions)
+  nameWithType.vb: InputActions.GameActions.CType(InputActions.GameActions)
+- uid: Global.InputActions.GameActions.op_Implicit*
+  name: implicit operator
+  href: api/Global.InputActions.GameActions.html#Global_InputActions_GameActions_op_Implicit_
+  commentId: Overload:Global.InputActions.GameActions.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: InputActions.GameActions.implicit operator
+  fullName.vb: InputActions.GameActions.CType
+  nameWithType: InputActions.GameActions.implicit operator
+  nameWithType.vb: InputActions.GameActions.CType
 - uid: Global.InputActions.GetEnumerator
   name: GetEnumerator()
   href: api/Global.InputActions.html#Global_InputActions_GetEnumerator
@@ -737,6 +938,25 @@ references:
   isSpec: "True"
   fullName: InputActions.GetEnumerator
   nameWithType: InputActions.GetEnumerator
+- uid: Global.InputActions.IGameActions
+  name: InputActions.IGameActions
+  href: api/Global.InputActions.IGameActions.html
+  commentId: T:Global.InputActions.IGameActions
+  fullName: InputActions.IGameActions
+  nameWithType: InputActions.IGameActions
+- uid: Global.InputActions.IGameActions.OnTogglePause(InputAction.CallbackContext)
+  name: OnTogglePause(CallbackContext)
+  href: api/Global.InputActions.IGameActions.html#Global_InputActions_IGameActions_OnTogglePause_InputAction_CallbackContext_
+  commentId: M:Global.InputActions.IGameActions.OnTogglePause(InputAction.CallbackContext)
+  fullName: InputActions.IGameActions.OnTogglePause(InputAction.CallbackContext)
+  nameWithType: InputActions.IGameActions.OnTogglePause(InputAction.CallbackContext)
+- uid: Global.InputActions.IGameActions.OnTogglePause*
+  name: OnTogglePause
+  href: api/Global.InputActions.IGameActions.html#Global_InputActions_IGameActions_OnTogglePause_
+  commentId: Overload:Global.InputActions.IGameActions.OnTogglePause
+  isSpec: "True"
+  fullName: InputActions.IGameActions.OnTogglePause
+  nameWithType: InputActions.IGameActions.OnTogglePause
 - uid: Global.InputActions.IInteractionsActions
   name: InputActions.IInteractionsActions
   href: api/Global.InputActions.IInteractionsActions.html
@@ -2999,6 +3219,50 @@ references:
   commentId: T:LevelTimeChange.TimeChange.TimeChanger
   fullName: LevelTimeChange.TimeChange.TimeChanger
   nameWithType: TimeChanger
+- uid: LevelTimeChange.TimeChange.TimeChanger.CanChangeTime(LevelTimeChange.TimeLine)
+  name: CanChangeTime(TimeLine)
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_CanChangeTime_LevelTimeChange_TimeLine_
+  commentId: M:LevelTimeChange.TimeChange.TimeChanger.CanChangeTime(LevelTimeChange.TimeLine)
+  fullName: LevelTimeChange.TimeChange.TimeChanger.CanChangeTime(LevelTimeChange.TimeLine)
+  nameWithType: TimeChanger.CanChangeTime(TimeLine)
+- uid: LevelTimeChange.TimeChange.TimeChanger.CanChangeTime*
+  name: CanChangeTime
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_CanChangeTime_
+  commentId: Overload:LevelTimeChange.TimeChange.TimeChanger.CanChangeTime
+  isSpec: "True"
+  fullName: LevelTimeChange.TimeChange.TimeChanger.CanChangeTime
+  nameWithType: TimeChanger.CanChangeTime
+- uid: LevelTimeChange.TimeChange.TimeChanger.Instance
+  name: Instance
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_Instance
+  commentId: P:LevelTimeChange.TimeChange.TimeChanger.Instance
+  fullName: LevelTimeChange.TimeChange.TimeChanger.Instance
+  nameWithType: TimeChanger.Instance
+- uid: LevelTimeChange.TimeChange.TimeChanger.Instance*
+  name: Instance
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_Instance_
+  commentId: Overload:LevelTimeChange.TimeChange.TimeChanger.Instance
+  isSpec: "True"
+  fullName: LevelTimeChange.TimeChange.TimeChanger.Instance
+  nameWithType: TimeChanger.Instance
+- uid: LevelTimeChange.TimeChange.TimeChanger.OnTimeChange
+  name: OnTimeChange
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_OnTimeChange
+  commentId: E:LevelTimeChange.TimeChange.TimeChanger.OnTimeChange
+  fullName: LevelTimeChange.TimeChange.TimeChanger.OnTimeChange
+  nameWithType: TimeChanger.OnTimeChange
+- uid: LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs
+  name: TimeChanger.OnTimeChangeEventArgs
+  href: api/LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.html
+  commentId: T:LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs
+  fullName: LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs
+  nameWithType: TimeChanger.OnTimeChangeEventArgs
+- uid: LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.time
+  name: time
+  href: api/LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.html#LevelTimeChange_TimeChange_TimeChanger_OnTimeChangeEventArgs_time
+  commentId: F:LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.time
+  fullName: LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.time
+  nameWithType: TimeChanger.OnTimeChangeEventArgs.time
 - uid: LevelTimeChange.TimeChange.TimeChanger.actualTime
   name: actualTime
   href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_actualTime
@@ -3056,9 +3320,22 @@ references:
 - uid: PlayerScripts.Player.Instance
   name: Instance
   href: api/PlayerScripts.Player.html#PlayerScripts_Player_Instance
-  commentId: F:PlayerScripts.Player.Instance
+  commentId: P:PlayerScripts.Player.Instance
   fullName: PlayerScripts.Player.Instance
   nameWithType: Player.Instance
+- uid: PlayerScripts.Player.Instance*
+  name: Instance
+  href: api/PlayerScripts.Player.html#PlayerScripts_Player_Instance_
+  commentId: Overload:PlayerScripts.Player.Instance
+  isSpec: "True"
+  fullName: PlayerScripts.Player.Instance
+  nameWithType: Player.Instance
+- uid: PlayerScripts.Player.OnPlayerMoved
+  name: OnPlayerMoved
+  href: api/PlayerScripts.Player.html#PlayerScripts_Player_OnPlayerMoved
+  commentId: E:PlayerScripts.Player.OnPlayerMoved
+  fullName: PlayerScripts.Player.OnPlayerMoved
+  nameWithType: Player.OnPlayerMoved
 - uid: PlayerScripts.PlayerSettingsSO
   name: PlayerSettingsSO
   href: api/PlayerScripts.PlayerSettingsSO.html
@@ -3131,3 +3408,15 @@ references:
   commentId: T:UI.Menu
   fullName: UI.Menu
   nameWithType: Menu
+- uid: UI.PauseUI
+  name: PauseUI
+  href: api/UI.PauseUI.html
+  commentId: T:UI.PauseUI
+  fullName: UI.PauseUI
+  nameWithType: PauseUI
+- uid: UI.TimeChangeUI
+  name: TimeChangeUI
+  href: api/UI.TimeChangeUI.html
+  commentId: T:UI.TimeChangeUI
+  fullName: UI.TimeChangeUI
+  nameWithType: TimeChangeUI

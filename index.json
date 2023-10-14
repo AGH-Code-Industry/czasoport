@@ -17,7 +17,7 @@
   "api/Application.Loggers.LoggerType.html": {
     "href": "api/Application.Loggers.LoggerType.html",
     "title": "Enum Loggers.LoggerType | Czasoport Documentation",
-    "keywords": "Enum Loggers.LoggerType Namespace Application public enum Loggers.LoggerType Fields INTERACTABLE_OBJECTS = 3 INTERACTIONS = 2 INVENTORY = 1 ITEMS = 4 LEVEL_SYSTEM = 0 PORTALS = 5"
+    "keywords": "Enum Loggers.LoggerType Namespace Application public enum Loggers.LoggerType Fields INTERACTABLE_OBJECTS = 3 INTERACTIONS = 2 INVENTORY = 1 ITEMS = 4 LEVEL_SYSTEM = 0 PAUSE = 6 PORTALS = 5"
   },
   "api/Application.Loggers.html": {
     "href": "api/Application.Loggers.html",
@@ -37,7 +37,7 @@
   "api/CustomInput.CInput.html": {
     "href": "api/CustomInput.CInput.html",
     "title": "Class CInput | Czasoport Documentation",
-    "keywords": "Class CInput Namespace CustomInput Wrapper for automatically generated InputActions. Provides easier access to reading values from input, takes care of processing for common input values. Incorporates locking mechanism. public static class CInput Inheritance object CInput Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields InputActions InputActions object that CInput is based on. Should be used if there is no wrapper implemented by CInput. public static readonly InputActions InputActions Field Value InputActions InteractionsLock public static readonly InteractionsLock InteractionsLock Field Value InteractionsLock InventoryLock public static readonly InventoryLock InventoryLock Field Value InventoryLock MouseLock public static readonly MouseLock MouseLock Field Value MouseLock MovementLock public static readonly MovementLock MovementLock Field Value MovementLock TeleportLock public static readonly TeleportLock TeleportLock Field Value TeleportLock Properties MousePosition Normal mouse position from InputActions. If you want point in game over which mouse is hovering, use MouseWorldPosition. public static Vector2 MousePosition { get; } Property Value Vector2 MouseWorldPosition Mouse position casted to world coordinates. public static Vector2 MouseWorldPosition { get; } Property Value Vector2 NavigationAxis Vector2 desired player direction/ public static Vector2 NavigationAxis { get; } Property Value Vector2 Run Whether player is running, and how fast he is running (effective on gamepads). public static float Run { get; } Property Value float"
+    "keywords": "Class CInput Namespace CustomInput Wrapper for automatically generated InputActions. Provides easier access to reading values from input, takes care of processing for common input values. Incorporates locking mechanism. public static class CInput Inheritance object CInput Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields GameInputLock public static readonly GameInputLock GameInputLock Field Value GameInputLock InputActions InputActions object that CInput is based on. Should be used if there is no wrapper implemented by CInput. public static readonly InputActions InputActions Field Value InputActions InteractionsLock public static readonly InteractionsLock InteractionsLock Field Value InteractionsLock InventoryLock public static readonly InventoryLock InventoryLock Field Value InventoryLock MouseLock public static readonly MouseLock MouseLock Field Value MouseLock MovementLock public static readonly MovementLock MovementLock Field Value MovementLock TeleportLock public static readonly TeleportLock TeleportLock Field Value TeleportLock Properties MousePosition Normal mouse position from InputActions. If you want point in game over which mouse is hovering, use MouseWorldPosition. public static Vector2 MousePosition { get; } Property Value Vector2 MouseWorldPosition Mouse position casted to world coordinates. public static Vector2 MouseWorldPosition { get; } Property Value Vector2 NavigationAxis Vector2 desired player direction/ public static Vector2 NavigationAxis { get; } Property Value Vector2 Run Whether player is running, and how fast he is running (effective on gamepads). public static float Run { get; } Property Value float"
   },
   "api/CustomInput.Exceptions.NoMainCameraException.html": {
     "href": "api/CustomInput.Exceptions.NoMainCameraException.html",
@@ -63,6 +63,11 @@
     "href": "api/CustomInput.Interactions.html",
     "title": "Namespace CustomInput.Interactions | Czasoport Documentation",
     "keywords": "Namespace CustomInput.Interactions Classes CustomHold"
+  },
+  "api/CustomInput.Locks.GameInputLock.html": {
+    "href": "api/CustomInput.Locks.GameInputLock.html",
+    "title": "Class GameInputLock | Czasoport Documentation",
+    "keywords": "Class GameInputLock Namespace CustomInput.Locks Provides locking mechanism for Teleport actions. public class GameInputLock Inheritance object GameInputLock Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors GameInputLock(GameActions) public GameInputLock(InputActions.GameActions input) Parameters input InputActions.GameActions Methods Lock() Lets CustomInput know that current thread is not ready to receive input from user. 'Thread' safe, use instead of Enable and Disable on individual actions. public string Lock() Returns string Key that is needed to unlock the actions. Unlock(string) Lets CustomInput know that current thread is ready to receive input from user. public void Unlock(string key) Parameters key string Obtained by invoking Lock(). Exceptions Exception"
   },
   "api/CustomInput.Locks.InteractionsLock.html": {
     "href": "api/CustomInput.Locks.InteractionsLock.html",
@@ -92,12 +97,22 @@
   "api/CustomInput.Locks.html": {
     "href": "api/CustomInput.Locks.html",
     "title": "Namespace CustomInput.Locks | Czasoport Documentation",
-    "keywords": "Namespace CustomInput.Locks Classes InteractionsLock Provides locking mechanism for Interactions actions. InventoryLock Provides locking mechanism for user Inventory actions. MouseLock Provides locking mechanism for Mouse actions. MovementLock Provides locking mechanism for Movement actions. TeleportLock Provides locking mechanism for Teleport actions."
+    "keywords": "Namespace CustomInput.Locks Classes GameInputLock Provides locking mechanism for Teleport actions. InteractionsLock Provides locking mechanism for Interactions actions. InventoryLock Provides locking mechanism for user Inventory actions. MouseLock Provides locking mechanism for Mouse actions. MovementLock Provides locking mechanism for Movement actions. TeleportLock Provides locking mechanism for Teleport actions."
   },
   "api/CustomInput.html": {
     "href": "api/CustomInput.html",
     "title": "Namespace CustomInput | Czasoport Documentation",
     "keywords": "Namespace CustomInput Classes CInput Wrapper for automatically generated InputActions. Provides easier access to reading values from input, takes care of processing for common input values. Incorporates locking mechanism. InputTest"
+  },
+  "api/Global.InputActions.GameActions.html": {
+    "href": "api/Global.InputActions.GameActions.html",
+    "title": "Struct InputActions.GameActions | Czasoport Documentation",
+    "keywords": "Struct InputActions.GameActions Namespace Global public struct InputActions.GameActions Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors GameActions(InputActions) public GameActions(InputActions wrapper) Parameters wrapper InputActions Properties TogglePause public InputAction TogglePause { get; } Property Value InputAction enabled public bool enabled { get; } Property Value bool Methods Disable() public void Disable() Enable() public void Enable() Get() public InputActionMap Get() Returns InputActionMap SetCallbacks(IGameActions) public void SetCallbacks(InputActions.IGameActions instance) Parameters instance InputActions.IGameActions Operators implicit operator InputActionMap(GameActions) public static implicit operator InputActionMap(InputActions.GameActions set) Parameters set InputActions.GameActions Returns InputActionMap"
+  },
+  "api/Global.InputActions.IGameActions.html": {
+    "href": "api/Global.InputActions.IGameActions.html",
+    "title": "Interface InputActions.IGameActions | Czasoport Documentation",
+    "keywords": "Interface InputActions.IGameActions Namespace Global public interface InputActions.IGameActions Methods OnTogglePause(CallbackContext) void OnTogglePause(InputAction.CallbackContext context) Parameters context CallbackContext"
   },
   "api/Global.InputActions.IInteractionsActions.html": {
     "href": "api/Global.InputActions.IInteractionsActions.html",
@@ -152,7 +167,7 @@
   "api/Global.InputActions.html": {
     "href": "api/Global.InputActions.html",
     "title": "Class InputActions | Czasoport Documentation",
-    "keywords": "Class InputActions Namespace Global public class InputActions : IInputActionCollection2, IDisposable Inheritance object InputActions Implements IDisposable Constructors InputActions() public InputActions() Properties Interactions public InputActions.InteractionsActions Interactions { get; } Property Value InputActions.InteractionsActions Inventory public InputActions.InventoryActions Inventory { get; } Property Value InputActions.InventoryActions Mouse public InputActions.MouseActions Mouse { get; } Property Value InputActions.MouseActions Movement public InputActions.MovementActions Movement { get; } Property Value InputActions.MovementActions Teleport public InputActions.TeleportActions Teleport { get; } Property Value InputActions.TeleportActions asset public InputActionAsset asset { get; } Property Value InputActionAsset bindingMask public InputBinding? bindingMask { get; set; } Property Value InputBinding? bindings public IEnumerable<InputBinding> bindings { get; } Property Value IEnumerable<InputBinding> controlSchemes public ReadOnlyArray<InputControlScheme> controlSchemes { get; } Property Value ReadOnlyArray<InputControlScheme> devices public ReadOnlyArray<InputDevice>? devices { get; set; } Property Value ReadOnlyArray<InputDevice>? Methods Contains(InputAction) public bool Contains(InputAction action) Parameters action InputAction Returns bool Disable() public void Disable() Dispose() Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. public void Dispose() Enable() public void Enable() FindAction(string, bool) public InputAction FindAction(string actionNameOrId, bool throwIfNotFound = false) Parameters actionNameOrId string throwIfNotFound bool Returns InputAction FindBinding(InputBinding, out InputAction) public int FindBinding(InputBinding bindingMask, out InputAction action) Parameters bindingMask InputBinding action InputAction Returns int GetEnumerator() public IEnumerator<InputAction> GetEnumerator() Returns IEnumerator<InputAction>"
+    "keywords": "Class InputActions Namespace Global public class InputActions : IInputActionCollection2, IDisposable Inheritance object InputActions Implements IDisposable Constructors InputActions() public InputActions() Properties Game public InputActions.GameActions Game { get; } Property Value InputActions.GameActions Interactions public InputActions.InteractionsActions Interactions { get; } Property Value InputActions.InteractionsActions Inventory public InputActions.InventoryActions Inventory { get; } Property Value InputActions.InventoryActions Mouse public InputActions.MouseActions Mouse { get; } Property Value InputActions.MouseActions Movement public InputActions.MovementActions Movement { get; } Property Value InputActions.MovementActions Teleport public InputActions.TeleportActions Teleport { get; } Property Value InputActions.TeleportActions asset public InputActionAsset asset { get; } Property Value InputActionAsset bindingMask public InputBinding? bindingMask { get; set; } Property Value InputBinding? bindings public IEnumerable<InputBinding> bindings { get; } Property Value IEnumerable<InputBinding> controlSchemes public ReadOnlyArray<InputControlScheme> controlSchemes { get; } Property Value ReadOnlyArray<InputControlScheme> devices public ReadOnlyArray<InputDevice>? devices { get; set; } Property Value ReadOnlyArray<InputDevice>? Methods Contains(InputAction) public bool Contains(InputAction action) Parameters action InputAction Returns bool Disable() public void Disable() Dispose() Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. public void Dispose() Enable() public void Enable() FindAction(string, bool) public InputAction FindAction(string actionNameOrId, bool throwIfNotFound = false) Parameters actionNameOrId string throwIfNotFound bool Returns InputAction FindBinding(InputBinding, out InputAction) public int FindBinding(InputBinding bindingMask, out InputAction action) Parameters bindingMask InputBinding action InputAction Returns int GetEnumerator() public IEnumerator<InputAction> GetEnumerator() Returns IEnumerator<InputAction>"
   },
   "api/Global.SettingsTests.html": {
     "href": "api/Global.SettingsTests.html",
@@ -162,7 +177,7 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace | Czasoport Documentation",
-    "keywords": "Namespace Classes InputActions SettingsTests Structs InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions"
+    "keywords": "Namespace Classes InputActions SettingsTests Structs InputActions.GameActions InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IGameActions InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions"
   },
   "api/InteractableObjectSystem.InteractableObject.html": {
     "href": "api/InteractableObjectSystem.InteractableObject.html",
@@ -364,15 +379,20 @@
     "title": "Namespace LevelTimeChange.TimeChange.Tests | Czasoport Documentation",
     "keywords": "Namespace LevelTimeChange.TimeChange.Tests Classes PlayerTTCtest"
   },
+  "api/LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.html": {
+    "href": "api/LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.html",
+    "title": "Class TimeChanger.OnTimeChangeEventArgs | Czasoport Documentation",
+    "keywords": "Class TimeChanger.OnTimeChangeEventArgs Namespace LevelTimeChange.TimeChange public class TimeChanger.OnTimeChangeEventArgs : EventArgs Inheritance object EventArgs TimeChanger.OnTimeChangeEventArgs Inherited Members EventArgs.Empty object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields time public TimeLine time Field Value TimeLine"
+  },
   "api/LevelTimeChange.TimeChange.TimeChanger.html": {
     "href": "api/LevelTimeChange.TimeChange.TimeChanger.html",
     "title": "Class TimeChanger | Czasoport Documentation",
-    "keywords": "Class TimeChanger Namespace LevelTimeChange.TimeChange Manages time changing mechanic. public class TimeChanger : MonoBehaviour Inheritance object TimeChanger Fields actualTime Timeline the player is currently on. public TimeLine actualTime Field Value TimeLine"
+    "keywords": "Class TimeChanger Namespace LevelTimeChange.TimeChange Manages time changing mechanic. public class TimeChanger : MonoBehaviour Inheritance object TimeChanger Fields actualTime Timeline the player is currently on. public TimeLine actualTime Field Value TimeLine Properties Instance public static TimeChanger Instance { get; } Property Value TimeChanger Methods CanChangeTime(TimeLine) Asks appropriate CheckCollider if Player can change time. public bool CanChangeTime(TimeLine timeToCheck) Parameters timeToCheck TimeLine Returns bool Events OnTimeChange public event EventHandler<TimeChanger.OnTimeChangeEventArgs> OnTimeChange Event Type EventHandler<TimeChanger.OnTimeChangeEventArgs>"
   },
   "api/LevelTimeChange.TimeChange.html": {
     "href": "api/LevelTimeChange.TimeChange.html",
     "title": "Namespace LevelTimeChange.TimeChange | Czasoport Documentation",
-    "keywords": "Namespace LevelTimeChange.TimeChange Classes CheckCollider Provides checking collision for time change mechanic. TimeChanger Manages time changing mechanic."
+    "keywords": "Namespace LevelTimeChange.TimeChange Classes CheckCollider Provides checking collision for time change mechanic. TimeChanger Manages time changing mechanic. TimeChanger.OnTimeChangeEventArgs"
   },
   "api/LevelTimeChange.TimeLine.html": {
     "href": "api/LevelTimeChange.TimeLine.html",
@@ -392,7 +412,7 @@
   "api/PlayerScripts.Player.html": {
     "href": "api/PlayerScripts.Player.html",
     "title": "Class Player | Czasoport Documentation",
-    "keywords": "Class Player Namespace PlayerScripts public class Player : MonoBehaviour Inheritance object Player Fields Instance public static Player Instance Field Value Player"
+    "keywords": "Class Player Namespace PlayerScripts public class Player : MonoBehaviour Inheritance object Player Properties Instance public static Player Instance { get; } Property Value Player Events OnPlayerMoved public event EventHandler OnPlayerMoved Event Type EventHandler"
   },
   "api/PlayerScripts.PlayerSettingsSO.html": {
     "href": "api/PlayerScripts.PlayerSettingsSO.html",
@@ -419,10 +439,20 @@
     "title": "Class Menu | Czasoport Documentation",
     "keywords": "Class Menu Namespace UI Script for main menu in game public class Menu : MonoBehaviour Inheritance object Menu"
   },
+  "api/UI.PauseUI.html": {
+    "href": "api/UI.PauseUI.html",
+    "title": "Class PauseUI | Czasoport Documentation",
+    "keywords": "Class PauseUI Namespace UI Script for pause menu in game public class PauseUI : MonoBehaviour Inheritance object PauseUI"
+  },
+  "api/UI.TimeChangeUI.html": {
+    "href": "api/UI.TimeChangeUI.html",
+    "title": "Class TimeChangeUI | Czasoport Documentation",
+    "keywords": "Class TimeChangeUI Namespace UI public class TimeChangeUI : MonoBehaviour Inheritance object TimeChangeUI"
+  },
   "api/UI.html": {
     "href": "api/UI.html",
     "title": "Namespace UI | Czasoport Documentation",
-    "keywords": "Namespace UI Classes Menu Script for main menu in game"
+    "keywords": "Namespace UI Classes Menu Script for main menu in game PauseUI Script for pause menu in game TimeChangeUI"
   },
   "gdd/Fabuła/Fabuła.html": {
     "href": "gdd/Fabuła/Fabuła.html",
