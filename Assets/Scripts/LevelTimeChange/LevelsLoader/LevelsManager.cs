@@ -6,6 +6,7 @@ using System.Linq;
 using Application;
 using Application.GlobalExceptions;
 using DataPersistence;
+using CustomInput;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using PlayerScripts;
@@ -22,16 +23,18 @@ namespace LevelTimeChange.LevelsLoader {
 		/// Singleton instance of this class.
 		/// </summary>
 		public static LevelsManager Instance { get; private set; }
-
         public LevelManager CurrentLevelManager => _currentLevelManager;
 
-		/// <summary>
+        /// <summary>
 		/// All currently loaded levels.
 		/// </summary>
 		public Dictionary<LevelInfoSO, LevelManager> LoadedLevels;
+		
+        [SerializeField] private Animator animator;
 
         private LevelManager _currentLevelManager;
         private LevelInfoSO _currentLevel;
+        private TimePlatformChangeSettingsSO _settings;
 		private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.LEVEL_SYSTEM];
 		private bool _isFirstLevelLoading = true;
 		
@@ -44,7 +47,7 @@ namespace LevelTimeChange.LevelsLoader {
 			}
 			Instance = this;
 			LoadedLevels = new Dictionary<LevelInfoSO, LevelManager>();
-        }
+            _settings = DeveloperSettings.Instance.tpcSettings;
 
 		private void Start() {
             _player = Player.Instance.GetComponent<Transform>();
@@ -71,8 +74,32 @@ namespace LevelTimeChange.LevelsLoader {
 			// Order of actions in this function is crucial, do not change it unless
 			// you know what you are doing
             // FOR REAL, I WROTE THIS, THEN CHANGED IT AND IT BROKE
-			var newLevel = LoadedLevels[destinedLevelInfo];
-			var oldLevel = _currentLevelManager;
+
+            StartCoroutine(ChangeLevelAnim(destinedLevelInfo, destinationPortal));
+            
+			// var newLevel = LoadedLevels[destinedLevelInfo];
+			// var oldLevel = _currentLevelManager;
+   //
+   //          newLevel.ActivateLevel();
+   //          _currentLevelManager = newLevel;
+   //          oldLevel.DeactivateLevel();
+   //
+   //          _player.position = destinationPortal.GetTeleportPoint(); // TODO: Change how we move the player
+   //
+   //          // oldLevel.DeactivateLevel();
+   //
+			// LoadLevels(newLevel);
+			// UnloadLevels(newLevel);
+		}
+        
+        private IEnumerator<WaitForSeconds> ChangeLevelAnim(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) {
+            animator.SetTrigger("Start");
+            yield return new WaitForSeconds(_settings.platformChangeAnimLength/4);
+            var key = CInput.MovementLock.Lock();
+            yield return new WaitForSeconds(_settings.platformChangeAnimLength/4);
+            
+            var newLevel = LoadedLevels[destinedLevelInfo];
+            var oldLevel = _currentLevelManager;
 
             newLevel.ActivateLevel();
             _currentLevelManager = newLevel;
@@ -83,9 +110,14 @@ namespace LevelTimeChange.LevelsLoader {
 
             // oldLevel.DeactivateLevel();
 
-			LoadLevels(newLevel);
-			UnloadLevels(newLevel);
-		}
+            LoadLevels(newLevel);
+            UnloadLevels(newLevel);
+            
+            animator.SetTrigger("End");
+            yield return new WaitForSeconds(_settings.platformChangeAnimLength/4);
+            CInput.MovementLock.Unlock(key);
+            yield return new WaitForSeconds(_settings.platformChangeAnimLength/4);
+        }
 
 		/// <summary>
 		/// This method is used by the `LevelManager` of some scene to let the system know

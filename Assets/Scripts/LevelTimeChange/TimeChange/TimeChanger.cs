@@ -23,20 +23,15 @@ namespace LevelTimeChange.TimeChange {
         
         [SerializeField] private Animator animator;
 
-        [Tooltip("Duration of the jump")] [SerializeField]
-        private float timeToChange = 0.3f;
-
         /// <summary>
         /// Timeline the player is currently on.
         /// </summary>
-        [Range(0, 2)]
         public TimeLine actualTime = TimeLine.Present;
 
         private List<CheckCollider> _boxes;
         private TimePlatformChangeSettingsSO _settings;
         private Vector3 _timeJump;
         private TimeLine _newTimeLine;
-        private bool _loop;
 
         private void Awake() {
             Instance = this;
@@ -45,7 +40,6 @@ namespace LevelTimeChange.TimeChange {
         private void Start() {
             _settings = DeveloperSettings.Instance.tpcSettings;
             _timeJump = _settings.offsetFromPresentPlatform;
-            _loop = _settings.loopTimeChange;
 
             _boxes = new List<CheckCollider>();
             for (int i = -2; i <= 2; i++) {
@@ -87,7 +81,7 @@ namespace LevelTimeChange.TimeChange {
         /// </summary>
         /// <param name="change">-1 to go back in TimeLine or 1 to go forward in TimeLine.</param>
         private void TryChange(int change) {
-            if (_loop) {
+            if (_settings.loopTimeChange) {
                 if (actualTime == 0 && change == -1) change = 2;
                 _newTimeLine = (TimeLine)(((int)actualTime + change) % 3);
             }
@@ -106,11 +100,11 @@ namespace LevelTimeChange.TimeChange {
         private IEnumerator<WaitForSeconds> ChangeTime() {
             var key = CInput.TeleportLock.Lock();
             animator.SetTrigger("Start");
-            yield return new WaitForSeconds(timeToChange/2);
+            yield return new WaitForSeconds(_settings.timelineChangeAnimLength/2);
             transform.Translate(_timeJump * (int)(_newTimeLine - actualTime));
             actualTime = _newTimeLine;
             animator.SetTrigger("End");
-            yield return new WaitForSeconds(timeToChange/2);
+            yield return new WaitForSeconds(_settings.timelineChangeAnimLength/2);
             CInput.TeleportLock.Unlock(key);
             
             OnTimeChange?.Invoke(this, new OnTimeChangeEventArgs {

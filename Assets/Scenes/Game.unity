@@ -938,6 +938,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3715b6c8fc09b04fbbfebe14e3d223e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingLevel: {fileID: 11400000, guid: f45cb28060cf9764585752c15fc92b04, type: 2}
+  animator: {fileID: 799859447}
 --- !u!4 &611334388
 Transform:
   m_ObjectHideFlags: 0
@@ -1726,7 +1728,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 799859447}
-  timeToChange: 0.3
   actualTime: 1
 --- !u!1 &905373028
 GameObject:

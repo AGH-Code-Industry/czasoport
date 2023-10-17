@@ -9,13 +9,19 @@ namespace LevelTimeChange {
     /// </summary>
     [CreateAssetMenu(fileName = "TimePlatformChangeSettings", menuName = "Settings/TimePlatformChangeSettings")]
     public class TimePlatformChangeSettingsSO : ScriptableObject {
-        
+
         [Header("Time Change Settings")]
+        [Tooltip("Length of the timeline change animation")]
+        [Range(0f, 1f)]
+        public float timelineChangeAnimLength = 0.5f;
+        [Tooltip("Length of the platform change animation")]
+        [Range(0f, 1f)]
+        public float platformChangeAnimLength = 0.5f;
         
         [Tooltip("By what offset should Past and Future platforms' transform differ from Present platform.")]
         public Vector2 offsetFromPresentPlatform;
         
-        [Tooltip("Do you want to go back to Past by trying to go forward in TimeLine by being in Future (and vice versa)?")]
+        [Tooltip("Whether you can move from past to future and vice versa.")]
         public bool loopTimeChange;
     }
 }
