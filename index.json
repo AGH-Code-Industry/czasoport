@@ -2,7 +2,12 @@
   "api/Application.ApplicationSettingsSO.html": {
     "href": "api/Application.ApplicationSettingsSO.html",
     "title": "Class ApplicationSettingsSO | Czasoport Documentation",
-    "keywords": "Class ApplicationSettingsSO Namespace Application Settings for entire application that defines variables for startup, core processes and shutdown public class ApplicationSettingsSO : ScriptableObject Inheritance object ApplicationSettingsSO Fields globalDataSceneName public string globalDataSceneName Field Value string sceneToLoadName public string sceneToLoadName Field Value string"
+    "keywords": "Class ApplicationSettingsSO Namespace Application Settings for entire application that defines variables for startup, core processes and shutdown public class ApplicationSettingsSO : ScriptableObject Inheritance object ApplicationSettingsSO Fields gameSceneName public string gameSceneName Field Value string lvlDefinitionsResPath public string lvlDefinitionsResPath Field Value string saveFileName public string saveFileName Field Value string"
+  },
+  "api/Application.GameManager.html": {
+    "href": "api/Application.GameManager.html",
+    "title": "Class GameManager | Czasoport Documentation",
+    "keywords": "Class GameManager Namespace Application public class GameManager : MonoBehaviour Inheritance object GameManager"
   },
   "api/Application.GlobalExceptions.SingletonOverrideException.html": {
     "href": "api/Application.GlobalExceptions.SingletonOverrideException.html",
@@ -17,7 +22,7 @@
   "api/Application.Loggers.LoggerType.html": {
     "href": "api/Application.Loggers.LoggerType.html",
     "title": "Enum Loggers.LoggerType | Czasoport Documentation",
-    "keywords": "Enum Loggers.LoggerType Namespace Application public enum Loggers.LoggerType Fields INTERACTABLE_OBJECTS = 3 INTERACTIONS = 2 INVENTORY = 1 ITEMS = 4 LEVEL_SYSTEM = 0 PAUSE = 6 PORTALS = 5"
+    "keywords": "Enum Loggers.LoggerType Namespace Application public enum Loggers.LoggerType Fields DATA_PERSISTENCE = 7 INTERACTABLE_OBJECTS = 3 INTERACTIONS = 2 INVENTORY = 1 ITEMS = 4 LEVEL_SYSTEM = 0 PAUSE = 6 PORTALS = 5"
   },
   "api/Application.Loggers.html": {
     "href": "api/Application.Loggers.html",
@@ -32,7 +37,7 @@
   "api/Application.html": {
     "href": "api/Application.html",
     "title": "Namespace Application | Czasoport Documentation",
-    "keywords": "Namespace Application Classes ApplicationSettingsSO Settings for entire application that defines variables for startup, core processes and shutdown Loggers StartupManager Enums Loggers.LoggerType"
+    "keywords": "Namespace Application Classes ApplicationSettingsSO Settings for entire application that defines variables for startup, core processes and shutdown GameManager Loggers StartupManager Enums Loggers.LoggerType"
   },
   "api/CustomInput.CInput.html": {
     "href": "api/CustomInput.CInput.html",
@@ -103,6 +108,46 @@
     "href": "api/CustomInput.html",
     "title": "Namespace CustomInput | Czasoport Documentation",
     "keywords": "Namespace CustomInput Classes CInput Wrapper for automatically generated InputActions. Provides easier access to reading values from input, takes care of processing for common input values. Incorporates locking mechanism. InputTest"
+  },
+  "api/DataPersistence.DataPersistenceManager.html": {
+    "href": "api/DataPersistence.DataPersistenceManager.html",
+    "title": "Class DataPersistenceManager | Czasoport Documentation",
+    "keywords": "Class DataPersistenceManager Namespace DataPersistence public class DataPersistenceManager : MonoBehaviour Inheritance object DataPersistenceManager Fields gameData [NonSerialized] public GameData gameData Field Value GameData Properties Instance public static DataPersistenceManager Instance { get; } Property Value DataPersistenceManager Methods CreateNewGame() public void CreateNewGame() LoadGame() public void LoadGame() LoadGameFromDisk() public void LoadGameFromDisk() SaveGame() public void SaveGame() SaveGameToDisk() public void SaveGameToDisk()"
+  },
+  "api/DataPersistence.DataTypes.PlayerGameData.html": {
+    "href": "api/DataPersistence.DataTypes.PlayerGameData.html",
+    "title": "Class PlayerGameData | Czasoport Documentation",
+    "keywords": "Class PlayerGameData Namespace DataPersistence.DataTypes [Serializable] public class PlayerGameData Inheritance object PlayerGameData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors PlayerGameData() public PlayerGameData() Fields position public Vector2 position Field Value Vector2"
+  },
+  "api/DataPersistence.DataTypes.html": {
+    "href": "api/DataPersistence.DataTypes.html",
+    "title": "Namespace DataPersistence.DataTypes | Czasoport Documentation",
+    "keywords": "Namespace DataPersistence.DataTypes Classes PlayerGameData"
+  },
+  "api/DataPersistence.DefaultSaveDataSO.html": {
+    "href": "api/DataPersistence.DefaultSaveDataSO.html",
+    "title": "Class DefaultSaveDataSO | Czasoport Documentation",
+    "keywords": "Class DefaultSaveDataSO Namespace DataPersistence Settings for entire application that defines variables for startup, core processes and shutdown public class DefaultSaveDataSO : ScriptableObject Inheritance object DefaultSaveDataSO Fields startingLevel public LevelInfoSO startingLevel Field Value LevelInfoSO startingPlayerPositionOffset public Vector2 startingPlayerPositionOffset Field Value Vector2 startingTimeline public TimeLine startingTimeline Field Value TimeLine"
+  },
+  "api/DataPersistence.FileDataHandler.html": {
+    "href": "api/DataPersistence.FileDataHandler.html",
+    "title": "Class FileDataHandler | Czasoport Documentation",
+    "keywords": "Class FileDataHandler Namespace DataPersistence public class FileDataHandler Inheritance object FileDataHandler Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors FileDataHandler(string, string) public FileDataHandler(string saveDirectory, string saveFileName) Parameters saveDirectory string saveFileName string Methods Load() public GameData Load() Returns GameData Save(GameData) public bool Save(GameData gameData) Parameters gameData GameData Returns bool"
+  },
+  "api/DataPersistence.GameData.html": {
+    "href": "api/DataPersistence.GameData.html",
+    "title": "Class GameData | Czasoport Documentation",
+    "keywords": "Class GameData Namespace DataPersistence [Serializable] public class GameData Inheritance object GameData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors GameData() public GameData() Fields currentLevel public string currentLevel Field Value string currentTimeline public TimeLine currentTimeline Field Value TimeLine playerGameData public PlayerGameData playerGameData Field Value PlayerGameData"
+  },
+  "api/DataPersistence.IDataPersistence.html": {
+    "href": "api/DataPersistence.IDataPersistence.html",
+    "title": "Interface IDataPersistence | Czasoport Documentation",
+    "keywords": "Interface IDataPersistence Namespace DataPersistence public interface IDataPersistence Methods LoadPersistentData(GameData) void LoadPersistentData(GameData gameData) Parameters gameData GameData SavePersistentData(ref GameData) void SavePersistentData(ref GameData gameData) Parameters gameData GameData"
+  },
+  "api/DataPersistence.html": {
+    "href": "api/DataPersistence.html",
+    "title": "Namespace DataPersistence | Czasoport Documentation",
+    "keywords": "Namespace DataPersistence Classes DataPersistenceManager DefaultSaveDataSO Settings for entire application that defines variables for startup, core processes and shutdown FileDataHandler GameData Interfaces IDataPersistence"
   },
   "api/Global.InputActions.GameActions.html": {
     "href": "api/Global.InputActions.GameActions.html",
@@ -187,7 +232,7 @@
   "api/InteractableObjectSystem.Objects.LockedDoor.html": {
     "href": "api/InteractableObjectSystem.Objects.LockedDoor.html",
     "title": "Class LockedDoor | Czasoport Documentation",
-    "keywords": "Class LockedDoor Namespace InteractableObjectSystem.Objects public class LockedDoor : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject LockedDoor Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.LongInteractionItem(Item) InteractableObject.InteractionHand() InteractableObject.LongInteractionHand() Methods InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
+    "keywords": "Class LockedDoor Namespace InteractableObjectSystem.Objects public class LockedDoor : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject LockedDoor Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand() InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
   },
   "api/InteractableObjectSystem.Objects.html": {
     "href": "api/InteractableObjectSystem.Objects.html",
@@ -212,7 +257,7 @@
   "api/Interactions.InteractionsSettingsSO.html": {
     "href": "api/Interactions.InteractionsSettingsSO.html",
     "title": "Class InteractionsSettingsSO | Czasoport Documentation",
-    "keywords": "Class InteractionsSettingsSO Namespace Interactions public class InteractionsSettingsSO : ScriptableObject Inheritance object InteractionsSettingsSO Fields defaultInteractionRadius public float defaultInteractionRadius Field Value float interactablesLayer public string interactablesLayer Field Value string interactionCheckInterval public float interactionCheckInterval Field Value float"
+    "keywords": "Class InteractionsSettingsSO Namespace Interactions public class InteractionsSettingsSO : ScriptableObject Inheritance object InteractionsSettingsSO Fields defaultInteractionRadius public float defaultInteractionRadius Field Value float interactablesLayer public string interactablesLayer Field Value string interactionCheckInterval public float interactionCheckInterval Field Value float itemsLayer public string itemsLayer Field Value string"
   },
   "api/Interactions.Interfaces.IHandInteractable.html": {
     "href": "api/Interactions.Interfaces.IHandInteractable.html",
@@ -327,12 +372,12 @@
   "api/Items.Item.html": {
     "href": "api/Items.Item.html",
     "title": "Class Item | Czasoport Documentation",
-    "keywords": "Class Item Namespace Items public class Item : MonoBehaviour, IHandInteractable, ILongHandInteractable Inheritance object Item Implements IHandInteractable ILongHandInteractable Properties ItemSO public ItemSO ItemSO { get; } Property Value ItemSO Methods InteractionHand() public void InteractionHand() LongInteractionHand() public void LongInteractionHand() ToString() public override string ToString() Returns string"
+    "keywords": "Class Item Namespace Items public class Item : MonoBehaviour, IHandInteractable, ILongHandInteractable Inheritance object Item Implements IHandInteractable ILongHandInteractable Fields uniqueId public string uniqueId Field Value string Properties ItemSO public ItemSO ItemSO { get; } Property Value ItemSO Methods InteractionHand() public void InteractionHand() LongInteractionHand() public void LongInteractionHand() ToString() public override string ToString() Returns string"
   },
   "api/Items.ItemSO.html": {
     "href": "api/Items.ItemSO.html",
     "title": "Class ItemSO | Czasoport Documentation",
-    "keywords": "Class ItemSO Namespace Items Scriptable object for items public class ItemSO : ScriptableObject Inheritance object ItemSO Fields description public string description Field Value string durability public int durability Field Value int id public int id Field Value int image public Sprite image Field Value Sprite interactionDistance public float interactionDistance Field Value float itemName public string itemName Field Value string"
+    "keywords": "Class ItemSO Namespace Items Scriptable object for items public class ItemSO : ScriptableObject Inheritance object ItemSO Fields description public string description Field Value string durability public int durability Field Value int image public Sprite image Field Value Sprite interactionDistance public float interactionDistance Field Value float itemName public string itemName Field Value string prefab public GameObject prefab Field Value GameObject Methods ToString() public override string ToString() Returns string"
   },
   "api/Items.html": {
     "href": "api/Items.html",
@@ -342,12 +387,12 @@
   "api/LevelTimeChange.LevelsLoader.LevelInfoSO.html": {
     "href": "api/LevelTimeChange.LevelsLoader.LevelInfoSO.html",
     "title": "Class LevelInfoSO | Czasoport Documentation",
-    "keywords": "Class LevelInfoSO Namespace LevelTimeChange.LevelsLoader Stores information about one 'platform' in the game. public class LevelInfoSO : ScriptableObject Inheritance object LevelInfoSO Fields neighbourLevels public LevelInfoSO[] neighbourLevels Field Value LevelInfoSO[] sceneName public string sceneName Field Value string Methods ToString() public override string ToString() Returns string"
+    "keywords": "Class LevelInfoSO Namespace LevelTimeChange.LevelsLoader Stores information about one 'platform' in the game. public class LevelInfoSO : UniqueScriptableObject Inheritance object UniqueScriptableObject LevelInfoSO Inherited Members UniqueScriptableObject.uniqueId UniqueScriptableObject.GenerateUniqueId() Fields neighbourLevels public LevelInfoSO[] neighbourLevels Field Value LevelInfoSO[] sceneName public string sceneName Field Value string Methods ToString() public override string ToString() Returns string"
   },
   "api/LevelTimeChange.LevelsLoader.LevelManager.html": {
     "href": "api/LevelTimeChange.LevelsLoader.LevelManager.html",
     "title": "Class LevelManager | Czasoport Documentation",
-    "keywords": "Class LevelManager Namespace LevelTimeChange.LevelsLoader LevelManager is responsible for managing one 'level platform'. It activates and deactivates level content, talks with LevelsManager and LevelPortals to perform Discovery process. public class LevelManager : MonoBehaviour Inheritance object LevelManager Fields currentLevel public LevelInfoSO currentLevel Field Value LevelInfoSO neighborLevels public List<LevelInfoSO> neighborLevels Field Value List<LevelInfoSO> Methods ActivateLevel() It will set all level content to be active. Use it only when this level is going to be one played on by the player. public void ActivateLevel() AddLevelObject(GameObject) Sets object's parent to current scene's content. public void AddLevelObject(GameObject levelObject) Parameters levelObject GameObject Object that should be part of the current scene DeactivateLevel() It will set all level content to be inactive and report to LevelsManager that this scene is ready for Discovery process. It is automatically called when scene is loaded. public void DeactivateLevel() MakeDiscovery(LevelInfoSO) Start discovery process with specified level. It tells portals on this scene to try to match with portals on another one. public void MakeDiscovery(LevelInfoSO levelToDiscover) Parameters levelToDiscover LevelInfoSO Level ready for discovery process. ReturnMatchingPortal(LevelInfoSO, LevelPortal) Used in discovery process. For specified portal and source level, return matching portal on this scene. public LevelPortal ReturnMatchingPortal(LevelInfoSO sourceLevel, LevelPortal sourcePortal) Parameters sourceLevel LevelInfoSO Level that asks for discovery. sourcePortal LevelPortal Specific portal that asks for discovery. Returns LevelPortal Matching portal. Exceptions Exception Exception is thrown when there is no matching portal."
+    "keywords": "Class LevelManager Namespace LevelTimeChange.LevelsLoader LevelManager is responsible for managing one 'level platform'. It activates and deactivates level content, talks with LevelsManager and LevelPortals to perform Discovery process. public class LevelManager : MonoBehaviour Inheritance object LevelManager Fields currentLevel public LevelInfoSO currentLevel Field Value LevelInfoSO neighborLevels public List<LevelInfoSO> neighborLevels Field Value List<LevelInfoSO> Methods ActivateLevel() It will set all level content to be active. Use it only when this level is going to be one played on by the player. public void ActivateLevel() AddLevelObject(GameObject) Sets object's parent to current scene's content. public void AddLevelObject(GameObject levelObject) Parameters levelObject GameObject Object that should be part of the current scene DeactivateLevel() It will set all level content to be inactive and report to LevelsManager that this scene is ready for Discovery process. It is automatically called when scene is loaded. public void DeactivateLevel() MakeDiscovery(LevelInfoSO) Start discovery process with specified level. It tells portals on this scene to try to match with portals on another one. public void MakeDiscovery(LevelInfoSO levelToDiscover) Parameters levelToDiscover LevelInfoSO Level ready for discovery process. ReturnMatchingPortal(LevelInfoSO, LevelPortal) Used in discovery process. For specified portal and source level, return matching portal on this scene. public LevelPortal ReturnMatchingPortal(LevelInfoSO sourceLevel, LevelPortal sourcePortal) Parameters sourceLevel LevelInfoSO Level that asks for discovery. sourcePortal LevelPortal Specific portal that asks for discovery. Returns LevelPortal Matching portal. Exceptions Exception Exception is thrown when there is no matching portal. ToString() public override string ToString() Returns string"
   },
   "api/LevelTimeChange.LevelsLoader.LevelPortal.html": {
     "href": "api/LevelTimeChange.LevelsLoader.LevelPortal.html",
@@ -357,7 +402,7 @@
   "api/LevelTimeChange.LevelsLoader.LevelsManager.html": {
     "href": "api/LevelTimeChange.LevelsLoader.LevelsManager.html",
     "title": "Class LevelsManager | Czasoport Documentation",
-    "keywords": "Class LevelsManager Namespace LevelTimeChange.LevelsLoader Manager of levels loading and switching system. Central point of communication between rest of included components. It is a singleton, attached to object present through the game. public class LevelsManager : MonoBehaviour Inheritance object LevelsManager Fields LoadedLevels All currently loaded levels. public Dictionary<LevelInfoSO, LevelManager> LoadedLevels Field Value Dictionary<LevelInfoSO, LevelManager> Properties CurrentLevelManager public LevelManager CurrentLevelManager { get; } Property Value LevelManager Instance Singleton instance of this class. public static LevelsManager Instance { get; } Property Value LevelsManager Methods ChangeLevel(LevelInfoSO, LevelPortal) Change active level. public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) Parameters destinedLevelInfo LevelInfoSO Level to be switched to. destinationPortal LevelPortal Portal to be switched to. ReportForDiscovery(LevelInfoSO) This method is used by the LevelManager of some scene to let the system know that the scene has been loaded and is ready for discovery process from current scene. public void ReportForDiscovery(LevelInfoSO level) Parameters level LevelInfoSO"
+    "keywords": "Class LevelsManager Namespace LevelTimeChange.LevelsLoader Manager of levels loading and switching system. Central point of communication between rest of included components. It is a singleton, attached to object present through the game. public class LevelsManager : MonoBehaviour, IDataPersistence Inheritance object LevelsManager Implements IDataPersistence Fields LoadedLevels All currently loaded levels. public Dictionary<LevelInfoSO, LevelManager> LoadedLevels Field Value Dictionary<LevelInfoSO, LevelManager> Properties CurrentLevelManager public LevelManager CurrentLevelManager { get; } Property Value LevelManager Instance Singleton instance of this class. public static LevelsManager Instance { get; } Property Value LevelsManager Methods ChangeLevel(LevelInfoSO, LevelPortal) Change active level. public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) Parameters destinedLevelInfo LevelInfoSO Level to be switched to. destinationPortal LevelPortal Portal to be switched to. LoadFirstLevel() Load first scene after joining the game public void LoadFirstLevel() LoadPersistentData(GameData) public void LoadPersistentData(GameData gameData) Parameters gameData GameData ReportForDiscovery(LevelInfoSO) This method is used by the LevelManager of some scene to let the system know that the scene has been loaded and is ready for discovery process from current scene. public void ReportForDiscovery(LevelInfoSO level) Parameters level LevelInfoSO SavePersistentData(ref GameData) public void SavePersistentData(ref GameData gameData) Parameters gameData GameData ToString() public override string ToString() Returns string"
   },
   "api/LevelTimeChange.LevelsLoader.html": {
     "href": "api/LevelTimeChange.LevelsLoader.html",
@@ -387,7 +432,7 @@
   "api/LevelTimeChange.TimeChange.TimeChanger.html": {
     "href": "api/LevelTimeChange.TimeChange.TimeChanger.html",
     "title": "Class TimeChanger | Czasoport Documentation",
-    "keywords": "Class TimeChanger Namespace LevelTimeChange.TimeChange Manages time changing mechanic. public class TimeChanger : MonoBehaviour Inheritance object TimeChanger Fields actualTime Timeline the player is currently on. public TimeLine actualTime Field Value TimeLine Properties Instance public static TimeChanger Instance { get; } Property Value TimeChanger Methods CanChangeTime(TimeLine) Asks appropriate CheckCollider if Player can change time. public bool CanChangeTime(TimeLine timeToCheck) Parameters timeToCheck TimeLine Returns bool Events OnTimeChange public event EventHandler<TimeChanger.OnTimeChangeEventArgs> OnTimeChange Event Type EventHandler<TimeChanger.OnTimeChangeEventArgs>"
+    "keywords": "Class TimeChanger Namespace LevelTimeChange.TimeChange Manages time changing mechanic. public class TimeChanger : MonoBehaviour, IDataPersistence Inheritance object TimeChanger Implements IDataPersistence Fields actualTime Timeline the player is currently on. public TimeLine actualTime Field Value TimeLine Properties Instance public static TimeChanger Instance { get; } Property Value TimeChanger Methods CanChangeTime(TimeLine) Asks appropriate CheckCollider if Player can change time. public bool CanChangeTime(TimeLine timeToCheck) Parameters timeToCheck TimeLine Returns bool LoadPersistentData(GameData) public void LoadPersistentData(GameData gameData) Parameters gameData GameData SavePersistentData(ref GameData) public void SavePersistentData(ref GameData gameData) Parameters gameData GameData ToString() public override string ToString() Returns string Events OnTimeChange public event EventHandler<TimeChanger.OnTimeChangeEventArgs> OnTimeChange Event Type EventHandler<TimeChanger.OnTimeChangeEventArgs>"
   },
   "api/LevelTimeChange.TimeChange.html": {
     "href": "api/LevelTimeChange.TimeChange.html",
@@ -412,7 +457,7 @@
   "api/PlayerScripts.Player.html": {
     "href": "api/PlayerScripts.Player.html",
     "title": "Class Player | Czasoport Documentation",
-    "keywords": "Class Player Namespace PlayerScripts public class Player : MonoBehaviour Inheritance object Player Properties Instance public static Player Instance { get; } Property Value Player Events OnPlayerMoved public event EventHandler OnPlayerMoved Event Type EventHandler"
+    "keywords": "Class Player Namespace PlayerScripts public class Player : MonoBehaviour, IDataPersistence Inheritance object Player Implements IDataPersistence Properties Instance public static Player Instance { get; } Property Value Player Methods LoadPersistentData(GameData) public void LoadPersistentData(GameData gameData) Parameters gameData GameData SavePersistentData(ref GameData) public void SavePersistentData(ref GameData gameData) Parameters gameData GameData ToString() public override string ToString() Returns string Events OnPlayerMoved public event EventHandler OnPlayerMoved Event Type EventHandler"
   },
   "api/PlayerScripts.PlayerSettingsSO.html": {
     "href": "api/PlayerScripts.PlayerSettingsSO.html",
@@ -427,7 +472,7 @@
   "api/Settings.DeveloperSettings.html": {
     "href": "api/Settings.DeveloperSettings.html",
     "title": "Class DeveloperSettings | Czasoport Documentation",
-    "keywords": "Class DeveloperSettings Namespace Settings Manages different setting sets used for internal settings. public class DeveloperSettings : MonoBehaviour Inheritance object DeveloperSettings Fields Instance public static DeveloperSettings Instance Field Value DeveloperSettings appSettings Application settings public ApplicationSettingsSO appSettings Field Value ApplicationSettingsSO intSettings Interactions settings public InteractionsSettingsSO intSettings Field Value InteractionsSettingsSO invSettings Inventory settings public InventorySettingsSO invSettings Field Value InventorySettingsSO playerSettings Player settings public PlayerSettingsSO playerSettings Field Value PlayerSettingsSO tpcSettings Settings for Time Change and Platform Change systems public TimePlatformChangeSettingsSO tpcSettings Field Value TimePlatformChangeSettingsSO"
+    "keywords": "Class DeveloperSettings Namespace Settings Manages different setting sets used for internal settings. public class DeveloperSettings : MonoBehaviour Inheritance object DeveloperSettings Fields Instance public static DeveloperSettings Instance Field Value DeveloperSettings appSettings Application settings public ApplicationSettingsSO appSettings Field Value ApplicationSettingsSO dsdSettings Default settings for new game save public DefaultSaveDataSO dsdSettings Field Value DefaultSaveDataSO intSettings Interactions settings public InteractionsSettingsSO intSettings Field Value InteractionsSettingsSO invSettings Inventory settings public InventorySettingsSO invSettings Field Value InventorySettingsSO playerSettings Player settings public PlayerSettingsSO playerSettings Field Value PlayerSettingsSO tpcSettings Settings for Time Change and Platform Change systems public TimePlatformChangeSettingsSO tpcSettings Field Value TimePlatformChangeSettingsSO"
   },
   "api/Settings.html": {
     "href": "api/Settings.html",
@@ -453,6 +498,41 @@
     "href": "api/UI.html",
     "title": "Namespace UI | Czasoport Documentation",
     "keywords": "Namespace UI Classes Menu Script for main menu in game PauseUI Script for pause menu in game TimeChangeUI"
+  },
+  "api/Utils.Attributes.ObjectIdentifierAttribute.html": {
+    "href": "api/Utils.Attributes.ObjectIdentifierAttribute.html",
+    "title": "Class ObjectIdentifierAttribute | Czasoport Documentation",
+    "keywords": "Class ObjectIdentifierAttribute Namespace Utils.Attributes public class ObjectIdentifierAttribute : PropertyAttribute Inheritance object ObjectIdentifierAttribute"
+  },
+  "api/Utils.Attributes.ObjectIdentifierDrawer.html": {
+    "href": "api/Utils.Attributes.ObjectIdentifierDrawer.html",
+    "title": "Class ObjectIdentifierDrawer | Czasoport Documentation",
+    "keywords": "Class ObjectIdentifierDrawer Namespace Utils.Attributes public class ObjectIdentifierDrawer : PropertyDrawer Inheritance object ObjectIdentifierDrawer Methods GetPropertyHeight(SerializedProperty, GUIContent) public override float GetPropertyHeight(SerializedProperty property, GUIContent label) Parameters property SerializedProperty label GUIContent Returns float OnGUI(Rect, SerializedProperty, GUIContent) public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) Parameters position Rect property SerializedProperty label GUIContent"
+  },
+  "api/Utils.Attributes.ReadOnlyAttribute.html": {
+    "href": "api/Utils.Attributes.ReadOnlyAttribute.html",
+    "title": "Class ReadOnlyAttribute | Czasoport Documentation",
+    "keywords": "Class ReadOnlyAttribute Namespace Utils.Attributes public class ReadOnlyAttribute : PropertyAttribute Inheritance object ReadOnlyAttribute"
+  },
+  "api/Utils.Attributes.ReadOnlyDrawer.html": {
+    "href": "api/Utils.Attributes.ReadOnlyDrawer.html",
+    "title": "Class ReadOnlyDrawer | Czasoport Documentation",
+    "keywords": "Class ReadOnlyDrawer Namespace Utils.Attributes public class ReadOnlyDrawer : PropertyDrawer Inheritance object ReadOnlyDrawer Methods GetPropertyHeight(SerializedProperty, GUIContent) public override float GetPropertyHeight(SerializedProperty property, GUIContent label) Parameters property SerializedProperty label GUIContent Returns float OnGUI(Rect, SerializedProperty, GUIContent) public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) Parameters position Rect property SerializedProperty label GUIContent"
+  },
+  "api/Utils.Attributes.html": {
+    "href": "api/Utils.Attributes.html",
+    "title": "Namespace Utils.Attributes | Czasoport Documentation",
+    "keywords": "Namespace Utils.Attributes Classes ObjectIdentifierAttribute ObjectIdentifierDrawer ReadOnlyAttribute ReadOnlyDrawer"
+  },
+  "api/Utils.UniqueScriptableObject.html": {
+    "href": "api/Utils.UniqueScriptableObject.html",
+    "title": "Class UniqueScriptableObject | Czasoport Documentation",
+    "keywords": "Class UniqueScriptableObject Namespace Utils public class UniqueScriptableObject : ScriptableObject Inheritance object UniqueScriptableObject Derived LevelInfoSO Fields uniqueId public string uniqueId Field Value string Methods GenerateUniqueId() public void GenerateUniqueId()"
+  },
+  "api/Utils.html": {
+    "href": "api/Utils.html",
+    "title": "Namespace Utils | Czasoport Documentation",
+    "keywords": "Namespace Utils Classes UniqueScriptableObject"
   },
   "gdd/Fabuła/Fabuła.html": {
     "href": "gdd/Fabuła/Fabuła.html",

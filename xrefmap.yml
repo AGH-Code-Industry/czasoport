@@ -13,18 +13,30 @@ references:
   commentId: T:Application.ApplicationSettingsSO
   fullName: Application.ApplicationSettingsSO
   nameWithType: ApplicationSettingsSO
-- uid: Application.ApplicationSettingsSO.globalDataSceneName
-  name: globalDataSceneName
-  href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_globalDataSceneName
-  commentId: F:Application.ApplicationSettingsSO.globalDataSceneName
-  fullName: Application.ApplicationSettingsSO.globalDataSceneName
-  nameWithType: ApplicationSettingsSO.globalDataSceneName
-- uid: Application.ApplicationSettingsSO.sceneToLoadName
-  name: sceneToLoadName
-  href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_sceneToLoadName
-  commentId: F:Application.ApplicationSettingsSO.sceneToLoadName
-  fullName: Application.ApplicationSettingsSO.sceneToLoadName
-  nameWithType: ApplicationSettingsSO.sceneToLoadName
+- uid: Application.ApplicationSettingsSO.gameSceneName
+  name: gameSceneName
+  href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_gameSceneName
+  commentId: F:Application.ApplicationSettingsSO.gameSceneName
+  fullName: Application.ApplicationSettingsSO.gameSceneName
+  nameWithType: ApplicationSettingsSO.gameSceneName
+- uid: Application.ApplicationSettingsSO.lvlDefinitionsResPath
+  name: lvlDefinitionsResPath
+  href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_lvlDefinitionsResPath
+  commentId: F:Application.ApplicationSettingsSO.lvlDefinitionsResPath
+  fullName: Application.ApplicationSettingsSO.lvlDefinitionsResPath
+  nameWithType: ApplicationSettingsSO.lvlDefinitionsResPath
+- uid: Application.ApplicationSettingsSO.saveFileName
+  name: saveFileName
+  href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_saveFileName
+  commentId: F:Application.ApplicationSettingsSO.saveFileName
+  fullName: Application.ApplicationSettingsSO.saveFileName
+  nameWithType: ApplicationSettingsSO.saveFileName
+- uid: Application.GameManager
+  name: GameManager
+  href: api/Application.GameManager.html
+  commentId: T:Application.GameManager
+  fullName: Application.GameManager
+  nameWithType: GameManager
 - uid: Application.GlobalExceptions
   name: Application.GlobalExceptions
   href: api/Application.GlobalExceptions.html
@@ -86,6 +98,12 @@ references:
   commentId: T:Application.Loggers.LoggerType
   fullName: Application.Loggers.LoggerType
   nameWithType: Loggers.LoggerType
+- uid: Application.Loggers.LoggerType.DATA_PERSISTENCE
+  name: DATA_PERSISTENCE
+  href: api/Application.Loggers.LoggerType.html#Application_Loggers_LoggerType_DATA_PERSISTENCE
+  commentId: F:Application.Loggers.LoggerType.DATA_PERSISTENCE
+  fullName: Application.Loggers.LoggerType.DATA_PERSISTENCE
+  nameWithType: Loggers.LoggerType.DATA_PERSISTENCE
 - uid: Application.Loggers.LoggerType.INTERACTABLE_OBJECTS
   name: INTERACTABLE_OBJECTS
   href: api/Application.Loggers.LoggerType.html#Application_Loggers_LoggerType_INTERACTABLE_OBJECTS
@@ -678,6 +696,292 @@ references:
   isSpec: "True"
   fullName: CustomInput.Locks.TeleportLock.Unlock
   nameWithType: TeleportLock.Unlock
+- uid: DataPersistence
+  name: DataPersistence
+  href: api/DataPersistence.html
+  commentId: N:DataPersistence
+  fullName: DataPersistence
+  nameWithType: DataPersistence
+- uid: DataPersistence.DataPersistenceManager
+  name: DataPersistenceManager
+  href: api/DataPersistence.DataPersistenceManager.html
+  commentId: T:DataPersistence.DataPersistenceManager
+  fullName: DataPersistence.DataPersistenceManager
+  nameWithType: DataPersistenceManager
+- uid: DataPersistence.DataPersistenceManager.CreateNewGame
+  name: CreateNewGame()
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_CreateNewGame
+  commentId: M:DataPersistence.DataPersistenceManager.CreateNewGame
+  fullName: DataPersistence.DataPersistenceManager.CreateNewGame()
+  nameWithType: DataPersistenceManager.CreateNewGame()
+- uid: DataPersistence.DataPersistenceManager.CreateNewGame*
+  name: CreateNewGame
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_CreateNewGame_
+  commentId: Overload:DataPersistence.DataPersistenceManager.CreateNewGame
+  isSpec: "True"
+  fullName: DataPersistence.DataPersistenceManager.CreateNewGame
+  nameWithType: DataPersistenceManager.CreateNewGame
+- uid: DataPersistence.DataPersistenceManager.Instance
+  name: Instance
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_Instance
+  commentId: P:DataPersistence.DataPersistenceManager.Instance
+  fullName: DataPersistence.DataPersistenceManager.Instance
+  nameWithType: DataPersistenceManager.Instance
+- uid: DataPersistence.DataPersistenceManager.Instance*
+  name: Instance
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_Instance_
+  commentId: Overload:DataPersistence.DataPersistenceManager.Instance
+  isSpec: "True"
+  fullName: DataPersistence.DataPersistenceManager.Instance
+  nameWithType: DataPersistenceManager.Instance
+- uid: DataPersistence.DataPersistenceManager.LoadGame
+  name: LoadGame()
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_LoadGame
+  commentId: M:DataPersistence.DataPersistenceManager.LoadGame
+  fullName: DataPersistence.DataPersistenceManager.LoadGame()
+  nameWithType: DataPersistenceManager.LoadGame()
+- uid: DataPersistence.DataPersistenceManager.LoadGame*
+  name: LoadGame
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_LoadGame_
+  commentId: Overload:DataPersistence.DataPersistenceManager.LoadGame
+  isSpec: "True"
+  fullName: DataPersistence.DataPersistenceManager.LoadGame
+  nameWithType: DataPersistenceManager.LoadGame
+- uid: DataPersistence.DataPersistenceManager.LoadGameFromDisk
+  name: LoadGameFromDisk()
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_LoadGameFromDisk
+  commentId: M:DataPersistence.DataPersistenceManager.LoadGameFromDisk
+  fullName: DataPersistence.DataPersistenceManager.LoadGameFromDisk()
+  nameWithType: DataPersistenceManager.LoadGameFromDisk()
+- uid: DataPersistence.DataPersistenceManager.LoadGameFromDisk*
+  name: LoadGameFromDisk
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_LoadGameFromDisk_
+  commentId: Overload:DataPersistence.DataPersistenceManager.LoadGameFromDisk
+  isSpec: "True"
+  fullName: DataPersistence.DataPersistenceManager.LoadGameFromDisk
+  nameWithType: DataPersistenceManager.LoadGameFromDisk
+- uid: DataPersistence.DataPersistenceManager.SaveGame
+  name: SaveGame()
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_SaveGame
+  commentId: M:DataPersistence.DataPersistenceManager.SaveGame
+  fullName: DataPersistence.DataPersistenceManager.SaveGame()
+  nameWithType: DataPersistenceManager.SaveGame()
+- uid: DataPersistence.DataPersistenceManager.SaveGame*
+  name: SaveGame
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_SaveGame_
+  commentId: Overload:DataPersistence.DataPersistenceManager.SaveGame
+  isSpec: "True"
+  fullName: DataPersistence.DataPersistenceManager.SaveGame
+  nameWithType: DataPersistenceManager.SaveGame
+- uid: DataPersistence.DataPersistenceManager.SaveGameToDisk
+  name: SaveGameToDisk()
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_SaveGameToDisk
+  commentId: M:DataPersistence.DataPersistenceManager.SaveGameToDisk
+  fullName: DataPersistence.DataPersistenceManager.SaveGameToDisk()
+  nameWithType: DataPersistenceManager.SaveGameToDisk()
+- uid: DataPersistence.DataPersistenceManager.SaveGameToDisk*
+  name: SaveGameToDisk
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_SaveGameToDisk_
+  commentId: Overload:DataPersistence.DataPersistenceManager.SaveGameToDisk
+  isSpec: "True"
+  fullName: DataPersistence.DataPersistenceManager.SaveGameToDisk
+  nameWithType: DataPersistenceManager.SaveGameToDisk
+- uid: DataPersistence.DataPersistenceManager.gameData
+  name: gameData
+  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_gameData
+  commentId: F:DataPersistence.DataPersistenceManager.gameData
+  fullName: DataPersistence.DataPersistenceManager.gameData
+  nameWithType: DataPersistenceManager.gameData
+- uid: DataPersistence.DataTypes
+  name: DataPersistence.DataTypes
+  href: api/DataPersistence.DataTypes.html
+  commentId: N:DataPersistence.DataTypes
+  fullName: DataPersistence.DataTypes
+  nameWithType: DataPersistence.DataTypes
+- uid: DataPersistence.DataTypes.PlayerGameData
+  name: PlayerGameData
+  href: api/DataPersistence.DataTypes.PlayerGameData.html
+  commentId: T:DataPersistence.DataTypes.PlayerGameData
+  fullName: DataPersistence.DataTypes.PlayerGameData
+  nameWithType: PlayerGameData
+- uid: DataPersistence.DataTypes.PlayerGameData.#ctor
+  name: PlayerGameData()
+  href: api/DataPersistence.DataTypes.PlayerGameData.html#DataPersistence_DataTypes_PlayerGameData__ctor
+  commentId: M:DataPersistence.DataTypes.PlayerGameData.#ctor
+  name.vb: New()
+  fullName: DataPersistence.DataTypes.PlayerGameData.PlayerGameData()
+  fullName.vb: DataPersistence.DataTypes.PlayerGameData.New()
+  nameWithType: PlayerGameData.PlayerGameData()
+  nameWithType.vb: PlayerGameData.New()
+- uid: DataPersistence.DataTypes.PlayerGameData.#ctor*
+  name: PlayerGameData
+  href: api/DataPersistence.DataTypes.PlayerGameData.html#DataPersistence_DataTypes_PlayerGameData__ctor_
+  commentId: Overload:DataPersistence.DataTypes.PlayerGameData.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DataPersistence.DataTypes.PlayerGameData.PlayerGameData
+  fullName.vb: DataPersistence.DataTypes.PlayerGameData.New
+  nameWithType: PlayerGameData.PlayerGameData
+  nameWithType.vb: PlayerGameData.New
+- uid: DataPersistence.DataTypes.PlayerGameData.position
+  name: position
+  href: api/DataPersistence.DataTypes.PlayerGameData.html#DataPersistence_DataTypes_PlayerGameData_position
+  commentId: F:DataPersistence.DataTypes.PlayerGameData.position
+  fullName: DataPersistence.DataTypes.PlayerGameData.position
+  nameWithType: PlayerGameData.position
+- uid: DataPersistence.DefaultSaveDataSO
+  name: DefaultSaveDataSO
+  href: api/DataPersistence.DefaultSaveDataSO.html
+  commentId: T:DataPersistence.DefaultSaveDataSO
+  fullName: DataPersistence.DefaultSaveDataSO
+  nameWithType: DefaultSaveDataSO
+- uid: DataPersistence.DefaultSaveDataSO.startingLevel
+  name: startingLevel
+  href: api/DataPersistence.DefaultSaveDataSO.html#DataPersistence_DefaultSaveDataSO_startingLevel
+  commentId: F:DataPersistence.DefaultSaveDataSO.startingLevel
+  fullName: DataPersistence.DefaultSaveDataSO.startingLevel
+  nameWithType: DefaultSaveDataSO.startingLevel
+- uid: DataPersistence.DefaultSaveDataSO.startingPlayerPositionOffset
+  name: startingPlayerPositionOffset
+  href: api/DataPersistence.DefaultSaveDataSO.html#DataPersistence_DefaultSaveDataSO_startingPlayerPositionOffset
+  commentId: F:DataPersistence.DefaultSaveDataSO.startingPlayerPositionOffset
+  fullName: DataPersistence.DefaultSaveDataSO.startingPlayerPositionOffset
+  nameWithType: DefaultSaveDataSO.startingPlayerPositionOffset
+- uid: DataPersistence.DefaultSaveDataSO.startingTimeline
+  name: startingTimeline
+  href: api/DataPersistence.DefaultSaveDataSO.html#DataPersistence_DefaultSaveDataSO_startingTimeline
+  commentId: F:DataPersistence.DefaultSaveDataSO.startingTimeline
+  fullName: DataPersistence.DefaultSaveDataSO.startingTimeline
+  nameWithType: DefaultSaveDataSO.startingTimeline
+- uid: DataPersistence.FileDataHandler
+  name: FileDataHandler
+  href: api/DataPersistence.FileDataHandler.html
+  commentId: T:DataPersistence.FileDataHandler
+  fullName: DataPersistence.FileDataHandler
+  nameWithType: FileDataHandler
+- uid: DataPersistence.FileDataHandler.#ctor(System.String,System.String)
+  name: FileDataHandler(string, string)
+  href: api/DataPersistence.FileDataHandler.html#DataPersistence_FileDataHandler__ctor_System_String_System_String_
+  commentId: M:DataPersistence.FileDataHandler.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: DataPersistence.FileDataHandler.FileDataHandler(string, string)
+  fullName.vb: DataPersistence.FileDataHandler.New(String, String)
+  nameWithType: FileDataHandler.FileDataHandler(string, string)
+  nameWithType.vb: FileDataHandler.New(String, String)
+- uid: DataPersistence.FileDataHandler.#ctor*
+  name: FileDataHandler
+  href: api/DataPersistence.FileDataHandler.html#DataPersistence_FileDataHandler__ctor_
+  commentId: Overload:DataPersistence.FileDataHandler.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DataPersistence.FileDataHandler.FileDataHandler
+  fullName.vb: DataPersistence.FileDataHandler.New
+  nameWithType: FileDataHandler.FileDataHandler
+  nameWithType.vb: FileDataHandler.New
+- uid: DataPersistence.FileDataHandler.Load
+  name: Load()
+  href: api/DataPersistence.FileDataHandler.html#DataPersistence_FileDataHandler_Load
+  commentId: M:DataPersistence.FileDataHandler.Load
+  fullName: DataPersistence.FileDataHandler.Load()
+  nameWithType: FileDataHandler.Load()
+- uid: DataPersistence.FileDataHandler.Load*
+  name: Load
+  href: api/DataPersistence.FileDataHandler.html#DataPersistence_FileDataHandler_Load_
+  commentId: Overload:DataPersistence.FileDataHandler.Load
+  isSpec: "True"
+  fullName: DataPersistence.FileDataHandler.Load
+  nameWithType: FileDataHandler.Load
+- uid: DataPersistence.FileDataHandler.Save(DataPersistence.GameData)
+  name: Save(GameData)
+  href: api/DataPersistence.FileDataHandler.html#DataPersistence_FileDataHandler_Save_DataPersistence_GameData_
+  commentId: M:DataPersistence.FileDataHandler.Save(DataPersistence.GameData)
+  fullName: DataPersistence.FileDataHandler.Save(DataPersistence.GameData)
+  nameWithType: FileDataHandler.Save(GameData)
+- uid: DataPersistence.FileDataHandler.Save*
+  name: Save
+  href: api/DataPersistence.FileDataHandler.html#DataPersistence_FileDataHandler_Save_
+  commentId: Overload:DataPersistence.FileDataHandler.Save
+  isSpec: "True"
+  fullName: DataPersistence.FileDataHandler.Save
+  nameWithType: FileDataHandler.Save
+- uid: DataPersistence.GameData
+  name: GameData
+  href: api/DataPersistence.GameData.html
+  commentId: T:DataPersistence.GameData
+  fullName: DataPersistence.GameData
+  nameWithType: GameData
+- uid: DataPersistence.GameData.#ctor
+  name: GameData()
+  href: api/DataPersistence.GameData.html#DataPersistence_GameData__ctor
+  commentId: M:DataPersistence.GameData.#ctor
+  name.vb: New()
+  fullName: DataPersistence.GameData.GameData()
+  fullName.vb: DataPersistence.GameData.New()
+  nameWithType: GameData.GameData()
+  nameWithType.vb: GameData.New()
+- uid: DataPersistence.GameData.#ctor*
+  name: GameData
+  href: api/DataPersistence.GameData.html#DataPersistence_GameData__ctor_
+  commentId: Overload:DataPersistence.GameData.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DataPersistence.GameData.GameData
+  fullName.vb: DataPersistence.GameData.New
+  nameWithType: GameData.GameData
+  nameWithType.vb: GameData.New
+- uid: DataPersistence.GameData.currentLevel
+  name: currentLevel
+  href: api/DataPersistence.GameData.html#DataPersistence_GameData_currentLevel
+  commentId: F:DataPersistence.GameData.currentLevel
+  fullName: DataPersistence.GameData.currentLevel
+  nameWithType: GameData.currentLevel
+- uid: DataPersistence.GameData.currentTimeline
+  name: currentTimeline
+  href: api/DataPersistence.GameData.html#DataPersistence_GameData_currentTimeline
+  commentId: F:DataPersistence.GameData.currentTimeline
+  fullName: DataPersistence.GameData.currentTimeline
+  nameWithType: GameData.currentTimeline
+- uid: DataPersistence.GameData.playerGameData
+  name: playerGameData
+  href: api/DataPersistence.GameData.html#DataPersistence_GameData_playerGameData
+  commentId: F:DataPersistence.GameData.playerGameData
+  fullName: DataPersistence.GameData.playerGameData
+  nameWithType: GameData.playerGameData
+- uid: DataPersistence.IDataPersistence
+  name: IDataPersistence
+  href: api/DataPersistence.IDataPersistence.html
+  commentId: T:DataPersistence.IDataPersistence
+  fullName: DataPersistence.IDataPersistence
+  nameWithType: IDataPersistence
+- uid: DataPersistence.IDataPersistence.LoadPersistentData(DataPersistence.GameData)
+  name: LoadPersistentData(GameData)
+  href: api/DataPersistence.IDataPersistence.html#DataPersistence_IDataPersistence_LoadPersistentData_DataPersistence_GameData_
+  commentId: M:DataPersistence.IDataPersistence.LoadPersistentData(DataPersistence.GameData)
+  fullName: DataPersistence.IDataPersistence.LoadPersistentData(DataPersistence.GameData)
+  nameWithType: IDataPersistence.LoadPersistentData(GameData)
+- uid: DataPersistence.IDataPersistence.LoadPersistentData*
+  name: LoadPersistentData
+  href: api/DataPersistence.IDataPersistence.html#DataPersistence_IDataPersistence_LoadPersistentData_
+  commentId: Overload:DataPersistence.IDataPersistence.LoadPersistentData
+  isSpec: "True"
+  fullName: DataPersistence.IDataPersistence.LoadPersistentData
+  nameWithType: IDataPersistence.LoadPersistentData
+- uid: DataPersistence.IDataPersistence.SavePersistentData(DataPersistence.GameData@)
+  name: SavePersistentData(ref GameData)
+  href: api/DataPersistence.IDataPersistence.html#DataPersistence_IDataPersistence_SavePersistentData_DataPersistence_GameData__
+  commentId: M:DataPersistence.IDataPersistence.SavePersistentData(DataPersistence.GameData@)
+  name.vb: SavePersistentData(GameData)
+  fullName: DataPersistence.IDataPersistence.SavePersistentData(ref DataPersistence.GameData)
+  fullName.vb: DataPersistence.IDataPersistence.SavePersistentData(DataPersistence.GameData)
+  nameWithType: IDataPersistence.SavePersistentData(ref GameData)
+  nameWithType.vb: IDataPersistence.SavePersistentData(GameData)
+- uid: DataPersistence.IDataPersistence.SavePersistentData*
+  name: SavePersistentData
+  href: api/DataPersistence.IDataPersistence.html#DataPersistence_IDataPersistence_SavePersistentData_
+  commentId: Overload:DataPersistence.IDataPersistence.SavePersistentData
+  isSpec: "True"
+  fullName: DataPersistence.IDataPersistence.SavePersistentData
+  nameWithType: IDataPersistence.SavePersistentData
 - uid: Global
   name: ''
   href: api/Global.html
@@ -2186,6 +2490,19 @@ references:
   commentId: T:InteractableObjectSystem.Objects.LockedDoor
   fullName: InteractableObjectSystem.Objects.LockedDoor
   nameWithType: LockedDoor
+- uid: InteractableObjectSystem.Objects.LockedDoor.InteractionHand
+  name: InteractionHand()
+  href: api/InteractableObjectSystem.Objects.LockedDoor.html#InteractableObjectSystem_Objects_LockedDoor_InteractionHand
+  commentId: M:InteractableObjectSystem.Objects.LockedDoor.InteractionHand
+  fullName: InteractableObjectSystem.Objects.LockedDoor.InteractionHand()
+  nameWithType: LockedDoor.InteractionHand()
+- uid: InteractableObjectSystem.Objects.LockedDoor.InteractionHand*
+  name: InteractionHand
+  href: api/InteractableObjectSystem.Objects.LockedDoor.html#InteractableObjectSystem_Objects_LockedDoor_InteractionHand_
+  commentId: Overload:InteractableObjectSystem.Objects.LockedDoor.InteractionHand
+  isSpec: "True"
+  fullName: InteractableObjectSystem.Objects.LockedDoor.InteractionHand
+  nameWithType: LockedDoor.InteractionHand
 - uid: InteractableObjectSystem.Objects.LockedDoor.InteractionItem(Items.Item)
   name: InteractionItem(Item)
   href: api/InteractableObjectSystem.Objects.LockedDoor.html#InteractableObjectSystem_Objects_LockedDoor_InteractionItem_Items_Item_
@@ -2286,6 +2603,12 @@ references:
   commentId: F:Interactions.InteractionsSettingsSO.interactionCheckInterval
   fullName: Interactions.InteractionsSettingsSO.interactionCheckInterval
   nameWithType: InteractionsSettingsSO.interactionCheckInterval
+- uid: Interactions.InteractionsSettingsSO.itemsLayer
+  name: itemsLayer
+  href: api/Interactions.InteractionsSettingsSO.html#Interactions_InteractionsSettingsSO_itemsLayer
+  commentId: F:Interactions.InteractionsSettingsSO.itemsLayer
+  fullName: Interactions.InteractionsSettingsSO.itemsLayer
+  nameWithType: InteractionsSettingsSO.itemsLayer
 - uid: Interactions.Interfaces
   name: Interactions.Interfaces
   href: api/Interactions.Interfaces.html
@@ -2867,12 +3190,31 @@ references:
   isSpec: "True"
   fullName: Items.Item.ToString
   nameWithType: Item.ToString
+- uid: Items.Item.uniqueId
+  name: uniqueId
+  href: api/Items.Item.html#Items_Item_uniqueId
+  commentId: F:Items.Item.uniqueId
+  fullName: Items.Item.uniqueId
+  nameWithType: Item.uniqueId
 - uid: Items.ItemSO
   name: ItemSO
   href: api/Items.ItemSO.html
   commentId: T:Items.ItemSO
   fullName: Items.ItemSO
   nameWithType: ItemSO
+- uid: Items.ItemSO.ToString
+  name: ToString()
+  href: api/Items.ItemSO.html#Items_ItemSO_ToString
+  commentId: M:Items.ItemSO.ToString
+  fullName: Items.ItemSO.ToString()
+  nameWithType: ItemSO.ToString()
+- uid: Items.ItemSO.ToString*
+  name: ToString
+  href: api/Items.ItemSO.html#Items_ItemSO_ToString_
+  commentId: Overload:Items.ItemSO.ToString
+  isSpec: "True"
+  fullName: Items.ItemSO.ToString
+  nameWithType: ItemSO.ToString
 - uid: Items.ItemSO.description
   name: description
   href: api/Items.ItemSO.html#Items_ItemSO_description
@@ -2885,12 +3227,6 @@ references:
   commentId: F:Items.ItemSO.durability
   fullName: Items.ItemSO.durability
   nameWithType: ItemSO.durability
-- uid: Items.ItemSO.id
-  name: id
-  href: api/Items.ItemSO.html#Items_ItemSO_id
-  commentId: F:Items.ItemSO.id
-  fullName: Items.ItemSO.id
-  nameWithType: ItemSO.id
 - uid: Items.ItemSO.image
   name: image
   href: api/Items.ItemSO.html#Items_ItemSO_image
@@ -2909,6 +3245,12 @@ references:
   commentId: F:Items.ItemSO.itemName
   fullName: Items.ItemSO.itemName
   nameWithType: ItemSO.itemName
+- uid: Items.ItemSO.prefab
+  name: prefab
+  href: api/Items.ItemSO.html#Items_ItemSO_prefab
+  commentId: F:Items.ItemSO.prefab
+  fullName: Items.ItemSO.prefab
+  nameWithType: ItemSO.prefab
 - uid: LevelTimeChange
   name: LevelTimeChange
   href: api/LevelTimeChange.html
@@ -3023,6 +3365,19 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.LevelsLoader.LevelManager.ReturnMatchingPortal
   nameWithType: LevelManager.ReturnMatchingPortal
+- uid: LevelTimeChange.LevelsLoader.LevelManager.ToString
+  name: ToString()
+  href: api/LevelTimeChange.LevelsLoader.LevelManager.html#LevelTimeChange_LevelsLoader_LevelManager_ToString
+  commentId: M:LevelTimeChange.LevelsLoader.LevelManager.ToString
+  fullName: LevelTimeChange.LevelsLoader.LevelManager.ToString()
+  nameWithType: LevelManager.ToString()
+- uid: LevelTimeChange.LevelsLoader.LevelManager.ToString*
+  name: ToString
+  href: api/LevelTimeChange.LevelsLoader.LevelManager.html#LevelTimeChange_LevelsLoader_LevelManager_ToString_
+  commentId: Overload:LevelTimeChange.LevelsLoader.LevelManager.ToString
+  isSpec: "True"
+  fullName: LevelTimeChange.LevelsLoader.LevelManager.ToString
+  nameWithType: LevelManager.ToString
 - uid: LevelTimeChange.LevelsLoader.LevelManager.currentLevel
   name: currentLevel
   href: api/LevelTimeChange.LevelsLoader.LevelManager.html#LevelTimeChange_LevelsLoader_LevelManager_currentLevel
@@ -3157,6 +3512,32 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.LevelsLoader.LevelsManager.Instance
   nameWithType: LevelsManager.Instance
+- uid: LevelTimeChange.LevelsLoader.LevelsManager.LoadFirstLevel
+  name: LoadFirstLevel()
+  href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_LoadFirstLevel
+  commentId: M:LevelTimeChange.LevelsLoader.LevelsManager.LoadFirstLevel
+  fullName: LevelTimeChange.LevelsLoader.LevelsManager.LoadFirstLevel()
+  nameWithType: LevelsManager.LoadFirstLevel()
+- uid: LevelTimeChange.LevelsLoader.LevelsManager.LoadFirstLevel*
+  name: LoadFirstLevel
+  href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_LoadFirstLevel_
+  commentId: Overload:LevelTimeChange.LevelsLoader.LevelsManager.LoadFirstLevel
+  isSpec: "True"
+  fullName: LevelTimeChange.LevelsLoader.LevelsManager.LoadFirstLevel
+  nameWithType: LevelsManager.LoadFirstLevel
+- uid: LevelTimeChange.LevelsLoader.LevelsManager.LoadPersistentData(DataPersistence.GameData)
+  name: LoadPersistentData(GameData)
+  href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_LoadPersistentData_DataPersistence_GameData_
+  commentId: M:LevelTimeChange.LevelsLoader.LevelsManager.LoadPersistentData(DataPersistence.GameData)
+  fullName: LevelTimeChange.LevelsLoader.LevelsManager.LoadPersistentData(DataPersistence.GameData)
+  nameWithType: LevelsManager.LoadPersistentData(GameData)
+- uid: LevelTimeChange.LevelsLoader.LevelsManager.LoadPersistentData*
+  name: LoadPersistentData
+  href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_LoadPersistentData_
+  commentId: Overload:LevelTimeChange.LevelsLoader.LevelsManager.LoadPersistentData
+  isSpec: "True"
+  fullName: LevelTimeChange.LevelsLoader.LevelsManager.LoadPersistentData
+  nameWithType: LevelsManager.LoadPersistentData
 - uid: LevelTimeChange.LevelsLoader.LevelsManager.LoadedLevels
   name: LoadedLevels
   href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_LoadedLevels
@@ -3176,6 +3557,35 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.LevelsLoader.LevelsManager.ReportForDiscovery
   nameWithType: LevelsManager.ReportForDiscovery
+- uid: LevelTimeChange.LevelsLoader.LevelsManager.SavePersistentData(DataPersistence.GameData@)
+  name: SavePersistentData(ref GameData)
+  href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_SavePersistentData_DataPersistence_GameData__
+  commentId: M:LevelTimeChange.LevelsLoader.LevelsManager.SavePersistentData(DataPersistence.GameData@)
+  name.vb: SavePersistentData(GameData)
+  fullName: LevelTimeChange.LevelsLoader.LevelsManager.SavePersistentData(ref DataPersistence.GameData)
+  fullName.vb: LevelTimeChange.LevelsLoader.LevelsManager.SavePersistentData(DataPersistence.GameData)
+  nameWithType: LevelsManager.SavePersistentData(ref GameData)
+  nameWithType.vb: LevelsManager.SavePersistentData(GameData)
+- uid: LevelTimeChange.LevelsLoader.LevelsManager.SavePersistentData*
+  name: SavePersistentData
+  href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_SavePersistentData_
+  commentId: Overload:LevelTimeChange.LevelsLoader.LevelsManager.SavePersistentData
+  isSpec: "True"
+  fullName: LevelTimeChange.LevelsLoader.LevelsManager.SavePersistentData
+  nameWithType: LevelsManager.SavePersistentData
+- uid: LevelTimeChange.LevelsLoader.LevelsManager.ToString
+  name: ToString()
+  href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_ToString
+  commentId: M:LevelTimeChange.LevelsLoader.LevelsManager.ToString
+  fullName: LevelTimeChange.LevelsLoader.LevelsManager.ToString()
+  nameWithType: LevelsManager.ToString()
+- uid: LevelTimeChange.LevelsLoader.LevelsManager.ToString*
+  name: ToString
+  href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_ToString_
+  commentId: Overload:LevelTimeChange.LevelsLoader.LevelsManager.ToString
+  isSpec: "True"
+  fullName: LevelTimeChange.LevelsLoader.LevelsManager.ToString
+  nameWithType: LevelsManager.ToString
 - uid: LevelTimeChange.TimeChange
   name: LevelTimeChange.TimeChange
   href: api/LevelTimeChange.TimeChange.html
@@ -3245,6 +3655,19 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.TimeChange.TimeChanger.Instance
   nameWithType: TimeChanger.Instance
+- uid: LevelTimeChange.TimeChange.TimeChanger.LoadPersistentData(DataPersistence.GameData)
+  name: LoadPersistentData(GameData)
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_LoadPersistentData_DataPersistence_GameData_
+  commentId: M:LevelTimeChange.TimeChange.TimeChanger.LoadPersistentData(DataPersistence.GameData)
+  fullName: LevelTimeChange.TimeChange.TimeChanger.LoadPersistentData(DataPersistence.GameData)
+  nameWithType: TimeChanger.LoadPersistentData(GameData)
+- uid: LevelTimeChange.TimeChange.TimeChanger.LoadPersistentData*
+  name: LoadPersistentData
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_LoadPersistentData_
+  commentId: Overload:LevelTimeChange.TimeChange.TimeChanger.LoadPersistentData
+  isSpec: "True"
+  fullName: LevelTimeChange.TimeChange.TimeChanger.LoadPersistentData
+  nameWithType: TimeChanger.LoadPersistentData
 - uid: LevelTimeChange.TimeChange.TimeChanger.OnTimeChange
   name: OnTimeChange
   href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_OnTimeChange
@@ -3263,6 +3686,35 @@ references:
   commentId: F:LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.time
   fullName: LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.time
   nameWithType: TimeChanger.OnTimeChangeEventArgs.time
+- uid: LevelTimeChange.TimeChange.TimeChanger.SavePersistentData(DataPersistence.GameData@)
+  name: SavePersistentData(ref GameData)
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_SavePersistentData_DataPersistence_GameData__
+  commentId: M:LevelTimeChange.TimeChange.TimeChanger.SavePersistentData(DataPersistence.GameData@)
+  name.vb: SavePersistentData(GameData)
+  fullName: LevelTimeChange.TimeChange.TimeChanger.SavePersistentData(ref DataPersistence.GameData)
+  fullName.vb: LevelTimeChange.TimeChange.TimeChanger.SavePersistentData(DataPersistence.GameData)
+  nameWithType: TimeChanger.SavePersistentData(ref GameData)
+  nameWithType.vb: TimeChanger.SavePersistentData(GameData)
+- uid: LevelTimeChange.TimeChange.TimeChanger.SavePersistentData*
+  name: SavePersistentData
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_SavePersistentData_
+  commentId: Overload:LevelTimeChange.TimeChange.TimeChanger.SavePersistentData
+  isSpec: "True"
+  fullName: LevelTimeChange.TimeChange.TimeChanger.SavePersistentData
+  nameWithType: TimeChanger.SavePersistentData
+- uid: LevelTimeChange.TimeChange.TimeChanger.ToString
+  name: ToString()
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_ToString
+  commentId: M:LevelTimeChange.TimeChange.TimeChanger.ToString
+  fullName: LevelTimeChange.TimeChange.TimeChanger.ToString()
+  nameWithType: TimeChanger.ToString()
+- uid: LevelTimeChange.TimeChange.TimeChanger.ToString*
+  name: ToString
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_ToString_
+  commentId: Overload:LevelTimeChange.TimeChange.TimeChanger.ToString
+  isSpec: "True"
+  fullName: LevelTimeChange.TimeChange.TimeChanger.ToString
+  nameWithType: TimeChanger.ToString
 - uid: LevelTimeChange.TimeChange.TimeChanger.actualTime
   name: actualTime
   href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_actualTime
@@ -3330,12 +3782,54 @@ references:
   isSpec: "True"
   fullName: PlayerScripts.Player.Instance
   nameWithType: Player.Instance
+- uid: PlayerScripts.Player.LoadPersistentData(DataPersistence.GameData)
+  name: LoadPersistentData(GameData)
+  href: api/PlayerScripts.Player.html#PlayerScripts_Player_LoadPersistentData_DataPersistence_GameData_
+  commentId: M:PlayerScripts.Player.LoadPersistentData(DataPersistence.GameData)
+  fullName: PlayerScripts.Player.LoadPersistentData(DataPersistence.GameData)
+  nameWithType: Player.LoadPersistentData(GameData)
+- uid: PlayerScripts.Player.LoadPersistentData*
+  name: LoadPersistentData
+  href: api/PlayerScripts.Player.html#PlayerScripts_Player_LoadPersistentData_
+  commentId: Overload:PlayerScripts.Player.LoadPersistentData
+  isSpec: "True"
+  fullName: PlayerScripts.Player.LoadPersistentData
+  nameWithType: Player.LoadPersistentData
 - uid: PlayerScripts.Player.OnPlayerMoved
   name: OnPlayerMoved
   href: api/PlayerScripts.Player.html#PlayerScripts_Player_OnPlayerMoved
   commentId: E:PlayerScripts.Player.OnPlayerMoved
   fullName: PlayerScripts.Player.OnPlayerMoved
   nameWithType: Player.OnPlayerMoved
+- uid: PlayerScripts.Player.SavePersistentData(DataPersistence.GameData@)
+  name: SavePersistentData(ref GameData)
+  href: api/PlayerScripts.Player.html#PlayerScripts_Player_SavePersistentData_DataPersistence_GameData__
+  commentId: M:PlayerScripts.Player.SavePersistentData(DataPersistence.GameData@)
+  name.vb: SavePersistentData(GameData)
+  fullName: PlayerScripts.Player.SavePersistentData(ref DataPersistence.GameData)
+  fullName.vb: PlayerScripts.Player.SavePersistentData(DataPersistence.GameData)
+  nameWithType: Player.SavePersistentData(ref GameData)
+  nameWithType.vb: Player.SavePersistentData(GameData)
+- uid: PlayerScripts.Player.SavePersistentData*
+  name: SavePersistentData
+  href: api/PlayerScripts.Player.html#PlayerScripts_Player_SavePersistentData_
+  commentId: Overload:PlayerScripts.Player.SavePersistentData
+  isSpec: "True"
+  fullName: PlayerScripts.Player.SavePersistentData
+  nameWithType: Player.SavePersistentData
+- uid: PlayerScripts.Player.ToString
+  name: ToString()
+  href: api/PlayerScripts.Player.html#PlayerScripts_Player_ToString
+  commentId: M:PlayerScripts.Player.ToString
+  fullName: PlayerScripts.Player.ToString()
+  nameWithType: Player.ToString()
+- uid: PlayerScripts.Player.ToString*
+  name: ToString
+  href: api/PlayerScripts.Player.html#PlayerScripts_Player_ToString_
+  commentId: Overload:PlayerScripts.Player.ToString
+  isSpec: "True"
+  fullName: PlayerScripts.Player.ToString
+  nameWithType: Player.ToString
 - uid: PlayerScripts.PlayerSettingsSO
   name: PlayerSettingsSO
   href: api/PlayerScripts.PlayerSettingsSO.html
@@ -3372,6 +3866,12 @@ references:
   commentId: F:Settings.DeveloperSettings.appSettings
   fullName: Settings.DeveloperSettings.appSettings
   nameWithType: DeveloperSettings.appSettings
+- uid: Settings.DeveloperSettings.dsdSettings
+  name: dsdSettings
+  href: api/Settings.DeveloperSettings.html#Settings_DeveloperSettings_dsdSettings
+  commentId: F:Settings.DeveloperSettings.dsdSettings
+  fullName: Settings.DeveloperSettings.dsdSettings
+  nameWithType: DeveloperSettings.dsdSettings
 - uid: Settings.DeveloperSettings.intSettings
   name: intSettings
   href: api/Settings.DeveloperSettings.html#Settings_DeveloperSettings_intSettings
@@ -3420,3 +3920,116 @@ references:
   commentId: T:UI.TimeChangeUI
   fullName: UI.TimeChangeUI
   nameWithType: TimeChangeUI
+- uid: Utils
+  name: Utils
+  href: api/Utils.html
+  commentId: N:Utils
+  fullName: Utils
+  nameWithType: Utils
+- uid: Utils.Attributes
+  name: Utils.Attributes
+  href: api/Utils.Attributes.html
+  commentId: N:Utils.Attributes
+  fullName: Utils.Attributes
+  nameWithType: Utils.Attributes
+- uid: Utils.Attributes.ObjectIdentifierAttribute
+  name: ObjectIdentifierAttribute
+  href: api/Utils.Attributes.ObjectIdentifierAttribute.html
+  commentId: T:Utils.Attributes.ObjectIdentifierAttribute
+  fullName: Utils.Attributes.ObjectIdentifierAttribute
+  nameWithType: ObjectIdentifierAttribute
+- uid: Utils.Attributes.ObjectIdentifierDrawer
+  name: ObjectIdentifierDrawer
+  href: api/Utils.Attributes.ObjectIdentifierDrawer.html
+  commentId: T:Utils.Attributes.ObjectIdentifierDrawer
+  fullName: Utils.Attributes.ObjectIdentifierDrawer
+  nameWithType: ObjectIdentifierDrawer
+- uid: Utils.Attributes.ObjectIdentifierDrawer.GetPropertyHeight(SerializedProperty,GUIContent)
+  name: GetPropertyHeight(SerializedProperty, GUIContent)
+  href: api/Utils.Attributes.ObjectIdentifierDrawer.html#Utils_Attributes_ObjectIdentifierDrawer_GetPropertyHeight_SerializedProperty_GUIContent_
+  commentId: M:Utils.Attributes.ObjectIdentifierDrawer.GetPropertyHeight(SerializedProperty,GUIContent)
+  fullName: Utils.Attributes.ObjectIdentifierDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
+  nameWithType: ObjectIdentifierDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
+- uid: Utils.Attributes.ObjectIdentifierDrawer.GetPropertyHeight*
+  name: GetPropertyHeight
+  href: api/Utils.Attributes.ObjectIdentifierDrawer.html#Utils_Attributes_ObjectIdentifierDrawer_GetPropertyHeight_
+  commentId: Overload:Utils.Attributes.ObjectIdentifierDrawer.GetPropertyHeight
+  isSpec: "True"
+  fullName: Utils.Attributes.ObjectIdentifierDrawer.GetPropertyHeight
+  nameWithType: ObjectIdentifierDrawer.GetPropertyHeight
+- uid: Utils.Attributes.ObjectIdentifierDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
+  name: OnGUI(Rect, SerializedProperty, GUIContent)
+  href: api/Utils.Attributes.ObjectIdentifierDrawer.html#Utils_Attributes_ObjectIdentifierDrawer_OnGUI_Rect_SerializedProperty_GUIContent_
+  commentId: M:Utils.Attributes.ObjectIdentifierDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
+  fullName: Utils.Attributes.ObjectIdentifierDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+  nameWithType: ObjectIdentifierDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+- uid: Utils.Attributes.ObjectIdentifierDrawer.OnGUI*
+  name: OnGUI
+  href: api/Utils.Attributes.ObjectIdentifierDrawer.html#Utils_Attributes_ObjectIdentifierDrawer_OnGUI_
+  commentId: Overload:Utils.Attributes.ObjectIdentifierDrawer.OnGUI
+  isSpec: "True"
+  fullName: Utils.Attributes.ObjectIdentifierDrawer.OnGUI
+  nameWithType: ObjectIdentifierDrawer.OnGUI
+- uid: Utils.Attributes.ReadOnlyAttribute
+  name: ReadOnlyAttribute
+  href: api/Utils.Attributes.ReadOnlyAttribute.html
+  commentId: T:Utils.Attributes.ReadOnlyAttribute
+  fullName: Utils.Attributes.ReadOnlyAttribute
+  nameWithType: ReadOnlyAttribute
+- uid: Utils.Attributes.ReadOnlyDrawer
+  name: ReadOnlyDrawer
+  href: api/Utils.Attributes.ReadOnlyDrawer.html
+  commentId: T:Utils.Attributes.ReadOnlyDrawer
+  fullName: Utils.Attributes.ReadOnlyDrawer
+  nameWithType: ReadOnlyDrawer
+- uid: Utils.Attributes.ReadOnlyDrawer.GetPropertyHeight(SerializedProperty,GUIContent)
+  name: GetPropertyHeight(SerializedProperty, GUIContent)
+  href: api/Utils.Attributes.ReadOnlyDrawer.html#Utils_Attributes_ReadOnlyDrawer_GetPropertyHeight_SerializedProperty_GUIContent_
+  commentId: M:Utils.Attributes.ReadOnlyDrawer.GetPropertyHeight(SerializedProperty,GUIContent)
+  fullName: Utils.Attributes.ReadOnlyDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
+  nameWithType: ReadOnlyDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
+- uid: Utils.Attributes.ReadOnlyDrawer.GetPropertyHeight*
+  name: GetPropertyHeight
+  href: api/Utils.Attributes.ReadOnlyDrawer.html#Utils_Attributes_ReadOnlyDrawer_GetPropertyHeight_
+  commentId: Overload:Utils.Attributes.ReadOnlyDrawer.GetPropertyHeight
+  isSpec: "True"
+  fullName: Utils.Attributes.ReadOnlyDrawer.GetPropertyHeight
+  nameWithType: ReadOnlyDrawer.GetPropertyHeight
+- uid: Utils.Attributes.ReadOnlyDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
+  name: OnGUI(Rect, SerializedProperty, GUIContent)
+  href: api/Utils.Attributes.ReadOnlyDrawer.html#Utils_Attributes_ReadOnlyDrawer_OnGUI_Rect_SerializedProperty_GUIContent_
+  commentId: M:Utils.Attributes.ReadOnlyDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
+  fullName: Utils.Attributes.ReadOnlyDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+  nameWithType: ReadOnlyDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+- uid: Utils.Attributes.ReadOnlyDrawer.OnGUI*
+  name: OnGUI
+  href: api/Utils.Attributes.ReadOnlyDrawer.html#Utils_Attributes_ReadOnlyDrawer_OnGUI_
+  commentId: Overload:Utils.Attributes.ReadOnlyDrawer.OnGUI
+  isSpec: "True"
+  fullName: Utils.Attributes.ReadOnlyDrawer.OnGUI
+  nameWithType: ReadOnlyDrawer.OnGUI
+- uid: Utils.UniqueScriptableObject
+  name: UniqueScriptableObject
+  href: api/Utils.UniqueScriptableObject.html
+  commentId: T:Utils.UniqueScriptableObject
+  fullName: Utils.UniqueScriptableObject
+  nameWithType: UniqueScriptableObject
+- uid: Utils.UniqueScriptableObject.GenerateUniqueId
+  name: GenerateUniqueId()
+  href: api/Utils.UniqueScriptableObject.html#Utils_UniqueScriptableObject_GenerateUniqueId
+  commentId: M:Utils.UniqueScriptableObject.GenerateUniqueId
+  fullName: Utils.UniqueScriptableObject.GenerateUniqueId()
+  nameWithType: UniqueScriptableObject.GenerateUniqueId()
+- uid: Utils.UniqueScriptableObject.GenerateUniqueId*
+  name: GenerateUniqueId
+  href: api/Utils.UniqueScriptableObject.html#Utils_UniqueScriptableObject_GenerateUniqueId_
+  commentId: Overload:Utils.UniqueScriptableObject.GenerateUniqueId
+  isSpec: "True"
+  fullName: Utils.UniqueScriptableObject.GenerateUniqueId
+  nameWithType: UniqueScriptableObject.GenerateUniqueId
+- uid: Utils.UniqueScriptableObject.uniqueId
+  name: uniqueId
+  href: api/Utils.UniqueScriptableObject.html#Utils_UniqueScriptableObject_uniqueId
+  commentId: F:Utils.UniqueScriptableObject.uniqueId
+  fullName: Utils.UniqueScriptableObject.uniqueId
+  nameWithType: UniqueScriptableObject.uniqueId

@@ -94,7 +94,7 @@
 
   <h1 id="LevelTimeChange_TimeChange_TimeChanger" data-uid="LevelTimeChange.TimeChange.TimeChanger" class="text-break">
     Class TimeChanger
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -107,7 +107,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TimeChanger : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class TimeChanger : MonoBehaviour, IDataPersistence</code></pre>
   </div>
 
 
@@ -121,6 +121,12 @@
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DataPersistence.IDataPersistence.html">IDataPersistence</a></div>
+    </dd>
+  </dl>
 
 
 
@@ -136,7 +142,7 @@
 
   <h3 id="LevelTimeChange_TimeChange_TimeChanger_actualTime" data-uid="LevelTimeChange.TimeChange.TimeChanger.actualTime">
   actualTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Timeline the player is currently on.</p>
@@ -172,7 +178,7 @@
 
   <h3 id="LevelTimeChange_TimeChange_TimeChanger_Instance" data-uid="LevelTimeChange.TimeChange.TimeChanger.Instance">
   Instance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -207,7 +213,7 @@
 
   <h3 id="LevelTimeChange_TimeChange_TimeChanger_CanChangeTime_LevelTimeChange_TimeLine_" data-uid="LevelTimeChange.TimeChange.TimeChanger.CanChangeTime(LevelTimeChange.TimeLine)">
   CanChangeTime(TimeLine)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Asks appropriate CheckCollider if Player can change time.</p>
@@ -240,6 +246,99 @@
 
 
 
+  <a id="LevelTimeChange_TimeChange_TimeChanger_LoadPersistentData_" data-uid="LevelTimeChange.TimeChange.TimeChanger.LoadPersistentData*"></a>
+
+  <h3 id="LevelTimeChange_TimeChange_TimeChanger_LoadPersistentData_DataPersistence_GameData_" data-uid="LevelTimeChange.TimeChange.TimeChanger.LoadPersistentData(DataPersistence.GameData)">
+  LoadPersistentData(GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadPersistentData(GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LevelTimeChange_TimeChange_TimeChanger_SavePersistentData_" data-uid="LevelTimeChange.TimeChange.TimeChanger.SavePersistentData*"></a>
+
+  <h3 id="LevelTimeChange_TimeChange_TimeChanger_SavePersistentData_DataPersistence_GameData__" data-uid="LevelTimeChange.TimeChange.TimeChanger.SavePersistentData(DataPersistence.GameData@)">
+  SavePersistentData(ref GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SavePersistentData(ref GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LevelTimeChange_TimeChange_TimeChanger_ToString_" data-uid="LevelTimeChange.TimeChange.TimeChanger.ToString*"></a>
+
+  <h3 id="LevelTimeChange_TimeChange_TimeChanger_ToString" data-uid="LevelTimeChange.TimeChange.TimeChanger.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="events">Events
 </h2>
 
@@ -247,7 +346,7 @@
 
   <h3 id="LevelTimeChange_TimeChange_TimeChanger_OnTimeChange" data-uid="LevelTimeChange.TimeChange.TimeChanger.OnTimeChange">
   OnTimeChange
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -278,7 +377,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/TimeChange/TimeChanger.cs/#L14" class="edit-link">Edit this page</a>
         </div>
 
         

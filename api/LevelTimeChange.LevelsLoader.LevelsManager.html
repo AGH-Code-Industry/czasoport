@@ -94,7 +94,7 @@
 
   <h1 id="LevelTimeChange_LevelsLoader_LevelsManager" data-uid="LevelTimeChange.LevelsLoader.LevelsManager" class="text-break">
     Class LevelsManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -108,7 +108,7 @@ included components. It is a singleton, attached to object present through the <
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LevelsManager : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class LevelsManager : MonoBehaviour, IDataPersistence</code></pre>
   </div>
 
 
@@ -122,6 +122,12 @@ included components. It is a singleton, attached to object present through the <
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DataPersistence.IDataPersistence.html">IDataPersistence</a></div>
+    </dd>
+  </dl>
 
 
 
@@ -137,7 +143,7 @@ included components. It is a singleton, attached to object present through the <
 
   <h3 id="LevelTimeChange_LevelsLoader_LevelsManager_LoadedLevels" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.LoadedLevels">
   LoadedLevels
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>All currently loaded levels.</p>
@@ -173,7 +179,7 @@ included components. It is a singleton, attached to object present through the <
 
   <h3 id="LevelTimeChange_LevelsLoader_LevelsManager_CurrentLevelManager" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.CurrentLevelManager">
   CurrentLevelManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -204,7 +210,7 @@ included components. It is a singleton, attached to object present through the <
 
   <h3 id="LevelTimeChange_LevelsLoader_LevelsManager_Instance" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.Instance">
   Instance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Singleton instance of this class.</p>
@@ -240,7 +246,7 @@ included components. It is a singleton, attached to object present through the <
 
   <h3 id="LevelTimeChange_LevelsLoader_LevelsManager_ChangeLevel_LevelTimeChange_LevelsLoader_LevelInfoSO_LevelTimeChange_LevelsLoader_LevelPortal_" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.ChangeLevel(LevelTimeChange.LevelsLoader.LevelInfoSO,LevelTimeChange.LevelsLoader.LevelPortal)">
   ChangeLevel(LevelInfoSO, LevelPortal)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Change active level.</p>
@@ -272,11 +278,69 @@ included components. It is a singleton, attached to object present through the <
 
 
 
+  <a id="LevelTimeChange_LevelsLoader_LevelsManager_LoadFirstLevel_" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.LoadFirstLevel*"></a>
+
+  <h3 id="LevelTimeChange_LevelsLoader_LevelsManager_LoadFirstLevel" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.LoadFirstLevel">
+  LoadFirstLevel()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Load first scene after joining the game</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadFirstLevel()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LevelTimeChange_LevelsLoader_LevelsManager_LoadPersistentData_" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.LoadPersistentData*"></a>
+
+  <h3 id="LevelTimeChange_LevelsLoader_LevelsManager_LoadPersistentData_DataPersistence_GameData_" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.LoadPersistentData(DataPersistence.GameData)">
+  LoadPersistentData(GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadPersistentData(GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="LevelTimeChange_LevelsLoader_LevelsManager_ReportForDiscovery_" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.ReportForDiscovery*"></a>
 
   <h3 id="LevelTimeChange_LevelsLoader_LevelsManager_ReportForDiscovery_LevelTimeChange_LevelsLoader_LevelInfoSO_" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.ReportForDiscovery(LevelTimeChange.LevelsLoader.LevelInfoSO)">
   ReportForDiscovery(LevelInfoSO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This method is used by the <code>LevelManager</code> of some scene to let the system know
@@ -305,11 +369,73 @@ that the scene has been loaded and is ready for discovery process from current s
 
 
 
+  <a id="LevelTimeChange_LevelsLoader_LevelsManager_SavePersistentData_" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.SavePersistentData*"></a>
+
+  <h3 id="LevelTimeChange_LevelsLoader_LevelsManager_SavePersistentData_DataPersistence_GameData__" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.SavePersistentData(DataPersistence.GameData@)">
+  SavePersistentData(ref GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SavePersistentData(ref GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LevelTimeChange_LevelsLoader_LevelsManager_ToString_" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.ToString*"></a>
+
+  <h3 id="LevelTimeChange_LevelsLoader_LevelsManager_ToString" data-uid="LevelTimeChange.LevelsLoader.LevelsManager.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L17" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelsManager.cs/#L19" class="edit-link">Edit this page</a>
         </div>
 
         
