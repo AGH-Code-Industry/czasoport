@@ -89,7 +89,7 @@ namespace LevelTimeChange.TimeChange {
                 if ((actualTime == TimeLine.Future && change == 1) || (actualTime == TimeLine.Past && change == -1)) return;
                 _newTimeLine = actualTime + change;
             }
-            if (CanChangeTime(_newTimeLine - actualTime)) {
+            if (CanChangeTime(_newTimeLine)) {
                 StartCoroutine(ChangeTime());
             }
         }
