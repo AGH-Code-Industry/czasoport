@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4080088648645804754}
   - component: {fileID: 7868939761732994053}
   - component: {fileID: -9157722462938915481}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1489030847
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b1dcc27d891b32643a3a2e05e0836efc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93e5d9009f94d67bba564705eadabb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uniqueId: 51f72b1f-cded-4869-b6bd-887b3ad18026
   itemSO: {fileID: 11400000, guid: 845781e87cbf78746a37eb9e51fccc1e, type: 2}
 --- !u!58 &7868939761732994053
 CircleCollider2D:

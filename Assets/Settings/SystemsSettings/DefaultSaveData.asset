@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 734ed8ce5b632974ea7f08ff3fc68ff1, type: 3}
-  m_Name: TestLevel2
+  m_Script: {fileID: 11500000, guid: 490099c5dc74472db7d8cfbf578670b1, type: 3}
+  m_Name: DefaultSaveData
   m_EditorClassIdentifier: 
-  sceneName: TestLevel2
-  neighbourLevels:
-  - {fileID: 11400000, guid: f45cb28060cf9764585752c15fc92b04, type: 2}
-  - {fileID: 11400000, guid: ba29c3c907770284e9ce4703aa5a466d, type: 2}
+  startingLevel: {fileID: 11400000, guid: cb1cfaa68894a734ba1b5b67e7e2435d, type: 2}
+  startingTimeline: 2
+  startingPlayerPositionOffset: {x: 0, y: 0}
