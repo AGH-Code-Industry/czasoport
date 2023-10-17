@@ -75,7 +75,7 @@ namespace Interactions {
             Physics2D.OverlapCircle(transform.position,
                 _settings.defaultInteractionRadius,
                 new ContactFilter2D() {
-                    layerMask = LayerMask.GetMask(_settings.interactablesLayer),
+                    layerMask = LayerMask.GetMask(_settings.interactablesLayer, _settings.itemsLayer),
                     useLayerMask = true,
                     useTriggers = true
                 },

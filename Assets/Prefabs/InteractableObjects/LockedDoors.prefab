@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7256744986904192264}
   - component: {fileID: 7256744986904192268}
   - component: {fileID: 7256744986904192269}
-  - component: {fileID: 7256744986904192266}
   - component: {fileID: 7256744986904192267}
+  - component: {fileID: 8667698351802201332}
   m_Layer: 6
   m_Name: LockedDoors
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ff1312f3d014e7b4eac266089b1257ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,22 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa2c9c1c68741b4866143bb28159ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &7256744986904192266
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7256744986904192265}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.83
 --- !u!114 &7256744986904192267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,4 +111,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68db0aa2c6794a1ab8a609abec830ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keys: []
+  interactedWith:
+  - {fileID: 11400000, guid: ff0264612a3b9544383043d4da147c85, type: 2}
+--- !u!61 &8667698351802201332
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7256744986904192265}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2}
+  m_EdgeRadius: 0

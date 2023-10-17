@@ -6985,11 +6985,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d85ccd596d12b33498f9d81135c7dfae, type: 3}
     - target: {fileID: 7256744986904192268, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7256744986904192268, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
       propertyPath: m_SortingLayerID
       value: 2090265877
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667698351802201332, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
@@ -11748,13 +11752,14 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ff1312f3d014e7b4eac266089b1257ec, type: 3}
     - target: {fileID: 7256744986904192268, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7256744986904192268, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
       propertyPath: m_SortingLayerID
       value: 2090265877
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7256744986904192266, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
 --- !u!4 &1491538780 stripped
 Transform:
@@ -11830,11 +11835,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d85ccd596d12b33498f9d81135c7dfae, type: 3}
     - target: {fileID: 7256744986904192268, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7256744986904192268, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
       propertyPath: m_SortingLayerID
       value: 2090265877
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667698351802201332, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}

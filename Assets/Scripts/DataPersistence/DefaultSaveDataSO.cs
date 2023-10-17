@@ -18,6 +18,6 @@ namespace DataPersistence {
 
         [Header("Player")]
         [Tooltip("Starting player position (must be adjusted to timeline)")]
-        public Vector2 startingPlayerPosition;
+        public Vector2 startingPlayerPositionOffset;
     }
 }

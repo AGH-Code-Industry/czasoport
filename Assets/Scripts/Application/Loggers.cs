@@ -12,7 +12,7 @@ namespace Application {
             INTERACTABLE_OBJECTS,
             ITEMS,
             PORTALS,
-            PAUSE
+            PAUSE,
             DATA_PERSISTENCE
         }
         
