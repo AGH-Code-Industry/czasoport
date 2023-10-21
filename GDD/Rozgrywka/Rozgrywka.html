@@ -29,11 +29,7 @@
       <meta name="loc:copy" content="Copy">
   </head>
 
-  <script type="module">
-    import options from './../../public/main.js'
-    import { init } from './../../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -130,6 +126,7 @@ Różnicą będzie to, że w naszej grze są 3 płaszczyzny czasowe, a gra nie j
 <h2 id="kiedy-następuje-przegrana">Kiedy następuje przegrana</h2>
 <p>W ostatecznej wersji gry nie dochodziłoby do przegranej. Najwyżej po dokonaniu wystarczającej liczby złych wyborów gracz otrzymałby “bad ending”. Nawet po “złej” decyzji gra toczyłaby się dalej.</p>
 <p>W wersji, którą tworzymy najprawdopodobniej będzie musiał istnieć ekran “game over”, gdyż nie sposób szybko stworzyć wiele różnych ścieżek w krótkim czasie. Game over wyświetlałby się jednak jedynie w rzeczywiście niebezpiecznych sytuacjach (np. zabity przez wściekły tłum, bo nie użyłeś przedmiotu, który pozwalał na obronę). W innych wypadkach gracz po prostu pozostaje w miejscu, aż rozwiąże problem.</p>
+
 </article>
 
         <div class="contribution d-print-none">
@@ -137,7 +134,7 @@ Różnicą będzie to, że w naszej grze są 3 płaszczyzny czasowe, a gra nie j
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        
+
       </div>
 
       <div class="affix">

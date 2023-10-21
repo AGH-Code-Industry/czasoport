@@ -29,11 +29,7 @@
       <meta name="loc:copy" content="Copy">
   </head>
 
-  <script type="module">
-    import options from './../../public/main.js'
-    import { init } from './../../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -174,6 +170,7 @@ This page will list the most important settings that have been changed, why they
 |**New Value**|NEW VALUE|
 |**Reason for change**|WHY DID U CHANGE THAT|
 |**Possible implications**|WHAT MIGHT HAPPEN BECAUSE OF THAT| -->
+
 </article>
 
         <div class="contribution d-print-none">
@@ -181,7 +178,7 @@ This page will list the most important settings that have been changed, why they
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        
+
       </div>
 
       <div class="affix">

@@ -29,11 +29,7 @@
       <meta name="loc:copy" content="Copy">
   </head>
 
-  <script type="module">
-    import options from './../../public/main.js'
-    import { init } from './../../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -112,6 +108,7 @@
 <p>If you are resolving conflicts, please use <strong>rebase</strong> instead of <strong>merge</strong>. This will keep commit history clean. If you are not sure how to do it, please ask for help.</p>
 <h3 id="pair-programming">Pair programming</h3>
 <p>If you are working on the same branch with someone else, please also use <strong>rebase</strong> instead of normal pull.</p>
+
 </article>
 
         <div class="contribution d-print-none">
@@ -119,7 +116,7 @@
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        
+
       </div>
 
       <div class="affix">
