@@ -134,6 +134,8 @@ namespace InventorySystem {
             item.GetComponent<SpriteRenderer>().enabled = false;
             item.GetComponent<CircleCollider2D>().enabled = false;
             
+            NotificationManager.Instance.RaiseNotification(new Notification(item.ItemSO.pickUpNotification, 3.0f));
+            
             return true;
         }
 
