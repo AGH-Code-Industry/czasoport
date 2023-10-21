@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Application;
 using CoinPackage.Debugging;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace LevelTimeChange.LevelsLoader {
     /// </summary>
     public class LevelManager : MonoBehaviour {
         [Tooltip("Asset for current level.")]
-        [SerializeField] private LevelInfoSO currentLevel;
+        public LevelInfoSO currentLevel;
         [Tooltip("Content object of this level.")]
         [SerializeField] private GameObject levelContent;
 
@@ -24,14 +25,16 @@ namespace LevelTimeChange.LevelsLoader {
         private List<LevelPortal> _teleports;
         private CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.LEVEL_SYSTEM];
 
+        public List<LevelInfoSO> neighborLevels = new List<LevelInfoSO>();
+
         private void Awake() {
             _teleports = new List<LevelPortal>();
 
             _logger.Log($"New scene has awoken: {currentLevel}");
             LevelsManager.Instance.LoadedLevels.Add(currentLevel, this);
-
             FindTeleportsOnScene();
             SetTimelinesPositions();
+            FindNeighbouringLevels();
             DeactivateLevel();
         }
 
@@ -145,6 +148,26 @@ namespace LevelTimeChange.LevelsLoader {
 			timelines.past.position = timelines.present.position - offset;
 			timelines.future.position = timelines.present.position + offset;
 		}
+
+
+        /// <summary>
+        /// Finds neighboring levels based on where portals are in the current level lead.
+        /// </summary>
+        private void FindNeighbouringLevels()
+        {
+            List<LevelInfoSO> neighourLevelsList = new List<LevelInfoSO>();
+
+            foreach (LevelPortal teleport in _teleports) {
+                if (!neighourLevelsList.Contains(teleport.destinedLevel)) {
+                    neighourLevelsList.Add(teleport.destinedLevel);
+                }
+            }
+            neighborLevels = neighourLevelsList.ToList();
+        }
+        
+        public override string ToString() {
+            return $"[LvlManager: {currentLevel}]" % Colorize.Cyan;
+        }
     }
 
 	class TimelineMaps {

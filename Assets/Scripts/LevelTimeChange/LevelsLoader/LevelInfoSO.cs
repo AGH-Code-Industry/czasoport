@@ -1,12 +1,13 @@
 using CoinPackage.Debugging;
 using UnityEngine;
+using Utils;
 
 namespace LevelTimeChange.LevelsLoader {
 	/// <summary>
 	/// Stores information about one 'platform' in the game.
 	/// </summary>
-	[CreateAssetMenu()]
-	public class LevelInfoSO : ScriptableObject
+    [CreateAssetMenu(fileName = "New Level", menuName = "Definition/New Level")]
+	public class LevelInfoSO : UniqueScriptableObject
 	{
 		[Tooltip("Name of the scene object associated to this level.")]
 		public string sceneName;

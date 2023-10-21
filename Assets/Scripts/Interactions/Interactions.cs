@@ -5,6 +5,7 @@ using Application;
 using Application.GlobalExceptions;
 using CoinPackage.Debugging;
 using CustomInput;
+using DataPersistence;
 using Interactions.Interfaces;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -74,7 +75,7 @@ namespace Interactions {
             Physics2D.OverlapCircle(transform.position,
                 _settings.defaultInteractionRadius,
                 new ContactFilter2D() {
-                    layerMask = LayerMask.GetMask(_settings.interactablesLayer),
+                    layerMask = LayerMask.GetMask(_settings.interactablesLayer, _settings.itemsLayer),
                     useLayerMask = true,
                     useTriggers = true
                 },
@@ -98,8 +99,10 @@ namespace Interactions {
         }
 
         void OnDrawGizmos() {
-            DrawInteractablesAreaGizmos();
-            DrawLinesToInteractablesGizmos();
+            if (UnityEngine.Application.isPlaying) {
+                DrawInteractablesAreaGizmos();
+                DrawLinesToInteractablesGizmos();
+            }
         }
 
         private void DrawLinesToInteractablesGizmos() {
@@ -176,6 +179,9 @@ namespace Interactions {
         }
         
         private void OnItemInteractionPerformed(InputAction.CallbackContext ctx) {
+            // TEST TO SAVESYSTEM
+            DataPersistenceManager.Instance.SaveGame();
+            
             if (!_selectedObject) {
                 return;
             }

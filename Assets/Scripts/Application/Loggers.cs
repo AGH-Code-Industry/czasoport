@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using CoinPackage.Debugging;
 
 namespace Application {
@@ -11,11 +11,21 @@ namespace Application {
             INTERACTIONS,
             INTERACTABLE_OBJECTS,
             ITEMS,
-            PORTALS
+            PORTALS,
+            PAUSE,
+            DATA_PERSISTENCE
         }
         
         static Loggers() {
             LoggersList = new Dictionary<LoggerType, CLogger>();
+            
+            // Logger for platform (level) changing system
+            LoggersList.Add(
+                LoggerType.DATA_PERSISTENCE,
+                new CLogger(LoggerType.DATA_PERSISTENCE) {
+                    LogEnabled = true
+                }
+            );
             
             // Logger for platform (level) changing system
             LoggersList.Add(
@@ -41,7 +51,7 @@ namespace Application {
                 }
             );
             
-            // 
+            // Logger for Interactions system
             LoggersList.Add(
                 LoggerType.INTERACTIONS,
                 new CLogger(LoggerType.INTERACTIONS) {
@@ -61,6 +71,14 @@ namespace Application {
             LoggersList.Add(
                 LoggerType.ITEMS,
                 new CLogger(LoggerType.ITEMS) {
+                    LogEnabled = true
+                }
+            );
+            
+            // Logger for pause menu
+            LoggersList.Add(
+                LoggerType.PAUSE,
+                new CLogger(LoggerType.PAUSE) {
                     LogEnabled = true
                 }
             );

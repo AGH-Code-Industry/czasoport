@@ -1,5 +1,6 @@
 using Application;
 using CoinPackage.Debugging;
+using DataPersistence;
 using Interactions;
 using InventorySystem;
 using LevelTimeChange;
@@ -40,6 +41,11 @@ namespace Settings {
         /// Application settings
         /// </summary>
         public ApplicationSettingsSO appSettings;
+
+        /// <summary>
+        /// Default settings for new game save
+        /// </summary>
+        public DefaultSaveDataSO dsdSettings;
         
         private void Awake() {
             if (Instance == this || Instance != null) {

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4080088648645804754}
   - component: {fileID: 7868939761732994053}
   - component: {fileID: -9157722462938915481}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93e5d9009f94d67bba564705eadabb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uniqueId: 44d07cae-a369-4b20-87a7-252533158e0f
   itemSO: {fileID: 11400000, guid: 0e5c7da540e63474f8f4e4df1f6d8405, type: 2}
 --- !u!58 &7868939761732994053
 CircleCollider2D:
