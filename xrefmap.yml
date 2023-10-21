@@ -25,12 +25,24 @@ references:
   commentId: F:Application.ApplicationSettingsSO.lvlDefinitionsResPath
   fullName: Application.ApplicationSettingsSO.lvlDefinitionsResPath
   nameWithType: ApplicationSettingsSO.lvlDefinitionsResPath
+- uid: Application.ApplicationSettingsSO.notificationDuration
+  name: notificationDuration
+  href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_notificationDuration
+  commentId: F:Application.ApplicationSettingsSO.notificationDuration
+  fullName: Application.ApplicationSettingsSO.notificationDuration
+  nameWithType: ApplicationSettingsSO.notificationDuration
 - uid: Application.ApplicationSettingsSO.saveFileName
   name: saveFileName
   href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_saveFileName
   commentId: F:Application.ApplicationSettingsSO.saveFileName
   fullName: Application.ApplicationSettingsSO.saveFileName
   nameWithType: ApplicationSettingsSO.saveFileName
+- uid: Application.ApplicationSettingsSO.sceneToLoadName
+  name: sceneToLoadName
+  href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_sceneToLoadName
+  commentId: F:Application.ApplicationSettingsSO.sceneToLoadName
+  fullName: Application.ApplicationSettingsSO.sceneToLoadName
+  nameWithType: ApplicationSettingsSO.sceneToLoadName
 - uid: Application.GameManager
   name: GameManager
   href: api/Application.GameManager.html
@@ -985,6 +997,12 @@ references:
 - uid: Global
   name: ''
   href: api/Global.html
+- uid: Global.FollowWorld
+  name: FollowWorld
+  href: api/Global.FollowWorld.html
+  commentId: T:Global.FollowWorld
+  fullName: FollowWorld
+  nameWithType: FollowWorld
 - uid: Global.InputActions
   name: InputActions
   href: api/Global.InputActions.html
@@ -2408,6 +2426,68 @@ references:
   isSpec: "True"
   fullName: InputActions.devices
   nameWithType: InputActions.devices
+- uid: Global.Notification
+  name: Notification
+  href: api/Global.Notification.html
+  commentId: T:Global.Notification
+  fullName: Notification
+  nameWithType: Notification
+- uid: Global.Notification.#ctor(System.String,System.Single)
+  name: Notification(string, float)
+  href: api/Global.Notification.html#Global_Notification__ctor_System_String_System_Single_
+  commentId: M:Global.Notification.#ctor(System.String,System.Single)
+  name.vb: New(String, Single)
+  fullName: Notification.Notification(string, float)
+  fullName.vb: Notification.New(String, Single)
+  nameWithType: Notification.Notification(string, float)
+  nameWithType.vb: Notification.New(String, Single)
+- uid: Global.Notification.#ctor*
+  name: Notification
+  href: api/Global.Notification.html#Global_Notification__ctor_
+  commentId: Overload:Global.Notification.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Notification.Notification
+  fullName.vb: Notification.New
+  nameWithType: Notification.Notification
+  nameWithType.vb: Notification.New
+- uid: Global.Notification.displayTime
+  name: displayTime
+  href: api/Global.Notification.html#Global_Notification_displayTime
+  commentId: F:Global.Notification.displayTime
+  fullName: Notification.displayTime
+  nameWithType: Notification.displayTime
+- uid: Global.Notification.message
+  name: message
+  href: api/Global.Notification.html#Global_Notification_message
+  commentId: F:Global.Notification.message
+  fullName: Notification.message
+  nameWithType: Notification.message
+- uid: Global.NotificationManager
+  name: NotificationManager
+  href: api/Global.NotificationManager.html
+  commentId: T:Global.NotificationManager
+  fullName: NotificationManager
+  nameWithType: NotificationManager
+- uid: Global.NotificationManager.Instance
+  name: Instance
+  href: api/Global.NotificationManager.html#Global_NotificationManager_Instance
+  commentId: F:Global.NotificationManager.Instance
+  fullName: NotificationManager.Instance
+  nameWithType: NotificationManager.Instance
+- uid: Global.NotificationManager.RaiseNotification(Notification)
+  name: RaiseNotification(Notification)
+  href: api/Global.NotificationManager.html#Global_NotificationManager_RaiseNotification_Notification_
+  commentId: M:Global.NotificationManager.RaiseNotification(Notification)
+  fullName: NotificationManager.RaiseNotification(Notification)
+  nameWithType: NotificationManager.RaiseNotification(Notification)
+- uid: Global.NotificationManager.RaiseNotification*
+  name: RaiseNotification
+  href: api/Global.NotificationManager.html#Global_NotificationManager_RaiseNotification_
+  commentId: Overload:Global.NotificationManager.RaiseNotification
+  isSpec: "True"
+  fullName: NotificationManager.RaiseNotification
+  nameWithType: NotificationManager.RaiseNotification
 - uid: Global.SettingsTests
   name: SettingsTests
   href: api/Global.SettingsTests.html
@@ -3245,6 +3325,12 @@ references:
   commentId: F:Items.ItemSO.itemName
   fullName: Items.ItemSO.itemName
   nameWithType: ItemSO.itemName
+- uid: Items.ItemSO.pickUpNotification
+  name: pickUpNotification
+  href: api/Items.ItemSO.html#Items_ItemSO_pickUpNotification
+  commentId: F:Items.ItemSO.pickUpNotification
+  fullName: Items.ItemSO.pickUpNotification
+  nameWithType: ItemSO.pickUpNotification
 - uid: Items.ItemSO.prefab
   name: prefab
   href: api/Items.ItemSO.html#Items_ItemSO_prefab
