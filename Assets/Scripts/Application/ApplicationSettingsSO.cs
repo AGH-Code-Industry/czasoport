@@ -13,11 +13,6 @@ namespace Application {
         [Tooltip("Name of the scene to load when press Play button on menu.")]
         public string gameSceneName;
 
-        [Tooltip("Name of the scene to load when press Play button on menu.")]
-        public string sceneToLoadName;
-
-        [Tooltip("Time that the notificatino will be desplaying on screen")]
-        public float notificationDuration;
         [Header("Resource paths")]
         [Tooltip("Path to level definitions")]
         public string lvlDefinitionsResPath;

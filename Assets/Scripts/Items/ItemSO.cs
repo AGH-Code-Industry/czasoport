@@ -20,7 +20,6 @@ namespace Items
         [Header("Item Statistics")]
         public int durability;
         public float interactionDistance;
-        public string pickUpNotification = "I say this when I'm picked up";
         
         public override string ToString() {
             return $"[Item, {itemName}]" % Colorize.Purple;
