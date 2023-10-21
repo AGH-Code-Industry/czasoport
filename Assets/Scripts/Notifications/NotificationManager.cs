@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using Notifications;
 using UnityEngine;
 using TMPro;
 using Settings;
@@ -25,10 +27,13 @@ public class NotificationManager : MonoBehaviour {
         }
     }
 
-    public void RaiseNotification(Notification notificationToDisplay) {
-        _notificationMessage.text = notificationToDisplay.message;
+    public void RaiseNotification(Notification notification) {
+        if (String.IsNullOrEmpty(notification.message)) {
+            return;
+        }
+        _notificationMessage.text = notification.message;
         _notificationWindow.SetActive(true);
-        Invoke("DisableNotificationWindow", notificationToDisplay.displayTime);
+        Invoke("DisableNotificationWindow", notification.displayTime);
     }
 
     void DisableNotificationWindow() {
