@@ -25,12 +25,24 @@ references:
   commentId: F:Application.ApplicationSettingsSO.lvlDefinitionsResPath
   fullName: Application.ApplicationSettingsSO.lvlDefinitionsResPath
   nameWithType: ApplicationSettingsSO.lvlDefinitionsResPath
+- uid: Application.ApplicationSettingsSO.notificationDuration
+  name: notificationDuration
+  href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_notificationDuration
+  commentId: F:Application.ApplicationSettingsSO.notificationDuration
+  fullName: Application.ApplicationSettingsSO.notificationDuration
+  nameWithType: ApplicationSettingsSO.notificationDuration
 - uid: Application.ApplicationSettingsSO.saveFileName
   name: saveFileName
   href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_saveFileName
   commentId: F:Application.ApplicationSettingsSO.saveFileName
   fullName: Application.ApplicationSettingsSO.saveFileName
   nameWithType: ApplicationSettingsSO.saveFileName
+- uid: Application.ApplicationSettingsSO.sceneToLoadName
+  name: sceneToLoadName
+  href: api/Application.ApplicationSettingsSO.html#Application_ApplicationSettingsSO_sceneToLoadName
+  commentId: F:Application.ApplicationSettingsSO.sceneToLoadName
+  fullName: Application.ApplicationSettingsSO.sceneToLoadName
+  nameWithType: ApplicationSettingsSO.sceneToLoadName
 - uid: Application.GameManager
   name: GameManager
   href: api/Application.GameManager.html
@@ -985,6 +997,12 @@ references:
 - uid: Global
   name: ''
   href: api/Global.html
+- uid: Global.FollowWorld
+  name: FollowWorld
+  href: api/Global.FollowWorld.html
+  commentId: T:Global.FollowWorld
+  fullName: FollowWorld
+  nameWithType: FollowWorld
 - uid: Global.InputActions
   name: InputActions
   href: api/Global.InputActions.html
@@ -2408,6 +2426,31 @@ references:
   isSpec: "True"
   fullName: InputActions.devices
   nameWithType: InputActions.devices
+- uid: Global.NotificationManager
+  name: NotificationManager
+  href: api/Global.NotificationManager.html
+  commentId: T:Global.NotificationManager
+  fullName: NotificationManager
+  nameWithType: NotificationManager
+- uid: Global.NotificationManager.Instance
+  name: Instance
+  href: api/Global.NotificationManager.html#Global_NotificationManager_Instance
+  commentId: F:Global.NotificationManager.Instance
+  fullName: NotificationManager.Instance
+  nameWithType: NotificationManager.Instance
+- uid: Global.NotificationManager.RaiseNotification(Notifications.Notification)
+  name: RaiseNotification(Notification)
+  href: api/Global.NotificationManager.html#Global_NotificationManager_RaiseNotification_Notifications_Notification_
+  commentId: M:Global.NotificationManager.RaiseNotification(Notifications.Notification)
+  fullName: NotificationManager.RaiseNotification(Notifications.Notification)
+  nameWithType: NotificationManager.RaiseNotification(Notification)
+- uid: Global.NotificationManager.RaiseNotification*
+  name: RaiseNotification
+  href: api/Global.NotificationManager.html#Global_NotificationManager_RaiseNotification_
+  commentId: Overload:Global.NotificationManager.RaiseNotification
+  isSpec: "True"
+  fullName: NotificationManager.RaiseNotification
+  nameWithType: NotificationManager.RaiseNotification
 - uid: Global.SettingsTests
   name: SettingsTests
   href: api/Global.SettingsTests.html
@@ -2420,6 +2463,67 @@ references:
   commentId: N:InteractableObjectSystem
   fullName: InteractableObjectSystem
   nameWithType: InteractableObjectSystem
+- uid: InteractableObjectSystem.InterObjectDefinition
+  name: InterObjectDefinition
+  href: api/InteractableObjectSystem.InterObjectDefinition.html
+  commentId: T:InteractableObjectSystem.InterObjectDefinition
+  fullName: InteractableObjectSystem.InterObjectDefinition
+  nameWithType: InterObjectDefinition
+- uid: InteractableObjectSystem.InterObjectDefinition.ToString
+  name: ToString()
+  href: api/InteractableObjectSystem.InterObjectDefinition.html#InteractableObjectSystem_InterObjectDefinition_ToString
+  commentId: M:InteractableObjectSystem.InterObjectDefinition.ToString
+  fullName: InteractableObjectSystem.InterObjectDefinition.ToString()
+  nameWithType: InterObjectDefinition.ToString()
+- uid: InteractableObjectSystem.InterObjectDefinition.ToString*
+  name: ToString
+  href: api/InteractableObjectSystem.InterObjectDefinition.html#InteractableObjectSystem_InterObjectDefinition_ToString_
+  commentId: Overload:InteractableObjectSystem.InterObjectDefinition.ToString
+  isSpec: "True"
+  fullName: InteractableObjectSystem.InterObjectDefinition.ToString
+  nameWithType: InterObjectDefinition.ToString
+- uid: InteractableObjectSystem.InterObjectDefinition.description
+  name: description
+  href: api/InteractableObjectSystem.InterObjectDefinition.html#InteractableObjectSystem_InterObjectDefinition_description
+  commentId: F:InteractableObjectSystem.InterObjectDefinition.description
+  fullName: InteractableObjectSystem.InterObjectDefinition.description
+  nameWithType: InterObjectDefinition.description
+- uid: InteractableObjectSystem.InterObjectDefinition.failedHandInterNotification
+  name: failedHandInterNotification
+  href: api/InteractableObjectSystem.InterObjectDefinition.html#InteractableObjectSystem_InterObjectDefinition_failedHandInterNotification
+  commentId: F:InteractableObjectSystem.InterObjectDefinition.failedHandInterNotification
+  fullName: InteractableObjectSystem.InterObjectDefinition.failedHandInterNotification
+  nameWithType: InterObjectDefinition.failedHandInterNotification
+- uid: InteractableObjectSystem.InterObjectDefinition.failedItemInterNotification
+  name: failedItemInterNotification
+  href: api/InteractableObjectSystem.InterObjectDefinition.html#InteractableObjectSystem_InterObjectDefinition_failedItemInterNotification
+  commentId: F:InteractableObjectSystem.InterObjectDefinition.failedItemInterNotification
+  fullName: InteractableObjectSystem.InterObjectDefinition.failedItemInterNotification
+  nameWithType: InterObjectDefinition.failedItemInterNotification
+- uid: InteractableObjectSystem.InterObjectDefinition.interactableName
+  name: interactableName
+  href: api/InteractableObjectSystem.InterObjectDefinition.html#InteractableObjectSystem_InterObjectDefinition_interactableName
+  commentId: F:InteractableObjectSystem.InterObjectDefinition.interactableName
+  fullName: InteractableObjectSystem.InterObjectDefinition.interactableName
+  nameWithType: InterObjectDefinition.interactableName
+- uid: InteractableObjectSystem.InterObjectDefinition.prefab
+  name: prefab
+  href: api/InteractableObjectSystem.InterObjectDefinition.html#InteractableObjectSystem_InterObjectDefinition_prefab
+  commentId: F:InteractableObjectSystem.InterObjectDefinition.prefab
+  fullName: InteractableObjectSystem.InterObjectDefinition.prefab
+  nameWithType: InterObjectDefinition.prefab
+- uid: InteractableObjectSystem.InterObjectDefinition.successfulHandInterNotification
+  name: successfulHandInterNotification
+  href: api/InteractableObjectSystem.InterObjectDefinition.html#InteractableObjectSystem_InterObjectDefinition_successfulHandInterNotification
+  commentId: F:InteractableObjectSystem.InterObjectDefinition.successfulHandInterNotification
+  fullName: InteractableObjectSystem.InterObjectDefinition.successfulHandInterNotification
+  nameWithType: InterObjectDefinition.successfulHandInterNotification
+- uid: InteractableObjectSystem.InterObjectDefinition.successfulItemInterNotification
+  name: successfulItemInterNotification
+  href: api/InteractableObjectSystem.InterObjectDefinition.html#InteractableObjectSystem_InterObjectDefinition_successfulItemInterNotification
+  commentId: F:InteractableObjectSystem.InterObjectDefinition.successfulItemInterNotification
+  fullName: InteractableObjectSystem.InterObjectDefinition.successfulItemInterNotification
+  nameWithType: InterObjectDefinition.successfulItemInterNotification
 - uid: InteractableObjectSystem.InteractableObject
   name: InteractableObject
   href: api/InteractableObjectSystem.InteractableObject.html
@@ -2452,6 +2556,12 @@ references:
   isSpec: "True"
   fullName: InteractableObjectSystem.InteractableObject.InteractionItem
   nameWithType: InteractableObject.InteractionItem
+- uid: InteractableObjectSystem.InteractableObject.Logger
+  name: Logger
+  href: api/InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_Logger
+  commentId: F:InteractableObjectSystem.InteractableObject.Logger
+  fullName: InteractableObjectSystem.InteractableObject.Logger
+  nameWithType: InteractableObject.Logger
 - uid: InteractableObjectSystem.InteractableObject.LongInteractionHand
   name: LongInteractionHand()
   href: api/InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_LongInteractionHand
@@ -2478,6 +2588,12 @@ references:
   isSpec: "True"
   fullName: InteractableObjectSystem.InteractableObject.LongInteractionItem
   nameWithType: InteractableObject.LongInteractionItem
+- uid: InteractableObjectSystem.InteractableObject.definition
+  name: definition
+  href: api/InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_definition
+  commentId: F:InteractableObjectSystem.InteractableObject.definition
+  fullName: InteractableObjectSystem.InteractableObject.definition
+  nameWithType: InteractableObject.definition
 - uid: InteractableObjectSystem.Objects
   name: InteractableObjectSystem.Objects
   href: api/InteractableObjectSystem.Objects.html
@@ -3221,6 +3337,12 @@ references:
   commentId: F:Items.ItemSO.description
   fullName: Items.ItemSO.description
   nameWithType: ItemSO.description
+- uid: Items.ItemSO.dropNotification
+  name: dropNotification
+  href: api/Items.ItemSO.html#Items_ItemSO_dropNotification
+  commentId: F:Items.ItemSO.dropNotification
+  fullName: Items.ItemSO.dropNotification
+  nameWithType: ItemSO.dropNotification
 - uid: Items.ItemSO.durability
   name: durability
   href: api/Items.ItemSO.html#Items_ItemSO_durability
@@ -3245,6 +3367,12 @@ references:
   commentId: F:Items.ItemSO.itemName
   fullName: Items.ItemSO.itemName
   nameWithType: ItemSO.itemName
+- uid: Items.ItemSO.pickUpNotification
+  name: pickUpNotification
+  href: api/Items.ItemSO.html#Items_ItemSO_pickUpNotification
+  commentId: F:Items.ItemSO.pickUpNotification
+  fullName: Items.ItemSO.pickUpNotification
+  nameWithType: ItemSO.pickUpNotification
 - uid: Items.ItemSO.prefab
   name: prefab
   href: api/Items.ItemSO.html#Items_ItemSO_prefab
@@ -3775,6 +3903,30 @@ references:
   commentId: F:LevelTimeChange.TimePlatformChangeSettingsSO.timelineChangeAnimLength
   fullName: LevelTimeChange.TimePlatformChangeSettingsSO.timelineChangeAnimLength
   nameWithType: TimePlatformChangeSettingsSO.timelineChangeAnimLength
+- uid: Notifications
+  name: Notifications
+  href: api/Notifications.html
+  commentId: N:Notifications
+  fullName: Notifications
+  nameWithType: Notifications
+- uid: Notifications.Notification
+  name: Notification
+  href: api/Notifications.Notification.html
+  commentId: T:Notifications.Notification
+  fullName: Notifications.Notification
+  nameWithType: Notification
+- uid: Notifications.Notification.displayTime
+  name: displayTime
+  href: api/Notifications.Notification.html#Notifications_Notification_displayTime
+  commentId: F:Notifications.Notification.displayTime
+  fullName: Notifications.Notification.displayTime
+  nameWithType: Notification.displayTime
+- uid: Notifications.Notification.message
+  name: message
+  href: api/Notifications.Notification.html#Notifications_Notification_message
+  commentId: F:Notifications.Notification.message
+  fullName: Notifications.Notification.message
+  nameWithType: Notification.message
 - uid: PlayerScripts
   name: PlayerScripts
   href: api/PlayerScripts.html

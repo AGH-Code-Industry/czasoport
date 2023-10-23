@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface InputActions.IMovementActions
+      <title>Class NotificationManager
  | Czasoport Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface InputActions.IMovementActions
+      <meta name="title" content="Class NotificationManager
  | Czasoport Documentation ">
       
       <link rel="icon" href="../favicon.ico">
@@ -17,7 +17,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Global_InputActions_IMovementActions.md&amp;value=---%0Auid%3A%20Global.InputActions.IMovementActions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Global_NotificationManager.md&amp;value=---%0Auid%3A%20Global.NotificationManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,13 +84,13 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Global.InputActions.IMovementActions">
+        <article data-uid="Global.NotificationManager">
 
 
 
-  <h1 id="Global_InputActions_IMovementActions" data-uid="Global.InputActions.IMovementActions" class="text-break">
-    Interface InputActions.IMovementActions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/CustomInput/InputActions.cs/#L1091"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Global_NotificationManager" data-uid="Global.NotificationManager" class="text-break">
+    Class NotificationManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,12 +102,53 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface InputActions.IMovementActions</code></pre>
+    <pre><code class="lang-csharp hljs">public class NotificationManager : MonoBehaviour</code></pre>
   </div>
 
 
 
 
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NotificationManager</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Global_NotificationManager_Instance" data-uid="Global.NotificationManager.Instance">
+  Instance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NotificationManager Instance</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Global.NotificationManager.html">NotificationManager</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -121,85 +162,23 @@
 </h2>
 
 
-  <a id="Global_InputActions_IMovementActions_OnFocusChange_" data-uid="Global.InputActions.IMovementActions.OnFocusChange*"></a>
+  <a id="Global_NotificationManager_RaiseNotification_" data-uid="Global.NotificationManager.RaiseNotification*"></a>
 
-  <h3 id="Global_InputActions_IMovementActions_OnFocusChange_InputAction_CallbackContext_" data-uid="Global.InputActions.IMovementActions.OnFocusChange(InputAction.CallbackContext)">
-  OnFocusChange(CallbackContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/CustomInput/InputActions.cs/#L1095"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Global_NotificationManager_RaiseNotification_Notifications_Notification_" data-uid="Global.NotificationManager.RaiseNotification(Notifications.Notification)">
+  RaiseNotification(Notification)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void OnFocusChange(InputAction.CallbackContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RaiseNotification(Notification notification)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>context</code> <span class="xref">CallbackContext</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Global_InputActions_IMovementActions_OnNavigation_" data-uid="Global.InputActions.IMovementActions.OnNavigation*"></a>
-
-  <h3 id="Global_InputActions_IMovementActions_OnNavigation_InputAction_CallbackContext_" data-uid="Global.InputActions.IMovementActions.OnNavigation(InputAction.CallbackContext)">
-  OnNavigation(CallbackContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/CustomInput/InputActions.cs/#L1093"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void OnNavigation(InputAction.CallbackContext context)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>context</code> <span class="xref">CallbackContext</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Global_InputActions_IMovementActions_OnRun_" data-uid="Global.InputActions.IMovementActions.OnRun*"></a>
-
-  <h3 id="Global_InputActions_IMovementActions_OnRun_InputAction_CallbackContext_" data-uid="Global.InputActions.IMovementActions.OnRun(InputAction.CallbackContext)">
-  OnRun(CallbackContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/CustomInput/InputActions.cs/#L1094"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void OnRun(InputAction.CallbackContext context)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>context</code> <span class="xref">CallbackContext</span></dt>
+    <dt><code>notification</code> <a class="xref" href="Notifications.Notification.html">Notification</a></dt>
     <dd></dd>
   </dl>
 
@@ -218,7 +197,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/CustomInput/InputActions.cs/#L1091" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

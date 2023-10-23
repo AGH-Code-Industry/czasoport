@@ -2,7 +2,7 @@
   "api/Application.ApplicationSettingsSO.html": {
     "href": "api/Application.ApplicationSettingsSO.html",
     "title": "Class ApplicationSettingsSO | Czasoport Documentation",
-    "keywords": "Class ApplicationSettingsSO Namespace Application Settings for entire application that defines variables for startup, core processes and shutdown public class ApplicationSettingsSO : ScriptableObject Inheritance object ApplicationSettingsSO Fields gameSceneName public string gameSceneName Field Value string lvlDefinitionsResPath public string lvlDefinitionsResPath Field Value string saveFileName public string saveFileName Field Value string"
+    "keywords": "Class ApplicationSettingsSO Namespace Application Settings for entire application that defines variables for startup, core processes and shutdown public class ApplicationSettingsSO : ScriptableObject Inheritance object ApplicationSettingsSO Fields gameSceneName public string gameSceneName Field Value string lvlDefinitionsResPath public string lvlDefinitionsResPath Field Value string notificationDuration public float notificationDuration Field Value float saveFileName public string saveFileName Field Value string sceneToLoadName public string sceneToLoadName Field Value string"
   },
   "api/Application.GameManager.html": {
     "href": "api/Application.GameManager.html",
@@ -149,6 +149,11 @@
     "title": "Namespace DataPersistence | Czasoport Documentation",
     "keywords": "Namespace DataPersistence Classes DataPersistenceManager DefaultSaveDataSO Settings for entire application that defines variables for startup, core processes and shutdown FileDataHandler GameData Interfaces IDataPersistence"
   },
+  "api/Global.FollowWorld.html": {
+    "href": "api/Global.FollowWorld.html",
+    "title": "Class FollowWorld | Czasoport Documentation",
+    "keywords": "Class FollowWorld Namespace Global public class FollowWorld : MonoBehaviour Inheritance object FollowWorld"
+  },
   "api/Global.InputActions.GameActions.html": {
     "href": "api/Global.InputActions.GameActions.html",
     "title": "Struct InputActions.GameActions | Czasoport Documentation",
@@ -214,6 +219,11 @@
     "title": "Class InputActions | Czasoport Documentation",
     "keywords": "Class InputActions Namespace Global public class InputActions : IInputActionCollection2, IDisposable Inheritance object InputActions Implements IDisposable Constructors InputActions() public InputActions() Properties Game public InputActions.GameActions Game { get; } Property Value InputActions.GameActions Interactions public InputActions.InteractionsActions Interactions { get; } Property Value InputActions.InteractionsActions Inventory public InputActions.InventoryActions Inventory { get; } Property Value InputActions.InventoryActions Mouse public InputActions.MouseActions Mouse { get; } Property Value InputActions.MouseActions Movement public InputActions.MovementActions Movement { get; } Property Value InputActions.MovementActions Teleport public InputActions.TeleportActions Teleport { get; } Property Value InputActions.TeleportActions asset public InputActionAsset asset { get; } Property Value InputActionAsset bindingMask public InputBinding? bindingMask { get; set; } Property Value InputBinding? bindings public IEnumerable<InputBinding> bindings { get; } Property Value IEnumerable<InputBinding> controlSchemes public ReadOnlyArray<InputControlScheme> controlSchemes { get; } Property Value ReadOnlyArray<InputControlScheme> devices public ReadOnlyArray<InputDevice>? devices { get; set; } Property Value ReadOnlyArray<InputDevice>? Methods Contains(InputAction) public bool Contains(InputAction action) Parameters action InputAction Returns bool Disable() public void Disable() Dispose() Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. public void Dispose() Enable() public void Enable() FindAction(string, bool) public InputAction FindAction(string actionNameOrId, bool throwIfNotFound = false) Parameters actionNameOrId string throwIfNotFound bool Returns InputAction FindBinding(InputBinding, out InputAction) public int FindBinding(InputBinding bindingMask, out InputAction action) Parameters bindingMask InputBinding action InputAction Returns int GetEnumerator() public IEnumerator<InputAction> GetEnumerator() Returns IEnumerator<InputAction>"
   },
+  "api/Global.NotificationManager.html": {
+    "href": "api/Global.NotificationManager.html",
+    "title": "Class NotificationManager | Czasoport Documentation",
+    "keywords": "Class NotificationManager Namespace Global public class NotificationManager : MonoBehaviour Inheritance object NotificationManager Fields Instance public static NotificationManager Instance Field Value NotificationManager Methods RaiseNotification(Notification) public void RaiseNotification(Notification notification) Parameters notification Notification"
+  },
   "api/Global.SettingsTests.html": {
     "href": "api/Global.SettingsTests.html",
     "title": "Class SettingsTests | Czasoport Documentation",
@@ -222,17 +232,22 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace | Czasoport Documentation",
-    "keywords": "Namespace Classes InputActions SettingsTests Structs InputActions.GameActions InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IGameActions InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions"
+    "keywords": "Namespace Classes FollowWorld InputActions NotificationManager SettingsTests Structs InputActions.GameActions InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IGameActions InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions"
+  },
+  "api/InteractableObjectSystem.InterObjectDefinition.html": {
+    "href": "api/InteractableObjectSystem.InterObjectDefinition.html",
+    "title": "Class InterObjectDefinition | Czasoport Documentation",
+    "keywords": "Class InterObjectDefinition Namespace InteractableObjectSystem Scriptable object for items public class InterObjectDefinition : ScriptableObject Inheritance object InterObjectDefinition Fields description public string description Field Value string failedHandInterNotification public Notification failedHandInterNotification Field Value Notification failedItemInterNotification public Notification failedItemInterNotification Field Value Notification interactableName public string interactableName Field Value string prefab public GameObject prefab Field Value GameObject successfulHandInterNotification public Notification successfulHandInterNotification Field Value Notification successfulItemInterNotification public Notification successfulItemInterNotification Field Value Notification Methods ToString() public override string ToString() Returns string"
   },
   "api/InteractableObjectSystem.InteractableObject.html": {
     "href": "api/InteractableObjectSystem.InteractableObject.html",
     "title": "Class InteractableObject | Czasoport Documentation",
-    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived LockedDoor Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
+    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived LockedDoor Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
   },
   "api/InteractableObjectSystem.Objects.LockedDoor.html": {
     "href": "api/InteractableObjectSystem.Objects.LockedDoor.html",
     "title": "Class LockedDoor | Czasoport Documentation",
-    "keywords": "Class LockedDoor Namespace InteractableObjectSystem.Objects public class LockedDoor : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject LockedDoor Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand() InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
+    "keywords": "Class LockedDoor Namespace InteractableObjectSystem.Objects public class LockedDoor : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject LockedDoor Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand() InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
   },
   "api/InteractableObjectSystem.Objects.html": {
     "href": "api/InteractableObjectSystem.Objects.html",
@@ -242,7 +257,7 @@
   "api/InteractableObjectSystem.html": {
     "href": "api/InteractableObjectSystem.html",
     "title": "Namespace InteractableObjectSystem | Czasoport Documentation",
-    "keywords": "Namespace InteractableObjectSystem Classes InteractableObject"
+    "keywords": "Namespace InteractableObjectSystem Classes InterObjectDefinition Scriptable object for items InteractableObject"
   },
   "api/Interactions.HighlightInteraction.html": {
     "href": "api/Interactions.HighlightInteraction.html",
@@ -377,7 +392,7 @@
   "api/Items.ItemSO.html": {
     "href": "api/Items.ItemSO.html",
     "title": "Class ItemSO | Czasoport Documentation",
-    "keywords": "Class ItemSO Namespace Items Scriptable object for items public class ItemSO : ScriptableObject Inheritance object ItemSO Fields description public string description Field Value string durability public int durability Field Value int image public Sprite image Field Value Sprite interactionDistance public float interactionDistance Field Value float itemName public string itemName Field Value string prefab public GameObject prefab Field Value GameObject Methods ToString() public override string ToString() Returns string"
+    "keywords": "Class ItemSO Namespace Items Scriptable object for items public class ItemSO : ScriptableObject Inheritance object ItemSO Fields description public string description Field Value string dropNotification public Notification dropNotification Field Value Notification durability public int durability Field Value int image public Sprite image Field Value Sprite interactionDistance public float interactionDistance Field Value float itemName public string itemName Field Value string pickUpNotification public Notification pickUpNotification Field Value Notification prefab public GameObject prefab Field Value GameObject Methods ToString() public override string ToString() Returns string"
   },
   "api/Items.html": {
     "href": "api/Items.html",
@@ -453,6 +468,16 @@
     "href": "api/LevelTimeChange.html",
     "title": "Namespace LevelTimeChange | Czasoport Documentation",
     "keywords": "Namespace LevelTimeChange Classes TimePlatformChangeSettingsSO Settings for scene changing and time changing systems. Enums TimeLine"
+  },
+  "api/Notifications.Notification.html": {
+    "href": "api/Notifications.Notification.html",
+    "title": "Class Notification | Czasoport Documentation",
+    "keywords": "Class Notification Namespace Notifications [Serializable] public class Notification Inheritance object Notification Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields displayTime public float displayTime Field Value float message public string message Field Value string"
+  },
+  "api/Notifications.html": {
+    "href": "api/Notifications.html",
+    "title": "Namespace Notifications | Czasoport Documentation",
+    "keywords": "Namespace Notifications Classes Notification"
   },
   "api/PlayerScripts.Player.html": {
     "href": "api/PlayerScripts.Player.html",
