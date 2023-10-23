@@ -1,4 +1,5 @@
 using CoinPackage.Debugging;
+using Notifications;
 using UnityEngine;
 using Utils;
 
@@ -20,6 +21,10 @@ namespace Items
         [Header("Item Statistics")]
         public int durability;
         public float interactionDistance;
+
+        [Header("Generic Notifications")]
+        public Notification pickUpNotification;
+        public Notification dropNotification;
         
         public override string ToString() {
             return $"[Item, {itemName}]" % Colorize.Purple;

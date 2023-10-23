@@ -28,7 +28,7 @@ namespace InteractableObjectSystem.Objects {
 
         public override void InteractionHand() {
             if (_state == DoorState.Locked) {
-                CDebug.Log("Door is locked.");
+                NotificationManager.Instance.RaiseNotification(definition.failedHandInterNotification);
                 return;
             }
 
@@ -42,14 +42,14 @@ namespace InteractableObjectSystem.Objects {
 
         public override bool InteractionItem(Item item) {
             if (_state != DoorState.Locked) {
-                CDebug.Log("Doors already unlocked");
                 return false;
             }
             if (interactedWith.Contains(item.ItemSO)) {
                 OpenDoor();
+                NotificationManager.Instance.RaiseNotification(definition.successfulItemInterNotification);
                 return true;
             }
-            CDebug.Log("Bad key");
+            NotificationManager.Instance.RaiseNotification(definition.failedItemInterNotification);
             return false;
         }
 
