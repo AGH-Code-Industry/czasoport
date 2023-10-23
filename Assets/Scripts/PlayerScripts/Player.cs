@@ -13,6 +13,7 @@ namespace PlayerScripts {
 
         public event EventHandler OnPlayerMoved;
 
+        private Rigidbody2D _rigid;
         private PlayerSettingsSO _settings;
         Animator _animator;
 
@@ -28,6 +29,7 @@ namespace PlayerScripts {
         private void Start() {
             _settings = DeveloperSettings.Instance.playerSettings;
             _animator = GetComponent<Animator>();
+            _rigid = GetComponent<Rigidbody2D>();
         }
 
         private void OnDestroy() {
@@ -46,7 +48,8 @@ namespace PlayerScripts {
                 _animator.SetFloat("LastHorizontal", movement.x);
                 _animator.SetFloat("LastVertical", movement.y);
             }
-            transform.Translate(Time.deltaTime * _settings.movementSpeed * new Vector2(movement.x, movement.y));
+            //transform.Translate(Time.deltaTime * _settings.movementSpeed * new Vector2(movement.x, movement.y));
+            _rigid.AddForce(Time.deltaTime * 1000 * _settings.movementSpeed * movement);
 
             if (movement != Vector2.zero)
                 OnPlayerMoved?.Invoke(this, EventArgs.Empty);
