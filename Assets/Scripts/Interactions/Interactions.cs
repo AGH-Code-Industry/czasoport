@@ -179,14 +179,14 @@ namespace Interactions {
         }
         
         private void OnItemInteractionPerformed(InputAction.CallbackContext ctx) {
-            // TEST TO SAVESYSTEM
-            DataPersistenceManager.Instance.SaveGame();
-            
             if (!_selectedObject) {
                 return;
             }
             if (Inventory.Instance.GetSelectedItem(out var item)) {
-                _selectedObject.GetComponent<IItemInteractable>()?.InteractionItem(item);
+                var successful = _selectedObject.GetComponent<IItemInteractable>()?.InteractionItem(item);
+                if (successful == true) {
+                    Inventory.Instance.UseItem();
+                }
             }
         }
         

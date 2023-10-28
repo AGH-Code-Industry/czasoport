@@ -140,6 +140,26 @@ namespace InventorySystem {
         }
 
         /// <summary>
+        /// Changes durability of the selected item by one for each use. If durability is exactly 0,
+        /// removes item from inventory.
+        /// </summary>
+        /// <returns>True if item was removed, false if not.</returns>
+        public bool UseItem() {
+            var item = _items[_selectedSlot];
+            item.Durability -= 1;
+            ItemStateChanged?.Invoke(this, new ItemStateChangedEventArgs() {
+                Item = item,
+                Slot = _selectedSlot
+            });
+            if (item.Durability == 0) {
+                RemoveItem(out var removedItem);
+                Destroy(item.gameObject);
+                return true;
+            }
+            return true;
+        }
+
+        /// <summary>
         /// Retrieve and remove item from the Inventory. Empty slot is always the result.
         /// </summary>
         /// <param name="item">Removed item if selected slot was not empty.</param>

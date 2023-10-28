@@ -59,7 +59,7 @@ namespace InventorySystem.UI {
         public void OnItemChangeState(object sender,ItemStateChangedEventArgs args) {
             if (args.Item.ItemSO.durability > 0) {
                 _slots[args.Slot].AddItem(args.Item.ItemSO.image);
-                _slots[args.Slot].SetDurability(args.Item.ItemSO.durability);
+                _slots[args.Slot].SetDurability(args.Item.Durability);
             }
             else _slots[args.Slot].RemoveItem();
         }
