@@ -1,11 +1,11 @@
-using CustomInput;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using LevelTimeChange.TimeChange;
 
-public class Music : MonoBehaviour {
+public class GameMusicManager : MonoBehaviour {
     public AudioClip PastMusic;
     public AudioClip PresentMusic;
     public AudioClip FutureMusic;
+    public MusicPlayer musicPlayer;
 
     class MusicState {
         public AudioClip clip;
@@ -20,26 +20,20 @@ public class Music : MonoBehaviour {
     private MusicState _pastMusicState;
     private MusicState _presentMusicState;
     private MusicState _futureMusicState;
-    private LevelTimeChange.TimeLine _timeline = LevelTimeChange.TimeLine.Past;
+    private LevelTimeChange.TimeLine _timeline = LevelTimeChange.TimeLine.Present;
 
     void Start() {
         _pastMusicState = new MusicState(PastMusic);
         _presentMusicState = new MusicState(PresentMusic);
         _futureMusicState = new MusicState(FutureMusic);
 
-        CInput.InputActions.Teleport.TeleportBack.performed += past;
-        CInput.InputActions.Teleport.TeleportForward.performed += future;
+        TimeChanger.Instance.OnTimeChange += OnTimeChangeHandler;
 
         ChangeMusic(_timeline);
-        MusicPlayer.Instance.Play(_pastMusicState.clip);
     }
 
-    private void past(InputAction.CallbackContext obj) {
-        ChangeMusic(LevelTimeChange.TimeLine.Past);
-    }
-
-    private void future(InputAction.CallbackContext obj) {
-        ChangeMusic(LevelTimeChange.TimeLine.Future);
+    private void OnTimeChangeHandler(object sender, TimeChanger.OnTimeChangeEventArgs args) {
+        ChangeMusic(args.time);
     }
 
     private void ChangeMusic(LevelTimeChange.TimeLine newTimeline) {
@@ -51,13 +45,13 @@ public class Music : MonoBehaviour {
     private void SaveCurrentMusicState() {
         switch (_timeline) {
             case LevelTimeChange.TimeLine.Past:
-                _pastMusicState.delay = MusicPlayer.Instance.ClipTime();
+                _pastMusicState.delay = musicPlayer.ClipTime();
                 break;
             case LevelTimeChange.TimeLine.Present:
-                _presentMusicState.delay = MusicPlayer.Instance.ClipTime();
+                _presentMusicState.delay = musicPlayer.ClipTime();
                 break;
             case LevelTimeChange.TimeLine.Future:
-                _futureMusicState.delay = MusicPlayer.Instance.ClipTime();
+                _futureMusicState.delay = musicPlayer.ClipTime();
                 break;
         }
     }
@@ -65,13 +59,13 @@ public class Music : MonoBehaviour {
     private void PlayMusic(LevelTimeChange.TimeLine newTimeline) {
         switch(newTimeline) {
             case LevelTimeChange.TimeLine.Past:
-                MusicPlayer.Instance.Play(_pastMusicState.clip, _pastMusicState.delay);
+                musicPlayer.Play(_pastMusicState.clip, _pastMusicState.delay);
                 break;
             case LevelTimeChange.TimeLine.Present:
-                MusicPlayer.Instance.Play(_presentMusicState.clip, _presentMusicState.delay);
+                musicPlayer.Play(_presentMusicState.clip, _presentMusicState.delay);
                 break;
             case LevelTimeChange.TimeLine.Future:
-                MusicPlayer.Instance.Play(_futureMusicState.clip, _futureMusicState.delay);
+                musicPlayer.Play(_futureMusicState.clip, _futureMusicState.delay);
                 break;
         }
     }

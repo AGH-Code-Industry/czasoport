@@ -4,9 +4,7 @@ using InventorySystem.EventArguments;
 using UnityEngine;
 
 namespace AudioSystem {
-    public class SFX : MonoBehaviour {
-        public AudioClip itemPickedSound;
-        public AudioClip itemRemovedSound;
+    public abstract class SFX : MonoBehaviour {
 
         private AudioSource _audioSource;
 
@@ -15,12 +13,9 @@ namespace AudioSystem {
             _audioSource = Camera.main.GetComponent<AudioSource>();
         }
 
-        private void BindSoundsWithEvents() {
-            Inventory.Instance.ItemInserted += CreateSoundPlayingEventHandler<ItemInsertedEventArgs>(itemPickedSound);
-            Inventory.Instance.ItemRemoved += CreateSoundPlayingEventHandler<ItemRemovedEventArgs>(itemRemovedSound);
-        }
+        protected abstract void BindSoundsWithEvents();
 
-        private EventHandler<T> CreateSoundPlayingEventHandler<T>(AudioClip clip) {
+        protected EventHandler<T> CreateSoundPlayingEventHandler<T>(AudioClip clip) {
             return (sender, args) => {
                 PlaySFX(clip);
             };
