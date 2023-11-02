@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7256744986904192267}
   - component: {fileID: 8667698351802201332}
   m_Layer: 6
-  m_Name: LockedDoors
+  m_Name: BreakableRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1893840840, guid: d85ccd596d12b33498f9d81135c7dfae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48151ac17d3eddd44a9b43ff5ab12a6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,9 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68db0aa2c6794a1ab8a609abec830ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  definition: {fileID: 11400000, guid: 983473f00c24c3b4fad543887552d882, type: 2}
+  definition: {fileID: 11400000, guid: 248d226483b8fc24883ecccbe5254585, type: 2}
   interactedWith:
-  - {fileID: 11400000, guid: 1511d966a09748a4ea02f68ac86cea2a, type: 2}
+  - {fileID: 11400000, guid: 845781e87cbf78746a37eb9e51fccc1e, type: 2}
 --- !u!61 &8667698351802201332
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -127,10 +127,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.25}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.2}
     oldSize: {x: 2, y: 2}
     newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
@@ -138,5 +138,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.5}
+  m_Size: {x: 1.6, y: 0.5}
   m_EdgeRadius: 0

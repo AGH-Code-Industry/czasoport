@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a4ab1ead47c468e86269bd40acefc78, type: 3}
-  m_Name: LockedDoor
+  m_Name: LockedDoors
   m_EditorClassIdentifier: 
-  interactableName: LockedDoor
+  interactableName: LockedDoors
   description: Doors locked by default
   prefab: {fileID: 7256744986904192265, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
   failedHandInterNotification:
-    message: 
+    message: I need a key to open this
     displayTime: 3
   successfulHandInterNotification:
     message: 
     displayTime: 3
   failedItemInterNotification:
-    message: 
+    message: This will not work
     displayTime: 3
   successfulItemInterNotification:
-    message: 
+    message: Door has been unlocked
     displayTime: 3
