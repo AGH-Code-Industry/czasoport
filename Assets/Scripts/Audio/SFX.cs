@@ -1,16 +1,24 @@
 using System;
-using InventorySystem;
-using InventorySystem.EventArguments;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace AudioSystem {
+    /// <summary>
+    /// Base class for associating events with sound effects.
+    /// </summary>
     public abstract class SFX : MonoBehaviour {
 
-        private AudioSource _audioSource;
+        public AudioSource audioSource;
+        public AudioMixer audioMixer;
 
         void Start() {
+            ApplyAudioSettings();
             BindSoundsWithEvents();
-            _audioSource = Camera.main.GetComponent<AudioSource>();
+        }
+
+        private void ApplyAudioSettings() {
+            float volumeInDb = PlayerPrefs.GetFloat("SFXVolume", 1.0f);
+            audioMixer.SetFloat("SFXVolume", volumeInDb);
         }
 
         protected abstract void BindSoundsWithEvents();
@@ -22,8 +30,8 @@ namespace AudioSystem {
         }
 
         private void PlaySFX(AudioClip clip) {
-            _audioSource.clip = clip;
-            _audioSource.Play();
+            audioSource.clip = clip;
+            audioSource.Play();
         }
     }
 }

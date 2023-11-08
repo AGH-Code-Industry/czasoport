@@ -1,5 +1,7 @@
 using UnityEngine;
-
+/// <summary>
+/// API to play song with fade in effect and specified delay;
+/// </summary>
 public class MusicPlayer : MonoBehaviour {
     public float FadeDuration;
     public AudioSource audioSource;
