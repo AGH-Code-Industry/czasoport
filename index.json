@@ -12,7 +12,7 @@
   "api/Application.GlobalExceptions.SingletonOverrideException.html": {
     "href": "api/Application.GlobalExceptions.SingletonOverrideException.html",
     "title": "Class SingletonOverrideException | Czasoport Documentation",
-    "keywords": "Class SingletonOverrideException Namespace Application.GlobalExceptions public class SingletonOverrideException : Exception, ISerializable Inheritance object Exception SingletonOverrideException Implements ISerializable Inherited Members Exception.GetBaseException() Exception.GetObjectData(SerializationInfo, StreamingContext) Exception.GetType() Exception.ToString() Exception.Data Exception.HelpLink Exception.HResult Exception.InnerException Exception.Message Exception.Source Exception.StackTrace Exception.TargetSite Exception.SerializeObjectState object.Equals(object) object.Equals(object, object) object.GetHashCode() object.MemberwiseClone() object.ReferenceEquals(object, object) Constructors SingletonOverrideException() public SingletonOverrideException() SingletonOverrideException(string) public SingletonOverrideException(string message) Parameters message string SingletonOverrideException(string, Exception) public SingletonOverrideException(string message, Exception inner) Parameters message string inner Exception"
+    "keywords": "Class SingletonOverrideException Namespace Application.GlobalExceptions public class SingletonOverrideException : Exception, ISerializable Inheritance object Exception SingletonOverrideException Implements ISerializable Inherited Members Exception.GetBaseException() Exception.GetType() Exception.ToString() Exception.Data Exception.HelpLink Exception.HResult Exception.InnerException Exception.Message Exception.Source Exception.StackTrace Exception.TargetSite Exception.SerializeObjectState object.Equals(object) object.Equals(object, object) object.GetHashCode() object.MemberwiseClone() object.ReferenceEquals(object, object) Constructors SingletonOverrideException() public SingletonOverrideException() SingletonOverrideException(string) public SingletonOverrideException(string message) Parameters message string SingletonOverrideException(string, Exception) public SingletonOverrideException(string message, Exception inner) Parameters message string inner Exception"
   },
   "api/Application.GlobalExceptions.html": {
     "href": "api/Application.GlobalExceptions.html",
@@ -39,6 +39,26 @@
     "title": "Namespace Application | Czasoport Documentation",
     "keywords": "Namespace Application Classes ApplicationSettingsSO Settings for entire application that defines variables for startup, core processes and shutdown GameManager Loggers StartupManager Enums Loggers.LoggerType"
   },
+  "api/AudioSystem.GameMusicManager.html": {
+    "href": "api/AudioSystem.GameMusicManager.html",
+    "title": "Class GameMusicManager | Czasoport Documentation",
+    "keywords": "Class GameMusicManager Namespace AudioSystem State of songs played on each timeline manager. public class GameMusicManager : MonoBehaviour Inheritance object GameMusicManager Fields FutureMusic public AudioClip FutureMusic Field Value AudioClip PastMusic public AudioClip PastMusic Field Value AudioClip PresentMusic public AudioClip PresentMusic Field Value AudioClip audioMixer public AudioMixer audioMixer Field Value AudioMixer musicPlayer public MusicPlayer musicPlayer Field Value MusicPlayer"
+  },
+  "api/AudioSystem.GameSFX.html": {
+    "href": "api/AudioSystem.GameSFX.html",
+    "title": "Class GameSFX | Czasoport Documentation",
+    "keywords": "Class GameSFX Namespace AudioSystem public class GameSFX : SFX Inheritance object SFX GameSFX Inherited Members SFX.audioSource SFX.audioMixer SFX.CreateSoundPlayingEventHandler<T>(AudioClip) Fields itemPickedSound public AudioClip itemPickedSound Field Value AudioClip itemRemovedSound public AudioClip itemRemovedSound Field Value AudioClip Methods BindSoundsWithEvents() protected override void BindSoundsWithEvents()"
+  },
+  "api/AudioSystem.SFX.html": {
+    "href": "api/AudioSystem.SFX.html",
+    "title": "Class SFX | Czasoport Documentation",
+    "keywords": "Class SFX Namespace AudioSystem Base class for associating events with sound effects. public abstract class SFX : MonoBehaviour Inheritance object SFX Derived GameSFX Fields audioMixer public AudioMixer audioMixer Field Value AudioMixer audioSource public AudioSource audioSource Field Value AudioSource Methods BindSoundsWithEvents() protected abstract void BindSoundsWithEvents() CreateSoundPlayingEventHandler<T>(AudioClip) protected EventHandler<T> CreateSoundPlayingEventHandler<T>(AudioClip clip) Parameters clip AudioClip Returns EventHandler<T> Type Parameters T"
+  },
+  "api/AudioSystem.html": {
+    "href": "api/AudioSystem.html",
+    "title": "Namespace AudioSystem | Czasoport Documentation",
+    "keywords": "Namespace AudioSystem Classes GameMusicManager State of songs played on each timeline manager. GameSFX SFX Base class for associating events with sound effects."
+  },
   "api/CustomInput.CInput.html": {
     "href": "api/CustomInput.CInput.html",
     "title": "Class CInput | Czasoport Documentation",
@@ -47,7 +67,7 @@
   "api/CustomInput.Exceptions.NoMainCameraException.html": {
     "href": "api/CustomInput.Exceptions.NoMainCameraException.html",
     "title": "Class NoMainCameraException | Czasoport Documentation",
-    "keywords": "Class NoMainCameraException Namespace CustomInput.Exceptions public class NoMainCameraException : Exception, ISerializable Inheritance object Exception NoMainCameraException Implements ISerializable Inherited Members Exception.GetBaseException() Exception.GetObjectData(SerializationInfo, StreamingContext) Exception.GetType() Exception.ToString() Exception.Data Exception.HelpLink Exception.HResult Exception.InnerException Exception.Message Exception.Source Exception.StackTrace Exception.TargetSite Exception.SerializeObjectState object.Equals(object) object.Equals(object, object) object.GetHashCode() object.MemberwiseClone() object.ReferenceEquals(object, object) Constructors NoMainCameraException() public NoMainCameraException() NoMainCameraException(string) public NoMainCameraException(string message) Parameters message string NoMainCameraException(string, Exception) public NoMainCameraException(string message, Exception inner) Parameters message string inner Exception"
+    "keywords": "Class NoMainCameraException Namespace CustomInput.Exceptions public class NoMainCameraException : Exception, ISerializable Inheritance object Exception NoMainCameraException Implements ISerializable Inherited Members Exception.GetBaseException() Exception.GetType() Exception.ToString() Exception.Data Exception.HelpLink Exception.HResult Exception.InnerException Exception.Message Exception.Source Exception.StackTrace Exception.TargetSite Exception.SerializeObjectState object.Equals(object) object.Equals(object, object) object.GetHashCode() object.MemberwiseClone() object.ReferenceEquals(object, object) Constructors NoMainCameraException() public NoMainCameraException() NoMainCameraException(string) public NoMainCameraException(string message) Parameters message string NoMainCameraException(string, Exception) public NoMainCameraException(string message, Exception inner) Parameters message string inner Exception"
   },
   "api/CustomInput.Exceptions.html": {
     "href": "api/CustomInput.Exceptions.html",
@@ -149,6 +169,11 @@
     "title": "Namespace DataPersistence | Czasoport Documentation",
     "keywords": "Namespace DataPersistence Classes DataPersistenceManager DefaultSaveDataSO Settings for entire application that defines variables for startup, core processes and shutdown FileDataHandler GameData Interfaces IDataPersistence"
   },
+  "api/Global.Audio.html": {
+    "href": "api/Global.Audio.html",
+    "title": "Class Audio | Czasoport Documentation",
+    "keywords": "Class Audio Namespace Global public class Audio : MonoBehaviour Inheritance object Audio Fields itemPickedSound public AudioClip itemPickedSound Field Value AudioClip itemRemovedSound public AudioClip itemRemovedSound Field Value AudioClip"
+  },
   "api/Global.FollowWorld.html": {
     "href": "api/Global.FollowWorld.html",
     "title": "Class FollowWorld | Czasoport Documentation",
@@ -219,6 +244,11 @@
     "title": "Class InputActions | Czasoport Documentation",
     "keywords": "Class InputActions Namespace Global public class InputActions : IInputActionCollection2, IDisposable Inheritance object InputActions Implements IDisposable Constructors InputActions() public InputActions() Properties Game public InputActions.GameActions Game { get; } Property Value InputActions.GameActions Interactions public InputActions.InteractionsActions Interactions { get; } Property Value InputActions.InteractionsActions Inventory public InputActions.InventoryActions Inventory { get; } Property Value InputActions.InventoryActions Mouse public InputActions.MouseActions Mouse { get; } Property Value InputActions.MouseActions Movement public InputActions.MovementActions Movement { get; } Property Value InputActions.MovementActions Teleport public InputActions.TeleportActions Teleport { get; } Property Value InputActions.TeleportActions asset public InputActionAsset asset { get; } Property Value InputActionAsset bindingMask public InputBinding? bindingMask { get; set; } Property Value InputBinding? bindings public IEnumerable<InputBinding> bindings { get; } Property Value IEnumerable<InputBinding> controlSchemes public ReadOnlyArray<InputControlScheme> controlSchemes { get; } Property Value ReadOnlyArray<InputControlScheme> devices public ReadOnlyArray<InputDevice>? devices { get; set; } Property Value ReadOnlyArray<InputDevice>? Methods Contains(InputAction) public bool Contains(InputAction action) Parameters action InputAction Returns bool Disable() public void Disable() Dispose() Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. public void Dispose() Enable() public void Enable() FindAction(string, bool) public InputAction FindAction(string actionNameOrId, bool throwIfNotFound = false) Parameters actionNameOrId string throwIfNotFound bool Returns InputAction FindBinding(InputBinding, out InputAction) public int FindBinding(InputBinding bindingMask, out InputAction action) Parameters bindingMask InputBinding action InputAction Returns int GetEnumerator() public IEnumerator<InputAction> GetEnumerator() Returns IEnumerator<InputAction>"
   },
+  "api/Global.MusicPlayer.html": {
+    "href": "api/Global.MusicPlayer.html",
+    "title": "Class MusicPlayer | Czasoport Documentation",
+    "keywords": "Class MusicPlayer Namespace Global API to play song with fade in effect and specified delay; public class MusicPlayer : MonoBehaviour Inheritance object MusicPlayer Fields FadeDuration public float FadeDuration Field Value float audioSource public AudioSource audioSource Field Value AudioSource Methods ClipTime() public float ClipTime() Returns float Play(AudioClip, float) public void Play(AudioClip clip, float delay = 0) Parameters clip AudioClip delay float"
+  },
   "api/Global.NotificationManager.html": {
     "href": "api/Global.NotificationManager.html",
     "title": "Class NotificationManager | Czasoport Documentation",
@@ -232,7 +262,7 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace | Czasoport Documentation",
-    "keywords": "Namespace Classes FollowWorld InputActions NotificationManager SettingsTests Structs InputActions.GameActions InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IGameActions InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions"
+    "keywords": "Namespace Classes Audio FollowWorld InputActions MusicPlayer API to play song with fade in effect and specified delay; NotificationManager SettingsTests Structs InputActions.GameActions InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IGameActions InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions"
   },
   "api/InteractableObjectSystem.InterObjectDefinition.html": {
     "href": "api/InteractableObjectSystem.InterObjectDefinition.html",
@@ -581,7 +611,7 @@
   },
   "gdd/Marketing_i_Monetyzacja/Marketing_i_Monetyzacja.html": {
     "href": "gdd/Marketing_i_Monetyzacja/Marketing_i_Monetyzacja.html",
-    "title": "<-- GDD | Czasoport Documentation",
+    "title": "| Czasoport Documentation",
     "keywords": "Documentation\\GDD\\Marketing_i_Monetyzacja\\Marketing_i_Monetyzacja.md# Marketing i Monetyzacja <-- GDD Rodzaj Dystrybucji: Darmowa, Płatna ... Grupa Docelowa Zakres grupy ... Do kogo zwracamy się z naszą ofertą ... Czemu nie da się zwiększyć grupy docelowej ... Platformy wydania Gry PC Wielkość grupy docelowej ... Cena Produktu ... ... Jak i Gdzie gra zostanie upubliczniona Lista Platform Google Facebook ... W jaki sposób zamierzamy reklamować Grę ... Maksymalna ilość środków przeznaczona na Reklamę ... Szacunek Odniesionych z niech przychodów ..."
   },
   "gdd/Muzyka/Muzyka.html": {

@@ -170,6 +170,126 @@ references:
   commentId: T:Application.StartupManager
   fullName: Application.StartupManager
   nameWithType: StartupManager
+- uid: AudioSystem
+  name: AudioSystem
+  href: api/AudioSystem.html
+  commentId: N:AudioSystem
+  fullName: AudioSystem
+  nameWithType: AudioSystem
+- uid: AudioSystem.GameMusicManager
+  name: GameMusicManager
+  href: api/AudioSystem.GameMusicManager.html
+  commentId: T:AudioSystem.GameMusicManager
+  fullName: AudioSystem.GameMusicManager
+  nameWithType: GameMusicManager
+- uid: AudioSystem.GameMusicManager.FutureMusic
+  name: FutureMusic
+  href: api/AudioSystem.GameMusicManager.html#AudioSystem_GameMusicManager_FutureMusic
+  commentId: F:AudioSystem.GameMusicManager.FutureMusic
+  fullName: AudioSystem.GameMusicManager.FutureMusic
+  nameWithType: GameMusicManager.FutureMusic
+- uid: AudioSystem.GameMusicManager.PastMusic
+  name: PastMusic
+  href: api/AudioSystem.GameMusicManager.html#AudioSystem_GameMusicManager_PastMusic
+  commentId: F:AudioSystem.GameMusicManager.PastMusic
+  fullName: AudioSystem.GameMusicManager.PastMusic
+  nameWithType: GameMusicManager.PastMusic
+- uid: AudioSystem.GameMusicManager.PresentMusic
+  name: PresentMusic
+  href: api/AudioSystem.GameMusicManager.html#AudioSystem_GameMusicManager_PresentMusic
+  commentId: F:AudioSystem.GameMusicManager.PresentMusic
+  fullName: AudioSystem.GameMusicManager.PresentMusic
+  nameWithType: GameMusicManager.PresentMusic
+- uid: AudioSystem.GameMusicManager.audioMixer
+  name: audioMixer
+  href: api/AudioSystem.GameMusicManager.html#AudioSystem_GameMusicManager_audioMixer
+  commentId: F:AudioSystem.GameMusicManager.audioMixer
+  fullName: AudioSystem.GameMusicManager.audioMixer
+  nameWithType: GameMusicManager.audioMixer
+- uid: AudioSystem.GameMusicManager.musicPlayer
+  name: musicPlayer
+  href: api/AudioSystem.GameMusicManager.html#AudioSystem_GameMusicManager_musicPlayer
+  commentId: F:AudioSystem.GameMusicManager.musicPlayer
+  fullName: AudioSystem.GameMusicManager.musicPlayer
+  nameWithType: GameMusicManager.musicPlayer
+- uid: AudioSystem.GameSFX
+  name: GameSFX
+  href: api/AudioSystem.GameSFX.html
+  commentId: T:AudioSystem.GameSFX
+  fullName: AudioSystem.GameSFX
+  nameWithType: GameSFX
+- uid: AudioSystem.GameSFX.BindSoundsWithEvents
+  name: BindSoundsWithEvents()
+  href: api/AudioSystem.GameSFX.html#AudioSystem_GameSFX_BindSoundsWithEvents
+  commentId: M:AudioSystem.GameSFX.BindSoundsWithEvents
+  fullName: AudioSystem.GameSFX.BindSoundsWithEvents()
+  nameWithType: GameSFX.BindSoundsWithEvents()
+- uid: AudioSystem.GameSFX.BindSoundsWithEvents*
+  name: BindSoundsWithEvents
+  href: api/AudioSystem.GameSFX.html#AudioSystem_GameSFX_BindSoundsWithEvents_
+  commentId: Overload:AudioSystem.GameSFX.BindSoundsWithEvents
+  isSpec: "True"
+  fullName: AudioSystem.GameSFX.BindSoundsWithEvents
+  nameWithType: GameSFX.BindSoundsWithEvents
+- uid: AudioSystem.GameSFX.itemPickedSound
+  name: itemPickedSound
+  href: api/AudioSystem.GameSFX.html#AudioSystem_GameSFX_itemPickedSound
+  commentId: F:AudioSystem.GameSFX.itemPickedSound
+  fullName: AudioSystem.GameSFX.itemPickedSound
+  nameWithType: GameSFX.itemPickedSound
+- uid: AudioSystem.GameSFX.itemRemovedSound
+  name: itemRemovedSound
+  href: api/AudioSystem.GameSFX.html#AudioSystem_GameSFX_itemRemovedSound
+  commentId: F:AudioSystem.GameSFX.itemRemovedSound
+  fullName: AudioSystem.GameSFX.itemRemovedSound
+  nameWithType: GameSFX.itemRemovedSound
+- uid: AudioSystem.SFX
+  name: SFX
+  href: api/AudioSystem.SFX.html
+  commentId: T:AudioSystem.SFX
+  fullName: AudioSystem.SFX
+  nameWithType: SFX
+- uid: AudioSystem.SFX.BindSoundsWithEvents
+  name: BindSoundsWithEvents()
+  href: api/AudioSystem.SFX.html#AudioSystem_SFX_BindSoundsWithEvents
+  commentId: M:AudioSystem.SFX.BindSoundsWithEvents
+  fullName: AudioSystem.SFX.BindSoundsWithEvents()
+  nameWithType: SFX.BindSoundsWithEvents()
+- uid: AudioSystem.SFX.BindSoundsWithEvents*
+  name: BindSoundsWithEvents
+  href: api/AudioSystem.SFX.html#AudioSystem_SFX_BindSoundsWithEvents_
+  commentId: Overload:AudioSystem.SFX.BindSoundsWithEvents
+  isSpec: "True"
+  fullName: AudioSystem.SFX.BindSoundsWithEvents
+  nameWithType: SFX.BindSoundsWithEvents
+- uid: AudioSystem.SFX.CreateSoundPlayingEventHandler*
+  name: CreateSoundPlayingEventHandler
+  href: api/AudioSystem.SFX.html#AudioSystem_SFX_CreateSoundPlayingEventHandler_
+  commentId: Overload:AudioSystem.SFX.CreateSoundPlayingEventHandler
+  isSpec: "True"
+  fullName: AudioSystem.SFX.CreateSoundPlayingEventHandler
+  nameWithType: SFX.CreateSoundPlayingEventHandler
+- uid: AudioSystem.SFX.CreateSoundPlayingEventHandler``1(AudioClip)
+  name: CreateSoundPlayingEventHandler<T>(AudioClip)
+  href: api/AudioSystem.SFX.html#AudioSystem_SFX_CreateSoundPlayingEventHandler__1_AudioClip_
+  commentId: M:AudioSystem.SFX.CreateSoundPlayingEventHandler``1(AudioClip)
+  name.vb: CreateSoundPlayingEventHandler(Of T)(AudioClip)
+  fullName: AudioSystem.SFX.CreateSoundPlayingEventHandler<T>(AudioClip)
+  fullName.vb: AudioSystem.SFX.CreateSoundPlayingEventHandler(Of T)(AudioClip)
+  nameWithType: SFX.CreateSoundPlayingEventHandler<T>(AudioClip)
+  nameWithType.vb: SFX.CreateSoundPlayingEventHandler(Of T)(AudioClip)
+- uid: AudioSystem.SFX.audioMixer
+  name: audioMixer
+  href: api/AudioSystem.SFX.html#AudioSystem_SFX_audioMixer
+  commentId: F:AudioSystem.SFX.audioMixer
+  fullName: AudioSystem.SFX.audioMixer
+  nameWithType: SFX.audioMixer
+- uid: AudioSystem.SFX.audioSource
+  name: audioSource
+  href: api/AudioSystem.SFX.html#AudioSystem_SFX_audioSource
+  commentId: F:AudioSystem.SFX.audioSource
+  fullName: AudioSystem.SFX.audioSource
+  nameWithType: SFX.audioSource
 - uid: CustomInput
   name: CustomInput
   href: api/CustomInput.html
@@ -997,6 +1117,24 @@ references:
 - uid: Global
   name: ''
   href: api/Global.html
+- uid: Global.Audio
+  name: Audio
+  href: api/Global.Audio.html
+  commentId: T:Global.Audio
+  fullName: Audio
+  nameWithType: Audio
+- uid: Global.Audio.itemPickedSound
+  name: itemPickedSound
+  href: api/Global.Audio.html#Global_Audio_itemPickedSound
+  commentId: F:Global.Audio.itemPickedSound
+  fullName: Audio.itemPickedSound
+  nameWithType: Audio.itemPickedSound
+- uid: Global.Audio.itemRemovedSound
+  name: itemRemovedSound
+  href: api/Global.Audio.html#Global_Audio_itemRemovedSound
+  commentId: F:Global.Audio.itemRemovedSound
+  fullName: Audio.itemRemovedSound
+  nameWithType: Audio.itemRemovedSound
 - uid: Global.FollowWorld
   name: FollowWorld
   href: api/Global.FollowWorld.html
@@ -2426,6 +2564,53 @@ references:
   isSpec: "True"
   fullName: InputActions.devices
   nameWithType: InputActions.devices
+- uid: Global.MusicPlayer
+  name: MusicPlayer
+  href: api/Global.MusicPlayer.html
+  commentId: T:Global.MusicPlayer
+  fullName: MusicPlayer
+  nameWithType: MusicPlayer
+- uid: Global.MusicPlayer.ClipTime
+  name: ClipTime()
+  href: api/Global.MusicPlayer.html#Global_MusicPlayer_ClipTime
+  commentId: M:Global.MusicPlayer.ClipTime
+  fullName: MusicPlayer.ClipTime()
+  nameWithType: MusicPlayer.ClipTime()
+- uid: Global.MusicPlayer.ClipTime*
+  name: ClipTime
+  href: api/Global.MusicPlayer.html#Global_MusicPlayer_ClipTime_
+  commentId: Overload:Global.MusicPlayer.ClipTime
+  isSpec: "True"
+  fullName: MusicPlayer.ClipTime
+  nameWithType: MusicPlayer.ClipTime
+- uid: Global.MusicPlayer.FadeDuration
+  name: FadeDuration
+  href: api/Global.MusicPlayer.html#Global_MusicPlayer_FadeDuration
+  commentId: F:Global.MusicPlayer.FadeDuration
+  fullName: MusicPlayer.FadeDuration
+  nameWithType: MusicPlayer.FadeDuration
+- uid: Global.MusicPlayer.Play(AudioClip,System.Single)
+  name: Play(AudioClip, float)
+  href: api/Global.MusicPlayer.html#Global_MusicPlayer_Play_AudioClip_System_Single_
+  commentId: M:Global.MusicPlayer.Play(AudioClip,System.Single)
+  name.vb: Play(AudioClip, Single)
+  fullName: MusicPlayer.Play(AudioClip, float)
+  fullName.vb: MusicPlayer.Play(AudioClip, Single)
+  nameWithType: MusicPlayer.Play(AudioClip, float)
+  nameWithType.vb: MusicPlayer.Play(AudioClip, Single)
+- uid: Global.MusicPlayer.Play*
+  name: Play
+  href: api/Global.MusicPlayer.html#Global_MusicPlayer_Play_
+  commentId: Overload:Global.MusicPlayer.Play
+  isSpec: "True"
+  fullName: MusicPlayer.Play
+  nameWithType: MusicPlayer.Play
+- uid: Global.MusicPlayer.audioSource
+  name: audioSource
+  href: api/Global.MusicPlayer.html#Global_MusicPlayer_audioSource
+  commentId: F:Global.MusicPlayer.audioSource
+  fullName: MusicPlayer.audioSource
+  nameWithType: MusicPlayer.audioSource
 - uid: Global.NotificationManager
   name: NotificationManager
   href: api/Global.NotificationManager.html
