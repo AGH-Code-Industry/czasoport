@@ -9,9 +9,9 @@ public class TeleportPlace : MonoBehaviour {
         return transform.position;
     }
     private void OnTriggerEnter2D(Collider2D col) {
-        CDebug.Log("TELEPORT?");
+        //CDebug.Log("TELEPORT?");
         if (col.CompareTag("Player") & active) {
-            CDebug.Log("TELEPORT!");
+            //CDebug.Log("TELEPORT!");
             col.gameObject.transform.position = destinationPlace.getPosition();
         }
     }
