@@ -23,6 +23,8 @@ namespace LevelTimeChange.TimeChange {
         }
         
         [SerializeField] private Animator animator;
+        GameObject _timeChangeUIgo;
+        bool _timeChangeActivated = false;
 
         /// <summary>
         /// Timeline the player is currently on.
@@ -58,6 +60,9 @@ namespace LevelTimeChange.TimeChange {
                 objectToSpawn.transform.position = i * _timeJump + transform.position;
                 _boxes.Add(objectToSpawn.AddComponent<CheckCollider>());
             }
+
+            _timeChangeUIgo = FindObjectOfType<TimeChangeUI>().gameObject;
+            _timeChangeUIgo.SetActive(false);
         }
 
         private void OnEnable() {
@@ -125,7 +130,7 @@ namespace LevelTimeChange.TimeChange {
         public void LoadPersistentData(GameData gameData) {
             actualTime = gameData.currentTimeline;
             _timeUnlocked[(int)actualTime] = true;
-            FindObjectOfType<TimeChangeUI>().UpdateTimeUI();
+            if (_timeChangeActivated) _timeChangeUIgo.GetComponent<TimeChangeUI>().UpdateTimeUI();
         }
 
         public void SavePersistentData(ref GameData gameData) {
@@ -138,6 +143,14 @@ namespace LevelTimeChange.TimeChange {
 
         public void LockTimeline(TimeLine timelineToLock) {
             _timeUnlocked[(int)timelineToLock] = false;
+        }
+
+        public bool IsTimeUnlocked(TimeLine timeLine) {
+            return _timeUnlocked[(int)timeLine];
+        }
+
+        public void EnableTimeChange() {
+            _timeChangeUIgo.SetActive(true);
         }
 
         public override string ToString() {
