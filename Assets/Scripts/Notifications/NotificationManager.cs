@@ -5,6 +5,7 @@ using Notifications;
 using UnityEngine;
 using TMPro;
 using Settings;
+using System.Reflection;
 
 public class NotificationManager : MonoBehaviour {
 
@@ -18,6 +19,8 @@ public class NotificationManager : MonoBehaviour {
     GameObject _notificationWindow;
     [SerializeField]
     TMP_Text _notificationMessage;
+    int _notificationsRaisen = 0;
+    int _notificationsDisabled = 0;
 
     private void Start() {
         if (Instance == null) {
@@ -31,13 +34,15 @@ public class NotificationManager : MonoBehaviour {
         if (String.IsNullOrEmpty(notification.message)) {
             return;
         }
+        _notificationsRaisen++;
         _notificationMessage.text = notification.message;
         _notificationWindow.SetActive(true);
         Invoke("DisableNotificationWindow", notification.displayTime);
     }
 
     void DisableNotificationWindow() {
-        _notificationWindow.SetActive(false);
+        if (_notificationsRaisen - _notificationsDisabled == 1) _notificationWindow.SetActive(false);
+        _notificationsDisabled++;
     }
 
 }
