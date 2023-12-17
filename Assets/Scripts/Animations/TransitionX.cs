@@ -34,13 +34,11 @@ public class TransitionX : MonoBehaviour {
     }
 
     public void StartTransition() {
-        Debug.Log("Started transition");
         timer = 0;
         destination = to;
     }
 
     public void StopTransition() {
-        Debug.Log("Stoped transition");
         timer = 0;
         destination = from;
     }
