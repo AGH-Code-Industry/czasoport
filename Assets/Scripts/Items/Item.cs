@@ -18,6 +18,7 @@ namespace Items
         [SerializeField] private ItemSO itemSO;
 
         public ItemSO ItemSO => itemSO;
+        public int Durability { get; set; }
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.ITEMS];
         private SpriteRenderer _spriteRenderer;
@@ -30,6 +31,8 @@ namespace Items
                     this
                     );
             }
+
+            Durability = ItemSO.durability;
         }
 
         public void InteractionHand() {
