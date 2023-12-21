@@ -2642,6 +2642,12 @@ references:
   commentId: T:Global.SettingsTests
   fullName: SettingsTests
   nameWithType: SettingsTests
+- uid: Global.WithinLevelPortal
+  name: WithinLevelPortal
+  href: api/Global.WithinLevelPortal.html
+  commentId: T:Global.WithinLevelPortal
+  fullName: WithinLevelPortal
+  nameWithType: WithinLevelPortal
 - uid: InteractableObjectSystem
   name: InteractableObjectSystem
   href: api/InteractableObjectSystem.html
@@ -3222,6 +3228,19 @@ references:
   commentId: E:InventorySystem.Inventory.SelectedSlotChanged
   fullName: InventorySystem.Inventory.SelectedSlotChanged
   nameWithType: Inventory.SelectedSlotChanged
+- uid: InventorySystem.Inventory.UseItem
+  name: UseItem()
+  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_UseItem
+  commentId: M:InventorySystem.Inventory.UseItem
+  fullName: InventorySystem.Inventory.UseItem()
+  nameWithType: Inventory.UseItem()
+- uid: InventorySystem.Inventory.UseItem*
+  name: UseItem
+  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_UseItem_
+  commentId: Overload:InventorySystem.Inventory.UseItem
+  isSpec: "True"
+  fullName: InventorySystem.Inventory.UseItem
+  nameWithType: Inventory.UseItem
 - uid: InventorySystem.Inventory.itemHideout
   name: itemHideout
   href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_itemHideout
@@ -3439,6 +3458,19 @@ references:
   commentId: T:Items.Item
   fullName: Items.Item
   nameWithType: Item
+- uid: Items.Item.Durability
+  name: Durability
+  href: api/Items.Item.html#Items_Item_Durability
+  commentId: P:Items.Item.Durability
+  fullName: Items.Item.Durability
+  nameWithType: Item.Durability
+- uid: Items.Item.Durability*
+  name: Durability
+  href: api/Items.Item.html#Items_Item_Durability_
+  commentId: Overload:Items.Item.Durability
+  isSpec: "True"
+  fullName: Items.Item.Durability
+  nameWithType: Item.Durability
 - uid: Items.Item.InteractionHand
   name: InteractionHand()
   href: api/Items.Item.html#Items_Item_InteractionHand
@@ -4293,76 +4325,12 @@ references:
   commentId: T:Utils.Attributes.ObjectIdentifierAttribute
   fullName: Utils.Attributes.ObjectIdentifierAttribute
   nameWithType: ObjectIdentifierAttribute
-- uid: Utils.Attributes.ObjectIdentifierDrawer
-  name: ObjectIdentifierDrawer
-  href: api/Utils.Attributes.ObjectIdentifierDrawer.html
-  commentId: T:Utils.Attributes.ObjectIdentifierDrawer
-  fullName: Utils.Attributes.ObjectIdentifierDrawer
-  nameWithType: ObjectIdentifierDrawer
-- uid: Utils.Attributes.ObjectIdentifierDrawer.GetPropertyHeight(SerializedProperty,GUIContent)
-  name: GetPropertyHeight(SerializedProperty, GUIContent)
-  href: api/Utils.Attributes.ObjectIdentifierDrawer.html#Utils_Attributes_ObjectIdentifierDrawer_GetPropertyHeight_SerializedProperty_GUIContent_
-  commentId: M:Utils.Attributes.ObjectIdentifierDrawer.GetPropertyHeight(SerializedProperty,GUIContent)
-  fullName: Utils.Attributes.ObjectIdentifierDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
-  nameWithType: ObjectIdentifierDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
-- uid: Utils.Attributes.ObjectIdentifierDrawer.GetPropertyHeight*
-  name: GetPropertyHeight
-  href: api/Utils.Attributes.ObjectIdentifierDrawer.html#Utils_Attributes_ObjectIdentifierDrawer_GetPropertyHeight_
-  commentId: Overload:Utils.Attributes.ObjectIdentifierDrawer.GetPropertyHeight
-  isSpec: "True"
-  fullName: Utils.Attributes.ObjectIdentifierDrawer.GetPropertyHeight
-  nameWithType: ObjectIdentifierDrawer.GetPropertyHeight
-- uid: Utils.Attributes.ObjectIdentifierDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
-  name: OnGUI(Rect, SerializedProperty, GUIContent)
-  href: api/Utils.Attributes.ObjectIdentifierDrawer.html#Utils_Attributes_ObjectIdentifierDrawer_OnGUI_Rect_SerializedProperty_GUIContent_
-  commentId: M:Utils.Attributes.ObjectIdentifierDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
-  fullName: Utils.Attributes.ObjectIdentifierDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
-  nameWithType: ObjectIdentifierDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
-- uid: Utils.Attributes.ObjectIdentifierDrawer.OnGUI*
-  name: OnGUI
-  href: api/Utils.Attributes.ObjectIdentifierDrawer.html#Utils_Attributes_ObjectIdentifierDrawer_OnGUI_
-  commentId: Overload:Utils.Attributes.ObjectIdentifierDrawer.OnGUI
-  isSpec: "True"
-  fullName: Utils.Attributes.ObjectIdentifierDrawer.OnGUI
-  nameWithType: ObjectIdentifierDrawer.OnGUI
 - uid: Utils.Attributes.ReadOnlyAttribute
   name: ReadOnlyAttribute
   href: api/Utils.Attributes.ReadOnlyAttribute.html
   commentId: T:Utils.Attributes.ReadOnlyAttribute
   fullName: Utils.Attributes.ReadOnlyAttribute
   nameWithType: ReadOnlyAttribute
-- uid: Utils.Attributes.ReadOnlyDrawer
-  name: ReadOnlyDrawer
-  href: api/Utils.Attributes.ReadOnlyDrawer.html
-  commentId: T:Utils.Attributes.ReadOnlyDrawer
-  fullName: Utils.Attributes.ReadOnlyDrawer
-  nameWithType: ReadOnlyDrawer
-- uid: Utils.Attributes.ReadOnlyDrawer.GetPropertyHeight(SerializedProperty,GUIContent)
-  name: GetPropertyHeight(SerializedProperty, GUIContent)
-  href: api/Utils.Attributes.ReadOnlyDrawer.html#Utils_Attributes_ReadOnlyDrawer_GetPropertyHeight_SerializedProperty_GUIContent_
-  commentId: M:Utils.Attributes.ReadOnlyDrawer.GetPropertyHeight(SerializedProperty,GUIContent)
-  fullName: Utils.Attributes.ReadOnlyDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
-  nameWithType: ReadOnlyDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
-- uid: Utils.Attributes.ReadOnlyDrawer.GetPropertyHeight*
-  name: GetPropertyHeight
-  href: api/Utils.Attributes.ReadOnlyDrawer.html#Utils_Attributes_ReadOnlyDrawer_GetPropertyHeight_
-  commentId: Overload:Utils.Attributes.ReadOnlyDrawer.GetPropertyHeight
-  isSpec: "True"
-  fullName: Utils.Attributes.ReadOnlyDrawer.GetPropertyHeight
-  nameWithType: ReadOnlyDrawer.GetPropertyHeight
-- uid: Utils.Attributes.ReadOnlyDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
-  name: OnGUI(Rect, SerializedProperty, GUIContent)
-  href: api/Utils.Attributes.ReadOnlyDrawer.html#Utils_Attributes_ReadOnlyDrawer_OnGUI_Rect_SerializedProperty_GUIContent_
-  commentId: M:Utils.Attributes.ReadOnlyDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
-  fullName: Utils.Attributes.ReadOnlyDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
-  nameWithType: ReadOnlyDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
-- uid: Utils.Attributes.ReadOnlyDrawer.OnGUI*
-  name: OnGUI
-  href: api/Utils.Attributes.ReadOnlyDrawer.html#Utils_Attributes_ReadOnlyDrawer_OnGUI_
-  commentId: Overload:Utils.Attributes.ReadOnlyDrawer.OnGUI
-  isSpec: "True"
-  fullName: Utils.Attributes.ReadOnlyDrawer.OnGUI
-  nameWithType: ReadOnlyDrawer.OnGUI
 - uid: Utils.UniqueScriptableObject
   name: UniqueScriptableObject
   href: api/Utils.UniqueScriptableObject.html

@@ -341,7 +341,7 @@ their original indexes.</p>
 
   <h3 id="InventorySystem_Inventory_RemoveItem_Items_Item__" data-uid="InventorySystem.Inventory.RemoveItem(Items.Item@)">
   RemoveItem(out Item)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L167"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retrieve and remove item from the Inventory. Empty slot is always the result.</p>
@@ -363,6 +363,40 @@ their original indexes.</p>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd><p><code>True</code> if item was removed, <code>false</code> if slot was empty. If <code>false</code>, retrieved item will be null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="InventorySystem_Inventory_UseItem_" data-uid="InventorySystem.Inventory.UseItem*"></a>
+
+  <h3 id="InventorySystem_Inventory_UseItem" data-uid="InventorySystem.Inventory.UseItem">
+  UseItem()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Changes durability of the selected item by one for each use. If durability is exactly 0,
+removes item from inventory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseItem()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if item was removed, false if not.</p>
 </dd>
   </dl>
 
