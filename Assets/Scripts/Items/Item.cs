@@ -25,8 +25,8 @@ namespace Items
 
         public Item() : base() {}
         
-        public Item(ItemSO iSO) : base() {
-            itemSO = iSO;
+        public Item(ItemSO itemScriptableObject) : base() {
+            itemSO = itemScriptableObject;
         }
         
         private void Awake() {

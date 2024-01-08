@@ -16,8 +16,8 @@ namespace InteractableObjectSystem.Objects {
             Unlocked
         }
         
-        [SerializeField] private List<GameObject> contains;
-        [SerializeField] private List<ItemSO> interactedWith;
+        [SerializeField] private List<GameObject> _contains;
+        [SerializeField] private List<ItemSO> _interactedWith;
         
         [SerializeField] private ChestState _state = ChestState.Locked;
         
@@ -37,7 +37,7 @@ namespace InteractableObjectSystem.Objects {
             if (_state != ChestState.Locked) {
                 return false;
             }
-            if (interactedWith.Contains(item.ItemSO)) {
+            if (_interactedWith.Contains(item.ItemSO)) {
                 UnlockChest();
                 NotificationManager.Instance.RaiseNotification(definition.successfulItemInterNotification);
                 return true;
@@ -54,11 +54,11 @@ namespace InteractableObjectSystem.Objects {
 
         private void OpenChest() {
             CDebug.Log("Opened");
-            while (contains.Count > 0) {
-                GameObject c = contains[0];
+            while (_contains.Count > 0) {
+                GameObject c = _contains[0];
                 Item i = c.GetComponent<Item>();
                 if (Inventory.Instance.InsertItem(i)) {
-                    contains.RemoveAt(0);
+                    _contains.RemoveAt(0);
                 }
                 else return;
 

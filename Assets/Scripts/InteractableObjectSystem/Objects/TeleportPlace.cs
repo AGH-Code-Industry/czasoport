@@ -4,7 +4,7 @@ using UnityEngine;
 public class TeleportPlace : MonoBehaviour {
     [SerializeField] private TeleportPlace destinationPlace;
     private bool active = true;
-    public Vector3 getPosition() {
+    public Vector3 StartTeleportation() {
         active = false;
         return transform.position;
     }
@@ -12,7 +12,7 @@ public class TeleportPlace : MonoBehaviour {
         //CDebug.Log("TELEPORT?");
         if (col.CompareTag("Player") & active) {
             //CDebug.Log("TELEPORT!");
-            col.gameObject.transform.position = destinationPlace.getPosition();
+            col.gameObject.transform.position = destinationPlace.StartTeleportation();
         }
     }
     
