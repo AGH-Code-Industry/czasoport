@@ -2642,6 +2642,25 @@ references:
   commentId: T:Global.SettingsTests
   fullName: SettingsTests
   nameWithType: SettingsTests
+- uid: Global.TeleportPlace
+  name: TeleportPlace
+  href: api/Global.TeleportPlace.html
+  commentId: T:Global.TeleportPlace
+  fullName: TeleportPlace
+  nameWithType: TeleportPlace
+- uid: Global.TeleportPlace.StartTeleportation
+  name: StartTeleportation()
+  href: api/Global.TeleportPlace.html#Global_TeleportPlace_StartTeleportation
+  commentId: M:Global.TeleportPlace.StartTeleportation
+  fullName: TeleportPlace.StartTeleportation()
+  nameWithType: TeleportPlace.StartTeleportation()
+- uid: Global.TeleportPlace.StartTeleportation*
+  name: StartTeleportation
+  href: api/Global.TeleportPlace.html#Global_TeleportPlace_StartTeleportation_
+  commentId: Overload:Global.TeleportPlace.StartTeleportation
+  isSpec: "True"
+  fullName: TeleportPlace.StartTeleportation
+  nameWithType: TeleportPlace.StartTeleportation
 - uid: Global.WithinLevelPortal
   name: WithinLevelPortal
   href: api/Global.WithinLevelPortal.html
@@ -2791,6 +2810,38 @@ references:
   commentId: N:InteractableObjectSystem.Objects
   fullName: InteractableObjectSystem.Objects
   nameWithType: InteractableObjectSystem.Objects
+- uid: InteractableObjectSystem.Objects.LockedChest
+  name: LockedChest
+  href: api/InteractableObjectSystem.Objects.LockedChest.html
+  commentId: T:InteractableObjectSystem.Objects.LockedChest
+  fullName: InteractableObjectSystem.Objects.LockedChest
+  nameWithType: LockedChest
+- uid: InteractableObjectSystem.Objects.LockedChest.InteractionHand
+  name: InteractionHand()
+  href: api/InteractableObjectSystem.Objects.LockedChest.html#InteractableObjectSystem_Objects_LockedChest_InteractionHand
+  commentId: M:InteractableObjectSystem.Objects.LockedChest.InteractionHand
+  fullName: InteractableObjectSystem.Objects.LockedChest.InteractionHand()
+  nameWithType: LockedChest.InteractionHand()
+- uid: InteractableObjectSystem.Objects.LockedChest.InteractionHand*
+  name: InteractionHand
+  href: api/InteractableObjectSystem.Objects.LockedChest.html#InteractableObjectSystem_Objects_LockedChest_InteractionHand_
+  commentId: Overload:InteractableObjectSystem.Objects.LockedChest.InteractionHand
+  isSpec: "True"
+  fullName: InteractableObjectSystem.Objects.LockedChest.InteractionHand
+  nameWithType: LockedChest.InteractionHand
+- uid: InteractableObjectSystem.Objects.LockedChest.InteractionItem(Items.Item)
+  name: InteractionItem(Item)
+  href: api/InteractableObjectSystem.Objects.LockedChest.html#InteractableObjectSystem_Objects_LockedChest_InteractionItem_Items_Item_
+  commentId: M:InteractableObjectSystem.Objects.LockedChest.InteractionItem(Items.Item)
+  fullName: InteractableObjectSystem.Objects.LockedChest.InteractionItem(Items.Item)
+  nameWithType: LockedChest.InteractionItem(Item)
+- uid: InteractableObjectSystem.Objects.LockedChest.InteractionItem*
+  name: InteractionItem
+  href: api/InteractableObjectSystem.Objects.LockedChest.html#InteractableObjectSystem_Objects_LockedChest_InteractionItem_
+  commentId: Overload:InteractableObjectSystem.Objects.LockedChest.InteractionItem
+  isSpec: "True"
+  fullName: InteractableObjectSystem.Objects.LockedChest.InteractionItem
+  nameWithType: LockedChest.InteractionItem
 - uid: InteractableObjectSystem.Objects.LockedDoor
   name: LockedDoor
   href: api/InteractableObjectSystem.Objects.LockedDoor.html
@@ -3458,6 +3509,34 @@ references:
   commentId: T:Items.Item
   fullName: Items.Item
   nameWithType: Item
+- uid: Items.Item.#ctor
+  name: Item()
+  href: api/Items.Item.html#Items_Item__ctor
+  commentId: M:Items.Item.#ctor
+  name.vb: New()
+  fullName: Items.Item.Item()
+  fullName.vb: Items.Item.New()
+  nameWithType: Item.Item()
+  nameWithType.vb: Item.New()
+- uid: Items.Item.#ctor(Items.ItemSO)
+  name: Item(ItemSO)
+  href: api/Items.Item.html#Items_Item__ctor_Items_ItemSO_
+  commentId: M:Items.Item.#ctor(Items.ItemSO)
+  name.vb: New(ItemSO)
+  fullName: Items.Item.Item(Items.ItemSO)
+  fullName.vb: Items.Item.New(Items.ItemSO)
+  nameWithType: Item.Item(ItemSO)
+  nameWithType.vb: Item.New(ItemSO)
+- uid: Items.Item.#ctor*
+  name: Item
+  href: api/Items.Item.html#Items_Item__ctor_
+  commentId: Overload:Items.Item.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Items.Item.Item
+  fullName.vb: Items.Item.New
+  nameWithType: Item.Item
+  nameWithType.vb: Item.New
 - uid: Items.Item.Durability
   name: Durability
   href: api/Items.Item.html#Items_Item_Durability
