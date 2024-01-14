@@ -44,16 +44,12 @@ namespace Interactions {
             CInput.InputActions.Movement.FocusChange.performed += OnFocusChangePerformed;
             CInput.InputActions.Interactions.Interaction.performed += OnInteractionPerformed;
             CInput.InputActions.Interactions.LongInteraction.performed += OnLongInteractionPerformed;
-            CInput.InputActions.Interactions.ItemInteraction.performed += OnItemInteractionPerformed;
-            CInput.InputActions.Interactions.LongItemInteraction.performed += OnLongItemInteractionPerformed;
         }
 
         private void OnDisable() {
             CInput.InputActions.Movement.FocusChange.performed -= OnFocusChangePerformed;
             CInput.InputActions.Interactions.Interaction.performed -= OnInteractionPerformed;
             CInput.InputActions.Interactions.LongInteraction.performed -= OnLongInteractionPerformed;
-            CInput.InputActions.Interactions.ItemInteraction.performed -= OnItemInteractionPerformed;
-            CInput.InputActions.Interactions.LongItemInteraction.performed -= OnLongItemInteractionPerformed;
         }
 
         private void Update() {
@@ -168,34 +164,24 @@ namespace Interactions {
 
         private void OnInteractionPerformed(InputAction.CallbackContext ctx) {
             if (_selectedObject) { // This is shortcut for checking if gameObject is not null
-                _selectedObject.GetComponent<IHandInteractable>()?.InteractionHand();
+                if (Inventory.Instance.GetSelectedItem(out var item)) {
+                    var successful = _selectedObject.GetComponent<IItemInteractable>()?.InteractionItem(item);
+                    if (successful == true) {
+                        Inventory.Instance.UseItem();
+                    }
+                }
+                else
+                    _selectedObject.GetComponent<IHandInteractable>()?.InteractionHand();
             }
         }
         
         private void OnLongInteractionPerformed(InputAction.CallbackContext ctx) {
             if (_selectedObject) {
-                _selectedObject.GetComponent<ILongHandInteractable>()?.LongInteractionHand();
-            }
-        }
-        
-        private void OnItemInteractionPerformed(InputAction.CallbackContext ctx) {
-            if (!_selectedObject) {
-                return;
-            }
-            if (Inventory.Instance.GetSelectedItem(out var item)) {
-                var successful = _selectedObject.GetComponent<IItemInteractable>()?.InteractionItem(item);
-                if (successful == true) {
-                    Inventory.Instance.UseItem();
+                if (Inventory.Instance.GetSelectedItem(out var item)) {
+                    _selectedObject.GetComponent<ILongItemInteractable>().LongInteractionItem(item);
                 }
-            }
-        }
-        
-        private void OnLongItemInteractionPerformed(InputAction.CallbackContext ctx) {
-            if (!_selectedObject) {
-                return;
-            }
-            if (Inventory.Instance.GetSelectedItem(out var item)) {
-                _selectedObject.GetComponent<ILongItemInteractable>().LongInteractionItem(item);
+                else
+                    _selectedObject.GetComponent<ILongHandInteractable>()?.LongInteractionHand();
             }
         }
     }

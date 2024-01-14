@@ -501,24 +501,6 @@
                     "processors": "",
                     "interactions": "CustomHold",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "ItemInteraction",
-                    "type": "Button",
-                    "id": "4d7a8354-4b10-40f6-8c8a-000e914a019b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Tap",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "LongItemInteraction",
-                    "type": "Button",
-                    "id": "d3246bfa-964c-4c8e-a9a7-d2c148a6c2c6",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "CustomHold",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -557,39 +539,6 @@
                 },
                 {
                     "name": "",
-                    "id": "4aca212e-2e55-4f51-a83f-08a8fa032922",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ItemInteraction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f0e3eeb5-4383-4748-9ae5-e7bf829c4e54",
-                    "path": "<Keyboard>/k",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ItemInteraction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e6b69d0a-a5b0-4027-b597-3debd9f8330d",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ItemInteraction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "4e1cc700-1cf0-4573-98f2-7ecde3f240f2",
                     "path": "<Keyboard>/f",
                     "interactions": "",
@@ -618,39 +567,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "LongInteraction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c0ec4eae-0496-41b3-85bc-908089996f2b",
-                    "path": "<Keyboard>/l",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LongItemInteraction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c4907b09-ed4b-4cc5-bcb1-266959bcc867",
-                    "path": "<Keyboard>/v",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LongItemInteraction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c7e7a06e-2b30-45d6-b7dd-b13bac2d1700",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LongItemInteraction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
