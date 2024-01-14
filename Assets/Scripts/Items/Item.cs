@@ -23,6 +23,12 @@ namespace Items
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.ITEMS];
         private SpriteRenderer _spriteRenderer;
         private CircleCollider2D _collider;
+
+        public Item() : base() {}
+        
+        public Item(ItemSO itemScriptableObject) : base() {
+            itemSO = itemScriptableObject;
+        }
         
         private void Awake() {
             if (gameObject.layer != LayerMask.NameToLayer("Items")) {
