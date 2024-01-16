@@ -32,14 +32,14 @@ namespace NPC {
                 NotificationManager.Instance.RaiseNotification(new Notification(
                     definition.failedHandInterNotification.message,
                     definition.failedHandInterNotification.displayTime));
-                _walking.Invoke("ContinueWalk",definition.failedHandInterNotification.displayTime);
+                if (_canWalk) _walking.Invoke("ContinueWalk",definition.failedHandInterNotification.displayTime);
             }
             
         }
 
         public override bool InteractionItem(Item item) {
             if (_canWalk) {
-                _walking.StopWalk();
+                if (_walking != null) _walking.StopWalk();
             }
             if (_interactedWith.Count == 0 || _interactedWith.Contains(item.ItemSO)) {
                 NotificationManager.Instance.RaiseNotification(new Notification(definition.successfulItemInterNotification.message,definition.successfulItemInterNotification.displayTime));
@@ -47,9 +47,10 @@ namespace NPC {
                 if(_canWalk) _walking.Invoke("ContinueWalk",definition.successfulItemInterNotification.displayTime);
                 Give();
                 return true;
+            } else {
+                NotificationManager.Instance.RaiseNotification(new Notification(definition.failedItemInterNotification.message, definition.failedItemInterNotification.displayTime));
+                if (_canWalk) _walking.Invoke("ContinueWalk", definition.failedItemInterNotification.displayTime);
             }
-            NotificationManager.Instance.RaiseNotification(new Notification(definition.failedItemInterNotification.message,definition.failedItemInterNotification.displayTime));
-            _walking.Invoke("ContinueWalk",definition.failedItemInterNotification.displayTime);
             return false;
         }
 
