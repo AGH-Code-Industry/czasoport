@@ -3,11 +3,13 @@ using Interactions.Interfaces;
 using UnityEngine;
 
 namespace Interactions {
+    [ExecuteInEditMode]
     public class HighlightInteraction : MonoBehaviour, IHighlightable {
 
         private SpriteRenderer _sprite;
         private Material _material;
-        private void Awake() {
+
+        private void Start() {
             _sprite = GetComponent<SpriteRenderer>();
             _material = _sprite.material;
             _material.SetTexture("_texture",_sprite.sprite.texture);
