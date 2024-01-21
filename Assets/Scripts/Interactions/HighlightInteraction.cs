@@ -3,7 +3,6 @@ using Interactions.Interfaces;
 using UnityEngine;
 
 namespace Interactions {
-    [ExecuteInEditMode]
     public class HighlightInteraction : MonoBehaviour, IHighlightable {
 
         private SpriteRenderer _sprite;
@@ -12,7 +11,7 @@ namespace Interactions {
         private void Start() {
             _sprite = GetComponent<SpriteRenderer>();
             _material = _sprite.material;
-            _material.SetTexture("_texture",_sprite.sprite.texture);
+            _material.SetTexture("_texture", _sprite.sprite.texture);
             _material.SetFloat("_scale",0.01f);
         }
 
@@ -21,7 +20,7 @@ namespace Interactions {
         }
 
         public void EnableFocusedHighlight() {
-            _material.SetColor("_color",Color.red);
+            _material.SetColor("_color", Color.red);
         }
 
         public void DisableHighlight() {
