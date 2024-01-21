@@ -1,14 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CoinPackage.Debugging;
+using NPC;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CrossingLight : MonoBehaviour {
 
     public float lightChangeInterval = 5f;
 
-    [SerializeField] private SpriteRenderer _lightSpriteRenderer;
-    [SerializeField] private BoxCollider2D _crossingCollider;
+    [SerializeField] private SpriteRenderer lightSpriteRenderer;
+    [SerializeField] private List<PathWalking> pathWalkings = new List<PathWalking>();
 
     private readonly Color _greenLightColor = Color.green;
     private readonly Color _redLightColor = Color.red;
@@ -36,14 +39,34 @@ public class CrossingLight : MonoBehaviour {
     }
 
     private void OpenCrossing() {
-        _lightSpriteRenderer.color = _redLightColor;
-        _crossingCollider.enabled = false;
+        lightSpriteRenderer.color = _redLightColor;
         _crossingState = CrossingState.Opened;
+        foreach (PathWalking pw in pathWalkings) {
+            pw.ContinueWalk();
+        }
     }
 
     private void CloseCrossing() {
-        _lightSpriteRenderer.color = _greenLightColor;
-        _crossingCollider.enabled = true;
+        lightSpriteRenderer.color = _greenLightColor;
         _crossingState = CrossingState.Closed;
+        foreach (PathWalking pw in pathWalkings) {
+            pw.StopWalk();
+        }
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (_crossingState == CrossingState.Opened) return;
+        if (other.CompareTag("NPC")) {
+            PathWalking pw = other.GetComponent<PathWalking>();
+            pw.StopWalk();
+            if (pw != null) pathWalkings.Add(pw);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if (other.CompareTag("NPC")) {
+            PathWalking pw = other.GetComponent<PathWalking>();
+            if (pw != null) pathWalkings.Remove(pw);
+        }
     }
 }
