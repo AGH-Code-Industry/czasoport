@@ -9,12 +9,12 @@ namespace NPC {
         
         [SerializeField] private bool walkOnStart = true;
         [SerializeField] private float walkSpeed = 1f;
-        private bool _canWalk = false;
+        private bool _canWalk;
 
-        [SerializeField] private List<Transform> marchPoints = new List<Transform>();
-        private int _previousTarget = 0;
+        [SerializeField] private List<Transform> marchPoints = new();
+        private int _previousTarget;
         private int _actualTarget = 1;
-        private float _walkProgress = 0f;
+        private float _walkProgress;
         private float _walkDistance;
 
         private void Start() {
