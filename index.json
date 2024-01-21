@@ -287,7 +287,7 @@
   "api/InteractableObjectSystem.InteractableObject.html": {
     "href": "api/InteractableObjectSystem.InteractableObject.html",
     "title": "Class InteractableObject | Czasoport Documentation",
-    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived LockedChest LockedDoor Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
+    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived LockedChest LockedDoor Trading Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
   },
   "api/InteractableObjectSystem.Objects.LockedChest.html": {
     "href": "api/InteractableObjectSystem.Objects.LockedChest.html",
@@ -519,10 +519,25 @@
     "title": "Namespace LevelTimeChange | Czasoport Documentation",
     "keywords": "Namespace LevelTimeChange Classes TimePlatformChangeSettingsSO Settings for scene changing and time changing systems. Enums TimeLine"
   },
+  "api/NPC.PathWalking.html": {
+    "href": "api/NPC.PathWalking.html",
+    "title": "Class PathWalking | Czasoport Documentation",
+    "keywords": "Class PathWalking Namespace NPC public class PathWalking : MonoBehaviour Inheritance object PathWalking Methods ContinueWalk() Npc continues walk by path public void ContinueWalk() StopWalk() Stop npc public void StopWalk()"
+  },
+  "api/NPC.Trading.html": {
+    "href": "api/NPC.Trading.html",
+    "title": "Class Trading | Czasoport Documentation",
+    "keywords": "Class Trading Namespace NPC public class Trading : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Trading Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand() InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
+  },
+  "api/NPC.html": {
+    "href": "api/NPC.html",
+    "title": "Namespace NPC | Czasoport Documentation",
+    "keywords": "Namespace NPC Classes PathWalking Trading"
+  },
   "api/Notifications.Notification.html": {
     "href": "api/Notifications.Notification.html",
     "title": "Class Notification | Czasoport Documentation",
-    "keywords": "Class Notification Namespace Notifications [Serializable] public class Notification Inheritance object Notification Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields displayTime public float displayTime Field Value float message public string message Field Value string"
+    "keywords": "Class Notification Namespace Notifications [Serializable] public class Notification Inheritance object Notification Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors Notification(string, float) public Notification(string message, float displayTime) Parameters message string displayTime float Fields displayTime public float displayTime Field Value float message public string message Field Value string"
   },
   "api/Notifications.html": {
     "href": "api/Notifications.html",

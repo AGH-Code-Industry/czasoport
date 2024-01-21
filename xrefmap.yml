@@ -4159,6 +4159,76 @@ references:
   commentId: F:LevelTimeChange.TimePlatformChangeSettingsSO.timelineChangeAnimLength
   fullName: LevelTimeChange.TimePlatformChangeSettingsSO.timelineChangeAnimLength
   nameWithType: TimePlatformChangeSettingsSO.timelineChangeAnimLength
+- uid: NPC
+  name: NPC
+  href: api/NPC.html
+  commentId: N:NPC
+  fullName: NPC
+  nameWithType: NPC
+- uid: NPC.PathWalking
+  name: PathWalking
+  href: api/NPC.PathWalking.html
+  commentId: T:NPC.PathWalking
+  fullName: NPC.PathWalking
+  nameWithType: PathWalking
+- uid: NPC.PathWalking.ContinueWalk
+  name: ContinueWalk()
+  href: api/NPC.PathWalking.html#NPC_PathWalking_ContinueWalk
+  commentId: M:NPC.PathWalking.ContinueWalk
+  fullName: NPC.PathWalking.ContinueWalk()
+  nameWithType: PathWalking.ContinueWalk()
+- uid: NPC.PathWalking.ContinueWalk*
+  name: ContinueWalk
+  href: api/NPC.PathWalking.html#NPC_PathWalking_ContinueWalk_
+  commentId: Overload:NPC.PathWalking.ContinueWalk
+  isSpec: "True"
+  fullName: NPC.PathWalking.ContinueWalk
+  nameWithType: PathWalking.ContinueWalk
+- uid: NPC.PathWalking.StopWalk
+  name: StopWalk()
+  href: api/NPC.PathWalking.html#NPC_PathWalking_StopWalk
+  commentId: M:NPC.PathWalking.StopWalk
+  fullName: NPC.PathWalking.StopWalk()
+  nameWithType: PathWalking.StopWalk()
+- uid: NPC.PathWalking.StopWalk*
+  name: StopWalk
+  href: api/NPC.PathWalking.html#NPC_PathWalking_StopWalk_
+  commentId: Overload:NPC.PathWalking.StopWalk
+  isSpec: "True"
+  fullName: NPC.PathWalking.StopWalk
+  nameWithType: PathWalking.StopWalk
+- uid: NPC.Trading
+  name: Trading
+  href: api/NPC.Trading.html
+  commentId: T:NPC.Trading
+  fullName: NPC.Trading
+  nameWithType: Trading
+- uid: NPC.Trading.InteractionHand
+  name: InteractionHand()
+  href: api/NPC.Trading.html#NPC_Trading_InteractionHand
+  commentId: M:NPC.Trading.InteractionHand
+  fullName: NPC.Trading.InteractionHand()
+  nameWithType: Trading.InteractionHand()
+- uid: NPC.Trading.InteractionHand*
+  name: InteractionHand
+  href: api/NPC.Trading.html#NPC_Trading_InteractionHand_
+  commentId: Overload:NPC.Trading.InteractionHand
+  isSpec: "True"
+  fullName: NPC.Trading.InteractionHand
+  nameWithType: Trading.InteractionHand
+- uid: NPC.Trading.InteractionItem(Items.Item)
+  name: InteractionItem(Item)
+  href: api/NPC.Trading.html#NPC_Trading_InteractionItem_Items_Item_
+  commentId: M:NPC.Trading.InteractionItem(Items.Item)
+  fullName: NPC.Trading.InteractionItem(Items.Item)
+  nameWithType: Trading.InteractionItem(Item)
+- uid: NPC.Trading.InteractionItem*
+  name: InteractionItem
+  href: api/NPC.Trading.html#NPC_Trading_InteractionItem_
+  commentId: Overload:NPC.Trading.InteractionItem
+  isSpec: "True"
+  fullName: NPC.Trading.InteractionItem
+  nameWithType: Trading.InteractionItem
 - uid: Notifications
   name: Notifications
   href: api/Notifications.html
@@ -4171,6 +4241,25 @@ references:
   commentId: T:Notifications.Notification
   fullName: Notifications.Notification
   nameWithType: Notification
+- uid: Notifications.Notification.#ctor(System.String,System.Single)
+  name: Notification(string, float)
+  href: api/Notifications.Notification.html#Notifications_Notification__ctor_System_String_System_Single_
+  commentId: M:Notifications.Notification.#ctor(System.String,System.Single)
+  name.vb: New(String, Single)
+  fullName: Notifications.Notification.Notification(string, float)
+  fullName.vb: Notifications.Notification.New(String, Single)
+  nameWithType: Notification.Notification(string, float)
+  nameWithType.vb: Notification.New(String, Single)
+- uid: Notifications.Notification.#ctor*
+  name: Notification
+  href: api/Notifications.Notification.html#Notifications_Notification__ctor_
+  commentId: Overload:Notifications.Notification.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Notifications.Notification.Notification
+  fullName.vb: Notifications.Notification.New
+  nameWithType: Notification.Notification
+  nameWithType.vb: Notification.New
 - uid: Notifications.Notification.displayTime
   name: displayTime
   href: api/Notifications.Notification.html#Notifications_Notification_displayTime
