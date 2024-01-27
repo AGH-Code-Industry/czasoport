@@ -2,11 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class NotificationManager
- | Czasoport Documentation </title>
+      <title>Class NotificationManager | Czasoport Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class NotificationManager
- | Czasoport Documentation ">
+      <meta name="title" content="Class NotificationManager | Czasoport Documentation ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -91,8 +89,7 @@
 
 
   <h1 id="Global_NotificationManager" data-uid="Global.NotificationManager" class="text-break">
-    Class NotificationManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class NotificationManager  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -104,7 +101,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NotificationManager : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class NotificationManager : MonoBehaviour, IDataPersistence</code></pre>
   </div>
 
 
@@ -118,6 +115,12 @@
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DataPersistence.IDataPersistence.html">IDataPersistence</a></div>
+    </dd>
+  </dl>
 
 
 
@@ -133,7 +136,7 @@
 
   <h3 id="Global_NotificationManager_Instance" data-uid="Global.NotificationManager.Instance">
   Instance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -164,11 +167,42 @@
 </h2>
 
 
+  <a id="Global_NotificationManager_LoadPersistentData_" data-uid="Global.NotificationManager.LoadPersistentData*"></a>
+
+  <h3 id="Global_NotificationManager_LoadPersistentData_DataPersistence_GameData_" data-uid="Global.NotificationManager.LoadPersistentData(DataPersistence.GameData)">
+  LoadPersistentData(GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadPersistentData(GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Global_NotificationManager_RaiseNotification_" data-uid="Global.NotificationManager.RaiseNotification*"></a>
 
   <h3 id="Global_NotificationManager_RaiseNotification_Notifications_Notification_" data-uid="Global.NotificationManager.RaiseNotification(Notifications.Notification)">
   RaiseNotification(Notification)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -195,11 +229,42 @@
 
 
 
+  <a id="Global_NotificationManager_SavePersistentData_" data-uid="Global.NotificationManager.SavePersistentData*"></a>
+
+  <h3 id="Global_NotificationManager_SavePersistentData_DataPersistence_GameData__" data-uid="Global.NotificationManager.SavePersistentData(DataPersistence.GameData@)">
+  SavePersistentData(ref GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SavePersistentData(ref GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Notifications/NotificationManager.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

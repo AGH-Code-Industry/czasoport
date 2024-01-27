@@ -930,6 +930,37 @@ references:
   commentId: N:DataPersistence.DataTypes
   fullName: DataPersistence.DataTypes
   nameWithType: DataPersistence.DataTypes
+- uid: DataPersistence.DataTypes.NotificationGameData
+  name: NotificationGameData
+  href: api/DataPersistence.DataTypes.NotificationGameData.html
+  commentId: T:DataPersistence.DataTypes.NotificationGameData
+  fullName: DataPersistence.DataTypes.NotificationGameData
+  nameWithType: NotificationGameData
+- uid: DataPersistence.DataTypes.NotificationGameData.#ctor
+  name: NotificationGameData()
+  href: api/DataPersistence.DataTypes.NotificationGameData.html#DataPersistence_DataTypes_NotificationGameData__ctor
+  commentId: M:DataPersistence.DataTypes.NotificationGameData.#ctor
+  name.vb: New()
+  fullName: DataPersistence.DataTypes.NotificationGameData.NotificationGameData()
+  fullName.vb: DataPersistence.DataTypes.NotificationGameData.New()
+  nameWithType: NotificationGameData.NotificationGameData()
+  nameWithType.vb: NotificationGameData.New()
+- uid: DataPersistence.DataTypes.NotificationGameData.#ctor*
+  name: NotificationGameData
+  href: api/DataPersistence.DataTypes.NotificationGameData.html#DataPersistence_DataTypes_NotificationGameData__ctor_
+  commentId: Overload:DataPersistence.DataTypes.NotificationGameData.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DataPersistence.DataTypes.NotificationGameData.NotificationGameData
+  fullName.vb: DataPersistence.DataTypes.NotificationGameData.New
+  nameWithType: NotificationGameData.NotificationGameData
+  nameWithType.vb: NotificationGameData.New
+- uid: DataPersistence.DataTypes.NotificationGameData.notificationHistory
+  name: notificationHistory
+  href: api/DataPersistence.DataTypes.NotificationGameData.html#DataPersistence_DataTypes_NotificationGameData_notificationHistory
+  commentId: F:DataPersistence.DataTypes.NotificationGameData.notificationHistory
+  fullName: DataPersistence.DataTypes.NotificationGameData.notificationHistory
+  nameWithType: NotificationGameData.notificationHistory
 - uid: DataPersistence.DataTypes.PlayerGameData
   name: PlayerGameData
   href: api/DataPersistence.DataTypes.PlayerGameData.html
@@ -1073,6 +1104,12 @@ references:
   commentId: F:DataPersistence.GameData.currentTimeline
   fullName: DataPersistence.GameData.currentTimeline
   nameWithType: GameData.currentTimeline
+- uid: DataPersistence.GameData.notificationGameData
+  name: notificationGameData
+  href: api/DataPersistence.GameData.html#DataPersistence_GameData_notificationGameData
+  commentId: F:DataPersistence.GameData.notificationGameData
+  fullName: DataPersistence.GameData.notificationGameData
+  nameWithType: GameData.notificationGameData
 - uid: DataPersistence.GameData.playerGameData
   name: playerGameData
   href: api/DataPersistence.GameData.html#DataPersistence_GameData_playerGameData
@@ -2583,6 +2620,19 @@ references:
   commentId: F:Global.NotificationManager.Instance
   fullName: NotificationManager.Instance
   nameWithType: NotificationManager.Instance
+- uid: Global.NotificationManager.LoadPersistentData(DataPersistence.GameData)
+  name: LoadPersistentData(GameData)
+  href: api/Global.NotificationManager.html#Global_NotificationManager_LoadPersistentData_DataPersistence_GameData_
+  commentId: M:Global.NotificationManager.LoadPersistentData(DataPersistence.GameData)
+  fullName: NotificationManager.LoadPersistentData(DataPersistence.GameData)
+  nameWithType: NotificationManager.LoadPersistentData(GameData)
+- uid: Global.NotificationManager.LoadPersistentData*
+  name: LoadPersistentData
+  href: api/Global.NotificationManager.html#Global_NotificationManager_LoadPersistentData_
+  commentId: Overload:Global.NotificationManager.LoadPersistentData
+  isSpec: "True"
+  fullName: NotificationManager.LoadPersistentData
+  nameWithType: NotificationManager.LoadPersistentData
 - uid: Global.NotificationManager.RaiseNotification(Notifications.Notification)
   name: RaiseNotification(Notification)
   href: api/Global.NotificationManager.html#Global_NotificationManager_RaiseNotification_Notifications_Notification_
@@ -2596,6 +2646,54 @@ references:
   isSpec: "True"
   fullName: NotificationManager.RaiseNotification
   nameWithType: NotificationManager.RaiseNotification
+- uid: Global.NotificationManager.SavePersistentData(DataPersistence.GameData@)
+  name: SavePersistentData(ref GameData)
+  href: api/Global.NotificationManager.html#Global_NotificationManager_SavePersistentData_DataPersistence_GameData__
+  commentId: M:Global.NotificationManager.SavePersistentData(DataPersistence.GameData@)
+  name.vb: SavePersistentData(GameData)
+  fullName: NotificationManager.SavePersistentData(ref DataPersistence.GameData)
+  fullName.vb: NotificationManager.SavePersistentData(DataPersistence.GameData)
+  nameWithType: NotificationManager.SavePersistentData(ref GameData)
+  nameWithType.vb: NotificationManager.SavePersistentData(GameData)
+- uid: Global.NotificationManager.SavePersistentData*
+  name: SavePersistentData
+  href: api/Global.NotificationManager.html#Global_NotificationManager_SavePersistentData_
+  commentId: Overload:Global.NotificationManager.SavePersistentData
+  isSpec: "True"
+  fullName: NotificationManager.SavePersistentData
+  nameWithType: NotificationManager.SavePersistentData
+- uid: Global.NotificationUIController
+  name: NotificationUIController
+  href: api/Global.NotificationUIController.html
+  commentId: T:Global.NotificationUIController
+  fullName: NotificationUIController
+  nameWithType: NotificationUIController
+- uid: Global.NotificationUIController.CloseNotificationPanel
+  name: CloseNotificationPanel()
+  href: api/Global.NotificationUIController.html#Global_NotificationUIController_CloseNotificationPanel
+  commentId: M:Global.NotificationUIController.CloseNotificationPanel
+  fullName: NotificationUIController.CloseNotificationPanel()
+  nameWithType: NotificationUIController.CloseNotificationPanel()
+- uid: Global.NotificationUIController.CloseNotificationPanel*
+  name: CloseNotificationPanel
+  href: api/Global.NotificationUIController.html#Global_NotificationUIController_CloseNotificationPanel_
+  commentId: Overload:Global.NotificationUIController.CloseNotificationPanel
+  isSpec: "True"
+  fullName: NotificationUIController.CloseNotificationPanel
+  nameWithType: NotificationUIController.CloseNotificationPanel
+- uid: Global.NotificationUIController.OpenNotificationPanel
+  name: OpenNotificationPanel()
+  href: api/Global.NotificationUIController.html#Global_NotificationUIController_OpenNotificationPanel
+  commentId: M:Global.NotificationUIController.OpenNotificationPanel
+  fullName: NotificationUIController.OpenNotificationPanel()
+  nameWithType: NotificationUIController.OpenNotificationPanel()
+- uid: Global.NotificationUIController.OpenNotificationPanel*
+  name: OpenNotificationPanel
+  href: api/Global.NotificationUIController.html#Global_NotificationUIController_OpenNotificationPanel_
+  commentId: Overload:Global.NotificationUIController.OpenNotificationPanel
+  isSpec: "True"
+  fullName: NotificationUIController.OpenNotificationPanel
+  nameWithType: NotificationUIController.OpenNotificationPanel
 - uid: Global.SettingsTests
   name: SettingsTests
   href: api/Global.SettingsTests.html
