@@ -1,33 +1,44 @@
-﻿using System;
+using System;
+using System.Xml;
 using Application;
 using CoinPackage.Debugging;
 using Interactions;
 using UnityEngine;
 using Interactions.Interfaces;
 using InventorySystem;
+using Utils.Attributes;
 
 namespace Items
 {
     [RequireComponent(typeof(CircleCollider2D))]
     [RequireComponent(typeof(SpriteRenderer))]
     [RequireComponent(typeof(HighlightInteraction))]
-    public class Item : MonoBehaviour, IHandInteractable, ILongHandInteractable
-    {
+    public class Item : MonoBehaviour, IHandInteractable, ILongHandInteractable {
+        [ObjectIdentifier] public string uniqueId;
         [SerializeField] private ItemSO itemSO;
 
         public ItemSO ItemSO => itemSO;
+        public int Durability { get; set; }
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.ITEMS];
         private SpriteRenderer _spriteRenderer;
         private CircleCollider2D _collider;
+
+        public Item() : base() {}
+        
+        public Item(ItemSO itemScriptableObject) : base() {
+            itemSO = itemScriptableObject;
+        }
         
         private void Awake() {
-            if (gameObject.layer != LayerMask.NameToLayer("Interactables")) {
+            if (gameObject.layer != LayerMask.NameToLayer("Items")) {
                 _logger.LogWarning(
-                    $"Item {this} {"is not" % Colorize.Red} in {"Interactables" % Colorize.Green} layer.",
+                    $"Item {this} {"is not" % Colorize.Red} in {"Items" % Colorize.Green} layer.",
                     this
                     );
             }
+
+            Durability = ItemSO.durability;
         }
 
         public void InteractionHand() {
@@ -40,7 +51,7 @@ namespace Items
         }
 
         public override string ToString() {
-            return $"[Item, {itemSO.name}]" % Colorize.Purple;
+            return itemSO.ToString();
         }
     }
 }

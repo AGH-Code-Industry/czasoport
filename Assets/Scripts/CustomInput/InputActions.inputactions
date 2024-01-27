@@ -325,7 +325,7 @@
                     "id": "e6e9b904-cd7c-40ae-836b-cd97939cf32c",
                     "path": "<Keyboard>/1",
                     "interactions": "",
-                    "processors": "Scale",
+                    "processors": "Scale(factor=0)",
                     "groups": "",
                     "action": "ChooseItem",
                     "isComposite": false,
@@ -336,7 +336,7 @@
                     "id": "a6a35b85-c3a7-43c7-80e2-090b7b253b57",
                     "path": "<Keyboard>/2",
                     "interactions": "",
-                    "processors": "Scale(factor=2)",
+                    "processors": "Scale",
                     "groups": "",
                     "action": "ChooseItem",
                     "isComposite": false,
@@ -347,7 +347,7 @@
                     "id": "534842cf-7b82-48ec-a206-bd0611b8e83b",
                     "path": "<Keyboard>/3",
                     "interactions": "",
-                    "processors": "Scale(factor=3)",
+                    "processors": "Scale(factor=2)",
                     "groups": "",
                     "action": "ChooseItem",
                     "isComposite": false,
@@ -358,7 +358,29 @@
                     "id": "2a8ec26b-f62a-4d1d-9faf-44a2eb2b90f7",
                     "path": "<Keyboard>/4",
                     "interactions": "",
+                    "processors": "Scale(factor=3)",
+                    "groups": "",
+                    "action": "ChooseItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "460308bb-272e-42aa-b8d2-693fe6267d13",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
                     "processors": "Scale(factor=4)",
+                    "groups": "",
+                    "action": "ChooseItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1223021f-901a-47d7-8983-5874b4ded003",
+                    "path": "<Keyboard>/6",
+                    "interactions": "",
+                    "processors": "Scale(factor=5)",
                     "groups": "",
                     "action": "ChooseItem",
                     "isComposite": false,
@@ -479,24 +501,6 @@
                     "processors": "",
                     "interactions": "CustomHold",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "ItemInteraction",
-                    "type": "Button",
-                    "id": "4d7a8354-4b10-40f6-8c8a-000e914a019b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Tap",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "LongItemInteraction",
-                    "type": "Button",
-                    "id": "d3246bfa-964c-4c8e-a9a7-d2c148a6c2c6",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "CustomHold",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -535,39 +539,6 @@
                 },
                 {
                     "name": "",
-                    "id": "4aca212e-2e55-4f51-a83f-08a8fa032922",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ItemInteraction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f0e3eeb5-4383-4748-9ae5-e7bf829c4e54",
-                    "path": "<Keyboard>/k",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ItemInteraction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e6b69d0a-a5b0-4027-b597-3debd9f8330d",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ItemInteraction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "4e1cc700-1cf0-4573-98f2-7ecde3f240f2",
                     "path": "<Keyboard>/f",
                     "interactions": "",
@@ -598,37 +569,32 @@
                     "action": "LongInteraction",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "Game",
+            "id": "19e46316-6712-4054-9454-eb4211345833",
+            "actions": [
+                {
+                    "name": "TogglePause",
+                    "type": "Button",
+                    "id": "7088c9b2-580d-4d34-b28e-06c8ea872416",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
                 {
                     "name": "",
-                    "id": "c0ec4eae-0496-41b3-85bc-908089996f2b",
-                    "path": "<Keyboard>/l",
+                    "id": "819c33cf-b8c8-49cc-b772-fbf5a6883d82",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "LongItemInteraction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c4907b09-ed4b-4cc5-bcb1-266959bcc867",
-                    "path": "<Keyboard>/v",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LongItemInteraction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c7e7a06e-2b30-45d6-b7dd-b13bac2d1700",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "LongItemInteraction",
+                    "action": "TogglePause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

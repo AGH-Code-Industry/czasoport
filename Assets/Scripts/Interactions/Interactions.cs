@@ -5,6 +5,7 @@ using Application;
 using Application.GlobalExceptions;
 using CoinPackage.Debugging;
 using CustomInput;
+using DataPersistence;
 using Interactions.Interfaces;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -43,16 +44,12 @@ namespace Interactions {
             CInput.InputActions.Movement.FocusChange.performed += OnFocusChangePerformed;
             CInput.InputActions.Interactions.Interaction.performed += OnInteractionPerformed;
             CInput.InputActions.Interactions.LongInteraction.performed += OnLongInteractionPerformed;
-            CInput.InputActions.Interactions.ItemInteraction.performed += OnItemInteractionPerformed;
-            CInput.InputActions.Interactions.LongItemInteraction.performed += OnLongItemInteractionPerformed;
         }
 
         private void OnDisable() {
             CInput.InputActions.Movement.FocusChange.performed -= OnFocusChangePerformed;
             CInput.InputActions.Interactions.Interaction.performed -= OnInteractionPerformed;
             CInput.InputActions.Interactions.LongInteraction.performed -= OnLongInteractionPerformed;
-            CInput.InputActions.Interactions.ItemInteraction.performed -= OnItemInteractionPerformed;
-            CInput.InputActions.Interactions.LongItemInteraction.performed -= OnLongItemInteractionPerformed;
         }
 
         private void Update() {
@@ -74,7 +71,7 @@ namespace Interactions {
             Physics2D.OverlapCircle(transform.position,
                 _settings.defaultInteractionRadius,
                 new ContactFilter2D() {
-                    layerMask = LayerMask.GetMask(_settings.interactablesLayer),
+                    layerMask = LayerMask.GetMask(_settings.interactablesLayer, _settings.itemsLayer),
                     useLayerMask = true,
                     useTriggers = true
                 },
@@ -98,8 +95,10 @@ namespace Interactions {
         }
 
         void OnDrawGizmos() {
-            DrawInteractablesAreaGizmos();
-            DrawLinesToInteractablesGizmos();
+            if (UnityEngine.Application.isPlaying) {
+                DrawInteractablesAreaGizmos();
+                DrawLinesToInteractablesGizmos();
+            }
         }
 
         private void DrawLinesToInteractablesGizmos() {
@@ -165,31 +164,24 @@ namespace Interactions {
 
         private void OnInteractionPerformed(InputAction.CallbackContext ctx) {
             if (_selectedObject) { // This is shortcut for checking if gameObject is not null
-                _selectedObject.GetComponent<IHandInteractable>()?.InteractionHand();
+                if (Inventory.Instance.GetSelectedItem(out var item)) {
+                    var successful = _selectedObject.GetComponent<IItemInteractable>()?.InteractionItem(item);
+                    if (successful == true) {
+                        Inventory.Instance.UseItem();
+                    }
+                }
+                else
+                    _selectedObject.GetComponent<IHandInteractable>()?.InteractionHand();
             }
         }
         
         private void OnLongInteractionPerformed(InputAction.CallbackContext ctx) {
             if (_selectedObject) {
-                _selectedObject.GetComponent<ILongHandInteractable>()?.LongInteractionHand();
-            }
-        }
-        
-        private void OnItemInteractionPerformed(InputAction.CallbackContext ctx) {
-            if (!_selectedObject) {
-                return;
-            }
-            if (Inventory.Instance.GetSelectedItem(out var item)) {
-                _selectedObject.GetComponent<IItemInteractable>()?.InteractionItem(item);
-            }
-        }
-        
-        private void OnLongItemInteractionPerformed(InputAction.CallbackContext ctx) {
-            if (!_selectedObject) {
-                return;
-            }
-            if (Inventory.Instance.GetSelectedItem(out var item)) {
-                _selectedObject.GetComponent<ILongItemInteractable>().LongInteractionItem(item);
+                if (Inventory.Instance.GetSelectedItem(out var item)) {
+                    _selectedObject.GetComponent<ILongItemInteractable>().LongInteractionItem(item);
+                }
+                else
+                    _selectedObject.GetComponent<ILongHandInteractable>()?.LongInteractionHand();
             }
         }
     }

@@ -50,7 +50,6 @@ namespace InventorySystem {
             ItemStateChanged += (sender, args) =>
                 _logger.Log(
                     $"Item {args.Item.ItemSO.itemName % Colorize.Cyan} state {"changed" % Colorize.Orange}, {args.Slot % Colorize.Magenta} slot.");
-            CDebug.Log($"Loaded Inventory, events instantiated.");
             _items = new Item[_settings.itemsCount];
         }
 
@@ -135,6 +134,28 @@ namespace InventorySystem {
             item.GetComponent<SpriteRenderer>().enabled = false;
             item.GetComponent<CircleCollider2D>().enabled = false;
             
+            NotificationManager.Instance.RaiseNotification(item.ItemSO.pickUpNotification);
+            
+            return true;
+        }
+
+        /// <summary>
+        /// Changes durability of the selected item by one for each use. If durability is exactly 0,
+        /// removes item from inventory.
+        /// </summary>
+        /// <returns>True if item was removed, false if not.</returns>
+        public bool UseItem() {
+            var item = _items[_selectedSlot];
+            item.Durability -= 1;
+            ItemStateChanged?.Invoke(this, new ItemStateChangedEventArgs() {
+                Item = item,
+                Slot = _selectedSlot
+            });
+            if (item.Durability == 0) {
+                RemoveItem(out var removedItem);
+                Destroy(item.gameObject);
+                return true;
+            }
             return true;
         }
 

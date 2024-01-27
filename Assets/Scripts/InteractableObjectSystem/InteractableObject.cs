@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Interactions.Interfaces;
 using CoinPackage.Debugging;
@@ -7,28 +8,29 @@ using Interactions;
 
 
 namespace InteractableObjectSystem {
-    [RequireComponent(typeof(CircleCollider2D))]
     [RequireComponent(typeof(HighlightInteraction))]
     public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable {
 
-        private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INTERACTABLE_OBJECTS];
+        [SerializeField] protected InterObjectDefinition definition;
         
+        protected readonly CLogger Logger = Loggers.LoggersList[Loggers.LoggerType.INTERACTABLE_OBJECTS];
+
         public virtual bool InteractionItem(Item item) {
-            CDebug.LogError("Not implemented InteractionItem");
+            Logger.LogError("Not implemented InteractionItem", gameObject);
             return false;
         }
         
         public virtual bool LongInteractionItem(Item item) {
-            CDebug.LogError("Not implemented LongInteractionItem");
+            Logger.LogError("Not implemented LongInteractionItem", gameObject);
             return false;
         }
         
         public virtual void InteractionHand() {
-            CDebug.LogError("Not implemented InteractionHand");
+            Logger.LogError("Not implemented InteractionHand", gameObject);
         }
         
         public virtual void LongInteractionHand() {
-            CDebug.LogError("Not implemented LongInteractionHand");
+            Logger.LogError("Not implemented LongInteractionHand", gameObject);
         }
     }
 }

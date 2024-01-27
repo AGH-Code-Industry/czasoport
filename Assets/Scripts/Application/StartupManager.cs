@@ -10,25 +10,9 @@ namespace Application {
     public class StartupManager : MonoBehaviour
     {
         private void Start() {
-            // Load Global Objects
-            SceneManager.LoadScene("GlobalData", LoadSceneMode.Additive);
-            
-            // Load scene with Single mode, all objects that should not be unloaded
-            // must have non-destroyable class.
+            // Unity loads all gameObjects associated with this class and after that we go to the menu
+            // Objects that we want to be persistent during entire application must use DontDestroyOnLoad()
             SceneManager.LoadScene("Menu", LoadSceneMode.Single);
-        }
-
-        [Obsolete]
-        private void LoadGlobalObjects() {
-            StartCoroutine(LoadSceneAsynchronously("GlobalData", LoadSceneMode.Additive));
-        }
-
-        [Obsolete]
-        private IEnumerator LoadSceneAsynchronously(string sceneName, LoadSceneMode mode) {
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, mode);
-            while (!asyncLoad.isDone) {
-                yield return null;
-            }
         }
     }
 }
