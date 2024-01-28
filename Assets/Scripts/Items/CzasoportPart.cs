@@ -1,4 +1,5 @@
 ﻿using InteractableObjectSystem;
+using Items;
 using LevelTimeChange;
 using LevelTimeChange.TimeChange;
 using System.Collections;
@@ -17,5 +18,10 @@ public class CzasoportPart : InteractableObject {
         NotificationManager.Instance.RaiseNotification(definition.successfulHandInterNotification);
         FindObjectOfType<TimeChangeUI>().UpdateTimeUI();
         Destroy(this.gameObject);
+    }
+
+    public override bool InteractionItem(Item item) {
+        InteractionHand();
+        return false;
     }
 }
