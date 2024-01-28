@@ -81,10 +81,12 @@ namespace Interactions {
             
             oldInteractables.ExceptWith(newInteractables);
             foreach (var oldInteractable in oldInteractables) {
+                if (!oldInteractable) continue;
                 oldInteractable.GetComponent<IHighlightable>()?.DisableHighlight();
             }
             _interactableObjects = new List<GameObject>(newInteractables);
             foreach (var interactableObject in _interactableObjects) {
+                if (!interactableObject) continue;
                 interactableObject.GetComponent<IHighlightable>()?.EnableHighlight();
             }
 
@@ -103,6 +105,7 @@ namespace Interactions {
 
         private void DrawLinesToInteractablesGizmos() {
             foreach(var interactable in _interactableObjects) {
+                if (!interactable) continue;
                 Gizmos.DrawLine(transform.position, interactable.transform.position);
             }
         }
@@ -127,7 +130,8 @@ namespace Interactions {
             else {
                 _selectedObject = _focusedObject;
             }
-            
+
+            if (!_selectedObject) return;
             // Despite warning, `_selectedObject` will never be null in this context
             _selectedObject.GetComponent<IHighlightable>()?.EnableFocusedHighlight();
         }
@@ -141,6 +145,7 @@ namespace Interactions {
             GameObject? nearest = null;
             var distance = 99999f;
             foreach (var interactable in _interactableObjects) {
+                if (!interactable) continue;
                 var dist = Vector2.Distance(transform.position, interactable.transform.position);
                 if (dist < distance) {
                     nearest = interactable;
