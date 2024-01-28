@@ -169,10 +169,17 @@ namespace Interactions {
                     if (successful == true) {
                         Inventory.Instance.UseItem();
                     }
+                    else {
+                        TryToInstertItem();
+                    }
                 }
                 else
-                    _selectedObject.GetComponent<IHandInteractable>()?.InteractionHand();
+                    TryToInstertItem();
             }
+        }
+
+        private void TryToInstertItem() {
+            _selectedObject.GetComponent<IHandInteractable>()?.InteractionHand();
         }
         
         private void OnLongInteractionPerformed(InputAction.CallbackContext ctx) {
