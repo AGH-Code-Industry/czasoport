@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Application;
@@ -8,6 +8,8 @@ using CustomInput;
 using InventorySystem.EventArguments;
 using Items;
 using LevelTimeChange.LevelsLoader;
+using LevelTimeChange.TimeChange;
+using PlayerScripts;
 using Settings;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -171,6 +173,7 @@ namespace InventorySystem {
                 Slot = _selectedSlot,
                 Item = item
             });
+            _itemsCount--;
             return item is not null;
         }
 
@@ -197,8 +200,44 @@ namespace InventorySystem {
             });
         }
 
+        /// <summary>
+        /// Function to drop an item from inventory.
+        /// After the drop, item is spawned inside the "Items" object of the current time. If the object "Items" doesn't exist,
+        /// it is spawned inside the "Content" object of the current time.
+        /// THIS FUNCTION assumes, that the "Content" object exist. If it doesn't, object is spawed on the "Game" scene.
+        /// </summary>
         private void OnDropItemClicked(InputAction.CallbackContext ctx) {
-            
+            if (_items[_selectedSlot] == null) return;
+            RemoveItem(out Item item);           
+            Instantiate(item.ItemSO.prefab, FindObjectOfType<Player>().gameObject.transform.position, Quaternion.identity, FindTransformOfCurrentTime());
+        }
+
+        private Transform FindTransformOfCurrentTime() {
+            Transform currentTimeTransform = this.transform;
+            Player player = FindObjectOfType<Player>();
+            TimelineMaps timelineMaps = FindObjectOfType<LevelsManager>().CurrentLevelManager.FindTimelineMaps();
+            switch (player.GetComponent<TimeChanger>().actualTime) {
+                case LevelTimeChange.TimeLine.Past:
+                    currentTimeTransform = timelineMaps.past;
+                    break;
+                case LevelTimeChange.TimeLine.Present:
+                    currentTimeTransform = timelineMaps.present;
+                    break;
+                case LevelTimeChange.TimeLine.Future:
+                    currentTimeTransform = timelineMaps.future;
+                    break;
+            }
+            Transform transformOfContent = currentTimeTransform.transform.Find("Content")?.transform;
+            Transform transformOfItems = transformOfContent.transform.Find("Items")?.transform;
+            if (transformOfItems) {
+                currentTimeTransform = transformOfItems;
+            }
+            else {
+                GameObject emptyGameObject = new GameObject("Items");
+                emptyGameObject.transform.parent = transformOfContent;
+                currentTimeTransform = emptyGameObject.transform;
+            }
+            return currentTimeTransform;
         }
     }
 }

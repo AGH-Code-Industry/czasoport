@@ -134,7 +134,7 @@ namespace LevelTimeChange.LevelsLoader {
 			MoveTimelines(timelines, DeveloperSettings.Instance.tpcSettings.offsetFromPresentPlatform);
 		}
 
-		private TimelineMaps FindTimelineMaps() {
+		public TimelineMaps FindTimelineMaps() {
 			var past = levelContent.transform.Find("Past");
 			var present = levelContent.transform.Find("Present");
 			var future = levelContent.transform.Find("Future");
@@ -170,7 +170,7 @@ namespace LevelTimeChange.LevelsLoader {
         }
     }
 
-	class TimelineMaps {
+	public class TimelineMaps {
 		public Transform past {get; set;}
 		public Transform present {get; set;}
 		public Transform future {get; set;}
