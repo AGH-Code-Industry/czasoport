@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using CoinPackage.Debugging;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,7 +7,6 @@ using Application;
 using Application.GlobalExceptions;
 using DataPersistence;
 using CustomInput;
-using DataPersistence;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using PlayerScripts;
