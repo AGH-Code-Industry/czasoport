@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7256744986904192269}
   - component: {fileID: 7256744986904192267}
   - component: {fileID: 8667698351802201332}
+  - component: {fileID: 3720851695877818996}
   m_Layer: 6
   m_Name: LockedDoors
   m_TagString: Untagged
@@ -114,6 +115,7 @@ MonoBehaviour:
   definition: {fileID: 11400000, guid: 983473f00c24c3b4fad543887552d882, type: 2}
   interactedWith:
   - {fileID: 11400000, guid: 1511d966a09748a4ea02f68ac86cea2a, type: 2}
+  openingSpeed: 2
 --- !u!61 &8667698351802201332
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,3 +142,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.5}
   m_EdgeRadius: 0
+--- !u!95 &3720851695877818996
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7256744986904192265}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 270e953b6633ca449bcf5dae84e7843a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
