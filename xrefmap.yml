@@ -1184,6 +1184,70 @@ references:
   commentId: F:Global.CrossingLight.lightChangeInterval
   fullName: CrossingLight.lightChangeInterval
   nameWithType: CrossingLight.lightChangeInterval
+- uid: Global.Czasoport
+  name: Czasoport
+  href: api/Global.Czasoport.html
+  commentId: T:Global.Czasoport
+  fullName: Czasoport
+  nameWithType: Czasoport
+- uid: Global.Czasoport.InteractionHand
+  name: InteractionHand()
+  href: api/Global.Czasoport.html#Global_Czasoport_InteractionHand
+  commentId: M:Global.Czasoport.InteractionHand
+  fullName: Czasoport.InteractionHand()
+  nameWithType: Czasoport.InteractionHand()
+- uid: Global.Czasoport.InteractionHand*
+  name: InteractionHand
+  href: api/Global.Czasoport.html#Global_Czasoport_InteractionHand_
+  commentId: Overload:Global.Czasoport.InteractionHand
+  isSpec: "True"
+  fullName: Czasoport.InteractionHand
+  nameWithType: Czasoport.InteractionHand
+- uid: Global.Czasoport.InteractionItem(Items.Item)
+  name: InteractionItem(Item)
+  href: api/Global.Czasoport.html#Global_Czasoport_InteractionItem_Items_Item_
+  commentId: M:Global.Czasoport.InteractionItem(Items.Item)
+  fullName: Czasoport.InteractionItem(Items.Item)
+  nameWithType: Czasoport.InteractionItem(Item)
+- uid: Global.Czasoport.InteractionItem*
+  name: InteractionItem
+  href: api/Global.Czasoport.html#Global_Czasoport_InteractionItem_
+  commentId: Overload:Global.Czasoport.InteractionItem
+  isSpec: "True"
+  fullName: Czasoport.InteractionItem
+  nameWithType: Czasoport.InteractionItem
+- uid: Global.CzasoportPart
+  name: CzasoportPart
+  href: api/Global.CzasoportPart.html
+  commentId: T:Global.CzasoportPart
+  fullName: CzasoportPart
+  nameWithType: CzasoportPart
+- uid: Global.CzasoportPart.InteractionHand
+  name: InteractionHand()
+  href: api/Global.CzasoportPart.html#Global_CzasoportPart_InteractionHand
+  commentId: M:Global.CzasoportPart.InteractionHand
+  fullName: CzasoportPart.InteractionHand()
+  nameWithType: CzasoportPart.InteractionHand()
+- uid: Global.CzasoportPart.InteractionHand*
+  name: InteractionHand
+  href: api/Global.CzasoportPart.html#Global_CzasoportPart_InteractionHand_
+  commentId: Overload:Global.CzasoportPart.InteractionHand
+  isSpec: "True"
+  fullName: CzasoportPart.InteractionHand
+  nameWithType: CzasoportPart.InteractionHand
+- uid: Global.CzasoportPart.InteractionItem(Items.Item)
+  name: InteractionItem(Item)
+  href: api/Global.CzasoportPart.html#Global_CzasoportPart_InteractionItem_Items_Item_
+  commentId: M:Global.CzasoportPart.InteractionItem(Items.Item)
+  fullName: CzasoportPart.InteractionItem(Items.Item)
+  nameWithType: CzasoportPart.InteractionItem(Item)
+- uid: Global.CzasoportPart.InteractionItem*
+  name: InteractionItem
+  href: api/Global.CzasoportPart.html#Global_CzasoportPart_InteractionItem_
+  commentId: Overload:Global.CzasoportPart.InteractionItem
+  isSpec: "True"
+  fullName: CzasoportPart.InteractionItem
+  nameWithType: CzasoportPart.InteractionItem
 - uid: Global.FollowWorld
   name: FollowWorld
   href: api/Global.FollowWorld.html
@@ -4201,6 +4265,19 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.TimeChange.TimeChanger.CanChangeTime
   nameWithType: TimeChanger.CanChangeTime
+- uid: LevelTimeChange.TimeChange.TimeChanger.EnableTimeChange
+  name: EnableTimeChange()
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_EnableTimeChange
+  commentId: M:LevelTimeChange.TimeChange.TimeChanger.EnableTimeChange
+  fullName: LevelTimeChange.TimeChange.TimeChanger.EnableTimeChange()
+  nameWithType: TimeChanger.EnableTimeChange()
+- uid: LevelTimeChange.TimeChange.TimeChanger.EnableTimeChange*
+  name: EnableTimeChange
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_EnableTimeChange_
+  commentId: Overload:LevelTimeChange.TimeChange.TimeChanger.EnableTimeChange
+  isSpec: "True"
+  fullName: LevelTimeChange.TimeChange.TimeChanger.EnableTimeChange
+  nameWithType: TimeChanger.EnableTimeChange
 - uid: LevelTimeChange.TimeChange.TimeChanger.Instance
   name: Instance
   href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_Instance
@@ -4214,6 +4291,19 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.TimeChange.TimeChanger.Instance
   nameWithType: TimeChanger.Instance
+- uid: LevelTimeChange.TimeChange.TimeChanger.IsTimeUnlocked(LevelTimeChange.TimeLine)
+  name: IsTimeUnlocked(TimeLine)
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_IsTimeUnlocked_LevelTimeChange_TimeLine_
+  commentId: M:LevelTimeChange.TimeChange.TimeChanger.IsTimeUnlocked(LevelTimeChange.TimeLine)
+  fullName: LevelTimeChange.TimeChange.TimeChanger.IsTimeUnlocked(LevelTimeChange.TimeLine)
+  nameWithType: TimeChanger.IsTimeUnlocked(TimeLine)
+- uid: LevelTimeChange.TimeChange.TimeChanger.IsTimeUnlocked*
+  name: IsTimeUnlocked
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_IsTimeUnlocked_
+  commentId: Overload:LevelTimeChange.TimeChange.TimeChanger.IsTimeUnlocked
+  isSpec: "True"
+  fullName: LevelTimeChange.TimeChange.TimeChanger.IsTimeUnlocked
+  nameWithType: TimeChanger.IsTimeUnlocked
 - uid: LevelTimeChange.TimeChange.TimeChanger.LoadPersistentData(DataPersistence.GameData)
   name: LoadPersistentData(GameData)
   href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_LoadPersistentData_DataPersistence_GameData_
@@ -4227,6 +4317,19 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.TimeChange.TimeChanger.LoadPersistentData
   nameWithType: TimeChanger.LoadPersistentData
+- uid: LevelTimeChange.TimeChange.TimeChanger.LockTimeline(LevelTimeChange.TimeLine)
+  name: LockTimeline(TimeLine)
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_LockTimeline_LevelTimeChange_TimeLine_
+  commentId: M:LevelTimeChange.TimeChange.TimeChanger.LockTimeline(LevelTimeChange.TimeLine)
+  fullName: LevelTimeChange.TimeChange.TimeChanger.LockTimeline(LevelTimeChange.TimeLine)
+  nameWithType: TimeChanger.LockTimeline(TimeLine)
+- uid: LevelTimeChange.TimeChange.TimeChanger.LockTimeline*
+  name: LockTimeline
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_LockTimeline_
+  commentId: Overload:LevelTimeChange.TimeChange.TimeChanger.LockTimeline
+  isSpec: "True"
+  fullName: LevelTimeChange.TimeChange.TimeChanger.LockTimeline
+  nameWithType: TimeChanger.LockTimeline
 - uid: LevelTimeChange.TimeChange.TimeChanger.OnTimeChange
   name: OnTimeChange
   href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_OnTimeChange
@@ -4274,6 +4377,19 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.TimeChange.TimeChanger.ToString
   nameWithType: TimeChanger.ToString
+- uid: LevelTimeChange.TimeChange.TimeChanger.UnlockTimeline(LevelTimeChange.TimeLine)
+  name: UnlockTimeline(TimeLine)
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_UnlockTimeline_LevelTimeChange_TimeLine_
+  commentId: M:LevelTimeChange.TimeChange.TimeChanger.UnlockTimeline(LevelTimeChange.TimeLine)
+  fullName: LevelTimeChange.TimeChange.TimeChanger.UnlockTimeline(LevelTimeChange.TimeLine)
+  nameWithType: TimeChanger.UnlockTimeline(TimeLine)
+- uid: LevelTimeChange.TimeChange.TimeChanger.UnlockTimeline*
+  name: UnlockTimeline
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_UnlockTimeline_
+  commentId: Overload:LevelTimeChange.TimeChange.TimeChanger.UnlockTimeline
+  isSpec: "True"
+  fullName: LevelTimeChange.TimeChange.TimeChanger.UnlockTimeline
+  nameWithType: TimeChanger.UnlockTimeline
 - uid: LevelTimeChange.TimeChange.TimeChanger.actualTime
   name: actualTime
   href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_actualTime
@@ -4610,6 +4726,19 @@ references:
   commentId: T:UI.TimeChangeUI
   fullName: UI.TimeChangeUI
   nameWithType: TimeChangeUI
+- uid: UI.TimeChangeUI.UpdateTimeUI
+  name: UpdateTimeUI()
+  href: api/UI.TimeChangeUI.html#UI_TimeChangeUI_UpdateTimeUI
+  commentId: M:UI.TimeChangeUI.UpdateTimeUI
+  fullName: UI.TimeChangeUI.UpdateTimeUI()
+  nameWithType: TimeChangeUI.UpdateTimeUI()
+- uid: UI.TimeChangeUI.UpdateTimeUI*
+  name: UpdateTimeUI
+  href: api/UI.TimeChangeUI.html#UI_TimeChangeUI_UpdateTimeUI_
+  commentId: Overload:UI.TimeChangeUI.UpdateTimeUI
+  isSpec: "True"
+  fullName: UI.TimeChangeUI.UpdateTimeUI
+  nameWithType: TimeChangeUI.UpdateTimeUI
 - uid: Utils
   name: Utils
   href: api/Utils.html

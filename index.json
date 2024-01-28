@@ -184,6 +184,16 @@
     "title": "Class CrossingLight | Czasoport Documentation",
     "keywords": "Class CrossingLight Namespace Global public class CrossingLight : MonoBehaviour Inheritance object CrossingLight Fields lightChangeInterval public float lightChangeInterval Field Value float"
   },
+  "api/Global.Czasoport.html": {
+    "href": "api/Global.Czasoport.html",
+    "title": "Class Czasoport | Czasoport Documentation",
+    "keywords": "Class Czasoport Namespace Global public class Czasoport : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Czasoport Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand() InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
+  },
+  "api/Global.CzasoportPart.html": {
+    "href": "api/Global.CzasoportPart.html",
+    "title": "Class CzasoportPart | Czasoport Documentation",
+    "keywords": "Class CzasoportPart Namespace Global public class CzasoportPart : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject CzasoportPart Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand() InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
+  },
   "api/Global.FollowWorld.html": {
     "href": "api/Global.FollowWorld.html",
     "title": "Class FollowWorld | Czasoport Documentation",
@@ -287,7 +297,7 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace | Czasoport Documentation",
-    "keywords": "Namespace Classes Audio CrossingLight FollowWorld InputActions MusicPlayer API to play song with fade in effect and specified delay; NotificationManager NotificationUIController SettingsTests TeleportPlace WithinLevelPortal Structs InputActions.GameActions InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IGameActions InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions"
+    "keywords": "Namespace Classes Audio CrossingLight Czasoport CzasoportPart FollowWorld InputActions MusicPlayer API to play song with fade in effect and specified delay; NotificationManager NotificationUIController SettingsTests TeleportPlace WithinLevelPortal Structs InputActions.GameActions InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IGameActions InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions"
   },
   "api/InteractableObjectSystem.InterObjectDefinition.html": {
     "href": "api/InteractableObjectSystem.InterObjectDefinition.html",
@@ -297,7 +307,7 @@
   "api/InteractableObjectSystem.InteractableObject.html": {
     "href": "api/InteractableObjectSystem.InteractableObject.html",
     "title": "Class InteractableObject | Czasoport Documentation",
-    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived LockedChest LockedDoor Trading Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
+    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived Czasoport CzasoportPart LockedChest LockedDoor Trading Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
   },
   "api/InteractableObjectSystem.Objects.LockedChest.html": {
     "href": "api/InteractableObjectSystem.Objects.LockedChest.html",
@@ -512,7 +522,7 @@
   "api/LevelTimeChange.TimeChange.TimeChanger.html": {
     "href": "api/LevelTimeChange.TimeChange.TimeChanger.html",
     "title": "Class TimeChanger | Czasoport Documentation",
-    "keywords": "Class TimeChanger Namespace LevelTimeChange.TimeChange Manages time changing mechanic. public class TimeChanger : MonoBehaviour, IDataPersistence Inheritance object TimeChanger Implements IDataPersistence Fields actualTime Timeline the player is currently on. public TimeLine actualTime Field Value TimeLine Properties Instance public static TimeChanger Instance { get; } Property Value TimeChanger Methods CanChangeTime(TimeLine) Asks appropriate CheckCollider if Player can change time. public bool CanChangeTime(TimeLine timeToCheck) Parameters timeToCheck TimeLine Returns bool LoadPersistentData(GameData) public void LoadPersistentData(GameData gameData) Parameters gameData GameData SavePersistentData(ref GameData) public void SavePersistentData(ref GameData gameData) Parameters gameData GameData ToString() public override string ToString() Returns string Events OnTimeChange public event EventHandler<TimeChanger.OnTimeChangeEventArgs> OnTimeChange Event Type EventHandler<TimeChanger.OnTimeChangeEventArgs>"
+    "keywords": "Class TimeChanger Namespace LevelTimeChange.TimeChange Manages time changing mechanic. public class TimeChanger : MonoBehaviour, IDataPersistence Inheritance object TimeChanger Implements IDataPersistence Fields actualTime Timeline the player is currently on. public TimeLine actualTime Field Value TimeLine Properties Instance public static TimeChanger Instance { get; } Property Value TimeChanger Methods CanChangeTime(TimeLine) Asks appropriate CheckCollider if Player can change time. public bool CanChangeTime(TimeLine timeToCheck) Parameters timeToCheck TimeLine Returns bool EnableTimeChange() public void EnableTimeChange() IsTimeUnlocked(TimeLine) public bool IsTimeUnlocked(TimeLine timeLine) Parameters timeLine TimeLine Returns bool LoadPersistentData(GameData) public void LoadPersistentData(GameData gameData) Parameters gameData GameData LockTimeline(TimeLine) public void LockTimeline(TimeLine timelineToLock) Parameters timelineToLock TimeLine SavePersistentData(ref GameData) public void SavePersistentData(ref GameData gameData) Parameters gameData GameData ToString() public override string ToString() Returns string UnlockTimeline(TimeLine) public void UnlockTimeline(TimeLine timelineToUnlock) Parameters timelineToUnlock TimeLine Events OnTimeChange public event EventHandler<TimeChanger.OnTimeChangeEventArgs> OnTimeChange Event Type EventHandler<TimeChanger.OnTimeChangeEventArgs>"
   },
   "api/LevelTimeChange.TimeChange.html": {
     "href": "api/LevelTimeChange.TimeChange.html",
@@ -597,7 +607,7 @@
   "api/UI.TimeChangeUI.html": {
     "href": "api/UI.TimeChangeUI.html",
     "title": "Class TimeChangeUI | Czasoport Documentation",
-    "keywords": "Class TimeChangeUI Namespace UI public class TimeChangeUI : MonoBehaviour Inheritance object TimeChangeUI"
+    "keywords": "Class TimeChangeUI Namespace UI public class TimeChangeUI : MonoBehaviour Inheritance object TimeChangeUI Methods UpdateTimeUI() public void UpdateTimeUI()"
   },
   "api/UI.html": {
     "href": "api/UI.html",
