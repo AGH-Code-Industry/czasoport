@@ -17,12 +17,15 @@ namespace InteractableObjectSystem.Objects {
         }
         
         [SerializeField] private List<ItemSO> interactedWith;
+        [SerializeField] private float openingSpeed;
 
         private BoxCollider2D _collider;
         private DoorState _state;
+        private Animator _animator;
 
         private void Awake() {
             _collider = GetComponent<BoxCollider2D>();
+            _animator = GetComponent<Animator>();
             _state = DoorState.Locked;
         }
 
@@ -62,6 +65,7 @@ namespace InteractableObjectSystem.Objects {
         private void OpenDoor() {
             _state = DoorState.Opened;
             _collider.enabled = false;
+            _animator.SetTrigger("OpenDoors");
             CDebug.Log("Opened");
         }
 
