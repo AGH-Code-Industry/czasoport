@@ -49,13 +49,13 @@ namespace InteractableObjectSystem.Objects {
 
         private void Break() {
             _state = RockState.Destroyed;
-            _collider.enabled = false;
             _particleSystem.Play();
-            Invoke("HideSprite",1.5f);
+            Invoke("HideSprite",0.75f);
             CDebug.Log("Broken");
         }
 
         private void HideSprite() {
+            _collider.enabled = false;
             _renderer.sprite = null;
         }
     }
