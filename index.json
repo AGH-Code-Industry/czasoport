@@ -597,7 +597,12 @@
   "api/InteractableObjectSystem.InteractableObject.html": {
     "href": "api/InteractableObjectSystem.InteractableObject.html",
     "title": "Class InteractableObject | Czasoport Documentation",
-    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived Czasoport CzasoportPart LockedChest LockedDoor Trading Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
+    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived Czasoport CzasoportPart BreakableRock LockedChest LockedDoor Trading Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
+  },
+  "api/InteractableObjectSystem.Objects.BreakableRock.html": {
+    "href": "api/InteractableObjectSystem.Objects.BreakableRock.html",
+    "title": "Class BreakableRock | Czasoport Documentation",
+    "keywords": "Class BreakableRock Namespace InteractableObjectSystem.Objects public class BreakableRock : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject BreakableRock Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand() InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
   },
   "api/InteractableObjectSystem.Objects.LockedChest.html": {
     "href": "api/InteractableObjectSystem.Objects.LockedChest.html",
@@ -612,7 +617,7 @@
   "api/InteractableObjectSystem.Objects.html": {
     "href": "api/InteractableObjectSystem.Objects.html",
     "title": "Namespace InteractableObjectSystem.Objects | Czasoport Documentation",
-    "keywords": "Namespace InteractableObjectSystem.Objects Classes LockedChest LockedDoor"
+    "keywords": "Namespace InteractableObjectSystem.Objects Classes BreakableRock LockedChest LockedDoor"
   },
   "api/InteractableObjectSystem.html": {
     "href": "api/InteractableObjectSystem.html",
