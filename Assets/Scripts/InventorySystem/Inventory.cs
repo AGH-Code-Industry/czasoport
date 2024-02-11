@@ -11,6 +11,7 @@ using LevelTimeChange.LevelsLoader;
 using LevelTimeChange.TimeChange;
 using PlayerScripts;
 using Settings;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -129,13 +130,10 @@ namespace InventorySystem {
                     }
                 }
             }
-            
+
             // Hide item
-            item.transform.SetParent(itemHideout);
-            item.transform.position = new Vector3(0f, 0f, 0f);
-            item.GetComponent<SpriteRenderer>().enabled = false;
-            item.GetComponent<CircleCollider2D>().enabled = false;
-            
+            item = HideItem(item);
+
             NotificationManager.Instance.RaiseNotification(item.ItemSO.pickUpNotification);
             
             return true;
@@ -153,10 +151,9 @@ namespace InventorySystem {
                 Item = item,
                 Slot = _selectedSlot
             });
-            if (item.Durability == 0) {
+            if (item.Durability <= 0) {
                 RemoveItem(out var removedItem);
                 Destroy(item.gameObject);
-                return true;
             }
             return true;
         }
@@ -209,7 +206,8 @@ namespace InventorySystem {
         private void OnDropItemClicked(InputAction.CallbackContext ctx) {
             if (_items[_selectedSlot] == null) return;
             RemoveItem(out Item item);           
-            Instantiate(item.ItemSO.prefab, FindObjectOfType<Player>().gameObject.transform.position, Quaternion.identity, FindTransformOfCurrentTime());
+            ShowItem(item);
+            //Instantiate(item.ItemSO.prefab, FindObjectOfType<Player>().gameObject.transform.position, Quaternion.identity, FindTransformOfCurrentTime());
         }
 
         private Transform FindTransformOfCurrentTime() {
@@ -238,6 +236,33 @@ namespace InventorySystem {
                 currentTimeTransform = emptyGameObject.transform;
             }
             return currentTimeTransform;
+        }
+
+        private Item HideItem(Item item) {
+            if (item.transform.parent == null) {
+                String itemUniqueId = item.uniqueId;
+                item = Instantiate(item);
+                item.uniqueId = itemUniqueId;
+            }
+            item.transform.SetParent(itemHideout);
+            item.transform.position = new Vector3(0f, 0f, 0f);
+            item.GetComponent<SpriteRenderer>().enabled = false;
+            item.GetComponent<CircleCollider2D>().enabled = false;
+            return item;
+        }
+
+        private void ShowItem(Item itemToFind) {
+            foreach (Transform child in itemHideout) {
+                Item item = child.gameObject.GetComponent<Item>();
+                Debug.Log(item.Equals(itemToFind));
+                if (item.Equals(itemToFind)) {
+                    item.transform.parent = FindTransformOfCurrentTime();
+                    item.transform.position = FindObjectOfType<Player>().gameObject.transform.position;
+                    item.GetComponent<SpriteRenderer>().enabled = true;
+                    item.GetComponent<CircleCollider2D>().enabled = true;
+                    return;
+                }
+            }
         }
     }
 }
