@@ -23,6 +23,8 @@ namespace InventorySystem.UI {
             
             for (int i = 0; i < DeveloperSettings.Instance.invSettings.itemsCount; i++) {
                 GameObject slot = Instantiate(slotPrefab, container);
+                RectTransform rT = slot.GetComponent<RectTransform>();
+                rT.anchoredPosition = new Vector2(56+174*i, 61);
                 _slots.Add(slot.GetComponent<Slot>());
                 _slots[i].RemoveItem();
                 _slots[i].Disactive();
