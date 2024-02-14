@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using DentedPixel;
@@ -23,7 +23,7 @@ public class PathSplinePerformance : MonoBehaviour {
 	private float trackPosition; // ratio 0,1 of the avatars position on the track
 
 	void Start () {
-		Application.targetFrameRate = 240;
+        UnityEngine.Application.targetFrameRate = 240;
 
 		// Make the track from the provided transforms
 		List<Vector3> randList = new List<Vector3>();

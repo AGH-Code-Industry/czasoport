@@ -332,7 +332,7 @@ public class LeanTween : MonoBehaviour {
             _tweenEmpty.hideFlags = HideFlags.HideAndDontSave;
             #endif
             #if UNITY_EDITOR
-            if(Application.isPlaying)
+            if(UnityEngine.Application.isPlaying)
                 DontDestroyOnLoad( _tweenEmpty );
             #else
             DontDestroyOnLoad( _tweenEmpty );
