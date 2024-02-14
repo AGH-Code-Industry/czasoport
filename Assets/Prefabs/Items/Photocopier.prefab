@@ -115,6 +115,67 @@ MonoBehaviour:
   _resultItem: {fileID: 7813029870476002060, guid: 4b6aa10330ea6de438588822d274650d, type: 3}
   _firstItem: {fileID: 11400000, guid: d44ba50378e39ba49a9f22af4dd49766, type: 2}
   _secondItem: {fileID: 11400000, guid: 4ad146c1ad81f7a42921e04866c19c9d, type: 2}
+  easeType: 1
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.9622641
+      outSlope: 0.9622641
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.16666667
+    - serializedVersion: 3
+      time: 0.20087215
+      value: 0.2001608
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.40029866
+      value: 0.40018448
+      inSlope: 0.98820734
+      outSlope: 0.98820734
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6004585
+      value: 0.60018873
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.8006281
+      value: 0.80044717
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1.0009077
+      outSlope: 1.0009077
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!58 &5404128277090892616
 CircleCollider2D:
   m_ObjectHideFlags: 0
