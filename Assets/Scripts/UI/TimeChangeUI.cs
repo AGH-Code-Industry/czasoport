@@ -11,8 +11,11 @@ namespace UI {
     public class TimeChangeUI : MonoBehaviour {
 
         [SerializeField] private Image past;
+        [SerializeField] private TimeUIStroke pastStroke;
         [SerializeField] private Image present;
+        [SerializeField] private TimeUIStroke presentStroke;
         [SerializeField] private Image future;
+        [SerializeField] private TimeUIStroke futureStroke;
 
         [SerializeField] private Color selectedColor;
         [SerializeField] private Color disableTeleportColor;
@@ -33,34 +36,36 @@ namespace UI {
         }
 
         private void CheckTeleportAbilities() {
-            CheckTeleportAbility(past, TimeLine.Past);
-            CheckTeleportAbility(present, TimeLine.Present);
-            CheckTeleportAbility(future, TimeLine.Future);
+            CheckTeleportAbility(past, pastStroke, TimeLine.Past);
+            CheckTeleportAbility(present, presentStroke, TimeLine.Present);
+            CheckTeleportAbility(future, futureStroke, TimeLine.Future);
         }
         private void TimeChanger_OnTimeChange(object sender, TimeChanger.OnTimeChangeEventArgs e) {
             ChangeSelectedTime(e.time);
         }
 
         private void ChangeSelectedTime(TimeLine actualTime) {
-            ToggleActualTime(past, actualTime == TimeLine.Past);
-            ToggleActualTime(present, actualTime == TimeLine.Present);
-            ToggleActualTime(future, actualTime == TimeLine.Future);
+            ToggleActualTime(past, pastStroke, actualTime == TimeLine.Past);
+            ToggleActualTime(present, presentStroke, actualTime == TimeLine.Present);
+            ToggleActualTime(future, futureStroke, actualTime == TimeLine.Future);
             CheckTeleportAbilities();
         }
 
-        private void ToggleActualTime(Image timeImage, bool actual) {
+        private void ToggleActualTime(Image timeImage, TimeUIStroke timeStroke,  bool actual) {
             timeImage.color = actual ? selectedColor : timeImage.color;
+            timeStroke.IsEnable(actual);
         }
 
-        private void CheckTeleportAbility(Image timeImage, TimeLine time) {
+        private void CheckTeleportAbility(Image timeImage, TimeUIStroke timeStroke,  TimeLine time) {
             if (time == TimeChanger.Instance.actualTime)
                 return;
             
-            ToggleBlockedTime(timeImage, !TimeChanger.Instance.CanChangeTime(time));
+            ToggleBlockedTime(timeImage, timeStroke, !TimeChanger.Instance.CanChangeTime(time));
         }
 
-        private void ToggleBlockedTime(Image timeImage, bool block) {
+        private void ToggleBlockedTime(Image timeImage, TimeUIStroke timeStroke, bool block) {
             timeImage.color = block ? disableTeleportColor : Color.white;
+            timeStroke.IsEnable(!block);
         }
 
     }
