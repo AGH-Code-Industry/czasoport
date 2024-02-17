@@ -16,14 +16,14 @@ namespace InteractableObjectSystem.Objects {
             Unlocked
         }
         
-        [SerializeField] private List<GameObject> _contains;
-        [SerializeField] private List<ItemSO> _interactedWith;
+        [SerializeField] private List<GameObject> contains;
+        [SerializeField] private List<ItemSO> interactedWith;
         
-        [SerializeField] private ChestState _state = ChestState.Locked;
+        [SerializeField] private ChestState state = ChestState.Locked;
         
 
         public override void InteractionHand() {
-            if (_state == ChestState.Locked) {
+            if (state == ChestState.Locked) {
                 NotificationManager.Instance.RaiseNotification(definition.failedHandInterNotification);
                 return;
             }
@@ -34,10 +34,10 @@ namespace InteractableObjectSystem.Objects {
         }
 
         public override bool InteractionItem(Item item) {
-            if (_state != ChestState.Locked) {
+            if (state != ChestState.Locked) {
                 return false;
             }
-            if (_interactedWith.Contains(item.ItemSO)) {
+            if (interactedWith.Contains(item.ItemSO)) {
                 UnlockChest();
                 NotificationManager.Instance.RaiseNotification(definition.successfulItemInterNotification);
                 return true;
@@ -47,23 +47,23 @@ namespace InteractableObjectSystem.Objects {
         }
 
         private void UnlockChest() {
-            _state = ChestState.Unlocked;
+            state = ChestState.Unlocked;
             OpenChest();
-            CDebug.Log("Unlocked");
+            //CDebug.Log("Unlocked");
         }
 
         private void OpenChest() {
-            CDebug.Log("Opened");
-            while (_contains.Count > 0) {
-                GameObject c = _contains[0];
+            //CDebug.Log("Opened");
+            while (contains.Count > 0) {
+                GameObject c = contains[0];
                 Item i = c.GetComponent<Item>();
                 if (Inventory.Instance.InsertItem(i)) {
-                    _contains.RemoveAt(0);
+                    contains.RemoveAt(0);
                 }
                 else return;
 
             }
-            CDebug.Log("Chest is empty");
+            //CDebug.Log("Chest is empty");
         }
     }
 }

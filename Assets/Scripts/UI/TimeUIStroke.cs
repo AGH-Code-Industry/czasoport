@@ -7,12 +7,12 @@ namespace  UI {
         [SerializeField] private Sprite disactive;
         private Image _image;
 
-        private void Start() {
+        private void Awake() {
             _image = GetComponent<Image>();
         }
 
-        public void IsEnable(bool enable) {
-            if (enable) _image.sprite = active;
+        public void SetStroke(bool isActive) {
+            if (isActive) _image.sprite = active;
             else _image.sprite = disactive;
         }
     }

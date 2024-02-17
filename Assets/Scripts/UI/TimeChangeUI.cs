@@ -53,7 +53,7 @@ namespace UI {
 
         private void ToggleActualTime(Image timeImage, TimeUIStroke timeStroke,  bool actual) {
             timeImage.color = actual ? selectedColor : timeImage.color;
-            timeStroke.IsEnable(actual);
+            timeStroke.SetStroke(actual);
         }
 
         private void CheckTeleportAbility(Image timeImage, TimeUIStroke timeStroke,  TimeLine time) {
@@ -65,7 +65,7 @@ namespace UI {
 
         private void ToggleBlockedTime(Image timeImage, TimeUIStroke timeStroke, bool block) {
             timeImage.color = block ? disableTeleportColor : Color.white;
-            timeStroke.IsEnable(!block);
+            timeStroke.SetStroke(!block);
         }
 
     }
