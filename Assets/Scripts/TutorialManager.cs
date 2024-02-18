@@ -10,7 +10,7 @@ public class TutorialManager : MonoBehaviour
 {
     int counter = 0;
     List<InputAction> _stages = new List<InputAction>();
-    List<String> _messages = new List<string>();
+    List<TutorialNotification> _messages = new List<TutorialNotification>();
     float _timeToDisplayMessage = 3f;
 
     /// <summary>
@@ -24,16 +24,16 @@ public class TutorialManager : MonoBehaviour
         _stages.Add(CInput.InputActions.Teleport.TeleportBack);
         _stages.Add(CInput.InputActions.Game.TogglePause);
         _stages.Add(CInput.InputActions.Inventory.ChooseItem);
-        
 
-        _messages.Add("Cześć! Witaj w samouczku! Wiem, że chcesz już zacząć... Niech tak będzie.");
-        _messages.Add("Użyj WSAD, aby się poruszać.");
-        _messages.Add("Chcesz coś podnieść? Użyj F.");
-        _messages.Add("Teraz możesz się teleportować!! Teleportuj się w przyszłość za pomocą klawsza E.");
-        _messages.Add("No tak tak, w przeszłość też możesz... Wciśnij Q.");
-        _messages.Add("Potrzebujesz przerwy, żeby pomyśleć? Wciśnij ESCAPE.");
-        _messages.Add("Chcesz wybrać konkretny item w swoim ekwipunku? Użyj do tego liczb 1-5.");
-        _messages.Add("Brawo! Udało ci się przejść samouczek, teraz dopiero zaczyna się zabawa... Powodzenia!!!");
+
+        //_messages.Add(new TutorialNotification("Cześć! Witaj w samouczku!", "", ""));
+        _messages.Add(new TutorialNotification("Wciśnij", "WSAD", "aby się poruszać."));
+        _messages.Add(new TutorialNotification("Wciśnij", "F", "aby podnieść przedmiot lub wejść w interakcję z innym przedmiotem"));
+        _messages.Add(new TutorialNotification("Wciśnij", "E", "aby teleportować się w przyszłość"));
+        _messages.Add(new TutorialNotification("Wciśnij", "Q", "aby teleportować się w przeszłość"));
+        _messages.Add(new TutorialNotification("Wciśnij", "ESCAPE", "aby zapauzować grę"));
+        _messages.Add(new TutorialNotification("Wciśnij liczby", "1-5", "aby wybrać slot w ekwipunku"));
+        _messages.Add(new TutorialNotification("", "", "Brawo! Udało ci się przejść samouczek, teraz dopiero zaczyna się zabawa... Powodzenia!!!"));
 
         CInput.InputActions.Teleport.Disable();
         CInput.InputActions.Inventory.Disable();
@@ -41,16 +41,18 @@ public class TutorialManager : MonoBehaviour
         CInput.InputActions.Game.Disable();
         CInput.InputActions.Movement.Disable();
 
-        StartCoroutine(waitForTutorialToBegin(3f));
+        StartCoroutine(waitForTutorialToBegin(0.01f));
     }
 
     IEnumerator waitForTutorialToBegin(float timeToWait) {
         yield return new WaitForSeconds(timeToWait);
         CInput.InputActions.Movement.Enable();
-        NotificationManager.Instance.RaiseNotification(new Notification(_messages[0], _timeToDisplayMessage));
-        yield return new WaitForSeconds(_timeToDisplayMessage);
+        //NotificationManager.Instance.RaiseNotification(new Notification(_messages[0], _timeToDisplayMessage));
+        //NotificationManager.Instance.RaiseTutorialNotification(_messages[0]);
+        //yield return new WaitForSeconds(_timeToDisplayMessage);
         CInput.InputActions.Movement.Navigation.performed += OnNextTutorialStage;
-        NotificationManager.Instance.RaiseNotification(new Notification(_messages[1], _timeToDisplayMessage));
+        //NotificationManager.Instance.RaiseNotification(new Notification(_messages[1], _timeToDisplayMessage));
+        NotificationManager.Instance.RaiseTutorialNotification(_messages[0]);
     }
 
     /// <summary>
@@ -60,7 +62,7 @@ public class TutorialManager : MonoBehaviour
     private void OnNextTutorialStage(InputAction.CallbackContext context) {
         _stages[counter].performed -= OnNextTutorialStage;
         if (counter + 1 < _stages.Count) {
-            NotificationManager.Instance.RaiseNotification(new Notification(_messages[counter+2], _timeToDisplayMessage));
+            NotificationManager.Instance.RaiseTutorialNotification(_messages[counter+1]);
             _stages[counter + 1].Enable();
             _stages[counter + 1].performed += OnNextTutorialStage;
             counter++;
@@ -73,10 +75,16 @@ public class TutorialManager : MonoBehaviour
     /// Enable all functionalities as the tutorial is finished.
     /// </summary>
     private void tutorialFinished() {
-        NotificationManager.Instance.RaiseNotification(new Notification(_messages[_messages.Count - 1], _timeToDisplayMessage));
+        NotificationManager.Instance.RaiseTutorialNotification(_messages[_messages.Count - 1]);
         CInput.InputActions.Teleport.Enable();
         CInput.InputActions.Inventory.Enable();
         CInput.InputActions.Interactions.Enable();
         CInput.InputActions.Game.Enable();
+        StartCoroutine(EndTutorial());
+    }
+
+    IEnumerator EndTutorial() {
+        yield return new WaitForSeconds(3f);
+        NotificationManager.Instance.EndTutorial();
     }
 }

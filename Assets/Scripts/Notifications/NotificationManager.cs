@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Notifications;
@@ -7,6 +7,9 @@ using TMPro;
 using Settings;
 using DataPersistence;
 using UnityEngine.UI;
+using UI;
+using CustomInput;
+using UnityEngine.InputSystem;
 
 public class NotificationManager : MonoBehaviour, IDataPersistence {
 
@@ -22,16 +25,35 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
     GameObject _scrollContent;
     [SerializeField]
     GameObject _logPrerab;
+    [SerializeField]
+    GameObject _tutorialNotification;
+    [SerializeField]
+    GameObject _notificationWindow;
 
     Queue<Notification> _notificationsToDisplay = new Queue<Notification>();
     List<Notification> _notificationsHistory = new List<Notification>();
     bool _isNotificationDisplaying = false;
+
+    PauseUI _pauseUI;
 
     private void Start() {
         if (Instance == null) {
             Instance = this;
         } else {
             Destroy(this);
+        }
+
+        _pauseUI = FindObjectOfType<PauseUI>();
+        _tutorialNotification.transform.GetChild(0).GetComponent<TMP_Text>().text = "";
+        CInput.InputActions.Game.TogglePause.performed += PausePerformed;
+        LeanTween.scale(_tutorialNotification.transform.GetChild(1).gameObject, new Vector3(1.2f, 1.2f, 1.2f), 0.5f).setLoopPingPong();
+    }
+
+    private void PausePerformed(InputAction.CallbackContext context) {
+        if (_pauseUI.IsGamePaused()) {
+            _notificationWindow?.SetActive(false);
+        } else {
+            _notificationWindow?.SetActive(true);
         }
     }
 
@@ -59,6 +81,19 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
         UpdateLogs();
         yield return new WaitForSeconds(notification.displayTime);
         StartCoroutine(DisplayNotification());
+    }
+
+    public void RaiseTutorialNotification(TutorialNotification notification) {
+        _tutorialNotification.transform.GetChild(0).GetComponent<TMP_Text>().text = notification.messages[0];
+        _tutorialNotification.transform.GetChild(1).GetComponent<TMP_Text>().text = notification.messages[1];
+        _tutorialNotification.transform.GetChild(1).GetComponent<TMP_Text>().fontStyle = FontStyles.Bold;
+        _tutorialNotification.transform.GetChild(2).GetComponent<TMP_Text>().text = notification.messages[2];
+        //_tutorialNotificationMessage.text = notification.messages[0] + " " + notification.messages[1] + " " + notification.messages[2];
+        
+    }
+
+    public void EndTutorial() {
+        _tutorialNotification.SetActive(false);
     }
 
     public void LoadPersistentData(GameData gameData) {
