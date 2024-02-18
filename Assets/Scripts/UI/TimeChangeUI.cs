@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using LevelTimeChange;
@@ -23,6 +23,11 @@ namespace UI {
             
             ChangeSelectedTime(TimeChanger.Instance.actualTime);
         }
+
+        public void UpdateTimeUI() {
+            ChangeSelectedTime(TimeChanger.Instance.actualTime);
+        }
+
         private void Player_OnPlayerMoved(object sender, EventArgs e) {
             CheckTeleportAbilities();
         }
@@ -34,17 +39,17 @@ namespace UI {
         }
         private void TimeChanger_OnTimeChange(object sender, TimeChanger.OnTimeChangeEventArgs e) {
             ChangeSelectedTime(e.time);
-            CheckTeleportAbilities();
         }
 
         private void ChangeSelectedTime(TimeLine actualTime) {
             ToggleActualTime(past, actualTime == TimeLine.Past);
             ToggleActualTime(present, actualTime == TimeLine.Present);
             ToggleActualTime(future, actualTime == TimeLine.Future);
+            CheckTeleportAbilities();
         }
 
         private void ToggleActualTime(Image timeImage, bool actual) {
-            timeImage.color = actual ? selectedColor : Color.white;
+            timeImage.color = actual ? selectedColor : timeImage.color;
         }
 
         private void CheckTeleportAbility(Image timeImage, TimeLine time) {

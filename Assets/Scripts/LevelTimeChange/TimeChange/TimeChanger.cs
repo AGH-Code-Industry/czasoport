@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
@@ -6,6 +6,7 @@ using CustomInput;
 using DataPersistence;
 using UnityEngine.InputSystem;
 using Settings;
+using UI;
 
 namespace LevelTimeChange.TimeChange {
     /// <summary>
@@ -22,6 +23,8 @@ namespace LevelTimeChange.TimeChange {
         }
         
         [SerializeField] private Animator animator;
+        GameObject _timeChangeUIgo;
+        bool _timeChangeActivated = false;
 
         /// <summary>
         /// Timeline the player is currently on.
@@ -32,6 +35,8 @@ namespace LevelTimeChange.TimeChange {
         private TimePlatformChangeSettingsSO _settings;
         private Vector3 _timeJump;
         private TimeLine _newTimeLine;
+        [SerializeField]
+        private List<bool> _timeUnlocked = new List<bool>() { false, false, false};
 
         private void Awake() {
             Instance = this;
@@ -55,6 +60,9 @@ namespace LevelTimeChange.TimeChange {
                 objectToSpawn.transform.position = i * _timeJump + transform.position;
                 _boxes.Add(objectToSpawn.AddComponent<CheckCollider>());
             }
+
+            _timeChangeUIgo = FindObjectOfType<TimeChangeUI>().gameObject;
+            _timeChangeUIgo.SetActive(false);
         }
 
         private void OnEnable() {
@@ -116,15 +124,33 @@ namespace LevelTimeChange.TimeChange {
         /// Asks appropriate CheckCollider if Player can change time.
         /// </summary>
         public bool CanChangeTime(TimeLine timeToCheck) {
-            return _boxes[(int)timeToCheck - (int)actualTime + 2].IsNotTouching();
+            return _boxes[(int)timeToCheck - (int)actualTime + 2].IsNotTouching() && _timeUnlocked[(int)timeToCheck];
         }
 
         public void LoadPersistentData(GameData gameData) {
             actualTime = gameData.currentTimeline;
+            _timeUnlocked[(int)actualTime] = true;
+            if (_timeChangeActivated) _timeChangeUIgo.GetComponent<TimeChangeUI>().UpdateTimeUI();
         }
 
         public void SavePersistentData(ref GameData gameData) {
             gameData.currentTimeline = actualTime;
+        }
+
+        public void UnlockTimeline(TimeLine timelineToUnlock) {
+            _timeUnlocked[(int)timelineToUnlock] = true;
+        }
+
+        public void LockTimeline(TimeLine timelineToLock) {
+            _timeUnlocked[(int)timelineToLock] = false;
+        }
+
+        public bool IsTimeUnlocked(TimeLine timeLine) {
+            return _timeUnlocked[(int)timeLine];
+        }
+
+        public void EnableTimeChange() {
+            _timeChangeUIgo.SetActive(true);
         }
 
         public override string ToString() {
