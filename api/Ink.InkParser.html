@@ -1,0 +1,4064 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class InkParser | Czasoport Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class InkParser | Czasoport Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Ink_InkParser.md&amp;value=---%0Auid%3A%20Ink.InkParser%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ink.InkParser">
+
+
+
+  <h1 id="Ink_InkParser" data-uid="Ink.InkParser" class="text-break">
+Class InkParser  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Whitespace.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ink.html">Ink</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InkParser : StringParser</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Ink.StringParser.html">StringParser</a></div>
+      <div><span class="xref">InkParser</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseSuccess">StringParser.ParseSuccess</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_numbersCharacterSet">StringParser.numbersCharacterSet</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_errorHandler">StringParser.errorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_currentCharacter">StringParser.currentCharacter</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_state">StringParser.state</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_hadError">StringParser.hadError</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_BeginRule">StringParser.BeginRule()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_FailRule_System_Int32_">StringParser.FailRule(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_CancelRule_System_Int32_">StringParser.CancelRule(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_SucceedRule_System_Int32_System_Object_">StringParser.SucceedRule(int, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Expect_Ink_StringParser_ParseRule_System_String_Ink_StringParser_ParseRule_">StringParser.Expect(StringParser.ParseRule, string, StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Error_System_String_System_Boolean_">StringParser.Error(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ErrorWithParsedObject_System_String_Ink_Parsed_Object_System_Boolean_">StringParser.ErrorWithParsedObject(string, Object, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ErrorOnLine_System_String_System_Int32_System_Boolean_">StringParser.ErrorOnLine(string, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Warning_System_String_">StringParser.Warning(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_endOfInput">StringParser.endOfInput</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_remainingString">StringParser.remainingString</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_LineRemainder">StringParser.LineRemainder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_remainingLength">StringParser.remainingLength</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_inputString">StringParser.inputString</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_lineIndex">StringParser.lineIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_characterInLineIndex">StringParser.characterInLineIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_index">StringParser.index</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_SetFlag_System_UInt32_System_Boolean_">StringParser.SetFlag(uint, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_GetFlag_System_UInt32_">StringParser.GetFlag(uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseObject_Ink_StringParser_ParseRule_">StringParser.ParseObject(StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Parse__1_Ink_StringParser_SpecificParseRule___0__">StringParser.Parse&lt;T&gt;(StringParser.SpecificParseRule&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_OneOf_Ink_StringParser_ParseRule___">StringParser.OneOf(params StringParser.ParseRule[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_OneOrMore_Ink_StringParser_ParseRule_">StringParser.OneOrMore(StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Optional_Ink_StringParser_ParseRule_">StringParser.Optional(StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Exclude_Ink_StringParser_ParseRule_">StringParser.Exclude(StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_OptionalExclude_Ink_StringParser_ParseRule_">StringParser.OptionalExclude(StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_String_System_String_">StringParser.String(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Interleave__1_Ink_StringParser_ParseRule_Ink_StringParser_ParseRule_Ink_StringParser_ParseRule_System_Boolean_">StringParser.Interleave&lt;T&gt;(StringParser.ParseRule, StringParser.ParseRule, StringParser.ParseRule, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseString_System_String_">StringParser.ParseString(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseSingleCharacter">StringParser.ParseSingleCharacter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseUntilCharactersFromString_System_String_System_Int32_">StringParser.ParseUntilCharactersFromString(string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseUntilCharactersFromCharSet_Ink_CharacterSet_System_Int32_">StringParser.ParseUntilCharactersFromCharSet(CharacterSet, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseCharactersFromString_System_String_System_Int32_">StringParser.ParseCharactersFromString(string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseCharactersFromString_System_String_System_Boolean_System_Int32_">StringParser.ParseCharactersFromString(string, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseCharactersFromCharSet_Ink_CharacterSet_System_Boolean_System_Int32_">StringParser.ParseCharactersFromCharSet(CharacterSet, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Peek_Ink_StringParser_ParseRule_">StringParser.Peek(StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseUntil_Ink_StringParser_ParseRule_Ink_CharacterSet_Ink_CharacterSet_">StringParser.ParseUntil(StringParser.ParseRule, CharacterSet, CharacterSet)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseInt">StringParser.ParseInt()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseFloat">StringParser.ParseFloat()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseNewline">StringParser.ParseNewline()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Ink_InkParser__ctor_" data-uid="Ink.InkParser.#ctor*"></a>
+
+  <h3 id="Ink_InkParser__ctor_System_String_System_String_Ink_ErrorHandler_Ink_IFileHandler_" data-uid="Ink.InkParser.#ctor(System.String,System.String,Ink.ErrorHandler,Ink.IFileHandler)">
+  InkParser(string, string, ErrorHandler, IFileHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InkParser(string str, string filenameForMetadata = null, ErrorHandler externalErrorHandler = null, IFileHandler fileHandler = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>str</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>filenameForMetadata</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>externalErrorHandler</code> <a class="xref" href="Ink.ErrorHandler.html">ErrorHandler</a></dt>
+    <dd></dd>
+    <dt><code>fileHandler</code> <a class="xref" href="Ink.IFileHandler.html">IFileHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Ink_InkParser_Arabic" data-uid="Ink.InkParser.Arabic">
+  Arabic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly CharacterRange Arabic</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.CharacterRange.html">CharacterRange</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_InkParser_Armenian" data-uid="Ink.InkParser.Armenian">
+  Armenian
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly CharacterRange Armenian</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.CharacterRange.html">CharacterRange</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_InkParser_Cyrillic" data-uid="Ink.InkParser.Cyrillic">
+  Cyrillic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly CharacterRange Cyrillic</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.CharacterRange.html">CharacterRange</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_InkParser_Greek" data-uid="Ink.InkParser.Greek">
+  Greek
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly CharacterRange Greek</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.CharacterRange.html">CharacterRange</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_InkParser_Hebrew" data-uid="Ink.InkParser.Hebrew">
+  Hebrew
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly CharacterRange Hebrew</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.CharacterRange.html">CharacterRange</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_InkParser_Korean" data-uid="Ink.InkParser.Korean">
+  Korean
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly CharacterRange Korean</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.CharacterRange.html">CharacterRange</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_InkParser_Latin1Supplement" data-uid="Ink.InkParser.Latin1Supplement">
+  Latin1Supplement
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly CharacterRange Latin1Supplement</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.CharacterRange.html">CharacterRange</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_InkParser_LatinBasic" data-uid="Ink.InkParser.LatinBasic">
+  LatinBasic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly CharacterRange LatinBasic</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.CharacterRange.html">CharacterRange</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_InkParser_LatinExtendedA" data-uid="Ink.InkParser.LatinExtendedA">
+  LatinExtendedA
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly CharacterRange LatinExtendedA</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.CharacterRange.html">CharacterRange</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_InkParser_LatinExtendedB" data-uid="Ink.InkParser.LatinExtendedB">
+  LatinExtendedB
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly CharacterRange LatinExtendedB</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.CharacterRange.html">CharacterRange</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Ink_InkParser_parsingStringExpression_" data-uid="Ink.InkParser.parsingStringExpression*"></a>
+
+  <h3 id="Ink_InkParser_parsingStringExpression" data-uid="Ink.InkParser.parsingStringExpression">
+  parsingStringExpression
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool parsingStringExpression { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_tagActive_" data-uid="Ink.InkParser.tagActive*"></a>
+
+  <h3 id="Ink_InkParser_tagActive" data-uid="Ink.InkParser.tagActive">
+  tagActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool tagActive { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ink_InkParser_AnyWhitespace_" data-uid="Ink.InkParser.AnyWhitespace*"></a>
+
+  <h3 id="Ink_InkParser_AnyWhitespace" data-uid="Ink.InkParser.AnyWhitespace">
+  AnyWhitespace()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Whitespace.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object AnyWhitespace()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_AuthorWarning_" data-uid="Ink.InkParser.AuthorWarning*"></a>
+
+  <h3 id="Ink_InkParser_AuthorWarning" data-uid="Ink.InkParser.AuthorWarning">
+  AuthorWarning()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_AuthorWarning.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AuthorWarning AuthorWarning()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.AuthorWarning.html">AuthorWarning</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_BracketedKnotDeclArguments_" data-uid="Ink.InkParser.BracketedKnotDeclArguments*"></a>
+
+  <h3 id="Ink_InkParser_BracketedKnotDeclArguments" data-uid="Ink.InkParser.BracketedKnotDeclArguments">
+  BracketedKnotDeclArguments()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Knot.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;FlowBase.Argument&gt; BracketedKnotDeclArguments()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.FlowBase.html">FlowBase</a>.<a class="xref" href="Ink.Parsed.FlowBase.Argument.html">Argument</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_BracketedName_" data-uid="Ink.InkParser.BracketedName*"></a>
+
+  <h3 id="Ink_InkParser_BracketedName" data-uid="Ink.InkParser.BracketedName">
+  BracketedName()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Choices.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Identifier BracketedName()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Identifier.html">Identifier</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_Choice_" data-uid="Ink.InkParser.Choice*"></a>
+
+  <h3 id="Ink_InkParser_Choice" data-uid="Ink.InkParser.Choice">
+  Choice()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Choices.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Choice Choice()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Choice.html">Choice</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ChoiceCondition_" data-uid="Ink.InkParser.ChoiceCondition*"></a>
+
+  <h3 id="Ink_InkParser_ChoiceCondition" data-uid="Ink.InkParser.ChoiceCondition">
+  ChoiceCondition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Choices.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Expression ChoiceCondition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ChoiceConditionsSpace_" data-uid="Ink.InkParser.ChoiceConditionsSpace*"></a>
+
+  <h3 id="Ink_InkParser_ChoiceConditionsSpace" data-uid="Ink.InkParser.ChoiceConditionsSpace">
+  ChoiceConditionsSpace()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Choices.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object ChoiceConditionsSpace()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ChoiceSingleCondition_" data-uid="Ink.InkParser.ChoiceSingleCondition*"></a>
+
+  <h3 id="Ink_InkParser_ChoiceSingleCondition" data-uid="Ink.InkParser.ChoiceSingleCondition">
+  ChoiceSingleCondition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Choices.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Expression ChoiceSingleCondition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_CommandLineUserInput_" data-uid="Ink.InkParser.CommandLineUserInput*"></a>
+
+  <h3 id="Ink_InkParser_CommandLineUserInput" data-uid="Ink.InkParser.CommandLineUserInput">
+  CommandLineUserInput()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CommandLineInput.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommandLineInput CommandLineUserInput()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.CommandLineInput.html">CommandLineInput</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ConditionExpression_" data-uid="Ink.InkParser.ConditionExpression*"></a>
+
+  <h3 id="Ink_InkParser_ConditionExpression" data-uid="Ink.InkParser.ConditionExpression">
+  ConditionExpression()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Conditional.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Expression ConditionExpression()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ConstDeclaration_" data-uid="Ink.InkParser.ConstDeclaration*"></a>
+
+  <h3 id="Ink_InkParser_ConstDeclaration" data-uid="Ink.InkParser.ConstDeclaration">
+  ConstDeclaration()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Object ConstDeclaration()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ContentText_" data-uid="Ink.InkParser.ContentText*"></a>
+
+  <h3 id="Ink_InkParser_ContentText" data-uid="Ink.InkParser.ContentText">
+  ContentText()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Content.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Text ContentText()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Text.html">Text</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ContentTextAllowingEcapeChar_" data-uid="Ink.InkParser.ContentTextAllowingEcapeChar*"></a>
+
+  <h3 id="Ink_InkParser_ContentTextAllowingEcapeChar" data-uid="Ink.InkParser.ContentTextAllowingEcapeChar">
+  ContentTextAllowingEcapeChar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Content.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Text ContentTextAllowingEcapeChar()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Text.html">Text</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ContentTextNoEscape_" data-uid="Ink.InkParser.ContentTextNoEscape*"></a>
+
+  <h3 id="Ink_InkParser_ContentTextNoEscape" data-uid="Ink.InkParser.ContentTextNoEscape">
+  ContentTextNoEscape()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Content.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string ContentTextNoEscape()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_CreateDebugMetadata_" data-uid="Ink.InkParser.CreateDebugMetadata*"></a>
+
+  <h3 id="Ink_InkParser_CreateDebugMetadata_Ink_StringParserState_Element_Ink_StringParserState_Element_" data-uid="Ink.InkParser.CreateDebugMetadata(Ink.StringParserState.Element,Ink.StringParserState.Element)">
+  CreateDebugMetadata(Element, Element)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DebugMetadata CreateDebugMetadata(StringParserState.Element stateAtStart, StringParserState.Element stateAtEnd)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stateAtStart</code> <a class="xref" href="Ink.StringParserState.html">StringParserState</a>.<a class="xref" href="Ink.StringParserState.Element.html">Element</a></dt>
+    <dd></dd>
+    <dt><code>stateAtEnd</code> <a class="xref" href="Ink.StringParserState.html">StringParserState</a>.<a class="xref" href="Ink.StringParserState.Element.html">Element</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.DebugMetadata.html">DebugMetadata</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_DisallowIncrement_" data-uid="Ink.InkParser.DisallowIncrement*"></a>
+
+  <h3 id="Ink_InkParser_DisallowIncrement_Ink_Parsed_Object_" data-uid="Ink.InkParser.DisallowIncrement(Ink.Parsed.Object)">
+  DisallowIncrement(Object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void DisallowIncrement(Object expr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>expr</code> <a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_DivertIdentifierWithArguments_" data-uid="Ink.InkParser.DivertIdentifierWithArguments*"></a>
+
+  <h3 id="Ink_InkParser_DivertIdentifierWithArguments" data-uid="Ink.InkParser.DivertIdentifierWithArguments">
+  DivertIdentifierWithArguments()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Divert.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Divert DivertIdentifierWithArguments()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Divert.html">Divert</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ElseExpression_" data-uid="Ink.InkParser.ElseExpression*"></a>
+
+  <h3 id="Ink_InkParser_ElseExpression" data-uid="Ink.InkParser.ElseExpression">
+  ElseExpression()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Conditional.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object ElseExpression()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_EndOfFile_" data-uid="Ink.InkParser.EndOfFile*"></a>
+
+  <h3 id="Ink_InkParser_EndOfFile" data-uid="Ink.InkParser.EndOfFile">
+  EndOfFile()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Whitespace.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object EndOfFile()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_EndOfLine_" data-uid="Ink.InkParser.EndOfLine*"></a>
+
+  <h3 id="Ink_InkParser_EndOfLine" data-uid="Ink.InkParser.EndOfLine">
+  EndOfLine()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Whitespace.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object EndOfLine()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_EndTagIfNecessary_" data-uid="Ink.InkParser.EndTagIfNecessary*"></a>
+
+  <h3 id="Ink_InkParser_EndTagIfNecessary_Ink_Parsed_ContentList_" data-uid="Ink.InkParser.EndTagIfNecessary(Ink.Parsed.ContentList)">
+  EndTagIfNecessary(ContentList)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Tags.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EndTagIfNecessary(ContentList outputContentList)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputContentList</code> <a class="xref" href="Ink.Parsed.ContentList.html">ContentList</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_EndTagIfNecessary_" data-uid="Ink.InkParser.EndTagIfNecessary*"></a>
+
+  <h3 id="Ink_InkParser_EndTagIfNecessary_System_Collections_Generic_List_Ink_Parsed_Object__" data-uid="Ink.InkParser.EndTagIfNecessary(System.Collections.Generic.List{Ink.Parsed.Object})">
+  EndTagIfNecessary(List&lt;Object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Tags.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EndTagIfNecessary(List&lt;Object&gt; outputContentList)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>outputContentList</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.Object.html">Object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_Expression_" data-uid="Ink.InkParser.Expression*"></a>
+
+  <h3 id="Ink_InkParser_Expression" data-uid="Ink.InkParser.Expression">
+  Expression()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Expression Expression()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_Expression_" data-uid="Ink.InkParser.Expression*"></a>
+
+  <h3 id="Ink_InkParser_Expression_System_Int32_" data-uid="Ink.InkParser.Expression(System.Int32)">
+  Expression(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Expression Expression(int minimumPrecedence)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>minimumPrecedence</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionBool_" data-uid="Ink.InkParser.ExpressionBool*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionBool" data-uid="Ink.InkParser.ExpressionBool">
+  ExpressionBool()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Number ExpressionBool()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Number.html">Number</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionDivertTarget_" data-uid="Ink.InkParser.ExpressionDivertTarget*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionDivertTarget" data-uid="Ink.InkParser.ExpressionDivertTarget">
+  ExpressionDivertTarget()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Expression ExpressionDivertTarget()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionFloat_" data-uid="Ink.InkParser.ExpressionFloat*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionFloat" data-uid="Ink.InkParser.ExpressionFloat">
+  ExpressionFloat()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Number ExpressionFloat()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Number.html">Number</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionFunctionCall_" data-uid="Ink.InkParser.ExpressionFunctionCall*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionFunctionCall" data-uid="Ink.InkParser.ExpressionFunctionCall">
+  ExpressionFunctionCall()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Expression ExpressionFunctionCall()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionFunctionCallArguments_" data-uid="Ink.InkParser.ExpressionFunctionCallArguments*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionFunctionCallArguments" data-uid="Ink.InkParser.ExpressionFunctionCallArguments">
+  ExpressionFunctionCallArguments()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;Expression&gt; ExpressionFunctionCallArguments()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.Expression.html">Expression</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionInfixRight_" data-uid="Ink.InkParser.ExpressionInfixRight*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionInfixRight_Ink_Parsed_Expression_Ink_InkParser_InfixOperator_" data-uid="Ink.InkParser.ExpressionInfixRight(Ink.Parsed.Expression,Ink.InkParser.InfixOperator)">
+  ExpressionInfixRight(Expression, InfixOperator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Expression ExpressionInfixRight(Expression left, InkParser.InfixOperator op)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+    <dt><code>op</code> <a class="xref" href="Ink.InkParser.html">InkParser</a>.<a class="xref" href="Ink.InkParser.InfixOperator.html">InfixOperator</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionInt_" data-uid="Ink.InkParser.ExpressionInt*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionInt" data-uid="Ink.InkParser.ExpressionInt">
+  ExpressionInt()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Number ExpressionInt()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Number.html">Number</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionList_" data-uid="Ink.InkParser.ExpressionList*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionList" data-uid="Ink.InkParser.ExpressionList">
+  ExpressionList()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L418"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List ExpressionList()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.List.html">List</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionLiteral_" data-uid="Ink.InkParser.ExpressionLiteral*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionLiteral" data-uid="Ink.InkParser.ExpressionLiteral">
+  ExpressionLiteral()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Expression ExpressionLiteral()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionNot_" data-uid="Ink.InkParser.ExpressionNot*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionNot" data-uid="Ink.InkParser.ExpressionNot">
+  ExpressionNot()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string ExpressionNot()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionParen_" data-uid="Ink.InkParser.ExpressionParen*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionParen" data-uid="Ink.InkParser.ExpressionParen">
+  ExpressionParen()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Expression ExpressionParen()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionString_" data-uid="Ink.InkParser.ExpressionString*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionString" data-uid="Ink.InkParser.ExpressionString">
+  ExpressionString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected StringExpression ExpressionString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.StringExpression.html">StringExpression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionUnary_" data-uid="Ink.InkParser.ExpressionUnary*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionUnary" data-uid="Ink.InkParser.ExpressionUnary">
+  ExpressionUnary()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Expression ExpressionUnary()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExpressionVariableName_" data-uid="Ink.InkParser.ExpressionVariableName*"></a>
+
+  <h3 id="Ink_InkParser_ExpressionVariableName" data-uid="Ink.InkParser.ExpressionVariableName">
+  ExpressionVariableName()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Expression ExpressionVariableName()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ExternalDeclaration_" data-uid="Ink.InkParser.ExternalDeclaration*"></a>
+
+  <h3 id="Ink_InkParser_ExternalDeclaration" data-uid="Ink.InkParser.ExternalDeclaration">
+  ExternalDeclaration()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Knot.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ExternalDeclaration ExternalDeclaration()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.ExternalDeclaration.html">ExternalDeclaration</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_FlowDeclArgument_" data-uid="Ink.InkParser.FlowDeclArgument*"></a>
+
+  <h3 id="Ink_InkParser_FlowDeclArgument" data-uid="Ink.InkParser.FlowDeclArgument">
+  FlowDeclArgument()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Knot.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected FlowBase.Argument FlowDeclArgument()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.FlowBase.html">FlowBase</a>.<a class="xref" href="Ink.Parsed.FlowBase.Argument.html">Argument</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_Gather_" data-uid="Ink.InkParser.Gather*"></a>
+
+  <h3 id="Ink_InkParser_Gather" data-uid="Ink.InkParser.Gather">
+  Gather()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Choices.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Gather Gather()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Gather.html">Gather</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_GatherDashes_" data-uid="Ink.InkParser.GatherDashes*"></a>
+
+  <h3 id="Ink_InkParser_GatherDashes" data-uid="Ink.InkParser.GatherDashes">
+  GatherDashes()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Choices.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object GatherDashes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_Glue_" data-uid="Ink.InkParser.Glue*"></a>
+
+  <h3 id="Ink_InkParser_Glue" data-uid="Ink.InkParser.Glue">
+  Glue()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Glue Glue()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Glue.html">Glue</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_Identifier_" data-uid="Ink.InkParser.Identifier*"></a>
+
+  <h3 id="Ink_InkParser_Identifier" data-uid="Ink.InkParser.Identifier">
+  Identifier()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L402"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string Identifier()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_IdentifierWithMetadata_" data-uid="Ink.InkParser.IdentifierWithMetadata*"></a>
+
+  <h3 id="Ink_InkParser_IdentifierWithMetadata" data-uid="Ink.InkParser.IdentifierWithMetadata">
+  IdentifierWithMetadata()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L391"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Identifier IdentifierWithMetadata()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Identifier.html">Identifier</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_IncludeStatement_" data-uid="Ink.InkParser.IncludeStatement*"></a>
+
+  <h3 id="Ink_InkParser_IncludeStatement" data-uid="Ink.InkParser.IncludeStatement">
+  IncludeStatement()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Include.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object IncludeStatement()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_InlineConditionalBranches_" data-uid="Ink.InkParser.InlineConditionalBranches*"></a>
+
+  <h3 id="Ink_InkParser_InlineConditionalBranches" data-uid="Ink.InkParser.InlineConditionalBranches">
+  InlineConditionalBranches()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Conditional.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;ConditionalSingleBranch&gt; InlineConditionalBranches()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.ConditionalSingleBranch.html">ConditionalSingleBranch</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_InlineLogic_" data-uid="Ink.InkParser.InlineLogic*"></a>
+
+  <h3 id="Ink_InkParser_InlineLogic" data-uid="Ink.InkParser.InlineLogic">
+  InlineLogic()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Object InlineLogic()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_InlineLogicOrGlueOrStartTag_" data-uid="Ink.InkParser.InlineLogicOrGlueOrStartTag*"></a>
+
+  <h3 id="Ink_InkParser_InlineLogicOrGlueOrStartTag" data-uid="Ink.InkParser.InlineLogicOrGlueOrStartTag">
+  InlineLogicOrGlueOrStartTag()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Object InlineLogicOrGlueOrStartTag()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_InnerConditionalContent_" data-uid="Ink.InkParser.InnerConditionalContent*"></a>
+
+  <h3 id="Ink_InkParser_InnerConditionalContent" data-uid="Ink.InkParser.InnerConditionalContent">
+  InnerConditionalContent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Conditional.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Conditional InnerConditionalContent()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Conditional.html">Conditional</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_InnerConditionalContent_" data-uid="Ink.InkParser.InnerConditionalContent*"></a>
+
+  <h3 id="Ink_InkParser_InnerConditionalContent_Ink_Parsed_Expression_" data-uid="Ink.InkParser.InnerConditionalContent(Ink.Parsed.Expression)">
+  InnerConditionalContent(Expression)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Conditional.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Conditional InnerConditionalContent(Expression initialQueryExpression)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initialQueryExpression</code> <a class="xref" href="Ink.Parsed.Expression.html">Expression</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Conditional.html">Conditional</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_InnerExpression_" data-uid="Ink.InkParser.InnerExpression*"></a>
+
+  <h3 id="Ink_InkParser_InnerExpression" data-uid="Ink.InkParser.InnerExpression">
+  InnerExpression()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L382"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Object InnerExpression()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_InnerInlineSequenceObjects_" data-uid="Ink.InkParser.InnerInlineSequenceObjects*"></a>
+
+  <h3 id="Ink_InkParser_InnerInlineSequenceObjects" data-uid="Ink.InkParser.InnerInlineSequenceObjects">
+  InnerInlineSequenceObjects()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Sequences.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;ContentList&gt; InnerInlineSequenceObjects()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.ContentList.html">ContentList</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_InnerLogic_" data-uid="Ink.InkParser.InnerLogic*"></a>
+
+  <h3 id="Ink_InkParser_InnerLogic" data-uid="Ink.InkParser.InnerLogic">
+  InnerLogic()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Object InnerLogic()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_InnerMultilineSequenceObjects_" data-uid="Ink.InkParser.InnerMultilineSequenceObjects*"></a>
+
+  <h3 id="Ink_InkParser_InnerMultilineSequenceObjects" data-uid="Ink.InkParser.InnerMultilineSequenceObjects">
+  InnerMultilineSequenceObjects()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Sequences.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;ContentList&gt; InnerMultilineSequenceObjects()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.ContentList.html">ContentList</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_InnerSequence_" data-uid="Ink.InkParser.InnerSequence*"></a>
+
+  <h3 id="Ink_InkParser_InnerSequence" data-uid="Ink.InkParser.InnerSequence">
+  InnerSequence()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Sequences.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Sequence InnerSequence()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Sequence.html">Sequence</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_InnerSequenceObjects_" data-uid="Ink.InkParser.InnerSequenceObjects*"></a>
+
+  <h3 id="Ink_InkParser_InnerSequenceObjects" data-uid="Ink.InkParser.InnerSequenceObjects">
+  InnerSequenceObjects()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Sequences.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;ContentList&gt; InnerSequenceObjects()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.ContentList.html">ContentList</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_KnotDeclaration_" data-uid="Ink.InkParser.KnotDeclaration*"></a>
+
+  <h3 id="Ink_InkParser_KnotDeclaration" data-uid="Ink.InkParser.KnotDeclaration">
+  KnotDeclaration()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Knot.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected InkParser.FlowDecl KnotDeclaration()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.InkParser.html">InkParser</a>.<a class="xref" href="Ink.InkParser.FlowDecl.html">FlowDecl</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_KnotDefinition_" data-uid="Ink.InkParser.KnotDefinition*"></a>
+
+  <h3 id="Ink_InkParser_KnotDefinition" data-uid="Ink.InkParser.KnotDefinition">
+  KnotDefinition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Knot.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Knot KnotDefinition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Knot.html">Knot</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_KnotStitchNoContentRecoveryRule_" data-uid="Ink.InkParser.KnotStitchNoContentRecoveryRule*"></a>
+
+  <h3 id="Ink_InkParser_KnotStitchNoContentRecoveryRule" data-uid="Ink.InkParser.KnotStitchNoContentRecoveryRule">
+  KnotStitchNoContentRecoveryRule()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Knot.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object KnotStitchNoContentRecoveryRule()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_KnotTitleEquals_" data-uid="Ink.InkParser.KnotTitleEquals*"></a>
+
+  <h3 id="Ink_InkParser_KnotTitleEquals" data-uid="Ink.InkParser.KnotTitleEquals">
+  KnotTitleEquals()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Knot.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string KnotTitleEquals()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_Line_" data-uid="Ink.InkParser.Line*"></a>
+
+  <h3 id="Ink_InkParser_Line_Ink_StringParser_ParseRule_" data-uid="Ink.InkParser.Line(Ink.StringParser.ParseRule)">
+  Line(ParseRule)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Statements.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected StringParser.ParseRule Line(StringParser.ParseRule inlineRule)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineRule</code> <a class="xref" href="Ink.StringParser.html">StringParser</a>.<a class="xref" href="Ink.StringParser.ParseRule.html">ParseRule</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.StringParser.html">StringParser</a>.<a class="xref" href="Ink.StringParser.ParseRule.html">ParseRule</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_LineOfMixedTextAndLogic_" data-uid="Ink.InkParser.LineOfMixedTextAndLogic*"></a>
+
+  <h3 id="Ink_InkParser_LineOfMixedTextAndLogic" data-uid="Ink.InkParser.LineOfMixedTextAndLogic">
+  LineOfMixedTextAndLogic()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Content.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;Object&gt; LineOfMixedTextAndLogic()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.Object.html">Object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ListAllCharacterRanges_" data-uid="Ink.InkParser.ListAllCharacterRanges*"></a>
+
+  <h3 id="Ink_InkParser_ListAllCharacterRanges" data-uid="Ink.InkParser.ListAllCharacterRanges">
+  ListAllCharacterRanges()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_CharacterRanges.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an array of <a class="xref" href="Ink.CharacterRange.html">CharacterRange</a> representing all of the currently supported
+non-ASCII character ranges that can be used in identifier names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CharacterRange[] ListAllCharacterRanges()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.CharacterRange.html">CharacterRange</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="Ink.CharacterRange.html">CharacterRange</a> representing all of the currently supported
+non-ASCII character ranges that can be used in identifier names.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ListDeclaration_" data-uid="Ink.InkParser.ListDeclaration*"></a>
+
+  <h3 id="Ink_InkParser_ListDeclaration" data-uid="Ink.InkParser.ListDeclaration">
+  ListDeclaration()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected VariableAssignment ListDeclaration()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.VariableAssignment.html">VariableAssignment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ListDefinition_" data-uid="Ink.InkParser.ListDefinition*"></a>
+
+  <h3 id="Ink_InkParser_ListDefinition" data-uid="Ink.InkParser.ListDefinition">
+  ListDefinition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ListDefinition ListDefinition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.ListDefinition.html">ListDefinition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ListElementDefinition_" data-uid="Ink.InkParser.ListElementDefinition*"></a>
+
+  <h3 id="Ink_InkParser_ListElementDefinition" data-uid="Ink.InkParser.ListElementDefinition">
+  ListElementDefinition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ListElementDefinition ListElementDefinition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.ListElementDefinition.html">ListElementDefinition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ListElementDefinitionSeparator_" data-uid="Ink.InkParser.ListElementDefinitionSeparator*"></a>
+
+  <h3 id="Ink_InkParser_ListElementDefinitionSeparator" data-uid="Ink.InkParser.ListElementDefinitionSeparator">
+  ListElementDefinitionSeparator()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string ListElementDefinitionSeparator()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ListMember_" data-uid="Ink.InkParser.ListMember*"></a>
+
+  <h3 id="Ink_InkParser_ListMember" data-uid="Ink.InkParser.ListMember">
+  ListMember()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L445"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Identifier ListMember()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Identifier.html">Identifier</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_LogicLine_" data-uid="Ink.InkParser.LogicLine*"></a>
+
+  <h3 id="Ink_InkParser_LogicLine" data-uid="Ink.InkParser.LogicLine">
+  LogicLine()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Object LogicLine()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_MixedTextAndLogic_" data-uid="Ink.InkParser.MixedTextAndLogic*"></a>
+
+  <h3 id="Ink_InkParser_MixedTextAndLogic" data-uid="Ink.InkParser.MixedTextAndLogic">
+  MixedTextAndLogic()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Content.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;Object&gt; MixedTextAndLogic()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.Object.html">Object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_MultiDivert_" data-uid="Ink.InkParser.MultiDivert*"></a>
+
+  <h3 id="Ink_InkParser_MultiDivert" data-uid="Ink.InkParser.MultiDivert">
+  MultiDivert()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Divert.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;Object&gt; MultiDivert()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.Object.html">Object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_MultiSpaced_" data-uid="Ink.InkParser.MultiSpaced*"></a>
+
+  <h3 id="Ink_InkParser_MultiSpaced_Ink_StringParser_ParseRule_" data-uid="Ink.InkParser.MultiSpaced(Ink.StringParser.ParseRule)">
+  MultiSpaced(ParseRule)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Whitespace.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected StringParser.ParseRule MultiSpaced(StringParser.ParseRule rule)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rule</code> <a class="xref" href="Ink.StringParser.html">StringParser</a>.<a class="xref" href="Ink.StringParser.ParseRule.html">ParseRule</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.StringParser.html">StringParser</a>.<a class="xref" href="Ink.StringParser.ParseRule.html">ParseRule</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_MultilineConditionalBranches_" data-uid="Ink.InkParser.MultilineConditionalBranches*"></a>
+
+  <h3 id="Ink_InkParser_MultilineConditionalBranches" data-uid="Ink.InkParser.MultilineConditionalBranches">
+  MultilineConditionalBranches()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Conditional.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;ConditionalSingleBranch&gt; MultilineConditionalBranches()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.ConditionalSingleBranch.html">ConditionalSingleBranch</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_MultilineWhitespace_" data-uid="Ink.InkParser.MultilineWhitespace*"></a>
+
+  <h3 id="Ink_InkParser_MultilineWhitespace" data-uid="Ink.InkParser.MultilineWhitespace">
+  MultilineWhitespace()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Whitespace.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object MultilineWhitespace()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_Newline_" data-uid="Ink.InkParser.Newline*"></a>
+
+  <h3 id="Ink_InkParser_Newline" data-uid="Ink.InkParser.Newline">
+  Newline()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Whitespace.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object Newline()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_Parse_" data-uid="Ink.InkParser.Parse*"></a>
+
+  <h3 id="Ink_InkParser_Parse" data-uid="Ink.InkParser.Parse">
+  Parse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Story Parse()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Story.html">Story</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ParseDashNotArrow_" data-uid="Ink.InkParser.ParseDashNotArrow*"></a>
+
+  <h3 id="Ink_InkParser_ParseDashNotArrow" data-uid="Ink.InkParser.ParseDashNotArrow">
+  ParseDashNotArrow()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Choices.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object ParseDashNotArrow()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ParseDivertArrow_" data-uid="Ink.InkParser.ParseDivertArrow*"></a>
+
+  <h3 id="Ink_InkParser_ParseDivertArrow" data-uid="Ink.InkParser.ParseDivertArrow">
+  ParseDivertArrow()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Divert.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string ParseDivertArrow()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ParseDivertArrowOrTunnelOnwards_" data-uid="Ink.InkParser.ParseDivertArrowOrTunnelOnwards*"></a>
+
+  <h3 id="Ink_InkParser_ParseDivertArrowOrTunnelOnwards" data-uid="Ink.InkParser.ParseDivertArrowOrTunnelOnwards">
+  ParseDivertArrowOrTunnelOnwards()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Divert.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string ParseDivertArrowOrTunnelOnwards()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ParseTempKeyword_" data-uid="Ink.InkParser.ParseTempKeyword*"></a>
+
+  <h3 id="Ink_InkParser_ParseTempKeyword" data-uid="Ink.InkParser.ParseTempKeyword">
+  ParseTempKeyword()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool ParseTempKeyword()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ParseThreadArrow_" data-uid="Ink.InkParser.ParseThreadArrow*"></a>
+
+  <h3 id="Ink_InkParser_ParseThreadArrow" data-uid="Ink.InkParser.ParseThreadArrow">
+  ParseThreadArrow()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Divert.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string ParseThreadArrow()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_PreProcessInputString_" data-uid="Ink.InkParser.PreProcessInputString*"></a>
+
+  <h3 id="Ink_InkParser_PreProcessInputString_System_String_" data-uid="Ink.InkParser.PreProcessInputString(System.String)">
+  PreProcessInputString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override string PreProcessInputString(string str)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>str</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_ReturnStatement_" data-uid="Ink.InkParser.ReturnStatement*"></a>
+
+  <h3 id="Ink_InkParser_ReturnStatement" data-uid="Ink.InkParser.ReturnStatement">
+  ReturnStatement()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Return ReturnStatement()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Return.html">Return</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_RuleDidSucceed_" data-uid="Ink.InkParser.RuleDidSucceed*"></a>
+
+  <h3 id="Ink_InkParser_RuleDidSucceed_System_Object_Ink_StringParserState_Element_Ink_StringParserState_Element_" data-uid="Ink.InkParser.RuleDidSucceed(System.Object,Ink.StringParserState.Element,Ink.StringParserState.Element)">
+  RuleDidSucceed(object, Element, Element)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void RuleDidSucceed(object result, StringParserState.Element stateAtStart, StringParserState.Element stateAtEnd)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>stateAtStart</code> <a class="xref" href="Ink.StringParserState.html">StringParserState</a>.<a class="xref" href="Ink.StringParserState.Element.html">Element</a></dt>
+    <dd></dd>
+    <dt><code>stateAtEnd</code> <a class="xref" href="Ink.StringParserState.html">StringParserState</a>.<a class="xref" href="Ink.StringParserState.Element.html">Element</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_SeparatedList_" data-uid="Ink.InkParser.SeparatedList*"></a>
+
+  <h3 id="Ink_InkParser_SeparatedList__1_Ink_StringParser_SpecificParseRule___0__Ink_StringParser_ParseRule_" data-uid="Ink.InkParser.SeparatedList``1(Ink.StringParser.SpecificParseRule{``0},Ink.StringParser.ParseRule)">
+  SeparatedList&lt;T&gt;(SpecificParseRule&lt;T&gt;, ParseRule)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;T&gt; SeparatedList&lt;T&gt;(StringParser.SpecificParseRule&lt;T&gt; mainRule, StringParser.ParseRule separatorRule) where T : class</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mainRule</code> <a class="xref" href="Ink.StringParser.html">StringParser</a>.<a class="xref" href="Ink.StringParser.SpecificParseRule-1.html">SpecificParseRule</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>separatorRule</code> <a class="xref" href="Ink.StringParser.html">StringParser</a>.<a class="xref" href="Ink.StringParser.ParseRule.html">ParseRule</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_SequenceTypeAnnotation_" data-uid="Ink.InkParser.SequenceTypeAnnotation*"></a>
+
+  <h3 id="Ink_InkParser_SequenceTypeAnnotation" data-uid="Ink.InkParser.SequenceTypeAnnotation">
+  SequenceTypeAnnotation()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Sequences.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object SequenceTypeAnnotation()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_SequenceTypeSingleWord_" data-uid="Ink.InkParser.SequenceTypeSingleWord*"></a>
+
+  <h3 id="Ink_InkParser_SequenceTypeSingleWord" data-uid="Ink.InkParser.SequenceTypeSingleWord">
+  SequenceTypeSingleWord()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Sequences.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object SequenceTypeSingleWord()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_SequenceTypeSymbolAnnotation_" data-uid="Ink.InkParser.SequenceTypeSymbolAnnotation*"></a>
+
+  <h3 id="Ink_InkParser_SequenceTypeSymbolAnnotation" data-uid="Ink.InkParser.SequenceTypeSymbolAnnotation">
+  SequenceTypeSymbolAnnotation()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Sequences.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object SequenceTypeSymbolAnnotation()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_SequenceTypeWordAnnotation_" data-uid="Ink.InkParser.SequenceTypeWordAnnotation*"></a>
+
+  <h3 id="Ink_InkParser_SequenceTypeWordAnnotation" data-uid="Ink.InkParser.SequenceTypeWordAnnotation">
+  SequenceTypeWordAnnotation()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Sequences.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object SequenceTypeWordAnnotation()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_SingleDivert_" data-uid="Ink.InkParser.SingleDivert*"></a>
+
+  <h3 id="Ink_InkParser_SingleDivert" data-uid="Ink.InkParser.SingleDivert">
+  SingleDivert()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Divert.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Divert SingleDivert()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Divert.html">Divert</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_SingleMultilineCondition_" data-uid="Ink.InkParser.SingleMultilineCondition*"></a>
+
+  <h3 id="Ink_InkParser_SingleMultilineCondition" data-uid="Ink.InkParser.SingleMultilineCondition">
+  SingleMultilineCondition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Conditional.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ConditionalSingleBranch SingleMultilineCondition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.ConditionalSingleBranch.html">ConditionalSingleBranch</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_SingleMultilineSequenceElement_" data-uid="Ink.InkParser.SingleMultilineSequenceElement*"></a>
+
+  <h3 id="Ink_InkParser_SingleMultilineSequenceElement" data-uid="Ink.InkParser.SingleMultilineSequenceElement">
+  SingleMultilineSequenceElement()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Sequences.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ContentList SingleMultilineSequenceElement()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.ContentList.html">ContentList</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_SkipToNextLine_" data-uid="Ink.InkParser.SkipToNextLine*"></a>
+
+  <h3 id="Ink_InkParser_SkipToNextLine" data-uid="Ink.InkParser.SkipToNextLine">
+  SkipToNextLine()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Statements.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object SkipToNextLine()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_Spaced_" data-uid="Ink.InkParser.Spaced*"></a>
+
+  <h3 id="Ink_InkParser_Spaced_Ink_StringParser_ParseRule_" data-uid="Ink.InkParser.Spaced(Ink.StringParser.ParseRule)">
+  Spaced(ParseRule)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Whitespace.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected StringParser.ParseRule Spaced(StringParser.ParseRule rule)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rule</code> <a class="xref" href="Ink.StringParser.html">StringParser</a>.<a class="xref" href="Ink.StringParser.ParseRule.html">ParseRule</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.StringParser.html">StringParser</a>.<a class="xref" href="Ink.StringParser.ParseRule.html">ParseRule</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_StartTag_" data-uid="Ink.InkParser.StartTag*"></a>
+
+  <h3 id="Ink_InkParser_StartTag" data-uid="Ink.InkParser.StartTag">
+  StartTag()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Tags.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Object StartTag()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_StartThread_" data-uid="Ink.InkParser.StartThread*"></a>
+
+  <h3 id="Ink_InkParser_StartThread" data-uid="Ink.InkParser.StartThread">
+  StartThread()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Divert.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Divert StartThread()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Divert.html">Divert</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_StatementAtLevel_" data-uid="Ink.InkParser.StatementAtLevel*"></a>
+
+  <h3 id="Ink_InkParser_StatementAtLevel_Ink_InkParser_StatementLevel_" data-uid="Ink.InkParser.StatementAtLevel(Ink.InkParser.StatementLevel)">
+  StatementAtLevel(StatementLevel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Statements.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object StatementAtLevel(InkParser.StatementLevel level)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>level</code> <a class="xref" href="Ink.InkParser.html">InkParser</a>.<a class="xref" href="Ink.InkParser.StatementLevel.html">StatementLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_StatementsAtLevel_" data-uid="Ink.InkParser.StatementsAtLevel*"></a>
+
+  <h3 id="Ink_InkParser_StatementsAtLevel_Ink_InkParser_StatementLevel_" data-uid="Ink.InkParser.StatementsAtLevel(Ink.InkParser.StatementLevel)">
+  StatementsAtLevel(StatementLevel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Statements.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;Object&gt; StatementsAtLevel(InkParser.StatementLevel level)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>level</code> <a class="xref" href="Ink.InkParser.html">InkParser</a>.<a class="xref" href="Ink.InkParser.StatementLevel.html">StatementLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.Object.html">Object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_StatementsBreakForLevel_" data-uid="Ink.InkParser.StatementsBreakForLevel*"></a>
+
+  <h3 id="Ink_InkParser_StatementsBreakForLevel_Ink_InkParser_StatementLevel_" data-uid="Ink.InkParser.StatementsBreakForLevel(Ink.InkParser.StatementLevel)">
+  StatementsBreakForLevel(StatementLevel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Statements.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object StatementsBreakForLevel(InkParser.StatementLevel level)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>level</code> <a class="xref" href="Ink.InkParser.html">InkParser</a>.<a class="xref" href="Ink.InkParser.StatementLevel.html">StatementLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_StitchDeclaration_" data-uid="Ink.InkParser.StitchDeclaration*"></a>
+
+  <h3 id="Ink_InkParser_StitchDeclaration" data-uid="Ink.InkParser.StitchDeclaration">
+  StitchDeclaration()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Knot.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected InkParser.FlowDecl StitchDeclaration()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.InkParser.html">InkParser</a>.<a class="xref" href="Ink.InkParser.FlowDecl.html">FlowDecl</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_StitchDefinition_" data-uid="Ink.InkParser.StitchDefinition*"></a>
+
+  <h3 id="Ink_InkParser_StitchDefinition" data-uid="Ink.InkParser.StitchDefinition">
+  StitchDefinition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Knot.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object StitchDefinition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_TempDeclarationOrAssignment_" data-uid="Ink.InkParser.TempDeclarationOrAssignment*"></a>
+
+  <h3 id="Ink_InkParser_TempDeclarationOrAssignment" data-uid="Ink.InkParser.TempDeclarationOrAssignment">
+  TempDeclarationOrAssignment()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Expressions.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Object TempDeclarationOrAssignment()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_VariableDeclaration_" data-uid="Ink.InkParser.VariableDeclaration*"></a>
+
+  <h3 id="Ink_InkParser_VariableDeclaration" data-uid="Ink.InkParser.VariableDeclaration">
+  VariableDeclaration()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Logic.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Object VariableDeclaration()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_InkParser_Whitespace_" data-uid="Ink.InkParser.Whitespace*"></a>
+
+  <h3 id="Ink_InkParser_Whitespace" data-uid="Ink.InkParser.Whitespace">
+  Whitespace()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Whitespace.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object Whitespace()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/InkParser_Whitespace.cs/#L5" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          I was generated automatically
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

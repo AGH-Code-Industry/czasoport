@@ -1,0 +1,1247 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class InkEditorUtils | Czasoport Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class InkEditorUtils | Czasoport Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Ink_UnityIntegration_InkEditorUtils.md&amp;value=---%0Auid%3A%20Ink.UnityIntegration.InkEditorUtils%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ink.UnityIntegration.InkEditorUtils">
+
+
+
+  <h1 id="Ink_UnityIntegration_InkEditorUtils" data-uid="Ink.UnityIntegration.InkEditorUtils" class="text-break">
+Class InkEditorUtils  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ink.html">Ink</a>.<a class="xref" href="Ink.UnityIntegration.html">UnityIntegration</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class InkEditorUtils</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">InkEditorUtils</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_inkFileExtension" data-uid="Ink.UnityIntegration.InkEditorUtils.inkFileExtension">
+  inkFileExtension
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string inkFileExtension = &quot;.ink&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_inkLogoIcon_" data-uid="Ink.UnityIntegration.InkEditorUtils.inkLogoIcon*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_inkLogoIcon" data-uid="Ink.UnityIntegration.InkEditorUtils.inkLogoIcon">
+  inkLogoIcon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Texture2D inkLogoIcon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Texture2D</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_AbsoluteToUnityRelativePath_" data-uid="Ink.UnityIntegration.InkEditorUtils.AbsoluteToUnityRelativePath*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_AbsoluteToUnityRelativePath_System_String_" data-uid="Ink.UnityIntegration.InkEditorUtils.AbsoluteToUnityRelativePath(System.String)">
+  AbsoluteToUnityRelativePath(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string AbsoluteToUnityRelativePath(string fullPath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fullPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_CheckStoryIsValid_" data-uid="Ink.UnityIntegration.InkEditorUtils.CheckStoryIsValid*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_CheckStoryIsValid_System_String_Ink_Runtime_Story__" data-uid="Ink.UnityIntegration.InkEditorUtils.CheckStoryIsValid(System.String,Ink.Runtime.Story@)">
+  CheckStoryIsValid(string, out Story)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CheckStoryIsValid(string storyJSON, out Story story)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>storyJSON</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>story</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_CheckStoryIsValid_" data-uid="Ink.UnityIntegration.InkEditorUtils.CheckStoryIsValid*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_CheckStoryIsValid_System_String_System_Exception__" data-uid="Ink.UnityIntegration.InkEditorUtils.CheckStoryIsValid(System.String,System.Exception@)">
+  CheckStoryIsValid(string, out Exception)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CheckStoryIsValid(string storyJSON, out Exception exception)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>storyJSON</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_CheckStoryIsValid_" data-uid="Ink.UnityIntegration.InkEditorUtils.CheckStoryIsValid*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_CheckStoryIsValid_System_String_System_Exception__Ink_Runtime_Story__" data-uid="Ink.UnityIntegration.InkEditorUtils.CheckStoryIsValid(System.String,System.Exception@,Ink.Runtime.Story@)">
+  CheckStoryIsValid(string, out Exception, out Story)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CheckStoryIsValid(string storyJSON, out Exception exception, out Story story)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>storyJSON</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>story</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_CheckStoryStateIsValid_" data-uid="Ink.UnityIntegration.InkEditorUtils.CheckStoryStateIsValid*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_CheckStoryStateIsValid_System_String_System_String_" data-uid="Ink.UnityIntegration.InkEditorUtils.CheckStoryStateIsValid(System.String,System.String)">
+  CheckStoryStateIsValid(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CheckStoryStateIsValid(string storyJSON, string storyStateJSON)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>storyJSON</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>storyStateJSON</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_CombinePaths_" data-uid="Ink.UnityIntegration.InkEditorUtils.CombinePaths*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_CombinePaths_System_String_System_String_" data-uid="Ink.UnityIntegration.InkEditorUtils.CombinePaths(System.String,System.String)">
+  CombinePaths(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string CombinePaths(string firstPath, string secondPath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>firstPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>secondPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_CreateNewInkFileAtPath_" data-uid="Ink.UnityIntegration.InkEditorUtils.CreateNewInkFileAtPath*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_CreateNewInkFileAtPath_System_String_System_String_" data-uid="Ink.UnityIntegration.InkEditorUtils.CreateNewInkFileAtPath(System.String,System.String)">
+  CreateNewInkFileAtPath(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DefaultAsset CreateNewInkFileAtPath(string filePath, string text)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">DefaultAsset</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_CreateNewInkFileAtPathWithTemplateAndStartNameEditing_" data-uid="Ink.UnityIntegration.InkEditorUtils.CreateNewInkFileAtPathWithTemplateAndStartNameEditing*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_CreateNewInkFileAtPathWithTemplateAndStartNameEditing_System_String_System_String_" data-uid="Ink.UnityIntegration.InkEditorUtils.CreateNewInkFileAtPathWithTemplateAndStartNameEditing(System.String,System.String)">
+  CreateNewInkFileAtPathWithTemplateAndStartNameEditing(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateNewInkFileAtPathWithTemplateAndStartNameEditing(string filePath, string templateFileLocation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>templateFileLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_CreateNewInkFileAtSelectedPathWithTemplateAndStartNameEditing_" data-uid="Ink.UnityIntegration.InkEditorUtils.CreateNewInkFileAtSelectedPathWithTemplateAndStartNameEditing*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_CreateNewInkFileAtSelectedPathWithTemplateAndStartNameEditing" data-uid="Ink.UnityIntegration.InkEditorUtils.CreateNewInkFileAtSelectedPathWithTemplateAndStartNameEditing">
+  CreateNewInkFileAtSelectedPathWithTemplateAndStartNameEditing()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CreateNewInkFileAtSelectedPathWithTemplateAndStartNameEditing()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_CreateStoryStateTextFile_" data-uid="Ink.UnityIntegration.InkEditorUtils.CreateStoryStateTextFile*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_CreateStoryStateTextFile_System_String_System_String_System_String_" data-uid="Ink.UnityIntegration.InkEditorUtils.CreateStoryStateTextFile(System.String,System.String,System.String)">
+  CreateStoryStateTextFile(string, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextAsset CreateStoryStateTextFile(string jsonStoryState, string defaultPath = &quot;Assets/Ink&quot;, string defaultName = &quot;storyState&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jsonStoryState</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>defaultPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>defaultName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TextAsset</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_Donate_" data-uid="Ink.UnityIntegration.InkEditorUtils.Donate*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_Donate" data-uid="Ink.UnityIntegration.InkEditorUtils.Donate">
+  Donate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Donate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_DrawStoryPropertyField_" data-uid="Ink.UnityIntegration.InkEditorUtils.DrawStoryPropertyField*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_DrawStoryPropertyField_Ink_Runtime_Story_GUIContent_" data-uid="Ink.UnityIntegration.InkEditorUtils.DrawStoryPropertyField(Ink.Runtime.Story,GUIContent)">
+  DrawStoryPropertyField(Story, GUIContent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a property field for a story using GUILayout, allowing you to attach stories to the player window for debugging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DrawStoryPropertyField(Story story, GUIContent label)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>story</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd><p>Story.</p>
+</dd>
+    <dt><code>label</code> <span class="xref">GUIContent</span></dt>
+    <dd><p>Label.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_DrawStoryPropertyField_" data-uid="Ink.UnityIntegration.InkEditorUtils.DrawStoryPropertyField*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_DrawStoryPropertyField_Rect_Ink_Runtime_Story_GUIContent_" data-uid="Ink.UnityIntegration.InkEditorUtils.DrawStoryPropertyField(Rect,Ink.Runtime.Story,GUIContent)">
+  DrawStoryPropertyField(Rect, Story, GUIContent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a property field for a story using GUI, allowing you to attach stories to the player window for debugging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DrawStoryPropertyField(Rect position, Story story, GUIContent label)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <span class="xref">Rect</span></dt>
+    <dd><p>Position.</p>
+</dd>
+    <dt><code>story</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd><p>Story.</p>
+</dd>
+    <dt><code>label</code> <span class="xref">GUIContent</span></dt>
+    <dd><p>Label.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_FindAbsolutePluginDirectory_" data-uid="Ink.UnityIntegration.InkEditorUtils.FindAbsolutePluginDirectory*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_FindAbsolutePluginDirectory" data-uid="Ink.UnityIntegration.InkEditorUtils.FindAbsolutePluginDirectory">
+  FindAbsolutePluginDirectory()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L356"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string FindAbsolutePluginDirectory()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_FormatJson_" data-uid="Ink.UnityIntegration.InkEditorUtils.FormatJson*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_FormatJson_System_String_" data-uid="Ink.UnityIntegration.InkEditorUtils.FormatJson(System.String)">
+  FormatJson(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L326"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string FormatJson(string json)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>json</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_GetPackageInfo_" data-uid="Ink.UnityIntegration.InkEditorUtils.GetPackageInfo*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_GetPackageInfo" data-uid="Ink.UnityIntegration.InkEditorUtils.GetPackageInfo">
+  GetPackageInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L348"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UnityEditor.PackageManager.PackageInfo GetPackageInfo()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">PackageInfo</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_IsInkFile_" data-uid="Ink.UnityIntegration.InkEditorUtils.IsInkFile*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_IsInkFile_System_String_" data-uid="Ink.UnityIntegration.InkEditorUtils.IsInkFile(System.String)">
+  IsInkFile(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks to see if the given path is an ink file or not, regardless of extension.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsInkFile(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if it's an ink file, otherwise false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_OnPostprocessBuild_" data-uid="Ink.UnityIntegration.InkEditorUtils.OnPostprocessBuild*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_OnPostprocessBuild_BuildTarget_System_String_" data-uid="Ink.UnityIntegration.InkEditorUtils.OnPostprocessBuild(BuildTarget,System.String)">
+  OnPostprocessBuild(BuildTarget, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OnPostprocessBuild(BuildTarget target, string pathToBuiltProject)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <span class="xref">BuildTarget</span></dt>
+    <dd></dd>
+    <dt><code>pathToBuiltProject</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_OpenAPIDocumentation_" data-uid="Ink.UnityIntegration.InkEditorUtils.OpenAPIDocumentation*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_OpenAPIDocumentation" data-uid="Ink.UnityIntegration.InkEditorUtils.OpenAPIDocumentation">
+  OpenAPIDocumentation()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OpenAPIDocumentation()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_OpenAbout_" data-uid="Ink.UnityIntegration.InkEditorUtils.OpenAbout*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_OpenAbout" data-uid="Ink.UnityIntegration.InkEditorUtils.OpenAbout">
+  OpenAbout()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OpenAbout()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_OpenDiscord_" data-uid="Ink.UnityIntegration.InkEditorUtils.OpenDiscord*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_OpenDiscord" data-uid="Ink.UnityIntegration.InkEditorUtils.OpenDiscord">
+  OpenDiscord()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OpenDiscord()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_OpenInEditor_" data-uid="Ink.UnityIntegration.InkEditorUtils.OpenInEditor*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_OpenInEditor_Ink_UnityIntegration_InkFile_Ink_UnityIntegration_InkCompilerLog_" data-uid="Ink.UnityIntegration.InkEditorUtils.OpenInEditor(Ink.UnityIntegration.InkFile,Ink.UnityIntegration.InkCompilerLog)">
+  OpenInEditor(InkFile, InkCompilerLog)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens an ink file in the associated editor at the correct line number.
+TODO - If the editor is inky, this code should load the master file, but immediately show the correct child file at the correct line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OpenInEditor(InkFile inkFile, InkCompilerLog log)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inkFile</code> <a class="xref" href="Ink.UnityIntegration.InkFile.html">InkFile</a></dt>
+    <dd></dd>
+    <dt><code>log</code> <a class="xref" href="Ink.UnityIntegration.InkCompilerLog.html">InkCompilerLog</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_OpenInEditor_" data-uid="Ink.UnityIntegration.InkEditorUtils.OpenInEditor*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_OpenInEditor_System_String_System_String_System_Int32_" data-uid="Ink.UnityIntegration.InkEditorUtils.OpenInEditor(System.String,System.String,System.Int32)">
+  OpenInEditor(string, string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens an ink file in the associated editor at the correct line number.
+TODO - If the editor is inky, this code should load the master file, but immediately show the correct child file at the correct line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OpenInEditor(string masterFilePath, string subFilePath, int lineNumber)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>masterFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>subFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>lineNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_OpenWritingDocumentation_" data-uid="Ink.UnityIntegration.InkEditorUtils.OpenWritingDocumentation*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_OpenWritingDocumentation" data-uid="Ink.UnityIntegration.InkEditorUtils.OpenWritingDocumentation">
+  OpenWritingDocumentation()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OpenWritingDocumentation()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_RebuildLibrary_" data-uid="Ink.UnityIntegration.InkEditorUtils.RebuildLibrary*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_RebuildLibrary" data-uid="Ink.UnityIntegration.InkEditorUtils.RebuildLibrary">
+  RebuildLibrary()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RebuildLibrary()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_RecompileAll_" data-uid="Ink.UnityIntegration.InkEditorUtils.RecompileAll*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_RecompileAll" data-uid="Ink.UnityIntegration.InkEditorUtils.RecompileAll">
+  RecompileAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RecompileAll()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_RecompileAllImmediately_" data-uid="Ink.UnityIntegration.InkEditorUtils.RecompileAllImmediately*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_RecompileAllImmediately" data-uid="Ink.UnityIntegration.InkEditorUtils.RecompileAllImmediately">
+  RecompileAllImmediately()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RecompileAllImmediately()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_SanitizePathString_" data-uid="Ink.UnityIntegration.InkEditorUtils.SanitizePathString*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_SanitizePathString_System_String_" data-uid="Ink.UnityIntegration.InkEditorUtils.SanitizePathString(System.String)">
+  SanitizePathString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string SanitizePathString(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_StoryContainsVariables_" data-uid="Ink.UnityIntegration.InkEditorUtils.StoryContainsVariables*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_StoryContainsVariables_Ink_Runtime_Story_" data-uid="Ink.UnityIntegration.InkEditorUtils.StoryContainsVariables(Ink.Runtime.Story)">
+  StoryContainsVariables(Story)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool StoryContainsVariables(Story story)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>story</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkEditorUtils_UnityRelativeToAbsolutePath_" data-uid="Ink.UnityIntegration.InkEditorUtils.UnityRelativeToAbsolutePath*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkEditorUtils_UnityRelativeToAbsolutePath_System_String_" data-uid="Ink.UnityIntegration.InkEditorUtils.UnityRelativeToAbsolutePath(System.String)">
+  UnityRelativeToAbsolutePath(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string UnityRelativeToAbsolutePath(string filePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/InkEditorUtils.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          I was generated automatically
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

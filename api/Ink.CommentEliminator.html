@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CommentEliminator | Czasoport Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CommentEliminator | Czasoport Documentation ">
+      
+      <meta name="description" content="Pre-pass before main ink parser runs. It actually performs two main tasks:  comment elimination to simplify the parse rules in the main parser Conversion of Windows line endings (\r\n) to the simpler Unix style (\n), so we don&#39;t have to worry about them later.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Ink_CommentEliminator.md&amp;value=---%0Auid%3A%20Ink.CommentEliminator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ink.CommentEliminator">
+
+
+
+  <h1 id="Ink_CommentEliminator" data-uid="Ink.CommentEliminator" class="text-break">
+Class CommentEliminator  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/CommentEliminator.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ink.html">Ink</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Pre-pass before main ink parser runs. It actually performs two main tasks:</p>
+<ul>
+<li>comment elimination to simplify the parse rules in the main parser</li>
+<li>Conversion of Windows line endings (\r\n) to the simpler Unix style (\n), so
+we don't have to worry about them later.</li>
+</ul>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CommentEliminator : StringParser</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Ink.StringParser.html">StringParser</a></div>
+      <div><span class="xref">CommentEliminator</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseSuccess">StringParser.ParseSuccess</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_numbersCharacterSet">StringParser.numbersCharacterSet</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_errorHandler">StringParser.errorHandler</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_currentCharacter">StringParser.currentCharacter</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_state">StringParser.state</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_hadError">StringParser.hadError</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_PreProcessInputString_System_String_">StringParser.PreProcessInputString(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_BeginRule">StringParser.BeginRule()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_FailRule_System_Int32_">StringParser.FailRule(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_CancelRule_System_Int32_">StringParser.CancelRule(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_SucceedRule_System_Int32_System_Object_">StringParser.SucceedRule(int, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_RuleDidSucceed_System_Object_Ink_StringParserState_Element_Ink_StringParserState_Element_">StringParser.RuleDidSucceed(object, StringParserState.Element, StringParserState.Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Expect_Ink_StringParser_ParseRule_System_String_Ink_StringParser_ParseRule_">StringParser.Expect(StringParser.ParseRule, string, StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Error_System_String_System_Boolean_">StringParser.Error(string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ErrorWithParsedObject_System_String_Ink_Parsed_Object_System_Boolean_">StringParser.ErrorWithParsedObject(string, Object, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ErrorOnLine_System_String_System_Int32_System_Boolean_">StringParser.ErrorOnLine(string, int, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Warning_System_String_">StringParser.Warning(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_endOfInput">StringParser.endOfInput</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_remainingString">StringParser.remainingString</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_LineRemainder">StringParser.LineRemainder()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_remainingLength">StringParser.remainingLength</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_inputString">StringParser.inputString</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_lineIndex">StringParser.lineIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_characterInLineIndex">StringParser.characterInLineIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_index">StringParser.index</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_SetFlag_System_UInt32_System_Boolean_">StringParser.SetFlag(uint, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_GetFlag_System_UInt32_">StringParser.GetFlag(uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseObject_Ink_StringParser_ParseRule_">StringParser.ParseObject(StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Parse__1_Ink_StringParser_SpecificParseRule___0__">StringParser.Parse&lt;T&gt;(StringParser.SpecificParseRule&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_OneOf_Ink_StringParser_ParseRule___">StringParser.OneOf(params StringParser.ParseRule[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_OneOrMore_Ink_StringParser_ParseRule_">StringParser.OneOrMore(StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Optional_Ink_StringParser_ParseRule_">StringParser.Optional(StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Exclude_Ink_StringParser_ParseRule_">StringParser.Exclude(StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_OptionalExclude_Ink_StringParser_ParseRule_">StringParser.OptionalExclude(StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_String_System_String_">StringParser.String(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Interleave__1_Ink_StringParser_ParseRule_Ink_StringParser_ParseRule_Ink_StringParser_ParseRule_System_Boolean_">StringParser.Interleave&lt;T&gt;(StringParser.ParseRule, StringParser.ParseRule, StringParser.ParseRule, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseString_System_String_">StringParser.ParseString(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseSingleCharacter">StringParser.ParseSingleCharacter()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseUntilCharactersFromString_System_String_System_Int32_">StringParser.ParseUntilCharactersFromString(string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseUntilCharactersFromCharSet_Ink_CharacterSet_System_Int32_">StringParser.ParseUntilCharactersFromCharSet(CharacterSet, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseCharactersFromString_System_String_System_Int32_">StringParser.ParseCharactersFromString(string, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseCharactersFromString_System_String_System_Boolean_System_Int32_">StringParser.ParseCharactersFromString(string, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseCharactersFromCharSet_Ink_CharacterSet_System_Boolean_System_Int32_">StringParser.ParseCharactersFromCharSet(CharacterSet, bool, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_Peek_Ink_StringParser_ParseRule_">StringParser.Peek(StringParser.ParseRule)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseUntil_Ink_StringParser_ParseRule_Ink_CharacterSet_Ink_CharacterSet_">StringParser.ParseUntil(StringParser.ParseRule, CharacterSet, CharacterSet)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseInt">StringParser.ParseInt()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseFloat">StringParser.ParseFloat()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.StringParser.html#Ink_StringParser_ParseNewline">StringParser.ParseNewline()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Ink_CommentEliminator__ctor_" data-uid="Ink.CommentEliminator.#ctor*"></a>
+
+  <h3 id="Ink_CommentEliminator__ctor_System_String_" data-uid="Ink.CommentEliminator.#ctor(System.String)">
+  CommentEliminator(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/CommentEliminator.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommentEliminator(string input)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ink_CommentEliminator_Process_" data-uid="Ink.CommentEliminator.Process*"></a>
+
+  <h3 id="Ink_CommentEliminator_Process" data-uid="Ink.CommentEliminator.Process">
+  Process()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/CommentEliminator.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Process()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/InkParser/CommentEliminator.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          I was generated automatically
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

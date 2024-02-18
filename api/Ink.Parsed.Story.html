@@ -1,0 +1,825 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Story | Czasoport Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Story | Czasoport Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Ink_Parsed_Story.md&amp;value=---%0Auid%3A%20Ink.Parsed.Story%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ink.Parsed.Story">
+
+
+
+  <h1 id="Ink_Parsed_Story" data-uid="Ink.Parsed.Story" class="text-break">
+Class Story  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ink.html">Ink</a>.<a class="xref" href="Ink.Parsed.html">Parsed</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Story : FlowBase, INamedContent</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Ink.Parsed.Object.html">Object</a></div>
+      <div><a class="xref" href="Ink.Parsed.FlowBase.html">FlowBase</a></div>
+      <div><span class="xref">Story</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Ink.Parsed.INamedContent.html">INamedContent</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_name">FlowBase.name</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_identifier">FlowBase.identifier</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_arguments">FlowBase.arguments</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_hasParameters">FlowBase.hasParameters</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_variableDeclarations">FlowBase.variableDeclarations</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_isFunction">FlowBase.isFunction</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_ResolveVariableWithName_System_String_Ink_Parsed_Object_">FlowBase.ResolveVariableWithName(string, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_TryAddNewVariableDeclaration_Ink_Parsed_VariableAssignment_">FlowBase.TryAddNewVariableDeclaration(VariableAssignment)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_ResolveWeavePointNaming">FlowBase.ResolveWeavePointNaming()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_GenerateRuntimeObject">FlowBase.GenerateRuntimeObject()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_ContentWithNameAtLevel_System_String_System_Nullable_Ink_Parsed_FlowLevel__System_Boolean_">FlowBase.ContentWithNameAtLevel(string, FlowLevel?, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_ResolveReferences_Ink_Parsed_Story_">FlowBase.ResolveReferences(Story)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_subFlowsByName">FlowBase.subFlowsByName</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_typeName">FlowBase.typeName</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.FlowBase.html#Ink_Parsed_FlowBase_ToString">FlowBase.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_debugMetadata">Object.debugMetadata</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_hasOwnDebugMetadata">Object.hasOwnDebugMetadata</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_parent">Object.parent</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_content">Object.content</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_story">Object.story</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_runtimeObject">Object.runtimeObject</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_runtimePath">Object.runtimePath</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_containerForCounting">Object.containerForCounting</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_PathRelativeTo_Ink_Parsed_Object_">Object.PathRelativeTo(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_ancestry">Object.ancestry</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_descriptionOfScope">Object.descriptionOfScope</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_AddContent__1___0_">Object.AddContent&lt;T&gt;(T)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_AddContent__1_System_Collections_Generic_List___0__">Object.AddContent&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_InsertContent__1_System_Int32___0_">Object.InsertContent&lt;T&gt;(int, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_Find__1_Ink_Parsed_Object_FindQueryFunc___0__">Object.Find&lt;T&gt;(Object.FindQueryFunc&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_FindAll__1_Ink_Parsed_Object_FindQueryFunc___0__">Object.FindAll&lt;T&gt;(Object.FindQueryFunc&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_ClosestFlowBase">Object.ClosestFlowBase()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_Warning_System_String_Ink_Parsed_Object_">Object.Warning(string, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_Equals_System_Object_">Object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Parsed.Object.html#Ink_Parsed_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Ink_Parsed_Story__ctor_" data-uid="Ink.Parsed.Story.#ctor*"></a>
+
+  <h3 id="Ink_Parsed_Story__ctor_System_Collections_Generic_List_Ink_Parsed_Object__System_Boolean_" data-uid="Ink.Parsed.Story.#ctor(System.Collections.Generic.List{Ink.Parsed.Object},System.Boolean)">
+  Story(List&lt;Object&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Story(List&lt;Object&gt; toplevelObjects, bool isInclude = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>toplevelObjects</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.Object.html">Object</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>isInclude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Ink_Parsed_Story_constants" data-uid="Ink.Parsed.Story.constants">
+  constants
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, Expression&gt; constants</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Ink.Parsed.Expression.html">Expression</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_Parsed_Story_countAllVisits" data-uid="Ink.Parsed.Story.countAllVisits">
+  countAllVisits
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool countAllVisits</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_Parsed_Story_externals" data-uid="Ink.Parsed.Story.externals">
+  externals
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, ExternalDeclaration&gt; externals</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Ink.Parsed.ExternalDeclaration.html">ExternalDeclaration</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Ink_Parsed_Story_flowLevel_" data-uid="Ink.Parsed.Story.flowLevel*"></a>
+
+  <h3 id="Ink_Parsed_Story_flowLevel" data-uid="Ink.Parsed.Story.flowLevel">
+  flowLevel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override FlowLevel flowLevel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.FlowLevel.html">FlowLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ink_Parsed_Story_AddExternal_" data-uid="Ink.Parsed.Story.AddExternal*"></a>
+
+  <h3 id="Ink_Parsed_Story_AddExternal_Ink_Parsed_ExternalDeclaration_" data-uid="Ink.Parsed.Story.AddExternal(Ink.Parsed.ExternalDeclaration)">
+  AddExternal(ExternalDeclaration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddExternal(ExternalDeclaration decl)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>decl</code> <a class="xref" href="Ink.Parsed.ExternalDeclaration.html">ExternalDeclaration</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Parsed_Story_CheckForNamingCollisions_" data-uid="Ink.Parsed.Story.CheckForNamingCollisions*"></a>
+
+  <h3 id="Ink_Parsed_Story_CheckForNamingCollisions_Ink_Parsed_Object_Ink_Parsed_Identifier_Ink_Parsed_Story_SymbolType_System_String_" data-uid="Ink.Parsed.Story.CheckForNamingCollisions(Ink.Parsed.Object,Ink.Parsed.Identifier,Ink.Parsed.Story.SymbolType,System.String)">
+  CheckForNamingCollisions(Object, Identifier, SymbolType, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CheckForNamingCollisions(Object obj, Identifier identifier, Story.SymbolType symbolType, string typeNameOverride = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+    <dt><code>identifier</code> <a class="xref" href="Ink.Parsed.Identifier.html">Identifier</a></dt>
+    <dd></dd>
+    <dt><code>symbolType</code> <a class="xref" href="Ink.Parsed.Story.html">Story</a>.<a class="xref" href="Ink.Parsed.Story.SymbolType.html">SymbolType</a></dt>
+    <dd></dd>
+    <dt><code>typeNameOverride</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Parsed_Story_DontFlattenContainer_" data-uid="Ink.Parsed.Story.DontFlattenContainer*"></a>
+
+  <h3 id="Ink_Parsed_Story_DontFlattenContainer_Ink_Runtime_Container_" data-uid="Ink.Parsed.Story.DontFlattenContainer(Ink.Runtime.Container)">
+  DontFlattenContainer(Container)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L375"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DontFlattenContainer(Container container)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>container</code> <a class="xref" href="Ink.Runtime.Container.html">Container</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Parsed_Story_Error_" data-uid="Ink.Parsed.Story.Error*"></a>
+
+  <h3 id="Ink_Parsed_Story_Error_System_String_Ink_Parsed_Object_System_Boolean_" data-uid="Ink.Parsed.Story.Error(System.String,Ink.Parsed.Object,System.Boolean)">
+  Error(string, Object, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Error(string message, Object source, bool isWarning)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>source</code> <a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+    <dt><code>isWarning</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Parsed_Story_ExportRuntime_" data-uid="Ink.Parsed.Story.ExportRuntime*"></a>
+
+  <h3 id="Ink_Parsed_Story_ExportRuntime_Ink_ErrorHandler_" data-uid="Ink.Parsed.Story.ExportRuntime(Ink.ErrorHandler)">
+  ExportRuntime(ErrorHandler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Story ExportRuntime(ErrorHandler errorHandler = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>errorHandler</code> <a class="xref" href="Ink.ErrorHandler.html">ErrorHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Parsed_Story_IsExternal_" data-uid="Ink.Parsed.Story.IsExternal*"></a>
+
+  <h3 id="Ink_Parsed_Story_IsExternal_System_String_" data-uid="Ink.Parsed.Story.IsExternal(System.String)">
+  IsExternal(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExternal(string namedFuncTarget)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>namedFuncTarget</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Parsed_Story_IsReservedKeyword_" data-uid="Ink.Parsed.Story.IsReservedKeyword*"></a>
+
+  <h3 id="Ink_Parsed_Story_IsReservedKeyword_System_String_" data-uid="Ink.Parsed.Story.IsReservedKeyword(System.String)">
+  IsReservedKeyword(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsReservedKeyword(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Parsed_Story_PreProcessTopLevelObjects_" data-uid="Ink.Parsed.Story.PreProcessTopLevelObjects*"></a>
+
+  <h3 id="Ink_Parsed_Story_PreProcessTopLevelObjects_System_Collections_Generic_List_Ink_Parsed_Object__" data-uid="Ink.Parsed.Story.PreProcessTopLevelObjects(System.Collections.Generic.List{Ink.Parsed.Object})">
+  PreProcessTopLevelObjects(List&lt;Object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void PreProcessTopLevelObjects(List&lt;Object&gt; topLevelContent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topLevelContent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Parsed.Object.html">Object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Parsed_Story_ResetError_" data-uid="Ink.Parsed.Story.ResetError*"></a>
+
+  <h3 id="Ink_Parsed_Story_ResetError" data-uid="Ink.Parsed.Story.ResetError">
+  ResetError()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetError()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Parsed_Story_ResolveList_" data-uid="Ink.Parsed.Story.ResolveList*"></a>
+
+  <h3 id="Ink_Parsed_Story_ResolveList_System_String_" data-uid="Ink.Parsed.Story.ResolveList(System.String)">
+  ResolveList(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ListDefinition ResolveList(string listName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>listName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.ListDefinition.html">ListDefinition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Parsed_Story_ResolveListItem_" data-uid="Ink.Parsed.Story.ResolveListItem*"></a>
+
+  <h3 id="Ink_Parsed_Story_ResolveListItem_System_String_System_String_Ink_Parsed_Object_" data-uid="Ink.Parsed.Story.ResolveListItem(System.String,System.String,Ink.Parsed.Object)">
+  ResolveListItem(string, string, Object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ListElementDefinition ResolveListItem(string listName, string itemName, Object source = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>listName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>itemName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>source</code> <a class="xref" href="Ink.Parsed.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Parsed.ListElementDefinition.html">ListElementDefinition</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkCompiler/ParsedHierarchy/Story.cs/#L11" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          I was generated automatically
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

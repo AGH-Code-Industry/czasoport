@@ -1,0 +1,901 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class InkPlayerWindow | Czasoport Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class InkPlayerWindow | Czasoport Documentation ">
+      
+      <meta name="description" content="Ink player window. Tests stories in an editor window. Stories may be attached at runtime. InkPlayerWindow.DrawStoryPropertyField may be used for this.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Ink_UnityIntegration_InkPlayerWindow.md&amp;value=---%0Auid%3A%20Ink.UnityIntegration.InkPlayerWindow%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ink.UnityIntegration.InkPlayerWindow">
+
+
+
+  <h1 id="Ink_UnityIntegration_InkPlayerWindow" data-uid="Ink.UnityIntegration.InkPlayerWindow" class="text-break">
+Class InkPlayerWindow  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ink.html">Ink</a>.<a class="xref" href="Ink.UnityIntegration.html">UnityIntegration</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>Ink player window. Tests stories in an editor window.
+Stories may be attached at runtime. InkPlayerWindow.DrawStoryPropertyField may be used for this.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InkPlayerWindow : EditorWindow</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">InkPlayerWindow</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_OnChooseChoiceIndexOverride" data-uid="Ink.UnityIntegration.InkPlayerWindow.OnChooseChoiceIndexOverride">
+  OnChooseChoiceIndexOverride
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;int&gt; OnChooseChoiceIndexOverride</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_OnDidSetStory" data-uid="Ink.UnityIntegration.InkPlayerWindow.OnDidSetStory">
+  OnDidSetStory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;Story&gt; OnDidSetStory</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Ink.Runtime.Story.html">Story</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_OnDivertLabelOverride" data-uid="Ink.UnityIntegration.InkPlayerWindow.OnDivertLabelOverride">
+  OnDivertLabelOverride
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;string, GUIContent&gt; OnDivertLabelOverride</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <span class="xref">GUIContent</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_OnDivertOverride" data-uid="Ink.UnityIntegration.InkPlayerWindow.OnDivertOverride">
+  OnDivertOverride
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;string&gt; OnDivertOverride</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_contextMenuDelegates" data-uid="Ink.UnityIntegration.InkPlayerWindow.contextMenuDelegates">
+  contextMenuDelegates
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;InkPlayerWindow.ContextMenuDelegate&gt; contextMenuDelegates</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.UnityIntegration.InkPlayerWindow.html">InkPlayerWindow</a>.<a class="xref" href="Ink.UnityIntegration.InkPlayerWindow.ContextMenuDelegate.html">ContextMenuDelegate</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_playerOptions" data-uid="Ink.UnityIntegration.InkPlayerWindow.playerOptions">
+  playerOptions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InkPlayerWindow.PlayerOptions playerOptions</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.UnityIntegration.InkPlayerWindow.html">InkPlayerWindow</a>.<a class="xref" href="Ink.UnityIntegration.InkPlayerWindow.PlayerOptions.html">PlayerOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_playerParams" data-uid="Ink.UnityIntegration.InkPlayerWindow.playerParams">
+  playerParams
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InkPlayerWindow.InkPlayerParams playerParams</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.UnityIntegration.InkPlayerWindow.html">InkPlayerWindow</a>.<a class="xref" href="Ink.UnityIntegration.InkPlayerWindow.InkPlayerParams.html">InkPlayerParams</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_attached_" data-uid="Ink.UnityIntegration.InkPlayerWindow.attached*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_attached" data-uid="Ink.UnityIntegration.InkPlayerWindow.attached">
+  attached
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool attached { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_isOpen_" data-uid="Ink.UnityIntegration.InkPlayerWindow.isOpen*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_isOpen" data-uid="Ink.UnityIntegration.InkPlayerWindow.isOpen">
+  isOpen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool isOpen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_story_" data-uid="Ink.UnityIntegration.InkPlayerWindow.story*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_story" data-uid="Ink.UnityIntegration.InkPlayerWindow.story">
+  story
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Story story { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_storyStateTextAsset_" data-uid="Ink.UnityIntegration.InkPlayerWindow.storyStateTextAsset*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_storyStateTextAsset" data-uid="Ink.UnityIntegration.InkPlayerWindow.storyStateTextAsset">
+  storyStateTextAsset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TextAsset storyStateTextAsset { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TextAsset</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_visible_" data-uid="Ink.UnityIntegration.InkPlayerWindow.visible*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_visible" data-uid="Ink.UnityIntegration.InkPlayerWindow.visible">
+  visible
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool visible { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_Attach_" data-uid="Ink.UnityIntegration.InkPlayerWindow.Attach*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_Attach_Ink_Runtime_Story_" data-uid="Ink.UnityIntegration.InkPlayerWindow.Attach(Ink.Runtime.Story)">
+  Attach(Story)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Attach(Story story)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>story</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_Attach_" data-uid="Ink.UnityIntegration.InkPlayerWindow.Attach*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_Attach_Ink_Runtime_Story_Ink_UnityIntegration_InkPlayerWindow_InkPlayerParams_" data-uid="Ink.UnityIntegration.InkPlayerWindow.Attach(Ink.Runtime.Story,Ink.UnityIntegration.InkPlayerWindow.InkPlayerParams)">
+  Attach(Story, InkPlayerParams)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Attach(Story story, InkPlayerWindow.InkPlayerParams inkPlayerParams)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>story</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd></dd>
+    <dt><code>inkPlayerParams</code> <a class="xref" href="Ink.UnityIntegration.InkPlayerWindow.html">InkPlayerWindow</a>.<a class="xref" href="Ink.UnityIntegration.InkPlayerWindow.InkPlayerParams.html">InkPlayerParams</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_Detach_" data-uid="Ink.UnityIntegration.InkPlayerWindow.Detach*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_Detach" data-uid="Ink.UnityIntegration.InkPlayerWindow.Detach">
+  Detach()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Detach()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_DrawStoryPropertyField_" data-uid="Ink.UnityIntegration.InkPlayerWindow.DrawStoryPropertyField*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_DrawStoryPropertyField_Ink_Runtime_Story_Ink_UnityIntegration_InkPlayerWindow_InkPlayerParams_System_Boolean__GUIContent_System_Boolean_" data-uid="Ink.UnityIntegration.InkPlayerWindow.DrawStoryPropertyField(Ink.Runtime.Story,Ink.UnityIntegration.InkPlayerWindow.InkPlayerParams,System.Boolean@,GUIContent,System.Boolean)">
+  DrawStoryPropertyField(Story, InkPlayerParams, ref bool, GUIContent, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DrawStoryPropertyField(Story story, InkPlayerWindow.InkPlayerParams playerParams, ref bool expanded, GUIContent label, bool interactable = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>story</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd></dd>
+    <dt><code>playerParams</code> <a class="xref" href="Ink.UnityIntegration.InkPlayerWindow.html">InkPlayerWindow</a>.<a class="xref" href="Ink.UnityIntegration.InkPlayerWindow.InkPlayerParams.html">InkPlayerParams</a></dt>
+    <dd></dd>
+    <dt><code>expanded</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>label</code> <span class="xref">GUIContent</span></dt>
+    <dd></dd>
+    <dt><code>interactable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_DrawStoryPropertyField_" data-uid="Ink.UnityIntegration.InkPlayerWindow.DrawStoryPropertyField*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_DrawStoryPropertyField_Ink_Runtime_Story_System_Boolean__GUIContent_" data-uid="Ink.UnityIntegration.InkPlayerWindow.DrawStoryPropertyField(Ink.Runtime.Story,System.Boolean@,GUIContent)">
+  DrawStoryPropertyField(Story, ref bool, GUIContent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a property field for a story using GUILayout, allowing you to attach stories to the player window for debugging.
+An example of how this is used is found in the Demo scene.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DrawStoryPropertyField(Story story, ref bool expanded, GUIContent label)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>story</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd><p>Story.</p>
+</dd>
+    <dt><code>expanded</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>label</code> <span class="xref">GUIContent</span></dt>
+    <dd><p>Label.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_DrawStoryPropertyField_" data-uid="Ink.UnityIntegration.InkPlayerWindow.DrawStoryPropertyField*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_DrawStoryPropertyField_Rect_Ink_Runtime_Story_GUIContent_" data-uid="Ink.UnityIntegration.InkPlayerWindow.DrawStoryPropertyField(Rect,Ink.Runtime.Story,GUIContent)">
+  DrawStoryPropertyField(Rect, Story, GUIContent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws a property field for a story using GUI, allowing you to attach stories to the player window for debugging.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DrawStoryPropertyField(Rect position, Story story, GUIContent label)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <span class="xref">Rect</span></dt>
+    <dd><p>Position.</p>
+</dd>
+    <dt><code>story</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd><p>Story.</p>
+</dd>
+    <dt><code>label</code> <span class="xref">GUIContent</span></dt>
+    <dd><p>Label.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_GetGameWindowIsMaximised_" data-uid="Ink.UnityIntegration.InkPlayerWindow.GetGameWindowIsMaximised*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_GetGameWindowIsMaximised" data-uid="Ink.UnityIntegration.InkPlayerWindow.GetGameWindowIsMaximised">
+  GetGameWindowIsMaximised()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetGameWindowIsMaximised()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_GetWindow_" data-uid="Ink.UnityIntegration.InkPlayerWindow.GetWindow*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_GetWindow" data-uid="Ink.UnityIntegration.InkPlayerWindow.GetWindow">
+  GetWindow()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InkPlayerWindow GetWindow()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.UnityIntegration.InkPlayerWindow.html">InkPlayerWindow</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_GetWindow_" data-uid="Ink.UnityIntegration.InkPlayerWindow.GetWindow*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_GetWindow_System_Boolean_" data-uid="Ink.UnityIntegration.InkPlayerWindow.GetWindow(System.Boolean)">
+  GetWindow(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InkPlayerWindow GetWindow(bool focus)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>focus</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.UnityIntegration.InkPlayerWindow.html">InkPlayerWindow</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_LoadAndPlay_" data-uid="Ink.UnityIntegration.InkPlayerWindow.LoadAndPlay*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_LoadAndPlay_System_String_System_Boolean_" data-uid="Ink.UnityIntegration.InkPlayerWindow.LoadAndPlay(System.String,System.Boolean)">
+  LoadAndPlay(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LoadAndPlay(string storyJSON, bool focusWindow = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>storyJSON</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>focusWindow</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkPlayerWindow_LoadAndPlay_" data-uid="Ink.UnityIntegration.InkPlayerWindow.LoadAndPlay*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkPlayerWindow_LoadAndPlay_TextAsset_System_Boolean_" data-uid="Ink.UnityIntegration.InkPlayerWindow.LoadAndPlay(TextAsset,System.Boolean)">
+  LoadAndPlay(TextAsset, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LoadAndPlay(TextAsset storyJSONTextAsset, bool focusWindow = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>storyJSONTextAsset</code> <span class="xref">TextAsset</span></dt>
+    <dd></dd>
+    <dt><code>focusWindow</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Tools/Player Window/InkPlayerWindow.cs/#L18" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          I was generated automatically
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

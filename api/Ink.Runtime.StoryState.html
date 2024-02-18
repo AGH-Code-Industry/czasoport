@@ -1,0 +1,2151 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class StoryState | Czasoport Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class StoryState | Czasoport Documentation ">
+      
+      <meta name="description" content="All story state information is included in the StoryState class, including global variables, read counts, the pointer to the current point in the story, the call stack (for tunnels, functions, etc), and a few other smaller bits and pieces. You can save the current state using the json serialisation functions ToJson and LoadJson.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Ink_Runtime_StoryState.md&amp;value=---%0Auid%3A%20Ink.Runtime.StoryState%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ink.Runtime.StoryState">
+
+
+
+  <h1 id="Ink_Runtime_StoryState" data-uid="Ink.Runtime.StoryState" class="text-break">
+Class StoryState  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ink.html">Ink</a>.<a class="xref" href="Ink.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>All story state information is included in the StoryState class,
+including global variables, read counts, the pointer to the current
+point in the story, the call stack (for tunnels, functions, etc),
+and a few other smaller bits and pieces. You can save the current
+state using the json serialisation functions ToJson and LoadJson.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StoryState</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">StoryState</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Ink_Runtime_StoryState__ctor_" data-uid="Ink.Runtime.StoryState.#ctor*"></a>
+
+  <h3 id="Ink_Runtime_StoryState__ctor_Ink_Runtime_Story_" data-uid="Ink.Runtime.StoryState.#ctor(Ink.Runtime.Story)">
+  StoryState(Story)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L448"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StoryState(Story story)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>story</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Ink_Runtime_StoryState_kInkSaveStateVersion" data-uid="Ink.Runtime.StoryState.kInkSaveStateVersion">
+  kInkSaveStateVersion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current version of the state save file JSON-based format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int kInkSaveStateVersion = 10</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Ink_Runtime_StoryState_aliveFlowNames_" data-uid="Ink.Runtime.StoryState.aliveFlowNames*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_aliveFlowNames" data-uid="Ink.Runtime.StoryState.aliveFlowNames">
+  aliveFlowNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L415"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; aliveFlowNames { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_callStack_" data-uid="Ink.Runtime.StoryState.callStack*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_callStack" data-uid="Ink.Runtime.StoryState.callStack">
+  callStack
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CallStack callStack { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.CallStack.html">CallStack</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_callstackDepth_" data-uid="Ink.Runtime.StoryState.callstackDepth*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_callstackDepth" data-uid="Ink.Runtime.StoryState.callstackDepth">
+  callstackDepth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int callstackDepth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_canContinue_" data-uid="Ink.Runtime.StoryState.canContinue*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_canContinue" data-uid="Ink.Runtime.StoryState.canContinue">
+  canContinue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool canContinue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_currentChoices_" data-uid="Ink.Runtime.StoryState.currentChoices*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_currentChoices" data-uid="Ink.Runtime.StoryState.currentChoices">
+  currentChoices
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Choice&gt; currentChoices { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Runtime.Choice.html">Choice</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_currentErrors_" data-uid="Ink.Runtime.StoryState.currentErrors*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_currentErrors" data-uid="Ink.Runtime.StoryState.currentErrors">
+  currentErrors
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; currentErrors { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_currentFlowIsDefaultFlow_" data-uid="Ink.Runtime.StoryState.currentFlowIsDefaultFlow*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_currentFlowIsDefaultFlow" data-uid="Ink.Runtime.StoryState.currentFlowIsDefaultFlow">
+  currentFlowIsDefaultFlow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L409"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool currentFlowIsDefaultFlow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_currentFlowName_" data-uid="Ink.Runtime.StoryState.currentFlowName*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_currentFlowName" data-uid="Ink.Runtime.StoryState.currentFlowName">
+  currentFlowName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L403"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string currentFlowName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_currentPathString_" data-uid="Ink.Runtime.StoryState.currentPathString*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_currentPathString" data-uid="Ink.Runtime.StoryState.currentPathString">
+  currentPathString
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>String representation of the location where the story currently is.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string currentPathString { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_currentPointer_" data-uid="Ink.Runtime.StoryState.currentPointer*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_currentPointer" data-uid="Ink.Runtime.StoryState.currentPointer">
+  currentPointer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Pointer currentPointer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Pointer.html">Pointer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_currentTags_" data-uid="Ink.Runtime.StoryState.currentTags*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_currentTags" data-uid="Ink.Runtime.StoryState.currentTags">
+  currentTags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; currentTags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_currentText_" data-uid="Ink.Runtime.StoryState.currentText*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_currentText" data-uid="Ink.Runtime.StoryState.currentText">
+  currentText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string currentText { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_currentTurnIndex_" data-uid="Ink.Runtime.StoryState.currentTurnIndex*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_currentTurnIndex" data-uid="Ink.Runtime.StoryState.currentTurnIndex">
+  currentTurnIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int currentTurnIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_currentWarnings_" data-uid="Ink.Runtime.StoryState.currentWarnings*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_currentWarnings" data-uid="Ink.Runtime.StoryState.currentWarnings">
+  currentWarnings
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; currentWarnings { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_didSafeExit_" data-uid="Ink.Runtime.StoryState.didSafeExit*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_didSafeExit" data-uid="Ink.Runtime.StoryState.didSafeExit">
+  didSafeExit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool didSafeExit { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_divertedPointer_" data-uid="Ink.Runtime.StoryState.divertedPointer*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_divertedPointer" data-uid="Ink.Runtime.StoryState.divertedPointer">
+  divertedPointer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Pointer divertedPointer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Pointer.html">Pointer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_evaluationStack_" data-uid="Ink.Runtime.StoryState.evaluationStack*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_evaluationStack" data-uid="Ink.Runtime.StoryState.evaluationStack">
+  evaluationStack
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Object&gt; evaluationStack { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Runtime.Object.html">Object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_generatedChoices_" data-uid="Ink.Runtime.StoryState.generatedChoices*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_generatedChoices" data-uid="Ink.Runtime.StoryState.generatedChoices">
+  generatedChoices
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Choice&gt; generatedChoices { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Runtime.Choice.html">Choice</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_hasError_" data-uid="Ink.Runtime.StoryState.hasError*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_hasError" data-uid="Ink.Runtime.StoryState.hasError">
+  hasError
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool hasError { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_hasWarning_" data-uid="Ink.Runtime.StoryState.hasWarning*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_hasWarning" data-uid="Ink.Runtime.StoryState.hasWarning">
+  hasWarning
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool hasWarning { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_inExpressionEvaluation_" data-uid="Ink.Runtime.StoryState.inExpressionEvaluation*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_inExpressionEvaluation" data-uid="Ink.Runtime.StoryState.inExpressionEvaluation">
+  inExpressionEvaluation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L439"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool inExpressionEvaluation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_inStringEvaluation_" data-uid="Ink.Runtime.StoryState.inStringEvaluation*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_inStringEvaluation" data-uid="Ink.Runtime.StoryState.inStringEvaluation">
+  inStringEvaluation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1088"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool inStringEvaluation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_outputStream_" data-uid="Ink.Runtime.StoryState.outputStream*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_outputStream" data-uid="Ink.Runtime.StoryState.outputStream">
+  outputStream
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Object&gt; outputStream { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Runtime.Object.html">Object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_outputStreamContainsContent_" data-uid="Ink.Runtime.StoryState.outputStreamContainsContent*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_outputStreamContainsContent" data-uid="Ink.Runtime.StoryState.outputStreamContainsContent">
+  outputStreamContainsContent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1078"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool outputStreamContainsContent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_outputStreamEndsInNewline_" data-uid="Ink.Runtime.StoryState.outputStreamEndsInNewline*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_outputStreamEndsInNewline" data-uid="Ink.Runtime.StoryState.outputStreamEndsInNewline">
+  outputStreamEndsInNewline
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1056"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool outputStreamEndsInNewline { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_previousPointer_" data-uid="Ink.Runtime.StoryState.previousPointer*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_previousPointer" data-uid="Ink.Runtime.StoryState.previousPointer">
+  previousPointer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Pointer previousPointer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Pointer.html">Pointer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_previousRandom_" data-uid="Ink.Runtime.StoryState.previousRandom*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_previousRandom" data-uid="Ink.Runtime.StoryState.previousRandom">
+  previousRandom
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int previousRandom { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_story_" data-uid="Ink.Runtime.StoryState.story*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_story" data-uid="Ink.Runtime.StoryState.story">
+  story
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Story story { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Story.html">Story</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_storySeed_" data-uid="Ink.Runtime.StoryState.storySeed*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_storySeed" data-uid="Ink.Runtime.StoryState.storySeed">
+  storySeed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int storySeed { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_variablesState_" data-uid="Ink.Runtime.StoryState.variablesState*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_variablesState" data-uid="Ink.Runtime.StoryState.variablesState">
+  variablesState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VariablesState variablesState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.VariablesState.html">VariablesState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ink_Runtime_StoryState_AddError_" data-uid="Ink.Runtime.StoryState.AddError*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_AddError_System_String_System_Boolean_" data-uid="Ink.Runtime.StoryState.AddError(System.String,System.Boolean)">
+  AddError(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddError(string message, bool isWarning)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>isWarning</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_ApplyAnyPatch_" data-uid="Ink.Runtime.StoryState.ApplyAnyPatch*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_ApplyAnyPatch" data-uid="Ink.Runtime.StoryState.ApplyAnyPatch">
+  ApplyAnyPatch()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L607"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ApplyAnyPatch()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_CleanOutputWhitespace_" data-uid="Ink.Runtime.StoryState.CleanOutputWhitespace*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_CleanOutputWhitespace_System_String_" data-uid="Ink.Runtime.StoryState.CleanOutputWhitespace(System.String)">
+  CleanOutputWhitespace(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CleanOutputWhitespace(string str)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>str</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_CompleteFunctionEvaluationFromGame_" data-uid="Ink.Runtime.StoryState.CompleteFunctionEvaluationFromGame*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_CompleteFunctionEvaluationFromGame" data-uid="Ink.Runtime.StoryState.CompleteFunctionEvaluationFromGame">
+  CompleteFunctionEvaluationFromGame()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object CompleteFunctionEvaluationFromGame()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_CopyAndStartPatching_" data-uid="Ink.Runtime.StoryState.CopyAndStartPatching*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_CopyAndStartPatching" data-uid="Ink.Runtime.StoryState.CopyAndStartPatching">
+  CopyAndStartPatching()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L533"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StoryState CopyAndStartPatching()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.StoryState.html">StoryState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_ForceEnd_" data-uid="Ink.Runtime.StoryState.ForceEnd*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_ForceEnd" data-uid="Ink.Runtime.StoryState.ForceEnd">
+  ForceEnd()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ends the current ink flow, unwrapping the callstack but without
+affecting any variables. Useful if the ink is (say) in the middle
+a nested tunnel, and you want it to reset so that you can divert
+elsewhere using ChoosePathString(). Otherwise, after finishing
+the content you diverted to, it would continue where it left off.
+Calling this is equivalent to calling -&gt; END in ink.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ForceEnd()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_GoToStart_" data-uid="Ink.Runtime.StoryState.GoToStart*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_GoToStart" data-uid="Ink.Runtime.StoryState.GoToStart">
+  GoToStart()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L476"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GoToStart()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_IncrementVisitCountForContainer_" data-uid="Ink.Runtime.StoryState.IncrementVisitCountForContainer*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_IncrementVisitCountForContainer_Ink_Runtime_Container_" data-uid="Ink.Runtime.StoryState.IncrementVisitCountForContainer(Ink.Runtime.Container)">
+  IncrementVisitCountForContainer(Container)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void IncrementVisitCountForContainer(Container container)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>container</code> <a class="xref" href="Ink.Runtime.Container.html">Container</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_LoadJson_" data-uid="Ink.Runtime.StoryState.LoadJson*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_LoadJson_System_String_" data-uid="Ink.Runtime.StoryState.LoadJson(System.String)">
+  LoadJson(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a previously saved state in JSON format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadJson(string json)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>json</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The JSON string to load.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_PassArgumentsToEvaluationStack_" data-uid="Ink.Runtime.StoryState.PassArgumentsToEvaluationStack*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_PassArgumentsToEvaluationStack_System_Object___" data-uid="Ink.Runtime.StoryState.PassArgumentsToEvaluationStack(System.Object[])">
+  PassArgumentsToEvaluationStack(params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PassArgumentsToEvaluationStack(params object[] arguments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arguments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_PeekEvaluationStack_" data-uid="Ink.Runtime.StoryState.PeekEvaluationStack*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_PeekEvaluationStack" data-uid="Ink.Runtime.StoryState.PeekEvaluationStack">
+  PeekEvaluationStack()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Object PeekEvaluationStack()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_PopCallstack_" data-uid="Ink.Runtime.StoryState.PopCallstack*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_PopCallstack_System_Nullable_Ink_Runtime_PushPopType__" data-uid="Ink.Runtime.StoryState.PopCallstack(System.Nullable{Ink.Runtime.PushPopType})">
+  PopCallstack(PushPopType?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopCallstack(PushPopType? popType = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>popType</code> <a class="xref" href="Ink.Runtime.PushPopType.html">PushPopType</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_PopEvaluationStack_" data-uid="Ink.Runtime.StoryState.PopEvaluationStack*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_PopEvaluationStack" data-uid="Ink.Runtime.StoryState.PopEvaluationStack">
+  PopEvaluationStack()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Object PopEvaluationStack()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_PopEvaluationStack_" data-uid="Ink.Runtime.StoryState.PopEvaluationStack*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_PopEvaluationStack_System_Int32_" data-uid="Ink.Runtime.StoryState.PopEvaluationStack(System.Int32)">
+  PopEvaluationStack(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Object&gt; PopEvaluationStack(int numberOfObjects)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>numberOfObjects</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Runtime.Object.html">Object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_PopFromOutputStream_" data-uid="Ink.Runtime.StoryState.PopFromOutputStream*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_PopFromOutputStream_System_Int32_" data-uid="Ink.Runtime.StoryState.PopFromOutputStream(System.Int32)">
+  PopFromOutputStream(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L804"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopFromOutputStream(int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_PushEvaluationStack_" data-uid="Ink.Runtime.StoryState.PushEvaluationStack*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_PushEvaluationStack_Ink_Runtime_Object_" data-uid="Ink.Runtime.StoryState.PushEvaluationStack(Ink.Runtime.Object)">
+  PushEvaluationStack(Object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushEvaluationStack(Object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="Ink.Runtime.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_PushToOutputStream_" data-uid="Ink.Runtime.StoryState.PushToOutputStream*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_PushToOutputStream_Ink_Runtime_Object_" data-uid="Ink.Runtime.StoryState.PushToOutputStream(Ink.Runtime.Object)">
+  PushToOutputStream(Object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L785"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushToOutputStream(Object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="Ink.Runtime.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_RecordTurnIndexVisitToContainer_" data-uid="Ink.Runtime.StoryState.RecordTurnIndexVisitToContainer*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_RecordTurnIndexVisitToContainer_Ink_Runtime_Container_" data-uid="Ink.Runtime.StoryState.RecordTurnIndexVisitToContainer(Ink.Runtime.Container)">
+  RecordTurnIndexVisitToContainer(Container)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecordTurnIndexVisitToContainer(Container container)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>container</code> <a class="xref" href="Ink.Runtime.Container.html">Container</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_ResetErrors_" data-uid="Ink.Runtime.StoryState.ResetErrors*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_ResetErrors" data-uid="Ink.Runtime.StoryState.ResetErrors">
+  ResetErrors()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L770"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetErrors()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_ResetOutput_" data-uid="Ink.Runtime.StoryState.ResetOutput*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_ResetOutput_System_Collections_Generic_List_Ink_Runtime_Object__" data-uid="Ink.Runtime.StoryState.ResetOutput(System.Collections.Generic.List{Ink.Runtime.Object})">
+  ResetOutput(List&lt;Object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L776"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetOutput(List&lt;Object&gt; objs = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>objs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Runtime.Object.html">Object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_RestoreAfterPatch_" data-uid="Ink.Runtime.StoryState.RestoreAfterPatch*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_RestoreAfterPatch" data-uid="Ink.Runtime.StoryState.RestoreAfterPatch">
+  RestoreAfterPatch()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L597"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RestoreAfterPatch()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_SetChosenPath_" data-uid="Ink.Runtime.StoryState.SetChosenPath*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_SetChosenPath_Ink_Runtime_Path_System_Boolean_" data-uid="Ink.Runtime.StoryState.SetChosenPath(Ink.Runtime.Path,System.Boolean)">
+  SetChosenPath(Path, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetChosenPath(Path path, bool incrementingTurnIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="Ink.Runtime.Path.html">Path</a></dt>
+    <dd></dd>
+    <dt><code>incrementingTurnIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_StartFunctionEvaluationFromGame_" data-uid="Ink.Runtime.StoryState.StartFunctionEvaluationFromGame*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_StartFunctionEvaluationFromGame_Ink_Runtime_Container_System_Object___" data-uid="Ink.Runtime.StoryState.StartFunctionEvaluationFromGame(Ink.Runtime.Container,System.Object[])">
+  StartFunctionEvaluationFromGame(Container, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartFunctionEvaluationFromGame(Container funcContainer, params object[] arguments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcContainer</code> <a class="xref" href="Ink.Runtime.Container.html">Container</a></dt>
+    <dd></dd>
+    <dt><code>arguments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_ToJson_" data-uid="Ink.Runtime.StoryState.ToJson*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_ToJson" data-uid="Ink.Runtime.StoryState.ToJson">
+  ToJson()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exports the current state to json format, in order to save the game.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToJson()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The save state in json format.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_ToJson_" data-uid="Ink.Runtime.StoryState.ToJson*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_ToJson_System_IO_Stream_" data-uid="Ink.Runtime.StoryState.ToJson(System.IO.Stream)">
+  ToJson(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exports the current state to json format, in order to save the game.
+For this overload you can pass in a custom stream, such as a FileStream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToJson(Stream stream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_TryExitFunctionEvaluationFromGame_" data-uid="Ink.Runtime.StoryState.TryExitFunctionEvaluationFromGame*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_TryExitFunctionEvaluationFromGame" data-uid="Ink.Runtime.StoryState.TryExitFunctionEvaluationFromGame">
+  TryExitFunctionEvaluationFromGame()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L1251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryExitFunctionEvaluationFromGame()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_TurnsSinceForContainer_" data-uid="Ink.Runtime.StoryState.TurnsSinceForContainer*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_TurnsSinceForContainer_Ink_Runtime_Container_" data-uid="Ink.Runtime.StoryState.TurnsSinceForContainer(Ink.Runtime.Container)">
+  TurnsSinceForContainer(Container)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TurnsSinceForContainer(Container container)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>container</code> <a class="xref" href="Ink.Runtime.Container.html">Container</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_VisitCountAtPathString_" data-uid="Ink.Runtime.StoryState.VisitCountAtPathString*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_VisitCountAtPathString_System_String_" data-uid="Ink.Runtime.StoryState.VisitCountAtPathString(System.String)">
+  VisitCountAtPathString(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the visit/read count of a particular Container at the given path.
+For a knot or stitch, that path string will be in the form:</p>
+<pre><code>knot
+knot.stitch
+</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int VisitCountAtPathString(string pathString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pathString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The dot-separated path string of
+the specific knot or stitch.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of times the specific knot or stitch has
+been enountered by the ink engine.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_StoryState_VisitCountForContainer_" data-uid="Ink.Runtime.StoryState.VisitCountForContainer*"></a>
+
+  <h3 id="Ink_Runtime_StoryState_VisitCountForContainer_Ink_Runtime_Container_" data-uid="Ink.Runtime.StoryState.VisitCountForContainer(Ink.Runtime.Container)">
+  VisitCountForContainer(Container)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int VisitCountForContainer(Container container)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>container</code> <a class="xref" href="Ink.Runtime.Container.html">Container</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Ink_Runtime_StoryState_onDidLoadState" data-uid="Ink.Runtime.StoryState.onDidLoadState">
+  onDidLoadState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Callback for when a state is loaded</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onDidLoadState</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/StoryState.cs/#L16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          I was generated automatically
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

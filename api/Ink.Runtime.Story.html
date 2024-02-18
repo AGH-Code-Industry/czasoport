@@ -1,0 +1,2940 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Story | Czasoport Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Story | Czasoport Documentation ">
+      
+      <meta name="description" content="A Story is the core class that represents a complete Ink narrative, and manages the evaluation and state of it.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Ink_Runtime_Story.md&amp;value=---%0Auid%3A%20Ink.Runtime.Story%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ink.Runtime.Story">
+
+
+
+  <h1 id="Ink_Runtime_Story" data-uid="Ink.Runtime.Story" class="text-break">
+Class Story  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ink.html">Ink</a>.<a class="xref" href="Ink.Runtime.html">Runtime</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>A Story is the core class that represents a complete Ink narrative, and
+manages the evaluation and state of it.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Story : Object</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Ink.Runtime.Object.html">Object</a></div>
+      <div><span class="xref">Story</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_parent">Object.parent</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_debugMetadata">Object.debugMetadata</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_ownDebugMetadata">Object.ownDebugMetadata</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_DebugLineNumberOfPath_Ink_Runtime_Path_">Object.DebugLineNumberOfPath(Path)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_path">Object.path</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_ResolvePath_Ink_Runtime_Path_">Object.ResolvePath(Path)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_ConvertPathToRelative_Ink_Runtime_Path_">Object.ConvertPathToRelative(Path)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_CompactPathString_Ink_Runtime_Path_">Object.CompactPathString(Path)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_rootContentContainer">Object.rootContentContainer</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_Copy">Object.Copy()</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_SetChild__1___0____0_">Object.SetChild&lt;T&gt;(ref T, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_Equals_System_Object_">Object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Ink.Runtime.Object.html#Ink_Runtime_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Ink_Runtime_Story__ctor_" data-uid="Ink.Runtime.Story.#ctor*"></a>
+
+  <h3 id="Ink_Runtime_Story__ctor_Ink_Runtime_Container_System_Collections_Generic_List_Ink_Runtime_ListDefinition__" data-uid="Ink.Runtime.Story.#ctor(Ink.Runtime.Container,System.Collections.Generic.List{Ink.Runtime.ListDefinition})">
+  Story(Container, List&lt;ListDefinition&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Story(Container contentContainer, List&lt;ListDefinition&gt; lists = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>contentContainer</code> <a class="xref" href="Ink.Runtime.Container.html">Container</a></dt>
+    <dd></dd>
+    <dt><code>lists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Runtime.ListDefinition.html">ListDefinition</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story__ctor_" data-uid="Ink.Runtime.Story.#ctor*"></a>
+
+  <h3 id="Ink_Runtime_Story__ctor_System_String_" data-uid="Ink.Runtime.Story.#ctor(System.String)">
+  Story(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a Story object using a JSON string compiled through inklecate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Story(string jsonString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>jsonString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Ink_Runtime_Story_inkVersionCurrent" data-uid="Ink.Runtime.Story.inkVersionCurrent">
+  inkVersionCurrent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current version of the ink story file format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int inkVersionCurrent = 21</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Ink_Runtime_Story_aliveFlowNames_" data-uid="Ink.Runtime.Story.aliveFlowNames*"></a>
+
+  <h3 id="Ink_Runtime_Story_aliveFlowNames" data-uid="Ink.Runtime.Story.aliveFlowNames">
+  aliveFlowNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Names of currently alive flows (not including the default flow)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; aliveFlowNames { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_allowExternalFunctionFallbacks_" data-uid="Ink.Runtime.Story.allowExternalFunctionFallbacks*"></a>
+
+  <h3 id="Ink_Runtime_Story_allowExternalFunctionFallbacks" data-uid="Ink.Runtime.Story.allowExternalFunctionFallbacks">
+  allowExternalFunctionFallbacks
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L1913"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An ink file can provide a fallback functions for when when an EXTERNAL has been left
+unbound by the client, and the fallback function will be called instead. Useful when
+testing a story in playmode, when it's not possible to write a client-side C# external
+function, but you don't want it to fail to run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool allowExternalFunctionFallbacks { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_asyncContinueComplete_" data-uid="Ink.Runtime.Story.asyncContinueComplete*"></a>
+
+  <h3 id="Ink_Runtime_Story_asyncContinueComplete" data-uid="Ink.Runtime.Story.asyncContinueComplete">
+  asyncContinueComplete
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L400"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If ContinueAsync was called (with milliseconds limit &gt; 0) then this property
+will return false if the ink evaluation isn't yet finished, and you need to call
+it again in order for the Continue to fully complete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool asyncContinueComplete { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_canContinue_" data-uid="Ink.Runtime.Story.canContinue*"></a>
+
+  <h3 id="Ink_Runtime_Story_canContinue" data-uid="Ink.Runtime.Story.canContinue">
+  canContinue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L389"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check whether more content is available if you were to call <code>Continue()</code> - i.e.
+are we mid story rather than at a choice point or at the end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool canContinue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if it's possible to call <code>Continue()</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_currentChoices_" data-uid="Ink.Runtime.Story.currentChoices*"></a>
+
+  <h3 id="Ink_Runtime_Story_currentChoices" data-uid="Ink.Runtime.Story.currentChoices">
+  currentChoices
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The list of Choice objects available at the current point in
+the Story. This list will be populated as the Story is stepped
+through with the Continue() method. Once canContinue becomes
+false, this list will be populated, and is usually
+(but not always) on the final Continue() step.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Choice&gt; currentChoices { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.Runtime.Choice.html">Choice</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_currentErrors_" data-uid="Ink.Runtime.Story.currentErrors*"></a>
+
+  <h3 id="Ink_Runtime_Story_currentErrors" data-uid="Ink.Runtime.Story.currentErrors">
+  currentErrors
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Any errors generated during evaluation of the Story.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; currentErrors { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_currentFlowIsDefaultFlow_" data-uid="Ink.Runtime.Story.currentFlowIsDefaultFlow*"></a>
+
+  <h3 id="Ink_Runtime_Story_currentFlowIsDefaultFlow" data-uid="Ink.Runtime.Story.currentFlowIsDefaultFlow">
+  currentFlowIsDefaultFlow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the default flow currently active? By definition, will also return true if not using multi-flow functionality - see SwitchFlow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool currentFlowIsDefaultFlow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_currentFlowName_" data-uid="Ink.Runtime.Story.currentFlowName*"></a>
+
+  <h3 id="Ink_Runtime_Story_currentFlowName" data-uid="Ink.Runtime.Story.currentFlowName">
+  currentFlowName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current flow name if using multi-flow functionality - see SwitchFlow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string currentFlowName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_currentTags_" data-uid="Ink.Runtime.Story.currentTags*"></a>
+
+  <h3 id="Ink_Runtime_Story_currentTags" data-uid="Ink.Runtime.Story.currentTags">
+  currentTags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of tags as defined with '#' in source that were seen
+during the latest Continue() call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; currentTags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_currentText_" data-uid="Ink.Runtime.Story.currentText*"></a>
+
+  <h3 id="Ink_Runtime_Story_currentText" data-uid="Ink.Runtime.Story.currentText">
+  currentText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The latest line of text to be generated from a Continue() call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string currentText { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_currentWarnings_" data-uid="Ink.Runtime.Story.currentWarnings*"></a>
+
+  <h3 id="Ink_Runtime_Story_currentWarnings" data-uid="Ink.Runtime.Story.currentWarnings">
+  currentWarnings
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Any warnings generated during evaluation of the Story.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; currentWarnings { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_globalTags_" data-uid="Ink.Runtime.Story.globalTags*"></a>
+
+  <h3 id="Ink_Runtime_Story_globalTags" data-uid="Ink.Runtime.Story.globalTags">
+  globalTags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2517"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get any global tags associated with the story. These are defined as
+hash tags defined at the very top of the story.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; globalTags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_hasError_" data-uid="Ink.Runtime.Story.hasError*"></a>
+
+  <h3 id="Ink_Runtime_Story_hasError" data-uid="Ink.Runtime.Story.hasError">
+  hasError
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the currentErrors list contains any errors.
+THIS MAY BE REMOVED - you should be setting an error handler directly
+using Story.onError.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool hasError { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_hasWarning_" data-uid="Ink.Runtime.Story.hasWarning*"></a>
+
+  <h3 id="Ink_Runtime_Story_hasWarning" data-uid="Ink.Runtime.Story.hasWarning">
+  hasWarning
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the currentWarnings list contains any warnings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool hasWarning { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_listDefinitions_" data-uid="Ink.Runtime.Story.listDefinitions*"></a>
+
+  <h3 id="Ink_Runtime_Story_listDefinitions" data-uid="Ink.Runtime.Story.listDefinitions">
+  listDefinitions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ListDefinitionsOrigin listDefinitions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.ListDefinitionsOrigin.html">ListDefinitionsOrigin</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_mainContentContainer_" data-uid="Ink.Runtime.Story.mainContentContainer*"></a>
+
+  <h3 id="Ink_Runtime_Story_mainContentContainer" data-uid="Ink.Runtime.Story.mainContentContainer">
+  mainContentContainer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2882"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Container mainContentContainer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Container.html">Container</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_state_" data-uid="Ink.Runtime.Story.state*"></a>
+
+  <h3 id="Ink_Runtime_Story_state" data-uid="Ink.Runtime.Story.state">
+  state
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The entire current state of the story including (but not limited to):</p>
+<ul>
+<li>Global variables</li>
+<li>Temporary variables</li>
+<li>Read/visit and turn counts</li>
+<li>The callstack and evaluation stacks</li>
+<li>The current threads</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StoryState state { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.StoryState.html">StoryState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_variablesState_" data-uid="Ink.Runtime.Story.variablesState*"></a>
+
+  <h3 id="Ink_Runtime_Story_variablesState" data-uid="Ink.Runtime.Story.variablesState">
+  variablesState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The VariablesState object contains all the global variables in the story.
+However, note that there's more to the state of a Story than just the
+global variables. This is a convenience accessor to the full state object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VariablesState variablesState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.VariablesState.html">VariablesState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ink_Runtime_Story_BackgroundSaveComplete_" data-uid="Ink.Runtime.Story.BackgroundSaveComplete*"></a>
+
+  <h3 id="Ink_Runtime_Story_BackgroundSaveComplete" data-uid="Ink.Runtime.Story.BackgroundSaveComplete">
+  BackgroundSaveComplete()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L840"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>See CopyStateForBackgroundThreadSave. This method releases the
+&quot;frozen&quot; save state, applying its patch that it was using internally.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BackgroundSaveComplete()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_BindExternalFunction_" data-uid="Ink.Runtime.Story.BindExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_BindExternalFunction_System_String_System_Action_System_Boolean_" data-uid="Ink.Runtime.Story.BindExternalFunction(System.String,System.Action,System.Boolean)">
+  BindExternalFunction(string, Action, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2098"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bind a C# Action to an ink EXTERNAL function declaration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindExternalFunction(string funcName, Action act, bool lookaheadSafe = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>EXTERNAL ink function name to bind to.</p>
+</dd>
+    <dt><code>act</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>The C# action to bind.</p>
+</dd>
+    <dt><code>lookaheadSafe</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The ink engine often evaluates further
+than you might expect beyond the current line just in case it sees
+glue that will cause the two lines to become one. In this case it's
+possible that a function can appear to be called twice instead of
+just once, and earlier than you expect. If it's safe for your
+function to be called in this way (since the result and side effect
+of the function will not change), then you can pass 'true'.
+Usually, you want to pass 'false', especially if you want some action
+to be performed in game code when this function is called.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_BindExternalFunction_" data-uid="Ink.Runtime.Story.BindExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_BindExternalFunction_System_String_System_Func_System_Object__System_Boolean_" data-uid="Ink.Runtime.Story.BindExternalFunction(System.String,System.Func{System.Object},System.Boolean)">
+  BindExternalFunction(string, Func&lt;object&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2074"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bind a C# function to an ink EXTERNAL function declaration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindExternalFunction(string funcName, Func&lt;object&gt; func, bool lookaheadSafe = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>EXTERNAL ink function name to bind to.</p>
+</dd>
+    <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The C# function to bind.</p>
+</dd>
+    <dt><code>lookaheadSafe</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The ink engine often evaluates further
+than you might expect beyond the current line just in case it sees
+glue that will cause the two lines to become one. In this case it's
+possible that a function can appear to be called twice instead of
+just once, and earlier than you expect. If it's safe for your
+function to be called in this way (since the result and side effect
+of the function will not change), then you can pass 'true'.
+Usually, you want to pass 'false', especially if you want some action
+to be performed in game code when this function is called.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_BindExternalFunctionGeneral_" data-uid="Ink.Runtime.Story.BindExternalFunctionGeneral*"></a>
+
+  <h3 id="Ink_Runtime_Story_BindExternalFunctionGeneral_System_String_Ink_Runtime_Story_ExternalFunction_System_Boolean_" data-uid="Ink.Runtime.Story.BindExternalFunctionGeneral(System.String,Ink.Runtime.Story.ExternalFunction,System.Boolean)">
+  BindExternalFunctionGeneral(string, ExternalFunction, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2010"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Most general form of function binding that returns an object
+and takes an array of object parameters.
+The only way to bind a function with more than 3 arguments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindExternalFunctionGeneral(string funcName, Story.ExternalFunction func, bool lookaheadSafe = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>EXTERNAL ink function name to bind to.</p>
+</dd>
+    <dt><code>func</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a>.<a class="xref" href="Ink.Runtime.Story.ExternalFunction.html">ExternalFunction</a></dt>
+    <dd><p>The C# function to bind.</p>
+</dd>
+    <dt><code>lookaheadSafe</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The ink engine often evaluates further
+than you might expect beyond the current line just in case it sees
+glue that will cause the two lines to become one. In this case it's
+possible that a function can appear to be called twice instead of
+just once, and earlier than you expect. If it's safe for your
+function to be called in this way (since the result and side effect
+of the function will not change), then you can pass 'true'.
+Usually, you want to pass 'false', especially if you want some action
+to be performed in game code when this function is called.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_BindExternalFunction_" data-uid="Ink.Runtime.Story.BindExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_BindExternalFunction__1_System_String_System_Action___0__System_Boolean_" data-uid="Ink.Runtime.Story.BindExternalFunction``1(System.String,System.Action{``0},System.Boolean)">
+  BindExternalFunction&lt;T&gt;(string, Action&lt;T&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bind a C# action to an ink EXTERNAL function declaration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindExternalFunction&lt;T&gt;(string funcName, Action&lt;T&gt; act, bool lookaheadSafe = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>EXTERNAL ink function name to bind to.</p>
+</dd>
+    <dt><code>act</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>The C# action to bind.</p>
+</dd>
+    <dt><code>lookaheadSafe</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The ink engine often evaluates further
+than you might expect beyond the current line just in case it sees
+glue that will cause the two lines to become one. In this case it's
+possible that a function can appear to be called twice instead of
+just once, and earlier than you expect. If it's safe for your
+function to be called in this way (since the result and side effect
+of the function will not change), then you can pass 'true'.
+Usually, you want to pass 'false', especially if you want some action
+to be performed in game code when this function is called.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_BindExternalFunction_" data-uid="Ink.Runtime.Story.BindExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_BindExternalFunction__1_System_String_System_Func___0_System_Object__System_Boolean_" data-uid="Ink.Runtime.Story.BindExternalFunction``1(System.String,System.Func{``0,System.Object},System.Boolean)">
+  BindExternalFunction&lt;T&gt;(string, Func&lt;T, object&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bind a C# function to an ink EXTERNAL function declaration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindExternalFunction&lt;T&gt;(string funcName, Func&lt;T, object&gt; func, bool lookaheadSafe = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>EXTERNAL ink function name to bind to.</p>
+</dd>
+    <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The C# function to bind.</p>
+</dd>
+    <dt><code>lookaheadSafe</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The ink engine often evaluates further
+than you might expect beyond the current line just in case it sees
+glue that will cause the two lines to become one. In this case it's
+possible that a function can appear to be called twice instead of
+just once, and earlier than you expect. If it's safe for your
+function to be called in this way (since the result and side effect
+of the function will not change), then you can pass 'true'.
+Usually, you want to pass 'false', especially if you want some action
+to be performed in game code when this function is called.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_BindExternalFunction_" data-uid="Ink.Runtime.Story.BindExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_BindExternalFunction__2_System_String_System_Action___0___1__System_Boolean_" data-uid="Ink.Runtime.Story.BindExternalFunction``2(System.String,System.Action{``0,``1},System.Boolean)">
+  BindExternalFunction&lt;T1, T2&gt;(string, Action&lt;T1, T2&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bind a C# action to an ink EXTERNAL function declaration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindExternalFunction&lt;T1, T2&gt;(string funcName, Action&lt;T1, T2&gt; act, bool lookaheadSafe = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>EXTERNAL ink function name to bind to.</p>
+</dd>
+    <dt><code>act</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;T1, T2&gt;</dt>
+    <dd><p>The C# action to bind.</p>
+</dd>
+    <dt><code>lookaheadSafe</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The ink engine often evaluates further
+than you might expect beyond the current line just in case it sees
+glue that will cause the two lines to become one. In this case it's
+possible that a function can appear to be called twice instead of
+just once, and earlier than you expect. If it's safe for your
+function to be called in this way (since the result and side effect
+of the function will not change), then you can pass 'true'.
+Usually, you want to pass 'false', especially if you want some action
+to be performed in game code when this function is called.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T1</code></dt>
+    <dd></dd>
+    <dt><code>T2</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_BindExternalFunction_" data-uid="Ink.Runtime.Story.BindExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_BindExternalFunction__2_System_String_System_Func___0___1_System_Object__System_Boolean_" data-uid="Ink.Runtime.Story.BindExternalFunction``2(System.String,System.Func{``0,``1,System.Object},System.Boolean)">
+  BindExternalFunction&lt;T1, T2&gt;(string, Func&lt;T1, T2, object&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bind a C# function to an ink EXTERNAL function declaration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindExternalFunction&lt;T1, T2&gt;(string funcName, Func&lt;T1, T2, object&gt; func, bool lookaheadSafe = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>EXTERNAL ink function name to bind to.</p>
+</dd>
+    <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;T1, T2, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The C# function to bind.</p>
+</dd>
+    <dt><code>lookaheadSafe</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The ink engine often evaluates further
+than you might expect beyond the current line just in case it sees
+glue that will cause the two lines to become one. In this case it's
+possible that a function can appear to be called twice instead of
+just once, and earlier than you expect. If it's safe for your
+function to be called in this way (since the result and side effect
+of the function will not change), then you can pass 'true'.
+Usually, you want to pass 'false', especially if you want some action
+to be performed in game code when this function is called.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T1</code></dt>
+    <dd></dd>
+    <dt><code>T2</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_BindExternalFunction_" data-uid="Ink.Runtime.Story.BindExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_BindExternalFunction__3_System_String_System_Action___0___1___2__System_Boolean_" data-uid="Ink.Runtime.Story.BindExternalFunction``3(System.String,System.Action{``0,``1,``2},System.Boolean)">
+  BindExternalFunction&lt;T1, T2, T3&gt;(string, Action&lt;T1, T2, T3&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bind a C# action to an ink EXTERNAL function declaration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindExternalFunction&lt;T1, T2, T3&gt;(string funcName, Action&lt;T1, T2, T3&gt; act, bool lookaheadSafe = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>EXTERNAL ink function name to bind to.</p>
+</dd>
+    <dt><code>act</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-3">Action</a>&lt;T1, T2, T3&gt;</dt>
+    <dd><p>The C# action to bind.</p>
+</dd>
+    <dt><code>lookaheadSafe</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The ink engine often evaluates further
+than you might expect beyond the current line just in case it sees
+glue that will cause the two lines to become one. In this case it's
+possible that a function can appear to be called twice instead of
+just once, and earlier than you expect. If it's safe for your
+function to be called in this way (since the result and side effect
+of the function will not change), then you can pass 'true'.
+Usually, you want to pass 'false', especially if you want some action
+to be performed in game code when this function is called.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T1</code></dt>
+    <dd></dd>
+    <dt><code>T2</code></dt>
+    <dd></dd>
+    <dt><code>T3</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_BindExternalFunction_" data-uid="Ink.Runtime.Story.BindExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_BindExternalFunction__3_System_String_System_Func___0___1___2_System_Object__System_Boolean_" data-uid="Ink.Runtime.Story.BindExternalFunction``3(System.String,System.Func{``0,``1,``2,System.Object},System.Boolean)">
+  BindExternalFunction&lt;T1, T2, T3&gt;(string, Func&lt;T1, T2, T3, object&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bind a C# function to an ink EXTERNAL function declaration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindExternalFunction&lt;T1, T2, T3&gt;(string funcName, Func&lt;T1, T2, T3, object&gt; func, bool lookaheadSafe = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>EXTERNAL ink function name to bind to.</p>
+</dd>
+    <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;T1, T2, T3, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The C# function to bind.</p>
+</dd>
+    <dt><code>lookaheadSafe</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The ink engine often evaluates further
+than you might expect beyond the current line just in case it sees
+glue that will cause the two lines to become one. In this case it's
+possible that a function can appear to be called twice instead of
+just once, and earlier than you expect. If it's safe for your
+function to be called in this way (since the result and side effect
+of the function will not change), then you can pass 'true'.
+Usually, you want to pass 'false', especially if you want some action
+to be performed in game code when this function is called.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T1</code></dt>
+    <dd></dd>
+    <dt><code>T2</code></dt>
+    <dd></dd>
+    <dt><code>T3</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_BindExternalFunction_" data-uid="Ink.Runtime.Story.BindExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_BindExternalFunction__4_System_String_System_Action___0___1___2___3__System_Boolean_" data-uid="Ink.Runtime.Story.BindExternalFunction``4(System.String,System.Action{``0,``1,``2,``3},System.Boolean)">
+  BindExternalFunction&lt;T1, T2, T3, T4&gt;(string, Action&lt;T1, T2, T3, T4&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2314"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bind a C# action to an ink EXTERNAL function declaration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindExternalFunction&lt;T1, T2, T3, T4&gt;(string funcName, Action&lt;T1, T2, T3, T4&gt; act, bool lookaheadSafe = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>EXTERNAL ink function name to bind to.</p>
+</dd>
+    <dt><code>act</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-4">Action</a>&lt;T1, T2, T3, T4&gt;</dt>
+    <dd><p>The C# action to bind.</p>
+</dd>
+    <dt><code>lookaheadSafe</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The ink engine often evaluates further
+than you might expect beyond the current line just in case it sees
+glue that will cause the two lines to become one. In this case it's
+possible that a function can appear to be called twice instead of
+just once, and earlier than you expect. If it's safe for your
+function to be called in this way (since the result and side effect
+of the function will not change), then you can pass 'true'.
+Usually, you want to pass 'false', especially if you want some action
+to be performed in game code when this function is called.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T1</code></dt>
+    <dd></dd>
+    <dt><code>T2</code></dt>
+    <dd></dd>
+    <dt><code>T3</code></dt>
+    <dd></dd>
+    <dt><code>T4</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_BindExternalFunction_" data-uid="Ink.Runtime.Story.BindExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_BindExternalFunction__4_System_String_System_Func___0___1___2___3_System_Object__System_Boolean_" data-uid="Ink.Runtime.Story.BindExternalFunction``4(System.String,System.Func{``0,``1,``2,``3,System.Object},System.Boolean)">
+  BindExternalFunction&lt;T1, T2, T3, T4&gt;(string, Func&lt;T1, T2, T3, T4, object&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bind a C# function to an ink EXTERNAL function declaration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindExternalFunction&lt;T1, T2, T3, T4&gt;(string funcName, Func&lt;T1, T2, T3, T4, object&gt; func, bool lookaheadSafe = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>EXTERNAL ink function name to bind to.</p>
+</dd>
+    <dt><code>func</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-5">Func</a>&lt;T1, T2, T3, T4, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The C# function to bind.</p>
+</dd>
+    <dt><code>lookaheadSafe</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The ink engine often evaluates further
+than you might expect beyond the current line just in case it sees
+glue that will cause the two lines to become one. In this case it's
+possible that a function can appear to be called twice instead of
+just once, and earlier than you expect. If it's safe for your
+function to be called in this way (since the result and side effect
+of the function will not change), then you can pass 'true'.
+Usually, you want to pass 'false', especially if you want some action
+to be performed in game code when this function is called.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T1</code></dt>
+    <dd></dd>
+    <dt><code>T2</code></dt>
+    <dd></dd>
+    <dt><code>T3</code></dt>
+    <dd></dd>
+    <dt><code>T4</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_BuildStringOfHierarchy_" data-uid="Ink.Runtime.Story.BuildStringOfHierarchy*"></a>
+
+  <h3 id="Ink_Runtime_Story_BuildStringOfHierarchy" data-uid="Ink.Runtime.Story.BuildStringOfHierarchy">
+  BuildStringOfHierarchy()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2588"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Useful when debugging a (very short) story, to visualise the state of the
+story. Add this call as a watch and open the extended text. A left-arrow mark
+will denote the current point of the story.
+It's only recommended that this is used on very short debug stories, since
+it can end up generate a large quantity of text otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string BuildStringOfHierarchy()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_CallExternalFunction_" data-uid="Ink.Runtime.Story.CallExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_CallExternalFunction_System_String_System_Int32_" data-uid="Ink.Runtime.Story.CallExternalFunction(System.String,System.Int32)">
+  CallExternalFunction(string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L1927"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CallExternalFunction(string funcName, int numberOfArguments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>numberOfArguments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ChooseChoiceIndex_" data-uid="Ink.Runtime.Story.ChooseChoiceIndex*"></a>
+
+  <h3 id="Ink_Runtime_Story_ChooseChoiceIndex_System_Int32_" data-uid="Ink.Runtime.Story.ChooseChoiceIndex(System.Int32)">
+  ChooseChoiceIndex(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L1782"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Chooses the Choice from the currentChoices list with the given
+index. Internally, this sets the current content path to that
+pointed to by the Choice, ready to continue story evaluation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChooseChoiceIndex(int choiceIdx)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>choiceIdx</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ChoosePath_" data-uid="Ink.Runtime.Story.ChoosePath*"></a>
+
+  <h3 id="Ink_Runtime_Story_ChoosePath_Ink_Runtime_Path_System_Boolean_" data-uid="Ink.Runtime.Story.ChoosePath(Ink.Runtime.Path,System.Boolean)">
+  ChoosePath(Path, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L1769"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChoosePath(Path p, bool incrementingTurnIndex = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>p</code> <a class="xref" href="Ink.Runtime.Path.html">Path</a></dt>
+    <dd></dd>
+    <dt><code>incrementingTurnIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ChoosePathString_" data-uid="Ink.Runtime.Story.ChoosePathString*"></a>
+
+  <h3 id="Ink_Runtime_Story_ChoosePathString_System_String_System_Boolean_System_Object___" data-uid="Ink.Runtime.Story.ChoosePathString(System.String,System.Boolean,System.Object[])">
+  ChoosePathString(string, bool, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L1740"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Change the current position of the story to the given path. From here you can
+call Continue() to evaluate the next line.</p>
+<p>The path string is a dot-separated path as used internally by the engine.
+These examples should work:</p>
+<p>myKnot
+myKnot.myStitch</p>
+<p>Note however that this won't necessarily work:</p>
+<p>myKnot.myStitch.myLabelledChoice</p>
+<p>...because of the way that content is nested within a weave structure.</p>
+<p>By default this will reset the callstack beforehand, which means that any
+tunnels, threads or functions you were in at the time of calling will be
+discarded. This is different from the behaviour of ChooseChoiceIndex, which
+will always keep the callstack, since the choices are known to come from the
+correct state, and known their source thread.</p>
+<p>You have the option of passing false to the resetCallstack parameter if you
+don't want this behaviour, and will leave any active threads, tunnels or
+function calls in-tact.</p>
+<p>This is potentially dangerous! If you're in the middle of a tunnel,
+it'll redirect only the inner-most tunnel, meaning that when you tunnel-return
+using '-&gt;-&gt;', it'll return to where you were before. This may be what you
+want though. However, if you're in the middle of a function, ChoosePathString
+will throw an exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChoosePathString(string path, bool resetCallstack = true, params object[] arguments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A dot-separted path string, as specified above.</p>
+</dd>
+    <dt><code>resetCallstack</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to reset the callstack first (see summary description).</p>
+</dd>
+    <dt><code>arguments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Optional set of arguments to pass, if path is to a knot that takes them.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ContentAtPath_" data-uid="Ink.Runtime.Story.ContentAtPath*"></a>
+
+  <h3 id="Ink_Runtime_Story_ContentAtPath_Ink_Runtime_Path_" data-uid="Ink.Runtime.Story.ContentAtPath(Ink.Runtime.Path)">
+  ContentAtPath(Path)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L728"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SearchResult ContentAtPath(Path path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="Ink.Runtime.Path.html">Path</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.SearchResult.html">SearchResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_Continue_" data-uid="Ink.Runtime.Story.Continue*"></a>
+
+  <h3 id="Ink_Runtime_Story_Continue" data-uid="Ink.Runtime.Story.Continue">
+  Continue()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Continue the story for one line of content, if possible.
+If you're not sure if there's more content available, for example if you
+want to check whether you're at a choice point or at the end of the story,
+you should call <code>canContinue</code> before calling this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Continue()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The line of text content.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ContinueAsync_" data-uid="Ink.Runtime.Story.ContinueAsync*"></a>
+
+  <h3 id="Ink_Runtime_Story_ContinueAsync_System_Single_" data-uid="Ink.Runtime.Story.ContinueAsync(System.Single)">
+  ContinueAsync(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L416"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An &quot;asnychronous&quot; version of Continue that only partially evaluates the ink,
+with a budget of a certain time limit. It will exit ink evaluation early if
+the evaluation isn't complete within the time limit, with the
+asyncContinueComplete property being false.
+This is useful if ink evaluation takes a long time, and you want to distribute
+it over multiple game frames for smoother animation.
+If you pass a limit of zero, then it will fully evaluate the ink in the same
+way as calling Continue (and in fact, this exactly what Continue does internally).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ContinueAsync(float millisecsLimitAsync)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>millisecsLimitAsync</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ContinueMaximally_" data-uid="Ink.Runtime.Story.ContinueMaximally*"></a>
+
+  <h3 id="Ink_Runtime_Story_ContinueMaximally" data-uid="Ink.Runtime.Story.ContinueMaximally">
+  ContinueMaximally()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L715"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Continue the story until the next choice point or until it runs out of content.
+This is as opposed to the Continue() method which only evaluates one line of
+output at a time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ContinueMaximally()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The resulting text evaluated by the ink engine, concatenated together.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_CopyStateForBackgroundThreadSave_" data-uid="Ink.Runtime.Story.CopyStateForBackgroundThreadSave*"></a>
+
+  <h3 id="Ink_Runtime_Story_CopyStateForBackgroundThreadSave" data-uid="Ink.Runtime.Story.CopyStateForBackgroundThreadSave">
+  CopyStateForBackgroundThreadSave()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L826"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Advanced usage!
+If you have a large story, and saving state to JSON takes too long for your
+framerate, you can temporarily freeze a copy of the state for saving on
+a separate thread. Internally, the engine maintains a &quot;diff patch&quot;.
+When you've finished saving your state, call BackgroundSaveComplete()
+and that diff patch will be applied, allowing the story to continue
+in its usual mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StoryState CopyStateForBackgroundThreadSave()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.StoryState.html">StoryState</a></dt>
+    <dd><p>The state for background thread save.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_EndProfiling_" data-uid="Ink.Runtime.Story.EndProfiling*"></a>
+
+  <h3 id="Ink_Runtime_Story_EndProfiling" data-uid="Ink.Runtime.Story.EndProfiling">
+  EndProfiling()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stop recording ink profiling information during calls to Continue on Story.
+To generate a report from the profiler, call</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EndProfiling()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_Error_" data-uid="Ink.Runtime.Story.Error*"></a>
+
+  <h3 id="Ink_Runtime_Story_Error_System_String_System_Boolean_" data-uid="Ink.Runtime.Story.Error(System.String,System.Boolean)">
+  Error(string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2783"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Error(string message, bool useEndLineNumber = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>useEndLineNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_EvaluateExpression_" data-uid="Ink.Runtime.Story.EvaluateExpression*"></a>
+
+  <h3 id="Ink_Runtime_Story_EvaluateExpression_Ink_Runtime_Container_" data-uid="Ink.Runtime.Story.EvaluateExpression(Ink.Runtime.Container)">
+  EvaluateExpression(Container)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L1875"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Object EvaluateExpression(Container exprContainer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>exprContainer</code> <a class="xref" href="Ink.Runtime.Container.html">Container</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Object.html">Object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_EvaluateFunction_" data-uid="Ink.Runtime.Story.EvaluateFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_EvaluateFunction_System_String_System_Object___" data-uid="Ink.Runtime.Story.EvaluateFunction(System.String,System.Object[])">
+  EvaluateFunction(string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L1819"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evaluates a function defined in ink.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object EvaluateFunction(string functionName, params object[] arguments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>functionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the function as declared in ink.</p>
+</dd>
+    <dt><code>arguments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>The arguments that the ink function takes, if any. Note that we don't (can't) do any validation on the number of arguments right now, so make sure you get it right!</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The return value as returned from the ink function with <code>~ return myValue</code>, or null if nothing is returned.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_EvaluateFunction_" data-uid="Ink.Runtime.Story.EvaluateFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_EvaluateFunction_System_String_System_String__System_Object___" data-uid="Ink.Runtime.Story.EvaluateFunction(System.String,System.String@,System.Object[])">
+  EvaluateFunction(string, out string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L1833"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Evaluates a function defined in ink, and gathers the possibly multi-line text as generated by the function.
+This text output is any text written as normal content within the function, as opposed to the return value, as returned with <code>~ return</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object EvaluateFunction(string functionName, out string textOutput, params object[] arguments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>functionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the function as declared in ink.</p>
+</dd>
+    <dt><code>textOutput</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text content produced by the function via normal ink, if any.</p>
+</dd>
+    <dt><code>arguments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>The arguments that the ink function takes, if any. Note that we don't (can't) do any validation on the number of arguments right now, so make sure you get it right!</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The return value as returned from the ink function with <code>~ return myValue</code>, or null if nothing is returned.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_HasFunction_" data-uid="Ink.Runtime.Story.HasFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_HasFunction_System_String_" data-uid="Ink.Runtime.Story.HasFunction(System.String)">
+  HasFunction(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L1804"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if a function exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasFunction(string functionName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>functionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the function as declared in ink.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the function exists, else false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_KnotContainerWithName_" data-uid="Ink.Runtime.Story.KnotContainerWithName*"></a>
+
+  <h3 id="Ink_Runtime_Story_KnotContainerWithName_System_String_" data-uid="Ink.Runtime.Story.KnotContainerWithName(System.String)">
+  KnotContainerWithName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L733"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Container KnotContainerWithName(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Container.html">Container</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ObserveVariable_" data-uid="Ink.Runtime.Story.ObserveVariable*"></a>
+
+  <h3 id="Ink_Runtime_Story_ObserveVariable_System_String_Ink_Runtime_Story_VariableObserver_" data-uid="Ink.Runtime.Story.ObserveVariable(System.String,Ink.Runtime.Story.VariableObserver)">
+  ObserveVariable(string, VariableObserver)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2422"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When the named global variable changes it's value, the observer will be
+called to notify it of the change. Note that if the value changes multiple
+times within the ink, the observer will only be called once, at the end
+of the ink's evaluation. If, during the evaluation, it changes and then
+changes back again to its original value, it will still be called.
+Note that the observer will also be fired if the value of the variable
+is changed externally to the ink, by directly setting a value in
+story.variablesState.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ObserveVariable(string variableName, Story.VariableObserver observer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>variableName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the global variable to observe.</p>
+</dd>
+    <dt><code>observer</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a>.<a class="xref" href="Ink.Runtime.Story.VariableObserver.html">VariableObserver</a></dt>
+    <dd><p>A delegate function to call when the variable changes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ObserveVariables_" data-uid="Ink.Runtime.Story.ObserveVariables*"></a>
+
+  <h3 id="Ink_Runtime_Story_ObserveVariables_System_Collections_Generic_IList_System_String__Ink_Runtime_Story_VariableObserver_" data-uid="Ink.Runtime.Story.ObserveVariables(System.Collections.Generic.IList{System.String},Ink.Runtime.Story.VariableObserver)">
+  ObserveVariables(IList&lt;string&gt;, VariableObserver)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2446"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convenience function to allow multiple variables to be observed with the same
+observer delegate function. See the singular ObserveVariable for details.
+The observer will get one call for every variable that has changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ObserveVariables(IList&lt;string&gt; variableNames, Story.VariableObserver observer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>variableNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>The set of variables to observe.</p>
+</dd>
+    <dt><code>observer</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a>.<a class="xref" href="Ink.Runtime.Story.VariableObserver.html">VariableObserver</a></dt>
+    <dd><p>The delegate function to call when any of the named variables change.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_PointerAtPath_" data-uid="Ink.Runtime.Story.PointerAtPath*"></a>
+
+  <h3 id="Ink_Runtime_Story_PointerAtPath_Ink_Runtime_Path_" data-uid="Ink.Runtime.Story.PointerAtPath(Ink.Runtime.Path)">
+  PointerAtPath(Path)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L742"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Pointer PointerAtPath(Path path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="Ink.Runtime.Path.html">Path</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Pointer.html">Pointer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_RemoveFlow_" data-uid="Ink.Runtime.Story.RemoveFlow*"></a>
+
+  <h3 id="Ink_Runtime_Story_RemoveFlow_System_String_" data-uid="Ink.Runtime.Story.RemoveFlow(System.String)">
+  RemoveFlow(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L359"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveFlow(string flowName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flowName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_RemoveVariableObserver_" data-uid="Ink.Runtime.Story.RemoveVariableObserver*"></a>
+
+  <h3 id="Ink_Runtime_Story_RemoveVariableObserver_Ink_Runtime_Story_VariableObserver_System_String_" data-uid="Ink.Runtime.Story.RemoveVariableObserver(Ink.Runtime.Story.VariableObserver,System.String)">
+  RemoveVariableObserver(VariableObserver, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2462"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes the variable observer, to stop getting variable change notifications.
+If you pass a specific variable name, it will stop observing that particular one. If you
+pass null (or leave it blank, since it's optional), then the observer will be removed
+from all variables that it's subscribed to. If you pass in a specific variable name and
+null for the the observer, all observers for that variable will be removed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveVariableObserver(Story.VariableObserver observer = null, string specificVariableName = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>observer</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a>.<a class="xref" href="Ink.Runtime.Story.VariableObserver.html">VariableObserver</a></dt>
+    <dd><p>(Optional) The observer to stop observing.</p>
+</dd>
+    <dt><code>specificVariableName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>(Optional) Specific variable name to stop observing.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ResetCallstack_" data-uid="Ink.Runtime.Story.ResetCallstack*"></a>
+
+  <h3 id="Ink_Runtime_Story_ResetCallstack" data-uid="Ink.Runtime.Story.ResetCallstack">
+  ResetCallstack()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L327"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unwinds the callstack. Useful to reset the Story's evaluation
+without actually changing any meaningful state, for example if
+you want to exit a section of story prematurely and tell it to
+go elsewhere with a call to ChoosePathString(...).
+Doing so without calling ResetCallstack() could cause unexpected
+issues if, for example, the Story was in a tunnel already.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetCallstack()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ResetState_" data-uid="Ink.Runtime.Story.ResetState*"></a>
+
+  <h3 id="Ink_Runtime_Story_ResetState" data-uid="Ink.Runtime.Story.ResetState">
+  ResetState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset the Story back to its initial state as it was when it was
+first constructed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetState()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_StartProfiling_" data-uid="Ink.Runtime.Story.StartProfiling*"></a>
+
+  <h3 id="Ink_Runtime_Story_StartProfiling" data-uid="Ink.Runtime.Story.StartProfiling">
+  StartProfiling()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start recording ink profiling information during calls to Continue on Story.
+Return a Profiler instance that you can request a report from when you're finished.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Profiler StartProfiling()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.Runtime.Profiler.html">Profiler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_SwitchFlow_" data-uid="Ink.Runtime.Story.SwitchFlow*"></a>
+
+  <h3 id="Ink_Runtime_Story_SwitchFlow_System_String_" data-uid="Ink.Runtime.Story.SwitchFlow(System.String)">
+  SwitchFlow(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SwitchFlow(string flowName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flowName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_SwitchToDefaultFlow_" data-uid="Ink.Runtime.Story.SwitchToDefaultFlow*"></a>
+
+  <h3 id="Ink_Runtime_Story_SwitchToDefaultFlow" data-uid="Ink.Runtime.Story.SwitchToDefaultFlow">
+  SwitchToDefaultFlow()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L364"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SwitchToDefaultFlow()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_TagsForContentAtPath_" data-uid="Ink.Runtime.Story.TagsForContentAtPath*"></a>
+
+  <h3 id="Ink_Runtime_Story_TagsForContentAtPath_System_String_" data-uid="Ink.Runtime.Story.TagsForContentAtPath(System.String)">
+  TagsForContentAtPath(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2529"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets any tags associated with a particular knot or knot.stitch.
+These are defined as hash tags defined at the very top of a
+knot or stitch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; TagsForContentAtPath(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path of the knot or stitch, in the form &quot;knot&quot; or &quot;knot.stitch&quot;.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ToJson_" data-uid="Ink.Runtime.Story.ToJson*"></a>
+
+  <h3 id="Ink_Runtime_Story_ToJson" data-uid="Ink.Runtime.Story.ToJson">
+  ToJson()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Story itself in JSON representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToJson()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ToJson_" data-uid="Ink.Runtime.Story.ToJson*"></a>
+
+  <h3 id="Ink_Runtime_Story_ToJson_System_IO_Stream_" data-uid="Ink.Runtime.Story.ToJson(System.IO.Stream)">
+  ToJson(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Story itself in JSON representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToJson(Stream stream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_TryGetExternalFunction_" data-uid="Ink.Runtime.Story.TryGetExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_TryGetExternalFunction_System_String_Ink_Runtime_Story_ExternalFunction__" data-uid="Ink.Runtime.Story.TryGetExternalFunction(System.String,Ink.Runtime.Story.ExternalFunction@)">
+  TryGetExternalFunction(string, out ExternalFunction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L1915"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetExternalFunction(string functionName, out Story.ExternalFunction externalFunction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>functionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>externalFunction</code> <a class="xref" href="Ink.Runtime.Story.html">Story</a>.<a class="xref" href="Ink.Runtime.Story.ExternalFunction.html">ExternalFunction</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_UnbindExternalFunction_" data-uid="Ink.Runtime.Story.UnbindExternalFunction*"></a>
+
+  <h3 id="Ink_Runtime_Story_UnbindExternalFunction_System_String_" data-uid="Ink.Runtime.Story.UnbindExternalFunction(System.String)">
+  UnbindExternalFunction(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2333"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove a binding for a named EXTERNAL ink function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnbindExternalFunction(string funcName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>funcName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_ValidateExternalBindings_" data-uid="Ink.Runtime.Story.ValidateExternalBindings*"></a>
+
+  <h3 id="Ink_Runtime_Story_ValidateExternalBindings" data-uid="Ink.Runtime.Story.ValidateExternalBindings">
+  ValidateExternalBindings()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2344"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check that all EXTERNAL ink functions have a valid bound C# function.
+Note that this is automatically called on the first call to Continue().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ValidateExternalBindings()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_Runtime_Story_Warning_" data-uid="Ink.Runtime.Story.Warning*"></a>
+
+  <h3 id="Ink_Runtime_Story_Warning_System_String_" data-uid="Ink.Runtime.Story.Warning(System.String)">
+  Warning(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L2790"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Warning(string message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Ink_Runtime_Story_onChoosePathString" data-uid="Ink.Runtime.Story.onChoosePathString">
+  onChoosePathString
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Callback for when a path string is chosen</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;string, object[]&gt; onChoosePathString</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Ink_Runtime_Story_onCompleteEvaluateFunction" data-uid="Ink.Runtime.Story.onCompleteEvaluateFunction">
+  onCompleteEvaluateFunction
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Callback for when a function has been evaluated
+This is necessary because evaluating a function can cause continuing</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;string, object[], string, object&gt; onCompleteEvaluateFunction</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-4">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Ink_Runtime_Story_onDidContinue" data-uid="Ink.Runtime.Story.onDidContinue">
+  onDidContinue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Callback for when ContinueInternal is complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action onDidContinue</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Ink_Runtime_Story_onError" data-uid="Ink.Runtime.Story.onError">
+  onError
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error handler for all runtime errors in ink - i.e. problems
+with the source ink itself that are only discovered when playing
+the story.
+It's strongly recommended that you assign an error handler to your
+story instance to avoid getting exceptions for ink errors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event ErrorHandler onError</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.ErrorHandler.html">ErrorHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Ink_Runtime_Story_onEvaluateFunction" data-uid="Ink.Runtime.Story.onEvaluateFunction">
+  onEvaluateFunction
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Callback for when a function is about to be evaluated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;string, object[]&gt; onEvaluateFunction</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Ink_Runtime_Story_onMakeChoice" data-uid="Ink.Runtime.Story.onMakeChoice">
+  onMakeChoice
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Callback for when a choice is about to be executed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;Choice&gt; onMakeChoice</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Ink.Runtime.Choice.html">Choice</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/InkLibs/InkRuntime/Story.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          I was generated automatically
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,728 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class InkCompiler | Czasoport Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class InkCompiler | Czasoport Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Ink_UnityIntegration_InkCompiler.md&amp;value=---%0Auid%3A%20Ink.UnityIntegration.InkCompiler%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Ink.UnityIntegration.InkCompiler">
+
+
+
+  <h1 id="Ink_UnityIntegration_InkCompiler" data-uid="Ink.UnityIntegration.InkCompiler" class="text-break">
+Class InkCompiler  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Ink.html">Ink</a>.<a class="xref" href="Ink.UnityIntegration.html">UnityIntegration</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InkCompiler : ScriptableObject</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">InkCompiler</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Ink_UnityIntegration_InkCompiler__ctor_" data-uid="Ink.UnityIntegration.InkCompiler.#ctor*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler__ctor" data-uid="Ink.UnityIntegration.InkCompiler.#ctor">
+  InkCompiler()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected InkCompiler()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_created_" data-uid="Ink.UnityIntegration.InkCompiler.created*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_created" data-uid="Ink.UnityIntegration.InkCompiler.created">
+  created
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool created { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_executingCompilationStack_" data-uid="Ink.UnityIntegration.InkCompiler.executingCompilationStack*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_executingCompilationStack" data-uid="Ink.UnityIntegration.InkCompiler.executingCompilationStack">
+  executingCompilationStack
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool executingCompilationStack { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_instance_" data-uid="Ink.UnityIntegration.InkCompiler.instance*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_instance" data-uid="Ink.UnityIntegration.InkCompiler.instance">
+  instance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InkCompiler instance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.UnityIntegration.InkCompiler.html">InkCompiler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_AddToPendingCompilationStack_" data-uid="Ink.UnityIntegration.InkCompiler.AddToPendingCompilationStack*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_AddToPendingCompilationStack_System_String_" data-uid="Ink.UnityIntegration.InkCompiler.AddToPendingCompilationStack(System.String)">
+  AddToPendingCompilationStack(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void AddToPendingCompilationStack(string filePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_AnyOfStateInCompilationStack_" data-uid="Ink.UnityIntegration.InkCompiler.AnyOfStateInCompilationStack*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_AnyOfStateInCompilationStack_Ink_UnityIntegration_InkCompiler_CompilationStackItemState_" data-uid="Ink.UnityIntegration.InkCompiler.AnyOfStateInCompilationStack(Ink.UnityIntegration.InkCompiler.CompilationStackItemState)">
+  AnyOfStateInCompilationStack(CompilationStackItemState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool AnyOfStateInCompilationStack(InkCompiler.CompilationStackItemState state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="Ink.UnityIntegration.InkCompiler.html">InkCompiler</a>.<a class="xref" href="Ink.UnityIntegration.InkCompiler.CompilationStackItemState.html">CompilationStackItemState</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_CompileInk_" data-uid="Ink.UnityIntegration.InkCompiler.CompileInk*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_CompileInk_Ink_UnityIntegration_InkFile___" data-uid="Ink.UnityIntegration.InkCompiler.CompileInk(Ink.UnityIntegration.InkFile[])">
+  CompileInk(params InkFile[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CompileInk(params InkFile[] inkFiles)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inkFiles</code> <a class="xref" href="Ink.UnityIntegration.InkFile.html">InkFile</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_CompileInk_" data-uid="Ink.UnityIntegration.InkCompiler.CompileInk*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_CompileInk_Ink_UnityIntegration_InkFile___System_Boolean_System_Action_" data-uid="Ink.UnityIntegration.InkCompiler.CompileInk(Ink.UnityIntegration.InkFile[],System.Boolean,System.Action)">
+  CompileInk(InkFile[], bool, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CompileInk(InkFile[] inkFiles, bool immediate, Action onComplete = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inkFiles</code> <a class="xref" href="Ink.UnityIntegration.InkFile.html">InkFile</a>[]</dt>
+    <dd></dd>
+    <dt><code>immediate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>onComplete</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_CountOfStateInCompilationStack_" data-uid="Ink.UnityIntegration.InkCompiler.CountOfStateInCompilationStack*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_CountOfStateInCompilationStack_Ink_UnityIntegration_InkCompiler_CompilationStackItemState_" data-uid="Ink.UnityIntegration.InkCompiler.CountOfStateInCompilationStack(Ink.UnityIntegration.InkCompiler.CompilationStackItemState)">
+  CountOfStateInCompilationStack(CompilationStackItemState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int CountOfStateInCompilationStack(InkCompiler.CompilationStackItemState state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="Ink.UnityIntegration.InkCompiler.html">InkCompiler</a>.<a class="xref" href="Ink.UnityIntegration.InkCompiler.CompilationStackItemState.html">CompilationStackItemState</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_GetEstimatedCompilationProgress_" data-uid="Ink.UnityIntegration.InkCompiler.GetEstimatedCompilationProgress*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_GetEstimatedCompilationProgress" data-uid="Ink.UnityIntegration.InkCompiler.GetEstimatedCompilationProgress">
+  GetEstimatedCompilationProgress()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L774"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float GetEstimatedCompilationProgress()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_GetUniqueMasterInkFilesToCompile_" data-uid="Ink.UnityIntegration.InkCompiler.GetUniqueMasterInkFilesToCompile*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_GetUniqueMasterInkFilesToCompile_System_Collections_Generic_List_System_String__" data-uid="Ink.UnityIntegration.InkCompiler.GetUniqueMasterInkFilesToCompile(System.Collections.Generic.List{System.String})">
+  GetUniqueMasterInkFilesToCompile(List&lt;string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;InkFile&gt; GetUniqueMasterInkFilesToCompile(List&lt;string&gt; importedInkAssets)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>importedInkAssets</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Ink.UnityIntegration.InkFile.html">InkFile</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_IsInkFileOnCompilationStack_" data-uid="Ink.UnityIntegration.InkCompiler.IsInkFileOnCompilationStack*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_IsInkFileOnCompilationStack_Ink_UnityIntegration_InkFile_" data-uid="Ink.UnityIntegration.InkCompiler.IsInkFileOnCompilationStack(Ink.UnityIntegration.InkFile)">
+  IsInkFileOnCompilationStack(InkFile)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsInkFileOnCompilationStack(InkFile inkFile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inkFile</code> <a class="xref" href="Ink.UnityIntegration.InkFile.html">InkFile</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_LoadOrCreateInstance_" data-uid="Ink.UnityIntegration.InkCompiler.LoadOrCreateInstance*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_LoadOrCreateInstance" data-uid="Ink.UnityIntegration.InkCompiler.LoadOrCreateInstance">
+  LoadOrCreateInstance()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LoadOrCreateInstance()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_RemoveFromPendingCompilationStack_" data-uid="Ink.UnityIntegration.InkCompiler.RemoveFromPendingCompilationStack*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_RemoveFromPendingCompilationStack_Ink_UnityIntegration_InkFile_" data-uid="Ink.UnityIntegration.InkCompiler.RemoveFromPendingCompilationStack(Ink.UnityIntegration.InkFile)">
+  RemoveFromPendingCompilationStack(InkFile)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveFromPendingCompilationStack(InkFile inkFile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inkFile</code> <a class="xref" href="Ink.UnityIntegration.InkFile.html">InkFile</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_Save_" data-uid="Ink.UnityIntegration.InkCompiler.Save*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_Save_System_Boolean_" data-uid="Ink.UnityIntegration.InkCompiler.Save(System.Boolean)">
+  Save(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Save(bool saveAsText)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saveAsText</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_SetBuildBlocked_" data-uid="Ink.UnityIntegration.InkCompiler.SetBuildBlocked*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_SetBuildBlocked" data-uid="Ink.UnityIntegration.InkCompiler.SetBuildBlocked">
+  SetBuildBlocked()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetBuildBlocked()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Ink_UnityIntegration_InkCompiler_ShowProgressBar_" data-uid="Ink.UnityIntegration.InkCompiler.ShowProgressBar*"></a>
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_ShowProgressBar" data-uid="Ink.UnityIntegration.InkCompiler.ShowProgressBar">
+  ShowProgressBar()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L763"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ShowProgressBar()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Ink_UnityIntegration_InkCompiler_OnCompileInk" data-uid="Ink.UnityIntegration.InkCompiler.OnCompileInk">
+  OnCompileInk
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event InkCompiler.OnCompleteInkCompliationStackEvent OnCompileInk</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Ink.UnityIntegration.InkCompiler.html">InkCompiler</a>.<a class="xref" href="Ink.UnityIntegration.InkCompiler.OnCompleteInkCompliationStackEvent.html">OnCompleteInkCompliationStackEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Ink/Editor/Core/Compiler/InkCompiler.cs/#L27" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          I was generated automatically
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
