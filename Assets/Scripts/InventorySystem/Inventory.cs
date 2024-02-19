@@ -11,6 +11,7 @@ using LevelTimeChange.LevelsLoader;
 using LevelTimeChange.TimeChange;
 using PlayerScripts;
 using Settings;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -85,6 +86,16 @@ namespace InventorySystem {
         /// <returns>Array of `Item` objects including empty slots.</returns>
         public Item[] GetInventory() {
             return _items;
+        }
+        
+        /// <summary>
+        /// Check if inventory contains item with the same `ItemSO` definition.
+        /// </summary>
+        /// <param name="itemSO">ItemDefinition of the item we want to check.</param>
+        /// <returns></returns>
+        public bool ContainsItem(ItemSO itemSO) {
+            CDebug.Log($"Checking {itemSO}");
+            return _items.Any(item => item != null && item.ItemSO == itemSO);
         }
 
         /// <summary>
@@ -169,6 +180,27 @@ namespace InventorySystem {
         public bool RemoveItem(out Item item) {
             item = _items[_selectedSlot];
             _items[_selectedSlot] = null;
+            ItemRemoved?.Invoke(this, new ItemRemovedEventArgs() {
+                Slot = _selectedSlot,
+                Item = item
+            });
+            _itemsCount--;
+            return item is not null;
+        }
+
+        /// <summary>
+        /// Removes item based on provided ItemSO. If there are multiple items with the same ItemSO, only the first one will be removed.
+        /// </summary>
+        /// <param name="itemSO">Definition of the item to be removed.</param>
+        /// <returns></returns>
+        public bool RemoveItem(ItemSO itemSO) {
+            var item = _items.FirstOrDefault(item => item.ItemSO == itemSO);
+            var index = Array.IndexOf(_items, item);
+            if (index == -1) {
+                return false;
+            }
+            item = _items[index];
+            _items[index] = null;
             ItemRemoved?.Invoke(this, new ItemRemovedEventArgs() {
                 Slot = _selectedSlot,
                 Item = item
