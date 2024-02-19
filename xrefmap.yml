@@ -12322,6 +12322,19 @@ references:
   commentId: T:Global.NotificationManager
   fullName: NotificationManager
   nameWithType: NotificationManager
+- uid: Global.NotificationManager.EndTutorial
+  name: EndTutorial()
+  href: api/Global.NotificationManager.html#Global_NotificationManager_EndTutorial
+  commentId: M:Global.NotificationManager.EndTutorial
+  fullName: NotificationManager.EndTutorial()
+  nameWithType: NotificationManager.EndTutorial()
+- uid: Global.NotificationManager.EndTutorial*
+  name: EndTutorial
+  href: api/Global.NotificationManager.html#Global_NotificationManager_EndTutorial_
+  commentId: Overload:Global.NotificationManager.EndTutorial
+  isSpec: "True"
+  fullName: NotificationManager.EndTutorial
+  nameWithType: NotificationManager.EndTutorial
 - uid: Global.NotificationManager.Instance
   name: Instance
   href: api/Global.NotificationManager.html#Global_NotificationManager_Instance
@@ -12354,6 +12367,19 @@ references:
   isSpec: "True"
   fullName: NotificationManager.RaiseNotification
   nameWithType: NotificationManager.RaiseNotification
+- uid: Global.NotificationManager.RaiseTutorialNotification(TutorialNotification)
+  name: RaiseTutorialNotification(TutorialNotification)
+  href: api/Global.NotificationManager.html#Global_NotificationManager_RaiseTutorialNotification_TutorialNotification_
+  commentId: M:Global.NotificationManager.RaiseTutorialNotification(TutorialNotification)
+  fullName: NotificationManager.RaiseTutorialNotification(TutorialNotification)
+  nameWithType: NotificationManager.RaiseTutorialNotification(TutorialNotification)
+- uid: Global.NotificationManager.RaiseTutorialNotification*
+  name: RaiseTutorialNotification
+  href: api/Global.NotificationManager.html#Global_NotificationManager_RaiseTutorialNotification_
+  commentId: Overload:Global.NotificationManager.RaiseTutorialNotification
+  isSpec: "True"
+  fullName: NotificationManager.RaiseTutorialNotification
+  nameWithType: NotificationManager.RaiseTutorialNotification
 - uid: Global.NotificationManager.SavePersistentData(DataPersistence.GameData@)
   name: SavePersistentData(ref GameData)
   href: api/Global.NotificationManager.html#Global_NotificationManager_SavePersistentData_DataPersistence_GameData__
@@ -12370,6 +12396,19 @@ references:
   isSpec: "True"
   fullName: NotificationManager.SavePersistentData
   nameWithType: NotificationManager.SavePersistentData
+- uid: Global.NotificationManager.StartTutorial
+  name: StartTutorial()
+  href: api/Global.NotificationManager.html#Global_NotificationManager_StartTutorial
+  commentId: M:Global.NotificationManager.StartTutorial
+  fullName: NotificationManager.StartTutorial()
+  nameWithType: NotificationManager.StartTutorial()
+- uid: Global.NotificationManager.StartTutorial*
+  name: StartTutorial
+  href: api/Global.NotificationManager.html#Global_NotificationManager_StartTutorial_
+  commentId: Overload:Global.NotificationManager.StartTutorial
+  isSpec: "True"
+  fullName: NotificationManager.StartTutorial
+  nameWithType: NotificationManager.StartTutorial
 - uid: Global.NotificationUIController
   name: NotificationUIController
   href: api/Global.NotificationUIController.html
@@ -13464,6 +13503,89 @@ references:
   commentId: F:Global.TestingZLegacyExt.useEstimatedTime
   fullName: TestingZLegacyExt.useEstimatedTime
   nameWithType: TestingZLegacyExt.useEstimatedTime
+- uid: Global.TutorialManager
+  name: TutorialManager
+  href: api/Global.TutorialManager.html
+  commentId: T:Global.TutorialManager
+  fullName: TutorialManager
+  nameWithType: TutorialManager
+- uid: Global.TutorialNotification
+  name: TutorialNotification
+  href: api/Global.TutorialNotification.html
+  commentId: T:Global.TutorialNotification
+  fullName: TutorialNotification
+  nameWithType: TutorialNotification
+- uid: Global.TutorialNotification.#ctor(System.String)
+  name: TutorialNotification(string)
+  href: api/Global.TutorialNotification.html#Global_TutorialNotification__ctor_System_String_
+  commentId: M:Global.TutorialNotification.#ctor(System.String)
+  name.vb: New(String)
+  fullName: TutorialNotification.TutorialNotification(string)
+  fullName.vb: TutorialNotification.New(String)
+  nameWithType: TutorialNotification.TutorialNotification(string)
+  nameWithType.vb: TutorialNotification.New(String)
+- uid: Global.TutorialNotification.#ctor(System.String,System.String,System.String)
+  name: TutorialNotification(string, string, string)
+  href: api/Global.TutorialNotification.html#Global_TutorialNotification__ctor_System_String_System_String_System_String_
+  commentId: M:Global.TutorialNotification.#ctor(System.String,System.String,System.String)
+  name.vb: New(String, String, String)
+  fullName: TutorialNotification.TutorialNotification(string, string, string)
+  fullName.vb: TutorialNotification.New(String, String, String)
+  nameWithType: TutorialNotification.TutorialNotification(string, string, string)
+  nameWithType.vb: TutorialNotification.New(String, String, String)
+- uid: Global.TutorialNotification.#ctor*
+  name: TutorialNotification
+  href: api/Global.TutorialNotification.html#Global_TutorialNotification__ctor_
+  commentId: Overload:Global.TutorialNotification.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TutorialNotification.TutorialNotification
+  fullName.vb: TutorialNotification.New
+  nameWithType: TutorialNotification.TutorialNotification
+  nameWithType.vb: TutorialNotification.New
+- uid: Global.TutorialNotification.messages
+  name: messages
+  href: api/Global.TutorialNotification.html#Global_TutorialNotification_messages
+  commentId: F:Global.TutorialNotification.messages
+  fullName: TutorialNotification.messages
+  nameWithType: TutorialNotification.messages
+- uid: Global.TutorialStage
+  name: TutorialStage
+  href: api/Global.TutorialStage.html
+  commentId: T:Global.TutorialStage
+  fullName: TutorialStage
+  nameWithType: TutorialStage
+- uid: Global.TutorialStage.#ctor(InputAction,System.Boolean)
+  name: TutorialStage(InputAction, bool)
+  href: api/Global.TutorialStage.html#Global_TutorialStage__ctor_InputAction_System_Boolean_
+  commentId: M:Global.TutorialStage.#ctor(InputAction,System.Boolean)
+  name.vb: New(InputAction, Boolean)
+  fullName: TutorialStage.TutorialStage(InputAction, bool)
+  fullName.vb: TutorialStage.New(InputAction, Boolean)
+  nameWithType: TutorialStage.TutorialStage(InputAction, bool)
+  nameWithType.vb: TutorialStage.New(InputAction, Boolean)
+- uid: Global.TutorialStage.#ctor*
+  name: TutorialStage
+  href: api/Global.TutorialStage.html#Global_TutorialStage__ctor_
+  commentId: Overload:Global.TutorialStage.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TutorialStage.TutorialStage
+  fullName.vb: TutorialStage.New
+  nameWithType: TutorialStage.TutorialStage
+  nameWithType.vb: TutorialStage.New
+- uid: Global.TutorialStage.mainAction
+  name: mainAction
+  href: api/Global.TutorialStage.html#Global_TutorialStage_mainAction
+  commentId: F:Global.TutorialStage.mainAction
+  fullName: TutorialStage.mainAction
+  nameWithType: TutorialStage.mainAction
+- uid: Global.TutorialStage.otherConditionsSatisfied
+  name: otherConditionsSatisfied
+  href: api/Global.TutorialStage.html#Global_TutorialStage_otherConditionsSatisfied
+  commentId: F:Global.TutorialStage.otherConditionsSatisfied
+  fullName: TutorialStage.otherConditionsSatisfied
+  nameWithType: TutorialStage.otherConditionsSatisfied
 - uid: Global.TweenAction
   name: TweenAction
   href: api/Global.TweenAction.html
@@ -34153,6 +34275,18 @@ references:
   commentId: F:Interactions.Interactions.Instance
   fullName: Interactions.Interactions.Instance
   nameWithType: Interactions.Instance
+- uid: Interactions.Interactions.handInteractionPerformed
+  name: handInteractionPerformed
+  href: api/Interactions.Interactions.html#Interactions_Interactions_handInteractionPerformed
+  commentId: E:Interactions.Interactions.handInteractionPerformed
+  fullName: Interactions.Interactions.handInteractionPerformed
+  nameWithType: Interactions.handInteractionPerformed
+- uid: Interactions.Interactions.itemInteractionPerformed
+  name: itemInteractionPerformed
+  href: api/Interactions.Interactions.html#Interactions_Interactions_itemInteractionPerformed
+  commentId: E:Interactions.Interactions.itemInteractionPerformed
+  fullName: Interactions.Interactions.itemInteractionPerformed
+  nameWithType: Interactions.itemInteractionPerformed
 - uid: Interactions.InteractionsSettingsSO
   name: InteractionsSettingsSO
   href: api/Interactions.InteractionsSettingsSO.html
@@ -35477,6 +35611,12 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.TimeChange.TimeChanger.SavePersistentData
   nameWithType: TimeChanger.SavePersistentData
+- uid: LevelTimeChange.TimeChange.TimeChanger.TimeChangeUnlocked
+  name: TimeChangeUnlocked
+  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_TimeChangeUnlocked
+  commentId: E:LevelTimeChange.TimeChange.TimeChanger.TimeChangeUnlocked
+  fullName: LevelTimeChange.TimeChange.TimeChanger.TimeChangeUnlocked
+  nameWithType: TimeChanger.TimeChangeUnlocked
 - uid: LevelTimeChange.TimeChange.TimeChanger.ToString
   name: ToString()
   href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_ToString
@@ -35833,6 +35973,19 @@ references:
   commentId: T:UI.PauseUI
   fullName: UI.PauseUI
   nameWithType: PauseUI
+- uid: UI.PauseUI.IsGamePaused
+  name: IsGamePaused()
+  href: api/UI.PauseUI.html#UI_PauseUI_IsGamePaused
+  commentId: M:UI.PauseUI.IsGamePaused
+  fullName: UI.PauseUI.IsGamePaused()
+  nameWithType: PauseUI.IsGamePaused()
+- uid: UI.PauseUI.IsGamePaused*
+  name: IsGamePaused
+  href: api/UI.PauseUI.html#UI_PauseUI_IsGamePaused_
+  commentId: Overload:UI.PauseUI.IsGamePaused
+  isSpec: "True"
+  fullName: UI.PauseUI.IsGamePaused
+  nameWithType: PauseUI.IsGamePaused
 - uid: UI.TimeChangeUI
   name: TimeChangeUI
   href: api/UI.TimeChangeUI.html
