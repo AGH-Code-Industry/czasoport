@@ -29,6 +29,8 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
     GameObject _tutorialNotification;
     [SerializeField]
     GameObject _notificationWindow;
+    [SerializeField]
+    TMP_Text _bigMessage;
 
     Queue<Notification> _notificationsToDisplay = new Queue<Notification>();
     List<Notification> _notificationsHistory = new List<Notification>();
@@ -84,16 +86,26 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
     }
 
     public void RaiseTutorialNotification(TutorialNotification notification) {
+        if (notification.messages.Count == 1) {
+            _bigMessage.enabled = true;
+            _tutorialNotification.SetActive(false);
+            _bigMessage.text = notification.messages[0];
+            return;
+        }
+        _bigMessage.enabled = false;
+        _tutorialNotification.SetActive(true);
+        _tutorialNotification.transform.GetChild(1).gameObject.GetComponent<RectTransform>().pivot = new Vector2(0f, 0f);
         _tutorialNotification.transform.GetChild(0).GetComponent<TMP_Text>().text = notification.messages[0];
         _tutorialNotification.transform.GetChild(1).GetComponent<TMP_Text>().text = notification.messages[1];
         _tutorialNotification.transform.GetChild(1).GetComponent<TMP_Text>().fontStyle = FontStyles.Bold;
         _tutorialNotification.transform.GetChild(2).GetComponent<TMP_Text>().text = notification.messages[2];
-        //_tutorialNotificationMessage.text = notification.messages[0] + " " + notification.messages[1] + " " + notification.messages[2];
-        
+
+        _tutorialNotification.transform.GetChild(1).gameObject.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0.5f);
     }
 
     public void EndTutorial() {
         _tutorialNotification.SetActive(false);
+        _bigMessage.enabled = false;
     }
 
     public void LoadPersistentData(GameData gameData) {
