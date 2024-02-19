@@ -13,7 +13,9 @@ namespace Application {
             ITEMS,
             PORTALS,
             PAUSE,
-            DATA_PERSISTENCE
+            DATA_PERSISTENCE,
+            UTILS,
+            DIALOGUES
         }
         
         static Loggers() {
@@ -79,6 +81,22 @@ namespace Application {
             LoggersList.Add(
                 LoggerType.PAUSE,
                 new CLogger(LoggerType.PAUSE) {
+                    LogEnabled = true
+                }
+            );
+            
+            // Logger for utilities
+            LoggersList.Add(
+                LoggerType.UTILS,
+                new CLogger(LoggerType.UTILS) {
+                    LogEnabled = true
+                }
+            );
+            
+            // Logger for dialogues
+            LoggersList.Add(
+                LoggerType.DIALOGUES,
+                new CLogger(LoggerType.DIALOGUES) {
                     LogEnabled = true
                 }
             );
