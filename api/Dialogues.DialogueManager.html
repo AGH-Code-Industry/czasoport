@@ -205,7 +205,7 @@ public UnityEvent dialogueStarted</code></pre>
 
   <h3 id="Dialogues_DialogueManager_Awake" data-uid="Dialogues.DialogueManager.Awake">
   Awake()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/DialogueManager.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/DialogueManager.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -231,7 +231,7 @@ public UnityEvent dialogueStarted</code></pre>
 
   <h3 id="Dialogues_DialogueManager_ContinueDialogue" data-uid="Dialogues.DialogueManager.ContinueDialogue">
   ContinueDialogue()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/DialogueManager.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/DialogueManager.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Main function in the dialogue process, manages choices parsing, tag parsing and canvas updating.
@@ -259,7 +259,7 @@ Will end the dialogue if there are no more lines to read.</p>
 
   <h3 id="Dialogues_DialogueManager_EndDialogue" data-uid="Dialogues.DialogueManager.EndDialogue">
   EndDialogue()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/DialogueManager.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/DialogueManager.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>End the current dialogue. If there is no dialogue active, nothing will happen. Dialogue progress won't be saved.</p>
@@ -284,9 +284,9 @@ Will end the dialogue if there are no more lines to read.</p>
 
   <a id="Dialogues_DialogueManager_StartDialogue_" data-uid="Dialogues.DialogueManager.StartDialogue*"></a>
 
-  <h3 id="Dialogues_DialogueManager_StartDialogue_TextAsset_" data-uid="Dialogues.DialogueManager.StartDialogue(TextAsset)">
-  StartDialogue(TextAsset)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/DialogueManager.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Dialogues_DialogueManager_StartDialogue_TextAsset_System_Action_" data-uid="Dialogues.DialogueManager.StartDialogue(TextAsset,System.Action)">
+  StartDialogue(TextAsset, Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/DialogueManager.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Start new dialogue from a file. File must be provided by other Behaviour.
@@ -295,7 +295,7 @@ Dialogue will only start if there is no other dialogue active.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartDialogue(TextAsset storyFile)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool StartDialogue(TextAsset storyFile, Action finishAction = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -303,8 +303,16 @@ Dialogue will only start if there is no other dialogue active.</p>
     <dt><code>storyFile</code> <span class="xref">TextAsset</span></dt>
     <dd><p>File from which to load the story. Must be a JSON file, generated from Ink file.</p>
 </dd>
+    <dt><code>finishAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd><p>This action will be called when dialogues ends</p>
+</dd>
   </dl>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
