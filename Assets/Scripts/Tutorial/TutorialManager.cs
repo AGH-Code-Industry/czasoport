@@ -53,7 +53,6 @@ public class TutorialManager : MonoBehaviour
         CInput.InputActions.Game.Disable();
         CInput.InputActions.Movement.Disable();
 
-        NotificationManager.Instance.StartTutorial();
         StartCoroutine(waitForTutorialToBegin(0.01f));
     }
 
@@ -83,6 +82,7 @@ public class TutorialManager : MonoBehaviour
 
     IEnumerator waitForTutorialToBegin(float timeToWait) {
         yield return new WaitForSeconds(timeToWait);
+        NotificationManager.Instance.StartTutorial();
         CInput.InputActions.Movement.Enable();
         NotificationManager.Instance.RaiseTutorialNotification(_messages[0]);
         yield return new WaitForSeconds(_timeToDisplayMessage);
@@ -103,14 +103,14 @@ public class TutorialManager : MonoBehaviour
             _stages[stage + 1].mainAction.performed += OnNextTutorialStage;
             stage++;
         } else {
-            tutorialFinished();
+            TutorialFinished();
         }
     }
 
     /// <summary>
     /// Enable all functionalities as the tutorial is finished.
     /// </summary>
-    private void tutorialFinished() {
+    private void TutorialFinished() {
         NotificationManager.Instance.RaiseTutorialNotification(_messages[_messages.Count - 1]);
         CInput.InputActions.Teleport.Enable();
         CInput.InputActions.Inventory.Enable();

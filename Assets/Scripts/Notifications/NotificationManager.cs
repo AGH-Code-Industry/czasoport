@@ -40,13 +40,15 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
 
     PauseUI _pauseUI;
 
-    private void Start() {
+    private void Awake() {
         if (Instance == null) {
             Instance = this;
         } else {
             Destroy(this);
         }
+    }
 
+    private void Start() {
         _pauseUI = FindObjectOfType<PauseUI>();
         _tutorialNotification.transform.GetChild(0).GetComponent<TMP_Text>().text = "";
         CInput.InputActions.Game.TogglePause.performed += PausePerformed;
