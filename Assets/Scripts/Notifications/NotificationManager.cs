@@ -52,6 +52,8 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
         CInput.InputActions.Game.TogglePause.performed += PausePerformed;
         _startingPos = _tutorialNotification.transform.GetChild(1).transform.position;
         LeanTween.scale(_tutorialNotification.transform.GetChild(1).gameObject, new Vector3(1.2f, 1.2f, 1f), 0.5f).setLoopPingPong();
+        _tutorialNotification.SetActive(false);
+        _bigMessage.enabled = false;
     }
 
     private void PausePerformed(InputAction.CallbackContext context) {
@@ -119,6 +121,11 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
     public void EndTutorial() {
         _tutorialNotification.SetActive(false);
         _bigMessage.enabled = false;
+    }
+
+    public void StartTutorial() {
+        _tutorialNotification.SetActive(true);
+        _bigMessage.enabled = true;
     }
 
     public void LoadPersistentData(GameData gameData) {

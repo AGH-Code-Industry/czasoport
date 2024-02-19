@@ -53,6 +53,7 @@ public class TutorialManager : MonoBehaviour
         CInput.InputActions.Game.Disable();
         CInput.InputActions.Movement.Disable();
 
+        NotificationManager.Instance.StartTutorial();
         StartCoroutine(waitForTutorialToBegin(0.01f));
     }
 
