@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1716287843026322766}
   - component: {fileID: 1716287843026322767}
   - component: {fileID: 1716287843026322764}
+  - component: {fileID: 31932530893797885}
   m_Layer: 0
   m_Name: chest_big
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1210843795, guid: f3254d47515ba4140a02d0ab70705a88, type: 3}
+  m_Sprite: {fileID: 439386311, guid: f3254d47515ba4140a02d0ab70705a88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,3 +112,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &31932530893797885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716287843026322765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: d1c6a1b4b3d90723b9728b33bfcec05800000000c1ab63317b4c1da2
+  m_ShapePath:
+  - {x: -1, y: -0.51, z: 0}
+  - {x: -0.99343014, y: 0.50589895, z: 0}
+  - {x: 1, y: 0.49275923, z: 0}
+  - {x: 1, y: -0.51, z: 0}
+  m_ShapePathHash: -893160251
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 74334

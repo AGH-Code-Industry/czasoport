@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 757827926}
   - component: {fileID: 757827927}
+  - component: {fileID: 677721704}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -62,7 +63,7 @@ MonoBehaviour:
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
   m_ShadowIntensityEnabled: 1
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensity: 0.5
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
@@ -111,6 +112,21 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &677721704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757827925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1e65f29510a5b488c9a00813aa9ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minIntensity: 0.9
+  maxIntensity: 1
+  flickerSpeed: 0.15
 --- !u!1 &8689123277160345180
 GameObject:
   m_ObjectHideFlags: 0
