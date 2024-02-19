@@ -45,6 +45,7 @@ public class TutorialManager : MonoBehaviour
         Inventory.Instance.ItemInserted += ItemInserted;
         TimeChanger.Instance.TimeChangeUnlocked += TimelineUnlocked;
         TimeChanger.Instance.OnTimeChange += TimeChange;
+        CInput.InputActions.Inventory.ChooseItem.performed += EnableInteractions;
 
         CInput.InputActions.Teleport.Disable();
         CInput.InputActions.Inventory.Disable();
@@ -55,8 +56,13 @@ public class TutorialManager : MonoBehaviour
         StartCoroutine(waitForTutorialToBegin(0.01f));
     }
 
+    private void EnableInteractions(InputAction.CallbackContext context) {
+        CInput.InputActions.Interactions.Enable();
+    }
+
     private void ItemInserted(object sender, EventArgs e) {
         if (stage == 1) _stages[stage].otherConditionsSatisfied = true;
+        CInput.InputActions.Interactions.Disable();
     }
 
     private void ItemInteraction(object sender, EventArgs e) {
