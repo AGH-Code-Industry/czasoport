@@ -28,6 +28,7 @@ namespace Dialogues {
         private Story _currentStory;
         private bool _dialogueActive;
         private bool _hasAvailableChoices;
+        private Action _functionToCallback;
         
         protected override void Awake() {
             base.Awake();
@@ -50,16 +51,20 @@ namespace Dialogues {
         /// Dialogue will only start if there is no other dialogue active.
         /// </summary>
         /// <param name="storyFile">File from which to load the story. Must be a JSON file, generated from Ink file.</param>
-        public void StartDialogue(TextAsset storyFile) {
+        /// <param name="finishAction">This action will be called when dialogues ends</param>
+        public bool StartDialogue(TextAsset storyFile, Action finishAction = null) {
             if (_dialogueActive) {
                 _logger.LogWarning("DialogueManager is already playing another dialogue.");
-                return;
+                return false;
             }
+
+            _functionToCallback = finishAction;
             _currentStory = new Story(storyFile.text);
             _dialogueActive = true;
             dialoguePanel.SetActive(true);
             dialogueStarted.Invoke();
             ContinueDialogue();
+            return true;
         }
         
         /// <summary>
@@ -73,6 +78,7 @@ namespace Dialogues {
             _dialogueActive = false;
             dialoguePanel.SetActive(false);
             dialogueEnded.Invoke();
+            _functionToCallback?.Invoke();
         }
         
         /// <summary>
