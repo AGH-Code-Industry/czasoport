@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using CustomInput;
 using UnityEngine.InputSystem;
@@ -56,5 +56,7 @@ namespace UI {
         private void Hide() {
             menuPanel.SetActive(false);
         }
+
+        public bool IsGamePaused() { return _gamePaused; }
     }
 }

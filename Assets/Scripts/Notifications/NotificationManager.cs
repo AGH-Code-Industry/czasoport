@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Notifications;
@@ -7,6 +7,9 @@ using TMPro;
 using Settings;
 using DataPersistence;
 using UnityEngine.UI;
+using UI;
+using CustomInput;
+using UnityEngine.InputSystem;
 
 public class NotificationManager : MonoBehaviour, IDataPersistence {
 
@@ -22,16 +25,44 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
     GameObject _scrollContent;
     [SerializeField]
     GameObject _logPrerab;
+    [SerializeField]
+    GameObject _tutorialNotification;
+    [SerializeField]
+    GameObject _notificationWindow;
+    [SerializeField]
+    TMP_Text _bigMessage;
 
     Queue<Notification> _notificationsToDisplay = new Queue<Notification>();
     List<Notification> _notificationsHistory = new List<Notification>();
     bool _isNotificationDisplaying = false;
 
-    private void Start() {
+    Vector3 _startingPos = Vector3.zero;
+
+    PauseUI _pauseUI;
+
+    private void Awake() {
         if (Instance == null) {
             Instance = this;
         } else {
             Destroy(this);
+        }
+    }
+
+    private void Start() {
+        _pauseUI = FindObjectOfType<PauseUI>();
+        _tutorialNotification.transform.GetChild(0).GetComponent<TMP_Text>().text = "";
+        CInput.InputActions.Game.TogglePause.performed += PausePerformed;
+        _startingPos = _tutorialNotification.transform.GetChild(1).transform.position;
+        LeanTween.scale(_tutorialNotification.transform.GetChild(1).gameObject, new Vector3(1.2f, 1.2f, 1f), 0.5f).setLoopPingPong();
+        _tutorialNotification.SetActive(false);
+        _bigMessage.enabled = false;
+    }
+
+    private void PausePerformed(InputAction.CallbackContext context) {
+        if (_pauseUI.IsGamePaused()) {
+            _notificationWindow?.SetActive(false);
+        } else {
+            _notificationWindow?.SetActive(true);
         }
     }
 
@@ -59,6 +90,44 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
         UpdateLogs();
         yield return new WaitForSeconds(notification.displayTime);
         StartCoroutine(DisplayNotification());
+    }
+
+    public void RaiseTutorialNotification(TutorialNotification notification) {
+        if (notification.messages.Count == 1) {
+            _bigMessage.enabled = true;
+            _tutorialNotification.SetActive(false);
+            _bigMessage.text = notification.messages[0];
+            return;
+        }
+        _tutorialNotification.transform.GetChild(1).GetComponent<TMP_Text>().text = "";
+        _tutorialNotification.transform.GetChild(1).transform.position = _startingPos;
+
+        _bigMessage.enabled = false;
+        _tutorialNotification.SetActive(true);
+        //_tutorialNotification.transform.GetChild(1).gameObject.GetComponent<RectTransform>().pivot = new Vector2(0f, 0f);
+        _tutorialNotification.transform.GetChild(0).GetComponent<TMP_Text>().text = notification.messages[0];
+        _tutorialNotification.transform.GetChild(1).GetComponent<TMP_Text>().text = notification.messages[1];
+        _tutorialNotification.transform.GetChild(1).GetComponent<TMP_Text>().fontStyle = FontStyles.Bold;
+        _tutorialNotification.transform.GetChild(2).GetComponent<TMP_Text>().text = notification.messages[2];
+        LayoutRebuilder.ForceRebuildLayoutImmediate(_tutorialNotification.transform.GetChild(1).GetComponent<RectTransform>());
+        _tutorialNotification.transform.GetChild(1).transform.position += new Vector3(_tutorialNotification.transform.GetChild(1).GetComponent<RectTransform>().rect.width / 4, 0f, 0f);
+        //
+        //Debug.Log(_tutorialNotification.transform.GetChild(1).GetComponent<RectTransform>().rect.width);
+        //
+        //Debug.Log(_tutorialNotification.transform.GetChild(1).GetComponent<RectTransform>().rect.width);
+        //
+        //Debug.Log(_tutorialNotification.transform.GetChild(1).GetComponent<RectTransform>().rect.width);
+        //_tutorialNotification.transform.GetChild(1).gameObject.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0.5f);
+    }
+
+    public void EndTutorial() {
+        _tutorialNotification.SetActive(false);
+        _bigMessage.enabled = false;
+    }
+
+    public void StartTutorial() {
+        _tutorialNotification.SetActive(true);
+        _bigMessage.enabled = true;
     }
 
     public void LoadPersistentData(GameData gameData) {
