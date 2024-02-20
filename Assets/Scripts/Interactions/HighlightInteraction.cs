@@ -14,21 +14,22 @@ namespace Interactions {
             _material.SetTexture("_texture", _sprite.sprite.texture);
             _material.SetFloat("_OnOff",0f);
             _material.SetFloat("_scale",0.01f);
+			_material.SetColor("_color",Color.green);
         }
 
         public void EnableHighlight() {
-            _material.SetFloat("_OnOff",1f);
-            _material.SetColor("_color",Color.green);
+            _material.SetFloat("_OnOff",0f);
+            //_material.SetColor("_color",Color.red);
         }
 
         public void EnableFocusedHighlight() {
             _material.SetFloat("_OnOff",1f);
-            _material.SetColor("_color", Color.red);
+            //_material.SetColor("_color",Color.green);
         }
 
         public void DisableHighlight() {
             _material.SetFloat("_OnOff",0f);
-            _material.SetColor("_color",Color.white);
+            //_material.SetColor("_color",Color.white);
         }
     }
 }
