@@ -17,6 +17,7 @@ namespace LevelTimeChange.TimeChange {
         public static TimeChanger Instance { get; private set; }
 
         public event EventHandler<OnTimeChangeEventArgs> OnTimeChange;
+        public event EventHandler TimeChangeUnlocked;
 
         public class OnTimeChangeEventArgs : EventArgs {
             public TimeLine time;
@@ -139,6 +140,7 @@ namespace LevelTimeChange.TimeChange {
 
         public void UnlockTimeline(TimeLine timelineToUnlock) {
             _timeUnlocked[(int)timelineToUnlock] = true;
+            TimeChangeUnlocked?.Invoke(this, EventArgs.Empty);
         }
 
         public void LockTimeline(TimeLine timelineToLock) {
