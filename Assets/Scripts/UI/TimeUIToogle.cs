@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace  UI {
-    public class TimeUIStroke : MonoBehaviour {
+    public class TimeUIToogle : MonoBehaviour {
         [SerializeField] private Sprite active;
         [SerializeField] private Sprite disactive;
         private Image _image;

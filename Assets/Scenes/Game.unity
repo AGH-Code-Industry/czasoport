@@ -691,6 +691,7 @@ GameObject:
   - component: {fileID: 422257279}
   - component: {fileID: 422257281}
   - component: {fileID: 422257280}
+  - component: {fileID: 422257282}
   m_Layer: 5
   m_Name: Future
   m_TagString: Untagged
@@ -739,7 +740,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8a6ad40d05211cc49a9dd94b2b411517, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f5ae3a5ed8e79b94880b6c406495221b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -757,6 +758,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422257278}
   m_CullTransparentMesh: 1
+--- !u!114 &422257282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422257278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc49bed0941cf64b186acf1174a8ed51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: {fileID: 21300000, guid: f5ae3a5ed8e79b94880b6c406495221b, type: 3}
+  disactive: {fileID: 21300000, guid: f2ca92b41def6e9c5915198f82fcadb5, type: 3}
 --- !u!1 &440103084
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,15 +3254,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd4674068b71ebd493808e43ffa0533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  past: {fileID: 1992507413}
+  past: {fileID: 1992507415}
   pastStroke: {fileID: 1334371626}
-  present: {fileID: 2091752872}
+  present: {fileID: 2091752874}
   presentStroke: {fileID: 1916505481}
-  future: {fileID: 422257280}
+  future: {fileID: 422257282}
   futureStroke: {fileID: 905965920}
-  selectedColor: {r: 1, g: 1, b: 1, a: 1}
-  unselectedColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
-  disableTeleportColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1334371624
 GameObject:
   m_ObjectHideFlags: 0
@@ -4498,6 +4510,7 @@ GameObject:
   - component: {fileID: 1992507412}
   - component: {fileID: 1992507414}
   - component: {fileID: 1992507413}
+  - component: {fileID: 1992507415}
   m_Layer: 5
   m_Name: Past
   m_TagString: Untagged
@@ -4546,7 +4559,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 74999eb4534ab6841a3c965fdaa2ab3b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: feb6955e1ec3b6ee9867ea374b657521, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4564,6 +4577,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992507411}
   m_CullTransparentMesh: 1
+--- !u!114 &1992507415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992507411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc49bed0941cf64b186acf1174a8ed51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: {fileID: 21300000, guid: feb6955e1ec3b6ee9867ea374b657521, type: 3}
+  disactive: {fileID: 21300000, guid: 2014f7c385ef44b878dc85b8e68c2132, type: 3}
 --- !u!1 &2031558534
 GameObject:
   m_ObjectHideFlags: 0
@@ -4838,6 +4865,7 @@ GameObject:
   - component: {fileID: 2091752871}
   - component: {fileID: 2091752873}
   - component: {fileID: 2091752872}
+  - component: {fileID: 2091752874}
   m_Layer: 5
   m_Name: Present
   m_TagString: Untagged
@@ -4886,7 +4914,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f7a7cb7635ab2454eb51d1e558a1c0cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a8549d5db53a73aeb1c111dbb7ff3c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4904,6 +4932,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091752870}
   m_CullTransparentMesh: 1
+--- !u!114 &2091752874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091752870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc49bed0941cf64b186acf1174a8ed51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: {fileID: 21300000, guid: 8a8549d5db53a73aeb1c111dbb7ff3c5, type: 3}
+  disactive: {fileID: 21300000, guid: c85b193ae9ba431d7b8937e8de4225d2, type: 3}
 --- !u!1001 &841148014430262104
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,15 +10,13 @@ using UnityEngine.UI;
 namespace UI {
     public class TimeChangeUI : MonoBehaviour {
 
-        [SerializeField] private Image past;
-        [SerializeField] private TimeUIStroke pastStroke;
-        [SerializeField] private Image present;
-        [SerializeField] private TimeUIStroke presentStroke;
-        [SerializeField] private Image future;
-        [SerializeField] private TimeUIStroke futureStroke;
+        [SerializeField] private TimeUIToogle past;
+        [SerializeField] private TimeUIToogle pastStroke;
+        [SerializeField] private TimeUIToogle present;
+        [SerializeField] private TimeUIToogle presentStroke;
+        [SerializeField] private TimeUIToogle future;
+        [SerializeField] private TimeUIToogle futureStroke;
 
-        [SerializeField] private Color selectedColor;
-        [SerializeField] private Color disableTeleportColor;
 
         private void Start() {
             TimeChanger.Instance.OnTimeChange += TimeChanger_OnTimeChange;
@@ -51,20 +49,19 @@ namespace UI {
             CheckTeleportAbilities();
         }
 
-        private void ToggleActualTime(Image timeImage, TimeUIStroke timeStroke,  bool actual) {
-            timeImage.color = actual ? selectedColor : timeImage.color;
+        private void ToggleActualTime(TimeUIToogle timeImage, TimeUIToogle timeStroke,  bool actual) {
+            timeImage.SetStroke(actual);
             timeStroke.SetStroke(actual);
         }
 
-        private void CheckTeleportAbility(Image timeImage, TimeUIStroke timeStroke,  TimeLine time) {
+        private void CheckTeleportAbility(TimeUIToogle timeImage, TimeUIToogle timeStroke,  TimeLine time) {
             if (time == TimeChanger.Instance.actualTime)
                 return;
             
             ToggleBlockedTime(timeImage, timeStroke, !TimeChanger.Instance.CanChangeTime(time));
         }
 
-        private void ToggleBlockedTime(Image timeImage, TimeUIStroke timeStroke, bool block) {
-            timeImage.color = block ? disableTeleportColor : Color.white;
+        private void ToggleBlockedTime(TimeUIToogle timeImage, TimeUIToogle timeStroke, bool block) {
             timeStroke.SetStroke(!block);
         }
 
