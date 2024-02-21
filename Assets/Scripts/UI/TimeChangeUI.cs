@@ -16,8 +16,11 @@ namespace UI {
         [SerializeField] private TimeUIToogle presentStroke;
         [SerializeField] private TimeUIToogle future;
         [SerializeField] private TimeUIToogle futureStroke;
-
-
+        [SerializeField] private GameObject Camouflage;
+        [SerializeField] private Image TimeChangerBackground;
+        [SerializeField] private Sprite TwoOrbsBackground;
+        [SerializeField] private Sprite ThreeOrbsBackground;
+        
         private void Start() {
             TimeChanger.Instance.OnTimeChange += TimeChanger_OnTimeChange;
             Player.Instance.OnPlayerMoved += Player_OnPlayerMoved;
@@ -65,5 +68,13 @@ namespace UI {
             timeStroke.SetStroke(!block);
         }
 
+        public void ChangeInvBackground(TimeLine UnlockedTime) {
+            if (UnlockedTime == TimeLine.Future) {
+                TimeChangerBackground.sprite = TwoOrbsBackground;
+            } else if (UnlockedTime == TimeLine.Past) {
+                Camouflage.SetActive(false);
+                TimeChangerBackground.sprite = ThreeOrbsBackground;
+            }
+        }
     }
 }
