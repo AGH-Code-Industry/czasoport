@@ -8,13 +8,15 @@ namespace InventorySystem.UI {
     /// UI slot class.
     /// </summary>
     public class Slot : MonoBehaviour {
-        private Image _frame;
+    	[SerializeField] private Color32 activeSlot;
+    	[SerializeField] private Color32 disactiveSlot;
+        private Image _image;
         private Image _item;
         private TextMeshProUGUI _text;
 
         private void Awake() {
+            _image = GetComponent<Image>();
             _item = transform.Find("Item").GetComponent<Image>();
-            _frame = transform.Find("Frame").GetComponent<Image>();
             _text = transform.Find("Durability").GetComponent<TextMeshProUGUI>();
         }
         
@@ -43,18 +45,14 @@ namespace InventorySystem.UI {
         /// Active slot's frame
         /// </summary>
         public void Active() {
-            var tempColor = _frame.color;
-            tempColor.a = 1f;
-            _frame.color = tempColor;
+            _image.color = activeSlot;
         }
 
         /// <summary>
         /// Disactive slot's frame
         /// </summary>
         public void Disactive() {
-            var tempColor = _frame.color;
-            tempColor.a = 0f;
-            _frame.color = tempColor;
+            _image.color = disactiveSlot;
         }
 
         /// <summary>
