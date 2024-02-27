@@ -34244,6 +34244,25 @@ references:
   isSpec: "True"
   fullName: InteractableObjectSystem.Objects.LockedDoor.InteractionItem
   nameWithType: LockedDoor.InteractionItem
+- uid: InteractableObjectSystem.Objects.NoFireSign
+  name: NoFireSign
+  href: api/InteractableObjectSystem.Objects.NoFireSign.html
+  commentId: T:InteractableObjectSystem.Objects.NoFireSign
+  fullName: InteractableObjectSystem.Objects.NoFireSign
+  nameWithType: NoFireSign
+- uid: InteractableObjectSystem.Objects.NoFireSign.InteractionItem(Items.Item)
+  name: InteractionItem(Item)
+  href: api/InteractableObjectSystem.Objects.NoFireSign.html#InteractableObjectSystem_Objects_NoFireSign_InteractionItem_Items_Item_
+  commentId: M:InteractableObjectSystem.Objects.NoFireSign.InteractionItem(Items.Item)
+  fullName: InteractableObjectSystem.Objects.NoFireSign.InteractionItem(Items.Item)
+  nameWithType: NoFireSign.InteractionItem(Item)
+- uid: InteractableObjectSystem.Objects.NoFireSign.InteractionItem*
+  name: InteractionItem
+  href: api/InteractableObjectSystem.Objects.NoFireSign.html#InteractableObjectSystem_Objects_NoFireSign_InteractionItem_
+  commentId: Overload:InteractableObjectSystem.Objects.NoFireSign.InteractionItem
+  isSpec: "True"
+  fullName: InteractableObjectSystem.Objects.NoFireSign.InteractionItem
+  nameWithType: NoFireSign.InteractionItem
 - uid: Interactions
   name: Interactions
   href: api/Interactions.html
@@ -35741,25 +35760,44 @@ references:
   commentId: N:NPC
   fullName: NPC
   nameWithType: NPC
+- uid: NPC.DialogueNPC
+  name: DialogueNPC
+  href: api/NPC.DialogueNPC.html
+  commentId: T:NPC.DialogueNPC
+  fullName: NPC.DialogueNPC
+  nameWithType: DialogueNPC
+- uid: NPC.DialogueNPC.InteractionHand
+  name: InteractionHand()
+  href: api/NPC.DialogueNPC.html#NPC_DialogueNPC_InteractionHand
+  commentId: M:NPC.DialogueNPC.InteractionHand
+  fullName: NPC.DialogueNPC.InteractionHand()
+  nameWithType: DialogueNPC.InteractionHand()
+- uid: NPC.DialogueNPC.InteractionHand*
+  name: InteractionHand
+  href: api/NPC.DialogueNPC.html#NPC_DialogueNPC_InteractionHand_
+  commentId: Overload:NPC.DialogueNPC.InteractionHand
+  isSpec: "True"
+  fullName: NPC.DialogueNPC.InteractionHand
+  nameWithType: DialogueNPC.InteractionHand
 - uid: NPC.PathWalking
   name: PathWalking
   href: api/NPC.PathWalking.html
   commentId: T:NPC.PathWalking
   fullName: NPC.PathWalking
   nameWithType: PathWalking
-- uid: NPC.PathWalking.ContinueWalk
-  name: ContinueWalk()
-  href: api/NPC.PathWalking.html#NPC_PathWalking_ContinueWalk
-  commentId: M:NPC.PathWalking.ContinueWalk
-  fullName: NPC.PathWalking.ContinueWalk()
-  nameWithType: PathWalking.ContinueWalk()
-- uid: NPC.PathWalking.ContinueWalk*
-  name: ContinueWalk
-  href: api/NPC.PathWalking.html#NPC_PathWalking_ContinueWalk_
-  commentId: Overload:NPC.PathWalking.ContinueWalk
+- uid: NPC.PathWalking.StartWalk
+  name: StartWalk()
+  href: api/NPC.PathWalking.html#NPC_PathWalking_StartWalk
+  commentId: M:NPC.PathWalking.StartWalk
+  fullName: NPC.PathWalking.StartWalk()
+  nameWithType: PathWalking.StartWalk()
+- uid: NPC.PathWalking.StartWalk*
+  name: StartWalk
+  href: api/NPC.PathWalking.html#NPC_PathWalking_StartWalk_
+  commentId: Overload:NPC.PathWalking.StartWalk
   isSpec: "True"
-  fullName: NPC.PathWalking.ContinueWalk
-  nameWithType: PathWalking.ContinueWalk
+  fullName: NPC.PathWalking.StartWalk
+  nameWithType: PathWalking.StartWalk
 - uid: NPC.PathWalking.StopWalk
   name: StopWalk()
   href: api/NPC.PathWalking.html#NPC_PathWalking_StopWalk

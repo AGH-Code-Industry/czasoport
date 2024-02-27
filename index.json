@@ -1577,7 +1577,7 @@
   "api/InteractableObjectSystem.InteractableObject.html": {
     "href": "api/InteractableObjectSystem.InteractableObject.html",
     "title": "Class InteractableObject | Czasoport Documentation",
-    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived Czasoport CzasoportPart BreakableRock Fireplace LockedChest LockedDoor Trading Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
+    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived Czasoport CzasoportPart BreakableRock Fireplace LockedChest LockedDoor NoFireSign DialogueNPC Trading Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
   },
   "api/InteractableObjectSystem.Objects.BreakableRock.html": {
     "href": "api/InteractableObjectSystem.Objects.BreakableRock.html",
@@ -1599,10 +1599,15 @@
     "title": "Class LockedDoor | Czasoport Documentation",
     "keywords": "Class LockedDoor Namespace InteractableObjectSystem.Objects public class LockedDoor : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject LockedDoor Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand() InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
   },
+  "api/InteractableObjectSystem.Objects.NoFireSign.html": {
+    "href": "api/InteractableObjectSystem.Objects.NoFireSign.html",
+    "title": "Class NoFireSign | Czasoport Documentation",
+    "keywords": "Class NoFireSign Namespace InteractableObjectSystem.Objects public class NoFireSign : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject NoFireSign Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.InteractionHand() InteractableObject.LongInteractionHand() Methods InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
+  },
   "api/InteractableObjectSystem.Objects.html": {
     "href": "api/InteractableObjectSystem.Objects.html",
     "title": "Namespace InteractableObjectSystem.Objects | Czasoport Documentation",
-    "keywords": "Namespace InteractableObjectSystem.Objects Classes BreakableRock Fireplace LockedChest LockedDoor"
+    "keywords": "Namespace InteractableObjectSystem.Objects Classes BreakableRock Fireplace LockedChest LockedDoor NoFireSign"
   },
   "api/InteractableObjectSystem.html": {
     "href": "api/InteractableObjectSystem.html",
@@ -1824,10 +1829,15 @@
     "title": "Namespace LevelTimeChange | Czasoport Documentation",
     "keywords": "Namespace LevelTimeChange Classes TimePlatformChangeSettingsSO Settings for scene changing and time changing systems. Enums TimeLine"
   },
+  "api/NPC.DialogueNPC.html": {
+    "href": "api/NPC.DialogueNPC.html",
+    "title": "Class DialogueNPC | Czasoport Documentation",
+    "keywords": "Class DialogueNPC Namespace NPC public class DialogueNPC : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject DialogueNPC Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.InteractionItem(Item) InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand()"
+  },
   "api/NPC.PathWalking.html": {
     "href": "api/NPC.PathWalking.html",
     "title": "Class PathWalking | Czasoport Documentation",
-    "keywords": "Class PathWalking Namespace NPC public class PathWalking : MonoBehaviour Inheritance object PathWalking Methods ContinueWalk() Npc continues walk by path public void ContinueWalk() StopWalk() Stop npc public void StopWalk()"
+    "keywords": "Class PathWalking Namespace NPC public class PathWalking : MonoBehaviour Inheritance object PathWalking Methods StartWalk() Npc continues walk by path public void StartWalk() StopWalk() Stop npc public void StopWalk()"
   },
   "api/NPC.Trading.html": {
     "href": "api/NPC.Trading.html",
@@ -1837,7 +1847,7 @@
   "api/NPC.html": {
     "href": "api/NPC.html",
     "title": "Namespace NPC | Czasoport Documentation",
-    "keywords": "Namespace NPC Classes PathWalking Trading"
+    "keywords": "Namespace NPC Classes DialogueNPC PathWalking Trading"
   },
   "api/Notifications.Notification.html": {
     "href": "api/Notifications.Notification.html",

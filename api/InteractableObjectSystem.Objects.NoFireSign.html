@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class PathWalking | Czasoport Documentation </title>
+      <title>Class NoFireSign | Czasoport Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class PathWalking | Czasoport Documentation ">
+      <meta name="title" content="Class NoFireSign | Czasoport Documentation ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=NPC_PathWalking.md&amp;value=---%0Auid%3A%20NPC.PathWalking%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=InteractableObjectSystem_Objects_NoFireSign.md&amp;value=---%0Auid%3A%20InteractableObjectSystem.Objects.NoFireSign%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,16 +84,16 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="NPC.PathWalking">
+        <article data-uid="InteractableObjectSystem.Objects.NoFireSign">
 
 
 
-  <h1 id="NPC_PathWalking" data-uid="NPC.PathWalking" class="text-break">
-Class PathWalking  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/NPC/PathWalking.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  <h1 id="InteractableObjectSystem_Objects_NoFireSign" data-uid="InteractableObjectSystem.Objects.NoFireSign" class="text-break">
+Class NoFireSign  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/NoFireSign.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="NPC.html">NPC</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="InteractableObjectSystem.html">InteractableObjectSystem</a>.<a class="xref" href="InteractableObjectSystem.Objects.html">Objects</a></dd></dl>
   
   </div>
 
@@ -101,7 +101,7 @@ Class PathWalking  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PathWalking : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class NoFireSign : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable</code></pre>
   </div>
 
 
@@ -111,12 +111,41 @@ Class PathWalking  <a class="header-action link-secondary" title="View source" h
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">PathWalking</span></div>
+      <div><a class="xref" href="InteractableObjectSystem.InteractableObject.html">InteractableObject</a></div>
+      <div><span class="xref">NoFireSign</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Interactions.Interfaces.IItemInteractable.html">IItemInteractable</a></div>
+      <div><a class="xref" href="Interactions.Interfaces.IHandInteractable.html">IHandInteractable</a></div>
+      <div><a class="xref" href="Interactions.Interfaces.ILongHandInteractable.html">ILongHandInteractable</a></div>
+      <div><a class="xref" href="Interactions.Interfaces.ILongItemInteractable.html">ILongItemInteractable</a></div>
     </dd>
   </dl>
 
 
-
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_definition">InteractableObject.definition</a>
+    </div>
+    <div>
+      <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_Logger">InteractableObject.Logger</a>
+    </div>
+    <div>
+      <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_LongInteractionItem_Items_Item_">InteractableObject.LongInteractionItem(Item)</a>
+    </div>
+    <div>
+      <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_InteractionHand">InteractableObject.InteractionHand()</a>
+    </div>
+    <div>
+      <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_LongInteractionHand">InteractableObject.LongInteractionHand()</a>
+    </div>
+  </dd></dl>
 
 
 
@@ -127,49 +156,31 @@ Class PathWalking  <a class="header-action link-secondary" title="View source" h
 </h2>
 
 
-  <a id="NPC_PathWalking_StartWalk_" data-uid="NPC.PathWalking.StartWalk*"></a>
+  <a id="InteractableObjectSystem_Objects_NoFireSign_InteractionItem_" data-uid="InteractableObjectSystem.Objects.NoFireSign.InteractionItem*"></a>
 
-  <h3 id="NPC_PathWalking_StartWalk" data-uid="NPC.PathWalking.StartWalk">
-  StartWalk()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/NPC/PathWalking.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <h3 id="InteractableObjectSystem_Objects_NoFireSign_InteractionItem_Items_Item_" data-uid="InteractableObjectSystem.Objects.NoFireSign.InteractionItem(Items.Item)">
+  InteractionItem(Item)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/NoFireSign.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Npc continues walk by path</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartWalk()</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool InteractionItem(Item item)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <a class="xref" href="Items.Item.html">Item</a></dt>
+    <dd></dd>
+  </dl>
 
-
-
-
-
-
-
-
-
-
-
-
-  <a id="NPC_PathWalking_StopWalk_" data-uid="NPC.PathWalking.StopWalk*"></a>
-
-  <h3 id="NPC_PathWalking_StopWalk" data-uid="NPC.PathWalking.StopWalk">
-  StopWalk()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/NPC/PathWalking.cs/#L65"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Stop npc</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StopWalk()</code></pre>
-  </div>
-
-
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -185,7 +196,7 @@ Class PathWalking  <a class="header-action link-secondary" title="View source" h
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/NPC/PathWalking.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/NoFireSign.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 
