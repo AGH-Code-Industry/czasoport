@@ -72,7 +72,7 @@ namespace NPC {
         /// <summary>
         /// Npc continues walk by path
         /// </summary>
-        public void ContinueWalk() {
+        public void StartWalk() {
             _canWalk = true;
             _walkDistance = Vector2.Distance(marchPoints[_previousTarget].position,marchPoints[_actualTarget].position);
             _animator.SetFloat("Speed", walkSpeed);
