@@ -119,7 +119,7 @@ namespace InventorySystem {
                 return false;
             }
 
-            if (_items[_selectedSlot] is null) { // Put item in the selected slot
+            if (_items[_selectedSlot] is null && _selectedSlot != 0) { // Put item in the selected slot
                 _items[_selectedSlot] = item;
                 _itemsCount++;
                 ItemInserted?.Invoke(this, new ItemInsertedEventArgs() {
@@ -128,7 +128,7 @@ namespace InventorySystem {
                 });
             }
             else { // Put item into first empty slot
-                for (int i = 0; i < _settings.itemsCount; i++) {
+                for (int i = 1; i < _settings.itemsCount; i++) {
                     if (_items[i] is null) {
                         _items[i] = item;
                         _itemsCount++;
