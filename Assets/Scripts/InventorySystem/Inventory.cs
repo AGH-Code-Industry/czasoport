@@ -178,6 +178,10 @@ namespace InventorySystem {
         /// <param name="item">Removed item if selected slot was not empty.</param>
         /// <returns>`True` if item was removed, `false` if slot was empty. If `false`, retrieved item will be null.</returns>
         public bool RemoveItem(out Item item) {
+            if (_selectedSlot == 0) {
+                item = null;
+                return false;
+            }
             item = _items[_selectedSlot];
             _items[_selectedSlot] = null;
             ItemRemoved?.Invoke(this, new ItemRemovedEventArgs() {
@@ -194,6 +198,10 @@ namespace InventorySystem {
         /// <param name="itemSO">Definition of the item to be removed.</param>
         /// <returns></returns>
         public bool RemoveItem(ItemSO itemSO) {
+            if (_selectedSlot == 0) {
+                itemSO = null;
+                return false;
+            }
             var item = _items.FirstOrDefault(item => item.ItemSO == itemSO);
             var index = Array.IndexOf(_items, item);
             if (index == -1) {
