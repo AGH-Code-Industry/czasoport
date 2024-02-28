@@ -1921,6 +1921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotPrefab: {fileID: 2331055161561051305, guid: c740a02885e9e404eb944dc3b58bc969, type: 3}
   container: {fileID: 708454847}
+  hand: {fileID: 21300000, guid: 8b0199c5cef511a4781213c0971c5577, type: 3}
 --- !u!1 &726814762
 GameObject:
   m_ObjectHideFlags: 0
@@ -2684,8 +2685,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1680, y: 247.99995}
-  m_SizeDelta: {x: 427, y: 69}
+  m_AnchoredPosition: {x: 1640, y: 247.99995}
+  m_SizeDelta: {x: 506, y: 69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905373031
 MonoBehaviour:
@@ -2707,7 +2708,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c05afa84cc64b99429a85a6d25e57d94, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db6e481bd7400aa4e865550dcf9481ac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4966,7 +4967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020438934670847311, guid: 2c4b00d23f1dafd44987d072862844c7, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7020438934670847311, guid: 2c4b00d23f1dafd44987d072862844c7, type: 3}
       propertyPath: m_LocalPosition.x
