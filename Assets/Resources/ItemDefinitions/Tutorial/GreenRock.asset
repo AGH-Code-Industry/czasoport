@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ce5931d7433ff46b4ea648e04d74f4, type: 3}
+  m_Name: GreenRock
+  m_EditorClassIdentifier: 
+  itemName: Green Rock
+  description: Just a not normal rock
+  prefab: {fileID: 4080088648645804759, guid: f1e9ee746e0b2d4cfafdcb16d0a19f60, type: 3}
+  image: {fileID: 1983544397, guid: d70a968bcebfece4fb88690c9e12bb8b, type: 3}
+  durability: 1
+  interactionDistance: 3
+  pickUpNotification:
+    message: 
+    displayTime: 3
+  dropNotification:
+    message: 
+    displayTime: 3
