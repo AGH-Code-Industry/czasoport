@@ -1,8 +1,8 @@
 -> main
 
 === main ===
-Hello traveler, you don't look like familiar. Do you want to buy anything?
-    * [Yes, please. Show me what can I get from you.]
+Hello traveler, I don't think I recognize you. Are you interested in any of those goods?
+    * [Hello, let me see what can I buy here.]
         -> show
     * [No, thank you. I'm not interested right now.]
     ->DONE
@@ -16,10 +16,10 @@ Bye!
         -> trade
     * [Exhchange #requiresItem: PinkGem #getsItem: Torch]
         -> trade
-    * [Bye]
+    * [I don't want anything. Bye.]
         -> bywaj
         
 === trade ===
-It was a pleasure to trade with you. Thanks.
+If you need any more, feel free to come back here!
 -> DONE
 -> main
