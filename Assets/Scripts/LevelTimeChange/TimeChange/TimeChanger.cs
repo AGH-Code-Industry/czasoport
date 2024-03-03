@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
@@ -140,6 +140,7 @@ namespace LevelTimeChange.TimeChange {
 
         public void UnlockTimeline(TimeLine timelineToUnlock) {
             _timeUnlocked[(int)timelineToUnlock] = true;
+            _timeChangeUIgo.GetComponent<TimeChangeUI>().ChangeInvBackground(timelineToUnlock);
             TimeChangeUnlocked?.Invoke(this, EventArgs.Empty);
         }
 

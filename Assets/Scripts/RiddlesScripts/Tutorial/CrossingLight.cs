@@ -42,7 +42,7 @@ public class CrossingLight : MonoBehaviour {
         lightSpriteRenderer.color = _redLightColor;
         _crossingState = CrossingState.Opened;
         foreach (PathWalking pw in pathWalkings) {
-            pw.ContinueWalk();
+            pw.StartWalk();
         }
     }
 

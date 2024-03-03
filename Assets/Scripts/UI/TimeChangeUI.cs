@@ -10,13 +10,17 @@ using UnityEngine.UI;
 namespace UI {
     public class TimeChangeUI : MonoBehaviour {
 
-        [SerializeField] private Image past;
-        [SerializeField] private Image present;
-        [SerializeField] private Image future;
-
-        [SerializeField] private Color selectedColor;
-        [SerializeField] private Color disableTeleportColor;
-
+        [SerializeField] private TimeUIToogle past;
+        [SerializeField] private TimeUIToogle pastStroke;
+        [SerializeField] private TimeUIToogle present;
+        [SerializeField] private TimeUIToogle presentStroke;
+        [SerializeField] private TimeUIToogle future;
+        [SerializeField] private TimeUIToogle futureStroke;
+        [SerializeField] private GameObject Camouflage;
+        [SerializeField] private Image TimeChangerBackground;
+        [SerializeField] private Sprite TwoOrbsBackground;
+        [SerializeField] private Sprite ThreeOrbsBackground;
+        
         private void Start() {
             TimeChanger.Instance.OnTimeChange += TimeChanger_OnTimeChange;
             Player.Instance.OnPlayerMoved += Player_OnPlayerMoved;
@@ -33,35 +37,44 @@ namespace UI {
         }
 
         private void CheckTeleportAbilities() {
-            CheckTeleportAbility(past, TimeLine.Past);
-            CheckTeleportAbility(present, TimeLine.Present);
-            CheckTeleportAbility(future, TimeLine.Future);
+            CheckTeleportAbility(past, pastStroke, TimeLine.Past);
+            CheckTeleportAbility(present, presentStroke, TimeLine.Present);
+            CheckTeleportAbility(future, futureStroke, TimeLine.Future);
         }
         private void TimeChanger_OnTimeChange(object sender, TimeChanger.OnTimeChangeEventArgs e) {
             ChangeSelectedTime(e.time);
         }
 
         private void ChangeSelectedTime(TimeLine actualTime) {
-            ToggleActualTime(past, actualTime == TimeLine.Past);
-            ToggleActualTime(present, actualTime == TimeLine.Present);
-            ToggleActualTime(future, actualTime == TimeLine.Future);
+            ToggleActualTime(past, pastStroke, actualTime == TimeLine.Past);
+            ToggleActualTime(present, presentStroke, actualTime == TimeLine.Present);
+            ToggleActualTime(future, futureStroke, actualTime == TimeLine.Future);
             CheckTeleportAbilities();
         }
 
-        private void ToggleActualTime(Image timeImage, bool actual) {
-            timeImage.color = actual ? selectedColor : timeImage.color;
+        private void ToggleActualTime(TimeUIToogle timeImage, TimeUIToogle timeStroke,  bool actual) {
+            timeImage.SetStroke(actual);
+            timeStroke.SetStroke(actual);
         }
 
-        private void CheckTeleportAbility(Image timeImage, TimeLine time) {
+        private void CheckTeleportAbility(TimeUIToogle timeImage, TimeUIToogle timeStroke,  TimeLine time) {
             if (time == TimeChanger.Instance.actualTime)
                 return;
             
-            ToggleBlockedTime(timeImage, !TimeChanger.Instance.CanChangeTime(time));
+            ToggleBlockedTime(timeImage, timeStroke, !TimeChanger.Instance.CanChangeTime(time));
         }
 
-        private void ToggleBlockedTime(Image timeImage, bool block) {
-            timeImage.color = block ? disableTeleportColor : Color.white;
+        private void ToggleBlockedTime(TimeUIToogle timeImage, TimeUIToogle timeStroke, bool block) {
+            timeStroke.SetStroke(!block);
         }
 
+        public void ChangeInvBackground(TimeLine UnlockedTime) {
+            if (UnlockedTime == TimeLine.Future) {
+                TimeChangerBackground.sprite = TwoOrbsBackground;
+            } else if (UnlockedTime == TimeLine.Past) {
+                Camouflage.SetActive(false);
+                TimeChangerBackground.sprite = ThreeOrbsBackground;
+            }
+        }
     }
 }
