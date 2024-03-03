@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
@@ -18,6 +18,7 @@ namespace InteractableObjectSystem.Objects {
         
         [SerializeField] private List<ItemSO> interactedWith;
         [SerializeField] private float openingSpeed;
+        [SerializeField] private float _openingDelay;
 
         private BoxCollider2D _collider;
         private DoorState _state;
@@ -63,10 +64,15 @@ namespace InteractableObjectSystem.Objects {
         }
 
         private void OpenDoor() {
-            _state = DoorState.Opened;
-            _collider.enabled = false;
             _animator.SetTrigger("OpenDoors");
             CDebug.Log("Opened");
+            _state = DoorState.Opened;
+            StartCoroutine(OpenDoortsWithDelay(_openingDelay));
+        }
+
+        IEnumerator OpenDoortsWithDelay(float delay) {
+            yield return new WaitForSeconds(delay);
+            _collider.enabled = false;
         }
 
         private void CloseDoor() {
