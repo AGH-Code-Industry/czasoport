@@ -19,6 +19,7 @@ public class TutorialManager : MonoBehaviour
     /// </summary>
     void Start()
     {
+        // Jak coś dodajecie to lepiej napiszcie do Mikołaja
         _stages.Add(new TutorialStage(CInput.InputActions.Movement.Navigation, true));
         _stages.Add(new TutorialStage(CInput.InputActions.Interactions.Interaction, false));
         _stages.Add(new TutorialStage(CInput.InputActions.Inventory.NextItem, true));
