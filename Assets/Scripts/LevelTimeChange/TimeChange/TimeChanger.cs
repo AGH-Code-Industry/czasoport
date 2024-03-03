@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
@@ -153,6 +153,7 @@ namespace LevelTimeChange.TimeChange {
         }
 
         public void EnableTimeChange() {
+            _timeChangeUIgo.GetComponent<TimeChangeUI>().UnlockTimeUI();
             _timeChangeUIgo.SetActive(true);
         }
 
