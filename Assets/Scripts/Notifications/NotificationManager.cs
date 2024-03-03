@@ -106,7 +106,6 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
         _messageGo1.SetActive(true);
         _messageGo2.SetActive(true);
         _messageGo3.SetActive(true);
-
         _tutorialNotification.transform.GetChild(1).GetComponent<TMP_Text>().text = "";
 
         _bigMessage.enabled = false;
