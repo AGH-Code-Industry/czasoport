@@ -128,9 +128,14 @@ namespace Interactions {
             }
 
             if (_focusedObject is null) {
-                _selectedObject = GetNearestInteractable();
+				GameObject g = GetNearestInteractable();
+				if (_selectedObject != g) { 
+					if (_selectedObject is not null)_selectedObject.GetComponent<IHighlightable>()?.DisableFocusedHighlight();
+					_selectedObject = g;
+				}
             }
             else {
+				if (_selectedObject is not null) _selectedObject.GetComponent<IHighlightable>()?.DisableFocusedHighlight();
                 _selectedObject = _focusedObject;
             }
 
