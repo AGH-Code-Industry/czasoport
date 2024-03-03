@@ -35,7 +35,7 @@ public class TutorialManager : MonoBehaviour
         _messages.Add(new TutorialNotification("Press", "WSAD", "to move."));
         _messages.Add(new TutorialNotification("Press", "F", "to pick up an item."));
         _messages.Add(new TutorialNotification("Press", "TAB", "to select the next slot in you inventory."));
-        _messages.Add(new TutorialNotification("Press liczby", "1-6", "to select specific slot."));
+        _messages.Add(new TutorialNotification("Press numbers", "1-6", "to select specific slot."));
         _messages.Add(new TutorialNotification("Press", "F", "to interack with another item (try breaking the rock)."));
         _messages.Add(new TutorialNotification("Good job! Now try to find timeport."));
         _messages.Add(new TutorialNotification("Press", "Q", "to teleport back in time."));
