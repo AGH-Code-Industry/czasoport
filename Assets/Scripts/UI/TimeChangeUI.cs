@@ -20,11 +20,11 @@ namespace UI {
         [SerializeField] private Image TimeChangerBackground;
         [SerializeField] private Sprite TwoOrbsBackground;
         [SerializeField] private Sprite ThreeOrbsBackground;
-        
-        private void Start() {
+
+        public void UnlockTimeUI() {
             TimeChanger.Instance.OnTimeChange += TimeChanger_OnTimeChange;
             Player.Instance.OnPlayerMoved += Player_OnPlayerMoved;
-            
+
             ChangeSelectedTime(TimeChanger.Instance.actualTime);
         }
 

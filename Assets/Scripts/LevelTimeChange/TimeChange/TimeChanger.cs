@@ -162,6 +162,7 @@ namespace LevelTimeChange.TimeChange {
         }
 
         public void EnableTimeChange() {
+            _timeChangeUIgo.GetComponent<TimeChangeUI>().UnlockTimeUI();
             _timeChangeUIgo.SetActive(true);
         }
 
