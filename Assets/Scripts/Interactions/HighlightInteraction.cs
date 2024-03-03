@@ -9,6 +9,7 @@ namespace Interactions {
         private SpriteRenderer _sprite;
         private Material _material;
         private bool _isFocused = false;
+        private bool _stopAnimation = false;
         private float _animationTime = 0.3f;
         private float _animationTimer;
 
@@ -20,26 +21,38 @@ namespace Interactions {
             _material.SetFloat("_scale",0.01f);
 			_material.SetColor("_color",Color.green);
         }
-
-        public void EnableHighlight() {
-            if (_isFocused) StartCoroutine(ToogleHighlight());
+        
+        public void EnableHighlight() {}
+        public void DisableHighlight() {
+            if (_isFocused) {
+                _stopAnimation = true;
+                StartCoroutine(TurnHighlight(1f, 0f));
+            }
         }
 
         public void EnableFocusedHighlight() {
-            if (!_isFocused) StartCoroutine(ToogleHighlight());
+            if (!_isFocused) {
+                _stopAnimation = true;
+                StartCoroutine(TurnHighlight(0f, 1f));
+            }
         }
 
-        public void DisableHighlight() {
-            if (_isFocused) StartCoroutine(ToogleHighlight());
+        public void DisableFocusedHighlight() {
+            if (_isFocused) {
+                _stopAnimation = true;
+                StartCoroutine(TurnHighlight(1f, 0f));
+            }
         }
         
-        private IEnumerator ToogleHighlight() {
-			_isFocused = !_isFocused;
-            float targetAlpha = 1f - _material.GetFloat("_OnOff");
-			float startAlpha = _material.GetFloat("_OnOff");;
+        private IEnumerator TurnHighlight(float startAlpha,float targetAlpha) {
+            _stopAnimation = false;
+            if (targetAlpha == 1f) _isFocused = true;
+            else _isFocused = false;
+            
             _animationTimer = _animationTime;
                 
             while (_animationTimer > 0f) {
+                if (_stopAnimation) break;
             	_animationTimer -= Time.deltaTime;
                 yield return null;
                 _material.SetFloat("_OnOff",
