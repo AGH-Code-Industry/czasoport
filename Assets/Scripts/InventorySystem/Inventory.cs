@@ -119,7 +119,7 @@ namespace InventorySystem {
                 return false;
             }
 
-            if (_items[_selectedSlot] is null) { // Put item in the selected slot
+            if (_items[_selectedSlot] is null && _selectedSlot != 0) { // Put item in the selected slot
                 _items[_selectedSlot] = item;
                 _itemsCount++;
                 ItemInserted?.Invoke(this, new ItemInsertedEventArgs() {
@@ -128,7 +128,7 @@ namespace InventorySystem {
                 });
             }
             else { // Put item into first empty slot
-                for (int i = 0; i < _settings.itemsCount; i++) {
+                for (int i = 1; i < _settings.itemsCount; i++) {
                     if (_items[i] is null) {
                         _items[i] = item;
                         _itemsCount++;
@@ -178,6 +178,10 @@ namespace InventorySystem {
         /// <param name="item">Removed item if selected slot was not empty.</param>
         /// <returns>`True` if item was removed, `false` if slot was empty. If `false`, retrieved item will be null.</returns>
         public bool RemoveItem(out Item item) {
+            if (_selectedSlot == 0) {
+                item = null;
+                return false;
+            }
             item = _items[_selectedSlot];
             _items[_selectedSlot] = null;
             ItemRemoved?.Invoke(this, new ItemRemovedEventArgs() {
@@ -194,6 +198,10 @@ namespace InventorySystem {
         /// <param name="itemSO">Definition of the item to be removed.</param>
         /// <returns></returns>
         public bool RemoveItem(ItemSO itemSO) {
+            if (_selectedSlot == 0) {
+                itemSO = null;
+                return false;
+            }
             var item = _items.FirstOrDefault(item => item.ItemSO == itemSO);
             var index = Array.IndexOf(_items, item);
             if (index == -1) {

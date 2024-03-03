@@ -13,10 +13,11 @@ namespace InventorySystem.UI {
     {
         [SerializeField] private GameObject slotPrefab;
         [SerializeField] private Transform container;
+        [SerializeField] private Sprite hand;
 
         private List<Slot> _slots;
         
-        private int _activeId;
+        private int _activeId = 0;
 
         private void Start() {
             _slots = new List<Slot>();
@@ -24,13 +25,13 @@ namespace InventorySystem.UI {
             for (int i = 0; i < DeveloperSettings.Instance.invSettings.itemsCount; i++) {
                 GameObject slot = Instantiate(slotPrefab, container);
                 RectTransform rT = slot.GetComponent<RectTransform>();
-                rT.anchoredPosition = new Vector2(29f+86f*i, 30f);
+                rT.anchoredPosition = new Vector2(-51f+86f*i, 30f);
                 _slots.Add(slot.GetComponent<Slot>());
                 _slots[i].RemoveItem();
                 _slots[i].Disactive();
             }
             _slots[_activeId].Active();
-            
+            _slots[_activeId].AddItem(hand);
             // We need to subscribe to Inventory event in Start() script, because OnEnable() is run just
             // after Awake(). This means that Inventory might not be yet present (its Awake is run later),
             // and we will try to subscribe to its events.

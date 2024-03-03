@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 7020438934670847302}
   - component: {fileID: 7020438934670847321}
   - component: {fileID: 7020438934670847320}
-  - component: {fileID: 5287886940116837392}
+  - component: {fileID: 2891557254427041557}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   actualTime: 1
+  _timeUnlocked: 000000
 --- !u!212 &7020438934670847321
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -215,8 +216,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!70 &5287886940116837392
-CapsuleCollider2D:
+--- !u!58 &2891557254427041557
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -228,6 +229,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
-  m_Size: {x: 0.7, y: 0.5}
-  m_Direction: 1
+  m_Offset: {x: 0, y: -0.1}
+  serializedVersion: 2
+  m_Radius: 0.3
