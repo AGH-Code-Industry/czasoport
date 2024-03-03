@@ -50,7 +50,7 @@ namespace InteractableObjectSystem.Objects {
         private void Break() {
             _state = RockState.Destroyed;
             _particleSystem.Play();
-            Invoke("HideSprite",0.75f);
+            Invoke("HideSprite",0.5f);
             CDebug.Log("Broken");
         }
 

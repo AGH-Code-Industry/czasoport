@@ -64,5 +64,7 @@ namespace UI {
         private void Hide() {
             menuPanel.SetActive(false);
         }
+
+        public bool IsGamePaused() { return _gamePaused; }
     }
 }
