@@ -64,6 +64,8 @@ namespace InteractableObjectSystem.Objects {
         }
 
         public void OpenDoor() {
+            if (_state == DoorState.Opened)
+                return;
             _animator.SetTrigger("OpenDoors");
             CDebug.Log("Opened");
             _state = DoorState.Opened;
@@ -76,6 +78,10 @@ namespace InteractableObjectSystem.Objects {
         }
 
         public void CloseDoor() {
+            if (_state == DoorState.Closed || _state == DoorState.Locked)
+                return;
+            Debug.Log("Closing");
+            _animator.SetTrigger("CloseDoors");
             _state = DoorState.Closed;
             _collider.enabled = true;
             CDebug.Log("Closed");
