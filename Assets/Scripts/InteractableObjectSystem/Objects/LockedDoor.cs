@@ -58,21 +58,26 @@ namespace InteractableObjectSystem.Objects {
 
         private void UnlockDoor() {
             _state = DoorState.Opened;
-            _collider.enabled = false;
+            Invoke("ManageDoorCollider", 1f);
             CDebug.Log("Unlocked");
         }
 
         private void OpenDoor() {
             _state = DoorState.Opened;
-            _collider.enabled = false;
+            Invoke("ManageDoorCollider", 1f);
             _animator.SetTrigger("OpenDoors");
             CDebug.Log("Opened");
         }
 
         private void CloseDoor() {
             _state = DoorState.Closed;
-            _collider.enabled = true;
+            Invoke("ManageDoorCollider", 0.75f);
             CDebug.Log("Closed");
+        }
+
+        private void ManageDoorCollider() {
+            if (_state == DoorState.Opened) _collider.enabled = false;
+            else if (_state == DoorState.Closed) _collider.enabled = true;
         }
     }
 }
