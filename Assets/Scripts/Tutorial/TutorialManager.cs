@@ -19,6 +19,7 @@ public class TutorialManager : MonoBehaviour
     /// </summary>
     void Start()
     {
+        // Jak coś dodajecie to lepiej napiszcie do Mikołaja
         _stages.Add(new TutorialStage(CInput.InputActions.Movement.Navigation, true));
         _stages.Add(new TutorialStage(CInput.InputActions.Interactions.Interaction, false));
         _stages.Add(new TutorialStage(CInput.InputActions.Inventory.NextItem, true));
@@ -27,22 +28,25 @@ public class TutorialManager : MonoBehaviour
         _stages.Add(new TutorialStage(CInput.InputActions.Interactions.Interaction, false));
         _stages.Add(new TutorialStage(CInput.InputActions.Teleport.TeleportBack, false));
         _stages.Add(new TutorialStage(CInput.InputActions.Teleport.TeleportForward, false));
+        _stages.Add(new TutorialStage(CInput.InputActions.Inventory.Drop, false));
         _stages.Add(new TutorialStage(CInput.InputActions.Game.TogglePause, true));
 
         _messages.Add(new TutorialNotification("Cześć! Witaj w samouczku!"));
         _messages.Add(new TutorialNotification("Wciśnij", "WSAD", "aby się poruszać."));
-        _messages.Add(new TutorialNotification("Wciśnij", "F", "aby podnieść przedmiot"));
-        _messages.Add(new TutorialNotification("Wciśnij", "TAB", "aby wybrać kolejny slot"));
-        _messages.Add(new TutorialNotification("Wciśnij liczby", "1-5", "aby wybrać slot w ekwipunku"));
-        _messages.Add(new TutorialNotification("Wciśnij", "F", "aby wejść w interakcję z innym przedmiotem (spróbuj rozwalić kamień)"));
-        _messages.Add(new TutorialNotification("Świetnie! Teraz poszukaj czasoportu"));
-        _messages.Add(new TutorialNotification("Wciśnij", "Q", "aby teleportować się w przeszłość"));
-        _messages.Add(new TutorialNotification("Wciśnij", "E", "aby teleportować się w przyszłość"));
-        _messages.Add(new TutorialNotification("Wciśnij", "ESCAPE", "aby zapauzować grę"));
+        _messages.Add(new TutorialNotification("Wciśnij", "F", "aby podnieść przedmiot."));
+        _messages.Add(new TutorialNotification("Wciśnij", "TAB", "aby wybrać kolejny slot."));
+        _messages.Add(new TutorialNotification("Wciśnij liczby", "1-6", "aby wybrać slot w ekwipunku."));
+        _messages.Add(new TutorialNotification("Wciśnij", "F", "aby wejść w interakcję z innym przedmiotem (spróbuj rozwalić kamień)."));
+        _messages.Add(new TutorialNotification("Świetnie! Teraz poszukaj czasoportu."));
+        _messages.Add(new TutorialNotification("Wciśnij", "Q", "aby teleportować się w przeszłość."));
+        _messages.Add(new TutorialNotification("Wciśnij", "E", "aby teleportować się w przyszłość."));
+        _messages.Add(new TutorialNotification("Wciśnij", "G", "aby wyrzucić aktualnie trzymany przedmiot."));
+        _messages.Add(new TutorialNotification("Wciśnij", "ESCAPE", "aby zapauzować grę."));
         _messages.Add(new TutorialNotification("Brawo! Udało ci się przejść samouczek, teraz dopiero zaczyna się zabawa... Powodzenia!!!"));
 
         Interactions.Interactions.Instance.itemInteractionPerformed += ItemInteraction;
         Inventory.Instance.ItemInserted += ItemInserted;
+        Inventory.Instance.ItemRemoved += ItemDropped;
         TimeChanger.Instance.TimeChangeUnlocked += TimelineUnlocked;
         TimeChanger.Instance.OnTimeChange += TimeChange;
         CInput.InputActions.Inventory.ChooseItem.performed += EnableInteractions;
@@ -78,6 +82,10 @@ public class TutorialManager : MonoBehaviour
             _stages[stage].otherConditionsSatisfied = true;
             OnNextTutorialStage(new InputAction.CallbackContext());
         }
+    }
+
+    private void ItemDropped(object sender, EventArgs e) {
+        if (stage == 8) _stages[stage].otherConditionsSatisfied = true;
     }
 
     IEnumerator waitForTutorialToBegin(float timeToWait) {
