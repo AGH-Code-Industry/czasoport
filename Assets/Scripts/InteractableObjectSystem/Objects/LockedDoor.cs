@@ -62,14 +62,14 @@ namespace InteractableObjectSystem.Objects {
             CDebug.Log("Unlocked");
         }
 
-        private void OpenDoor() {
+        public void OpenDoor() {
             _state = DoorState.Opened;
             _collider.enabled = false;
             _animator.SetTrigger("OpenDoors");
             CDebug.Log("Opened");
         }
 
-        private void CloseDoor() {
+        public void CloseDoor() {
             _state = DoorState.Closed;
             _collider.enabled = true;
             CDebug.Log("Closed");
