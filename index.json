@@ -1577,7 +1577,7 @@
   "api/InteractableObjectSystem.InteractableObject.html": {
     "href": "api/InteractableObjectSystem.InteractableObject.html",
     "title": "Class InteractableObject | Czasoport Documentation",
-    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived Czasoport CzasoportPart BreakableRock Fireplace LockedChest LockedDoor NoFireSign DialogueNPC Trading Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
+    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived Czasoport CzasoportPart BreakableRock Fireplace LockedChest LockedDoor NoFireSign TapePlayer DialogueNPC Trading Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
   },
   "api/InteractableObjectSystem.Objects.BreakableRock.html": {
     "href": "api/InteractableObjectSystem.Objects.BreakableRock.html",
@@ -1604,10 +1604,15 @@
     "title": "Class NoFireSign | Czasoport Documentation",
     "keywords": "Class NoFireSign Namespace InteractableObjectSystem.Objects public class NoFireSign : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject NoFireSign Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.InteractionHand() InteractableObject.LongInteractionHand() Methods InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
   },
+  "api/InteractableObjectSystem.Objects.TapePlayer.html": {
+    "href": "api/InteractableObjectSystem.Objects.TapePlayer.html",
+    "title": "Class TapePlayer | Czasoport Documentation",
+    "keywords": "Class TapePlayer Namespace InteractableObjectSystem.Objects public class TapePlayer : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject TapePlayer Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.InteractionHand() InteractableObject.LongInteractionHand() Methods InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
+  },
   "api/InteractableObjectSystem.Objects.html": {
     "href": "api/InteractableObjectSystem.Objects.html",
     "title": "Namespace InteractableObjectSystem.Objects | Czasoport Documentation",
-    "keywords": "Namespace InteractableObjectSystem.Objects Classes BreakableRock Fireplace LockedChest LockedDoor NoFireSign"
+    "keywords": "Namespace InteractableObjectSystem.Objects Classes BreakableRock Fireplace LockedChest LockedDoor NoFireSign TapePlayer"
   },
   "api/InteractableObjectSystem.html": {
     "href": "api/InteractableObjectSystem.html",
