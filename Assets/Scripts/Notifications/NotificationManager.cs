@@ -112,7 +112,6 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
         _tutorialNotification.SetActive(true);
         _messageGo1.GetComponent<TMP_Text>().text = notification.messages[0];
         _messageGo2.GetComponent<TMP_Text>().text = notification.messages[1];
-        _messageGo2.GetComponent<TMP_Text>().fontStyle = FontStyles.Bold;
         _messageGo3.GetComponent<TMP_Text>().text = notification.messages[2];
         LayoutRebuilder.ForceRebuildLayoutImmediate(_messageGo2.GetComponent<RectTransform>());
     }
