@@ -19,6 +19,7 @@ public class TutorialManager : MonoBehaviour
     /// </summary>
     void Start()
     {
+        // Jak coś dodajecie to lepiej napiszcie do Mikołaja
         _stages.Add(new TutorialStage(CInput.InputActions.Movement.Navigation, true));
         _stages.Add(new TutorialStage(CInput.InputActions.Interactions.Interaction, false));
         _stages.Add(new TutorialStage(CInput.InputActions.Inventory.NextItem, true));
@@ -34,7 +35,7 @@ public class TutorialManager : MonoBehaviour
         _messages.Add(new TutorialNotification("Wciśnij", "WSAD", "aby się poruszać."));
         _messages.Add(new TutorialNotification("Wciśnij", "F", "aby podnieść przedmiot."));
         _messages.Add(new TutorialNotification("Wciśnij", "TAB", "aby wybrać kolejny slot."));
-        _messages.Add(new TutorialNotification("Wciśnij liczby", "1-5", "aby wybrać slot w ekwipunku."));
+        _messages.Add(new TutorialNotification("Wciśnij liczby", "1-6", "aby wybrać slot w ekwipunku."));
         _messages.Add(new TutorialNotification("Wciśnij", "F", "aby wejść w interakcję z innym przedmiotem (spróbuj rozwalić kamień)."));
         _messages.Add(new TutorialNotification("Świetnie! Teraz poszukaj czasoportu."));
         _messages.Add(new TutorialNotification("Wciśnij", "Q", "aby teleportować się w przeszłość."));
