@@ -4,6 +4,7 @@ using CustomInput;
 using UnityEngine.InputSystem;
 using CoinPackage.Debugging;
 using Application;
+using DataPersistence;
 
 namespace UI {
     /// <summary>
@@ -24,10 +25,12 @@ namespace UI {
             CInput.InputActions.Game.TogglePause.performed += Toggle_PauseOnPerformed;
             
             resumeButton.onClick.AddListener(ResumeGame);
+            saveButton.onClick.AddListener(Save);
             quitButton.onClick.AddListener(UnityEngine.Application.Quit);
             
             Hide();
         }
+        
         private void Toggle_PauseOnPerformed(InputAction.CallbackContext obj) {
             if (_gamePaused)
                 ResumeGame();
@@ -57,6 +60,10 @@ namespace UI {
             //Time.timeScale = 0f;
         }
 
+        private void Save() {
+            DataPersistenceManager.Instance.SaveGameToDisk();
+        }
+        
         private void Show() {
             menuPanel.SetActive(true);
         }
