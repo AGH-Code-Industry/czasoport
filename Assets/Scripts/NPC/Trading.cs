@@ -13,7 +13,7 @@ namespace NPC {
         [SerializeField] private List<ItemSO> interactedWith;
 
         private PathWalking _walking;
-        private bool _canWalk;
+        private bool _canWalk = false;
 
         private void Start() {
             _walking = GetComponent<PathWalking>();
@@ -26,14 +26,14 @@ namespace NPC {
             }
             if (interactedWith.Count == 0) {
                 NotificationManager.Instance.RaiseNotification(new Notification(definition.successfulHandInterNotification.message,definition.successfulHandInterNotification.displayTime));
-                if(_canWalk) _walking.Invoke("ContinueWalk",definition.successfulHandInterNotification.displayTime);
+                if(_canWalk) _walking.Invoke("StartWalk",definition.successfulHandInterNotification.displayTime);
                 Give();
             }
             else {
                 NotificationManager.Instance.RaiseNotification(new Notification(
                     definition.failedHandInterNotification.message,
                     definition.failedHandInterNotification.displayTime));
-                if (_canWalk) _walking.Invoke("ContinueWalk",definition.failedHandInterNotification.displayTime);
+                if (_canWalk) _walking.Invoke("StartWalk",definition.failedHandInterNotification.displayTime);
             }
             
         }
@@ -44,12 +44,12 @@ namespace NPC {
             if (interactedWith.Count == 0 || interactedWith.Contains(item.ItemSO)) {
                 NotificationManager.Instance.RaiseNotification(new Notification(definition.successfulItemInterNotification.message,definition.successfulItemInterNotification.displayTime));
                 if (interactedWith.Count != 0) Inventory.Instance.RemoveItem(out Item i);
-                if(_canWalk) _walking.Invoke("ContinueWalk",definition.successfulItemInterNotification.displayTime);
+                if(_canWalk) _walking.Invoke("StartWalk",definition.successfulItemInterNotification.displayTime);
                 Give();
                 return true;
             } else {
                 NotificationManager.Instance.RaiseNotification(new Notification(definition.failedItemInterNotification.message, definition.failedItemInterNotification.displayTime));
-                if (_canWalk) _walking.Invoke("ContinueWalk", definition.failedItemInterNotification.displayTime);
+                if (_canWalk) _walking.Invoke("StartWalk", definition.failedItemInterNotification.displayTime);
             }
             return false;
         }

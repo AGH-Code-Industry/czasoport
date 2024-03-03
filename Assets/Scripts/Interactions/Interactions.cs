@@ -18,6 +18,9 @@ namespace Interactions {
     public class Interactions : MonoBehaviour {
         public static Interactions Instance;
 
+        public event EventHandler itemInteractionPerformed;
+        public event EventHandler handInteractionPerformed;
+
         // Objects near the player that we can interact with
         private List<GameObject> _interactableObjects;
         // Object that will be the subject of the interaction if _focusedObject is not selected
@@ -125,9 +128,14 @@ namespace Interactions {
             }
 
             if (_focusedObject is null) {
-                _selectedObject = GetNearestInteractable();
+				GameObject g = GetNearestInteractable();
+				if (_selectedObject != g) { 
+					if (_selectedObject is not null)_selectedObject.GetComponent<IHighlightable>()?.DisableFocusedHighlight();
+					_selectedObject = g;
+				}
             }
             else {
+				if (_selectedObject is not null) _selectedObject.GetComponent<IHighlightable>()?.DisableFocusedHighlight();
                 _selectedObject = _focusedObject;
             }
 
@@ -173,18 +181,22 @@ namespace Interactions {
                     var successful = _selectedObject.GetComponent<IItemInteractable>()?.InteractionItem(item);
                     if (successful == true) {
                         Inventory.Instance.UseItem();
+                        itemInteractionPerformed?.Invoke(this, EventArgs.Empty);
                     }
                     else {
                         TryToInstertItem();
                     }
                 }
-                else
+                else {
                     TryToInstertItem();
+                    handInteractionPerformed?.Invoke(this, EventArgs.Empty);
+                }
             }
         }
 
         private void TryToInstertItem() {
             _selectedObject.GetComponent<IHandInteractable>()?.InteractionHand();
+            
         }
         
         private void OnLongInteractionPerformed(InputAction.CallbackContext ctx) {
