@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6582292568160079505}
   - component: {fileID: 6416536113437513843}
   - component: {fileID: 4765779006608603282}
+  - component: {fileID: 7531597841659260322}
   m_Layer: 0
   m_Name: vase_big
   m_TagString: Untagged
@@ -101,3 +102,37 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 0.6}
   m_Direction: 1
+--- !u!114 &7531597841659260322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4009991359942179385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: d1c6a1b4b3d90723b9728b33bfcec05800000000c1ab63317b4c1da2
+  m_ShapePath:
+  - {x: -0.22527027, y: -0.14656156, z: 0}
+  - {x: -0.33664608, y: 0.13221344, z: 0}
+  - {x: -0.15877104, y: 0.28710705, z: 0}
+  - {x: 0.105807304, y: 0.28649572, z: 0}
+  - {x: 0.30188942, y: 0.24181673, z: 0}
+  - {x: 0.3514743, y: 0.18257472, z: 0}
+  - {x: 0.32981396, y: 0.09041408, z: 0}
+  - {x: 0.2748046, y: -0.06344557, z: 0}
+  - {x: 0.23012543, y: -0.130777, z: 0}
+  - {x: 0.09862614, y: -0.19146907, z: 0}
+  - {x: -0.06321955, y: -0.19146907, z: 0}
+  m_ShapePathHash: 1328548891
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -121530
