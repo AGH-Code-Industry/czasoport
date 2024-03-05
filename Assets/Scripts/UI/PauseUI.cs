@@ -61,7 +61,7 @@ namespace UI {
         }
 
         private void Save() {
-            DataPersistenceManager.Instance.SaveGameToDisk();
+            DataPersistenceManager.Instance.SaveGame();
         }
         
         private void Show() {
