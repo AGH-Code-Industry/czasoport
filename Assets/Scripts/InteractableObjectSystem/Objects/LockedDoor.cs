@@ -21,13 +21,16 @@ namespace InteractableObjectSystem.Objects {
         [SerializeField] private float _openingDelay;
 
         private BoxCollider2D _collider;
+        private BoxCollider2D _passage;
         private DoorState _state;
         private Animator _animator;
 
         private void Awake() {
+            _passage = transform.parent.GetComponent<BoxCollider2D>();
             _collider = GetComponent<BoxCollider2D>();
             _animator = GetComponent<Animator>();
             _state = DoorState.Locked;
+            _passage.enabled = false;
         }
 
         public override void InteractionHand() {
@@ -66,6 +69,7 @@ namespace InteractableObjectSystem.Objects {
         public void OpenDoor() {
             if (_state == DoorState.Opened)
                 return;
+            _passage.enabled = true;
             _animator.SetTrigger("OpenDoors");
             CDebug.Log("Opened");
             _state = DoorState.Opened;
@@ -75,6 +79,7 @@ namespace InteractableObjectSystem.Objects {
         IEnumerator OpenDoortsWithDelay(float delay) {
             yield return new WaitForSeconds(delay);
             _collider.enabled = false;
+            _passage.enabled = false;
         }
 
         public void CloseDoor() {
@@ -84,6 +89,7 @@ namespace InteractableObjectSystem.Objects {
             _animator.SetTrigger("CloseDoors");
             _state = DoorState.Closed;
             _collider.enabled = true;
+            _passage.enabled = true;
             CDebug.Log("Closed");
         }
     }
