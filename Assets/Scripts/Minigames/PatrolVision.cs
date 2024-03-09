@@ -23,6 +23,7 @@ namespace Minigames {
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
+            if (!_toMinigame) return;
             if (other.gameObject.CompareTag("Player")) {
                 stealthMissionManager.RestartMinigame();
             }

@@ -24,7 +24,13 @@ namespace LevelTimeChange.TimeChange {
             public TimeLine time;
         }
         
-        public Animator animator;
+        private Animator animator;
+
+        public Animator Animator {
+            get {
+                return animator;
+            }
+        }
         GameObject _timeChangeUIgo;
         bool _timeChangeActivated = false;
 
