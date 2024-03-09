@@ -2,7 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
+using LevelTimeChange.TimeChange;
 using NPC;
+using PlayerScripts;
+using Settings;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -10,11 +13,12 @@ public class CrossingLight : MonoBehaviour {
 
     public float lightChangeInterval = 5f;
 
-    [SerializeField] private SpriteRenderer lightSpriteRenderer;
+    [SerializeField] private Animator lightAnimator;
     [SerializeField] private List<PathWalking> pathWalkings = new List<PathWalking>();
-
-    private readonly Color _greenLightColor = Color.green;
-    private readonly Color _redLightColor = Color.red;
+    [SerializeField] private BoxCollider2D collider;
+    [SerializeField] private Transform returnPosition;
+    private Animator _blackScreenAnimator;
+    private float _blackScreenAnimatorTimer;
 
     private enum CrossingState {
         Opened,
@@ -24,6 +28,8 @@ public class CrossingLight : MonoBehaviour {
     private CrossingState _crossingState;
 
     private void Start() {
+        _blackScreenAnimator = TimeChanger.Instance.Animator;
+        _blackScreenAnimatorTimer = DeveloperSettings.Instance.tpcSettings.timelineChangeAnimLength;
         InvokeRepeating(nameof(ToggleLightsState), 0f, lightChangeInterval);
     }
 
@@ -38,8 +44,13 @@ public class CrossingLight : MonoBehaviour {
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D other) {
+        StartCoroutine(SetPlayerToStart());
+    }
+
     private void OpenCrossing() {
-        lightSpriteRenderer.color = _redLightColor;
+        lightAnimator.SetTrigger("Open");
+        collider.enabled = false;
         _crossingState = CrossingState.Opened;
         foreach (PathWalking pw in pathWalkings) {
             pw.StartWalk();
@@ -47,7 +58,8 @@ public class CrossingLight : MonoBehaviour {
     }
 
     private void CloseCrossing() {
-        lightSpriteRenderer.color = _greenLightColor;
+        lightAnimator.SetTrigger("Close");
+        collider.enabled = true;
         _crossingState = CrossingState.Closed;
         foreach (PathWalking pw in pathWalkings) {
             pw.StopWalk();
@@ -68,5 +80,13 @@ public class CrossingLight : MonoBehaviour {
             PathWalking pw = other.GetComponent<PathWalking>();
             if (pw != null) pathWalkings.Remove(pw);
         }
+    }
+    
+    private IEnumerator SetPlayerToStart() {
+        _blackScreenAnimator.SetTrigger("Start");
+        yield return new WaitForSeconds(_blackScreenAnimatorTimer/2);
+        Player.Instance.transform.position = returnPosition.position;
+        yield return new WaitForSeconds(_blackScreenAnimatorTimer/2);
+        _blackScreenAnimator.SetTrigger("End");
     }
 }
