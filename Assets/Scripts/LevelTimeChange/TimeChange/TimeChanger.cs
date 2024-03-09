@@ -42,6 +42,8 @@ namespace LevelTimeChange.TimeChange {
 
         [SerializeField] private CinemachineVirtualCamera _camera;
 
+        public Animator Animator => animator;
+
         private void Awake() {
             Instance = this;
         }

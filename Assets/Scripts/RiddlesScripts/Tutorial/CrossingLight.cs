@@ -28,8 +28,7 @@ public class CrossingLight : MonoBehaviour {
     private CrossingState _crossingState;
 
     private void Start() {
-        //Todo get animator from timechanger
-        //_blackScreenAnimator = TimeChanger.Instance.
+        _blackScreenAnimator = TimeChanger.Instance.Animator;
         _blackScreenAnimatorTimer = DeveloperSettings.Instance.tpcSettings.timelineChangeAnimLength;
         InvokeRepeating(nameof(ToggleLightsState), 0f, lightChangeInterval);
     }
@@ -43,6 +42,10 @@ public class CrossingLight : MonoBehaviour {
                 OpenCrossing();
                 break;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        StartCoroutine(SetPlayerToStart());
     }
 
     private void OpenCrossing() {
