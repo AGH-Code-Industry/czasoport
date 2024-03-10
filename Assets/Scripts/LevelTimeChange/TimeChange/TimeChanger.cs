@@ -24,7 +24,7 @@ namespace LevelTimeChange.TimeChange {
             public TimeLine time;
         }
         
-        private Animator animator;
+        [SerializeField] private Animator animator;
 
         public Animator Animator {
             get {

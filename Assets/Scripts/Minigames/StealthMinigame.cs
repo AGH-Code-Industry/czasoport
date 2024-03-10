@@ -19,7 +19,7 @@ namespace Minigames {
         
         private float _animationTime;
         private bool _targetInHand = false;
-        private bool _duringMinigame = true;
+        private bool _duringMinigame = false;
 
         private bool _playerInArea {
             get {
@@ -31,7 +31,7 @@ namespace Minigames {
         }
 
         private void Update() {
-            if (_targetInHand & _playerInArea) EndMinigame();
+            if (_duringMinigame & _targetInHand & !_playerInArea) EndMinigame();
         }
 
         public void RestartMinigame() {
@@ -48,14 +48,21 @@ namespace Minigames {
             animator.SetTrigger("End");
         }
 
-        private void IsItemTarget(object sender, ItemInsertedEventArgs args) {
-            if (args.Item.ItemSO == _itemToSteal) _targetInHand = true;
+        private void IsItemTargetInsert(object sender, ItemInsertedEventArgs args) {
+            if (args.Item.ItemSO == _itemToSteal & Inventory.Instance.itemsCount < DeveloperSettings.Instance.invSettings.itemsCount) _targetInHand = true;
+        }
+        
+        private void IsItemTargetRemove(object sender, ItemRemovedEventArgs args) {
+            if (args.Item.ItemSO == _itemToSteal) _targetInHand = false;
         }
         
         private void ResetTarget() {
             _targetInHand = false;
             Inventory.Instance.RemoveItem(_itemToSteal);
+            toSteal.transform.parent = transform;
             toSteal.transform.position = _targetPosition;
+            toSteal.GetComponent<SpriteRenderer>().enabled = true;
+            toSteal.GetComponent<CircleCollider2D>().enabled = true;
         }
         
         public void StartMinigame() {
@@ -64,13 +71,15 @@ namespace Minigames {
             _targetPosition = toSteal.transform.position;
             animator = TimeChanger.Instance.Animator;
             _animationTime = DeveloperSettings.Instance.tpcSettings.timelineChangeAnimLength;
-            Inventory.Instance.ItemInserted += IsItemTarget;
+            Inventory.Instance.ItemInserted += IsItemTargetInsert;
+            Inventory.Instance.ItemRemoved += IsItemTargetRemove;
         }
 
         public void EndMinigame() {
             if (!_duringMinigame) return;
             _duringMinigame = false;
-            Inventory.Instance.ItemInserted -= IsItemTarget;
+            Inventory.Instance.ItemInserted -= IsItemTargetInsert;
+            Inventory.Instance.ItemRemoved -= IsItemTargetRemove;
         }
     }
 }

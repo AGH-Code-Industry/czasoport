@@ -29,8 +29,13 @@ namespace InventorySystem {
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INVENTORY];
         private InventorySettingsSO _settings;
-        private Item[] _items;
+        public Item[] _items;
         private int _itemsCount = 0;
+        public int itemsCount {
+            get {
+                return _itemsCount;
+            }
+        }
         private int _selectedSlot = 0;
 
         private void Awake() {
@@ -198,13 +203,9 @@ namespace InventorySystem {
         /// <param name="itemSO">Definition of the item to be removed.</param>
         /// <returns></returns>
         public bool RemoveItem(ItemSO itemSO) {
-            if (_selectedSlot == 0) {
-                itemSO = null;
-                return false;
-            }
-            var item = _items.FirstOrDefault(item => item.ItemSO == itemSO);
+            var item = _items.FirstOrDefault(item => item is not null && item.ItemSO == itemSO);
             var index = Array.IndexOf(_items, item);
-            if (index == -1) {
+            if (index == -1 || index == 0) {
                 return false;
             }
             item = _items[index];
