@@ -54,8 +54,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSteal: {fileID: 8717243009501052029}
-  _itemToSteal: {fileID: 0}
-  _targetPosition: {x: 0, y: 0, z: 0}
   _area: {fileID: 1399893945833703282}
   startPoint: {fileID: 1399893945179414124}
   animator: {fileID: 0}
@@ -447,6 +445,10 @@ PrefabInstance:
     - target: {fileID: 4966375393726669735, guid: 16bcad69c7a6a704b9d145c06a8cd3ef, type: 3}
       propertyPath: m_Name
       value: NPC_Stealth_Mission
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979440756765256927, guid: 16bcad69c7a6a704b9d145c06a8cd3ef, type: 3}
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7880162011315393898, guid: 16bcad69c7a6a704b9d145c06a8cd3ef, type: 3}
       propertyPath: walkOnStart

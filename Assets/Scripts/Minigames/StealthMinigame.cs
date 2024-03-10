@@ -19,33 +19,31 @@ namespace Minigames {
         
         private float _animationTime;
         private bool _targetInHand = false;
-        private bool _duringMinigame = false;
-
+        private bool _duringRestartingPos = false;
         private bool _playerInArea {
             get {
                 return _area.IsInArea;
             }
         }
+
         private void Start() {
             StartMinigame();
         }
 
-        private void Update() {
-            if (_duringMinigame & _targetInHand & !_playerInArea) EndMinigame();
-        }
-
         public void RestartMinigame() {
-            if (!_duringMinigame) return;
+            if (!_playerInArea) return;
             if (_targetInHand) ResetTarget();
-            if (_playerInArea) StartCoroutine(SetPlayerToStart());
+            if (!_duringRestartingPos) StartCoroutine(SetPlayerToStart());
         }
 
         private IEnumerator SetPlayerToStart() {
+            _duringRestartingPos = true;
             animator.SetTrigger("Start");
             yield return new WaitForSeconds(_animationTime/2);
             Player.Instance.transform.position = startPoint.position;
             yield return new WaitForSeconds(_animationTime/2);
             animator.SetTrigger("End");
+            _duringRestartingPos = false;
         }
 
         private void IsItemTargetInsert(object sender, ItemInsertedEventArgs args) {
@@ -66,7 +64,6 @@ namespace Minigames {
         }
         
         public void StartMinigame() {
-            _duringMinigame = true;
             _itemToSteal = toSteal.GetComponent<Item>().ItemSO;
             _targetPosition = toSteal.transform.position;
             animator = TimeChanger.Instance.Animator;
@@ -75,9 +72,7 @@ namespace Minigames {
             Inventory.Instance.ItemRemoved += IsItemTargetRemove;
         }
 
-        public void EndMinigame() {
-            if (!_duringMinigame) return;
-            _duringMinigame = false;
+        public void OnDisable() {
             Inventory.Instance.ItemInserted -= IsItemTargetInsert;
             Inventory.Instance.ItemRemoved -= IsItemTargetRemove;
         }

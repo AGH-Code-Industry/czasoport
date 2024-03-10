@@ -4,7 +4,8 @@ using UnityEngine;
 namespace Minigames {
     public class PatrolVision : MonoBehaviour {
         [SerializeField] private StealthMinigame stealthMissionManager;
-        private bool _toMinigame = true;
+        private bool _toMinigame = false;
+        
         private Transform _parent;
         private Vector3 _previousPosition;
         private Vector3 _direction;
@@ -22,9 +23,9 @@ namespace Minigames {
             _previousPosition = _parent.position;
         }
 
-        private void OnTriggerEnter2D(Collider2D other) {
-            if (!_toMinigame) return;
+        private void OnTriggerStay2D(Collider2D other) {
             if (other.gameObject.CompareTag("Player")) {
+                if (!_toMinigame) return;
                 stealthMissionManager.RestartMinigame();
             }
         }
