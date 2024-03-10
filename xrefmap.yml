@@ -1510,6 +1510,18 @@ references:
   commentId: F:Global.Audio.itemRemovedSound
   fullName: Audio.itemRemovedSound
   nameWithType: Audio.itemRemovedSound
+- uid: Global.CheckPlayerInArea
+  name: CheckPlayerInArea
+  href: api/Global.CheckPlayerInArea.html
+  commentId: T:Global.CheckPlayerInArea
+  fullName: CheckPlayerInArea
+  nameWithType: CheckPlayerInArea
+- uid: Global.CheckPlayerInArea.IsInArea
+  name: IsInArea
+  href: api/Global.CheckPlayerInArea.html#Global_CheckPlayerInArea_IsInArea
+  commentId: F:Global.CheckPlayerInArea.IsInArea
+  fullName: CheckPlayerInArea.IsInArea
+  nameWithType: CheckPlayerInArea.IsInArea
 - uid: Global.CrossingLight
   name: CrossingLight
   href: api/Global.CrossingLight.html
@@ -34858,12 +34870,31 @@ references:
   isSpec: "True"
   fullName: InventorySystem.Inventory.UseItem
   nameWithType: Inventory.UseItem
+- uid: InventorySystem.Inventory._items
+  name: _items
+  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory__items
+  commentId: F:InventorySystem.Inventory._items
+  fullName: InventorySystem.Inventory._items
+  nameWithType: Inventory._items
 - uid: InventorySystem.Inventory.itemHideout
   name: itemHideout
   href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_itemHideout
   commentId: F:InventorySystem.Inventory.itemHideout
   fullName: InventorySystem.Inventory.itemHideout
   nameWithType: Inventory.itemHideout
+- uid: InventorySystem.Inventory.itemsCount
+  name: itemsCount
+  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_itemsCount
+  commentId: P:InventorySystem.Inventory.itemsCount
+  fullName: InventorySystem.Inventory.itemsCount
+  nameWithType: Inventory.itemsCount
+- uid: InventorySystem.Inventory.itemsCount*
+  name: itemsCount
+  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_itemsCount_
+  commentId: Overload:InventorySystem.Inventory.itemsCount
+  isSpec: "True"
+  fullName: InventorySystem.Inventory.itemsCount
+  nameWithType: Inventory.itemsCount
 - uid: InventorySystem.InventorySettingsSO
   name: InventorySettingsSO
   href: api/InventorySystem.InventorySettingsSO.html
@@ -35913,6 +35944,63 @@ references:
   commentId: F:LevelTimeChange.TimePlatformChangeSettingsSO.timelineChangeAnimLength
   fullName: LevelTimeChange.TimePlatformChangeSettingsSO.timelineChangeAnimLength
   nameWithType: TimePlatformChangeSettingsSO.timelineChangeAnimLength
+- uid: Minigames
+  name: Minigames
+  href: api/Minigames.html
+  commentId: N:Minigames
+  fullName: Minigames
+  nameWithType: Minigames
+- uid: Minigames.PatrolVision
+  name: PatrolVision
+  href: api/Minigames.PatrolVision.html
+  commentId: T:Minigames.PatrolVision
+  fullName: Minigames.PatrolVision
+  nameWithType: PatrolVision
+- uid: Minigames.StealthMinigame
+  name: StealthMinigame
+  href: api/Minigames.StealthMinigame.html
+  commentId: T:Minigames.StealthMinigame
+  fullName: Minigames.StealthMinigame
+  nameWithType: StealthMinigame
+- uid: Minigames.StealthMinigame.OnDisable
+  name: OnDisable()
+  href: api/Minigames.StealthMinigame.html#Minigames_StealthMinigame_OnDisable
+  commentId: M:Minigames.StealthMinigame.OnDisable
+  fullName: Minigames.StealthMinigame.OnDisable()
+  nameWithType: StealthMinigame.OnDisable()
+- uid: Minigames.StealthMinigame.OnDisable*
+  name: OnDisable
+  href: api/Minigames.StealthMinigame.html#Minigames_StealthMinigame_OnDisable_
+  commentId: Overload:Minigames.StealthMinigame.OnDisable
+  isSpec: "True"
+  fullName: Minigames.StealthMinigame.OnDisable
+  nameWithType: StealthMinigame.OnDisable
+- uid: Minigames.StealthMinigame.RestartMinigame
+  name: RestartMinigame()
+  href: api/Minigames.StealthMinigame.html#Minigames_StealthMinigame_RestartMinigame
+  commentId: M:Minigames.StealthMinigame.RestartMinigame
+  fullName: Minigames.StealthMinigame.RestartMinigame()
+  nameWithType: StealthMinigame.RestartMinigame()
+- uid: Minigames.StealthMinigame.RestartMinigame*
+  name: RestartMinigame
+  href: api/Minigames.StealthMinigame.html#Minigames_StealthMinigame_RestartMinigame_
+  commentId: Overload:Minigames.StealthMinigame.RestartMinigame
+  isSpec: "True"
+  fullName: Minigames.StealthMinigame.RestartMinigame
+  nameWithType: StealthMinigame.RestartMinigame
+- uid: Minigames.StealthMinigame.StartMinigame
+  name: StartMinigame()
+  href: api/Minigames.StealthMinigame.html#Minigames_StealthMinigame_StartMinigame
+  commentId: M:Minigames.StealthMinigame.StartMinigame
+  fullName: Minigames.StealthMinigame.StartMinigame()
+  nameWithType: StealthMinigame.StartMinigame()
+- uid: Minigames.StealthMinigame.StartMinigame*
+  name: StartMinigame
+  href: api/Minigames.StealthMinigame.html#Minigames_StealthMinigame_StartMinigame_
+  commentId: Overload:Minigames.StealthMinigame.StartMinigame
+  isSpec: "True"
+  fullName: Minigames.StealthMinigame.StartMinigame
+  nameWithType: StealthMinigame.StartMinigame
 - uid: NPC
   name: NPC
   href: api/NPC.html
