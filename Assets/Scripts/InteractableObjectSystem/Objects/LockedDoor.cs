@@ -80,6 +80,7 @@ namespace InteractableObjectSystem.Objects {
             yield return new WaitForSeconds(delay);
             _collider.enabled = false;
             _passage.enabled = false;
+            _animator.ResetTrigger("CloseDoors");
         }
 
         public void CloseDoor() {
@@ -91,6 +92,7 @@ namespace InteractableObjectSystem.Objects {
             _collider.enabled = true;
             _passage.enabled = true;
             CDebug.Log("Closed");
+            _animator.ResetTrigger("OpenDoors");
         }
     }
 }
