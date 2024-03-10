@@ -25,12 +25,7 @@ namespace LevelTimeChange.TimeChange {
         }
         
         [SerializeField] private Animator animator;
-
-        public Animator Animator {
-            get {
-                return animator;
-            }
-        }
+        
         GameObject _timeChangeUIgo;
         bool _timeChangeActivated = false;
 
