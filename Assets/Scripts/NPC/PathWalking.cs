@@ -12,7 +12,7 @@ namespace NPC {
         private bool _canWalk;
 
         [SerializeField] private List<Transform> marchPoints = new();
-        private int _previousTarget;
+        private int _previousTarget = 0;
         private int _actualTarget = 1;
         private float _walkProgress;
         private float _walkDistance;
