@@ -116,10 +116,14 @@ namespace LevelTimeChange.LevelsLoader {
                 LoadLevels(newLevel);
                 UnloadLevels(newLevel);
 
+                
+
                 animator.SetTrigger("End");
                 yield return new WaitForSeconds(_settings.platformChangeAnimLength / 4);
                 CInput.MovementLock.Unlock(key);
                 yield return new WaitForSeconds(_settings.platformChangeAnimLength / 4);
+
+                if (destinationPortal.isOneUse()) destinationPortal.disablePortal();
             }
 
             /// <summary>
