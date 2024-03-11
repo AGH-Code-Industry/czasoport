@@ -23,7 +23,7 @@ namespace Interactions {
             _material.SetTexture("_texture", _sprite.sprite.texture);
             _material.SetFloat("_OnOff",0f);
             _material.SetFloat("_scale",0.01f);
-			_material.SetColor("_color",Color.green);
+            _material.SetColor("_color", Color.red);
 			_fadeIn = TurnHighlight(0f, 1f);
 			_fadeOut = TurnHighlight(1f, 0f);
         }

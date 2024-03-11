@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ce5931d7433ff46b4ea648e04d74f4, type: 3}
+  m_Name: Glejt2
+  m_EditorClassIdentifier: 
+  itemName: Glejt paper
+  description: Second part
+  prefab: {fileID: 5765519777414626527, guid: 3dc1690096b753c4b931f8d8427aaa11, type: 3}
+  image: {fileID: 21300000, guid: 5430b5412bcac5b4986be0a875a5e978, type: 3}
+  durability: 0
+  interactionDistance: 3
+  pickUpNotification:
+    message: "Czy to jest druga cz\u0119\u015B\u0107 dokumentu?"
+    displayTime: 3
+  dropNotification:
+    message: 
+    displayTime: 3

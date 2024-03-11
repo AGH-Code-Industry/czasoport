@@ -62,11 +62,14 @@ public class TutorialManager : MonoBehaviour
 
     private void EnableInteractions(InputAction.CallbackContext context) {
         CInput.InputActions.Interactions.Enable();
+        CInput.InputActions.Inventory.ChooseItem.performed -= EnableInteractions;
     }
 
     private void ItemInserted(object sender, EventArgs e) {
-        if (stage == 1) _stages[stage].otherConditionsSatisfied = true;
-        CInput.InputActions.Interactions.Disable();
+        if (stage == 1) {
+            _stages[stage].otherConditionsSatisfied = true;
+            CInput.InputActions.Interactions.Disable();
+        }
     }
 
     private void ItemInteraction(object sender, EventArgs e) {
