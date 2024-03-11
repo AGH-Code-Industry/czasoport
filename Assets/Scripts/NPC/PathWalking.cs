@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace NPC {
         [SerializeField] private bool walkOnStart = true;
         [SerializeField] private float walkSpeed = 1f;
         private bool _canWalk;
-
+        [SerializeField] private float restTime = 3f;
         [SerializeField] private List<Transform> marchPoints = new();
         private int _previousTarget = 0;
         private int _actualTarget = 1;
@@ -25,38 +26,23 @@ namespace NPC {
             }
             _animator = GetComponent<Animator>();
             _transform = transform;
-            _canWalk = walkOnStart;
-            if (_canWalk) {
-                _walkDistance = Vector2.Distance(marchPoints[_previousTarget].position,
-                    marchPoints[_actualTarget].position);
-                _animator.SetFloat("Horizontal",
-                    marchPoints[_actualTarget].position.x - marchPoints[_previousTarget].position.x);
-                _animator.SetFloat("Vertical",
-                    marchPoints[_actualTarget].position.y - marchPoints[_previousTarget].position.y);
-                _animator.SetFloat("Speed", walkSpeed);
-            } else {
-                _animator.SetFloat("Horizontal",0);
-                _animator.SetFloat("Vertical", 0);
-                _animator.SetFloat("Speed", 0);
-            }
+            if (walkOnStart) StartWalk();
+            else StopWalk();
             
         }
 
         private void Update() {
-            if (!_canWalk) return;
+            if (!_canWalk) {
+                if (Random.Range(0f,1f) < 0.5f) _animator.SetTrigger("Wink");
+                return;
+            }
             //Walking
             if (_walkProgress < 1f) {
                 _walkProgress += (Time.deltaTime/_walkDistance) * walkSpeed;
                 _transform.position = Vector3.Lerp(marchPoints[_previousTarget].position, marchPoints[_actualTarget].position, _walkProgress);
             } else {
-                _walkProgress = 0f;
-                _previousTarget = _actualTarget;
-                _actualTarget = (_actualTarget+1) % marchPoints.Count;
-                _walkDistance = Vector2.Distance(marchPoints[_previousTarget].position,marchPoints[_actualTarget].position);
-                _animator.SetFloat("Horizontal", marchPoints[_actualTarget].position.x - marchPoints[_previousTarget].position.x);
-                _animator.SetFloat("Vertical", marchPoints[_actualTarget].position.y - marchPoints[_previousTarget].position.y);
+                StartCoroutine(Rest(restTime));
             }
-            //Animation?
         }
 
         /// <summary>
@@ -80,5 +66,14 @@ namespace NPC {
             _animator.SetFloat("Vertical", marchPoints[_actualTarget].position.y - marchPoints[_previousTarget].position.y);
         }
 
+        private IEnumerator Rest(float delay) {
+            StopWalk();
+            _animator.ResetTrigger("Wink");
+            _walkProgress = 0f;
+            _previousTarget = _actualTarget;
+            _actualTarget = (_actualTarget+1) % marchPoints.Count;
+            yield return new WaitForSeconds(delay);
+            StartWalk();
+        }
     }
 }
