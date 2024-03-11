@@ -18,7 +18,6 @@ namespace LevelTimeChange.LevelsLoader {
         [FormerlySerializedAs("_teleportPoint")]
         [Tooltip("Object that marks where player should be teleported to.")]
         [SerializeField] private Transform teleportPoint;
-        [SerializeField] private bool isOneTimePortal = false;
 
         /// <summary>
 		/// Portal that matches this portal on another scene.
@@ -80,14 +79,6 @@ namespace LevelTimeChange.LevelsLoader {
 
         public override string ToString() {
             return $"[Portal, TL: {_teleportTimeline}, DST: {destinedLevel}]" % Colorize.Cyan;
-        }
-
-        public bool isOneUse() {
-            return isOneTimePortal;
-        }
-
-        public void disablePortal() {
-            GetComponent<BoxCollider2D>().enabled = false;
         }
 	}
 }
