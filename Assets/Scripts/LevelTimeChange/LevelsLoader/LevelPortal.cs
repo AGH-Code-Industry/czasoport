@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Application;
@@ -23,6 +23,7 @@ namespace LevelTimeChange.LevelsLoader {
 		/// Portal that matches this portal on another scene.
 		/// </summary>
 		private LevelPortal _matchingPortal;
+
         
         /// <summary>
         /// TimeLine the portal is on

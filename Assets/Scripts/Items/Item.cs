@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Xml;
 using Application;
 using CoinPackage.Debugging;
@@ -31,6 +31,7 @@ namespace Items
         }
         
         private void Awake() {
+            uniqueId = Guid.NewGuid().ToString("N");
             if (gameObject.layer != LayerMask.NameToLayer("Items")) {
                 _logger.LogWarning(
                     $"Item {this} {"is not" % Colorize.Red} in {"Items" % Colorize.Green} layer.",
@@ -52,6 +53,11 @@ namespace Items
 
         public override string ToString() {
             return itemSO.ToString();
+        }
+
+        public override bool Equals(object other) {
+            var item = other as Item;
+            return this.uniqueId.Equals(item.uniqueId);
         }
     }
 }
