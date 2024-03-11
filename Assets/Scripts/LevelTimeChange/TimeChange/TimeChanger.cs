@@ -7,6 +7,7 @@ using DataPersistence;
 using UnityEngine.InputSystem;
 using Settings;
 using UI;
+using Cinemachine;
 
 namespace LevelTimeChange.TimeChange {
     /// <summary>
@@ -17,12 +18,14 @@ namespace LevelTimeChange.TimeChange {
         public static TimeChanger Instance { get; private set; }
 
         public event EventHandler<OnTimeChangeEventArgs> OnTimeChange;
+        public event EventHandler TimeChangeUnlocked;
 
         public class OnTimeChangeEventArgs : EventArgs {
             public TimeLine time;
         }
         
         [SerializeField] private Animator animator;
+        
         GameObject _timeChangeUIgo;
         bool _timeChangeActivated = false;
 
@@ -37,6 +40,10 @@ namespace LevelTimeChange.TimeChange {
         private TimeLine _newTimeLine;
         [SerializeField]
         private List<bool> _timeUnlocked = new List<bool>() { false, false, false};
+
+        [SerializeField] private CinemachineVirtualCamera _camera;
+
+        public Animator Animator => animator;
 
         private void Awake() {
             Instance = this;
@@ -109,10 +116,16 @@ namespace LevelTimeChange.TimeChange {
             var key = CInput.TeleportLock.Lock();
             animator.SetTrigger("Start");
             yield return new WaitForSeconds(_settings.timelineChangeAnimLength/2);
+            CinemachineFramingTransposer cinemachineFramingTransposer = _camera.GetCinemachineComponent<CinemachineFramingTransposer>();
+            Vector2 softZones = new Vector2(cinemachineFramingTransposer.m_SoftZoneWidth, cinemachineFramingTransposer.m_SoftZoneHeight);
+            cinemachineFramingTransposer.m_SoftZoneHeight = 0f;
+            cinemachineFramingTransposer.m_SoftZoneWidth = 0f;
             transform.Translate(_timeJump * (int)(_newTimeLine - actualTime));
             actualTime = _newTimeLine;
             animator.SetTrigger("End");
             yield return new WaitForSeconds(_settings.timelineChangeAnimLength/2);
+            cinemachineFramingTransposer.m_SoftZoneWidth = softZones.x;
+            cinemachineFramingTransposer.m_SoftZoneHeight = softZones.y;
             CInput.TeleportLock.Unlock(key);
             
             OnTimeChange?.Invoke(this, new OnTimeChangeEventArgs {
@@ -139,6 +152,8 @@ namespace LevelTimeChange.TimeChange {
 
         public void UnlockTimeline(TimeLine timelineToUnlock) {
             _timeUnlocked[(int)timelineToUnlock] = true;
+            _timeChangeUIgo.GetComponent<TimeChangeUI>().ChangeInvBackground(timelineToUnlock);
+            TimeChangeUnlocked?.Invoke(this, EventArgs.Empty);
         }
 
         public void LockTimeline(TimeLine timelineToLock) {
@@ -150,6 +165,7 @@ namespace LevelTimeChange.TimeChange {
         }
 
         public void EnableTimeChange() {
+            _timeChangeUIgo.GetComponent<TimeChangeUI>().UnlockTimeUI();
             _timeChangeUIgo.SetActive(true);
         }
 

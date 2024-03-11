@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
@@ -18,15 +18,19 @@ namespace InteractableObjectSystem.Objects {
         
         [SerializeField] private List<ItemSO> interactedWith;
         [SerializeField] private float openingSpeed;
+        [SerializeField] private float _openingDelay;
 
         private BoxCollider2D _collider;
+        private BoxCollider2D _passage;
         private DoorState _state;
         private Animator _animator;
 
         private void Awake() {
+            _passage = transform.parent.GetComponent<BoxCollider2D>();
             _collider = GetComponent<BoxCollider2D>();
             _animator = GetComponent<Animator>();
             _state = DoorState.Locked;
+            _passage.enabled = false;
         }
 
         public override void InteractionHand() {
@@ -62,17 +66,33 @@ namespace InteractableObjectSystem.Objects {
             CDebug.Log("Unlocked");
         }
 
-        private void OpenDoor() {
-            _state = DoorState.Opened;
-            _collider.enabled = false;
+        public void OpenDoor() {
+            if (_state == DoorState.Opened)
+                return;
+            _passage.enabled = true;
             _animator.SetTrigger("OpenDoors");
             CDebug.Log("Opened");
+            _state = DoorState.Opened;
+            StartCoroutine(OpenDoortsWithDelay(_openingDelay));
         }
 
-        private void CloseDoor() {
+        IEnumerator OpenDoortsWithDelay(float delay) {
+            yield return new WaitForSeconds(delay);
+            _collider.enabled = false;
+            _passage.enabled = false;
+            _animator.ResetTrigger("CloseDoors");
+        }
+
+        public void CloseDoor() {
+            if (_state == DoorState.Closed || _state == DoorState.Locked)
+                return;
+            Debug.Log("Closing");
+            _animator.SetTrigger("CloseDoors");
             _state = DoorState.Closed;
             _collider.enabled = true;
+            _passage.enabled = true;
             CDebug.Log("Closed");
+            _animator.ResetTrigger("OpenDoors");
         }
     }
 }
