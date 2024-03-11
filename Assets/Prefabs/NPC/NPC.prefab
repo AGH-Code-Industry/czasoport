@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4510272182401344420, guid: e69076dc5cb89ba4cbc5f8af80b81242, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 53959d8e978972047868391aa1e0454d, type: 2}
     - target: {fileID: 5123990415879441122, guid: e69076dc5cb89ba4cbc5f8af80b81242, type: 3}
       propertyPath: m_Name
       value: NPC
@@ -55,6 +59,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5123990415879441126, guid: e69076dc5cb89ba4cbc5f8af80b81242, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1665458191, guid: c9273a049d9c95e45ad0fe7d3b7dc663, type: 3}
     m_RemovedComponents:
     - {fileID: -3191469888805004291, guid: e69076dc5cb89ba4cbc5f8af80b81242, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e69076dc5cb89ba4cbc5f8af80b81242, type: 3}
