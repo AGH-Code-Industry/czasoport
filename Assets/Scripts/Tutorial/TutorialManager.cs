@@ -21,35 +21,36 @@ public class TutorialManager : MonoBehaviour
     {
         // Jak coś dodajecie to lepiej napiszcie do Mikołaja
         _stages.Add(new TutorialStage(CInput.InputActions.Movement.Navigation, true));
+        _stages.Add(new TutorialStage(CInput.InputActions.Game.TogglePause, true));
         _stages.Add(new TutorialStage(CInput.InputActions.Interactions.Interaction, false));
         _stages.Add(new TutorialStage(CInput.InputActions.Inventory.NextItem, true));
         _stages.Add(new TutorialStage(CInput.InputActions.Inventory.ChooseItem, true));
+        _stages.Add(new TutorialStage(CInput.InputActions.Inventory.Drop, false));
         _stages.Add(new TutorialStage(CInput.InputActions.Interactions.Interaction, false));
         _stages.Add(new TutorialStage(CInput.InputActions.Interactions.Interaction, false));
         _stages.Add(new TutorialStage(CInput.InputActions.Teleport.TeleportBack, false));
         _stages.Add(new TutorialStage(CInput.InputActions.Teleport.TeleportForward, false));
-        _stages.Add(new TutorialStage(CInput.InputActions.Inventory.Drop, false));
-        _stages.Add(new TutorialStage(CInput.InputActions.Game.TogglePause, true));
 
         _messages.Add(new TutorialNotification("Hello! Welcome to the tutorial!"));
         _messages.Add(new TutorialNotification("Press", "WSAD", "to move."));
+        _messages.Add(new TutorialNotification("Press", "ESCAPE", "to pause the game."));
         _messages.Add(new TutorialNotification("Press", "F", "to pick up an item."));
         _messages.Add(new TutorialNotification("Press", "TAB", "to select the next slot in you inventory."));
         _messages.Add(new TutorialNotification("Press numbers", "1-6", "to select specific slot."));
+        _messages.Add(new TutorialNotification("Press", "G", "drop an item."));
         _messages.Add(new TutorialNotification("Press", "F", "to interack with another item (try breaking the rock)."));
         _messages.Add(new TutorialNotification("Good job! Now try to find timeport."));
         _messages.Add(new TutorialNotification("Press", "Q", "to teleport back in time."));
         _messages.Add(new TutorialNotification("Press", "E", "to teleport to the future."));
-        _messages.Add(new TutorialNotification("Press", "G", "drop an item."));
-        _messages.Add(new TutorialNotification("Press", "ESCAPE", "to pause the game."));
+        
         _messages.Add(new TutorialNotification("Congratulations! You managed to pass the tutorial, now the fun begin... Good luck!!!"));
 
         Interactions.Interactions.Instance.itemInteractionPerformed += ItemInteraction;
         Inventory.Instance.ItemInserted += ItemInserted;
         Inventory.Instance.ItemRemoved += ItemDropped;
+        Inventory.Instance.ItemRemoved += EnableInteractions;
         TimeChanger.Instance.TimeChangeUnlocked += TimelineUnlocked;
         TimeChanger.Instance.OnTimeChange += TimeChange;
-        CInput.InputActions.Inventory.ChooseItem.performed += EnableInteractions;
 
         CInput.InputActions.Teleport.Disable();
         CInput.InputActions.Inventory.Disable();
@@ -60,36 +61,37 @@ public class TutorialManager : MonoBehaviour
         StartCoroutine(waitForTutorialToBegin(0.01f));
     }
 
-    private void EnableInteractions(InputAction.CallbackContext context) {
+    private void EnableInteractions(object sender, EventArgs e) {
         CInput.InputActions.Interactions.Enable();
-        CInput.InputActions.Inventory.ChooseItem.performed -= EnableInteractions;
+        Inventory.Instance.ItemRemoved -= EnableInteractions;
     }
 
     private void ItemInserted(object sender, EventArgs e) {
-        if (stage == 1) {
+        if (stage == 2) {
             _stages[stage].otherConditionsSatisfied = true;
             CInput.InputActions.Interactions.Disable();
         }
     }
 
-    private void ItemInteraction(object sender, EventArgs e) {
-        if (stage == 4) _stages[stage].otherConditionsSatisfied = true;
-    }
-
-    private void TimelineUnlocked(object sender, EventArgs e) {
+    private void ItemDropped(object sender, EventArgs e) {
         if (stage == 5) _stages[stage].otherConditionsSatisfied = true;
     }
 
+    private void ItemInteraction(object sender, EventArgs e) {
+        if (stage == 6) _stages[stage].otherConditionsSatisfied = true;
+    }
+
+    private void TimelineUnlocked(object sender, EventArgs e) {
+        if (stage == 7) _stages[stage].otherConditionsSatisfied = true;
+    }
+
     private void TimeChange(object sender, TimeChanger.OnTimeChangeEventArgs e) {
-        if (stage == 6 || stage == 7) {
+        if (stage == 8 || stage == 9) {
             _stages[stage].otherConditionsSatisfied = true;
             OnNextTutorialStage(new InputAction.CallbackContext());
         }
     }
 
-    private void ItemDropped(object sender, EventArgs e) {
-        if (stage == 8) _stages[stage].otherConditionsSatisfied = true;
-    }
 
     IEnumerator waitForTutorialToBegin(float timeToWait) {
         yield return new WaitForSeconds(timeToWait);
