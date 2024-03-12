@@ -17,6 +17,12 @@ public class CrossingLight : MonoBehaviour {
     [SerializeField] private List<PathWalking> pathWalkings = new List<PathWalking>();
     [SerializeField] private BoxCollider2D collider;
     [SerializeField] private Transform returnPosition;
+    [SerializeField] private CheckPlayerInArea areaEnd;
+    private bool _playerInEndArea {
+        get { return areaEnd.IsInArea; }
+    }
+    [SerializeField]private bool _blocked = false;
+    
     private Animator _blackScreenAnimator;
     private float _blackScreenAnimatorTimer;
 
@@ -30,9 +36,22 @@ public class CrossingLight : MonoBehaviour {
     private void Start() {
         _blackScreenAnimator = TimeChanger.Instance.Animator;
         _blackScreenAnimatorTimer = DeveloperSettings.Instance.tpcSettings.timelineChangeAnimLength;
-        InvokeRepeating(nameof(ToggleLightsState), 0f, lightChangeInterval);
+        CloseCrossing();
+        InvokeRepeating(nameof(ToggleLightsState), lightChangeInterval, lightChangeInterval);
     }
 
+    private void Update() {
+        if (!_blocked && _playerInEndArea) BlockWay();
+    }
+
+    public void BlockWay() {
+        if (_blocked) return;
+        _blocked = true;
+        returnPosition = areaEnd.transform;
+        CancelInvoke(nameof(ToggleLightsState));
+        if (_crossingState == CrossingState.Opened)CloseCrossing();
+    }
+    
     private void ToggleLightsState() {
         switch (_crossingState) {
             case CrossingState.Opened:
@@ -50,6 +69,7 @@ public class CrossingLight : MonoBehaviour {
 
     private void OpenCrossing() {
         lightAnimator.SetTrigger("Open");
+        lightAnimator.ResetTrigger("Close");
         collider.enabled = false;
         _crossingState = CrossingState.Opened;
         foreach (PathWalking pw in pathWalkings) {
@@ -59,6 +79,7 @@ public class CrossingLight : MonoBehaviour {
 
     private void CloseCrossing() {
         lightAnimator.SetTrigger("Close");
+        lightAnimator.ResetTrigger("Open");
         collider.enabled = true;
         _crossingState = CrossingState.Closed;
         foreach (PathWalking pw in pathWalkings) {
