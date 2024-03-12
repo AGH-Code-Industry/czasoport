@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Application;
@@ -11,8 +11,10 @@ using LevelTimeChange.LevelsLoader;
 using LevelTimeChange.TimeChange;
 using PlayerScripts;
 using Settings;
+#if UNITY_EDITOR
 using UnityEditor.UIElements;
 using UnityEditor.Build;
+#endif
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
