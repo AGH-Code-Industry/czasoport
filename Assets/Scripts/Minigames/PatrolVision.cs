@@ -18,6 +18,7 @@ namespace Minigames {
 
         private void Update() {
             _direction = (_previousPosition - _parent.position).normalized;
+            if (_direction == Vector3.zero) return;
             Quaternion rotation = Quaternion.LookRotation(transform.forward, _direction);
             transform.rotation = rotation;
             _previousPosition = _parent.position;
