@@ -269,6 +269,11 @@
     "title": "Class ExampleSpline | Czasoport Documentation",
     "keywords": "Class ExampleSpline Namespace Global public class ExampleSpline : MonoBehaviour Inheritance object ExampleSpline Fields trans public Transform[] trans Field Value Transform[]"
   },
+  "api/Global.FinishScreenUI.html": {
+    "href": "api/Global.FinishScreenUI.html",
+    "title": "Class FinishScreenUI | Czasoport Documentation",
+    "keywords": "Class FinishScreenUI Namespace Global public class FinishScreenUI : MonoBehaviour Inheritance object FinishScreenUI"
+  },
   "api/Global.FollowWorld.html": {
     "href": "api/Global.FollowWorld.html",
     "title": "Class FollowWorld | Czasoport Documentation",
@@ -393,6 +398,11 @@
     "href": "api/Global.InputActions.html",
     "title": "Class InputActions | Czasoport Documentation",
     "keywords": "Class InputActions Namespace Global public class InputActions : IInputActionCollection2, IDisposable Inheritance object InputActions Implements IDisposable Constructors InputActions() public InputActions() Properties Game public InputActions.GameActions Game { get; } Property Value InputActions.GameActions Interactions public InputActions.InteractionsActions Interactions { get; } Property Value InputActions.InteractionsActions Inventory public InputActions.InventoryActions Inventory { get; } Property Value InputActions.InventoryActions Mouse public InputActions.MouseActions Mouse { get; } Property Value InputActions.MouseActions Movement public InputActions.MovementActions Movement { get; } Property Value InputActions.MovementActions Teleport public InputActions.TeleportActions Teleport { get; } Property Value InputActions.TeleportActions asset public InputActionAsset asset { get; } Property Value InputActionAsset bindingMask public InputBinding? bindingMask { get; set; } Property Value InputBinding? bindings public IEnumerable<InputBinding> bindings { get; } Property Value IEnumerable<InputBinding> controlSchemes public ReadOnlyArray<InputControlScheme> controlSchemes { get; } Property Value ReadOnlyArray<InputControlScheme> devices public ReadOnlyArray<InputDevice>? devices { get; set; } Property Value ReadOnlyArray<InputDevice>? Methods Contains(InputAction) public bool Contains(InputAction action) Parameters action InputAction Returns bool Disable() public void Disable() Dispose() Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. public void Dispose() Enable() public void Enable() FindAction(string, bool) public InputAction FindAction(string actionNameOrId, bool throwIfNotFound = false) Parameters actionNameOrId string throwIfNotFound bool Returns InputAction FindBinding(InputBinding, out InputAction) public int FindBinding(InputBinding bindingMask, out InputAction action) Parameters bindingMask InputBinding action InputAction Returns int GetEnumerator() public IEnumerator<InputAction> GetEnumerator() Returns IEnumerator<InputAction>"
+  },
+  "api/Global.KeyUI.html": {
+    "href": "api/Global.KeyUI.html",
+    "title": "Class KeyUI | Czasoport Documentation",
+    "keywords": "Class KeyUI Namespace Global public class KeyUI : MonoBehaviour Inheritance object KeyUI"
   },
   "api/Global.LTBezier.html": {
     "href": "api/Global.LTBezier.html",
@@ -579,6 +589,11 @@
     "title": "Class Photocopier | Czasoport Documentation",
     "keywords": "Class Photocopier Namespace Global public class Photocopier : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Photocopier Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand() InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
   },
+  "api/Global.ScreenUI.html": {
+    "href": "api/Global.ScreenUI.html",
+    "title": "Class ScreenUI | Czasoport Documentation",
+    "keywords": "Class ScreenUI Namespace Global public class ScreenUI : MonoBehaviour Inheritance object ScreenUI Methods DeleteLastDigit() public void DeleteLastDigit() EnterCode() public void EnterCode() WriteDigit(int) public void WriteDigit(int digit) Parameters digit int"
+  },
   "api/Global.SettingsTests.html": {
     "href": "api/Global.SettingsTests.html",
     "title": "Class SettingsTests | Czasoport Documentation",
@@ -662,7 +677,7 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace | Czasoport Documentation",
-    "keywords": "Namespace Classes Audio CheckPlayerInArea CrossingLight Czasoport CzasoportPart DummyNPC ExampleSpline FollowWorld Following GeneralAdvancedTechniques GeneralBasic GeneralBasics2d GeneralCameraShake GeneralEasingTypes GeneralEventsListeners GeneralSequencer GeneralSimpleUI GeneralUISpace InputActions LTBezier LTBezierPath LTDescr LTDescrOptional LTEvent LTGUI LTRect LTSeq LTSpline Move a GameObject to a certain location LTUtility LeanAudio LeanAudioOptions LeanAudioStream LeanSmooth LeanTest LeanTester LeanTween LeanTweenExt LightFlicker LogoCinematic MusicPlayer API to play song with fade in effect and specified delay; NotificationManager NotificationUIController OldGUIExamplesCS PathBezier2d PathSpline2d PathSplineEndless PathSplinePerformance PathSplineTrack PathSplines Photocopier SettingsTests TeleportPlace TestingPunch TestingRigidbodyCS TestingZLegacy TestingZLegacyExt TutorialManager TutorialNotification TutorialStage UnityInkFileHandler WithinLevelPortal Structs InputActions.GameActions InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IGameActions InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions Enums GeneralEventsListeners.MyEvents LTGUI.Element_Type LeanAudioOptions.LeanAudioWaveStyle LeanProp LeanTweenType TestingZLegacy.TimingType TestingZLegacyExt.TimingType TweenAction Delegates LTDescr.ActionMethodDelegate LTDescr.EaseTypeDelegate TestingZLegacy.NextFunc TestingZLegacyExt.NextFunc"
+    "keywords": "Namespace Classes Audio CheckPlayerInArea CrossingLight Czasoport CzasoportPart DummyNPC ExampleSpline FinishScreenUI FollowWorld Following GeneralAdvancedTechniques GeneralBasic GeneralBasics2d GeneralCameraShake GeneralEasingTypes GeneralEventsListeners GeneralSequencer GeneralSimpleUI GeneralUISpace InputActions KeyUI LTBezier LTBezierPath LTDescr LTDescrOptional LTEvent LTGUI LTRect LTSeq LTSpline Move a GameObject to a certain location LTUtility LeanAudio LeanAudioOptions LeanAudioStream LeanSmooth LeanTest LeanTester LeanTween LeanTweenExt LightFlicker LogoCinematic MusicPlayer API to play song with fade in effect and specified delay; NotificationManager NotificationUIController OldGUIExamplesCS PathBezier2d PathSpline2d PathSplineEndless PathSplinePerformance PathSplineTrack PathSplines Photocopier ScreenUI SettingsTests TeleportPlace TestingPunch TestingRigidbodyCS TestingZLegacy TestingZLegacyExt TutorialManager TutorialNotification TutorialStage UnityInkFileHandler WithinLevelPortal Structs InputActions.GameActions InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IGameActions InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions Enums GeneralEventsListeners.MyEvents LTGUI.Element_Type LeanAudioOptions.LeanAudioWaveStyle LeanProp LeanTweenType TestingZLegacy.TimingType TestingZLegacyExt.TimingType TweenAction Delegates LTDescr.ActionMethodDelegate LTDescr.EaseTypeDelegate TestingZLegacy.NextFunc TestingZLegacyExt.NextFunc"
   },
   "api/Ink.CharacterRange.html": {
     "href": "api/Ink.CharacterRange.html",
@@ -1592,7 +1607,7 @@
   "api/InteractableObjectSystem.InteractableObject.html": {
     "href": "api/InteractableObjectSystem.InteractableObject.html",
     "title": "Class InteractableObject | Czasoport Documentation",
-    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived Czasoport CzasoportPart Photocopier BreakableRock ChangeInto Fireplace LockedChest LockedDoor NoFireSign Pedestal TapePlayer DialogueNPC Trading Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
+    "keywords": "Class InteractableObject Namespace InteractableObjectSystem public abstract class InteractableObject : MonoBehaviour, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Derived Czasoport CzasoportPart Photocopier BreakableRock ChangeInto CodeReader Fireplace LockedChest LockedDoor NoFireSign Pedestal TapePlayer DialogueNPC Trading Fields Logger protected readonly CLogger Logger Field Value CLogger definition protected InterObjectDefinition definition Field Value InterObjectDefinition Methods InteractionHand() public virtual void InteractionHand() InteractionItem(Item) public virtual bool InteractionItem(Item item) Parameters item Item Returns bool LongInteractionHand() public virtual void LongInteractionHand() LongInteractionItem(Item) public virtual bool LongInteractionItem(Item item) Parameters item Item Returns bool"
   },
   "api/InteractableObjectSystem.Objects.BreakableRock.html": {
     "href": "api/InteractableObjectSystem.Objects.BreakableRock.html",
@@ -1603,6 +1618,11 @@
     "href": "api/InteractableObjectSystem.Objects.ChangeInto.html",
     "title": "Class ChangeInto | Czasoport Documentation",
     "keywords": "Class ChangeInto Namespace InteractableObjectSystem.Objects public class ChangeInto : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject ChangeInto Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand() InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
+  },
+  "api/InteractableObjectSystem.Objects.CodeReader.html": {
+    "href": "api/InteractableObjectSystem.Objects.CodeReader.html",
+    "title": "Class CodeReader | Czasoport Documentation",
+    "keywords": "Class CodeReader Namespace InteractableObjectSystem.Objects public class CodeReader : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject CodeReader Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.InteractionItem(Item) InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand()"
   },
   "api/InteractableObjectSystem.Objects.Fireplace.html": {
     "href": "api/InteractableObjectSystem.Objects.Fireplace.html",
@@ -1637,7 +1657,7 @@
   "api/InteractableObjectSystem.Objects.html": {
     "href": "api/InteractableObjectSystem.Objects.html",
     "title": "Namespace InteractableObjectSystem.Objects | Czasoport Documentation",
-    "keywords": "Namespace InteractableObjectSystem.Objects Classes BreakableRock ChangeInto Fireplace LockedChest LockedDoor NoFireSign Pedestal TapePlayer"
+    "keywords": "Namespace InteractableObjectSystem.Objects Classes BreakableRock ChangeInto CodeReader Fireplace LockedChest LockedDoor NoFireSign Pedestal TapePlayer"
   },
   "api/InteractableObjectSystem.html": {
     "href": "api/InteractableObjectSystem.html",

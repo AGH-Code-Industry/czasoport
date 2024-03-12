@@ -1648,6 +1648,12 @@ references:
   commentId: F:Global.ExampleSpline.trans
   fullName: ExampleSpline.trans
   nameWithType: ExampleSpline.trans
+- uid: Global.FinishScreenUI
+  name: FinishScreenUI
+  href: api/Global.FinishScreenUI.html
+  commentId: T:Global.FinishScreenUI
+  fullName: FinishScreenUI
+  nameWithType: FinishScreenUI
 - uid: Global.FollowWorld
   name: FollowWorld
   href: api/Global.FollowWorld.html
@@ -3392,6 +3398,12 @@ references:
   isSpec: "True"
   fullName: InputActions.devices
   nameWithType: InputActions.devices
+- uid: Global.KeyUI
+  name: KeyUI
+  href: api/Global.KeyUI.html
+  commentId: T:Global.KeyUI
+  fullName: KeyUI
+  nameWithType: KeyUI
 - uid: Global.LTBezier
   name: LTBezier
   href: api/Global.LTBezier.html
@@ -12739,6 +12751,54 @@ references:
   isSpec: "True"
   fullName: Photocopier.InteractionItem
   nameWithType: Photocopier.InteractionItem
+- uid: Global.ScreenUI
+  name: ScreenUI
+  href: api/Global.ScreenUI.html
+  commentId: T:Global.ScreenUI
+  fullName: ScreenUI
+  nameWithType: ScreenUI
+- uid: Global.ScreenUI.DeleteLastDigit
+  name: DeleteLastDigit()
+  href: api/Global.ScreenUI.html#Global_ScreenUI_DeleteLastDigit
+  commentId: M:Global.ScreenUI.DeleteLastDigit
+  fullName: ScreenUI.DeleteLastDigit()
+  nameWithType: ScreenUI.DeleteLastDigit()
+- uid: Global.ScreenUI.DeleteLastDigit*
+  name: DeleteLastDigit
+  href: api/Global.ScreenUI.html#Global_ScreenUI_DeleteLastDigit_
+  commentId: Overload:Global.ScreenUI.DeleteLastDigit
+  isSpec: "True"
+  fullName: ScreenUI.DeleteLastDigit
+  nameWithType: ScreenUI.DeleteLastDigit
+- uid: Global.ScreenUI.EnterCode
+  name: EnterCode()
+  href: api/Global.ScreenUI.html#Global_ScreenUI_EnterCode
+  commentId: M:Global.ScreenUI.EnterCode
+  fullName: ScreenUI.EnterCode()
+  nameWithType: ScreenUI.EnterCode()
+- uid: Global.ScreenUI.EnterCode*
+  name: EnterCode
+  href: api/Global.ScreenUI.html#Global_ScreenUI_EnterCode_
+  commentId: Overload:Global.ScreenUI.EnterCode
+  isSpec: "True"
+  fullName: ScreenUI.EnterCode
+  nameWithType: ScreenUI.EnterCode
+- uid: Global.ScreenUI.WriteDigit(System.Int32)
+  name: WriteDigit(int)
+  href: api/Global.ScreenUI.html#Global_ScreenUI_WriteDigit_System_Int32_
+  commentId: M:Global.ScreenUI.WriteDigit(System.Int32)
+  name.vb: WriteDigit(Integer)
+  fullName: ScreenUI.WriteDigit(int)
+  fullName.vb: ScreenUI.WriteDigit(Integer)
+  nameWithType: ScreenUI.WriteDigit(int)
+  nameWithType.vb: ScreenUI.WriteDigit(Integer)
+- uid: Global.ScreenUI.WriteDigit*
+  name: WriteDigit
+  href: api/Global.ScreenUI.html#Global_ScreenUI_WriteDigit_
+  commentId: Overload:Global.ScreenUI.WriteDigit
+  isSpec: "True"
+  fullName: ScreenUI.WriteDigit
+  nameWithType: ScreenUI.WriteDigit
 - uid: Global.SettingsTests
   name: SettingsTests
   href: api/Global.SettingsTests.html
@@ -34261,6 +34321,25 @@ references:
   isSpec: "True"
   fullName: InteractableObjectSystem.Objects.ChangeInto.InteractionItem
   nameWithType: ChangeInto.InteractionItem
+- uid: InteractableObjectSystem.Objects.CodeReader
+  name: CodeReader
+  href: api/InteractableObjectSystem.Objects.CodeReader.html
+  commentId: T:InteractableObjectSystem.Objects.CodeReader
+  fullName: InteractableObjectSystem.Objects.CodeReader
+  nameWithType: CodeReader
+- uid: InteractableObjectSystem.Objects.CodeReader.InteractionHand
+  name: InteractionHand()
+  href: api/InteractableObjectSystem.Objects.CodeReader.html#InteractableObjectSystem_Objects_CodeReader_InteractionHand
+  commentId: M:InteractableObjectSystem.Objects.CodeReader.InteractionHand
+  fullName: InteractableObjectSystem.Objects.CodeReader.InteractionHand()
+  nameWithType: CodeReader.InteractionHand()
+- uid: InteractableObjectSystem.Objects.CodeReader.InteractionHand*
+  name: InteractionHand
+  href: api/InteractableObjectSystem.Objects.CodeReader.html#InteractableObjectSystem_Objects_CodeReader_InteractionHand_
+  commentId: Overload:InteractableObjectSystem.Objects.CodeReader.InteractionHand
+  isSpec: "True"
+  fullName: InteractableObjectSystem.Objects.CodeReader.InteractionHand
+  nameWithType: CodeReader.InteractionHand
 - uid: InteractableObjectSystem.Objects.Fireplace
   name: Fireplace
   href: api/InteractableObjectSystem.Objects.Fireplace.html
