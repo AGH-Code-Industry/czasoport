@@ -18,7 +18,11 @@ namespace Items
         [SerializeField] private ItemSO itemSO;
 
         public ItemSO ItemSO => itemSO;
-        public int Durability { get; set; }
+        private int _durability = 0;
+        public int Durability {
+            get {return _durability;}
+            set {_durability = value;}
+        }
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.ITEMS];
         private SpriteRenderer _spriteRenderer;
@@ -38,8 +42,7 @@ namespace Items
                     this
                     );
             }
-
-            Durability = ItemSO.durability;
+            if (Durability == 0) Durability = ItemSO.durability;
         }
 
         public void InteractionHand() {
