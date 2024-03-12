@@ -19,6 +19,7 @@ namespace InteractableObjectSystem.Objects {
         [SerializeField] private List<ItemSO> interactedWith;
         [SerializeField] private float openingSpeed;
         [SerializeField] private float _openingDelay;
+        [SerializeField] private List<LockedDoor> doorsInOtherTimes;
 
         private BoxCollider2D _collider;
         private BoxCollider2D _passage;
@@ -74,6 +75,9 @@ namespace InteractableObjectSystem.Objects {
             CDebug.Log("Opened");
             _state = DoorState.Opened;
             StartCoroutine(OpenDoortsWithDelay(_openingDelay));
+            foreach (LockedDoor door in doorsInOtherTimes) {
+                door.OpenDoor();
+            }
         }
 
         IEnumerator OpenDoortsWithDelay(float delay) {
@@ -93,6 +97,9 @@ namespace InteractableObjectSystem.Objects {
             _passage.enabled = true;
             CDebug.Log("Closed");
             _animator.ResetTrigger("OpenDoors");
+            foreach (LockedDoor door in doorsInOtherTimes) {
+                door.OpenDoor();
+            }
         }
     }
 }
