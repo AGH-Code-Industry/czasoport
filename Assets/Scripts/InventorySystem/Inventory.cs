@@ -210,6 +210,10 @@ namespace InventorySystem {
             }
             item = _items[index];
             _items[index] = null;
+            _selectedSlot = index;
+            SelectedSlotChanged?.Invoke(this, new SelectedSlotChangedEventArgs() {
+                Slot = _selectedSlot
+            });
             ItemRemoved?.Invoke(this, new ItemRemovedEventArgs() {
                 Slot = _selectedSlot,
                 Item = item
