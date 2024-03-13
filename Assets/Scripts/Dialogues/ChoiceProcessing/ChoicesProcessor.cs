@@ -1,6 +1,7 @@
 ﻿using CoinPackage.Debugging;
 using Dialogues.ChoiceProcessing;
 using Ink.Runtime;
+using InteractableObjectSystem;
 using InventorySystem;
 using Items;
 using UnityEngine;
@@ -49,9 +50,16 @@ namespace Dialogues {
                 // TODO: Add what will happen when the choice is actually chosen
                 // Do we always want to instantiate new item? Maybe take it from the pool?
                 if (choiceContext.GetsItem) {
-                    Inventory.Instance.InsertItem(
-                        UnityEngine.Object.Instantiate(choiceContext.GetItem.prefab).GetComponent<Item>()
+                    GameObject temp = UnityEngine.Object.Instantiate(choiceContext.GetItem.prefab);
+                    if (temp.TryGetComponent<InteractableObject>(out InteractableObject interactableObject)) {
+                        interactableObject.InteractionHand();
+                    }
+                    else {
+                        Inventory.Instance.InsertItem(
+                            temp.GetComponent<Item>()
                         );
+                    }
+
                 }
             });
             choiceButton.SetText(choice.text);
