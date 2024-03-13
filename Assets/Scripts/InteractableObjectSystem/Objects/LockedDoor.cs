@@ -21,6 +21,9 @@ namespace InteractableObjectSystem.Objects {
         [SerializeField] private float _openingDelay;
         [SerializeField] private List<LockedDoor> doorsInOtherTimes;
 
+        [SerializeField] private AudioSource doorAudioSource; // Add AudioSource field - Kasia Psuje
+
+
         private BoxCollider2D _collider;
         private BoxCollider2D _passage;
         private DoorState _state;
@@ -75,6 +78,10 @@ namespace InteractableObjectSystem.Objects {
             CDebug.Log("Opened");
             _state = DoorState.Opened;
             StartCoroutine(OpenDoortsWithDelay(_openingDelay));
+            // Play sound - Kasia Psuje
+            if (doorAudioSource != null && doorAudioSource.clip != null) { //- Kasia Psuje
+                doorAudioSource.Play();//- Kasia Psuje
+            }//- Kasia Psuje
             foreach (LockedDoor door in doorsInOtherTimes) {
                 door.OpenDoor();
             }
