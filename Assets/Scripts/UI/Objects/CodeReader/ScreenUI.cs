@@ -76,6 +76,8 @@ public class ScreenUI : MonoBehaviour {
 
     private void ShowEndScreen() {
         finishGameUI.SetActive(true);
+        finishGameUI.GetComponent<FinishScreenUI>().ShowTime();
+        Timer.instance.StopTimer();
     }
 
     private void BadCode() {
