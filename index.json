@@ -597,7 +597,7 @@
   "api/Global.ScreenUI.html": {
     "href": "api/Global.ScreenUI.html",
     "title": "Class ScreenUI | Czasoport Documentation",
-    "keywords": "Class ScreenUI Namespace Global public class ScreenUI : MonoBehaviour Inheritance object ScreenUI Methods DeleteLastDigit() public void DeleteLastDigit() EnterCode() public void EnterCode() WriteDigit(int) public void WriteDigit(int digit) Parameters digit int"
+    "keywords": "Class ScreenUI Namespace Global public class ScreenUI : MonoBehaviour Inheritance object ScreenUI Methods DeleteLastDigit() public void DeleteLastDigit() EnterCode() public void EnterCode() SetCode(int) public void SetCode(int code) Parameters code int WriteDigit(int) public void WriteDigit(int digit) Parameters digit int"
   },
   "api/Global.SettingsTests.html": {
     "href": "api/Global.SettingsTests.html",
@@ -1627,7 +1627,7 @@
   "api/InteractableObjectSystem.Objects.CodeReader.html": {
     "href": "api/InteractableObjectSystem.Objects.CodeReader.html",
     "title": "Class CodeReader | Czasoport Documentation",
-    "keywords": "Class CodeReader Namespace InteractableObjectSystem.Objects public class CodeReader : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject CodeReader Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.InteractionItem(Item) InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand()"
+    "keywords": "Class CodeReader Namespace InteractableObjectSystem.Objects public class CodeReader : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject CodeReader Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand() InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
   },
   "api/InteractableObjectSystem.Objects.Fireplace.html": {
     "href": "api/InteractableObjectSystem.Objects.Fireplace.html",
