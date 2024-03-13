@@ -25,14 +25,16 @@ namespace InteractableObjectSystem.Objects {
         public override void InteractionHand() {
             codeUI.SetActive(true);
             CInput.InputActions.Movement.Disable();
+            Debug.Log("Du");
         }
 
         public override bool InteractionItem(Item item) {
             if (item.ItemSO == codeItem) {
+                Debug.Log("DupaSuper");
                 NotificationManager.Instance.RaiseNotification(new Notification("Code: " + _code, 5f));
                 return true;
             }
-
+            Debug.Log("DupaDupa");
             return false;
         }
     }

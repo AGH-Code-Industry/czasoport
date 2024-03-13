@@ -72,10 +72,16 @@ namespace NPC {
             _animator.ResetTrigger("Wink");
             _walkProgress = 0f;
             _previousTarget = _actualTarget;
-            if (!loop) {
-                marchPoints.RemoveAt(_previousTarget);
+            if (loop) {
+                _actualTarget = (_actualTarget+1) % marchPoints.Count;
             }
-            _actualTarget = (_actualTarget+1) % marchPoints.Count;
+            else {
+                _actualTarget = (_actualTarget+1);
+                if (_actualTarget >= marchPoints.Count) {
+                    StopWalk();
+                    yield break;
+                }
+            }
             yield return new WaitForSeconds(delay);
             StartWalk();
         }

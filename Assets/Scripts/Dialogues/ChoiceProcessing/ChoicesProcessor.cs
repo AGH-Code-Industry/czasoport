@@ -55,9 +55,7 @@ namespace Dialogues {
                         interactableObject.InteractionHand();
                     }
                     else {
-                        Inventory.Instance.InsertItem(
-                            temp.GetComponent<Item>()
-                        );
+                        temp.GetComponent<Item>().InteractionHand();
                     }
 
                 }
