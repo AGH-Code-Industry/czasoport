@@ -78,10 +78,6 @@ namespace InteractableObjectSystem.Objects {
             CDebug.Log("Opened");
             _state = DoorState.Opened;
             StartCoroutine(OpenDoortsWithDelay(_openingDelay));
-            // Play sound - Kasia Psuje
-            if (doorAudioSource != null && doorAudioSource.clip != null) { //- Kasia Psuje
-                doorAudioSource.Play();//- Kasia Psuje
-            }//- Kasia Psuje
             foreach (LockedDoor door in doorsInOtherTimes) {
                 door.OpenDoor();
             }
@@ -92,6 +88,10 @@ namespace InteractableObjectSystem.Objects {
             _collider.enabled = false;
             _passage.enabled = false;
             _animator.ResetTrigger("CloseDoors");
+            // Play sound - Kasia Psuje
+            if (doorAudioSource != null && doorAudioSource.clip != null) { //- Kasia Psuje
+                doorAudioSource.Play();//- Kasia Psuje
+            }//- Kasia Psuje
         }
 
         public void CloseDoor() {
