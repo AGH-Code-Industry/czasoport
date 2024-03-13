@@ -7,12 +7,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ScreenUI : MonoBehaviour {
-    [SerializeField] private int goodCode;
     [SerializeField] private TextMeshProUGUI codeScreen;
     [SerializeField] private GameObject finishGameUI;
     [SerializeField] private Button closeUIButton;
     [SerializeField] private GameObject codeUI;
 
+    private int _goodCode;
     private Image _screenBackground;
     private Color _defaultColor;
     string _code = "";
@@ -22,6 +22,10 @@ public class ScreenUI : MonoBehaviour {
         _screenBackground = GetComponent<Image>();
         _defaultColor = _screenBackground.color;
         ClearCode();
+    }
+
+    public void SetCode(int code) {
+        _goodCode = code;
     }
 
     private bool EndCode() {
@@ -52,7 +56,7 @@ public class ScreenUI : MonoBehaviour {
     }
 
     private void CheckCode() {
-        if (int.Parse(_code) == goodCode) {
+        if (int.Parse(_code) == _goodCode) {
             ShowEndScreen();
         }
         else {

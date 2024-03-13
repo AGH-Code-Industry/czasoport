@@ -12,7 +12,7 @@ Bye!
 -> DONE
 
 == show ==
-    * [Exhchange #requiresItem: BeigeGem #getsItem: Torch]
+    * [Exhchange #requiresItem: ResultGlejt #getsItem: CzasoportPart]
         -> trade
 
     * [I don't want anything. Bye.]

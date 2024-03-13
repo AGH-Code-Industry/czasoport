@@ -129,6 +129,7 @@ namespace InventorySystem {
 
             if (_items[_selectedSlot] is null && _selectedSlot != 0) { // Put item in the selected slot
                 _items[_selectedSlot] = item;
+                Debug.Log(_selectedSlot);
                 _itemsCount++;
                 ItemInserted?.Invoke(this, new ItemInsertedEventArgs() {
                     Slot = _selectedSlot,
@@ -209,6 +210,10 @@ namespace InventorySystem {
             }
             item = _items[index];
             _items[index] = null;
+            _selectedSlot = index;
+            SelectedSlotChanged?.Invoke(this, new SelectedSlotChangedEventArgs() {
+                Slot = _selectedSlot
+            });
             ItemRemoved?.Invoke(this, new ItemRemovedEventArgs() {
                 Slot = _selectedSlot,
                 Item = item
