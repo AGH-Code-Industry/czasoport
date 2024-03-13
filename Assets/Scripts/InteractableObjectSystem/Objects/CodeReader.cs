@@ -1,6 +1,8 @@
 using System;
 using CustomInput;
 using Interactions;
+using Items;
+using Notifications;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,6 +11,7 @@ namespace InteractableObjectSystem.Objects {
     [RequireComponent(typeof(HighlightInteraction))]
     public class CodeReader : InteractableObject {
 
+        [SerializeField] private ItemSO codeItem;
         [SerializeField] private GameObject codeUI;
         [SerializeField] private ScreenUI screenUI;
 
@@ -22,6 +25,15 @@ namespace InteractableObjectSystem.Objects {
         public override void InteractionHand() {
             codeUI.SetActive(true);
             CInput.InputActions.Movement.Disable();
+        }
+
+        public override bool InteractionItem(Item item) {
+            if (item.ItemSO == codeItem) {
+                NotificationManager.Instance.RaiseNotification(new Notification("Code: " + _code, 5f));
+                return true;
+            }
+
+            return false;
         }
     }
 }

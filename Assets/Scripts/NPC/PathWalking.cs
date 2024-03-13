@@ -13,6 +13,7 @@ namespace NPC {
         private bool _canWalk;
         [SerializeField] private float restTime = 3f;
         [SerializeField] private List<Transform> marchPoints = new();
+        [SerializeField] private bool loop = true;
         private int _previousTarget = 0;
         private int _actualTarget = 1;
         private float _walkProgress;
@@ -71,6 +72,9 @@ namespace NPC {
             _animator.ResetTrigger("Wink");
             _walkProgress = 0f;
             _previousTarget = _actualTarget;
+            if (!loop) {
+                marchPoints.RemoveAt(_previousTarget);
+            }
             _actualTarget = (_actualTarget+1) % marchPoints.Count;
             yield return new WaitForSeconds(delay);
             StartWalk();
