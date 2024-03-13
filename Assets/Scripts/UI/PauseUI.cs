@@ -57,7 +57,7 @@ namespace UI {
             LeanTween.scale(saveButton.gameObject, new Vector3(1f, 1f, 0f), 0.5f).setIgnoreTimeScale(true).setEase(LeanTweenType.easeOutBounce).setDelay(0.1f);
             LeanTween.scale(quitButton.gameObject, new Vector3(1f, 1f, 0f), 0.5f).setIgnoreTimeScale(true).setEase(LeanTweenType.easeOutBounce).setDelay(0.2f);
             LeanTween.scale(resumeButton.transform.parent.gameObject, new Vector3(1f, 1f, 0f), 0.3f).setIgnoreTimeScale(true).setEase(LeanTweenType.easeOutQuint);
-            //Time.timeScale = 0f;
+            Time.timeScale = 0f;
         }
 
         private void Save() {

@@ -21,10 +21,10 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
 
     [SerializeField]
     TMP_Text _notificationMessage;
-    [SerializeField]
+    /*[SerializeField]
     GameObject _scrollContent;
     [SerializeField]
-    GameObject _logPrerab;
+    GameObject _logPrerab;*/
     [SerializeField]
     GameObject _tutorialNotification;
     [SerializeField]
@@ -64,10 +64,8 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
     }
 
     private void PausePerformed(InputAction.CallbackContext context) {
-        if (_pauseUI.IsGamePaused()) {
+        if (_pauseUI.IsGamePaused() && _notificationWindow.activeSelf == true) {
             _notificationWindow?.SetActive(false);
-        } else {
-            _notificationWindow?.SetActive(true);
         }
     }
 
@@ -83,8 +81,10 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
     }
     
     IEnumerator DisplayNotification() {
+        _notificationWindow.gameObject.SetActive(false);
         if (_notificationsToDisplay.Count == 0) {
             _isNotificationDisplaying = false;
+            Debug.Log("Siema");
             _notificationWindow.gameObject.SetActive(false);
             yield break;
         }
@@ -92,8 +92,10 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
         _notificationMessage.text = notification.message;
         _notificationMessage.gameObject.SetActive(true);
         _notificationsHistory.Add(notification);
-        UpdateLogs();
+        //UpdateLogs();
+        _notificationWindow.transform.localScale = Vector3.zero;
         _notificationWindow.SetActive(true);
+        LeanTween.scale(_notificationWindow, new Vector3(0.015f, 0.015f, 0.01f), 0.5f).setEase(LeanTweenType.easeOutBounce);
         yield return new WaitForSeconds(notification.displayTime);
         StartCoroutine(DisplayNotification());
     }
@@ -136,7 +138,7 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
         gameData.notificationGameData.notificationHistory = _notificationsHistory;
     }
 
-    void UpdateLogs() {
+    /*void UpdateLogs() {
         for (int i = 0; i < _scrollContent.transform.childCount; i++) {
             Destroy(_scrollContent.transform.GetChild(i).gameObject);
         }
@@ -148,5 +150,5 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
             it += 1;
         }
         LayoutRebuilder.ForceRebuildLayoutImmediate(_scrollContent.GetComponent<RectTransform>());
-    }
+    }*/
 }
