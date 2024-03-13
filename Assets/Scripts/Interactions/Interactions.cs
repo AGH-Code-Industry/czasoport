@@ -11,6 +11,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using InventorySystem;
+using Items;
 using Settings;
 using UnityEngine.Serialization;
 
@@ -188,15 +189,14 @@ namespace Interactions {
                     }
                 }
                 else {
-                    TryToInstertItem();
+                    _selectedObject.GetComponent<IHandInteractable>()?.InteractionHand();
                     handInteractionPerformed?.Invoke(this, EventArgs.Empty);
                 }
             }
         }
 
         private void TryToInstertItem() {
-            _selectedObject.GetComponent<IHandInteractable>()?.InteractionHand();
-            
+            _selectedObject.GetComponent<Item>()?.InteractionHand();
         }
         
         private void OnLongInteractionPerformed(InputAction.CallbackContext ctx) {
