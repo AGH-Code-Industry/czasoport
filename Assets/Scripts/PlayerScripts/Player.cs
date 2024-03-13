@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using CoinPackage.Debugging;
 using UnityEngine;
 using CustomInput;
@@ -15,6 +15,7 @@ namespace PlayerScripts {
 
         private Rigidbody2D _rigid;
         private PlayerSettingsSO _settings;
+        private AudioSource _audioSource;
         Animator _animator;
 
         private void Awake() {
@@ -30,6 +31,7 @@ namespace PlayerScripts {
             _settings = DeveloperSettings.Instance.playerSettings;
             _animator = GetComponent<Animator>();
             _rigid = GetComponent<Rigidbody2D>();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         private void OnDestroy() {
@@ -47,6 +49,9 @@ namespace PlayerScripts {
             if (_speed > 0.01) {
                 _animator.SetFloat("LastHorizontal", movement.x);
                 _animator.SetFloat("LastVertical", movement.y);
+                if (!_audioSource.isPlaying) _audioSource.Play();
+            } else {
+                if (_audioSource.isPlaying) _audioSource.Stop();
             }
             //transform.Translate(Time.deltaTime * _settings.movementSpeed * new Vector2(movement.x, movement.y));
             _rigid.AddForce(Time.deltaTime * 1000 * _settings.movementSpeed * movement);
