@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
@@ -18,6 +18,9 @@ public class CrossingLight : MonoBehaviour {
     [SerializeField] private BoxCollider2D collider;
     [SerializeField] private Transform returnPosition;
     [SerializeField] private CheckPlayerInArea areaEnd;
+
+    private AudioSource _audioSource;
+
     private bool _playerInEndArea {
         get { return areaEnd.IsInArea; }
     }
@@ -36,6 +39,7 @@ public class CrossingLight : MonoBehaviour {
     private void Start() {
         _blackScreenAnimator = TimeChanger.Instance.Animator;
         _blackScreenAnimatorTimer = DeveloperSettings.Instance.tpcSettings.timelineChangeAnimLength;
+        _audioSource = GetComponent<AudioSource>();
         CloseCrossing();
         InvokeRepeating(nameof(ToggleLightsState), lightChangeInterval, lightChangeInterval);
     }
@@ -75,6 +79,7 @@ public class CrossingLight : MonoBehaviour {
         foreach (PathWalking pw in pathWalkings) {
             pw.StartWalk();
         }
+        _audioSource.Stop();
     }
 
     private void CloseCrossing() {
@@ -85,6 +90,7 @@ public class CrossingLight : MonoBehaviour {
         foreach (PathWalking pw in pathWalkings) {
             pw.StopWalk();
         }
+        _audioSource.Play();
     }
     
     private void OnTriggerEnter2D(Collider2D other) {
