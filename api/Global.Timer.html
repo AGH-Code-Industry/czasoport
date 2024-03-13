@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class FinishScreenUI | Czasoport Documentation </title>
+      <title>Class Timer | Czasoport Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class FinishScreenUI | Czasoport Documentation ">
+      <meta name="title" content="Class Timer | Czasoport Documentation ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Global_FinishScreenUI.md&amp;value=---%0Auid%3A%20Global.FinishScreenUI%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Global_Timer.md&amp;value=---%0Auid%3A%20Global.Timer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Global.FinishScreenUI">
+        <article data-uid="Global.Timer">
 
 
 
-  <h1 id="Global_FinishScreenUI" data-uid="Global.FinishScreenUI" class="text-break">
-Class FinishScreenUI  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/UI/Objects/CodeReader/FinishScreenUI.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <h1 id="Global_Timer" data-uid="Global.Timer" class="text-break">
+Class Timer  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Application/Timer.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class FinishScreenUI  <a class="header-action link-secondary" title="View source
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FinishScreenUI : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class Timer : MonoBehaviour</code></pre>
   </div>
 
 
@@ -111,8 +111,42 @@ Class FinishScreenUI  <a class="header-action link-secondary" title="View source
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">FinishScreenUI</span></div>
+      <div><span class="xref">Timer</span></div>
     </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Global_Timer_instance" data-uid="Global.Timer.instance">
+  instance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Application/Timer.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Timer instance</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Global.Timer.html">Timer</a></dt>
+    <dd></dd>
   </dl>
 
 
@@ -127,18 +161,75 @@ Class FinishScreenUI  <a class="header-action link-secondary" title="View source
 </h2>
 
 
-  <a id="Global_FinishScreenUI_ShowTime_" data-uid="Global.FinishScreenUI.ShowTime*"></a>
+  <a id="Global_Timer_GetMeasuredTime_" data-uid="Global.Timer.GetMeasuredTime*"></a>
 
-  <h3 id="Global_FinishScreenUI_ShowTime" data-uid="Global.FinishScreenUI.ShowTime">
-  ShowTime()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/UI/Objects/CodeReader/FinishScreenUI.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Global_Timer_GetMeasuredTime" data-uid="Global.Timer.GetMeasuredTime">
+  GetMeasuredTime()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Application/Timer.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ShowTime()</code></pre>
+    <pre><code class="lang-csharp hljs">public float GetMeasuredTime()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Global_Timer_StartTimer_" data-uid="Global.Timer.StartTimer*"></a>
+
+  <h3 id="Global_Timer_StartTimer" data-uid="Global.Timer.StartTimer">
+  StartTimer()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Application/Timer.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartTimer()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Global_Timer_StopTimer_" data-uid="Global.Timer.StopTimer*"></a>
+
+  <h3 id="Global_Timer_StopTimer" data-uid="Global.Timer.StopTimer">
+  StopTimer()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Application/Timer.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopTimer()</code></pre>
   </div>
 
 
@@ -157,7 +248,7 @@ Class FinishScreenUI  <a class="header-action link-secondary" title="View source
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/UI/Objects/CodeReader/FinishScreenUI.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Application/Timer.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 
