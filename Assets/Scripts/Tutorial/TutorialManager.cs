@@ -19,6 +19,7 @@ public class TutorialManager : MonoBehaviour
     /// </summary>
     void Start()
     {
+        Timer.instance.StartTimer();
         // Jak coś dodajecie to lepiej napiszcie do Mikołaja
         _stages.Add(new TutorialStage(CInput.InputActions.Movement.Navigation, true));
         _stages.Add(new TutorialStage(CInput.InputActions.Game.TogglePause, true));
