@@ -27,10 +27,10 @@ namespace InteractableObjectSystem.Objects {
             if (_interactedWith.Contains(item.ItemSO)) {
                 SetUpNewRock(item.ItemSO);
                 GameObject tempItem = Instantiate(_currentRock.prefab);
-                tempItem.GetComponent<Item>().enabled = false;
-                tempItem.GetComponent<CircleCollider2D>().enabled = false;
+                tempItem.transform.parent = transform;
                 Inventory.Instance.InsertItem(tempItem.GetComponent<Item>());
                 _currentRock = item.ItemSO;
+                Destroy(item.gameObject);
                 return true;
             }
 
