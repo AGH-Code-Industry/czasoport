@@ -51,6 +51,7 @@ namespace Dialogues {
                 // Do we always want to instantiate new item? Maybe take it from the pool?
                 if (choiceContext.GetsItem) {
                     GameObject temp = UnityEngine.Object.Instantiate(choiceContext.GetItem.prefab);
+                    temp.transform.parent = _choicesPanel.transform;
                     if (temp.TryGetComponent<InteractableObject>(out InteractableObject interactableObject)) {
                         interactableObject.InteractionHand();
                     }
