@@ -19,7 +19,7 @@ I have something that I think belogns to you. A piece of a device. If you would 
     ->DONE
 
 == show ==
-    * [Exhchange #requiresItem: BeigeGem #getsItem: Torch]
+    * [Exhchange #requiresItem: Crystal #getsItem: CzasoportPart]
         -> trade
     * [Bye]
         -> bywaj
