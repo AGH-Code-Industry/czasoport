@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
@@ -20,10 +20,12 @@ namespace InteractableObjectSystem.Objects {
         private BoxCollider2D _collider;
         private SpriteRenderer _renderer;
         private RockState _state;
+        private AudioSource _audioSource;
 
         private void Awake() {
             _collider = GetComponent<BoxCollider2D>();
             _renderer = GetComponent<SpriteRenderer>();
+            _audioSource = GetComponent<AudioSource>();
             _state = RockState.NotDestroyed;
         }
 
@@ -52,6 +54,10 @@ namespace InteractableObjectSystem.Objects {
             _particleSystem.Play();
             Invoke("HideSprite",0.5f);
             CDebug.Log("Broken");
+            _audioSource.enabled = true;
+            _audioSource.Play();
+            transform.GetChild(0).GetComponent<AudioSource>().enabled = true;
+            transform.GetChild(0).GetComponent<AudioSource>().Play();
         }
 
         private void HideSprite() {
