@@ -60,6 +60,7 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
         LeanTween.scale(_messageGo2.gameObject, new Vector3(1.2f, 1.2f, 1f), 0.5f).setLoopPingPong();
         _tutorialNotification.SetActive(false);
         _bigMessage.enabled = false;
+        _notificationWindow.SetActive(false);
     }
 
     private void PausePerformed(InputAction.CallbackContext context) {
@@ -84,7 +85,7 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
     IEnumerator DisplayNotification() {
         if (_notificationsToDisplay.Count == 0) {
             _isNotificationDisplaying = false;
-            _notificationMessage.gameObject.SetActive(false);
+            _notificationWindow.gameObject.SetActive(false);
             yield break;
         }
         Notification notification = _notificationsToDisplay.Dequeue();
@@ -92,6 +93,7 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
         _notificationMessage.gameObject.SetActive(true);
         _notificationsHistory.Add(notification);
         UpdateLogs();
+        _notificationWindow.SetActive(true);
         yield return new WaitForSeconds(notification.displayTime);
         StartCoroutine(DisplayNotification());
     }
