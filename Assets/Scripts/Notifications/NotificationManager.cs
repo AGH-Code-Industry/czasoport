@@ -26,6 +26,8 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
     [SerializeField]
     GameObject _logPrerab;*/
     [SerializeField]
+    GameObject _notification;
+    [SerializeField]
     GameObject _tutorialNotification;
     [SerializeField]
     GameObject _notificationWindow;
@@ -61,11 +63,14 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
         _tutorialNotification.SetActive(false);
         _bigMessage.enabled = false;
         _notificationWindow.SetActive(false);
+        _notification.SetActive(true);
     }
 
     private void PausePerformed(InputAction.CallbackContext context) {
-        if (_pauseUI.IsGamePaused() && _notificationWindow.activeSelf == true) {
-            _notificationWindow?.SetActive(false);
+        if (_pauseUI.IsGamePaused()) {
+            _notification?.SetActive(false);
+        } else {
+            _notification?.SetActive(true);
         }
     }
 
