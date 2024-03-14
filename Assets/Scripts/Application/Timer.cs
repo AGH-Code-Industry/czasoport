@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour {
         _timerOn = false;
     }
 
-    private void ResetTimer()
+    public void ResetTimer()
     {
         _elapsedTime = 0f;
     }
