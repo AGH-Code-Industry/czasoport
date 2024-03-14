@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Notifications;
@@ -67,10 +67,8 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
     }
 
     private void PausePerformed(InputAction.CallbackContext context) {
-        if (_pauseUI.IsGamePaused()) {
-            _notification?.SetActive(false);
-        } else {
-            _notification?.SetActive(true);
+        if (_pauseUI.IsGamePaused() && _notificationWindow.activeSelf == true) {
+            _notificationWindow?.SetActive(false);
         }
     }
 
