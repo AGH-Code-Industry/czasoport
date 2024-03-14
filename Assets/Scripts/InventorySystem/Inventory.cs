@@ -124,8 +124,8 @@ namespace InventorySystem {
         /// <param name="item">`Item` to insert.</param>
         /// <returns></returns>
         public bool InsertItem(Item item) {
-            if (_itemsCount == _settings.itemsCount - 1)
-                NotificationManager.Instance.RaiseNotification(new Notification("My inventory is full", 3f));{ // Inventory full
+            if (_itemsCount == _settings.itemsCount - 1) { // Inventory full
+                NotificationManager.Instance.RaiseNotification(new Notification("Inventory is full", 3f));
                 return false;
             }
 
