@@ -20,6 +20,7 @@ public class FinishScreenUI : MonoBehaviour {
 
     public void ShowTime() {
         float time = Timer.instance.GetMeasuredTime();
+        Timer.instance.ResetTimer();
         string timeText = Mathf.Floor(time / 60f) + " minutes " + Mathf.Floor(time % 60f) + " seconds";
         timerText.text = timeText;
     }
