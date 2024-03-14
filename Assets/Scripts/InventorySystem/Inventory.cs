@@ -9,6 +9,7 @@ using InventorySystem.EventArguments;
 using Items;
 using LevelTimeChange.LevelsLoader;
 using LevelTimeChange.TimeChange;
+using Notifications;
 using PlayerScripts;
 using Settings;
 #if UNITY_EDITOR
@@ -123,7 +124,8 @@ namespace InventorySystem {
         /// <param name="item">`Item` to insert.</param>
         /// <returns></returns>
         public bool InsertItem(Item item) {
-            if (_itemsCount == _settings.itemsCount) { // Inventory full
+            if (_itemsCount == _settings.itemsCount - 1)
+                NotificationManager.Instance.RaiseNotification(new Notification("My inventory is full", 3f));{ // Inventory full
                 return false;
             }
 
