@@ -652,7 +652,7 @@
   "api/Global.Timer.html": {
     "href": "api/Global.Timer.html",
     "title": "Class Timer | Czasoport Documentation",
-    "keywords": "Class Timer Namespace Global public class Timer : MonoBehaviour Inheritance object Timer Fields instance public static Timer instance Field Value Timer Methods GetMeasuredTime() public float GetMeasuredTime() Returns float StartTimer() public void StartTimer() StopTimer() public void StopTimer()"
+    "keywords": "Class Timer Namespace Global public class Timer : MonoBehaviour Inheritance object Timer Fields instance public static Timer instance Field Value Timer Methods GetMeasuredTime() public float GetMeasuredTime() Returns float ResetTimer() public void ResetTimer() StartTimer() public void StartTimer() StopTimer() public void StopTimer()"
   },
   "api/Global.TutorialManager.html": {
     "href": "api/Global.TutorialManager.html",
@@ -1907,7 +1907,7 @@
   "api/NPC.DialogueNPC.html": {
     "href": "api/NPC.DialogueNPC.html",
     "title": "Class DialogueNPC | Czasoport Documentation",
-    "keywords": "Class DialogueNPC Namespace NPC public class DialogueNPC : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject DialogueNPC Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.InteractionItem(Item) InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand()"
+    "keywords": "Class DialogueNPC Namespace NPC public class DialogueNPC : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable Inheritance object InteractableObject DialogueNPC Implements IItemInteractable IHandInteractable ILongHandInteractable ILongItemInteractable Inherited Members InteractableObject.definition InteractableObject.Logger InteractableObject.LongInteractionItem(Item) InteractableObject.LongInteractionHand() Methods InteractionHand() public override void InteractionHand() InteractionItem(Item) public override bool InteractionItem(Item item) Parameters item Item Returns bool"
   },
   "api/NPC.PathWalking.html": {
     "href": "api/NPC.PathWalking.html",
