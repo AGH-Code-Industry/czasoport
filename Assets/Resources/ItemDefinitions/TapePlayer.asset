@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a4ab1ead47c468e86269bd40acefc78, type: 3}
-  m_Name: Photocopier
+  m_Name: TapePlayer
   m_EditorClassIdentifier: 
-  interactableName: Photopier
-  description: This copies 2 documents
-  prefab: {fileID: 6187817298785734084, guid: ac81b68e7a3e86949ba6796de8e4e68f, type: 3}
+  interactableName: Type Player
+  description: 
+  prefab: {fileID: 6978891883322318165, guid: 2baae4aedb9810f749652351956eab85, type: 3}
   failedHandInterNotification:
     message: 
-    displayTime: 3
+    displayTime: 0
   successfulHandInterNotification:
-    message: Perfect! Here I can make a copy of parts of the document
+    message: A radio. It's silent now but maybe if I would play some music someone
+      would come and check on it. Perhaps the guard...
     displayTime: 3
   failedItemInterNotification:
-    message: I cannot copy this item...
+    message: I don't think it will work like that
     displayTime: 3
   successfulItemInterNotification:
-    message: 
+    message: Perfect! I distracted the guard!
     displayTime: 3

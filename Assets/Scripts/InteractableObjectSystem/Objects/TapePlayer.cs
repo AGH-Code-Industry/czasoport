@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Interactions;
 using Items;
@@ -11,6 +11,10 @@ namespace InteractableObjectSystem.Objects {
     public class TapePlayer : InteractableObject {
         [SerializeField] private ItemSO _interactedWith;
         [SerializeField] private List<PathWalking> _NPCPathWalkings = new ();
+
+        public override void InteractionHand() {
+            NotificationManager.Instance.RaiseNotification(definition.failedHandInterNotification);
+        }
 
         public override bool InteractionItem(Item item) {
             if (item.ItemSO == _interactedWith) {
