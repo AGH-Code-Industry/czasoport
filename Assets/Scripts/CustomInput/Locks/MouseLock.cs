@@ -9,10 +9,10 @@ namespace CustomInput.Locks {
     public class MouseLock {
         private readonly List<string> _keys;
         private readonly string _tag;
-        
+
         private InputActions.MouseActions _input;
         private ushort _keyID;
-        
+
         public MouseLock(InputActions.MouseActions input) {
             _input = input;
             _tag = _input.ToString();

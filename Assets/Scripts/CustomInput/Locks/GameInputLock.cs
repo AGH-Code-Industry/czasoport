@@ -9,10 +9,10 @@ namespace CustomInput.Locks {
     public class GameInputLock {
         private readonly List<string> _keys;
         private readonly string _tag;
-        
+
         private InputActions.GameActions _input;
         private ushort _keyID;
-        
+
         public GameInputLock(InputActions.GameActions input) {
             _input = input;
             _tag = _input.ToString();

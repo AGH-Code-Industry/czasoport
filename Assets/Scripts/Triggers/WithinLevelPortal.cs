@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WithinLevelPortal : MonoBehaviour
-{
+public class WithinLevelPortal : MonoBehaviour {
     private Transform _destinationPoint;
 
     private void Start() {

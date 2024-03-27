@@ -9,13 +9,13 @@ using UnityEngine.UIElements;
 namespace InteractableObjectSystem.Objects {
     [RequireComponent(typeof(BoxCollider2D))]
     public class LockedDoor : InteractableObject {
-        
+
         private enum DoorState {
             Locked,
             Closed,
             Opened
         }
-        
+
         [SerializeField] private List<ItemSO> interactedWith;
         [SerializeField] private float openingSpeed;
         [SerializeField] private float _openingDelay;

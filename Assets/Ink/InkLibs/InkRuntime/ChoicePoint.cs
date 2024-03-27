@@ -1,14 +1,12 @@
 ﻿using System.ComponentModel;
 
-namespace Ink.Runtime
-{
+namespace Ink.Runtime {
     /// <summary>
     /// The ChoicePoint represents the point within the Story where
     /// a Choice instance gets generated. The distinction is made
     /// because the text of the Choice can be dynamically generated.
     /// </summary>
-	public class ChoicePoint : Runtime.Object
-	{
+	public class ChoicePoint : Runtime.Object {
         public Path pathOnChoice {
             get {
                 // Resolve any relative paths to global ones as we come across them
@@ -28,16 +26,16 @@ namespace Ink.Runtime
 
         public Container choiceTarget {
             get {
-                return this.ResolvePath (_pathOnChoice).container;
+                return this.ResolvePath(_pathOnChoice).container;
             }
         }
 
         public string pathStringOnChoice {
             get {
-                return CompactPathString (pathOnChoice);
+                return CompactPathString(pathOnChoice);
             }
             set {
-                pathOnChoice = new Path (value);
+                pathOnChoice = new Path(value);
             }
         }
 
@@ -50,11 +48,11 @@ namespace Ink.Runtime
         public int flags {
             get {
                 int flags = 0;
-                if (hasCondition)         flags |= 1;
-                if (hasStartContent)      flags |= 2;
+                if (hasCondition) flags |= 1;
+                if (hasStartContent) flags |= 2;
                 if (hasChoiceOnlyContent) flags |= 4;
-                if (isInvisibleDefault)   flags |= 8;
-                if (onceOnly)             flags |= 16;
+                if (isInvisibleDefault) flags |= 8;
+                if (onceOnly) flags |= 16;
                 return flags;
             }
             set {
@@ -66,24 +64,21 @@ namespace Ink.Runtime
             }
         }
 
-        public ChoicePoint (bool onceOnly)
-		{
+        public ChoicePoint(bool onceOnly) {
             this.onceOnly = onceOnly;
-		}
+        }
 
-        public ChoicePoint() : this(true) {}
+        public ChoicePoint() : this(true) { }
 
-        public override string ToString ()
-        {
-            int? targetLineNum = DebugLineNumberOfPath (pathOnChoice);
-            string targetString = pathOnChoice.ToString ();
+        public override string ToString() {
+            int? targetLineNum = DebugLineNumberOfPath(pathOnChoice);
+            string targetString = pathOnChoice.ToString();
 
             if (targetLineNum != null) {
-                targetString = " line " + targetLineNum + "("+targetString+")";
-            } 
+                targetString = " line " + targetLineNum + "(" + targetString + ")";
+            }
 
             return "Choice: -> " + targetString;
         }
-	}
+    }
 }
-

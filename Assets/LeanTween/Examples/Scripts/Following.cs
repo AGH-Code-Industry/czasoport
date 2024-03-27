@@ -24,8 +24,7 @@ public class Following : MonoBehaviour {
 
     private Vector3 velocityPos;
 
-    private void Start()
-    {
+    private void Start() {
         followArrow.gameObject.LeanDelayedCall(3f, moveArrow).setOnStart(moveArrow).setRepeat(-1);
 
         // Follow Local Y Position of Arrow
@@ -69,8 +68,7 @@ public class Following : MonoBehaviour {
     private Color fromColor;
     private Color velocityColor;
 
-    private void Update()
-    {
+    private void Update() {
         // Use the smooth methods to follow variables in which ever manner you wish!
         fromY = LeanSmooth.spring(fromY, followArrow.localPosition.y, ref velocityY, 1.1f);
         fromVec3 = LeanSmooth.spring(fromVec3, dude5Title.localPosition, ref velocityVec3, 1.1f);
@@ -78,8 +76,7 @@ public class Following : MonoBehaviour {
         Debug.Log("Smoothed y:" + fromY + " vec3:" + fromVec3 + " color:" + fromColor);
     }
 
-	private void moveArrow()
-    {
+    private void moveArrow() {
         LeanTween.moveLocalY(followArrow.gameObject, Random.Range(-100f, 100f), 0f);
 
         var randomCol = new Color(Random.value, Random.value, Random.value);

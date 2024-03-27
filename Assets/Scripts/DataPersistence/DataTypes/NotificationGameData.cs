@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace DataPersistence.DataTypes {
     [System.Serializable]
-    public class NotificationGameData{
+    public class NotificationGameData {
         public List<Notification> notificationHistory;
 
         public NotificationGameData() {
@@ -13,4 +13,3 @@ namespace DataPersistence.DataTypes {
         }
     }
 }
-

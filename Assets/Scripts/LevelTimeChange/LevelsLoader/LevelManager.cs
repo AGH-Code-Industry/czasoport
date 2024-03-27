@@ -125,36 +125,35 @@ namespace LevelTimeChange.LevelsLoader {
             }
         }
 
-		private void SetTimelinesPositions() {
-			var timelines = FindTimelineMaps();
-			if (timelines == null) {
-				_logger.LogError($"Failed to find timelines in level {currentLevel.sceneName}." +
+        private void SetTimelinesPositions() {
+            var timelines = FindTimelineMaps();
+            if (timelines == null) {
+                _logger.LogError($"Failed to find timelines in level {currentLevel.sceneName}." +
                                   "Please make sure there are Past, Present, Future game objects under Content game object.");
-			}
-			MoveTimelines(timelines, DeveloperSettings.Instance.tpcSettings.offsetFromPresentPlatform);
-		}
+            }
+            MoveTimelines(timelines, DeveloperSettings.Instance.tpcSettings.offsetFromPresentPlatform);
+        }
 
-		public TimelineMaps FindTimelineMaps() {
-			var past = levelContent.transform.Find("Past");
-			var present = levelContent.transform.Find("Present");
-			var future = levelContent.transform.Find("Future");
-			if (past == null || present == null || future == null) {
-				return null;
-			}
-			return new TimelineMaps(past, present, future);
-		}
+        public TimelineMaps FindTimelineMaps() {
+            var past = levelContent.transform.Find("Past");
+            var present = levelContent.transform.Find("Present");
+            var future = levelContent.transform.Find("Future");
+            if (past == null || present == null || future == null) {
+                return null;
+            }
+            return new TimelineMaps(past, present, future);
+        }
 
-		private void MoveTimelines(TimelineMaps timelines, Vector3 offset) {
-			timelines.past.position = timelines.present.position - offset;
-			timelines.future.position = timelines.present.position + offset;
-		}
+        private void MoveTimelines(TimelineMaps timelines, Vector3 offset) {
+            timelines.past.position = timelines.present.position - offset;
+            timelines.future.position = timelines.present.position + offset;
+        }
 
 
         /// <summary>
         /// Finds neighboring levels based on where portals are in the current level lead.
         /// </summary>
-        private void FindNeighbouringLevels()
-        {
+        private void FindNeighbouringLevels() {
             List<LevelInfoSO> neighourLevelsList = new List<LevelInfoSO>();
 
             foreach (LevelPortal teleport in _teleports) {
@@ -164,21 +163,21 @@ namespace LevelTimeChange.LevelsLoader {
             }
             neighborLevels = neighourLevelsList.ToList();
         }
-        
+
         public override string ToString() {
             return $"[LvlManager: {currentLevel}]" % Colorize.Cyan;
         }
     }
 
-	public class TimelineMaps {
-		public Transform past {get; set;}
-		public Transform present {get; set;}
-		public Transform future {get; set;}
+    public class TimelineMaps {
+        public Transform past { get; set; }
+        public Transform present { get; set; }
+        public Transform future { get; set; }
 
-		public TimelineMaps(Transform past, Transform present, Transform future) {
-			this.past = past;
-			this.present = present;
-			this.future = future;
-		}
-	}
+        public TimelineMaps(Transform past, Transform present, Transform future) {
+            this.past = past;
+            this.present = present;
+            this.future = future;
+        }
+    }
 }

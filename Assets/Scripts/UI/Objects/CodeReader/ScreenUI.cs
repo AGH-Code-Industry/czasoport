@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using CustomInput;
@@ -31,7 +31,7 @@ public class ScreenUI : MonoBehaviour {
     private bool EndCode() {
         return _code.Length == 4;
     }
-    
+
     public void WriteDigit(int digit) {
         if (EndCode()) {
             ShowError();
@@ -40,10 +40,9 @@ public class ScreenUI : MonoBehaviour {
         _code += digit;
         UpdateScreen();
     }
-    
+
     public void DeleteLastDigit() {
-        if (_code.Length == 0)
-        {
+        if (_code.Length == 0) {
             ShowError();
             return;
         }

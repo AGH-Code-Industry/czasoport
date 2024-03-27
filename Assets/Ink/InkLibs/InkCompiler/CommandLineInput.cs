@@ -1,7 +1,5 @@
-﻿namespace Ink
-{
-    public class CommandLineInput
-    {
+﻿namespace Ink {
+    public class CommandLineInput {
         public bool isHelp;
         public bool isExit;
         public int? choiceInput;

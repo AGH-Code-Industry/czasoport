@@ -50,7 +50,8 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
     private void Awake() {
         if (Instance == null) {
             Instance = this;
-        } else {
+        }
+        else {
             Destroy(this);
         }
     }
@@ -77,12 +78,12 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
             return;
         }
         _notificationsToDisplay.Enqueue(notification);
-        if (!_isNotificationDisplaying ) {
+        if (!_isNotificationDisplaying) {
             _isNotificationDisplaying = true;
             StartCoroutine(DisplayNotification());
         }
     }
-    
+
     IEnumerator DisplayNotification() {
         _notificationWindow.gameObject.SetActive(false);
         if (_notificationsToDisplay.Count == 0) {

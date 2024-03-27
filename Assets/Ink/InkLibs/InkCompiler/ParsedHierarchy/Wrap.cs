@@ -1,15 +1,11 @@
 ﻿
-namespace Ink.Parsed
-{
-    public class Wrap<T> : Parsed.Object where T : Runtime.Object
-    {
-        public Wrap (T objToWrap)
-        {
+namespace Ink.Parsed {
+    public class Wrap<T> : Parsed.Object where T : Runtime.Object {
+        public Wrap(T objToWrap) {
             _objToWrap = objToWrap;
         }
 
-        public override Runtime.Object GenerateRuntimeObject ()
-        {
+        public override Runtime.Object GenerateRuntimeObject() {
             return _objToWrap;
         }
 
@@ -18,11 +14,10 @@ namespace Ink.Parsed
 
     // Shorthand for writing Parsed.Wrap<Runtime.Glue> and Parsed.Wrap<Runtime.Tag>
     public class Glue : Wrap<Runtime.Glue> {
-        public Glue (Runtime.Glue glue) : base(glue) {}
+        public Glue(Runtime.Glue glue) : base(glue) { }
     }
     public class LegacyTag : Wrap<Runtime.Tag> {
-        public LegacyTag (Runtime.Tag tag) : base (tag) { }
+        public LegacyTag(Runtime.Tag tag) : base(tag) { }
     }
-    
-}
 
+}

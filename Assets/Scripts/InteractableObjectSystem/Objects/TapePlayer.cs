@@ -10,7 +10,7 @@ namespace InteractableObjectSystem.Objects {
     [RequireComponent(typeof(HighlightInteraction))]
     public class TapePlayer : InteractableObject {
         [SerializeField] private ItemSO _interactedWith;
-        [SerializeField] private List<PathWalking> _NPCPathWalkings = new ();
+        [SerializeField] private List<PathWalking> _NPCPathWalkings = new();
 
         public override void InteractionHand() {
             NotificationManager.Instance.RaiseNotification(definition.failedHandInterNotification);

@@ -1,14 +1,12 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace Ink.Runtime
-{
+namespace Ink.Runtime {
     /// <summary>
     /// Base class for all ink runtime content.
     /// </summary>
-    public /* TODO: abstract */ class Object
-	{
+    public /* TODO: abstract */ class Object {
         /// <summary>
         /// Runtime.Objects can be included in the main Story as a hierarchy.
         /// Usually parents are Container objects. (TODO: Always?)
@@ -16,7 +14,7 @@ namespace Ink.Runtime
         /// <value>The parent.</value>
 		public Runtime.Object parent { get; set; }
 
-        public Runtime.DebugMetadata debugMetadata { 
+        public Runtime.DebugMetadata debugMetadata {
             get {
                 if (_debugMetadata == null) {
                     if (parent) {
@@ -43,15 +41,14 @@ namespace Ink.Runtime
         // for serialisation purposes at least.
         DebugMetadata _debugMetadata;
 
-        public int? DebugLineNumberOfPath(Path path)
-        {
+        public int? DebugLineNumberOfPath(Path path) {
             if (path == null)
                 return null;
-            
+
             // Try to get a line number from debug metadata
             var root = this.rootContentContainer;
             if (root) {
-                Runtime.Object targetContent = root.ContentAtPath (path).obj;
+                Runtime.Object targetContent = root.ContentAtPath(path).obj;
                 if (targetContent) {
                     var dm = targetContent.debugMetadata;
                     if (dm != null) {
@@ -63,19 +60,18 @@ namespace Ink.Runtime
             return null;
         }
 
-		public Path path 
-		{ 
-			get 
-			{
+        public Path path {
+            get {
                 if (_path == null) {
 
                     if (parent == null) {
-                        _path = new Path ();
-                    } else {
+                        _path = new Path();
+                    }
+                    else {
                         // Maintain a Stack so that the order of the components
                         // is reversed when they're added to the Path.
                         // We're iterating up the hierarchy from the leaves/children to the root.
-                        var comps = new Stack<Path.Component> ();
+                        var comps = new Stack<Path.Component>();
 
                         var child = this;
                         Container container = child.parent as Container;
@@ -84,62 +80,63 @@ namespace Ink.Runtime
 
                             var namedChild = child as INamedContent;
                             if (namedChild != null && namedChild.hasValidName) {
-                                comps.Push (new Path.Component (namedChild.name));
-                            } else {
-                                comps.Push (new Path.Component (container.content.IndexOf(child)));
+                                comps.Push(new Path.Component(namedChild.name));
+                            }
+                            else {
+                                comps.Push(new Path.Component(container.content.IndexOf(child)));
                             }
 
                             child = container;
                             container = container.parent as Container;
                         }
 
-                        _path = new Path (comps);
+                        _path = new Path(comps);
                     }
 
                 }
-				
+
                 return _path;
-			}
-		}
+            }
+        }
         Path _path;
 
-        public SearchResult ResolvePath(Path path)
-        {
+        public SearchResult ResolvePath(Path path) {
             if (path.isRelative) {
 
                 Container nearestContainer = this as Container;
                 if (!nearestContainer) {
-                    Debug.Assert (this.parent != null, "Can't resolve relative path because we don't have a parent");
+                    Debug.Assert(this.parent != null, "Can't resolve relative path because we don't have a parent");
                     nearestContainer = this.parent as Container;
-                    Debug.Assert (nearestContainer != null, "Expected parent to be a container");
-                    Debug.Assert (path.GetComponent(0).isParent);
+                    Debug.Assert(nearestContainer != null, "Expected parent to be a container");
+                    Debug.Assert(path.GetComponent(0).isParent);
                     path = path.tail;
                 }
 
-                return nearestContainer.ContentAtPath (path);
-            } else {
-                return this.rootContentContainer.ContentAtPath (path);
+                return nearestContainer.ContentAtPath(path);
+            }
+            else {
+                return this.rootContentContainer.ContentAtPath(path);
             }
         }
 
-        public Path ConvertPathToRelative(Path globalPath)
-        {
+        public Path ConvertPathToRelative(Path globalPath) {
             // 1. Find last shared ancestor
             // 2. Drill up using ".." style (actually represented as "^")
             // 3. Re-build downward chain from common ancestor
 
             var ownPath = this.path;
 
-			int minPathLength = Math.Min (globalPath.length, ownPath.length);
+            int minPathLength = Math.Min(globalPath.length, ownPath.length);
             int lastSharedPathCompIndex = -1;
 
             for (int i = 0; i < minPathLength; ++i) {
                 var ownComp = ownPath.GetComponent(i);
                 var otherComp = globalPath.GetComponent(i);
 
-                if (ownComp.Equals (otherComp)) {
+                if (ownComp.Equals(otherComp)) {
                     lastSharedPathCompIndex = i;
-                } else {
+                }
+                else {
                     break;
                 }
             }
@@ -148,44 +145,42 @@ namespace Ink.Runtime
             if (lastSharedPathCompIndex == -1)
                 return globalPath;
 
-            int numUpwardsMoves = (ownPath.length-1) - lastSharedPathCompIndex;
+            int numUpwardsMoves = (ownPath.length - 1) - lastSharedPathCompIndex;
 
-            var newPathComps = new List<Path.Component> ();
+            var newPathComps = new List<Path.Component>();
 
-            for(int up=0; up<numUpwardsMoves; ++up)
-                newPathComps.Add (Path.Component.ToParent ());
+            for (int up = 0; up < numUpwardsMoves; ++up)
+                newPathComps.Add(Path.Component.ToParent());
 
-			for (int down = lastSharedPathCompIndex + 1; down < globalPath.length; ++down)
-				newPathComps.Add (globalPath.GetComponent(down));
+            for (int down = lastSharedPathCompIndex + 1; down < globalPath.length; ++down)
+                newPathComps.Add(globalPath.GetComponent(down));
 
-            var relativePath = new Path (newPathComps, relative:true);
+            var relativePath = new Path(newPathComps, relative: true);
             return relativePath;
         }
 
         // Find most compact representation for a path, whether relative or global
-        public string CompactPathString(Path otherPath)
-        {
+        public string CompactPathString(Path otherPath) {
             string globalPathStr = null;
             string relativePathStr = null;
             if (otherPath.isRelative) {
                 relativePathStr = otherPath.componentsString;
                 globalPathStr = this.path.PathByAppendingPath(otherPath).componentsString;
-            } else {
-                var relativePath = ConvertPathToRelative (otherPath);
+            }
+            else {
+                var relativePath = ConvertPathToRelative(otherPath);
                 relativePathStr = relativePath.componentsString;
                 globalPathStr = otherPath.componentsString;
             }
 
-            if (relativePathStr.Length < globalPathStr.Length) 
+            if (relativePathStr.Length < globalPathStr.Length)
                 return relativePathStr;
             else
                 return globalPathStr;
         }
 
-        public Container rootContentContainer
-        {
-            get 
-            {
+        public Container rootContentContainer {
+            get {
                 Runtime.Object ancestor = this;
                 while (ancestor.parent) {
                     ancestor = ancestor.parent;
@@ -194,57 +189,48 @@ namespace Ink.Runtime
             }
         }
 
-		public Object ()
-		{
-		}
-
-        public virtual Object Copy()
-        {
-            throw new System.NotImplementedException (GetType ().Name + " doesn't support copying");
+        public Object() {
         }
 
-        public void SetChild<T>(ref T obj, T value) where T : Runtime.Object
-        {
+        public virtual Object Copy() {
+            throw new System.NotImplementedException(GetType().Name + " doesn't support copying");
+        }
+
+        public void SetChild<T>(ref T obj, T value) where T : Runtime.Object {
             if (obj)
                 obj.parent = null;
 
             obj = value;
 
-            if( obj )
+            if (obj)
                 obj.parent = this;
         }
-            
+
         /// Allow implicit conversion to bool so you don't have to do:
         /// if( myObj != null ) ...
-        public static implicit operator bool (Object obj)
-        {
-            var isNull = object.ReferenceEquals (obj, null);
+        public static implicit operator bool(Object obj) {
+            var isNull = object.ReferenceEquals(obj, null);
             return !isNull;
         }
 
         /// Required for implicit bool comparison
-        public static bool operator ==(Object a, Object b)
-        {
-            return object.ReferenceEquals (a, b);
+        public static bool operator ==(Object a, Object b) {
+            return object.ReferenceEquals(a, b);
         }
 
         /// Required for implicit bool comparison
-        public static bool operator !=(Object a, Object b)
-        {
+        public static bool operator !=(Object a, Object b) {
             return !(a == b);
         }
 
         /// Required for implicit bool comparison
-        public override bool Equals (object obj)
-        {
-            return object.ReferenceEquals (obj, this);
+        public override bool Equals(object obj) {
+            return object.ReferenceEquals(obj, this);
         }
 
         /// Required for implicit bool comparison
-        public override int GetHashCode ()
-        {
-            return base.GetHashCode ();
+        public override int GetHashCode() {
+            return base.GetHashCode();
         }
-	}
+    }
 }
-

@@ -11,7 +11,7 @@ namespace UI {
     /// Script for pause menu in game
     /// </summary>
     public class PauseUI : MonoBehaviour {
-        
+
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.PAUSE];
 
         [SerializeField] private GameObject menuPanel;
@@ -23,14 +23,14 @@ namespace UI {
 
         private void Awake() {
             CInput.InputActions.Game.TogglePause.performed += Toggle_PauseOnPerformed;
-            
+
             resumeButton.onClick.AddListener(ResumeGame);
             saveButton.onClick.AddListener(Save);
             quitButton.onClick.AddListener(UnityEngine.Application.Quit);
-            
+
             Hide();
         }
-        
+
         private void Toggle_PauseOnPerformed(InputAction.CallbackContext obj) {
             if (_gamePaused)
                 ResumeGame();
@@ -63,7 +63,7 @@ namespace UI {
         private void Save() {
             DataPersistenceManager.Instance.SaveGame();
         }
-        
+
         private void Show() {
             menuPanel.SetActive(true);
         }
