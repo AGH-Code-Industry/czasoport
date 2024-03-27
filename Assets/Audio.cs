@@ -1,10 +1,9 @@
-using System;
+﻿using System;
 using InventorySystem;
 using InventorySystem.EventArguments;
 using UnityEngine;
 
-public class Audio : MonoBehaviour
-{
+public class Audio : MonoBehaviour {
     public AudioClip itemPickedSound;
     public AudioClip itemRemovedSound;
 

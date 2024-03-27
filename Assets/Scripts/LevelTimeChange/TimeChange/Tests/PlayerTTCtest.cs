@@ -1,10 +1,8 @@
-using CustomInput;
+﻿using CustomInput;
 using UnityEngine;
 
-namespace LevelTimeChange.TimeChange.Tests
-{
-    public class PlayerTTCtest : MonoBehaviour
-    {
+namespace LevelTimeChange.TimeChange.Tests {
+    public class PlayerTTCtest : MonoBehaviour {
         private Transform _transform;
         private Vector2 _movement;
 

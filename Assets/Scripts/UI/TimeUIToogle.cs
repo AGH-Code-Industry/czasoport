@@ -1,7 +1,7 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace  UI {
+namespace UI {
     public class TimeUIToogle : MonoBehaviour {
         [SerializeField] private Sprite active;
         [SerializeField] private Sprite disactive;

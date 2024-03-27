@@ -1,4 +1,4 @@
-
+﻿
 namespace Ink {
     public struct Stats {
 
@@ -17,14 +17,15 @@ namespace Ink {
 
             // Count all the words across all strings
             stats.words = 0;
-            foreach(var text in allText) {
+            foreach (var text in allText) {
 
                 var wordsInThisStr = 0;
                 var wasWhiteSpace = true;
-                foreach(var c in text.text) {
-                    if( c == ' ' || c == '\t' || c == '\n' || c == '\r' ) {
+                foreach (var c in text.text) {
+                    if (c == ' ' || c == '\t' || c == '\n' || c == '\r') {
                         wasWhiteSpace = true;
-                    } else if( wasWhiteSpace ) {
+                    }
+                    else if (wasWhiteSpace) {
                         wordsInThisStr++;
                         wasWhiteSpace = false;
                     }
@@ -37,7 +38,7 @@ namespace Ink {
             stats.knots = knots.Count;
 
             stats.functions = 0;
-            foreach(var knot in knots)
+            foreach (var knot in knots)
                 if (knot.isFunction) stats.functions++;
 
             var stitches = story.FindAll<Ink.Parsed.Stitch>();

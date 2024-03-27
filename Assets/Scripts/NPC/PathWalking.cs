@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
 using UnityEngine;
@@ -7,7 +7,7 @@ namespace NPC {
     public class PathWalking : MonoBehaviour {
         private Transform _transform;
         private Animator _animator;
-        
+
         [SerializeField] private bool walkOnStart = true;
         [SerializeField] private float walkSpeed = 1f;
         private bool _canWalk;
@@ -20,7 +20,7 @@ namespace NPC {
         private float _walkDistance;
 
         private void Start() {
-            
+
             if (marchPoints.Count <= 1) {
                 CDebug.LogError("Path contains 1 point or less");
                 return;
@@ -29,19 +29,20 @@ namespace NPC {
             _transform = transform;
             if (walkOnStart) StartWalk();
             else StopWalk();
-            
+
         }
 
         private void Update() {
             if (!_canWalk) {
-                if (Random.Range(0f,1f) < 0.5f) _animator.SetTrigger("Wink");
+                if (Random.Range(0f, 1f) < 0.5f) _animator.SetTrigger("Wink");
                 return;
             }
             //Walking
             if (_walkProgress < 1f) {
-                _walkProgress += (Time.deltaTime/_walkDistance) * walkSpeed;
+                _walkProgress += (Time.deltaTime / _walkDistance) * walkSpeed;
                 _transform.position = Vector3.Lerp(marchPoints[_previousTarget].position, marchPoints[_actualTarget].position, _walkProgress);
-            } else {
+            }
+            else {
                 StartCoroutine(Rest(restTime));
             }
         }
@@ -52,7 +53,7 @@ namespace NPC {
         public void StopWalk() {
             _canWalk = false;
             _animator.SetFloat("Speed", 0);
-            _animator.SetFloat("Horizontal",0);
+            _animator.SetFloat("Horizontal", 0);
             _animator.SetFloat("Vertical", 0);
         }
 
@@ -61,7 +62,7 @@ namespace NPC {
         /// </summary>
         public void StartWalk() {
             _canWalk = true;
-            _walkDistance = Vector2.Distance(marchPoints[_previousTarget].position,marchPoints[_actualTarget].position);
+            _walkDistance = Vector2.Distance(marchPoints[_previousTarget].position, marchPoints[_actualTarget].position);
             _animator.SetFloat("Speed", walkSpeed);
             _animator.SetFloat("Horizontal", marchPoints[_actualTarget].position.x - marchPoints[_previousTarget].position.x);
             _animator.SetFloat("Vertical", marchPoints[_actualTarget].position.y - marchPoints[_previousTarget].position.y);
@@ -73,10 +74,10 @@ namespace NPC {
             _walkProgress = 0f;
             _previousTarget = _actualTarget;
             if (loop) {
-                _actualTarget = (_actualTarget+1) % marchPoints.Count;
+                _actualTarget = (_actualTarget + 1) % marchPoints.Count;
             }
             else {
-                _actualTarget = (_actualTarget+1);
+                _actualTarget = (_actualTarget + 1);
                 if (_actualTarget >= marchPoints.Count) {
                     StopWalk();
                     yield break;

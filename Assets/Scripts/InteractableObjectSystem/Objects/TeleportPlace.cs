@@ -1,4 +1,4 @@
-using CoinPackage.Debugging;
+﻿using CoinPackage.Debugging;
 using UnityEngine;
 
 public class TeleportPlace : MonoBehaviour {
@@ -15,8 +15,8 @@ public class TeleportPlace : MonoBehaviour {
             col.gameObject.transform.position = destinationPlace.StartTeleportation();
         }
     }
-    
-    private void OnTriggerExit2D(Collider2D col) { 
+
+    private void OnTriggerExit2D(Collider2D col) {
         if (col.CompareTag("Player")) {
             active = true;
         }

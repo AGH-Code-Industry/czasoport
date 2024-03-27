@@ -9,10 +9,10 @@ namespace CustomInput.Locks {
     public class InventoryLock {
         private readonly List<string> _keys;
         private readonly string _tag;
-        
+
         private InputActions.InventoryActions _input;
         private ushort _keyID;
-        
+
         public InventoryLock(InputActions.InventoryActions input) {
             _input = input;
             _tag = _input.ToString();
