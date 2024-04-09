@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using InventorySystem;
 using InventorySystem.EventArguments;
 using UnityEngine;

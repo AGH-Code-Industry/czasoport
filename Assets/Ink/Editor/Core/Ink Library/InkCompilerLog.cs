@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 using Debug = UnityEngine.Debug;
 
 namespace Ink.UnityIntegration {

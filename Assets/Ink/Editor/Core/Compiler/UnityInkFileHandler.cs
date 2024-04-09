@@ -1,4 +1,4 @@
-﻿using Ink;
+using Ink;
 using System.IO;
 
 // Utility class for the ink compiler, used to work out how to find include files and their contents

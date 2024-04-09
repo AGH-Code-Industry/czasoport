@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace Ink.Parsed {
     // Used by the FlowBase when constructing the weave flow from

@@ -1,4 +1,4 @@
-﻿namespace Ink.Runtime {
+namespace Ink.Runtime {
     public class VariableReference : Runtime.Object {
         // Normal named variable
         public string name { get; set; }

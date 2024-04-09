@@ -1,4 +1,4 @@
-﻿using UnityEngine.InputSystem;
+using UnityEngine.InputSystem;
 
 namespace CustomInput.Interactions {
     public class CustomHold : IInputInteraction {

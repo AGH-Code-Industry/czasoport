@@ -1,4 +1,4 @@
-﻿using Items;
+using Items;
 using JetBrains.Annotations;
 
 namespace Dialogues.ChoiceProcessing {

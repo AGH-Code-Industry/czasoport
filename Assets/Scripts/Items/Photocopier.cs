@@ -1,4 +1,4 @@
-﻿using InteractableObjectSystem;
+using InteractableObjectSystem;
 using InventorySystem;
 using Items;
 using System.Collections;

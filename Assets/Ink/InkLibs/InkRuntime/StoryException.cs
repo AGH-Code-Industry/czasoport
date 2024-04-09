@@ -1,4 +1,4 @@
-﻿namespace Ink.Runtime {
+namespace Ink.Runtime {
     /// <summary>
     /// Exception that represents an error when running a Story at runtime.
     /// An exception being thrown of this type is typically when there's

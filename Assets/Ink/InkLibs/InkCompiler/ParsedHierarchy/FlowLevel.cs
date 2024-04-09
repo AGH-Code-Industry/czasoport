@@ -1,4 +1,4 @@
-﻿namespace Ink.Parsed {
+namespace Ink.Parsed {
     public enum FlowLevel {
         Story,
         Knot,

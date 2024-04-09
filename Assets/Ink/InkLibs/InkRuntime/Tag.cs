@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Ink.Runtime {
     // New version of tags is dynamic - it constructs the tags

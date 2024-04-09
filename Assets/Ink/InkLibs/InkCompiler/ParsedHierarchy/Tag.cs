@@ -1,4 +1,4 @@
-﻿
+
 namespace Ink.Parsed {
     public class Tag : Parsed.Object {
 

@@ -1,4 +1,4 @@
-﻿using InventorySystem;
+using InventorySystem;
 using InventorySystem.EventArguments;
 using LevelTimeChange.TimeChange;
 using UnityEngine;

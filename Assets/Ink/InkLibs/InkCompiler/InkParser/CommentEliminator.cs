@@ -1,4 +1,4 @@
-﻿
+
 namespace Ink {
     /// <summary>
     /// Pre-pass before main ink parser runs. It actually performs two main tasks:

@@ -1,4 +1,4 @@
-﻿using Notifications;
+using Notifications;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

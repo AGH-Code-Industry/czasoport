@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using Interactions.Interfaces;
 using CoinPackage.Debugging;

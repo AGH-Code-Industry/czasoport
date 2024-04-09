@@ -1,4 +1,4 @@
-﻿using CustomInput.Exceptions;
+using CustomInput.Exceptions;
 using CustomInput.Locks;
 using UnityEngine;
 

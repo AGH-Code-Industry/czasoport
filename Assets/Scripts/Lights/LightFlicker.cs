@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 public class LightFlicker : MonoBehaviour {

@@ -1,4 +1,4 @@
-﻿using CoinPackage.Debugging;
+using CoinPackage.Debugging;
 using UnityEngine;
 
 public class TeleportPlace : MonoBehaviour {

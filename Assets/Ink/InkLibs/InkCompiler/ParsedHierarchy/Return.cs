@@ -1,4 +1,4 @@
-﻿namespace Ink.Parsed {
+namespace Ink.Parsed {
     public class Return : Parsed.Object {
         public Expression returnedExpression { get; protected set; }
 

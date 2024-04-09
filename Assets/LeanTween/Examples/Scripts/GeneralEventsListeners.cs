@@ -1,4 +1,4 @@
-﻿#if !UNITY_FLASH
+#if !UNITY_FLASH
 using UnityEngine;
 using System.Collections;
 using DentedPixel;

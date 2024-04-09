@@ -1,4 +1,4 @@
-﻿using Items;
+using Items;
 
 namespace Interactions.Interfaces {
     public interface IItemInteractable {

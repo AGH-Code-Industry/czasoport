@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 
 namespace Ink.Parsed {
     public class Choice : Parsed.Object, IWeavePoint, INamedContent {

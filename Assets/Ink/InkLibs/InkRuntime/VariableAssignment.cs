@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 
 namespace Ink.Runtime {
     // The value to be assigned is popped off the evaluation stack, so no need to keep it here
