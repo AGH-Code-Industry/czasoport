@@ -10,13 +10,13 @@ using UnityEngine.Serialization;
 namespace InteractableObjectSystem.Objects {
     [RequireComponent(typeof(BoxCollider2D))]
     public class Fireplace : InteractableObject {
-        
+
         [SerializeField] private List<GameObject> contains;
         [SerializeField] private List<ItemSO> interactedWith;
-        
+
         public override void InteractionHand() {
             if (interactedWith.Count == 0) {
-                NotificationManager.Instance.RaiseNotification(new Notification(definition.successfulHandInterNotification.message,definition.successfulHandInterNotification.displayTime));
+                NotificationManager.Instance.RaiseNotification(new Notification(definition.successfulHandInterNotification.message, definition.successfulHandInterNotification.displayTime));
                 Give();
             }
             else {
@@ -24,16 +24,17 @@ namespace InteractableObjectSystem.Objects {
                     definition.failedHandInterNotification.message,
                     definition.failedHandInterNotification.displayTime));
             }
-            
+
         }
 
         public override bool InteractionItem(Item item) {
             if (interactedWith.Contains(item.ItemSO)) {
-                NotificationManager.Instance.RaiseNotification(new Notification(definition.successfulItemInterNotification.message,definition.successfulItemInterNotification.displayTime));
+                NotificationManager.Instance.RaiseNotification(new Notification(definition.successfulItemInterNotification.message, definition.successfulItemInterNotification.displayTime));
                 Inventory.Instance.RemoveItem(out Item i);
                 Give();
                 return true;
-            } else {
+            }
+            else {
                 NotificationManager.Instance.RaiseNotification(new Notification(definition.failedItemInterNotification.message, definition.failedItemInterNotification.displayTime));
             }
             return false;
@@ -41,8 +42,8 @@ namespace InteractableObjectSystem.Objects {
 
         private void Give() {
             foreach (GameObject p in contains) {
-				GameObject gO = Instantiate(p);
-                Item i = gO.GetComponent<Item>(); 
+                GameObject gO = Instantiate(p);
+                Item i = gO.GetComponent<Item>();
                 Inventory.Instance.InsertItem(i);
             }
         }

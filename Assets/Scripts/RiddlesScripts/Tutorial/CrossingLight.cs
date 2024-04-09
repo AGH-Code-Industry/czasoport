@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
@@ -24,8 +24,8 @@ public class CrossingLight : MonoBehaviour {
     private bool _playerInEndArea {
         get { return areaEnd.IsInArea; }
     }
-    [SerializeField]private bool _blocked = false;
-    
+    [SerializeField] private bool _blocked = false;
+
     private Animator _blackScreenAnimator;
     private float _blackScreenAnimatorTimer;
 
@@ -53,9 +53,9 @@ public class CrossingLight : MonoBehaviour {
         _blocked = true;
         returnPosition = areaEnd.transform;
         CancelInvoke(nameof(ToggleLightsState));
-        if (_crossingState == CrossingState.Opened)CloseCrossing();
+        if (_crossingState == CrossingState.Opened) CloseCrossing();
     }
-    
+
     private void ToggleLightsState() {
         switch (_crossingState) {
             case CrossingState.Opened:
@@ -92,7 +92,7 @@ public class CrossingLight : MonoBehaviour {
         }
         _audioSource.Play();
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other) {
         if (_crossingState == CrossingState.Opened) return;
         if (other.CompareTag("NPC")) {
@@ -108,12 +108,12 @@ public class CrossingLight : MonoBehaviour {
             if (pw != null) pathWalkings.Remove(pw);
         }
     }
-    
+
     private IEnumerator SetPlayerToStart() {
         _blackScreenAnimator.SetTrigger("Start");
-        yield return new WaitForSeconds(_blackScreenAnimatorTimer/2);
+        yield return new WaitForSeconds(_blackScreenAnimatorTimer / 2);
         Player.Instance.transform.position = returnPosition.position;
-        yield return new WaitForSeconds(_blackScreenAnimatorTimer/2);
+        yield return new WaitForSeconds(_blackScreenAnimatorTimer / 2);
         _blackScreenAnimator.SetTrigger("End");
     }
 }

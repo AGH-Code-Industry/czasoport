@@ -5,8 +5,7 @@ namespace LevelTimeChange.TimeChange {
     /// <summary>
     /// Provides checking collision for time change mechanic.
     /// </summary>
-    public class CheckCollider : MonoBehaviour
-    {
+    public class CheckCollider : MonoBehaviour {
         private BoxCollider2D _box;
         private bool _isTouching;
 

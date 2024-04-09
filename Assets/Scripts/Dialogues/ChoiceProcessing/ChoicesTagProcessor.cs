@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
 using Items;
@@ -32,7 +32,7 @@ namespace Dialogues.ChoiceProcessing {
 
         private static Dictionary<string, string> ProcessTags(string[] tagsString) {
             var dictionary = new Dictionary<string, string>();
-            
+
             foreach (var tagString in tagsString) {
                 string[] keyValue = tagString.Split(':', StringSplitOptions.RemoveEmptyEntries);
 

@@ -1,4 +1,4 @@
-﻿using CustomInput.Exceptions;
+using CustomInput.Exceptions;
 using CustomInput.Locks;
 using UnityEngine;
 
@@ -19,24 +19,24 @@ namespace CustomInput {
         /// Vector2 desired player direction/
         /// </summary>
         public static Vector2 NavigationAxis => InputActions.Movement.Navigation.ReadValue<Vector2>();
-        
+
         /// <summary>
         /// Normal mouse position from InputActions. If you want point in game over which mouse is hovering,
         /// use `MouseWorldPosition`.
         /// </summary>
         public static Vector2 MousePosition => InputActions.Mouse.MousePosition.ReadValue<Vector2>();
-        
+
         /// <summary>
         /// Mouse position casted to world coordinates.
         /// </summary>
         public static Vector2 MouseWorldPosition => GetMouseWorldPosition();
-        
+
         /// <summary>
         /// Whether player is running, and how fast he is running (effective on gamepads).
         /// </summary>
         public static float Run => InputActions.Movement.Run.ReadValue<float>();
 
-        
+
         public static readonly MovementLock MovementLock;
         public static readonly MouseLock MouseLock;
         public static readonly InventoryLock InventoryLock;
@@ -65,4 +65,3 @@ namespace CustomInput {
         }
     }
 }
-

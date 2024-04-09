@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Application.GlobalExceptions {
     public class SingletonOverrideException : Exception {

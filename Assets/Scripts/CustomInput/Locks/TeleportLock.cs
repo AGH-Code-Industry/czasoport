@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
 
@@ -9,10 +9,10 @@ namespace CustomInput.Locks {
     public class TeleportLock {
         private readonly List<string> _keys;
         private readonly string _tag;
-        
+
         private InputActions.TeleportActions _input;
         private ushort _keyID;
-        
+
         public TeleportLock(InputActions.TeleportActions input) {
             _input = input;
             _tag = _input.ToString();

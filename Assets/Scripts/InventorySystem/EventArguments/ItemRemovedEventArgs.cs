@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Items;
 
 namespace InventorySystem.EventArguments {

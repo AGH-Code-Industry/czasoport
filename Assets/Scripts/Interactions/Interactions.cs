@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Application;
@@ -29,7 +29,7 @@ namespace Interactions {
         // Object that will be the subject of the interaction if player used 'FocusChange' - specified object
         // he want to be focused on
         [CanBeNull] private GameObject _focusedObject = null;
-        
+
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INTERACTIONS];
         private InteractionsSettingsSO _settings;
         private float _lastInteractablesUpdate = 0;
@@ -70,7 +70,7 @@ namespace Interactions {
                 return;
             }
             _lastInteractablesUpdate = Time.time;
-            
+
             List<Collider2D> result = new List<Collider2D>();
             Physics2D.OverlapCircle(transform.position,
                 _settings.defaultInteractionRadius,
@@ -82,7 +82,7 @@ namespace Interactions {
                 result);
             var oldInteractables = new HashSet<GameObject>(_interactableObjects);
             var newInteractables = new HashSet<GameObject>(result.Select(x => x.gameObject));
-            
+
             oldInteractables.ExceptWith(newInteractables);
             foreach (var oldInteractable in oldInteractables) {
                 if (!oldInteractable) continue;
@@ -108,14 +108,14 @@ namespace Interactions {
         }
 
         private void DrawLinesToInteractablesGizmos() {
-            foreach(var interactable in _interactableObjects) {
+            foreach (var interactable in _interactableObjects) {
                 if (!interactable) continue;
                 Gizmos.DrawLine(transform.position, interactable.transform.position);
             }
         }
 
         private void DrawInteractablesAreaGizmos() {
-            Gizmos.DrawWireSphere(transform.position, _settings.defaultInteractionRadius);            
+            Gizmos.DrawWireSphere(transform.position, _settings.defaultInteractionRadius);
         }
 
         /// <summary>
@@ -129,14 +129,14 @@ namespace Interactions {
             }
 
             if (_focusedObject is null) {
-				GameObject g = GetNearestInteractable();
-				if (_selectedObject != g) { 
-					if (_selectedObject is not null)_selectedObject.GetComponent<IHighlightable>()?.DisableFocusedHighlight();
-					_selectedObject = g;
-				}
+                GameObject g = GetNearestInteractable();
+                if (_selectedObject != g) {
+                    if (_selectedObject is not null) _selectedObject.GetComponent<IHighlightable>()?.DisableFocusedHighlight();
+                    _selectedObject = g;
+                }
             }
             else {
-				if (_selectedObject is not null) _selectedObject.GetComponent<IHighlightable>()?.DisableFocusedHighlight();
+                if (_selectedObject is not null) _selectedObject.GetComponent<IHighlightable>()?.DisableFocusedHighlight();
                 _selectedObject = _focusedObject;
             }
 
@@ -198,7 +198,7 @@ namespace Interactions {
         private void TryToInstertItem() {
             _selectedObject.GetComponent<Item>()?.InteractionHand();
         }
-        
+
         private void OnLongInteractionPerformed(InputAction.CallbackContext ctx) {
             if (_selectedObject) {
                 if (Inventory.Instance.GetSelectedItem(out var item)) {

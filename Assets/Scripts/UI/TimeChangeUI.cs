@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using LevelTimeChange;
@@ -52,15 +52,15 @@ namespace UI {
             CheckTeleportAbilities();
         }
 
-        private void ToggleActualTime(TimeUIToogle timeImage, TimeUIToogle timeStroke,  bool actual) {
+        private void ToggleActualTime(TimeUIToogle timeImage, TimeUIToogle timeStroke, bool actual) {
             timeImage.SetStroke(actual);
             timeStroke.SetStroke(actual);
         }
 
-        private void CheckTeleportAbility(TimeUIToogle timeImage, TimeUIToogle timeStroke,  TimeLine time) {
+        private void CheckTeleportAbility(TimeUIToogle timeImage, TimeUIToogle timeStroke, TimeLine time) {
             if (time == TimeChanger.Instance.actualTime)
                 return;
-            
+
             ToggleBlockedTime(timeImage, timeStroke, !TimeChanger.Instance.CanChangeTime(time));
         }
 
@@ -71,7 +71,8 @@ namespace UI {
         public void ChangeInvBackground(TimeLine UnlockedTime) {
             if (UnlockedTime == TimeLine.Future) {
                 TimeChangerBackground.sprite = TwoOrbsBackground;
-            } else if (UnlockedTime == TimeLine.Past) {
+            }
+            else if (UnlockedTime == TimeLine.Past) {
                 Camouflage.SetActive(false);
                 TimeChangerBackground.sprite = ThreeOrbsBackground;
             }

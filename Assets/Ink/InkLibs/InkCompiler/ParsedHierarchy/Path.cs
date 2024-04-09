@@ -1,17 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Ink.Parsed
-{
-	public class Path
-	{
+namespace Ink.Parsed {
+    public class Path {
         public FlowLevel baseTargetLevel {
             get {
                 if (baseLevelIsAmbiguous)
                     return FlowLevel.Story;
                 else
-                    return (FlowLevel) _baseTargetLevel;
+                    return (FlowLevel)_baseTargetLevel;
             }
         }
 
@@ -26,7 +24,7 @@ namespace Ink.Parsed
                 if (components == null || components.Count == 0)
                     return null;
 
-                return components [0].name;
+                return components[0].name;
             }
         }
 
@@ -38,7 +36,7 @@ namespace Ink.Parsed
 
         public string dotSeparatedComponents {
             get {
-                if( _dotSeparatedComponents == null ) {
+                if (_dotSeparatedComponents == null) {
                     _dotSeparatedComponents = string.Join(".", components.Select(c => c?.name));
                 }
 
@@ -49,27 +47,23 @@ namespace Ink.Parsed
 
         public List<Identifier> components { get; }
 
-        public Path(FlowLevel baseFlowLevel, List<Identifier> components)
-        {
+        public Path(FlowLevel baseFlowLevel, List<Identifier> components) {
             _baseTargetLevel = baseFlowLevel;
             this.components = components;
         }
 
-        public Path(List<Identifier> components)
-        {
+        public Path(List<Identifier> components) {
             _baseTargetLevel = null;
             this.components = components;
         }
 
-        public Path(Identifier ambiguousName)
-        {
+        public Path(Identifier ambiguousName) {
             _baseTargetLevel = null;
-            components = new List<Identifier> ();
-            components.Add (ambiguousName);
+            components = new List<Identifier>();
+            components.Add(ambiguousName);
         }
 
-		public override string ToString ()
-		{
+        public override string ToString() {
             if (components == null || components.Count == 0) {
                 if (baseTargetLevel == FlowLevel.WeavePoint)
                     return "-> <next gather point>";
@@ -78,17 +72,16 @@ namespace Ink.Parsed
             }
 
             return "-> " + dotSeparatedComponents;
-		}
+        }
 
-        public Parsed.Object ResolveFromContext(Parsed.Object context)
-        {
+        public Parsed.Object ResolveFromContext(Parsed.Object context) {
             if (components == null || components.Count == 0) {
                 return null;
             }
 
             // Find base target of path from current context. e.g.
             //   ==> BASE.sub.sub
-            var baseTargetObject = ResolveBaseTarget (context);
+            var baseTargetObject = ResolveBaseTarget(context);
             if (baseTargetObject == null) {
                 return null;
 
@@ -97,7 +90,7 @@ namespace Ink.Parsed
             // Given base of path, resolve final target by working deeper into hierarchy
             //  e.g. ==> base.mid.FINAL
             if (components.Count > 1) {
-                return ResolveTailComponents (baseTargetObject);
+                return ResolveTailComponents(baseTargetObject);
             }
 
             return baseTargetObject;
@@ -105,8 +98,7 @@ namespace Ink.Parsed
 
         // Find the root object from the base, i.e. root from:
         //    root.sub1.sub2
-        Parsed.Object ResolveBaseTarget(Parsed.Object originalContext)
-        {
+        Parsed.Object ResolveBaseTarget(Parsed.Object originalContext) {
             var firstComp = firstComponent;
 
             // Work up the ancestry to find the node that has the named object
@@ -123,7 +115,7 @@ namespace Ink.Parsed
                 // (that latter example is quite loose, but we allow it)
                 bool deepSearch = ancestorContext == originalContext;
 
-                var foundBase = TryGetChildFromContext (ancestorContext, firstComp, null, deepSearch);
+                var foundBase = TryGetChildFromContext(ancestorContext, firstComp, null, deepSearch);
                 if (foundBase != null)
                     return foundBase;
 
@@ -135,11 +127,10 @@ namespace Ink.Parsed
 
         // Find the final child from path given root, i.e.:
         //   root.sub.finalChild
-        Parsed.Object ResolveTailComponents(Parsed.Object rootTarget)
-        {
+        Parsed.Object ResolveTailComponents(Parsed.Object rootTarget) {
             Parsed.Object foundComponent = rootTarget;
             for (int i = 1; i < components.Count; ++i) {
-                var compName = components [i].name;
+                var compName = components[i].name;
 
                 FlowLevel minimumExpectedLevel;
                 var foundFlow = foundComponent as FlowBase;
@@ -149,7 +140,7 @@ namespace Ink.Parsed
                     minimumExpectedLevel = FlowLevel.WeavePoint;
 
 
-                foundComponent = TryGetChildFromContext (foundComponent, compName, minimumExpectedLevel);
+                foundComponent = TryGetChildFromContext(foundComponent, compName, minimumExpectedLevel);
                 if (foundComponent == null)
                     break;
             }
@@ -161,15 +152,14 @@ namespace Ink.Parsed
         // Can either be a named knot/stitch (a FlowBase) or a weave point within a Weave (Choice or Gather)
         // This function also ignores any other object types that are neither FlowBase nor Weave.
         // Called from both ResolveBase (force deep) and ResolveTail for the individual components.
-        Parsed.Object TryGetChildFromContext(Parsed.Object context, string childName, FlowLevel? minimumLevel, bool forceDeepSearch = false)
-        {
+        Parsed.Object TryGetChildFromContext(Parsed.Object context, string childName, FlowLevel? minimumLevel, bool forceDeepSearch = false) {
             // null childLevel means that we don't know where to find it
             bool ambiguousChildLevel = minimumLevel == null;
 
             // Search for WeavePoint within Weave
             var weaveContext = context as Weave;
-            if ( weaveContext != null && (ambiguousChildLevel || minimumLevel == FlowLevel.WeavePoint)) {
-                return (Parsed.Object) weaveContext.WeavePointNamed (childName);
+            if (weaveContext != null && (ambiguousChildLevel || minimumLevel == FlowLevel.WeavePoint)) {
+                return (Parsed.Object)weaveContext.WeavePointNamed(childName);
             }
 
             // Search for content within Flow (either a sub-Flow or a WeavePoint)
@@ -180,13 +170,12 @@ namespace Ink.Parsed
                 // named weave points (choices and gathers) can be found within any stitch
                 // Otherwise, we just search within the immediate object.
                 var shouldDeepSearch = forceDeepSearch || flowContext.flowLevel == FlowLevel.Knot;
-                return flowContext.ContentWithNameAtLevel (childName, minimumLevel, shouldDeepSearch);
+                return flowContext.ContentWithNameAtLevel(childName, minimumLevel, shouldDeepSearch);
             }
 
             return null;
         }
 
         FlowLevel? _baseTargetLevel;
-	}
+    }
 }
-

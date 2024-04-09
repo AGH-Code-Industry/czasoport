@@ -17,10 +17,10 @@ namespace Application {
             UTILS,
             DIALOGUES
         }
-        
+
         static Loggers() {
             LoggersList = new Dictionary<LoggerType, CLogger>();
-            
+
             // Logger for platform (level) changing system
             LoggersList.Add(
                 LoggerType.DATA_PERSISTENCE,
@@ -28,7 +28,7 @@ namespace Application {
                     LogEnabled = true
                 }
             );
-            
+
             // Logger for platform (level) changing system
             LoggersList.Add(
                 LoggerType.LEVEL_SYSTEM,
@@ -36,7 +36,7 @@ namespace Application {
                     LogEnabled = true
                 }
                 );
-            
+
             // Logger for platform (level) changing system
             LoggersList.Add(
                 LoggerType.PORTALS,
@@ -44,7 +44,7 @@ namespace Application {
                     LogEnabled = true
                 }
             );
-            
+
             // Logger for Inventory system
             LoggersList.Add(
                 LoggerType.INVENTORY,
@@ -52,7 +52,7 @@ namespace Application {
                     LogEnabled = true
                 }
             );
-            
+
             // Logger for Interactions system
             LoggersList.Add(
                 LoggerType.INTERACTIONS,
@@ -60,7 +60,7 @@ namespace Application {
                     LogEnabled = true
                 }
             );
-            
+
             // Logger for interactable objects
             LoggersList.Add(
                 LoggerType.INTERACTABLE_OBJECTS,
@@ -68,7 +68,7 @@ namespace Application {
                     LogEnabled = true
                 }
             );
-            
+
             // Logger for item objects
             LoggersList.Add(
                 LoggerType.ITEMS,
@@ -76,7 +76,7 @@ namespace Application {
                     LogEnabled = true
                 }
             );
-            
+
             // Logger for pause menu
             LoggersList.Add(
                 LoggerType.PAUSE,
@@ -84,7 +84,7 @@ namespace Application {
                     LogEnabled = true
                 }
             );
-            
+
             // Logger for utilities
             LoggersList.Add(
                 LoggerType.UTILS,
@@ -92,7 +92,7 @@ namespace Application {
                     LogEnabled = true
                 }
             );
-            
+
             // Logger for dialogues
             LoggersList.Add(
                 LoggerType.DIALOGUES,

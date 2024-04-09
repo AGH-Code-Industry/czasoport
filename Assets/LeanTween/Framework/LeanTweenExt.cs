@@ -1,10 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public static class LeanTweenExt
-{
+public static class LeanTweenExt {
     //LeanTween.addListener
     //LeanTween.alpha
     public static LTDescr LeanAlpha(this GameObject gameObject, float to, float time) { return LeanTween.alpha(gameObject, to, time); }
@@ -157,7 +156,7 @@ public static class LeanTweenExt
     public static LTDescr LeanValue(this GameObject gameObject, Action<Vector2> callOnUpdate, Vector2 from, Vector2 to, float time) { return LeanTween.value(gameObject, callOnUpdate, from, to, time); }
     public static LTDescr LeanValue(this GameObject gameObject, Action<Vector3> callOnUpdate, Vector3 from, Vector3 to, float time) { return LeanTween.value(gameObject, callOnUpdate, from, to, time); }
 
-    public static void LeanSetPosX(this Transform transform, float val){
+    public static void LeanSetPosX(this Transform transform, float val) {
         transform.position = new Vector3(val, transform.position.y, transform.position.z);
     }
     public static void LeanSetPosY(this Transform transform, float val) {
@@ -167,21 +166,17 @@ public static class LeanTweenExt
         transform.position = new Vector3(transform.position.x, transform.position.y, val);
     }
 
-    public static void LeanSetLocalPosX(this Transform transform, float val)
-    {
+    public static void LeanSetLocalPosX(this Transform transform, float val) {
         transform.localPosition = new Vector3(val, transform.localPosition.y, transform.localPosition.z);
     }
-    public static void LeanSetLocalPosY(this Transform transform, float val)
-    {
+    public static void LeanSetLocalPosY(this Transform transform, float val) {
         transform.localPosition = new Vector3(transform.localPosition.x, val, transform.localPosition.z);
     }
-    public static void LeanSetLocalPosZ(this Transform transform, float val)
-    {
+    public static void LeanSetLocalPosZ(this Transform transform, float val) {
         transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, val);
     }
 
-    public static Color LeanColor(this Transform transform)
-    {
+    public static Color LeanColor(this Transform transform) {
         return transform.GetComponent<Renderer>().material.color;
     }
 }
