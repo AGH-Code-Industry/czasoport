@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Utils.Singleton {
     public class SingletonOverrideException : Exception {

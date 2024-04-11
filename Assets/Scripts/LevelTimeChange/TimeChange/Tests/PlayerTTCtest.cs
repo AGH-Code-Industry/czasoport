@@ -1,4 +1,4 @@
-﻿using CustomInput;
+using CustomInput;
 using UnityEngine;
 
 namespace LevelTimeChange.TimeChange.Tests {

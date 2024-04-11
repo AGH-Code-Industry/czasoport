@@ -1,4 +1,4 @@
-﻿using CustomInput;
+using CustomInput;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;

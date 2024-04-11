@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using CustomInput;
 using Interactions;
 using Items;

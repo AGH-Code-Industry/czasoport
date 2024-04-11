@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 /// <summary>
 /// API to play song with fade in effect and specified delay;
 /// </summary>

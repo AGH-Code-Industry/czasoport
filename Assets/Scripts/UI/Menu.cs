@@ -1,4 +1,4 @@
-﻿using DataPersistence;
+using DataPersistence;
 using Settings;
 using UnityEngine;
 using UnityEngine.SceneManagement;
