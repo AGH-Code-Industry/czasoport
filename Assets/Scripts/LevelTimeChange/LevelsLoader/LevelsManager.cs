@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using CoinPackage.Debugging;
 using System.Collections;
 using System.Collections.Generic;

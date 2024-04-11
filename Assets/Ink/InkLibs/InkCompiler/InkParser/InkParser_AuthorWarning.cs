@@ -1,4 +1,4 @@
-﻿using Ink.Parsed;
+using Ink.Parsed;
 
 namespace Ink {
     public partial class InkParser {

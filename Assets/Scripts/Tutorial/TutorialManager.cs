@@ -1,4 +1,4 @@
-﻿using CustomInput;
+using CustomInput;
 using InventorySystem;
 using LevelTimeChange.TimeChange;
 using System;

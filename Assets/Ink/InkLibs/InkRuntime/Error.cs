@@ -1,4 +1,4 @@
-﻿namespace Ink {
+namespace Ink {
     /// <summary>
     /// Callback for errors throughout both the ink runtime and compiler.
     /// </summary>

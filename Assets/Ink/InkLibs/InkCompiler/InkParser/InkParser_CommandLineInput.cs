@@ -1,4 +1,4 @@
-﻿
+
 namespace Ink {
     public partial class InkParser {
         // Valid returned objects:

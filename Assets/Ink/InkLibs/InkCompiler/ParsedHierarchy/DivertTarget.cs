@@ -1,4 +1,4 @@
-﻿
+
 namespace Ink.Parsed {
     public class DivertTarget : Expression {
         public Divert divert;

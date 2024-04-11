@@ -1,4 +1,4 @@
-﻿namespace LevelTimeChange {
+namespace LevelTimeChange {
     public enum TimeLine {
         Past = 0,
         Present = 1,

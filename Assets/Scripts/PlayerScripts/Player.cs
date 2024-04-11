@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using CoinPackage.Debugging;
 using UnityEngine;
 using CustomInput;

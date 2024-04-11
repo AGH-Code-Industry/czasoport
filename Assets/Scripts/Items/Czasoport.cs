@@ -1,4 +1,4 @@
-﻿using InteractableObjectSystem;
+using InteractableObjectSystem;
 using Items;
 using LevelTimeChange;
 using LevelTimeChange.TimeChange;

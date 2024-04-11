@@ -1,4 +1,4 @@
-﻿
+
 namespace Interactions.Interfaces {
     public interface IHighlightable {
         public void EnableFocusedHighlight();

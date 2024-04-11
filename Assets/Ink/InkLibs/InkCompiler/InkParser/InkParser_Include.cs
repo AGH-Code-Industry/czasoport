@@ -1,4 +1,4 @@
-﻿using Ink.Parsed;
+using Ink.Parsed;
 using System.Collections.Generic;
 using System.IO;
 

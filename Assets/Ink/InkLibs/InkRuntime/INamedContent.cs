@@ -1,4 +1,4 @@
-﻿
+
 namespace Ink.Runtime {
     public interface INamedContent {
         string name { get; }

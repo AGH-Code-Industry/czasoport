@@ -1,4 +1,4 @@
-﻿namespace Ink.Runtime {
+namespace Ink.Runtime {
     public class Glue : Runtime.Object {
         public Glue() { }
 

@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 
 namespace Ink.Runtime {
     public class Divert : Runtime.Object {

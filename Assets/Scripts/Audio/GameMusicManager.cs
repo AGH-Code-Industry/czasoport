@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using LevelTimeChange.TimeChange;
 using UnityEngine.Audio;
 

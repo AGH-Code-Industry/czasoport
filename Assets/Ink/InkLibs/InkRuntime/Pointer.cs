@@ -1,4 +1,4 @@
-﻿using Ink.Runtime;
+using Ink.Runtime;
 
 namespace Ink.Runtime {
     /// <summary>

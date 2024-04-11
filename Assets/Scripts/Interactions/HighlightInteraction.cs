@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Interactions.Interfaces;
 using UnityEngine;
 using System.Collections;

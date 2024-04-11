@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace Ink.Runtime {
     // When looking up content within the story (e.g. in Container.ContentAtPath),
     // the result is generally found, but if the story is modified, then when loading

@@ -1,4 +1,4 @@
-﻿
+
 namespace Ink.Parsed {
     public class Gather : Parsed.Object, IWeavePoint, INamedContent {
         public string name {
