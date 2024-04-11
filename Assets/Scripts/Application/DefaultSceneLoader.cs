@@ -1,13 +1,12 @@
-#if UNITY_EDITOR
+﻿#if UNITY_EDITOR
 using System.Reflection;
 using CoinPackage.Debugging;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 
 [InitializeOnLoad]
-public static class DefaultSceneLoader
-{
-    static DefaultSceneLoader(){
+public static class DefaultSceneLoader {
+    static DefaultSceneLoader() {
         SceneAsset entryScene = AssetDatabase.LoadAssetAtPath<SceneAsset>("Assets/Scenes/EntryPoint.unity");
         if (entryScene != null)
             EditorSceneManager.playModeStartScene = entryScene;

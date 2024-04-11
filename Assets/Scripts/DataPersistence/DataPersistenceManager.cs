@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +10,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 namespace DataPersistence {
-    public class DataPersistenceManager : MonoBehaviour
-    {
+    public class DataPersistenceManager : MonoBehaviour {
         public static DataPersistenceManager Instance { get; private set; }
 
         [NonSerialized]
@@ -44,12 +43,12 @@ namespace DataPersistence {
             _logger.Log($"Loading game data from disk.");
             gameData = _fileDataHandler.Load();
         }
-        
+
         public void SaveGameToDisk() {
             _logger.Log($"Saving game data to disk.");
             _fileDataHandler.Save(gameData);
         }
-        
+
         public void LoadGame() {
             _logger.Log($"Loading game data into objects.");
             var persistentObjects = FindPersistentObjects();

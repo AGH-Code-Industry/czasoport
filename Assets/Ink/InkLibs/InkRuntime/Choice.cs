@@ -1,14 +1,12 @@
 ﻿using System.Collections.Generic;
-namespace Ink.Runtime
-{
+namespace Ink.Runtime {
     /// <summary>
     /// A generated Choice from the story.
     /// A single ChoicePoint in the Story could potentially generate
     /// different Choices dynamically dependent on state, so they're
     /// separated.
     /// </summary>
-	public class Choice : Runtime.Object
-	{
+	public class Choice : Runtime.Object {
         /// <summary>
         /// The main text to presented to the player for this Choice.
         /// </summary>
@@ -20,10 +18,10 @@ namespace Ink.Runtime
         /// </summary>
         public string pathStringOnChoice {
             get {
-                return targetPath.ToString ();
+                return targetPath.ToString();
             }
             set {
-                targetPath = new Path (value);
+                targetPath = new Path(value);
             }
         }
 
@@ -48,9 +46,7 @@ namespace Ink.Runtime
 
         public List<string> tags;
 
-        public Choice()
-        {
+        public Choice() {
         }
-	}
+    }
 }
-

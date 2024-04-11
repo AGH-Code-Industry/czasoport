@@ -12,7 +12,8 @@ namespace DataPersistence.DataTypes {
             position = DeveloperSettings.Instance.dsdSettings.startingPlayerPositionOffset;
             if (DeveloperSettings.Instance.dsdSettings.startingTimeline == TimeLine.Future) {
                 position += DeveloperSettings.Instance.tpcSettings.offsetFromPresentPlatform;
-            }else if (DeveloperSettings.Instance.dsdSettings.startingTimeline == TimeLine.Past) {
+            }
+            else if (DeveloperSettings.Instance.dsdSettings.startingTimeline == TimeLine.Past) {
                 position -= DeveloperSettings.Instance.tpcSettings.offsetFromPresentPlatform;
             }
         }

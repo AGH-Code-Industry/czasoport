@@ -28,7 +28,7 @@ namespace InventorySystem {
         public event EventHandler<ItemInsertedEventArgs> ItemInserted;
         public event EventHandler<ItemRemovedEventArgs> ItemRemoved;
         public event EventHandler<ItemStateChangedEventArgs> ItemStateChanged;
-        
+
         public Transform itemHideout;
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INVENTORY];
@@ -96,7 +96,7 @@ namespace InventorySystem {
         public Item[] GetInventory() {
             return _items;
         }
-        
+
         /// <summary>
         /// Check if inventory contains item with the same `ItemSO` definition.
         /// </summary>
@@ -132,7 +132,7 @@ namespace InventorySystem {
                         Slot = _selectedSlot
                     });
                 }
-                RemoveItem(out Item i);           
+                RemoveItem(out Item i);
                 ShowItem(i);
             }
 
@@ -162,7 +162,7 @@ namespace InventorySystem {
             item = HideItem(item);
 
             NotificationManager.Instance.RaiseNotification(item.ItemSO.pickUpNotification);
-            
+
             return true;
         }
 
@@ -261,7 +261,7 @@ namespace InventorySystem {
         /// </summary>
         private void OnDropItemClicked(InputAction.CallbackContext ctx) {
             if (_items[_selectedSlot] == null) return;
-            RemoveItem(out Item item);           
+            RemoveItem(out Item item);
             ShowItem(item);
             //Instantiate(item.ItemSO.prefab, FindObjectOfType<Player>().gameObject.transform.position, Quaternion.identity, FindTransformOfCurrentTime());
         }

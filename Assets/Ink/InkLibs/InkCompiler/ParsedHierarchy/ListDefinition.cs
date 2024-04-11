@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Ink.Parsed
-{
-    public class ListDefinition : Parsed.Object
-    {
+namespace Ink.Parsed {
+    public class ListDefinition : Parsed.Object {
         public Identifier identifier;
         public List<ListElementDefinition> itemDefinitions;
 
@@ -13,36 +11,34 @@ namespace Ink.Parsed
 
         public Runtime.ListDefinition runtimeListDefinition {
             get {
-                var allItems = new Dictionary<string, int> ();
+                var allItems = new Dictionary<string, int>();
                 foreach (var e in itemDefinitions) {
-                    if( !allItems.ContainsKey(e.name) )
-                        allItems.Add (e.name, e.seriesValue);
+                    if (!allItems.ContainsKey(e.name))
+                        allItems.Add(e.name, e.seriesValue);
                     else
-                        Error("List '"+identifier+"' contains dupicate items called '"+e.name+"'");
+                        Error("List '" + identifier + "' contains dupicate items called '" + e.name + "'");
                 }
 
-                return new Runtime.ListDefinition (identifier?.name, allItems);
+                return new Runtime.ListDefinition(identifier?.name, allItems);
             }
         }
 
-        public ListElementDefinition ItemNamed (string itemName)
-        {
+        public ListElementDefinition ItemNamed(string itemName) {
             if (_elementsByName == null) {
-                _elementsByName = new Dictionary<string, ListElementDefinition> ();
+                _elementsByName = new Dictionary<string, ListElementDefinition>();
                 foreach (var el in itemDefinitions) {
-                    _elementsByName [el.name] = el;
+                    _elementsByName[el.name] = el;
                 }
             }
 
             ListElementDefinition foundElement;
-            if (_elementsByName.TryGetValue (itemName, out foundElement))
+            if (_elementsByName.TryGetValue(itemName, out foundElement))
                 return foundElement;
 
             return null;
         }
 
-        public ListDefinition (List<ListElementDefinition> elements)
-        {
+        public ListDefinition(List<ListElementDefinition> elements) {
             this.itemDefinitions = elements;
 
             int currentValue = 1;
@@ -55,30 +51,28 @@ namespace Ink.Parsed
                 currentValue++;
             }
 
-            AddContent (elements);
+            AddContent(elements);
         }
 
-        public override Runtime.Object GenerateRuntimeObject ()
-        {
-            var initialValues = new Runtime.InkList ();
+        public override Runtime.Object GenerateRuntimeObject() {
+            var initialValues = new Runtime.InkList();
             foreach (var itemDef in itemDefinitions) {
                 if (itemDef.inInitialList) {
-                    var item = new Runtime.InkListItem (this.identifier?.name, itemDef.name);
-                    initialValues [item] = itemDef.seriesValue;
+                    var item = new Runtime.InkListItem(this.identifier?.name, itemDef.name);
+                    initialValues[item] = itemDef.seriesValue;
                 }
             }
 
             // Set origin name, so
-            initialValues.SetInitialOriginName (identifier?.name);
+            initialValues.SetInitialOriginName(identifier?.name);
 
-            return new Runtime.ListValue (initialValues);
+            return new Runtime.ListValue(initialValues);
         }
 
-        public override void ResolveReferences (Story context)
-        {
-            base.ResolveReferences (context);
+        public override void ResolveReferences(Story context) {
+            base.ResolveReferences(context);
 
-            context.CheckForNamingCollisions (this, identifier, Story.SymbolType.List);
+            context.CheckForNamingCollisions(this, identifier, Story.SymbolType.List);
         }
 
         public override string typeName {
@@ -90,10 +84,8 @@ namespace Ink.Parsed
         Dictionary<string, ListElementDefinition> _elementsByName;
     }
 
-    public class ListElementDefinition : Parsed.Object
-    {
-        public string name
-        {
+    public class ListElementDefinition : Parsed.Object {
+        public string name {
             get { return identifier?.name; }
         }
         public Identifier identifier;
@@ -105,33 +97,30 @@ namespace Ink.Parsed
             get {
                 var parentList = parent as ListDefinition;
                 if (parentList == null)
-                    throw new System.Exception ("Can't get full name without a parent list");
+                    throw new System.Exception("Can't get full name without a parent list");
 
                 return parentList.identifier + "." + name;
             }
         }
 
-        public ListElementDefinition (Identifier identifier, bool inInitialList, int? explicitValue = null)
-        {
+        public ListElementDefinition(Identifier identifier, bool inInitialList, int? explicitValue = null) {
             this.identifier = identifier;
             this.inInitialList = inInitialList;
             this.explicitValue = explicitValue;
         }
 
-        public override Runtime.Object GenerateRuntimeObject ()
-        {
-            throw new System.NotImplementedException ();
+        public override Runtime.Object GenerateRuntimeObject() {
+            throw new System.NotImplementedException();
         }
 
-        public override void ResolveReferences (Story context)
-        {
-            base.ResolveReferences (context);
+        public override void ResolveReferences(Story context) {
+            base.ResolveReferences(context);
 
-            context.CheckForNamingCollisions (this, identifier, Story.SymbolType.ListItem);
+            context.CheckForNamingCollisions(this, identifier, Story.SymbolType.ListItem);
         }
 
         public override string typeName {
-        	get {
+            get {
                 return "List element";
             }
         }

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using CoinPackage.Debugging;
 using TMPro;
@@ -8,8 +8,8 @@ namespace InventorySystem.UI {
     /// UI slot class.
     /// </summary>
     public class Slot : MonoBehaviour {
-    	[SerializeField] private Color32 activeSlot;
-    	[SerializeField] private Color32 disactiveSlot;
+        [SerializeField] private Color32 activeSlot;
+        [SerializeField] private Color32 disactiveSlot;
         private Image _image;
         private Image _item;
         private TextMeshProUGUI _text;
@@ -19,7 +19,7 @@ namespace InventorySystem.UI {
             _item = transform.Find("Item").GetComponent<Image>();
             _text = transform.Find("Durability").GetComponent<TextMeshProUGUI>();
         }
-        
+
         /// <summary>
         /// Add item to slot
         /// </summary>

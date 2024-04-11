@@ -9,10 +9,10 @@ namespace CustomInput.Locks {
     public class MovementLock {
         private readonly List<string> _keys;
         private readonly string _tag;
-        
+
         private InputActions.MovementActions _input;
         private ushort _keyID;
-        
+
         public MovementLock(InputActions.MovementActions input) {
             _input = input;
             _tag = _input.ToString();

@@ -17,7 +17,7 @@ namespace Dialogues.ChoiceProcessing {
                 RequiresItem = true;
             }
         }
-        
+
         public bool GetsItem { get; private set; }
         [CanBeNull] private ItemSO _getItem;
         public ItemSO GetItem {

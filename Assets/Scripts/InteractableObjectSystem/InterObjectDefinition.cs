@@ -3,15 +3,13 @@ using Notifications;
 using UnityEngine;
 using Utils;
 
-namespace InteractableObjectSystem
-{
+namespace InteractableObjectSystem {
     /// <summary>
     /// Scriptable object for items
     /// </summary>
     [CreateAssetMenu(fileName = "New Interactable", menuName = "Definition/New Interactable")]
-    
-    public class InterObjectDefinition : ScriptableObject
-    {
+
+    public class InterObjectDefinition : ScriptableObject {
         [Header("Interactable Information")]
         public string interactableName;
         public string description;
@@ -22,7 +20,7 @@ namespace InteractableObjectSystem
         public Notification successfulHandInterNotification;
         public Notification failedItemInterNotification;
         public Notification successfulItemInterNotification;
-        
+
         public override string ToString() {
             return $"[Interactable, {interactableName}]" % Colorize.Purple;
         }
