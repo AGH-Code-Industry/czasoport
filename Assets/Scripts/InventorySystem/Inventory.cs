@@ -33,7 +33,7 @@ namespace InventorySystem {
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INVENTORY];
         private InventorySettingsSO _settings;
-        public Item[] _items;
+        private Item[] _items;
         private int _itemsCount = 0;
         public int itemsCount {
             get {
