@@ -30,6 +30,7 @@ namespace InteractableObjectSystem.Objects {
                 tempItem.transform.SetParent(transform);
                 _currentRock = item.ItemSO;
                 Destroy(item.gameObject);
+                Inventory.Instance.RemoveItem(item.ItemSO);
                 Inventory.Instance.InsertItem(tempItem.GetComponent<Item>());
             }
 
