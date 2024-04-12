@@ -1,4 +1,4 @@
-﻿using Items;
+using Items;
 
 namespace InventorySystem.EventArguments {
     public class ItemStateChangedEventArgs {

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using LevelTimeChange.TimeChange;
 using UnityEngine.Audio;
 
@@ -70,7 +70,7 @@ namespace AudioSystem {
         }
 
         private void PlayMusic(LevelTimeChange.TimeLine newTimeline) {
-            switch(newTimeline) {
+            switch (newTimeline) {
                 case LevelTimeChange.TimeLine.Past:
                     musicPlayer.Play(_pastMusicState.clip, _pastMusicState.delay);
                     break;

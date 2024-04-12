@@ -10,17 +10,17 @@ using UnityEngine.UIElements;
 namespace InteractableObjectSystem.Objects {
     [RequireComponent(typeof(BoxCollider2D))]
     public class LockedChest : InteractableObject {
-        
+
         private enum ChestState {
             Locked,
             Unlocked
         }
-        
+
         [SerializeField] private List<GameObject> contains;
         [SerializeField] private List<ItemSO> interactedWith;
-        
+
         [SerializeField] private ChestState state = ChestState.Locked;
-        
+
 
         public override void InteractionHand() {
             if (state == ChestState.Locked) {

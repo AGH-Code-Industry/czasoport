@@ -1,4 +1,4 @@
-﻿using CustomInput;
+using CustomInput;
 using InventorySystem;
 using LevelTimeChange.TimeChange;
 using System;
@@ -7,8 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TutorialManager : MonoBehaviour
-{
+public class TutorialManager : MonoBehaviour {
     int stage = 0;
     List<TutorialStage> _stages = new List<TutorialStage>();
     List<TutorialNotification> _messages = new List<TutorialNotification>();
@@ -17,8 +16,7 @@ public class TutorialManager : MonoBehaviour
     /// <summary>
     /// If you want to disable tutorial, simply deactivate the "tutorialManager" object in the scene "Game"
     /// </summary>
-    void Start()
-    {
+    void Start() {
         Timer.instance.StartTimer();
         // Jak coś dodajecie to lepiej napiszcie do Mikołaja
         _stages.Add(new TutorialStage(CInput.InputActions.Movement.Navigation, true));
@@ -43,7 +41,7 @@ public class TutorialManager : MonoBehaviour
         _messages.Add(new TutorialNotification("Good job! Now try to find timeport."));
         _messages.Add(new TutorialNotification("Press", "Q", "to teleport back in time."));
         _messages.Add(new TutorialNotification("Press", "E", "to teleport to the future."));
-        
+
         _messages.Add(new TutorialNotification("Congratulations! You managed to pass the tutorial, now the fun begin... Good luck!!!"));
 
         Interactions.Interactions.Instance.itemInteractionPerformed += ItemInteraction;
@@ -116,7 +114,8 @@ public class TutorialManager : MonoBehaviour
             _stages[stage + 1].mainAction.Enable();
             _stages[stage + 1].mainAction.performed += OnNextTutorialStage;
             stage++;
-        } else {
+        }
+        else {
             TutorialFinished();
         }
     }

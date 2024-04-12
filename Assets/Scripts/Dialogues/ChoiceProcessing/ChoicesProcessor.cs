@@ -1,4 +1,4 @@
-﻿using CoinPackage.Debugging;
+using CoinPackage.Debugging;
 using Dialogues.ChoiceProcessing;
 using Ink.Runtime;
 using InteractableObjectSystem;
@@ -10,7 +10,7 @@ namespace Dialogues {
     public class ChoicesProcessor {
         private GameObject _choicesPanel;
         private GameObject _choicesPrefab;
-        
+
         public ChoicesProcessor(GameObject choicesPanel, GameObject choicesPrefab) {
             _choicesPanel = choicesPanel;
             _choicesPrefab = choicesPrefab;
@@ -21,7 +21,7 @@ namespace Dialogues {
                 UnityEngine.Object.Destroy(child.gameObject);
             }
 
-            if(story.currentChoices.Count < 1) {
+            if (story.currentChoices.Count < 1) {
                 return false;
             }
 
@@ -33,20 +33,20 @@ namespace Dialogues {
 
             return true;
         }
-        
+
         private void CreateChoiceButton(Story story, Choice choice, ChoiceContext choiceContext) {
             var choiceObject = UnityEngine.Object.Instantiate(_choicesPrefab, _choicesPanel.transform);
             var choiceButton = choiceObject.GetComponent<ChoiceButton>();
             choiceButton.button.onClick.AddListener(() => {
                 story.ChooseChoiceIndex(choice.index);
                 DialogueManager.I.ContinueDialogue();
-                
+
                 // Item should be always available to remove, since this option is only available if the item is in the inventory
                 // But we can TODO add check here later
                 if (choiceContext.RequiresItem) {
                     Inventory.Instance.RemoveItem(choiceContext.RequiredItem);
                 }
-                
+
                 // TODO: Add what will happen when the choice is actually chosen
                 // Do we always want to instantiate new item? Maybe take it from the pool?
                 if (choiceContext.GetsItem) {
@@ -64,11 +64,11 @@ namespace Dialogues {
             choiceButton.SetText(choice.text);
             if (choiceContext.RequiresItem) {
                 choiceButton.SetIcon(choiceContext.RequiredItem.image);
-                if(!Inventory.Instance.ContainsItem(choiceContext.RequiredItem)) {
+                if (!Inventory.Instance.ContainsItem(choiceContext.RequiredItem)) {
                     choiceButton.button.interactable = false;
                 }
             }
-            
+
             if (choiceContext.GetsItem) {
                 choiceButton.SetIcon2(choiceContext.GetItem.image);
             }

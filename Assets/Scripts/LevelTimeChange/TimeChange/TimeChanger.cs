@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
@@ -13,8 +13,7 @@ namespace LevelTimeChange.TimeChange {
     /// <summary>
     /// Manages time changing mechanic.
     /// </summary>
-    public class TimeChanger : MonoBehaviour, IDataPersistence
-    {
+    public class TimeChanger : MonoBehaviour, IDataPersistence {
         public static TimeChanger Instance { get; private set; }
 
         public event EventHandler<OnTimeChangeEventArgs> OnTimeChange;
@@ -23,9 +22,9 @@ namespace LevelTimeChange.TimeChange {
         public class OnTimeChangeEventArgs : EventArgs {
             public TimeLine time;
         }
-        
+
         [SerializeField] private Animator animator;
-        
+
         GameObject _timeChangeUIgo;
         bool _timeChangeActivated = false;
 
@@ -39,7 +38,7 @@ namespace LevelTimeChange.TimeChange {
         private Vector3 _timeJump;
         private TimeLine _newTimeLine;
         [SerializeField]
-        private List<bool> _timeUnlocked = new List<bool>() { false, false, false};
+        private List<bool> _timeUnlocked = new List<bool>() { false, false, false };
 
         [SerializeField] private CinemachineVirtualCamera _camera;
 
@@ -115,7 +114,7 @@ namespace LevelTimeChange.TimeChange {
         private IEnumerator<WaitForSeconds> ChangeTime() {
             var key = CInput.TeleportLock.Lock();
             animator.SetTrigger("Start");
-            yield return new WaitForSeconds(_settings.timelineChangeAnimLength/2);
+            yield return new WaitForSeconds(_settings.timelineChangeAnimLength / 2);
             CinemachineFramingTransposer cinemachineFramingTransposer = _camera.GetCinemachineComponent<CinemachineFramingTransposer>();
             Vector2 softZones = new Vector2(cinemachineFramingTransposer.m_SoftZoneWidth, cinemachineFramingTransposer.m_SoftZoneHeight);
             cinemachineFramingTransposer.m_SoftZoneHeight = 0f;
@@ -123,11 +122,11 @@ namespace LevelTimeChange.TimeChange {
             transform.Translate(_timeJump * (int)(_newTimeLine - actualTime));
             actualTime = _newTimeLine;
             animator.SetTrigger("End");
-            yield return new WaitForSeconds(_settings.timelineChangeAnimLength/2);
+            yield return new WaitForSeconds(_settings.timelineChangeAnimLength / 2);
             cinemachineFramingTransposer.m_SoftZoneWidth = softZones.x;
             cinemachineFramingTransposer.m_SoftZoneHeight = softZones.y;
             CInput.TeleportLock.Unlock(key);
-            
+
             OnTimeChange?.Invoke(this, new OnTimeChangeEventArgs {
                 time = actualTime
             });

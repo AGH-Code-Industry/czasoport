@@ -5,7 +5,7 @@ namespace Minigames {
     public class PatrolVision : MonoBehaviour {
         [SerializeField] private StealthMinigame stealthMissionManager;
         private bool _toMinigame = false;
-        
+
         private Transform _parent;
         private Vector3 _previousPosition;
         private Vector3 _direction;

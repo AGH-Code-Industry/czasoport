@@ -12,7 +12,7 @@ public static class InitializeHooks {
     private static readonly char Sep = Path.DirectorySeparatorChar;
     private static readonly string Source = $".{Sep}.coin{Sep}git-hooks{Sep}hooks";
     private static readonly string Destination = $".{Sep}.git{Sep}hooks";
-    
+
     static InitializeHooks() {
         if (CheckIfShouldRun()) {
             Initialize();
@@ -57,4 +57,3 @@ public static class InitializeHooks {
 }
 
 #endif
-

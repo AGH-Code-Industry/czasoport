@@ -1,10 +1,8 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace Ink.Parsed
-{
-    public class VariableReference : Expression
-    {
+namespace Ink.Parsed {
+    public class VariableReference : Expression {
         // - Normal variables have a single item in their "path"
         // - Knot/stitch names for read counts are actual dot-separated paths
         //   (though this isn't actually used at time of writing)
@@ -19,13 +17,13 @@ namespace Ink.Parsed
                     return null;
                 }
 
-                if( _singleIdentifier == null ) {
-                    var name = string.Join (".", path.ToArray());
+                if (_singleIdentifier == null) {
+                    var name = string.Join(".", path.ToArray());
                     var firstDebugMetadata = pathIdentifiers.First().debugMetadata;
                     var debugMetadata = pathIdentifiers.Aggregate(firstDebugMetadata, (acc, id) => acc.Merge(id.debugMetadata));
                     _singleIdentifier = new Identifier { name = name, debugMetadata = debugMetadata };
                 }
-                
+
                 return _singleIdentifier;
             }
         }
@@ -40,28 +38,26 @@ namespace Ink.Parsed
 
         public Runtime.VariableReference runtimeVarRef { get { return _runtimeVarRef; } }
 
-        public VariableReference (List<Identifier> pathIdentifiers)
-        {
+        public VariableReference(List<Identifier> pathIdentifiers) {
             this.pathIdentifiers = pathIdentifiers;
             this.path = pathIdentifiers.Select(id => id?.name).ToList();
-            this.name = string.Join (".", pathIdentifiers);
+            this.name = string.Join(".", pathIdentifiers);
         }
 
-        public override void GenerateIntoContainer (Runtime.Container container)
-        {
+        public override void GenerateIntoContainer(Runtime.Container container) {
             Expression constantValue = null;
 
             // If it's a constant reference, just generate the literal expression value
             // It's okay to access the constants at code generation time, since the
             // first thing the ExportRuntime function does it search for all the constants
             // in the story hierarchy, so they're all available.
-            if ( story.constants.TryGetValue (name, out constantValue) ) {
-                constantValue.GenerateConstantIntoContainer (container);
+            if (story.constants.TryGetValue(name, out constantValue)) {
+                constantValue.GenerateConstantIntoContainer(container);
                 isConstantReference = true;
                 return;
             }
 
-            _runtimeVarRef = new Runtime.VariableReference (name);
+            _runtimeVarRef = new Runtime.VariableReference(name);
 
             // List item reference?
             // Path might be to a list (listName.listItemName or just listItemName)
@@ -69,24 +65,23 @@ namespace Ink.Parsed
                 string listItemName = null;
                 string listName = null;
 
-                if (path.Count == 1) listItemName = path [0];
+                if (path.Count == 1) listItemName = path[0];
                 else {
-                    listName = path [0];
-                    listItemName = path [1];
+                    listName = path[0];
+                    listItemName = path[1];
                 }
 
-                var listItem = story.ResolveListItem (listName, listItemName, this);
+                var listItem = story.ResolveListItem(listName, listItemName, this);
                 if (listItem) {
                     isListItemReference = true;
                 }
             }
 
-            container.AddContent (_runtimeVarRef);
+            container.AddContent(_runtimeVarRef);
         }
 
-        public override void ResolveReferences (Story context)
-        {
-            base.ResolveReferences (context);
+        public override void ResolveReferences(Story context) {
+            base.ResolveReferences(context);
 
             // Work is already done if it's a constant or list item reference
             if (isConstantReference || isListItemReference) {
@@ -94,8 +89,8 @@ namespace Ink.Parsed
             }
 
             // Is it a read count?
-            var parsedPath = new Path (pathIdentifiers);
-            Parsed.Object targetForCount = parsedPath.ResolveFromContext (this);
+            var parsedPath = new Path(pathIdentifiers);
+            Parsed.Object targetForCount = parsedPath.ResolveFromContext(this);
             if (targetForCount) {
 
                 targetForCount.containerForCounting.visitsShouldBeCounted = true;
@@ -118,8 +113,8 @@ namespace Ink.Parsed
                 if (targetFlow && targetFlow.isFunction) {
 
                     // Is parent context content rather than logic?
-                    if ( parent is Weave || parent is ContentList || parent is FlowBase) {
-                        Warning ("'" + targetFlow.identifier + "' being used as read count rather than being called as function. Perhaps you intended to write " + targetFlow.name + "()");
+                    if (parent is Weave || parent is ContentList || parent is FlowBase) {
+                        Warning("'" + targetFlow.identifier + "' being used as read count rather than being called as function. Perhaps you intended to write " + targetFlow.name + "()");
                     }
                 }
 
@@ -131,22 +126,20 @@ namespace Ink.Parsed
             if (path.Count > 1) {
                 var errorMsg = "Could not find target for read count: " + parsedPath;
                 if (path.Count <= 2)
-                    errorMsg += ", or couldn't find list item with the name " + string.Join (",", path.ToArray());
-                Error (errorMsg);
+                    errorMsg += ", or couldn't find list item with the name " + string.Join(",", path.ToArray());
+                Error(errorMsg);
                 return;
             }
 
-            if (!context.ResolveVariableWithName (this.name, fromNode: this).found) {
-                Error("Unresolved variable: "+this.ToString(), this);
+            if (!context.ResolveVariableWithName(this.name, fromNode: this).found) {
+                Error("Unresolved variable: " + this.ToString(), this);
             }
         }
 
-        public override string ToString ()
-        {
+        public override string ToString() {
             return string.Join(".", path.ToArray());
         }
 
         Runtime.VariableReference _runtimeVarRef;
     }
 }
-

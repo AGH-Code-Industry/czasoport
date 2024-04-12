@@ -1,9 +1,6 @@
-﻿
-namespace Ink.Parsed
-{
-    public interface INamedContent
-    {
+
+namespace Ink.Parsed {
+    public interface INamedContent {
         string name { get; }
     }
 }
-

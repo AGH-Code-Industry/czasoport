@@ -1,4 +1,4 @@
-﻿using Notifications;
+using Notifications;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,7 +9,7 @@ using UnityEngine.EventSystems;
 public class NotificationUIController : MonoBehaviour {
     [SerializeField] GameObject _notificationHistoryPanel;
     [SerializeField] GameObject _notificationWindow;
-    
+
     public void OpenNotificationPanel() {
         _notificationHistoryPanel.SetActive(true);
         _notificationWindow.SetActive(false);
@@ -20,5 +20,5 @@ public class NotificationUIController : MonoBehaviour {
         _notificationWindow.SetActive(true);
     }
 
-   
+
 }

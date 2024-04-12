@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Xml;
 using Application;
 using CoinPackage.Debugging;
@@ -8,8 +8,7 @@ using Interactions.Interfaces;
 using InventorySystem;
 using Utils.Attributes;
 
-namespace Items
-{
+namespace Items {
     [RequireComponent(typeof(CircleCollider2D))]
     [RequireComponent(typeof(SpriteRenderer))]
     [RequireComponent(typeof(HighlightInteraction))]
@@ -20,20 +19,20 @@ namespace Items
         public ItemSO ItemSO => itemSO;
         private int _durability = 0;
         public int Durability {
-            get {return _durability;}
-            set {_durability = value;}
+            get { return _durability; }
+            set { _durability = value; }
         }
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.ITEMS];
         private SpriteRenderer _spriteRenderer;
         private CircleCollider2D _collider;
 
-        public Item() : base() {}
-        
+        public Item() : base() { }
+
         public Item(ItemSO itemScriptableObject) : base() {
             itemSO = itemScriptableObject;
         }
-        
+
         private void Awake() {
             uniqueId = Guid.NewGuid().ToString("N");
             if (gameObject.layer != LayerMask.NameToLayer("Items")) {

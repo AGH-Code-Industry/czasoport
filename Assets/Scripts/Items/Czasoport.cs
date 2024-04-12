@@ -1,4 +1,4 @@
-﻿using InteractableObjectSystem;
+using InteractableObjectSystem;
 using Items;
 using LevelTimeChange;
 using LevelTimeChange.TimeChange;
@@ -7,8 +7,7 @@ using System.Collections.Generic;
 using UI;
 using UnityEngine;
 
-public class Czasoport : InteractableObject
-{
+public class Czasoport : InteractableObject {
     public override void InteractionHand() {
         TimeChanger timeChanger = FindObjectOfType<TimeChanger>();
         timeChanger.EnableTimeChange();

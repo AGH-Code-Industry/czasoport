@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Interactions {
     [CreateAssetMenu(menuName = "Settings/InteractionsSettings", fileName = "InteractionsSettings")]

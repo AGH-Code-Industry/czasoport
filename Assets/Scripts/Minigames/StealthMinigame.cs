@@ -16,7 +16,7 @@ namespace Minigames {
         [SerializeField] private CheckPlayerInArea _area;
         [SerializeField] private Transform startPoint;
         [SerializeField] private Animator animator;
-        
+
         private float _animationTime;
         private bool _targetInHand = false;
         private bool _duringRestartingPos = false;
@@ -39,9 +39,9 @@ namespace Minigames {
         private IEnumerator SetPlayerToStart() {
             _duringRestartingPos = true;
             animator.SetTrigger("Start");
-            yield return new WaitForSeconds(_animationTime/2);
+            yield return new WaitForSeconds(_animationTime / 2);
             Player.Instance.transform.position = startPoint.position;
-            yield return new WaitForSeconds(_animationTime/2);
+            yield return new WaitForSeconds(_animationTime / 2);
             animator.SetTrigger("End");
             _duringRestartingPos = false;
         }
@@ -49,11 +49,11 @@ namespace Minigames {
         private void IsItemTargetInsert(object sender, ItemInsertedEventArgs args) {
             if (args.Item.ItemSO == _itemToSteal & Inventory.Instance.itemsCount < DeveloperSettings.Instance.invSettings.itemsCount) _targetInHand = true;
         }
-        
+
         private void IsItemTargetRemove(object sender, ItemRemovedEventArgs args) {
             if (args.Item.ItemSO == _itemToSteal) _targetInHand = false;
         }
-        
+
         private void ResetTarget() {
             _targetInHand = false;
             Inventory.Instance.RemoveItem(_itemToSteal);
@@ -62,7 +62,7 @@ namespace Minigames {
             toSteal.GetComponent<SpriteRenderer>().enabled = true;
             toSteal.GetComponent<CircleCollider2D>().enabled = true;
         }
-        
+
         public void StartMinigame() {
             _itemToSteal = toSteal.GetComponent<Item>().ItemSO;
             _targetPosition = toSteal.transform.position;
