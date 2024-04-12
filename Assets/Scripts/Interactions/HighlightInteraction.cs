@@ -21,8 +21,8 @@ namespace Interactions {
             _sprite = GetComponent<SpriteRenderer>();
             _material = _sprite.material;
             _material.SetTexture("_texture", _sprite.sprite.texture);
-            _material.SetFloat("_OnOff",0f);
-            _material.SetFloat("_scale",scale);
+            _material.SetFloat("_OnOff", 0f);
+            _material.SetFloat("_scale", scale);
             _material.SetColor("_color", Color.red);
             _fadeIn = TurnHighlight(0f, 1f);
             _fadeOut = TurnHighlight(1f, 0f);
