@@ -24,6 +24,7 @@ namespace LevelTimeChange.LevelsLoader {
         public static LevelsManager Instance { get; private set; }
 
         public LevelManager CurrentLevelManager => _currentLevelManager;
+        public event EventHandler OnLevelChange;
 
         /// <summary>
         /// All currently loaded levels.
@@ -72,7 +73,7 @@ namespace LevelTimeChange.LevelsLoader {
         /// <param name="destinationPortal">Portal to be switched to.</param>
         public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) {
             _logger.Log($"Changing level to {destinedLevelInfo}, destined portal: {destinationPortal}");
-
+            OnLevelChange?.Invoke(this, EventArgs.Empty);
             // Order of actions in this function is crucial, do not change it unless
             // you know what you are doing
             // FOR REAL, I WROTE THIS, THEN CHANGED IT AND IT BROKE

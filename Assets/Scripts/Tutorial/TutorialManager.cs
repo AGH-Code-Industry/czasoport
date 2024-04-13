@@ -7,12 +7,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using InventorySystem.EventArguments;
+using LevelTimeChange.LevelsLoader;
+using Ink.Runtime;
+using System.IO;
+using Unity.VisualScripting;
 
 public class TutorialManager : MonoBehaviour {
     int stage = 1;
     List<TutorialStage> _stages = new List<TutorialStage>();
     List<TutorialNotification> _messages = new List<TutorialNotification>();
     float _timeToDisplayMessage = 1f;
+    Dictionary<string, InputAction> _actionsDictionary = new Dictionary<string, InputAction>();
 
     /// <summary>
     /// If you want to disable tutorial, simply deactivate the "tutorialManager" object in the scene "Game"
@@ -21,116 +26,84 @@ public class TutorialManager : MonoBehaviour {
         Timer.instance.StartTimer();
         // Jak coś dodajecie to lepiej napiszcie do Mikołaja
 
-        // Create tutorial stages
-        TutorialStage initialTutorialStage = new TutorialStageBuilder()
-            .tutorialNotification(new TutorialNotification("Hello! Welcome to the tutorial!"))
-            .build();
+        _actionsDictionary.Add("Navigation", CInput.InputActions.Movement.Navigation);
+        _actionsDictionary.Add("TogglePause", CInput.InputActions.Game.TogglePause);
+        _actionsDictionary.Add("Interaction", CInput.InputActions.Interactions.Interaction);
+        _actionsDictionary.Add("NextItem", CInput.InputActions.Inventory.NextItem);
+        _actionsDictionary.Add("ChooseItem", CInput.InputActions.Inventory.ChooseItem);
+        _actionsDictionary.Add("Drop", CInput.InputActions.Inventory.Drop);
+        _actionsDictionary.Add("TeleportBack", CInput.InputActions.Teleport.TeleportBack);
+        _actionsDictionary.Add("TeleportForward", CInput.InputActions.Teleport.TeleportForward);
+        _actionsDictionary.Add("", null);
 
-        TutorialStage movementTutorialStage = new TutorialStageBuilder()
-            .mainAction(CInput.InputActions.Movement.Navigation)
-            .conditionSatisfied(true)
-            .tutorialNotification(new TutorialNotification("Press", "WSAD", "to move."))
-            .build();
+        // Parse data from TutorialStages.json file
+        TextAsset json = Resources.Load<TextAsset>("Tutorial/TutorialStages");
+        _stages = ParseJsonArray(json.text);
 
-        TutorialStage pauseTutorialStage = new TutorialStageBuilder()
-            .mainAction(CInput.InputActions.Game.TogglePause)
-            .conditionSatisfied(true)
-            .tutorialNotification(new TutorialNotification("Press", "ESCAPE", "to pause the game."))
-            .build();
-
-        TutorialStage pickUpItemTutorialStage = new TutorialStageBuilder()
-            .mainAction(CInput.InputActions.Interactions.Interaction)
-            .conditionSatisfied(false)
-            .tutorialNotification(new TutorialNotification("Press", "F", "to pick up an item."))
-            .build();
-
-        TutorialStage chooseNextItemTutorialStage = new TutorialStageBuilder()
-            .mainAction(CInput.InputActions.Inventory.NextItem)
-            .conditionSatisfied(true)
-            .tutorialNotification(new TutorialNotification("Press", "TAB", "to select the next slot in you inventory."))
-            .build();
-
-        TutorialStage chooseSlotItemTutorialStage = new TutorialStageBuilder()
-            .mainAction(CInput.InputActions.Inventory.ChooseItem)
-            .conditionSatisfied(true)
-            .tutorialNotification(new TutorialNotification("Press numbers", "1-6", "to select specific slot."))
-            .build();
-
-        TutorialStage dropItemTutorialStage = new TutorialStageBuilder()
-            .mainAction(CInput.InputActions.Inventory.Drop)
-            .conditionSatisfied(false)
-            .tutorialNotification(new TutorialNotification("Press", "G", "drop an item."))
-            .build();
-
-        TutorialStage breakeRockTutorialStage = new TutorialStageBuilder()
-            .mainAction(CInput.InputActions.Interactions.Interaction)
-            .conditionSatisfied(false)
-            .tutorialNotification(new TutorialNotification("Press", "F", "to interack with another item (try breaking the rock)."))
-            .build();
-
-        TutorialStage pickUpTimeportTutorialStage = new TutorialStageBuilder()
-            .mainAction(CInput.InputActions.Interactions.Interaction)
-            .conditionSatisfied(false)
-            .tutorialNotification(new TutorialNotification("Good job! Now try to find timeport."))
-            .build();
-
-        TutorialStage teleportBackTutorialStage = new TutorialStageBuilder()
-            .mainAction(CInput.InputActions.Teleport.TeleportBack)
-            .conditionSatisfied(false)
-            .tutorialNotification(new TutorialNotification("Press", "Q", "to teleport back in time."))
-            .build();
-
-        TutorialStage teleportForwardTutorialStage = new TutorialStageBuilder()
-            .mainAction(CInput.InputActions.Teleport.TeleportForward)
-            .conditionSatisfied(false)
-            .tutorialNotification(new TutorialNotification("Press", "E", "to teleport to the future."))
-            .build();
-
-        TutorialStage endingTutorialStage = new TutorialStageBuilder()
-            .tutorialNotification(new TutorialNotification("Congratulations! You managed to pass the tutorial, now the fun begin... Good luck!!!"))
-            .build();
-
-        // Order in which messages are displayed on the screen.
-        _stages = new List<TutorialStage> {
-            initialTutorialStage,
-            movementTutorialStage,
-            pauseTutorialStage,
-            pickUpItemTutorialStage,
-            chooseNextItemTutorialStage,
-            chooseSlotItemTutorialStage,
-            dropItemTutorialStage,
-            breakeRockTutorialStage,
-            pickUpTimeportTutorialStage,
-            teleportBackTutorialStage,
-            teleportForwardTutorialStage,
-            endingTutorialStage
-        };
-
-        /*{
-            {
-                notification: "notification",
-                otherConditions: false,
-                additionalBehaviour: IP
-            }, { }...
-        }*/
-
-        // Here define how additional conditions to your tutorial stage are going to be satisfied
-        Interactions.Interactions.Instance.itemInteractionPerformed += (object sender, EventArgs e) => breakeRockTutorialStage.satisfyConditions();
-
-        Inventory.Instance.ItemInserted += (object sender, ItemInsertedEventArgs e) => pickUpItemTutorialStage.satisfyConditions();
-
-        Inventory.Instance.ItemRemoved += (object sender, ItemRemovedEventArgs e) => dropItemTutorialStage.satisfyConditions();
-
-        TimeChanger.Instance.TimeChangeUnlocked += (object sender, EventArgs e) => pickUpTimeportTutorialStage.satisfyConditions();
-
-        TimeChanger.Instance.OnTimeChange += (object sender, TimeChanger.OnTimeChangeEventArgs e) => {
-            if ((int)e.time - (int)e.previousTime == -1) teleportBackTutorialStage.satisfyConditions();
-        };
-        TimeChanger.Instance.OnTimeChange += (object sender, TimeChanger.OnTimeChangeEventArgs e) => {
-            if ((int)e.time - (int)e.previousTime == 1) teleportForwardTutorialStage.satisfyConditions();
-        };
+        LevelsManager.Instance.OnLevelChange += FinishTutorialOnLevelChange;
 
         StartCoroutine(waitForTutorialToBegin(0.01f));
+    }
+
+
+    private List<TutorialStage> ParseJsonArray(string jsonString) {
+        List<TutorialStage> tutorialStages = new List<TutorialStage>();
+        var jsonArray = jsonString.Trim().TrimStart('[').TrimEnd(']').Split('}');
+
+        bool flag = true;
+        foreach (var jsonStr in jsonArray) {
+            if (string.IsNullOrWhiteSpace(jsonStr))
+                continue;
+
+            string trimmedJson;
+            if (!flag) {
+                trimmedJson = jsonStr.Substring(1).Trim() + "}"; 
+            } else {
+                trimmedJson = jsonStr.Trim() + "}";
+            }
+            flag = false;
+
+            TutorialStageParser tutorialStageParser = JsonUtility.FromJson<TutorialStageParser>(trimmedJson);
+
+            TutorialStage tutorialStage = new TutorialStageBuilder()
+                .conditionSatisfied(tutorialStageParser.conditionSatisfied != null ? bool.Parse(tutorialStageParser.conditionSatisfied) : false)
+                .mainAction(_actionsDictionary[tutorialStageParser.action])
+                .tutorialNotification(new TutorialNotification(tutorialStageParser.tutorialNotification))
+                .build();
+
+            switch (tutorialStageParser.specialCondition) {
+                case "ItemInserted":
+                    Inventory.Instance.ItemInserted += (object sender, ItemInsertedEventArgs e) => tutorialStage.satisfyConditions();
+                    break;
+                case "ItemRemoved":
+                    Inventory.Instance.ItemRemoved += (object sender, ItemRemovedEventArgs e) => tutorialStage.satisfyConditions();
+                    break;
+                case "itemInteractionPerformed":
+                    Interactions.Interactions.Instance.itemInteractionPerformed += (object sender, EventArgs e) => tutorialStage.satisfyConditions();
+                    break;
+                case "OnTimeChangeForward":
+                    TimeChanger.Instance.OnTimeChange += (object sender, TimeChanger.OnTimeChangeEventArgs e) => {
+                        if ((int)e.time - (int)e.previousTime == 1) tutorialStage.satisfyConditions();
+                    };
+                    break;
+                case "OnTimeChangeBackward":
+                    TimeChanger.Instance.OnTimeChange += (object sender, TimeChanger.OnTimeChangeEventArgs e) => {
+                        if ((int)e.time - (int)e.previousTime == -1) tutorialStage.satisfyConditions();
+                    };
+                    break;
+                case "TimeChangeUnlocked":
+                    TimeChanger.Instance.TimeChangeUnlocked += (object sender, EventArgs e) => tutorialStage.satisfyConditions();
+                    break;
+            }
+
+            tutorialStages.Add(tutorialStage);
+        }
+
+        return tutorialStages;
+    }
+
+    private void FinishTutorialOnLevelChange(object sender, EventArgs e) {
+        TutorialFinished();
     }
 
     IEnumerator waitForTutorialToBegin(float timeToWait) {
@@ -172,5 +145,6 @@ public class TutorialManager : MonoBehaviour {
     IEnumerator EndTutorial() {
         yield return new WaitForSeconds(3f);
         NotificationManager.Instance.EndTutorial();
+        Destroy(this.gameObject);
     }
 }
