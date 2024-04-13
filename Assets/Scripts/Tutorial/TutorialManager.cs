@@ -18,6 +18,7 @@ public class TutorialManager : MonoBehaviour {
     List<TutorialNotification> _messages = new List<TutorialNotification>();
     float _timeToDisplayMessage = 1f;
     Dictionary<string, InputAction> _actionsDictionary = new Dictionary<string, InputAction>();
+    private bool _tutorialFinished = false;
 
     /// <summary>
     /// If you want to disable tutorial, simply deactivate the "tutorialManager" object in the scene "Game"
@@ -138,6 +139,8 @@ public class TutorialManager : MonoBehaviour {
     /// Enable all functionalities as the tutorial is finished.
     /// </summary>
     private void TutorialFinished() {
+        if (_tutorialFinished) return;
+        _tutorialFinished = true;
         NotificationManager.Instance.RaiseTutorialNotification(_stages[_stages.Count - 1].getTutorialNotification());
         StartCoroutine(EndTutorial());
     }
@@ -145,6 +148,5 @@ public class TutorialManager : MonoBehaviour {
     IEnumerator EndTutorial() {
         yield return new WaitForSeconds(3f);
         NotificationManager.Instance.EndTutorial();
-        Destroy(this.gameObject);
     }
 }
