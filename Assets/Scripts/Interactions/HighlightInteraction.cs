@@ -5,7 +5,7 @@ using System.Collections;
 
 namespace Interactions {
     public class HighlightInteraction : MonoBehaviour, IHighlightable {
-        public float scale = 0.02f;
+        [SerializeField] private float scale = 0.02f;
         private SpriteRenderer _sprite;
         private Material _material;
 
