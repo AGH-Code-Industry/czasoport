@@ -58,8 +58,9 @@ public class TutorialManager : MonoBehaviour {
 
             string trimmedJson;
             if (!flag) {
-                trimmedJson = jsonStr.Substring(1).Trim() + "}"; 
-            } else {
+                trimmedJson = jsonStr.Substring(1).Trim() + "}";
+            }
+            else {
                 trimmedJson = jsonStr.Trim() + "}";
             }
             flag = false;

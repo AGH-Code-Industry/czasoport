@@ -132,7 +132,7 @@ namespace LevelTimeChange.TimeChange {
             cinemachineFramingTransposer.m_SoftZoneHeight = softZones.y;
             CInput.TeleportLock.Unlock(key);
 
-            
+
         }
 
         /// <summary>

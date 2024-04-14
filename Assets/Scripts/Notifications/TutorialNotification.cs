@@ -13,7 +13,8 @@ public class TutorialNotification {
                 messages[1],
                 messages[2]
             };
-        } else {
+        }
+        else {
             this.messages = new List<string>(1) {
                 messages[0]
             };
