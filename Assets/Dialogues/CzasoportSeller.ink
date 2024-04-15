@@ -1,8 +1,8 @@
 -> main
 
 === main ===
-Oh you look interesting. Similar to one thing I had found recently...do you want to look at it?
-    * [You got my attention, continue please.]
+Oh you look interesting. Similar to something I found recently... do you want to take a look?
+    * [You've got my attention, please go on.]
         -> show
     * [No, thank you. Bye.]
     ->bywaj
