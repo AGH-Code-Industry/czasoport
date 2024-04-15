@@ -12,8 +12,8 @@ Bye!
 -> DONE
 
 === steal ===
-I have something that I think belogns to you. A piece of a device. If you would bring me that big gem from the upper left room we can make a little exchange. 
-    * [I have what you want, let's make that deal.]
+I have something that I think belogns to you. A part of a device. If you would bring me that big gem from the upper left room we can make a little exchange. 
+    * [I have what you want, let's make the deal.]
         -> show
     * [No, thank you. I'm not interested right now.]
     ->DONE
@@ -25,6 +25,6 @@ I have something that I think belogns to you. A piece of a device. If you would 
         -> bywaj
         
 === trade ===
-If anyone ask, we don't know each other right?
+If anyone asks, we don't know each other right?
 -> DONE
 -> main
