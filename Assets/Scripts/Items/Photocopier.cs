@@ -1,4 +1,4 @@
-﻿using InteractableObjectSystem;
+using InteractableObjectSystem;
 using InventorySystem;
 using Items;
 using System.Collections;
@@ -8,8 +8,7 @@ using UnityEditor.SceneManagement;
 #endif
 using UnityEngine;
 
-public class Photocopier : InteractableObject
-{
+public class Photocopier : InteractableObject {
     [SerializeField] private Item _resultItem;
     [SerializeField] private ItemSO _firstItem;
     [SerializeField] private ItemSO _secondItem;
@@ -33,7 +32,7 @@ public class Photocopier : InteractableObject
             return true;
         }
         return false;
-    }   
+    }
 
     private void CopyDocument() {
         if (_stage == 0) {
@@ -41,7 +40,7 @@ public class Photocopier : InteractableObject
             _go.layer = 0;
             _go.GetComponent<Item>().enabled = false;
             _go.GetComponent<CircleCollider2D>().enabled = false;
-        } 
+        }
         _stage += 1;
         LeanTween.moveY(_go, _go.transform.position.y + _go.transform.localScale.y / 4, 1f).setEase(easeType);
     }

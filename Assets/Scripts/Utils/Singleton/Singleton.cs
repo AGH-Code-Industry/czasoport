@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Utils.Singleton {
     public class Singleton<T> : MonoBehaviour where T : MonoBehaviour {
         public static T I { get; private set; }
-        
+
         private static readonly CLogger Logger = Loggers.LoggersList[Loggers.LoggerType.UTILS];
 
         protected virtual void Awake() {
@@ -17,4 +17,3 @@ namespace Utils.Singleton {
         }
     }
 }
-

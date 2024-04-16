@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using CoinPackage.Debugging;
 using UnityEngine;
 using CustomInput;
@@ -50,7 +50,8 @@ namespace PlayerScripts {
                 _animator.SetFloat("LastHorizontal", movement.x);
                 _animator.SetFloat("LastVertical", movement.y);
                 if (!_audioSource.isPlaying) _audioSource.Play();
-            } else {
+            }
+            else {
                 if (_audioSource.isPlaying) _audioSource.Stop();
             }
             //transform.Translate(Time.deltaTime * _settings.movementSpeed * new Vector2(movement.x, movement.y));

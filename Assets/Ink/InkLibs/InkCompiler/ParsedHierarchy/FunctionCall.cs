@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
-namespace Ink.Parsed
-{
-    public class FunctionCall : Expression
-    {
+namespace Ink.Parsed {
+    public class FunctionCall : Expression {
         public string name { get { return _proxyDivert.target.firstComponent; } }
         public Divert proxyDivert { get { return _proxyDivert; } }
         public List<Expression> arguments { get { return _proxyDivert.arguments; } }
@@ -19,163 +17,169 @@ namespace Ink.Parsed
 
         public bool shouldPopReturnedValue;
 
-        public FunctionCall (Identifier functionName, List<Expression> arguments)
-        {
+        public FunctionCall(Identifier functionName, List<Expression> arguments) {
             _proxyDivert = new Parsed.Divert(new Path(functionName), arguments);
             _proxyDivert.isFunctionCall = true;
-            AddContent (_proxyDivert);
+            AddContent(_proxyDivert);
         }
 
-        public override void GenerateIntoContainer (Runtime.Container container)
-        {
-            var foundList = story.ResolveList (name);
+        public override void GenerateIntoContainer(Runtime.Container container) {
+            var foundList = story.ResolveList(name);
 
             bool usingProxyDivert = false;
 
             if (isChoiceCount) {
 
                 if (arguments.Count > 0)
-                    Error ("The CHOICE_COUNT() function shouldn't take any arguments");
+                    Error("The CHOICE_COUNT() function shouldn't take any arguments");
 
-                container.AddContent (Runtime.ControlCommand.ChoiceCount ());
+                container.AddContent(Runtime.ControlCommand.ChoiceCount());
 
-            } else if (isTurns) {
+            }
+            else if (isTurns) {
 
                 if (arguments.Count > 0)
-                    Error ("The TURNS() function shouldn't take any arguments");
+                    Error("The TURNS() function shouldn't take any arguments");
 
-                container.AddContent (Runtime.ControlCommand.Turns ());
+                container.AddContent(Runtime.ControlCommand.Turns());
 
-            } else if (isTurnsSince || isReadCount) {
+            }
+            else if (isTurnsSince || isReadCount) {
 
-                var divertTarget = arguments [0] as DivertTarget;
-                var variableDivertTarget = arguments [0] as VariableReference;
+                var divertTarget = arguments[0] as DivertTarget;
+                var variableDivertTarget = arguments[0] as VariableReference;
 
                 if (arguments.Count != 1 || (divertTarget == null && variableDivertTarget == null)) {
-                    Error ("The " + name + "() function should take one argument: a divert target to the target knot, stitch, gather or choice you want to check. e.g. TURNS_SINCE(-> myKnot)");
+                    Error("The " + name + "() function should take one argument: a divert target to the target knot, stitch, gather or choice you want to check. e.g. TURNS_SINCE(-> myKnot)");
                     return;
                 }
 
                 if (divertTarget) {
                     _divertTargetToCount = divertTarget;
-                    AddContent (_divertTargetToCount);
+                    AddContent(_divertTargetToCount);
 
-                    _divertTargetToCount.GenerateIntoContainer (container);
-                } else {
+                    _divertTargetToCount.GenerateIntoContainer(container);
+                }
+                else {
                     _variableReferenceToCount = variableDivertTarget;
-                    AddContent (_variableReferenceToCount);
+                    AddContent(_variableReferenceToCount);
 
-                    _variableReferenceToCount.GenerateIntoContainer (container);
+                    _variableReferenceToCount.GenerateIntoContainer(container);
                 }
 
                 if (isTurnsSince)
-                    container.AddContent (Runtime.ControlCommand.TurnsSince ());
+                    container.AddContent(Runtime.ControlCommand.TurnsSince());
                 else
-                    container.AddContent (Runtime.ControlCommand.ReadCount ());
+                    container.AddContent(Runtime.ControlCommand.ReadCount());
 
-            } else if (isRandom) {
+            }
+            else if (isRandom) {
                 if (arguments.Count != 2)
-                    Error ("RANDOM should take 2 parameters: a minimum and a maximum integer");
+                    Error("RANDOM should take 2 parameters: a minimum and a maximum integer");
 
                 // We can type check single values, but not complex expressions
                 for (int arg = 0; arg < arguments.Count; arg++) {
-                    if (arguments [arg] is Number) {
-                        var num = arguments [arg] as Number;
+                    if (arguments[arg] is Number) {
+                        var num = arguments[arg] as Number;
                         if (!(num.value is int)) {
                             string paramName = arg == 0 ? "minimum" : "maximum";
-                            Error ("RANDOM's " + paramName + " parameter should be an integer");
+                            Error("RANDOM's " + paramName + " parameter should be an integer");
                         }
                     }
 
-                    arguments [arg].GenerateIntoContainer (container);
+                    arguments[arg].GenerateIntoContainer(container);
                 }
 
-                container.AddContent (Runtime.ControlCommand.Random ());
+                container.AddContent(Runtime.ControlCommand.Random());
 
-            } else if (isSeedRandom) {
+            }
+            else if (isSeedRandom) {
                 if (arguments.Count != 1)
-                    Error ("SEED_RANDOM should take 1 parameter - an integer seed");
+                    Error("SEED_RANDOM should take 1 parameter - an integer seed");
 
-                var num = arguments [0] as Number;
+                var num = arguments[0] as Number;
                 if (num && !(num.value is int)) {
-                    Error ("SEED_RANDOM's parameter should be an integer seed");
+                    Error("SEED_RANDOM's parameter should be an integer seed");
                 }
 
-                arguments [0].GenerateIntoContainer (container);
+                arguments[0].GenerateIntoContainer(container);
 
-                container.AddContent (Runtime.ControlCommand.SeedRandom ());
+                container.AddContent(Runtime.ControlCommand.SeedRandom());
 
-            } else if (isListRange) {
+            }
+            else if (isListRange) {
                 if (arguments.Count != 3)
-                    Error ("LIST_RANGE should take 3 parameters - a list, a min and a max");
+                    Error("LIST_RANGE should take 3 parameters - a list, a min and a max");
 
                 for (int arg = 0; arg < arguments.Count; arg++)
-                    arguments [arg].GenerateIntoContainer (container);
+                    arguments[arg].GenerateIntoContainer(container);
 
-                container.AddContent (Runtime.ControlCommand.ListRange ());
+                container.AddContent(Runtime.ControlCommand.ListRange());
 
-            } else if( isListRandom ) {
+            }
+            else if (isListRandom) {
                 if (arguments.Count != 1)
-                    Error ("LIST_RANDOM should take 1 parameter - a list");
+                    Error("LIST_RANDOM should take 1 parameter - a list");
 
-                arguments [0].GenerateIntoContainer (container);
+                arguments[0].GenerateIntoContainer(container);
 
-                container.AddContent (Runtime.ControlCommand.ListRandom ());
+                container.AddContent(Runtime.ControlCommand.ListRandom());
 
-            } else if (Runtime.NativeFunctionCall.CallExistsWithName (name)) {
+            }
+            else if (Runtime.NativeFunctionCall.CallExistsWithName(name)) {
 
-                var nativeCall = Runtime.NativeFunctionCall.CallWithName (name);
+                var nativeCall = Runtime.NativeFunctionCall.CallWithName(name);
 
                 if (nativeCall.numberOfParameters != arguments.Count) {
                     var msg = name + " should take " + nativeCall.numberOfParameters + " parameter";
                     if (nativeCall.numberOfParameters > 1)
                         msg += "s";
-                    Error (msg);
+                    Error(msg);
                 }
 
                 for (int arg = 0; arg < arguments.Count; arg++)
-                    arguments [arg].GenerateIntoContainer (container);
+                    arguments[arg].GenerateIntoContainer(container);
 
-                container.AddContent (Runtime.NativeFunctionCall.CallWithName (name));
-            } else if (foundList != null) {
+                container.AddContent(Runtime.NativeFunctionCall.CallWithName(name));
+            }
+            else if (foundList != null) {
                 if (arguments.Count > 1)
-                    Error ("Can currently only construct a list from one integer (or an empty list from a given list definition)");
+                    Error("Can currently only construct a list from one integer (or an empty list from a given list definition)");
 
                 // List item from given int
                 if (arguments.Count == 1) {
-                    container.AddContent (new Runtime.StringValue (name));
-                    arguments [0].GenerateIntoContainer (container);
-                    container.AddContent (Runtime.ControlCommand.ListFromInt ());
+                    container.AddContent(new Runtime.StringValue(name));
+                    arguments[0].GenerateIntoContainer(container);
+                    container.AddContent(Runtime.ControlCommand.ListFromInt());
                 }
 
                 // Empty list with given origin.
                 else {
-                    var list = new Runtime.InkList ();
-                    list.SetInitialOriginName (name);
-                    container.AddContent (new Runtime.ListValue (list));
+                    var list = new Runtime.InkList();
+                    list.SetInitialOriginName(name);
+                    container.AddContent(new Runtime.ListValue(list));
                 }
             }
 
             // Normal function call
             else {
-                container.AddContent (_proxyDivert.runtimeObject);
+                container.AddContent(_proxyDivert.runtimeObject);
                 usingProxyDivert = true;
             }
 
             // Don't attempt to resolve as a divert if we're not doing a normal function call
-            if( !usingProxyDivert ) content.Remove (_proxyDivert);
+            if (!usingProxyDivert) content.Remove(_proxyDivert);
 
             // Function calls that are used alone on a tilda-based line:
             //  ~ func()
             // Should tidy up any returned value from the evaluation stack,
             // since it's unused.
             if (shouldPopReturnedValue)
-                container.AddContent (Runtime.ControlCommand.PopEvaluatedValue ());
+                container.AddContent(Runtime.ControlCommand.PopEvaluatedValue());
         }
 
-        public override void ResolveReferences (Story context)
-        {
-            base.ResolveReferences (context);
+        public override void ResolveReferences(Story context) {
+            base.ResolveReferences(context);
 
             // If we aren't using the proxy divert after all (e.g. if
             // it's a native function call), but we still have arguments,
@@ -183,39 +187,39 @@ namespace Ink.Parsed
             // is no longer in the content array.
             if (!content.Contains(_proxyDivert) && arguments != null) {
                 foreach (var arg in arguments)
-                    arg.ResolveReferences (context);
+                    arg.ResolveReferences(context);
             }
 
-            if( _divertTargetToCount ) {
+            if (_divertTargetToCount) {
                 var divert = _divertTargetToCount.divert;
                 var attemptingTurnCountOfVariableTarget = divert.runtimeDivert.variableDivertName != null;
 
-                if( attemptingTurnCountOfVariableTarget ) {
-                    Error("When getting the TURNS_SINCE() of a variable target, remove the '->' - i.e. it should just be TURNS_SINCE("+divert.runtimeDivert.variableDivertName+")");
+                if (attemptingTurnCountOfVariableTarget) {
+                    Error("When getting the TURNS_SINCE() of a variable target, remove the '->' - i.e. it should just be TURNS_SINCE(" + divert.runtimeDivert.variableDivertName + ")");
                     return;
                 }
 
                 var targetObject = divert.targetContent;
-                if( targetObject == null ) {
-                    if( !attemptingTurnCountOfVariableTarget ) {
-                        Error("Failed to find target for TURNS_SINCE: '"+divert.target+"'");
+                if (targetObject == null) {
+                    if (!attemptingTurnCountOfVariableTarget) {
+                        Error("Failed to find target for TURNS_SINCE: '" + divert.target + "'");
                     }
-                } else {
+                }
+                else {
                     targetObject.containerForCounting.turnIndexShouldBeCounted = true;
                 }
             }
 
-            else if( _variableReferenceToCount ) {
+            else if (_variableReferenceToCount) {
                 var runtimeVarRef = _variableReferenceToCount.runtimeVarRef;
-                if( runtimeVarRef.pathForCount != null ) {
-                    Error("Should be "+name+"(-> "+_variableReferenceToCount.name+"). Usage without the '->' only makes sense for variable targets.");
+                if (runtimeVarRef.pathForCount != null) {
+                    Error("Should be " + name + "(-> " + _variableReferenceToCount.name + "). Usage without the '->' only makes sense for variable targets.");
                 }
             }
         }
 
-        public static bool IsBuiltIn(string name)
-        {
-            if (Runtime.NativeFunctionCall.CallExistsWithName (name))
+        public static bool IsBuiltIn(string name) {
+            if (Runtime.NativeFunctionCall.CallExistsWithName(name))
                 return true;
 
             return name == "CHOICE_COUNT"
@@ -228,10 +232,9 @@ namespace Ink.Parsed
                 || name == "READ_COUNT";
         }
 
-        public override string ToString ()
-        {
-            var strArgs = string.Join (", ", arguments.ToStringsArray());
-            return string.Format ("{0}({1})", name, strArgs);
+        public override string ToString() {
+            var strArgs = string.Join(", ", arguments.ToStringsArray());
+            return string.Format("{0}({1})", name, strArgs);
         }
 
         Parsed.Divert _proxyDivert;
@@ -239,4 +242,3 @@ namespace Ink.Parsed
         Parsed.VariableReference _variableReferenceToCount;
     }
 }
-

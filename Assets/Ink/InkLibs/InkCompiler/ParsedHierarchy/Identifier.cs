@@ -3,8 +3,7 @@ namespace Ink.Parsed {
         public string name;
         public Runtime.DebugMetadata debugMetadata;
 
-        public override string ToString()
-        {
+        public override string ToString() {
             return name;
         }
 

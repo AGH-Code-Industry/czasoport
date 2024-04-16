@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace PlayerScripts {
-    
+
     /// <summary>
     /// Settings for scene changing and time changing systems.
     /// </summary>

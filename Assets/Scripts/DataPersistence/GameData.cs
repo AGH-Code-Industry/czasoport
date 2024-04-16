@@ -1,4 +1,4 @@
-﻿using DataPersistence.DataTypes;
+using DataPersistence.DataTypes;
 using LevelTimeChange;
 using Notifications;
 using Settings;

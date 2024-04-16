@@ -1,9 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowWorld : MonoBehaviour
-{
+public class FollowWorld : MonoBehaviour {
     [SerializeField] Transform lookAt;
     [SerializeField] Vector3 offset;
 

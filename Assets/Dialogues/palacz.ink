@@ -12,12 +12,12 @@ Oh...
 -> DONE
 
 == shame ==
-You see...they don't necesarry aprove my hobby. I would say it's quite unhealthy... By the way, do you have fire? 
+You see... they don't exactly approve of my hobby. I would say it's quite unhealthy... By the way, do you have fire? 
     * [Exhchange #requiresItem: Torch #getsItem: BeigeGem]
         -> trade
     * [I don't. Sorry.]
         -> bywaj
         
 === trade ===
-Ahh, that's it. Thank you stranger. Here, have this, maybe you will need it.
+Ahh, that's it. Thank you stranger. Here, have this gem, perhaps you will find some use for it.
 -> DONE

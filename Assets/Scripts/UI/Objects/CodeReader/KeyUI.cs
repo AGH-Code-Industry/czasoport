@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class KeyUI : MonoBehaviour {
     [SerializeField] private ScreenUI screenUI;
-    
+
     enum ButtonType {
         Key,
         Enter,

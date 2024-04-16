@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
@@ -9,12 +9,12 @@ using UnityEngine.UIElements;
 namespace InteractableObjectSystem.Objects {
     [RequireComponent(typeof(BoxCollider2D))]
     public class BreakableRock : InteractableObject {
-        
+
         private enum RockState {
             NotDestroyed,
             Destroyed
         }
-        
+
         [SerializeField] private List<ItemSO> _interactedWith;
         [SerializeField] private ParticleSystem _particleSystem;
         private BoxCollider2D _collider;
@@ -52,7 +52,7 @@ namespace InteractableObjectSystem.Objects {
         private void Break() {
             _state = RockState.Destroyed;
             _particleSystem.Play();
-            Invoke("HideSprite",0.5f);
+            Invoke("HideSprite", 0.5f);
             CDebug.Log("Broken");
             _audioSource.enabled = true;
             _audioSource.Play();
