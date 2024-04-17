@@ -33,7 +33,7 @@ namespace InventorySystem {
 
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.INVENTORY];
         private InventorySettingsSO _settings;
-        public Item[] _items;
+        private Item[] _items;
         private int _itemsCount = 0;
         public int itemsCount {
             get {
@@ -125,13 +125,19 @@ namespace InventorySystem {
         /// <returns></returns>
         public bool InsertItem(Item item) {
             if (_itemsCount == _settings.itemsCount - 1) { // Inventory full
-                NotificationManager.Instance.RaiseNotification(new Notification("Inventory is full", 3f));
-                return false;
+                //NotificationManager.Instance.RaiseNotification(new Notification("Inventory is full", 3f));
+                if (_selectedSlot == 0) {
+                    _selectedSlot = 1;
+                    SelectedSlotChanged?.Invoke(this, new SelectedSlotChangedEventArgs() {
+                        Slot = _selectedSlot
+                    });
+                }
+                RemoveItem(out Item i);
+                ShowItem(i);
             }
 
             if (_items[_selectedSlot] is null && _selectedSlot != 0) { // Put item in the selected slot
                 _items[_selectedSlot] = item;
-                Debug.Log(_selectedSlot);
                 _itemsCount++;
                 ItemInserted?.Invoke(this, new ItemInsertedEventArgs() {
                     Slot = _selectedSlot,
@@ -172,7 +178,7 @@ namespace InventorySystem {
                 Item = item,
                 Slot = _selectedSlot
             });
-            if (item.Durability <= 0) {
+            if (item.Durability == 0) {
                 RemoveItem(out var removedItem);
                 Destroy(item.gameObject);
             }
