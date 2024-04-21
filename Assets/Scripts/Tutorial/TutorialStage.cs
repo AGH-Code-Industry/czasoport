@@ -16,34 +16,34 @@ public class TutorialStage {
     private TutorialNotification _tutorialNotification;
     private bool _actionPerformed = false;
 
-    public TutorialStage(InputAction action, bool b, TutorialNotification _tutorialNotification) {
+    public TutorialStage(InputAction action, bool otherConditionsSatisfied, TutorialNotification tutorialNotification) {
         _mainAction = action;
-        _otherConditionsSatisfied = b;
-        this._tutorialNotification = _tutorialNotification;
-        if (action != null) _mainAction.performed += performAction;
+        _otherConditionsSatisfied = otherConditionsSatisfied;
+        this._tutorialNotification = tutorialNotification;
+        if (action != null) _mainAction.performed += PerformAction;
     }
 
-    private void performAction(InputAction.CallbackContext context) {
+    private void PerformAction(InputAction.CallbackContext context) {
         _actionPerformed = true;
     }
 
-    public void satisfyConditions() {
+    public void SatisfyConditions() {
         _otherConditionsSatisfied = true;
     }
 
-    public bool isConditionSatisfied() {
+    public bool IsConditionSatisfied() {
         return _otherConditionsSatisfied;
     }
 
-    public TutorialNotification getTutorialNotification() {
+    public TutorialNotification GetTutorialNotification() {
         return _tutorialNotification;
     }
 
-    public InputAction getMainAction() {
+    public InputAction GetMainAction() {
         return _mainAction;
     }
 
-    public bool isActionPerformed() {
+    public bool IsActionPerformed() {
         return _actionPerformed;
     }
 }

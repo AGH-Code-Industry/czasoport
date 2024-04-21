@@ -75,26 +75,26 @@ public class TutorialManager : MonoBehaviour {
 
             switch (tutorialStageParser.specialCondition) {
                 case "ItemInserted":
-                    Inventory.Instance.ItemInserted += (object sender, ItemInsertedEventArgs e) => tutorialStage.satisfyConditions();
+                    Inventory.Instance.ItemInserted += (object sender, ItemInsertedEventArgs e) => tutorialStage.SatisfyConditions();
                     break;
                 case "ItemRemoved":
-                    Inventory.Instance.ItemRemoved += (object sender, ItemRemovedEventArgs e) => tutorialStage.satisfyConditions();
+                    Inventory.Instance.ItemRemoved += (object sender, ItemRemovedEventArgs e) => tutorialStage.SatisfyConditions();
                     break;
                 case "itemInteractionPerformed":
-                    Interactions.Interactions.Instance.itemInteractionPerformed += (object sender, EventArgs e) => tutorialStage.satisfyConditions();
+                    Interactions.Interactions.Instance.itemInteractionPerformed += (object sender, EventArgs e) => tutorialStage.SatisfyConditions();
                     break;
                 case "OnTimeChangeForward":
                     TimeChanger.Instance.OnTimeChange += (object sender, TimeChanger.OnTimeChangeEventArgs e) => {
-                        if ((int)e.time - (int)e.previousTime == 1) tutorialStage.satisfyConditions();
+                        if ((int)e.time - (int)e.previousTime == 1) tutorialStage.SatisfyConditions();
                     };
                     break;
                 case "OnTimeChangeBackward":
                     TimeChanger.Instance.OnTimeChange += (object sender, TimeChanger.OnTimeChangeEventArgs e) => {
-                        if ((int)e.time - (int)e.previousTime == -1) tutorialStage.satisfyConditions();
+                        if ((int)e.time - (int)e.previousTime == -1) tutorialStage.SatisfyConditions();
                     };
                     break;
                 case "TimeChangeUnlocked":
-                    TimeChanger.Instance.TimeChangeUnlocked += (object sender, EventArgs e) => tutorialStage.satisfyConditions();
+                    TimeChanger.Instance.TimeChangeUnlocked += (object sender, EventArgs e) => tutorialStage.SatisfyConditions();
                     break;
             }
 
@@ -112,10 +112,10 @@ public class TutorialManager : MonoBehaviour {
         yield return new WaitForSeconds(timeToWait);
         NotificationManager.Instance.StartTutorial();
         CInput.InputActions.Movement.Enable();
-        NotificationManager.Instance.RaiseTutorialNotification(_stages[0].getTutorialNotification());
+        NotificationManager.Instance.RaiseTutorialNotification(_stages[0].GetTutorialNotification());
         yield return new WaitForSeconds(_timeToDisplayMessage);
-        _stages[1].getMainAction().performed += OnNextTutorialStage;
-        NotificationManager.Instance.RaiseTutorialNotification(_stages[1].getTutorialNotification());
+        _stages[1].GetMainAction().performed += OnNextTutorialStage;
+        NotificationManager.Instance.RaiseTutorialNotification(_stages[1].GetTutorialNotification());
     }
 
     /// <summary>
@@ -123,13 +123,13 @@ public class TutorialManager : MonoBehaviour {
     /// The order of the stages of tutorial is set by the list "_stages".
     /// </summary>
     private void OnNextTutorialStage(InputAction.CallbackContext context) {
-        if (!_stages[stage].isConditionSatisfied()) return;
-        _stages[stage].getMainAction().performed -= OnNextTutorialStage;
-        while (stage + 1 < _stages.Count && _stages[stage].isActionPerformed() && _stages[stage].isConditionSatisfied()) { stage++; }
+        if (!_stages[stage].IsConditionSatisfied()) return;
+        _stages[stage].GetMainAction().performed -= OnNextTutorialStage;
+        while (stage + 1 < _stages.Count && _stages[stage].IsActionPerformed() && _stages[stage].IsConditionSatisfied()) { stage++; }
         if (stage + 1 < _stages.Count) {
-            NotificationManager.Instance.RaiseTutorialNotification(_stages[stage].getTutorialNotification());
-            _stages[stage].getMainAction().Enable();
-            _stages[stage].getMainAction().performed += OnNextTutorialStage;
+            NotificationManager.Instance.RaiseTutorialNotification(_stages[stage].GetTutorialNotification());
+            _stages[stage].GetMainAction().Enable();
+            _stages[stage].GetMainAction().performed += OnNextTutorialStage;
         }
         else {
             TutorialFinished();
@@ -142,7 +142,7 @@ public class TutorialManager : MonoBehaviour {
     private void TutorialFinished() {
         if (_tutorialFinished) return;
         _tutorialFinished = true;
-        NotificationManager.Instance.RaiseTutorialNotification(_stages[_stages.Count - 1].getTutorialNotification());
+        NotificationManager.Instance.RaiseTutorialNotification(_stages[_stages.Count - 1].GetTutorialNotification());
         StartCoroutine(EndTutorial());
     }
 
