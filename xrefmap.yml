@@ -13923,6 +13923,15 @@ references:
   commentId: T:Global.TutorialNotification
   fullName: TutorialNotification
   nameWithType: TutorialNotification
+- uid: Global.TutorialNotification.#ctor(System.Collections.Generic.List{System.String})
+  name: TutorialNotification(List<string>)
+  href: api/Global.TutorialNotification.html#Global_TutorialNotification__ctor_System_Collections_Generic_List_System_String__
+  commentId: M:Global.TutorialNotification.#ctor(System.Collections.Generic.List{System.String})
+  name.vb: New(List(Of String))
+  fullName: TutorialNotification.TutorialNotification(System.Collections.Generic.List<string>)
+  fullName.vb: TutorialNotification.New(System.Collections.Generic.List(Of String))
+  nameWithType: TutorialNotification.TutorialNotification(List<string>)
+  nameWithType.vb: TutorialNotification.New(List(Of String))
 - uid: Global.TutorialNotification.#ctor(System.String)
   name: TutorialNotification(string)
   href: api/Global.TutorialNotification.html#Global_TutorialNotification__ctor_System_String_
@@ -13963,15 +13972,15 @@ references:
   commentId: T:Global.TutorialStage
   fullName: TutorialStage
   nameWithType: TutorialStage
-- uid: Global.TutorialStage.#ctor(InputAction,System.Boolean)
-  name: TutorialStage(InputAction, bool)
-  href: api/Global.TutorialStage.html#Global_TutorialStage__ctor_InputAction_System_Boolean_
-  commentId: M:Global.TutorialStage.#ctor(InputAction,System.Boolean)
-  name.vb: New(InputAction, Boolean)
-  fullName: TutorialStage.TutorialStage(InputAction, bool)
-  fullName.vb: TutorialStage.New(InputAction, Boolean)
-  nameWithType: TutorialStage.TutorialStage(InputAction, bool)
-  nameWithType.vb: TutorialStage.New(InputAction, Boolean)
+- uid: Global.TutorialStage.#ctor(InputAction,System.Boolean,TutorialNotification)
+  name: TutorialStage(InputAction, bool, TutorialNotification)
+  href: api/Global.TutorialStage.html#Global_TutorialStage__ctor_InputAction_System_Boolean_TutorialNotification_
+  commentId: M:Global.TutorialStage.#ctor(InputAction,System.Boolean,TutorialNotification)
+  name.vb: New(InputAction, Boolean, TutorialNotification)
+  fullName: TutorialStage.TutorialStage(InputAction, bool, TutorialNotification)
+  fullName.vb: TutorialStage.New(InputAction, Boolean, TutorialNotification)
+  nameWithType: TutorialStage.TutorialStage(InputAction, bool, TutorialNotification)
+  nameWithType.vb: TutorialStage.New(InputAction, Boolean, TutorialNotification)
 - uid: Global.TutorialStage.#ctor*
   name: TutorialStage
   href: api/Global.TutorialStage.html#Global_TutorialStage__ctor_
@@ -13982,18 +13991,181 @@ references:
   fullName.vb: TutorialStage.New
   nameWithType: TutorialStage.TutorialStage
   nameWithType.vb: TutorialStage.New
-- uid: Global.TutorialStage.mainAction
+- uid: Global.TutorialStage.GetMainAction
+  name: GetMainAction()
+  href: api/Global.TutorialStage.html#Global_TutorialStage_GetMainAction
+  commentId: M:Global.TutorialStage.GetMainAction
+  fullName: TutorialStage.GetMainAction()
+  nameWithType: TutorialStage.GetMainAction()
+- uid: Global.TutorialStage.GetMainAction*
+  name: GetMainAction
+  href: api/Global.TutorialStage.html#Global_TutorialStage_GetMainAction_
+  commentId: Overload:Global.TutorialStage.GetMainAction
+  isSpec: "True"
+  fullName: TutorialStage.GetMainAction
+  nameWithType: TutorialStage.GetMainAction
+- uid: Global.TutorialStage.GetTutorialNotification
+  name: GetTutorialNotification()
+  href: api/Global.TutorialStage.html#Global_TutorialStage_GetTutorialNotification
+  commentId: M:Global.TutorialStage.GetTutorialNotification
+  fullName: TutorialStage.GetTutorialNotification()
+  nameWithType: TutorialStage.GetTutorialNotification()
+- uid: Global.TutorialStage.GetTutorialNotification*
+  name: GetTutorialNotification
+  href: api/Global.TutorialStage.html#Global_TutorialStage_GetTutorialNotification_
+  commentId: Overload:Global.TutorialStage.GetTutorialNotification
+  isSpec: "True"
+  fullName: TutorialStage.GetTutorialNotification
+  nameWithType: TutorialStage.GetTutorialNotification
+- uid: Global.TutorialStage.IsActionPerformed
+  name: IsActionPerformed()
+  href: api/Global.TutorialStage.html#Global_TutorialStage_IsActionPerformed
+  commentId: M:Global.TutorialStage.IsActionPerformed
+  fullName: TutorialStage.IsActionPerformed()
+  nameWithType: TutorialStage.IsActionPerformed()
+- uid: Global.TutorialStage.IsActionPerformed*
+  name: IsActionPerformed
+  href: api/Global.TutorialStage.html#Global_TutorialStage_IsActionPerformed_
+  commentId: Overload:Global.TutorialStage.IsActionPerformed
+  isSpec: "True"
+  fullName: TutorialStage.IsActionPerformed
+  nameWithType: TutorialStage.IsActionPerformed
+- uid: Global.TutorialStage.IsConditionSatisfied
+  name: IsConditionSatisfied()
+  href: api/Global.TutorialStage.html#Global_TutorialStage_IsConditionSatisfied
+  commentId: M:Global.TutorialStage.IsConditionSatisfied
+  fullName: TutorialStage.IsConditionSatisfied()
+  nameWithType: TutorialStage.IsConditionSatisfied()
+- uid: Global.TutorialStage.IsConditionSatisfied*
+  name: IsConditionSatisfied
+  href: api/Global.TutorialStage.html#Global_TutorialStage_IsConditionSatisfied_
+  commentId: Overload:Global.TutorialStage.IsConditionSatisfied
+  isSpec: "True"
+  fullName: TutorialStage.IsConditionSatisfied
+  nameWithType: TutorialStage.IsConditionSatisfied
+- uid: Global.TutorialStage.SatisfyConditions
+  name: SatisfyConditions()
+  href: api/Global.TutorialStage.html#Global_TutorialStage_SatisfyConditions
+  commentId: M:Global.TutorialStage.SatisfyConditions
+  fullName: TutorialStage.SatisfyConditions()
+  nameWithType: TutorialStage.SatisfyConditions()
+- uid: Global.TutorialStage.SatisfyConditions*
+  name: SatisfyConditions
+  href: api/Global.TutorialStage.html#Global_TutorialStage_SatisfyConditions_
+  commentId: Overload:Global.TutorialStage.SatisfyConditions
+  isSpec: "True"
+  fullName: TutorialStage.SatisfyConditions
+  nameWithType: TutorialStage.SatisfyConditions
+- uid: Global.TutorialStageBuilder
+  name: TutorialStageBuilder
+  href: api/Global.TutorialStageBuilder.html
+  commentId: T:Global.TutorialStageBuilder
+  fullName: TutorialStageBuilder
+  nameWithType: TutorialStageBuilder
+- uid: Global.TutorialStageBuilder.#ctor
+  name: TutorialStageBuilder()
+  href: api/Global.TutorialStageBuilder.html#Global_TutorialStageBuilder__ctor
+  commentId: M:Global.TutorialStageBuilder.#ctor
+  name.vb: New()
+  fullName: TutorialStageBuilder.TutorialStageBuilder()
+  fullName.vb: TutorialStageBuilder.New()
+  nameWithType: TutorialStageBuilder.TutorialStageBuilder()
+  nameWithType.vb: TutorialStageBuilder.New()
+- uid: Global.TutorialStageBuilder.#ctor*
+  name: TutorialStageBuilder
+  href: api/Global.TutorialStageBuilder.html#Global_TutorialStageBuilder__ctor_
+  commentId: Overload:Global.TutorialStageBuilder.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TutorialStageBuilder.TutorialStageBuilder
+  fullName.vb: TutorialStageBuilder.New
+  nameWithType: TutorialStageBuilder.TutorialStageBuilder
+  nameWithType.vb: TutorialStageBuilder.New
+- uid: Global.TutorialStageBuilder.build
+  name: build()
+  href: api/Global.TutorialStageBuilder.html#Global_TutorialStageBuilder_build
+  commentId: M:Global.TutorialStageBuilder.build
+  fullName: TutorialStageBuilder.build()
+  nameWithType: TutorialStageBuilder.build()
+- uid: Global.TutorialStageBuilder.build*
+  name: build
+  href: api/Global.TutorialStageBuilder.html#Global_TutorialStageBuilder_build_
+  commentId: Overload:Global.TutorialStageBuilder.build
+  isSpec: "True"
+  fullName: TutorialStageBuilder.build
+  nameWithType: TutorialStageBuilder.build
+- uid: Global.TutorialStageBuilder.conditionSatisfied(System.Boolean)
+  name: conditionSatisfied(bool)
+  href: api/Global.TutorialStageBuilder.html#Global_TutorialStageBuilder_conditionSatisfied_System_Boolean_
+  commentId: M:Global.TutorialStageBuilder.conditionSatisfied(System.Boolean)
+  name.vb: conditionSatisfied(Boolean)
+  fullName: TutorialStageBuilder.conditionSatisfied(bool)
+  fullName.vb: TutorialStageBuilder.conditionSatisfied(Boolean)
+  nameWithType: TutorialStageBuilder.conditionSatisfied(bool)
+  nameWithType.vb: TutorialStageBuilder.conditionSatisfied(Boolean)
+- uid: Global.TutorialStageBuilder.conditionSatisfied*
+  name: conditionSatisfied
+  href: api/Global.TutorialStageBuilder.html#Global_TutorialStageBuilder_conditionSatisfied_
+  commentId: Overload:Global.TutorialStageBuilder.conditionSatisfied
+  isSpec: "True"
+  fullName: TutorialStageBuilder.conditionSatisfied
+  nameWithType: TutorialStageBuilder.conditionSatisfied
+- uid: Global.TutorialStageBuilder.mainAction(InputAction)
+  name: mainAction(InputAction)
+  href: api/Global.TutorialStageBuilder.html#Global_TutorialStageBuilder_mainAction_InputAction_
+  commentId: M:Global.TutorialStageBuilder.mainAction(InputAction)
+  fullName: TutorialStageBuilder.mainAction(InputAction)
+  nameWithType: TutorialStageBuilder.mainAction(InputAction)
+- uid: Global.TutorialStageBuilder.mainAction*
   name: mainAction
-  href: api/Global.TutorialStage.html#Global_TutorialStage_mainAction
-  commentId: F:Global.TutorialStage.mainAction
-  fullName: TutorialStage.mainAction
-  nameWithType: TutorialStage.mainAction
-- uid: Global.TutorialStage.otherConditionsSatisfied
-  name: otherConditionsSatisfied
-  href: api/Global.TutorialStage.html#Global_TutorialStage_otherConditionsSatisfied
-  commentId: F:Global.TutorialStage.otherConditionsSatisfied
-  fullName: TutorialStage.otherConditionsSatisfied
-  nameWithType: TutorialStage.otherConditionsSatisfied
+  href: api/Global.TutorialStageBuilder.html#Global_TutorialStageBuilder_mainAction_
+  commentId: Overload:Global.TutorialStageBuilder.mainAction
+  isSpec: "True"
+  fullName: TutorialStageBuilder.mainAction
+  nameWithType: TutorialStageBuilder.mainAction
+- uid: Global.TutorialStageBuilder.tutorialNotification(TutorialNotification)
+  name: tutorialNotification(TutorialNotification)
+  href: api/Global.TutorialStageBuilder.html#Global_TutorialStageBuilder_tutorialNotification_TutorialNotification_
+  commentId: M:Global.TutorialStageBuilder.tutorialNotification(TutorialNotification)
+  fullName: TutorialStageBuilder.tutorialNotification(TutorialNotification)
+  nameWithType: TutorialStageBuilder.tutorialNotification(TutorialNotification)
+- uid: Global.TutorialStageBuilder.tutorialNotification*
+  name: tutorialNotification
+  href: api/Global.TutorialStageBuilder.html#Global_TutorialStageBuilder_tutorialNotification_
+  commentId: Overload:Global.TutorialStageBuilder.tutorialNotification
+  isSpec: "True"
+  fullName: TutorialStageBuilder.tutorialNotification
+  nameWithType: TutorialStageBuilder.tutorialNotification
+- uid: Global.TutorialStageParser
+  name: TutorialStageParser
+  href: api/Global.TutorialStageParser.html
+  commentId: T:Global.TutorialStageParser
+  fullName: TutorialStageParser
+  nameWithType: TutorialStageParser
+- uid: Global.TutorialStageParser.action
+  name: action
+  href: api/Global.TutorialStageParser.html#Global_TutorialStageParser_action
+  commentId: F:Global.TutorialStageParser.action
+  fullName: TutorialStageParser.action
+  nameWithType: TutorialStageParser.action
+- uid: Global.TutorialStageParser.conditionSatisfied
+  name: conditionSatisfied
+  href: api/Global.TutorialStageParser.html#Global_TutorialStageParser_conditionSatisfied
+  commentId: F:Global.TutorialStageParser.conditionSatisfied
+  fullName: TutorialStageParser.conditionSatisfied
+  nameWithType: TutorialStageParser.conditionSatisfied
+- uid: Global.TutorialStageParser.specialCondition
+  name: specialCondition
+  href: api/Global.TutorialStageParser.html#Global_TutorialStageParser_specialCondition
+  commentId: F:Global.TutorialStageParser.specialCondition
+  fullName: TutorialStageParser.specialCondition
+  nameWithType: TutorialStageParser.specialCondition
+- uid: Global.TutorialStageParser.tutorialNotification
+  name: tutorialNotification
+  href: api/Global.TutorialStageParser.html#Global_TutorialStageParser_tutorialNotification
+  commentId: F:Global.TutorialStageParser.tutorialNotification
+  fullName: TutorialStageParser.tutorialNotification
+  nameWithType: TutorialStageParser.tutorialNotification
 - uid: Global.TweenAction
   name: TweenAction
   href: api/Global.TweenAction.html
@@ -36005,6 +36177,12 @@ references:
   commentId: F:LevelTimeChange.LevelsLoader.LevelsManager.LoadedLevels
   fullName: LevelTimeChange.LevelsLoader.LevelsManager.LoadedLevels
   nameWithType: LevelsManager.LoadedLevels
+- uid: LevelTimeChange.LevelsLoader.LevelsManager.OnLevelChange
+  name: OnLevelChange
+  href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_OnLevelChange
+  commentId: E:LevelTimeChange.LevelsLoader.LevelsManager.OnLevelChange
+  fullName: LevelTimeChange.LevelsLoader.LevelsManager.OnLevelChange
+  nameWithType: LevelsManager.OnLevelChange
 - uid: LevelTimeChange.LevelsLoader.LevelsManager.ReportForDiscovery(LevelTimeChange.LevelsLoader.LevelInfoSO)
   name: ReportForDiscovery(LevelInfoSO)
   href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_ReportForDiscovery_LevelTimeChange_LevelsLoader_LevelInfoSO_
@@ -36257,6 +36435,12 @@ references:
   commentId: T:LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs
   fullName: LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs
   nameWithType: TimeChanger.OnTimeChangeEventArgs
+- uid: LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.previousTime
+  name: previousTime
+  href: api/LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.html#LevelTimeChange_TimeChange_TimeChanger_OnTimeChangeEventArgs_previousTime
+  commentId: F:LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.previousTime
+  fullName: LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.previousTime
+  nameWithType: TimeChanger.OnTimeChangeEventArgs.previousTime
 - uid: LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.time
   name: time
   href: api/LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.html#LevelTimeChange_TimeChange_TimeChanger_OnTimeChangeEventArgs_time
