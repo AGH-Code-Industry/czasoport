@@ -34,7 +34,7 @@ namespace Interactions {
         public void EnableHighlight() { }
 
         public void DisableHighlight() {
-            if (_isFocused) { 
+            if (_isFocused) {
                 onHighlightEnd?.Invoke(this, new InteractionHighlightEventArgs() {
                     senderObject = this.gameObject
                 });
