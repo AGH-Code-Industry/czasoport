@@ -1,8 +1,8 @@
 -> main
 
 === main ===
-Hello traveler, you don't look like familiar. Do you want to buy anything?
-    * [Yes, please. Show me what can I get from you.]
+Hello traveller, you don't look familiar. Do you want to buy anything?
+    * [Yes, please. Show me your goods.]
         -> show
     * [No, thank you. I'm not interested right now.]
     ->DONE

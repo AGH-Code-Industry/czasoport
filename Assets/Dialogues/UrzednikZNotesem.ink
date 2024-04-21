@@ -2,11 +2,11 @@
 
 === main ===
 Hello, how can I help you?
-    *[Can you tell me what is your job here?]
+    *[Can you tell me what your job here is?]
         -> spacePlanning
-    * [I have an idea to improve docks. Let me tell you...]
+    * [I have an idea to improve the docks. Let me tell you...]
         -> grantPrivilage
-    * [Sorry, didn't want to interupt...]
+    * [Sorry, didn't want to interrupt...]
         -> DONE
         
 === spacePlanning ===
@@ -15,6 +15,6 @@ I deal with space planning and implement new investments in the city. Please go 
 -> main
 
 === grantPrivilage ===
-Great idea! Thank you! If we will ever implement this idea you will bve our honorary quest there. Here, take this.
+Great idea! Thank you! If we ever use it, you will be our honorary guest there. Here, take this.
 *[Thank you #getsItem: Torch]
 -> DONE
