@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2f746f36-0bd0-ffc2-520d-ba6b0fa7bfba}</ProjectGuid>
+    <ProjectGuid>{89aa6ca1-dd00-8e68-2a20-5a526fd9a113}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>aghcoin.coinpkg.logging</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -25,7 +25,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
+    <OutputPath>Temp\Bin\Debug\aghcoin.coinpkg.logging\</OutputPath>
     <DefineConstants>UNITY_2022_3_10;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -45,489 +45,13 @@
     <Analyzer Include="D:\Unity Hub\Editor\2022.3.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\UI\TimeChangeUI.cs" />
-     <Compile Include="Assets\Scripts\Items\ItemSO.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralCameraShake.cs" />
-     <Compile Include="Assets\Scripts\Audio\SFX.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\Fireplace.cs" />
-     <Compile Include="Assets\Scripts\CustomInput\Locks\GameInputLock.cs" />
-     <Compile Include="Assets\Scripts\Items\Item.cs" />
-     <Compile Include="Assets\Scripts\UI\TimeUIToogle.cs" />
-     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
-     <Compile Include="Assets\Scripts\Application\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Interactions\Interfaces\ILongItemInteractable.cs" />
-     <Compile Include="Assets\Scripts\InitializeHooks.cs" />
-     <Compile Include="Assets\Scripts\Notifications\NotificationUIController.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\Pedestal.cs" />
-     <Compile Include="Assets\Scripts\Items\Czasoport.cs" />
-     <Compile Include="Assets\Scripts\Settings\Tests\SettingsTests.cs" />
-     <Compile Include="Assets\Scripts\UI\FollowWorld.cs" />
-     <Compile Include="Assets\Scripts\LevelTimeChange\LevelsLoader\LevelInfoSO.cs" />
-     <Compile Include="Assets\Scripts\Dialogues\ChoiceProcessing\ChoiceContext.cs" />
-     <Compile Include="Assets\Scripts\InventorySystem\UI\Test\TestEvents.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasics2d.cs" />
-     <Compile Include="Assets\Scripts\InventorySystem\EventArguments\ItemStateChangedEventArgs.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineTrack.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\FileDataHandler.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline.cs" />
-     <Compile Include="Assets\Scripts\Settings\DeveloperSettings.cs" />
-     <Compile Include="Assets\Scripts\Items\Photocopier.cs" />
-     <Compile Include="Assets\Scripts\InventorySystem\UI\InventoryUI.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacy.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\TapePlayer.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\LogoCinematic.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DefaultSaveDataSO.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\IDataPersistence.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DataTypes\PlayerGameData.cs" />
-     <Compile Include="Assets\Scripts\PlayerScripts\Player.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
-     <Compile Include="Assets\Scripts\Audio\GameSFX.cs" />
-     <Compile Include="Assets\Scripts\Application\StartupManager.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\TeleportPlace.cs" />
-     <Compile Include="Assets\Scripts\CustomInput\Locks\InventoryLock.cs" />
-     <Compile Include="Assets\Scripts\InventorySystem\Inventory.cs" />
-     <Compile Include="Assets\Scripts\Interactions\Interactions.cs" />
-     <Compile Include="Assets\Scripts\CustomInput\CInput.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSequencer.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\NoFireSign.cs" />
-     <Compile Include="Assets\Scripts\Audio\MusicPlayer.cs" />
-     <Compile Include="Assets\Scripts\Dialogues\ChoiceProcessing\ChoicesTagProcessor.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEventsListeners.cs" />
-     <Compile Include="Assets\Scripts\Interactions\Interfaces\ILongHandInteractable.cs" />
-     <Compile Include="Assets\Scripts\InventorySystem\EventArguments\SelectedSlotChangedEventArgs.cs" />
-     <Compile Include="Assets\Audio.cs" />
-     <Compile Include="Assets\Scripts\LevelTimeChange\LevelsLoader\LevelsManager.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier2d.cs" />
-     <Compile Include="Assets\Scripts\Utils\UniqueScriptableObject.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\InteractableObject.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplinePerformance.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEasingTypes.cs" />
-     <Compile Include="Assets\Scripts\Tutorial\TutorialManager.cs" />
-     <Compile Include="Assets\Scripts\Application\Timer.cs" />
-     <Compile Include="Assets\Scripts\Notifications\TutorialNotification.cs" />
-     <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Archived\TestingPunch.cs" />
-     <Compile Include="Assets\Scripts\CustomInput\Locks\TeleportLock.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\ChangeInto.cs" />
-     <Compile Include="Assets\Scripts\UI\PauseUI.cs" />
-     <Compile Include="Assets\LeanTween\Framework\LeanAudio.cs" />
-     <Compile Include="Assets\Scripts\CustomInput\InputTest.cs" />
-     <Compile Include="Assets\Scripts\Interactions\HighlightInteraction.cs" />
-     <Compile Include="Assets\LeanTween\Framework\LTDescrOptional.cs" />
-     <Compile Include="Assets\Scripts\Dialogues\ChoiceProcessing\ChoiceButton.cs" />
-     <Compile Include="Assets\Scripts\InventorySystem\EventArguments\ItemRemovedEventArgs.cs" />
-     <Compile Include="Assets\Scripts\CustomInput\InputActions.cs" />
-     <Compile Include="Assets\Scripts\InventorySystem\InventorySettingsSO.cs" />
-     <Compile Include="Assets\Scripts\Application\GlobalExceptions\SingletonOverrideException.cs" />
-     <Compile Include="Assets\Scripts\Application\Loggers.cs" />
-     <Compile Include="Assets\Scripts\Dialogues\DummyNPC.cs" />
-     <Compile Include="Assets\Scripts\NPC\DialogueNPC.cs" />
-     <Compile Include="Assets\Scripts\LevelTimeChange\LevelsLoader\LevelManager.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingUnitTests.cs" />
-     <Compile Include="Assets\Scripts\PlayerScripts\PlayerSettingsSO.cs" />
-     <Compile Include="Assets\LeanTween\Framework\LTDescr.cs" />
-     <Compile Include="Assets\Scripts\Application\ApplicationSettingsSO.cs" />
-     <Compile Include="Assets\Scripts\Interactions\Interfaces\IItemInteractable.cs" />
-     <Compile Include="Assets\Scripts\CustomInput\Exceptions\NoMainCameraException.cs" />
-     <Compile Include="Assets\Scripts\Dialogues\DialogueManager.cs" />
-     <Compile Include="Assets\Scripts\UI\Objects\CodeReader\ScreenUI.cs" />
-     <Compile Include="Assets\Scripts\Interactions\Interfaces\IHandInteractable.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSimpleUI.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DataTypes\NotificationGameData.cs" />
-     <Compile Include="Assets\Scripts\LevelTimeChange\LevelsLoader\LevelPortal.cs" />
-     <Compile Include="Assets\Scripts\Items\CzasoportPart.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineEndless.cs" />
-     <Compile Include="Assets\Scripts\NPC\PathWalking.cs" />
-     <Compile Include="Assets\Scripts\Minigames\StealthMinigame.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\InterObjectDefinition.cs" />
-     <Compile Include="Assets\Scripts\LevelTimeChange\TimeLine.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
-     <Compile Include="Assets\Scripts\Utils\Attributes\ReadOnlyAttribute.cs" />
-     <Compile Include="Assets\Scripts\CustomInput\Locks\InteractionsLock.cs" />
-     <Compile Include="Assets\Scripts\Notifications\NotificationManager.cs" />
-     <Compile Include="Assets\Scripts\UI\Menu.cs" />
-     <Compile Include="Assets\Scripts\Utils\Attributes\ObjectIdentifierAttribute.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Archived\OldGUIExamplesCS.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier.cs" />
-     <Compile Include="Assets\Scripts\LevelTimeChange\TimeChange\Tests\PlayerTTCtest.cs" />
-     <Compile Include="Assets\Scripts\Dialogues\ChoiceProcessing\ChoicesProcessor.cs" />
-     <Compile Include="Assets\Scripts\Audio\GameMusicManager.cs" />
-     <Compile Include="Assets\Scripts\UI\Objects\CodeReader\FinishScreenUI.cs" />
-     <Compile Include="Assets\Scripts\UI\Objects\CodeReader\KeyUI.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\GameData.cs" />
-     <Compile Include="Assets\Scripts\InventorySystem\EventArguments\ItemInsertedEventArgs.cs" />
-     <Compile Include="Assets\Scripts\Interactions\Interfaces\IHighlightable.cs" />
-     <Compile Include="Assets\Scripts\Lights\LightFlicker.cs" />
-     <Compile Include="Assets\Scripts\Audio\ButtonSound.cs" />
-     <Compile Include="Assets\Scripts\LevelTimeChange\TimePlatformChangeSettingsSO.cs" />
-     <Compile Include="Assets\Scripts\InventorySystem\UI\Slot.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DataPersistenceManager.cs" />
-     <Compile Include="Assets\Scripts\Triggers\WithinLevelPortal.cs" />
-     <Compile Include="Assets\Scripts\Utils\Singleton\SingletonOverrideException.cs" />
-     <Compile Include="Assets\Scripts\CustomInput\Locks\MouseLock.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacyExt.cs" />
-     <Compile Include="Assets\Scripts\Minigames\CheckPlayerInArea.cs" />
-     <Compile Include="Assets\Scripts\NPC\Trading.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
-     <Compile Include="Assets\LeanTween\Framework\LTSeq.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\BreakableRock.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\CodeReader.cs" />
-     <Compile Include="Assets\Scripts\Interactions\InteractionsSettingsSO.cs" />
-     <Compile Include="Assets\LeanTween\Framework\LeanTween.cs" />
-     <Compile Include="Assets\Scripts\LevelTimeChange\TimeChange\TimeChanger.cs" />
-     <Compile Include="Assets\Scripts\CustomInput\Interactions\CustomHold.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\LockedChest.cs" />
-     <Compile Include="Assets\Scripts\Application\DefaultSceneLoader.cs" />
-     <Compile Include="Assets\LeanTween\Framework\LeanSmooth.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\LockedDoor.cs" />
-     <Compile Include="Assets\Scripts\Utils\Singleton\Singleton.cs" />
-     <Compile Include="Assets\Scripts\LevelTimeChange\TimeChange\CheckCollider.cs" />
-     <Compile Include="Assets\Scripts\Notifications\Notification.cs" />
-     <Compile Include="Assets\Scripts\CustomInput\Locks\MovementLock.cs" />
-     <Compile Include="Assets\Scripts\Tutorial\TutorialStage.cs" />
-     <Compile Include="Assets\Scripts\Minigames\PatrolVision.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralUISpace.cs" />
-     <Compile Include="Assets\Scripts\InventorySystem\Tests\InventoryGeneralTests.cs" />
-     <Compile Include="Assets\Scripts\RiddlesScripts\Tutorial\CrossingLight.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasic.cs" />
-     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplines.cs" />
-     <Folder Include="Assets" />
-     <Folder Include="Assets\Scenes" />
-     <None Include="Assets\Scripts\Dialogues\DialoguesDefinitions\UrzednikWAdministracji.json" />
-     <Folder Include="Assets\Scripts\Triggers" />
-     <Folder Include="Assets\Scripts\UI\Objects\CodeReader" />
-     <Folder Include="Assets\Art\Animated Loading Icons\Animations\Circle half rotating fading anim\Circle half rotating fading 1" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-     <Folder Include="Assets\Art\Animation\walk-up" />
-     <Folder Include="Assets\Art\Sprites\Crossing\up" />
-     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33" />
-     <Folder Include="Assets\Art\Sprites\Crossing\Materials" />
-     <Folder Include="Library\PackageCache\com.unity.searcher@4.9.2" />
-     <Folder Include="Library\PackageCache\com.unity.sysroot@2.0.6" />
-     <Folder Include="Assets\Scripts\CustomInput\Interactions" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <Folder Include="Assets\Art\Animation\NPC\Ochroniarz" />
-     <Folder Include="Assets\TextMesh Pro\Sprites" />
-     <Folder Include="Assets\Scripts\LevelTimeChange\LevelsLoader" />
-     <Folder Include="Assets\Scripts\Settings\Tests" />
-     <None Include="Library\PackageCache\com.unity.inputsystem@1.7.0\package.json" />
-     <Folder Include="Assets\Resources\LevelDefinitions" />
-     <Folder Include="Assets\Scripts\Application\GlobalExceptions" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Decals" />
-     <Folder Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1" />
-     <Folder Include="Assets\Scripts\Application" />
-     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\README.txt" />
-     <None Include="Library\PackageCache\com.unity.inputsystem@1.7.0\ValidationConfig.json" />
-     <Folder Include="Library\PackageCache\com.unity.sysroot@2.0.6\Tests" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Decals\Present" />
-     <Folder Include="Assets\Scenes\TestLevels" />
-     <Folder Include="Assets\Scripts\DataPersistence\DataTypes" />
-     <None Include="Library\PackageCache\com.unity.cinemachine@2.9.5\ValidationExceptions.json" />
-     <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
-     <Folder Include="Assets\Scripts\Utils" />
-     <Folder Include="Assets\Scripts\Utils\Singleton" />
-     <None Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\package.json" />
-     <Folder Include="Assets\Shaders" />
-     <Folder Include="Assets\LeanTween\Examples\Scenes" />
-     <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.24\Rider" />
-     <Folder Include="Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3" />
-     <Folder Include="Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3\Tests" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Decals\nowe_wrzutki" />
-     <None Include="Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3\package.json" />
-     <Folder Include="Assets\Resources\ItemDefinitions" />
-     <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5" />
-     <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources" />
-     <Folder Include="Assets\Scripts\Dialogues\ChoiceProcessing" />
-     <None Include="Assets\Dialogues\burmistrz_otwarcie.json" />
-     <Folder Include="Assets\Scripts\InventorySystem\EventArguments" />
-     <Folder Include="Library\PackageCache\com.unity.2d.common@8.0.1\Tests" />
-     <None Include="Assets\LeanTween\ReadMe.txt" />
-     <Folder Include="Library\PackageCache\com.unity.inputsystem@1.7.0\Tests" />
-     <Folder Include="Assets\Prefabs\Dialogues" />
-     <Folder Include="Assets\Settings" />
-     <Folder Include="Assets\Scripts\Utils\Attributes" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-     <Folder Include="Assets\Scripts\LevelTimeChange" />
-     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\package.json" />
-     <Folder Include="Assets\Art\Animated Loading Icons\Animations" />
-     <Folder Include="Assets\Dialogues" />
-     <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Graphics" />
-     <Folder Include="Library\PackageCache\com.unity.sysroot.linux-x86_64@2.0.5" />
-     <Folder Include="Assets\Art\Animation\walk-left" />
-     <None Include="Library\PackageCache\com.unity.sysroot.linux-x86_64@2.0.5\package.json" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Decals\Future\Materials" />
-     <Folder Include="Assets\Materials" />
-     <Folder Include="Assets\Prefabs\MinigamesMockUp" />
-     <Folder Include="Assets\Art\Sprites\Tutorial" />
-     <Folder Include="Assets\Scripts\InventorySystem" />
-     <Folder Include="Library\PackageCache\com.unity.burst@1.8.8\Tests" />
-     <Folder Include="Assets\Schematics\TimePlatformChange" />
-     <Folder Include="Assets\LeanTween\Examples\Prefabs" />
-     <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Gizmos" />
-     <None Include="Library\PackageCache\com.unity.burst@1.8.8\ValidationConfig.json" />
-     <None Include="Library\PackageCache\com.unity.timeline@1.7.5\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom" />
-     <None Include="Library\PackageCache\com.unity.toolchain.win-x86_64-linux-x86_64@2.0.5\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.2d.aseprite@1.0.1" />
-     <Folder Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport" />
-     <Folder Include="Assets\Art\Animated Loading Icons" />
-     <Folder Include="Assets\Resources\LevelDefinitions\TestLevels" />
-     <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
-     <Folder Include="Library\PackageCache\com.unity.collections@1.2.4" />
-     <Folder Include="Assets\LeanTween\Documentation\elements" />
-     <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.0" />
-     <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.4\Gizmos" />
-     <Folder Include="Assets\LeanTween\Framework" />
-     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.21\ValidationConfig.json" />
-     <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35" />
-     <Folder Include="Assets\Scripts\InteractableObjectSystem\Objects" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Interactables\Materials" />
-     <Folder Include="Assets\Art\UI" />
-     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
-     <None Include="Assets\LeanTween\License.txt" />
-     <Folder Include="Assets\Art\Tiles\Tutorial" />
-     <None Include="Library\PackageCache\com.unity.sysroot@2.0.6\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3\Tests" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Interactables" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-     <None Include="Library\PackageCache\com.aghcoin.coinpkg.debugging@d12439e131\package.json" />
-     <Folder Include="Assets\TextMesh Pro\Resources" />
-     <Folder Include="Assets\Scripts\InventorySystem\UI\Test" />
-     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.0\package.json" />
-     <Folder Include="Assets\Art\Sprites\Crossing\tilemap" />
-     <Folder Include="Assets\Art\Animated Loading Icons\Spritesheet" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Tiles" />
-     <None Include="Library\PackageCache\com.unity.timeline@1.7.5\ValidationExceptions.json" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Decals\Present\Materials" />
-     <Folder Include="Assets\Art\Sprites\Crossing\down" />
-     <Folder Include="Assets\Prefabs\Items\Tutorial" />
-     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\package.json" />
-     <Folder Include="Assets\Scripts\Dialogues" />
-     <Folder Include="Assets\Scripts\CustomInput\Exceptions" />
-     <Folder Include="Assets\Prefabs\Items\Market" />
-     <Folder Include="Library\PackageCache\com.unity.timeline@1.7.5" />
-     <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.4\Tests" />
-     <Folder Include="Assets\Prefabs\InteractableObjects" />
-     <Folder Include="Assets\Art\Fonts\omicron-font" />
-     <Folder Include="Assets\LeanTween\Documentation\classes" />
-     <Folder Include="Assets\Art\Animation\walk-right" />
-     <Folder Include="Assets\Scripts\DataPersistence" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Items" />
-     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData.json" />
-     <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6" />
-     <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3\IK" />
-     <Folder Include="Assets\Schematics" />
-     <Folder Include="Assets\Art\Sprites\Townhall" />
-     <Folder Include="Library\PackageCache\com.unity.burst@1.8.8" />
-     <None Include="Assets\Dialogues\LampSeller.json" />
-     <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Tests" />
-     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.21\package.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <Folder Include="Library\PackageCache\com.unity.2d.common@8.0.1" />
-     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\ValidationExceptions.json" />
-     <Folder Include="Assets\Art\Animation\NPC\Ochroniarz\Materials" />
-     <Folder Include="Assets\TextMesh Pro" />
-     <Folder Include="Assets\Art\Animation" />
-     <Folder Include="Assets\Scripts\RiddlesScripts" />
-     <Folder Include="Assets\Prefabs\Items\TestItems" />
-     <Folder Include="Assets\Animation\TimeChange" />
-     <Folder Include="Assets\Prefabs\Items" />
-     <None Include="Library\PackageCache\com.unity.ide.rider@3.0.24\package.json" />
-     <Folder Include="Assets\Art\Fonts\Hi" />
-     <None Include="Library\PackageCache\com.unity.searcher@4.9.2\package.json" />
-     <Folder Include="Assets\Settings\SystemsSettings" />
-     <None Include="Library\PackageCache\com.unity.test-framework@1.1.33\package.json" />
-     <Folder Include="Assets\Prefabs\InteractableObjects\UI" />
-     <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Scripts" />
-     <Folder Include="Assets\LeanTween\Examples\Models\Materials" />
-     <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime" />
-     <None Include="Assets\Dialogues\ZielonyLudzik_w_dokach 1.json" />
-     <Folder Include="Assets\Ink\Documentation" />
-     <Folder Include="Assets\Scripts" />
-     <Folder Include="Assets\Prefabs\InteractableObjects\Market" />
-     <Folder Include="Library\PackageCache\com.unity.sysroot.linux-x86_64@2.0.5\Tests" />
-     <Folder Include="Assets\Scripts\Lights" />
-     <Folder Include="Assets\Scripts\Settings" />
-     <Folder Include="Library\PackageCache\com.unity.2d.common@8.0.1\Path" />
-     <Folder Include="Assets\LeanTween\Documentation" />
-     <Folder Include="Assets\Scripts\CustomInput" />
-     <Folder Include="Assets\Scripts\Audio" />
-     <Folder Include="Assets\Animation" />
-     <Folder Include="Library\PackageCache\com.unity.toolchain.win-x86_64-linux-x86_64@2.0.5\Tests" />
-     <Folder Include="Library\PackageCache\com.unity.inputsystem@1.7.0" />
-     <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.4" />
-     <Folder Include="Assets\Scripts\NPC" />
-     <Folder Include="Assets\Scripts\UI\Objects" />
-     <Folder Include="Assets\Prefabs\Decals" />
-     <Folder Include="Assets\Art\Sprites\Player" />
-     <Folder Include="Assets\Art\Fonts\omicron-font\misc" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Decals\Future" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-     <Folder Include="Assets\Animation\Items\Doors\Frames" />
-     <None Include="Assets\Art\Fonts\omicron-font\misc\omicron.txt" />
-     <None Include="Assets\Dialogues\ShadyGuy.json" />
-     <Folder Include="Assets\Resources" />
-     <None Include="Assets\Art\Fonts\Banana Brick\COPYRIGHT.txt" />
-     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.0\ValidationExceptions.json" />
-     <Folder Include="Assets\Scripts\InventorySystem\Tests" />
-     <Folder Include="Assets\Animation\Items" />
-     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-     <Folder Include="Assets\Scripts\LevelTimeChange\TimeChange" />
-     <Folder Include="Assets\LeanTween\Examples" />
-     <Folder Include="Assets\Scripts\InteractableObjectSystem" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Library\PackageCache\com.unity.2d.common@8.0.1\package.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-     <None Include="Library\PackageCache\com.unity.toolchain.win-x86_64-linux-x86_64@2.0.5\ValidationConfig.json" />
-     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.21\ValidationExceptions.json" />
-     <Folder Include="Assets\Art\Tiles" />
-     <None Include="Assets\Art\Fonts\Hi\LICENSE.txt" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <Folder Include="Assets\Art\Sprites\Light" />
-     <Folder Include="Assets\Prefabs\InteractableObjects\Tutorial" />
-     <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Textures" />
-     <Folder Include="Assets\Art\Screens" />
-     <Folder Include="Assets\Scripts\PlayerScripts" />
-     <Folder Include="Assets\Scripts\Interactions\Interfaces" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-     <None Include="Library\PackageCache\com.unity.cinemachine@2.9.5\license.txt" />
-     <Folder Include="Assets\LeanTween\Examples\Models" />
-     <None Include="Assets\Dialogues\Ocaleniec.json" />
-     <Folder Include="Assets\Art\Sprites\Crossing" />
-     <Folder Include="Library\PackageCache\com.unity.mathematics@1.2.6" />
-     <Folder Include="Assets\Settings\LevelDefinitions\Levels" />
-     <Folder Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.2" />
-     <Folder Include="Assets\Scripts\LevelTimeChange\TimeChange\Tests" />
-     <None Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1\package.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-     <None Include="Library\PackageCache\com.unity.inputsystem@1.7.0\ValidationExceptions.json" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Decals\nowe_wrzutki\Materials" />
-     <Folder Include="Assets\TextMesh Pro\Shaders" />
-     <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Gizmos" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Tiles\crossing" />
-     <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.7" />
-     <Folder Include="Assets\Animation\Items\SingleDoors" />
-     <Folder Include="Assets\Scripts\Interactions" />
-     <Folder Include="Library\PackageCache\com.unity.toolchain.win-x86_64-linux-x86_64@2.0.5" />
-     <Folder Include="Assets\LeanTween\Examples\Material" />
-     <Folder Include="Assets\Art" />
-     <Folder Include="Assets\Prefabs\NPC" />
-     <None Include="Assets\Scripts\Dialogues\DialoguesDefinitions\TestDialogue.json" />
-     <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
-     <Folder Include="Assets\Art\TilePalettes" />
-     <Folder Include="Assets\Scripts\CustomInput\Locks" />
-     <Folder Include="Assets\TextMesh Pro\Fonts" />
-     <None Include="Library\PackageCache\com.unity.cinemachine@2.9.5\package.json" />
-     <Folder Include="Assets\Settings\InteractablesDefinitions" />
-     <Folder Include="Assets\Art\Tiles\tilemap" />
-     <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.4\EditorResources\Overlay" />
-     <None Include="Assets\Dialogues\naukowiec_przed_rafineria.json" />
-     <Folder Include="Assets\Audio" />
-     <Folder Include="Assets\Prefabs" />
-     <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6" />
-     <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.24" />
-     <Folder Include="Assets\Art\Sprites\Materials" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <Folder Include="Assets\Art\Animation\NPC" />
-     <Folder Include="Assets\Ink" />
-     <Folder Include="Library\PackageCache\com.unity.searcher@4.9.2\Tests" />
-     <Folder Include="Assets\Art\Fonts" />
-     <Folder Include="Assets\Prefabs\Inventory" />
-     <Folder Include="Assets\Art\Sprites\Tutorial\Decals\Prefabs" />
-     <None Include="Assets\LeanTween\Examples\Archived\2dUnlitWithFade.shader" />
-     <Folder Include="Assets\Resources\LevelDefinitions\Levels" />
-     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
-     <Folder Include="Assets\Prefabs\Entities" />
-     <Folder Include="Assets\Scripts\RiddlesScripts\Tutorial" />
-     <Folder Include="Library\PackageCache\com.unity.2d.animation@9.0.3" />
-     <Folder Include="Assets\LeanTween\Documentation\assets" />
-     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\ValidationConfig.json" />
-     <None Include="Assets\Scripts\Dialogues\DialoguesDefinitions\Pokemon.json" />
-     <Folder Include="Assets\Scripts\Tutorial" />
-     <Folder Include="Assets\Art\Sprites\Crossing\down\Materials" />
-     <None Include="Library\PackageCache\com.unity.ai.navigation@1.1.4\package.json" />
-     <Folder Include="Library\PackageCache\com.unity.ide.vscode@1.2.5" />
-     <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Tests" />
-     <Folder Include="Assets\Scripts\Minigames" />
-     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_Properties.cginc" />
-     <None Include="Assets\Dialogues\UrzednikWAdministracji.json" />
-     <Folder Include="Assets\Scripts\InventorySystem\UI" />
-     <None Include="Assets\Dialogues\UrzednikZNotesem.json" />
-     <Folder Include="Assets\Prefabs\Tutorial" />
-     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF Internal Editor.shader" />
-     <Folder Include="Assets\Settings\LevelDefinitions" />
-     <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Presets" />
-     <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.4\EditorResources" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <Folder Include="Assets\Prefabs\Notifications" />
-     <Folder Include="Assets\Scripts\Dialogues\DialoguesDefinitions" />
-     <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib" />
-     <None Include="Assets\Art\Fonts\Hi\COPYRIGHT.txt" />
-     <None Include="Library\PackageCache\com.unity.2d.aseprite@1.0.1\package.json" />
-     <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\ValidationExceptions.json" />
-     <Folder Include="Assets\Scenes\Levels" />
-     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.0\ValidationConfig.json" />
-     <None Include="Assets\Dialogues\CzasoportSeller.json" />
-     <Folder Include="Assets\Art\Fonts\Banana Brick" />
-     <Folder Include="Assets\Art\Animated Loading Icons\Prefabs\Circle half rotating fading" />
-     <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
-     <None Include="Assets\Art\Fonts\Banana Brick\LICENSE.txt" />
-     <Folder Include="Assets\Scripts\Notifications" />
-     <Folder Include="Assets\Animation\Player" />
-     <Folder Include="Assets\Art\Animated Loading Icons\Animations\Circle half rotating fading anim" />
-     <Folder Include="Assets\Scripts\UI" />
-     <Folder Include="Assets\LeanTween\Examples\Archived" />
-     <Folder Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.21" />
-     <None Include="Library\PackageCache\com.unity.collections@1.2.4\package.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-     <Folder Include="Assets\LeanTween\Examples\Scripts" />
-     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData_Assets.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-     <Folder Include="Assets\Sounds" />
-     <Folder Include="Library\PackageCache\com.aghcoin.coinpkg.debugging@d12439e131" />
-     <Folder Include="Assets\Scripts\Items" />
-     <Folder Include="Assets\Art\Animated Loading Icons\Animations\Circle half rotating fading anim\(fast) Circle half rotating fading 1" />
-     <Folder Include="Assets\Prefabs\Levels" />
-     <Folder Include="Assets\Art\Animated Loading Icons\Prefabs" />
-     <None Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.2\package.json" />
-     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
-     <Folder Include="Assets\Art\Sprites" />
-     <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
-     <Folder Include="Assets\LeanTween" />
-     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <Folder Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1\Tests" />
-     <None Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1\ValidationExceptions.json" />
-     <Folder Include="Assets\TextMesh Pro\Documentation" />
-     <None Include="Library\PackageCache\com.unity.2d.animation@9.0.3\package.json" />
-     <Folder Include="Assets\LeanTween\Examples\Textures" />
-     <Folder Include="Assets\Art\Tiles\TownHall" />
-     <Folder Include="Assets\Ink\Extras" />
-     <Folder Include="Assets\Scripts\TimeChange" />
-     <None Include="Assets\Dialogues\TorchSeller.json" />
-     <None Include="Library\PackageCache\com.unity.collections@1.2.4\ValidationExceptions.json" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-     <Folder Include="Library\PackageCache\com.unity.2d.aseprite@1.0.1\Tests" />
-     <None Include="Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.Unsafe.xml" />
-     <None Include="Assets\Dialogues\MuseumGuard.json" />
-     <Folder Include="Assets\LeanTween\Documentation\assets\css" />
-     <None Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.2\package.json" />
-     <None Include="Library\PackageCache\com.unity.burst@1.8.8\package.json" />
-     <Folder Include="Assets\Animation\Items\Doors" />
-     <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Presets\Noise" />
-     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
-     <Folder Include="Assets\Prefabs\Items\Townhall" />
-     <Folder Include="Assets\Resources\ItemDefinitions\Tutorial" />
-     <Folder Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.2" />
-     <Folder Include="Assets\Art\Animation\walk-down" />
-     <Folder Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.2\Tests" />
-     <None Include="Assets\Art\Fonts\omicron-font\info.txt" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
-     <Folder Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.2\Tests" />
-     <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\package.json" />
-     <None Include="Assets\Dialogues\palacz.json" />
+     <Compile Include="Library\PackageCache\com.aghcoin.coinpkg.debugging@d12439e131\Runtime\CoinPackage\Debugging\CDebug.cs" />
+     <Compile Include="Library\PackageCache\com.aghcoin.coinpkg.debugging@d12439e131\Runtime\CoinPackage\Debugging\CLogger.cs" />
+     <Compile Include="Library\PackageCache\com.aghcoin.coinpkg.debugging@d12439e131\Runtime\CoinPackage\Debugging\Colorize.cs" />
+     <Folder Include="Library\PackageCache\com.aghcoin.coinpkg.debugging@d12439e131\Runtime\CoinPackage\Debugging" />
+     <Folder Include="Library\PackageCache\com.aghcoin.coinpkg.debugging@d12439e131\Runtime" />
+     <None Include="Library\PackageCache\com.aghcoin.coinpkg.debugging@d12439e131\Runtime\aghcoin.coinpkg.debugging.asmdef" />
+     <Folder Include="Library\PackageCache\com.aghcoin.coinpkg.debugging@d12439e131\Runtime\CoinPackage" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity Hub\Editor\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -777,11 +301,38 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>D:\Unity Hub\Editor\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEditor.Graphs">
+     <HintPath>D:\Unity Hub\Editor\2022.3.10f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+     <HintPath>D:\Unity Hub\Editor\2022.3.10f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.YamlDotNet">
+     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Collections.LowLevel.ILSupport">
      <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Plastic.Antlr3.Runtime">
+     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Plastic.Newtonsoft.Json">
+     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="log4netPlastic">
+     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.IonicZip">
+     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.TextureAssets">
+     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+     </Reference>
+     <Reference Include="unityplastic">
+     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="mscorlib">
      <HintPath>D:\Unity Hub\Editor\2022.3.10f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>
@@ -1158,274 +709,14 @@
      <Reference Include="System.Xml.XPath.XDocument">
      <HintPath>D:\Unity Hub\Editor\2022.3.10f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Editor">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="PPv2URPConverters">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{dbaa012c-477b-d71d-13bb-0f1854ea6555}</Project>
-      <Name>Unity.2D.IK.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
-      <Project>{de48eba2-ae95-1b07-5019-41afc8c43e24}</Project>
-      <Name>com.unity.cinemachine.editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.csproj">
-      <Project>{29d1cbd1-1d3b-86b0-93c1-3b11e7d7119f}</Project>
-      <Name>Unity.AI.Navigation</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Burst.Editor.csproj">
-      <Project>{8dea0dc8-b43d-f574-db90-bcc2bbb81336}</Project>
-      <Name>Unity.Burst.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Path.Editor.csproj">
-      <Project>{ce152f55-bddf-dc71-2c3c-251ed8b182e2}</Project>
-      <Name>Unity.2D.Common.Path.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.PixelPerfect.Editor.csproj">
-      <Project>{6ebeec83-8c30-dce7-bf10-9bbb741b4a67}</Project>
-      <Name>Unity.2D.PixelPerfect.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{a3b4c7d0-13d0-c4e2-3dce-a1976a873001}</Project>
-      <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Aseprite.Common.csproj">
-      <Project>{cf644218-1711-f057-b34a-bdd218086fb3}</Project>
-      <Name>Unity.2D.Aseprite.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{a97a0794-8390-1484-a96f-01cad9743c6d}</Project>
-      <Name>Unity.VisualScripting.Flow</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
-      <Project>{aa52331e-fb8f-8345-fc19-95d1ff574906}</Project>
-      <Name>Unity.Mathematics.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
-      <Project>{c8abbdfc-a848-e19f-ee3d-c476e5e57fba}</Project>
-      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Collections.csproj">
-      <Project>{2f65cc8c-68d9-4e98-787e-66e90bf652a4}</Project>
-      <Name>Unity.Collections</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj">
-      <Project>{f4e40088-5e58-978e-0e47-08965dafc499}</Project>
-      <Name>Unity.2D.SpriteShape.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.PixelPerfect.csproj">
-      <Project>{9d3cc509-09f0-e9b2-5937-3607d16cfedd}</Project>
-      <Name>Unity.2D.PixelPerfect</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{7a55de43-b29c-faa7-0b85-265622e43304}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Aseprite.Editor.csproj">
-      <Project>{8e5b03dc-3de5-3573-2615-d90e46422ac0}</Project>
-      <Name>Unity.2D.Aseprite.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="aghcoin.coinpkg.logging.csproj">
-      <Project>{89aa6ca1-dd00-8e68-2a20-5a526fd9a113}</Project>
-      <Name>aghcoin.coinpkg.logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="Ink-Libraries.csproj">
-      <Project>{acbb8b78-69e8-7eca-2bd8-fe6e0ea42d39}</Project>
-      <Name>Ink-Libraries</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{9c5388c7-f468-b3be-197c-c4e252f1be9b}</Project>
-      <Name>Unity.VSCode.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.Editor.ConversionSystem.csproj">
-      <Project>{0150c9cf-2a57-9e97-039e-ebf61c4a84f3}</Project>
-      <Name>Unity.AI.Navigation.Editor.ConversionSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64.csproj">
-      <Project>{553dc7e1-29ac-2875-62f5-ca4379fe1781}</Project>
-      <Name>Unity.Toolchain.Win-x86_64-Linux-x86_64</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Sysroot.Linux_x86_64.csproj">
-      <Project>{6ce06078-ba47-99fc-80df-e6981a7b4c4a}</Project>
-      <Name>Unity.Sysroot.Linux_x86_64</Name>
-    </ProjectReference>
-    <ProjectReference Include="PsdPlugin.csproj">
-      <Project>{7f0c1366-78ba-18b7-a559-fe32ea46b3d1}</Project>
-      <Name>PsdPlugin</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{804e1790-1897-f105-39eb-261da7b5e26b}</Project>
-      <Name>Unity.PlasticSCM.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{3aeab839-0368-0fcb-5d12-de532aa51bf4}</Project>
-      <Name>Unity.Burst</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{28819a50-e27e-5e79-514d-469fd5438793}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
-      <Project>{695b10c8-0189-a944-ae26-f3b977408fa5}</Project>
-      <Name>Unity.VisualScripting.Shared.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{c28826c8-e02c-f31d-4cf3-ea88732e5847}</Project>
-      <Name>Unity.VisualStudio.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{fc2fae64-6b04-cda7-9190-a8c413d602c5}</Project>
-      <Name>Unity.VisualScripting.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
-      <Project>{55c81710-dfda-8a46-f29a-bef2aadf7cfb}</Project>
-      <Name>Unity.2D.Animation.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{4ca0219f-a35b-71f2-a604-21bfdca972ce}</Project>
-      <Name>Unity.2D.Tilemap.Extras</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{f942435d-343f-bd6d-3ed7-1b0af0ea88f5}</Project>
-      <Name>Unity.VisualScripting.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEditorBridge.005.csproj">
-      <Project>{d39f44d0-42cb-3869-624d-46586c1fa87b}</Project>
-      <Name>Unity.InternalAPIEditorBridge.005</Name>
-    </ProjectReference>
-    <ProjectReference Include="InkEditor.csproj">
-      <Project>{7ad93f4a-6f21-610a-53a3-c227749fa06a}</Project>
-      <Name>InkEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{42725ba3-1372-9d4f-8bed-9b4e3e420812}</Project>
-      <Name>Unity.InternalAPIEngineBridge.001</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{62050f5e-3711-8c96-0de1-94fbebed73ef}</Project>
-      <Name>Unity.2D.Common.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
-      <Project>{b721e662-7d4a-a078-c809-4f01a5f4c640}</Project>
-      <Name>Unity.VisualScripting.Flow.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{1fa57da0-8493-6e30-46cf-ea528425ca2c}</Project>
-      <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{9d4ff6a8-5397-7ed0-054a-b68f6b994351}</Project>
-      <Name>Unity.InputSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.ForUI.csproj">
-      <Project>{a34ccab6-de4a-a3f3-e8c6-a040ce017cc7}</Project>
-      <Name>Unity.InputSystem.ForUI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{7f941dda-42e5-8d44-4cef-1a0799102b87}</Project>
-      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.SysrootPackage.Editor.csproj">
-      <Project>{f5a798ee-94b8-49a9-b2d6-91241d0e6cb3}</Project>
-      <Name>Unity.SysrootPackage.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{3ade5175-66dc-9662-c68d-9a5d65280f30}</Project>
-      <Name>Unity.InternalAPIEditorBridge.001</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Psdimporter.Editor.csproj">
-      <Project>{432a4233-3ea7-d207-ffe4-cbb43bf220db}</Project>
-      <Name>Unity.2D.Psdimporter.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.Updater.csproj">
-      <Project>{684e0589-842f-5f49-4c3f-52d2dd22387f}</Project>
-      <Name>Unity.AI.Navigation.Updater</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
-      <Project>{7146475b-13b4-dfbd-ee10-131a7845262e}</Project>
-      <Name>Unity.VisualScripting.State.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{09f0e42a-ae35-313f-f18d-da8b7d9a45ab}</Project>
-      <Name>Unity.Mathematics</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Editor.csproj">
-      <Project>{316b0c63-031b-6b25-0288-a9761c302b63}</Project>
-      <Name>Unity.2D.Common.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{ddfffad0-5a1b-584d-67d6-6a4c3a61b49f}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Searcher.Editor.csproj">
-      <Project>{21fe8937-1c84-f0a3-2fc3-07c228db41b5}</Project>
-      <Name>Unity.Searcher.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.Editor.csproj">
-      <Project>{f72f062e-83e8-2631-aa81-f8512709d10b}</Project>
-      <Name>Unity.AI.Navigation.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.csproj">
-      <Project>{64ba3fe4-67c3-c688-738f-e18917464e65}</Project>
-      <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{f486a880-c9f1-b72a-2525-f5ae354b08c8}</Project>
-      <Name>Cinemachine</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.SpriteShape.Editor.csproj">
-      <Project>{d484cad1-e70c-df55-324e-ce402c0d7453}</Project>
-      <Name>Unity.2D.SpriteShape.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
-      <Project>{3865f058-4cbd-9002-5907-e9f9a8a621a2}</Project>
-      <Name>Unity.2D.Animation.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Editor.csproj">
-      <Project>{7b06cc84-058d-a945-1fae-491a5fed543e}</Project>
-      <Name>Unity.2D.IK.Editor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

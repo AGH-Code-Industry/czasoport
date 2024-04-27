@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{acbb8b78-69e8-7eca-2bd8-fe6e0ea42d39}</ProjectGuid>
+    <ProjectGuid>{6484a953-e90a-3f95-a71d-e6d467c4c38f}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Ink-Libraries</AssemblyName>
+    <AssemblyName>UnityEngine.TestRunner</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -25,7 +25,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Temp\Bin\Debug\Ink-Libraries\</OutputPath>
+    <OutputPath>Temp\Bin\Debug\UnityEngine.TestRunner\</OutputPath>
     <DefineConstants>UNITY_2022_3_10;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -45,112 +45,135 @@
     <Analyzer Include="D:\Unity Hub\Editor\2022.3.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\INamedContent.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\InkList.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkStringConversionExtensions.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\NativeFunctionCall.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_Choices.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Stitch.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Gather.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\VariableAssignment.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Tag.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Path.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Choice.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\VariableAssignment.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Story.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\CommandLineInput.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Error.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_Knot.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_Content.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Conditional.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\SearchResult.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Choice.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_Tags.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_CharacterRanges.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\ConstantDeclaration.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Flow.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\Stats.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Pointer.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_Logic.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Tag.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\DivertTarget.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\StringParser\StringParserState.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_Expressions.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\DebugMetadata.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\VariableReference.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\FlowBase.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Divert.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_Sequences.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\StoryException.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Object.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\StringParser\StringParser.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_CommandLineInput.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_Whitespace.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Container.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\FunctionCall.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\ControlCommand.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\AuthorWarning.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Void.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Profiler.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\IncludedFile.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_Statements.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Return.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\ChoicePoint.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\StoryState.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\SimpleJson.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Weave.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Number.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\Compiler.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\CharacterRange.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_Divert.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\JsonSerialisation.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_AuthorWarning.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\ExternalDeclaration.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\ListDefinitionsOrigin.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Sequence.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\List.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\FlowLevel.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\TunnelOnwards.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\StatePatch.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\INamedContent.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\Plugins\Plugin.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\ContentList.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\FileHandler.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Identifier.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\VariablesState.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Wrap.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Story.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\PushPop.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Glue.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Divert.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\CallStack.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Knot.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Expression.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\Text.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\ListDefinition.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\ListDefinition.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\Plugins\PluginManager.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_Include.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Value.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\CommentEliminator.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\VariableReference.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\StringJoinExtension.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\IWeavePoint.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\ConditionalSingleBranch.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy\StringExpression.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\InkParser\InkParser_Conditional.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Object.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkCompiler\CharacterSet.cs" />
-     <Compile Include="Assets\Ink\InkLibs\InkRuntime\Path.cs" />
-     <Folder Include="Assets\Ink\InkLibs\InkRuntime" />
-     <Folder Include="Assets\Ink\InkLibs\InkCompiler\InkParser" />
-     <Folder Include="Assets\Ink\InkLibs\InkCompiler\Plugins" />
-     <None Include="Assets\Ink\InkLibs\Ink-Libraries.asmdef" />
-     <Folder Include="Assets\Ink\InkLibs\InkCompiler\ParsedHierarchy" />
-     <Folder Include="Assets\Ink\InkLibs\InkCompiler\StringParser" />
-     <Folder Include="Assets\Ink\InkLibs" />
-     <Folder Include="Assets\Ink\InkLibs\InkCompiler" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\AssemblyProvider\PlayerTestAssemblyProvider.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\EnumerableSetUpTearDownCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Attributes\UnityPlatformAttribute.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\OuterUnityTestActionCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\UnityTestExecutionContext.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\Vector3ComparerWithEqualsOperator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\UnityWorkItem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\TestResultExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\AttributeHelper.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\CompositeWorkItem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\PrebuildSceneSetupAttribute.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\RemoteHelpers\IRemoteTestResultDataFactory.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\LogScope\LogEvent.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\ColorEqualityComparer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\PlaymodeTestsController.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\AssemblyProvider\IScriptingRuntimeProxy.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\Callbacks\PlayerQuitHandler.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\EnumerableRetryTestCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\Callbacks\TestResultRenderer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestMustExpectAllLogsAttribute.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\AssemblyProvider\IAssemblyWrapper.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Filters\CategoryFilterExtended.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\ITestRunnerListener.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\Callbacks\RemoteTestResultSender.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\AllocatingGCMemoryConstraint.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\TestCommandBuilder.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Attributes\ConditionalIgnoreAttribute.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\PlaymodeWorkItemFactory.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\AssemblyProvider\AssemblyLoadProxy.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Attributes\UnityCombinatorialStrategy.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\ActionDelegator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\RuntimeTestRunnerFilter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\PlaymodeTestsControllerSettings.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\TestPlatform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandState.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\TestRunCallbackListener.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\Callbacks\TestResultRendererCallback.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\IEnumerableTestMethodCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\Messages\IEditModeTestYieldInstruction.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\Vector2ComparerWithEqualsOperator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Attributes\UnitySetUpAttribute.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\PostBuildCleanupAttribute.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\CoroutineRunner.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\IPrebuildSceneSetup.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\Vector3EqualityComparer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\InvalidSignatureException.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\DefaultTestWorkItem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\UnityLogCheckDelegatingCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Attributes\UnityTearDownAttribute.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\TestListenerWrapper.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\WorkItemFactory.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\TestCommandPcHelper.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\UnityTestAssemblyRunner.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\FailCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\UnityTestTimeoutException.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\RestoreTestContextAfterDomainReload.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\SynchronousFilter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\UnhandledLogMessageException.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\UnityWorkItemDataHolder.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\RemoteHelpers\RemoteTestData.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\LogScope\LogMatch.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Filters\FullNameFilter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\OrderedTestSuiteModifier.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\EnumerableTestMethodCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\TestExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\BeforeAfterTestCommandBase.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\ITestSuiteModifier.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\LogScope\ILogScope.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\Vector2EqualityComparer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\IOuterUnityTestAction.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\Vector4EqualityComparer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\ConstraintsExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\MonoBehaviourTest\IMonoBehaviourTest.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\MonoBehaviourTest\MonoBehaviourTest.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\RemoteHelpers\RemoteTestResultDataFactory.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\IPostBuildCleanup.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Attributes\UnityTestAttribute.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\LogScope\LogScope.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\LogAssert.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\FloatEqualityComparer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\RemoteHelpers\RemoteTestResultData.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\BaseDelegator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\Vector4ComparerWithEqualsOperator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Filters\AssemblyNameFilter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\IAsyncTestAssemblyBuilder.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\ITestRunCallback.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\StacktraceFilter.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\TestRunCallbackAttribute.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\Is.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\AssemblyProvider\IAssemblyLoadProxy.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\TestEnumeratorWrapper.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\QuaternionEqualityComparer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\ImmediateEnumerableCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\EnumerableApplyChangesToContextCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\IStateSerializer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\RemoteHelpers\PlayerConnectionMessageIds.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\AssemblyProvider\AssemblyWrapper.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\EnumerableRepeatedTestCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\ConstructDelegator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\TestActionCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner\CoroutineTestWorkItem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\UnityTestMethodCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\Callbacks\PlayModeRunnerCallback.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\SetUpTearDownCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\RemoteHelpers\RemoteTestResultDataWithTestData.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\AssemblyProvider\ScriptingRuntimeProxy.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\Utils.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands\EnumerableTestState.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\UnexpectedLogMessageException.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\OutOfOrderExpectedLogMessageException.cs" />
+     <Compile Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\UnityTestAssemblyBuilder.cs" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\AssemblyProvider" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\Callbacks" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\RemoteHelpers" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions\LogScope" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Filters" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner\Messages" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner" />
+     <None Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\UnityEngine.TestRunner.asmdef" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Runner" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Assertions" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Commands" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions\Attributes" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\TestRunner" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\NUnitExtensions" />
+     <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33\UnityEngine.TestRunner\Utils\MonoBehaviourTest" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity Hub\Editor\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -406,32 +429,8 @@
      <Reference Include="UnityEditor.WindowsStandalone.Extensions">
      <HintPath>D:\Unity Hub\Editor\2022.3.10f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.YamlDotNet">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Collections.LowLevel.ILSupport">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
-     </Reference>
-     <Reference Include="log4netPlastic">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.TextureAssets">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-     </Reference>
-     <Reference Include="unityplastic">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     <Reference Include="nunit.framework">
+     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
      </Reference>
      <Reference Include="mscorlib">
      <HintPath>D:\Unity Hub\Editor\2022.3.10f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>
@@ -808,14 +807,6 @@
      <Reference Include="System.Xml.XPath.XDocument">
      <HintPath>D:\Unity Hub\Editor\2022.3.10f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.UI">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.UI">
-     <HintPath>D:\Projects\CodeIndustry\Czasoport\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-     </Reference>
-  </ItemGroup>
-  <ItemGroup>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
