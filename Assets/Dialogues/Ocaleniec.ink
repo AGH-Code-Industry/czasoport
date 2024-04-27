@@ -4,7 +4,7 @@
 Huh, is there someone else here except me? Who are you, can you help me?
     * [How can I help you?]
         -> show
-    * [...You've seen nothing I wasn't here.]
+    * [...You saw nothing, I wasn't here.]
     ->bywaj
         
 === bywaj ===
