@@ -72,6 +72,7 @@ namespace InteractableObjectSystem.Objects {
                 var rockData = gameData.GetObjectData<RockData>(ID);
                 rockData.data.state = (int)_state;
                 rockData.SerializeInheritance();
+                gameData.SetObjectData(rockData);
             }
             else {
                 var rockData = new RockData {
@@ -81,7 +82,7 @@ namespace InteractableObjectSystem.Objects {
                     }
                 };
                 rockData.SerializeInheritance();
-                gameData.AddObjectData(rockData);
+                gameData.SetObjectData(rockData);
             }
         }
 

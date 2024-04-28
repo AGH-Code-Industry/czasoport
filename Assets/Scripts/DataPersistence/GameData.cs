@@ -1,3 +1,4 @@
+using System;
 using DataPersistence.DataTypes;
 using LevelTimeChange;
 using Notifications;
@@ -18,6 +19,7 @@ namespace DataPersistence {
         public NotificationGameData notificationGameData;
 
         [SerializeField] private List<Data> objectDatas;
+        [SerializeField] private List<string> savedLevels;
 
         public GameData() {
             playerGameData = new PlayerGameData();
@@ -25,12 +27,17 @@ namespace DataPersistence {
             currentTimeline = DeveloperSettings.Instance.dsdSettings.startingTimeline;
             currentLevel = DeveloperSettings.Instance.dsdSettings.startingLevel.sceneName;
             objectDatas = new List<Data>();
+            savedLevels = new List<string>();
         }
 
-        public void AddObjectData(Data data) {
-            if (objectDatas.Any(obj => obj.id.Equals(data.id))) {
-                CDebug.LogWarning($"Tried adding an object data with the ID {data.id.ToString()} that already exists!");
+        public void SetObjectData(Data data) {
+            if (string.IsNullOrEmpty(data.id.value) || data.id == Guid.Empty) {
+                CDebug.LogWarning("Tried saving an object data with an empty ID!");
                 return;
+            }
+
+            if (objectDatas.Any(obj => obj.id.Equals(data.id))) {
+                RemoveObjectData(data.id);
             }
 
             objectDatas.Add(data);
@@ -38,7 +45,9 @@ namespace DataPersistence {
 
         public T GetObjectData<T>(SerializableGuid id) where T : Data, new() {
             if (!objectDatas.Any(obj => obj.id.Equals(id))) {
-                CDebug.LogException(new System.Exception($"Tried getting an object data with the ID {id.ToString()} that does not exist!"));
+                CDebug.LogException(
+                    new System.Exception(
+                        $"Tried getting an object data with the ID {id.ToString()} that does not exist!"));
                 return null;
             }
 
@@ -48,6 +57,28 @@ namespace DataPersistence {
 
         public bool ContainsObjectData(SerializableGuid id) {
             return objectDatas.Any(obj => obj.id.Equals(id));
+        }
+
+        public void RemoveObjectData(SerializableGuid id) {
+            if (!ContainsObjectData(id))
+                return;
+
+            objectDatas.Remove(objectDatas.First(obj => obj.id.Equals(id)));
+        }
+
+        public IEnumerable<Data> GetObjectDatas() {
+            return objectDatas;
+        }
+
+        public void MarkLevelSaved(string levelId) {
+            if (savedLevels.Contains(levelId))
+                return;
+
+            savedLevels.Add(levelId);
+        }
+
+        public bool IsLevelSaved(string levelId) {
+            return savedLevels.Contains(levelId);
         }
     }
 }

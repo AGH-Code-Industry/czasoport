@@ -74,6 +74,8 @@ namespace LevelTimeChange.LevelsLoader {
         public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) {
             _logger.Log($"Changing level to {destinedLevelInfo}, destined portal: {destinationPortal}");
 
+            DataPersistenceManager.Instance.SaveGame();
+
             // Order of actions in this function is crucial, do not change it unless
             // you know what you are doing
             // FOR REAL, I WROTE THIS, THEN CHANGED IT AND IT BROKE
@@ -116,8 +118,6 @@ namespace LevelTimeChange.LevelsLoader {
 
             LoadLevels(newLevel);
             UnloadLevels(newLevel);
-
-
 
             animator.SetTrigger("End");
             yield return new WaitForSeconds(_settings.platformChangeAnimLength / 4);

@@ -5,6 +5,8 @@ using Application;
 using Application.GlobalExceptions;
 using CoinPackage.Debugging;
 using CustomInput;
+using DataPersistence;
+using DataPersistence.DataTypes;
 using InventorySystem.EventArguments;
 using Items;
 using LevelTimeChange.LevelsLoader;
@@ -21,8 +23,10 @@ using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
 namespace InventorySystem {
-    public class Inventory : MonoBehaviour {
+    public class Inventory : MonoBehaviour, IDataPersistence {
         public static Inventory Instance;
+
+        public bool SceneObject { get; } = false;
 
         public event EventHandler<SelectedSlotChangedEventArgs> SelectedSlotChanged;
         public event EventHandler<ItemInsertedEventArgs> ItemInserted;
@@ -77,6 +81,27 @@ namespace InventorySystem {
             CInput.InputActions.Inventory.PreviousItem.performed -= OnPreviousItemClicked;
             CInput.InputActions.Inventory.ChooseItem.performed -= OnChooseItemClicked;
             CInput.InputActions.Inventory.Drop.performed -= OnDropItemClicked;
+        }
+
+        public void LoadPersistentData(GameData gameData) {
+            foreach (var itemData in gameData.playerGameData.inventory) {
+                var item = Instantiate(itemData.itemSO.prefab).GetComponent<Item>();
+                item.Durability = itemData.durability;
+
+                InsertItem(item);
+            }
+        }
+
+        public void SavePersistentData(ref GameData gameData) {
+            var items = GetAllItems();
+
+            gameData.playerGameData.inventory.Clear();
+            foreach (var item in items) {
+                gameData.playerGameData.inventory.Add(new InventoryItemData {
+                    itemSO = item.ItemSO,
+                    durability = item.Durability
+                });
+            }
         }
 
         /// <summary>
@@ -296,9 +321,9 @@ namespace InventorySystem {
 
         private Item HideItem(Item item) {
             if (item.transform.parent == null) {
-                String itemUniqueId = item.uniqueId;
+                var itemUniqueId = item.ID;
                 item = Instantiate(item);
-                item.uniqueId = itemUniqueId;
+                item.ID = itemUniqueId;
             }
             item.transform.SetParent(itemHideout);
             item.transform.position = new Vector3(0f, 0f, 0f);
