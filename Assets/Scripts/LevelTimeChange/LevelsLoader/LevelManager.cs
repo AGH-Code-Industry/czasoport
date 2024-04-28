@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Application;
 using CoinPackage.Debugging;
+using DataPersistence;
 using UnityEngine;
 using Settings;
 
@@ -45,6 +46,7 @@ namespace LevelTimeChange.LevelsLoader {
         public void ActivateLevel() {
             _logger.Log($"Scene {currentLevel} is {"activating" % Colorize.Green}");
             levelContent.SetActive(true);
+            DataPersistenceManager.Instance.LoadSceneObjects();
         }
 
         /// <summary>

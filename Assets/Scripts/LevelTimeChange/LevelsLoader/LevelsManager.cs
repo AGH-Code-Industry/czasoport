@@ -22,6 +22,7 @@ namespace LevelTimeChange.LevelsLoader {
         /// Singleton instance of this class.
         /// </summary>
         public static LevelsManager Instance { get; private set; }
+        public bool SceneObject { get; } = false;
 
         public LevelManager CurrentLevelManager => _currentLevelManager;
 

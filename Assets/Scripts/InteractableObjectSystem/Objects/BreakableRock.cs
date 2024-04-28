@@ -9,13 +9,14 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace InteractableObjectSystem.Objects {
-    public enum RockState {
-        NotDestroyed,
-        Destroyed
-    }
 
     [RequireComponent(typeof(BoxCollider2D))]
     public class BreakableRock : PersistentInteractableObject {
+        private enum RockState {
+            NotDestroyed,
+            Destroyed
+        }
+
         [SerializeField] private List<ItemSO> _interactedWith;
         [SerializeField] private ParticleSystem _particleSystem;
         private BoxCollider2D _collider;
@@ -51,15 +52,15 @@ namespace InteractableObjectSystem.Objects {
         }
 
         public override void LoadPersistentData(GameData gameData) {
-            if (!gameData.ContainsObjectData(id))
+            if (!gameData.ContainsObjectData(ID))
                 return;
 
-            var rockData = gameData.GetObjectData<RockData>(id);
-            switch (rockData.state) {
+            var rockData = gameData.GetObjectData<RockData>(ID);
+            switch ((RockState)rockData.data.state) {
                 case RockState.NotDestroyed:
                     break;
                 case RockState.Destroyed:
-                    Break();
+                    HideSprite();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -67,15 +68,19 @@ namespace InteractableObjectSystem.Objects {
         }
 
         public override void SavePersistentData(ref GameData gameData) {
-            if (gameData.ContainsObjectData(id)) {
-                var rockData = gameData.GetObjectData<RockData>(id);
-                rockData.state = _state;
+            if (gameData.ContainsObjectData(ID)) {
+                var rockData = gameData.GetObjectData<RockData>(ID);
+                rockData.data.state = (int)_state;
+                rockData.SerializeInheritance();
             }
             else {
                 var rockData = new RockData {
-                    id = id,
-                    state = _state
+                    id = ID,
+                    data = new RockData.RockSubData {
+                        state = (int)_state
+                    }
                 };
+                rockData.SerializeInheritance();
                 gameData.AddObjectData(rockData);
             }
         }
@@ -93,7 +98,7 @@ namespace InteractableObjectSystem.Objects {
 
         private void HideSprite() {
             _collider.enabled = false;
-            _renderer.sprite = null;
+            _renderer.enabled = false;
         }
     }
 }

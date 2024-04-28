@@ -15,6 +15,7 @@ namespace LevelTimeChange.TimeChange {
     /// </summary>
     public class TimeChanger : MonoBehaviour, IDataPersistence {
         public static TimeChanger Instance { get; private set; }
+        public bool SceneObject { get; } = false;
 
         public event EventHandler<OnTimeChangeEventArgs> OnTimeChange;
         public event EventHandler TimeChangeUnlocked;
