@@ -89,7 +89,6 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
         _notificationWindow.gameObject.SetActive(false);
         if (_notificationsToDisplay.Count == 0) {
             _isNotificationDisplaying = false;
-            Debug.Log("Siema");
             _notificationWindow.gameObject.SetActive(false);
             yield break;
         }

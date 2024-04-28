@@ -25,6 +25,7 @@ namespace LevelTimeChange.LevelsLoader {
         public bool SceneObject { get; } = false;
 
         public LevelManager CurrentLevelManager => _currentLevelManager;
+        public event EventHandler OnLevelChange;
 
         /// <summary>
         /// All currently loaded levels.
@@ -73,6 +74,7 @@ namespace LevelTimeChange.LevelsLoader {
         /// <param name="destinationPortal">Portal to be switched to.</param>
         public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) {
             _logger.Log($"Changing level to {destinedLevelInfo}, destined portal: {destinationPortal}");
+            OnLevelChange?.Invoke(this, EventArgs.Empty);
 
             DataPersistenceManager.Instance.SaveGame();
 

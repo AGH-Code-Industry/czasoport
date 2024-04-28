@@ -21,6 +21,7 @@ namespace LevelTimeChange.TimeChange {
         public event EventHandler TimeChangeUnlocked;
 
         public class OnTimeChangeEventArgs : EventArgs {
+            public TimeLine previousTime;
             public TimeLine time;
         }
 
@@ -105,6 +106,10 @@ namespace LevelTimeChange.TimeChange {
                 _newTimeLine = actualTime + change;
             }
             if (CanChangeTime(_newTimeLine)) {
+                OnTimeChange?.Invoke(this, new OnTimeChangeEventArgs {
+                    previousTime = actualTime,
+                    time = _newTimeLine
+                });
                 StartCoroutine(ChangeTime());
             }
         }
@@ -128,9 +133,7 @@ namespace LevelTimeChange.TimeChange {
             cinemachineFramingTransposer.m_SoftZoneHeight = softZones.y;
             CInput.TeleportLock.Unlock(key);
 
-            OnTimeChange?.Invoke(this, new OnTimeChangeEventArgs {
-                time = actualTime
-            });
+
         }
 
         /// <summary>

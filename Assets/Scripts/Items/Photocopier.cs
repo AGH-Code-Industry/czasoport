@@ -43,5 +43,6 @@ public class Photocopier : InteractableObject {
         }
         _stage += 1;
         LeanTween.moveY(_go, _go.transform.position.y + _go.transform.localScale.y / 4, 1f).setEase(easeType);
+        GetComponent<PhotocotierUI>().setCounter(_stage.ToString() + "/2");
     }
 }
