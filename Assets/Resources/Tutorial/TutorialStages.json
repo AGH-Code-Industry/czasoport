@@ -1,0 +1,68 @@
+[
+  {
+    "action": "",
+    "conditionSatisfied": true,
+    "tutorialNotification": ["Hello! Welcome to the tutorial!"]
+  },
+  {
+    "action": "Navigation",
+    "conditionSatisfied": true,
+    "tutorialNotification": ["Press", "WSAD", "to move."]
+  },
+  {
+    "action": "TogglePause",
+    "conditionSatisfied": true,
+    "tutorialNotification": ["Press", "ESCAPE", "to pause the game."]
+  },
+  {
+    "action": "Interaction",
+    "conditionSatisfied": false,
+    "tutorialNotification": ["Press", "F", "to pick up an item."],
+    "specialCondition": "ItemInserted"
+  },
+  {
+    "action": "NextItem",
+    "conditionSatisfied": true,
+    "tutorialNotification": ["Press", "TAB", "to select the next slot in your inventory."]
+  },
+  {
+    "action": "ChooseItem",
+    "conditionSatisfied": true,
+    "tutorialNotification": ["Press numbers", "1-6", "to select a specific slot."]
+  },
+  {
+    "action": "Drop",
+    "conditionSatisfied": false,
+    "tutorialNotification": ["Press", "G", "to drop an item."],
+    "specialCondition": "ItemRemoved"
+  },
+  {
+    "action": "Interaction",
+    "conditionSatisfied": false,
+    "tutorialNotification": ["Press", "F", "to interact with another item (try breaking the rock)."],
+    "specialCondition": "itemInteractionPerformed"
+  },
+  {
+    "action": "Interaction",
+    "conditionSatisfied": false,
+    "tutorialNotification": ["Good job! Now try to find the timeport."],
+    "specialCondition": "TimeChangeUnlocked"
+  },
+  {
+    "action": "TeleportBack",
+    "conditionSatisfied": false,
+    "tutorialNotification": ["Press", "Q", "to teleport back in time."],
+    "specialCondition": "OnTimeChangeBackward"
+  },
+  {
+    "action": "TeleportForward",
+    "conditionSatisfied": false,
+    "tutorialNotification": ["Press", "E", "to teleport to the future."],
+    "specialCondition": "OnTimeChangeForward"
+  },
+  {
+    "action": "",
+    "conditionSatisfied": true,
+    "tutorialNotification": ["Congratulations! You managed to pass the tutorial, now the fun begins... Good luck!!!"]
+  }
+]

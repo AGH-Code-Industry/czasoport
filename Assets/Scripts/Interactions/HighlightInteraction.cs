@@ -16,6 +16,9 @@ namespace Interactions {
         private float _animationTime = 0.3f;
         private float _animationTimer;
 
+        public EventHandler<InteractionHighlightEventArgs> onHighlightStart;
+        public EventHandler<InteractionHighlightEventArgs> onHighlightEnd;
+
 
         private void Start() {
             _sprite = GetComponent<SpriteRenderer>();
@@ -32,6 +35,9 @@ namespace Interactions {
 
         public void DisableHighlight() {
             if (_isFocused) {
+                onHighlightEnd?.Invoke(this, new InteractionHighlightEventArgs() {
+                    senderObject = this.gameObject
+                });
                 StopCoroutine(_fadeIn);
                 _fadeOut = TurnHighlight(1f, 0f);
                 StartCoroutine(_fadeOut);
@@ -41,6 +47,9 @@ namespace Interactions {
 
         public void EnableFocusedHighlight() {
             if (!_isFocused) {
+                onHighlightStart?.Invoke(this, new InteractionHighlightEventArgs() {
+                    senderObject = this.gameObject
+                });
                 StopCoroutine(_fadeOut);
                 _fadeOut = TurnHighlight(1f, 0f);
                 StartCoroutine(_fadeIn);
@@ -50,6 +59,9 @@ namespace Interactions {
 
         public void DisableFocusedHighlight() {
             if (_isFocused) {
+                onHighlightEnd?.Invoke(this, new InteractionHighlightEventArgs() {
+                    senderObject = this.gameObject
+                });
                 StopCoroutine(_fadeIn);
                 _fadeOut = TurnHighlight(1f, 0f);
                 StartCoroutine(_fadeOut);
