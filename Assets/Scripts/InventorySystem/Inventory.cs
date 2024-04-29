@@ -87,6 +87,8 @@ namespace InventorySystem {
             foreach (var itemData in gameData.playerGameData.inventory) {
                 var item = Instantiate(itemData.itemSO.prefab).GetComponent<Item>();
                 item.Durability = itemData.durability;
+                item.ID = itemData.id;
+                item.BlockDestroying = true;
 
                 InsertItem(item);
             }
@@ -99,7 +101,8 @@ namespace InventorySystem {
             foreach (var item in items) {
                 gameData.playerGameData.inventory.Add(new InventoryItemData {
                     itemSO = item.ItemSO,
-                    durability = item.Durability
+                    durability = item.Durability,
+                    id = item.ID
                 });
             }
         }
@@ -184,7 +187,7 @@ namespace InventorySystem {
             }
 
             // Hide item
-            item = HideItem(item);
+            item.Hide();
 
             NotificationManager.Instance.RaiseNotification(item.ItemSO.pickUpNotification);
 
@@ -317,19 +320,6 @@ namespace InventorySystem {
                 currentTimeTransform = emptyGameObject.transform;
             }
             return currentTimeTransform;
-        }
-
-        private Item HideItem(Item item) {
-            if (item.transform.parent == null) {
-                var itemUniqueId = item.ID;
-                item = Instantiate(item);
-                item.ID = itemUniqueId;
-            }
-            item.transform.SetParent(itemHideout);
-            item.transform.position = new Vector3(0f, 0f, 0f);
-            item.GetComponent<SpriteRenderer>().enabled = false;
-            item.GetComponent<CircleCollider2D>().enabled = false;
-            return item;
         }
 
         private void ShowItem(Item itemToFind) {

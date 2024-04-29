@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Xml;
 using Application;
 using CoinPackage.Debugging;
@@ -21,6 +22,8 @@ namespace Items {
         [field: SerializeField] public SerializableGuid ID { get; set; }
 
         public bool SceneObject { get; } = true;
+        public bool Hidden { get; set; } = false;
+        public bool BlockDestroying { get; set; } = false;
 
         public ItemSO ItemSO => itemSO;
         private int _durability = 0;
@@ -55,35 +58,50 @@ namespace Items {
             if (!gameData.IsLevelSaved(LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId))
                 return;
 
+            if (gameData.playerGameData.inventory.Any(it => it.id.Equals(ID))) {
+                if (!BlockDestroying)
+                    Destroy(gameObject);
+                return;
+            }
+
             if (gameData.ContainsObjectData(ID)) {
                 var itemData = gameData.GetObjectData<ItemData>(ID);
 
-                if (itemData.mapId != LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId)
+                if (itemData.data.mapId != LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId)
                     return;
 
-                var newItem = Instantiate(ItemSO.prefab, itemData.position, Quaternion.identity).GetComponent<Item>();
-                newItem.Durability = itemData.durability;
-                newItem.ID = ID;
+                Durability = itemData.data.durability;
+                itemSO = itemData.data.itemSo;
+                transform.position = itemData.data.position;
+                Hidden = itemData.data.hidden;
+                if (Hidden)
+                    Hide();
             }
-
-            Destroy(gameObject);
         }
 
         public void SavePersistentData(ref GameData gameData) {
             if (gameData.ContainsObjectData(ID)) {
                 var itemData = gameData.GetObjectData<ItemData>(ID);
-                itemData.durability = Durability;
-                itemData.itemSo = ItemSO;
-                itemData.position = transform.position;
-                itemData.mapId = LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId;
+                itemData.data.durability = Durability;
+                itemData.data.itemSo = ItemSO;
+                itemData.data.position = transform.position;
+                itemData.data.mapId = LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId;
+                itemData.SerializeInheritance();
+                gameData.SetObjectData(itemData);
             }
             else {
                 var itemData = new ItemData {
-                    durability = Durability,
-                    itemSo = ItemSO,
-                    position = transform.position,
-                    mapId = LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId
+                    data = new ItemData.ItemSubData
+                    {
+                        durability = Durability,
+                        itemSo = ItemSO,
+                        position = transform.position,
+                        mapId = LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId,
+                        hidden = Hidden
+                    },
+                    id = ID
                 };
+                itemData.SerializeInheritance();
                 gameData.SetObjectData(itemData);
             }
         }
@@ -95,6 +113,13 @@ namespace Items {
 
         public void LongInteractionHand() {
             _logger.Log($"Item {this} is being {"long interacted" % Colorize.Cyan} with.", this);
+        }
+
+        public void Hide() {
+            transform.SetParent(Inventory.Instance.itemHideout);
+            //transform.position = new Vector3(0f, 0f, 0f);
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<CircleCollider2D>().enabled = false;
         }
 
         public override string ToString() {
