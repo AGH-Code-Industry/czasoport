@@ -29,6 +29,8 @@ namespace LevelTimeChange.TimeChange {
 
         GameObject _timeChangeUIgo;
         bool _timeChangeActivated = false;
+        bool _hasCzasoport = false;
+        bool _hasCzasoportPart = false;
 
         /// <summary>
         /// Timeline the player is currently on.
@@ -147,10 +149,14 @@ namespace LevelTimeChange.TimeChange {
             actualTime = gameData.currentTimeline;
             _timeUnlocked[(int)actualTime] = true;
             if (_timeChangeActivated) _timeChangeUIgo.GetComponent<TimeChangeUI>().UpdateTimeUI();
+
+            if (gameData.playerGameData.hasCzasoport)
+                PickUpCzasoport();
         }
 
         public void SavePersistentData(ref GameData gameData) {
             gameData.currentTimeline = actualTime;
+            gameData.playerGameData.hasCzasoport = _hasCzasoport;
         }
 
         public void UnlockTimeline(TimeLine timelineToUnlock) {
@@ -170,6 +176,14 @@ namespace LevelTimeChange.TimeChange {
         public void EnableTimeChange() {
             _timeChangeUIgo.GetComponent<TimeChangeUI>().UnlockTimeUI();
             _timeChangeUIgo.SetActive(true);
+        }
+
+        public void PickUpCzasoport() {
+            _hasCzasoport = true;
+            EnableTimeChange();
+            UnlockTimeline(TimeLine.Present);
+            UnlockTimeline(TimeLine.Future);
+            _timeChangeUIgo.GetComponent<TimeChangeUI>().UpdateTimeUI();
         }
 
         public override string ToString() {

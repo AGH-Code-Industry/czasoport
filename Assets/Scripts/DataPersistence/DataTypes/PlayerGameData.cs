@@ -9,9 +9,13 @@ namespace DataPersistence.DataTypes {
     public class PlayerGameData {
         public Vector2 position;
         public List<InventoryItemData> inventory;
+        public bool hasCzasoport;
+        public bool hasCzasoportPart;
 
         public PlayerGameData() {
             inventory = new List<InventoryItemData>();
+            hasCzasoport = false;
+            hasCzasoportPart = false;
 
             // Based on default timeline, move player to correct position on that timeline
             position = DeveloperSettings.Instance.dsdSettings.startingPlayerPositionOffset;
