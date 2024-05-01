@@ -100,6 +100,7 @@ namespace InteractableObjectSystem.Objects {
         private void HideSprite() {
             _collider.enabled = false;
             _renderer.enabled = false;
+            _state = RockState.Destroyed;
         }
     }
 }
