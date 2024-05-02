@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 using Settings;
 using UI;
 using Cinemachine;
+using InteractableObjectSystem;
 
 namespace LevelTimeChange.TimeChange {
     /// <summary>
@@ -152,11 +153,14 @@ namespace LevelTimeChange.TimeChange {
 
             if (gameData.playerGameData.hasCzasoport)
                 PickUpCzasoport();
+            if (gameData.playerGameData.hasCzasoportPart)
+                PickUpCzasoportPart();
         }
 
         public void SavePersistentData(ref GameData gameData) {
             gameData.currentTimeline = actualTime;
             gameData.playerGameData.hasCzasoport = _hasCzasoport;
+            gameData.playerGameData.hasCzasoportPart = _hasCzasoportPart;
         }
 
         public void UnlockTimeline(TimeLine timelineToUnlock) {
@@ -184,6 +188,19 @@ namespace LevelTimeChange.TimeChange {
             UnlockTimeline(TimeLine.Present);
             UnlockTimeline(TimeLine.Future);
             _timeChangeUIgo.GetComponent<TimeChangeUI>().UpdateTimeUI();
+        }
+
+        public void PickUpCzasoportPart(InterObjectDefinition definition = null) {
+            _hasCzasoportPart = true;
+            if (!IsTimeUnlocked(TimeLine.Present)) {
+                if (definition != null)
+                    NotificationManager.Instance.RaiseNotification(definition.failedHandInterNotification);
+                return;
+            }
+            UnlockTimeline(TimeLine.Past);
+            if (definition != null)
+                NotificationManager.Instance.RaiseNotification(definition.successfulHandInterNotification);
+            FindObjectOfType<TimeChangeUI>().UpdateTimeUI();
         }
 
         public override string ToString() {
