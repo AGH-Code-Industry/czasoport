@@ -86,6 +86,7 @@ namespace Items {
                 itemData.data.itemSo = ItemSO;
                 itemData.data.position = transform.position;
                 itemData.data.mapId = LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId;
+                itemData.data.hidden = Hidden;
                 itemData.SerializeInheritance();
                 gameData.SetObjectData(itemData);
             }
@@ -116,6 +117,7 @@ namespace Items {
         }
 
         public void Hide() {
+            Hidden = true;
             transform.SetParent(Inventory.Instance.itemHideout);
             //transform.position = new Vector3(0f, 0f, 0f);
             GetComponent<SpriteRenderer>().enabled = false;

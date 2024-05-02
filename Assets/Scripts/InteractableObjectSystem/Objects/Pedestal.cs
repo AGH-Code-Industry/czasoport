@@ -35,7 +35,7 @@ namespace InteractableObjectSystem.Objects {
                 GameObject tempItem = Instantiate(_currentRock.prefab);
                 tempItem.transform.SetParent(transform);
                 _currentRock = item.ItemSO;
-                Destroy(item.gameObject);
+                item.Hide();
                 Inventory.Instance.RemoveItem(item.ItemSO);
                 Inventory.Instance.InsertItem(tempItem.GetComponent<Item>());
             }

@@ -81,7 +81,7 @@ public class Photocopier : PersistentInteractableObject {
             _go.layer = 0;
             _go.GetComponent<Item>().enabled = false;
             _go.GetComponent<CircleCollider2D>().enabled = false;
-            GetComponent<PhotocotierUI>().setCounter(_stage.ToString() + "/2");
         }
+        GetComponent<PhotocotierUI>().setCounter(_stage.ToString() + "/2");
     }
 }

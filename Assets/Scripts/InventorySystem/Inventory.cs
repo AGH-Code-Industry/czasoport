@@ -208,7 +208,7 @@ namespace InventorySystem {
             });
             if (item.Durability <= 0) {
                 RemoveItem(out var removedItem);
-                Destroy(item.gameObject);
+                item.Hide();
             }
             return true;
         }
