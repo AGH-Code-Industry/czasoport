@@ -59,7 +59,7 @@ namespace Items {
                 return;
 
             if (gameData.playerGameData.inventory.Any(it => it.id.Equals(ID))) {
-                if (!BlockDestroying)
+                if (!BlockDestroying && !Hidden)
                     Destroy(gameObject);
                 return;
             }
