@@ -61,8 +61,6 @@ namespace LevelTimeChange.LevelsLoader {
             _logger.Log($"Scene {currentLevel} is {"deactivating" % Colorize.Red}");
             levelContent.SetActive(false);
             LevelsManager.Instance.ReportForDiscovery(currentLevel);
-
-            DataPersistenceManager.Instance.SaveGame();
         }
 
         /// <summary>

@@ -47,9 +47,11 @@ namespace InteractableObjectSystem.Objects {
                 gameData.SetObjectData(tapePlayerData);
             }
             else {
-                var tapePlayerData = new TapePlayerData();
-                tapePlayerData.data = new TapePlayerData.TapePlayerSubData() {
-                    playingMusic = _playingMusic
+                var tapePlayerData = new TapePlayerData {
+                    data = new TapePlayerData.TapePlayerSubData() {
+                        playingMusic = _playingMusic
+                    },
+                    id = ID
                 };
                 tapePlayerData.SerializeInheritance();
                 gameData.SetObjectData(tapePlayerData);
@@ -57,6 +59,7 @@ namespace InteractableObjectSystem.Objects {
         }
 
         private void PlayMusic() {
+            _playingMusic = true;
             foreach (var pathWalking in _NPCPathWalkings) {
                 pathWalking.StartWalk();
             }

@@ -116,6 +116,8 @@ namespace LevelTimeChange.LevelsLoader {
 
             _player.position = destinationPortal.GetTeleportPoint(); // TODO: Change how we move the player
 
+            DataPersistenceManager.Instance.SaveGame();
+
             // oldLevel.DeactivateLevel();
 
             LoadLevels(newLevel);
