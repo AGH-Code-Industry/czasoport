@@ -8,7 +8,6 @@ Oh you look interesting. Similar to something I found recently... do you want to
     ->bywaj
         
 === bywaj ===
-Bye!
 -> DONE
 
 == show ==
@@ -19,5 +18,4 @@ Bye!
         -> bywaj
         
 === trade ===
-Have a nice day!
 -> DONE

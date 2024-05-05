@@ -25,6 +25,4 @@ I have something that I think belogns to you. A part of a device. If you would b
         -> bywaj
         
 === trade ===
-If anyone asks, we don't know each other right?
 -> DONE
--> main
