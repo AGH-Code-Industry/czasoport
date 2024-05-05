@@ -17,6 +17,7 @@ namespace DataPersistence {
         public TimeLine currentTimeline;
         public string currentLevel;
         public NotificationGameData notificationGameData;
+        public List<SerializableGuid> itemHideout;
 
         [SerializeField] private List<Data> objectDatas;
         [SerializeField] private List<string> savedLevels;
@@ -28,6 +29,7 @@ namespace DataPersistence {
             currentLevel = DeveloperSettings.Instance.dsdSettings.startingLevel.sceneName;
             objectDatas = new List<Data>();
             savedLevels = new List<string>();
+            itemHideout = new List<SerializableGuid>();
         }
 
         public void SetObjectData(Data data) {

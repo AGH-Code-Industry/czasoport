@@ -21,6 +21,7 @@ using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using Utils;
 
 namespace InventorySystem {
     public class Inventory : MonoBehaviour, IDataPersistence {
@@ -92,6 +93,22 @@ namespace InventorySystem {
 
                 InsertItem(item);
             }
+
+            foreach (var hideoutItemID in gameData.itemHideout) {
+                if (ItemHideoutContainsItem(hideoutItemID))
+                    continue;
+
+                if (!gameData.ContainsObjectData(hideoutItemID)) {
+                    CDebug.LogError("Hideout item desynced with saves. It can lead to serious save issues!");
+                    continue;
+                }
+                var itemData = gameData.GetObjectData<ItemData>(hideoutItemID);
+
+                var item = Instantiate(itemData.data.itemSo.prefab, itemHideout).GetComponent<Item>();
+                item.Durability = itemData.data.durability;
+                item.ID = itemData.id;
+                item.BlockDestroying = true;
+            }
         }
 
         public void SavePersistentData(ref GameData gameData) {
@@ -104,6 +121,15 @@ namespace InventorySystem {
                     durability = item.Durability,
                     id = item.ID
                 });
+            }
+
+            gameData.itemHideout.Clear();
+            for (var i = 0; i < itemHideout.childCount; i++) {
+                var child = itemHideout.GetChild(i);
+                var item = child.GetComponentInChildren<Item>();
+                if (item.ID.value == "" || item.ID == Guid.Empty)
+                    continue;
+                gameData.itemHideout.Add(item.ID);
             }
         }
 
@@ -256,6 +282,17 @@ namespace InventorySystem {
             });
             _itemsCount--;
             return item is not null;
+        }
+
+        private bool ItemHideoutContainsItem(SerializableGuid id) {
+            for (var i = 0; i < itemHideout.childCount; i++) {
+                var child = itemHideout.GetChild(i);
+                var item = child.GetComponentInChildren<Item>();
+                if (item.ID.Equals(id))
+                    return true;
+            }
+
+            return false;
         }
 
         private void OnNextItemClicked(InputAction.CallbackContext ctx) {
