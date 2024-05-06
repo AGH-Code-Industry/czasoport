@@ -18,6 +18,7 @@ namespace DataPersistence {
         public string currentLevel;
         public NotificationGameData notificationGameData;
         public List<SerializableGuid> itemHideout;
+        public bool tutorialFinished = false;
 
         [SerializeField] private List<Data> objectDatas;
         [SerializeField] private List<string> savedLevels;
