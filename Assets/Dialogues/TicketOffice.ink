@@ -1,18 +1,18 @@
 -> main
 
 === main ===
-museum? iść? musisz kupić bilet
-    * [Mam już bilet #requiresItem: TownHall/MuseumTicket #getsItem: TownHall/ValidatedMuseumTicket]
+Museum? Visit? Must buy ticket
+    * [I have the ticket. #requiresItem: TownHall/MuseumTicket #getsItem: TownHall/ValidatedMuseumTicket]
         -> ma_bilet
-    * [Nie mam pieniędzy może dasz mi bilet za coś co mam]
+    * [I don't have any money, maybe you'd like to trade for something.]
         -> nie_ma_biletu
-    * [Odejdź]
+    * [Go away]
         -> DONE
         
 === nie_ma_biletu ===
-10 monet albo nici z wymiany
+10 gold coins or no trade
 -> DONE
      
 === ma_bilet ===
-masz bilet? idź 
+Have ticket? Go! 
 -> DONE
