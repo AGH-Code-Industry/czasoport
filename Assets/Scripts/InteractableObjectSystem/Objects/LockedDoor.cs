@@ -107,7 +107,7 @@ namespace InteractableObjectSystem.Objects {
             CDebug.Log("Closed");
             _animator.ResetTrigger("OpenDoors");
             foreach (LockedDoor door in doorsInOtherTimes) {
-                door.OpenDoor();
+                door.CloseDoor();
             }
         }
 
