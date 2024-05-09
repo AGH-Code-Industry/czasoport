@@ -14,4 +14,3 @@ namespace InteractableObjectSystem {
         public abstract void SavePersistentData(ref GameData gameData);
     }
 }
-

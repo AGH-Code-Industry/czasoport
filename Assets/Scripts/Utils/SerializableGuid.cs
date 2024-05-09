@@ -5,8 +5,8 @@ using UnityEngine;
 
 namespace Utils {
     [Serializable]
-    public struct SerializableGuid: IComparable, IComparable<SerializableGuid>, IEquatable<SerializableGuid>
-    {
+    public struct SerializableGuid :
+        IComparable, IComparable<SerializableGuid>, IEquatable<SerializableGuid> {
         public string value;
 
         private SerializableGuid(string guid) {
