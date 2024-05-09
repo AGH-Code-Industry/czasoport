@@ -9,8 +9,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace DataPersistence {
-    public class DataPersistenceTools : MonoBehaviour
-    {
+    public class DataPersistenceTools : MonoBehaviour {
         [MenuItem("Tools/Data/Randomize IDs")]
         private static void RandomizeIDs() {
             if (!UnityEngine.Application.isEditor) {

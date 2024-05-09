@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace DataPersistence.DataTypes {
     public class PhotocopierData : Data {

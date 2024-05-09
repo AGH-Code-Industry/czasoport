@@ -5,8 +5,7 @@ using UnityEngine;
 using Utils;
 
 namespace DataPersistence {
-    public interface IPersistentObject : IDataPersistence
-    {
+    public interface IPersistentObject : IDataPersistence {
         public SerializableGuid ID { get; set; }
     }
 }

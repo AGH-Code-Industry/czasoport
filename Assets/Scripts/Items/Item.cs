@@ -92,8 +92,7 @@ namespace Items {
             }
             else {
                 var itemData = new ItemData {
-                    data = new ItemData.ItemSubData
-                    {
+                    data = new ItemData.ItemSubData {
                         durability = Durability,
                         itemSo = ItemSO,
                         position = transform.position,

@@ -5,8 +5,7 @@ using TMPro;
 using Interactions;
 using System;
 
-public class PhotocotierUI : MonoBehaviour
-{
+public class PhotocotierUI : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI _documentCounter;
 
     private void Start() {

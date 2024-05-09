@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Items;
 using UnityEngine;
 
@@ -6,8 +6,7 @@ namespace DataPersistence.DataTypes {
     public class PedestalData : Data {
 
         [Serializable]
-        public class PedestalSubData
-        {
+        public class PedestalSubData {
             public ItemSO currentRock;
         }
 
