@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ce5931d7433ff46b4ea648e04d74f4, type: 3}
+  m_Name: ValidatedMuseumTicket
+  m_EditorClassIdentifier: 
+  itemName: ValidatedMuseumTicket
+  description: ValidatedMuseumTicket
+  prefab: {fileID: 2913802481605202991, guid: 94ebe6e87dd88a840ab2ed73feb66494, type: 3}
+  image: {fileID: 21300000, guid: 7f69128bfd685044a9e1417ad93548c4, type: 3}
+  durability: 0
+  interactionDistance: 3
+  pickUpNotification:
+    message: 
+    displayTime: 0
+  dropNotification:
+    message: 
+    displayTime: 0
