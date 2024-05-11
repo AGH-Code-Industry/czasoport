@@ -62,7 +62,7 @@ namespace LevelTimeChange.TimeChange {
 
                 GameObject objectToSpawn = new GameObject("ColliderToSpawn");
                 objectToSpawn.transform.parent = transform;
-                objectToSpawn.AddComponent<BoxCollider2D>();
+                objectToSpawn.AddComponent<CircleCollider2D>();
 
                 objectToSpawn.transform.position = i * _timeJump + transform.position;
                 _boxes.Add(objectToSpawn.AddComponent<CheckCollider>());

@@ -179,7 +179,7 @@ namespace InventorySystem {
                 Item = item,
                 Slot = _selectedSlot
             });
-            if (item.Durability == 0) {
+            if (item.Durability <= 0) {
                 RemoveItem(out var removedItem);
                 Destroy(item.gameObject);
             }
