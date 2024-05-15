@@ -91,7 +91,7 @@ namespace InventorySystem {
                 item.ID = itemData.id;
                 item.BlockDestroying = true;
 
-                InsertItem(item);
+                InsertItem(item, false);
             }
 
             foreach (var hideoutItemID in gameData.itemHideout) {
@@ -177,7 +177,7 @@ namespace InventorySystem {
         /// </summary>
         /// <param name="item">`Item` to insert.</param>
         /// <returns></returns>
-        public bool InsertItem(Item item) {
+        public bool InsertItem(Item item, bool showNotification = true) {
             if (_itemsCount == _settings.itemsCount - 1) { // Inventory full
                 //NotificationManager.Instance.RaiseNotification(new Notification("Inventory is full", 3f));
                 if (_selectedSlot == 0) {
@@ -215,7 +215,8 @@ namespace InventorySystem {
             // Hide item
             item.Hide();
 
-            NotificationManager.Instance.RaiseNotification(item.ItemSO.pickUpNotification);
+            if (showNotification)
+                NotificationManager.Instance.RaiseNotification(item.ItemSO.pickUpNotification);
 
             return true;
         }
