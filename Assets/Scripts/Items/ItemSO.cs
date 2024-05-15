@@ -1,3 +1,4 @@
+using System;
 using CoinPackage.Debugging;
 using Notifications;
 using UnityEngine;
@@ -8,7 +9,7 @@ namespace Items {
     /// Scriptable object for items
     /// </summary>
     [CreateAssetMenu(fileName = "New Item", menuName = "Definition/New Item")]
-
+    [Serializable]
     public class ItemSO : ScriptableObject {
         [Header("Item Information")]
         public string itemName;
