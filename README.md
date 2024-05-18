@@ -39,50 +39,18 @@ The game world is divided into 3 spacetime zones:
 
 # Team
 
-| **Programmers** | **Designers**   | **Artists**        |
-| ------------- | ----------------- | ------------------ |
-| Patryk Lesiak | Katarzyna Klęczek | Adrian Krzych      |
-| Meciaj Pieniąże | Dawid Maziarski | Aleksandra Michalec|
-| Kacper Sobolak | Dominik Niemiec  | Anastazja          |
-| Gilbert Guszcza| Maciek Maziarz   | Angelika Chruszcz  |
-| Mikołaj Gosztyła|                | Magdalena Duziak  |
-| Stanisław Borowy|                | Martyna Wronka     |
-|                |                 | Julia Sikora       |
-|                |                 | Patrycja Albrycht  |
+| **Programmers**   | **Designers**   | **Artists**        | **Sound Design**    |
+| ----------------- | --------------- | ------------------ | ------------------- |
+| Patryk Lesiak     | Katarzyna Klęczek| Adrian Krzych      | Jakub Piasek        |
+| Meciaj Pieniąże   | Dawid Maziarski | Aleksandra Michalec| Wilhelm Pasterz     |
+| Kacper Sobolak    | Dominik Niemiec | Anastazja          |                     |
+| Gilbert Guszcza   | Maciek Maziarz  | Angelika Chruszcz  |                     |
+| Mikołaj Gosztyła  |                 | Magdalena Duziak   |                     |
+| Stanisław Borowy  |                 | Martyna Wronka     |                     |
+| Bartosz Chochół   |                 | Julia Sikora       |                     |
+| Bartosz Chochół   |                 | Patrycja Albrycht  |                     |
+| Kamil Suhak       |                 | Szymon Krzysztofik |                     |
+| Kamil Butryn      |                 |                    |                     |
+| Wojciech Jurgielewicz|             |                    |                     |
 
 
-# Contributors
-<p align="center">
-  <a href="https://github.com/Mikosztyla">
-    <img src="https://github.com/Mikosztyla.png" alt="Mikosztyla" width="100px" style="border-radius: 10px; margin: 5px;">
-  </a>
-  <a href="https://github.com/KacperSobolak">
-    <img src="https://github.com/KacperSobolak.png" alt="KacperSobolak" width="100px" style="border-radius: 10px; margin: 5px;">
-  </a>
-  <a href="https://github.com/vLesio">
-    <img src="https://github.com/vLesio.png" alt="vLesio" width="100px" style="border-radius: 10px; margin: 5px;">
-  </a>
-  <a href="https://github.com/Isdre">
-    <img src="https://github.com/Isdre.png" alt="Isdre" width="100px" style="border-radius: 10px; margin: 5px;">
-  </a>
-  <a href="https://github.com/ZariaRiv">
-    <img src="https://github.com/ZariaRiv.png" alt="ZariaRiv" width="100px" style="border-radius: 10px; margin: 5px;">
-  </a>
-</p>
-<p align="center">
-  <a href="https://github.com/empieniazek">
-    <img src="https://github.com/empieniazek.png" alt="empieniazek" width="100px" style="border-radius: 10px; margin: 5px;">
-  </a>
-  <a href="https://github.com/stabor705">
-    <img src="https://github.com/stabor705.png" alt="stabor705" width="100px" style="border-radius: 10px; margin: 5px;">
-  </a>
-  <a href="https://github.com/LIIERO">
-    <img src="https://github.com/LIIERO.png" alt="LIIERO" width="100px" style="border-radius: 10px; margin: 5px;">
-  </a>
-  <a href="https://github.com/QubaPra">
-    <img src="https://github.com/QubaPra.png" alt="QubaPra" width="100px" style="border-radius: 10px; margin: 5px;">
-  </a>
-  <a href="https://github.com/DomDa61">
-    <img src="https://github.com/DomDa61.png" alt="DomDa61" width="100px" style="border-radius: 10px; margin: 5px;">
-  </a>
-</p>
