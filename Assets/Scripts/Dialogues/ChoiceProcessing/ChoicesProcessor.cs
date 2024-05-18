@@ -58,7 +58,10 @@ namespace Dialogues {
                     else {
                         temp.GetComponent<Item>().InteractionHand();
                     }
+                }
 
+                if (choiceContext.RequiresItem || choiceContext.GetsItem) {
+                    DialogueManager.I.EndDialogue();
                 }
             });
             choiceButton.SetText(choice.text);
