@@ -1,5 +1,6 @@
 using Items;
 using JetBrains.Annotations;
+using System.Collections.Generic;
 
 namespace Dialogues.ChoiceProcessing {
     public class ChoiceContext {
@@ -19,18 +20,19 @@ namespace Dialogues.ChoiceProcessing {
         }
 
         public bool GetsItem { get; private set; }
-        [CanBeNull] private ItemSO _getItem;
-        public ItemSO GetItem {
+        [CanBeNull] private List<ItemSO> _getItem = new List<ItemSO>();
+        public List<ItemSO> GetItem {
             get {
                 if (!GetsItem) {
                     return null;
                 }
                 return _getItem;
             }
-            set {
-                _getItem = value;
-                GetsItem = true;
-            }
+        }
+
+        public void AddItem(ItemSO itemToAdd) {
+            _getItem.Add(itemToAdd);
+            GetsItem = true;
         }
     }
 }
