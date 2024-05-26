@@ -6,12 +6,13 @@ namespace LevelTimeChange.TimeChange {
     /// Provides checking collision for time change mechanic.
     /// </summary>
     public class CheckCollider : MonoBehaviour {
-        private BoxCollider2D _box;
+        private CircleCollider2D _collider;
         private bool _isTouching;
 
         private void Awake() {
-            _box = GetComponent<BoxCollider2D>();
-            _box.isTrigger = true;
+            _collider = GetComponent<CircleCollider2D>();
+            _collider.isTrigger = true;
+            _collider.offset = new Vector2(0, -0.1f);
         }
 
         /// <summary>
@@ -22,7 +23,7 @@ namespace LevelTimeChange.TimeChange {
             return !_isTouching;
         }
 
-        private void OnTriggerEnter2D(Collider2D other) {
+        private void OnTriggerStay2D(Collider2D other) {
             if (!other.isTrigger) _isTouching = true;
         }
 

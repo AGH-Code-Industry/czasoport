@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -112,8 +117,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,8 +138,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,8 +159,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,8 +180,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,8 +201,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,8 +222,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,8 +243,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -256,11 +261,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2520
-        y: 0
+        y: 4
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,8 +285,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,8 +306,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,8 +327,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -343,8 +348,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,8 +369,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,8 +390,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -406,8 +411,8 @@ TextureImporter:
         y: 0
         width: 360
         height: 240
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -430,24 +435,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ochroniarz_walk_front_SPRITE_12: -966739900
-      Ochroniarz_walk_front_SPRITE_13: 1154243343
-      Ochroniarz_walk_front_SPRITE_3: 2002034109
-      Ochroniarz_walk_front_SPRITE_14: 1821948456
-      Ochroniarz_walk_front_SPRITE_4: 1410364294
       Ochroniarz_walk_front_SPRITE_0: -456311685
-      Ochroniarz_walk_front_SPRITE_6: 479009622
-      Ochroniarz_walk_front_SPRITE_5: 1378335394
-      Ochroniarz_walk_front_SPRITE_7: -2144638045
-      Ochroniarz_walk_front_SPRITE_2: -1404295195
       Ochroniarz_walk_front_SPRITE_1: 2107523807
       Ochroniarz_walk_front_SPRITE_10: 584230002
+      Ochroniarz_walk_front_SPRITE_11: 947473732
+      Ochroniarz_walk_front_SPRITE_12: -966739900
+      Ochroniarz_walk_front_SPRITE_13: 1154243343
+      Ochroniarz_walk_front_SPRITE_14: 1821948456
+      Ochroniarz_walk_front_SPRITE_2: -1404295195
+      Ochroniarz_walk_front_SPRITE_3: 2002034109
+      Ochroniarz_walk_front_SPRITE_4: 1410364294
+      Ochroniarz_walk_front_SPRITE_5: 1378335394
+      Ochroniarz_walk_front_SPRITE_6: 479009622
+      Ochroniarz_walk_front_SPRITE_7: -2144638045
       Ochroniarz_walk_front_SPRITE_8: 289195246
       Ochroniarz_walk_front_SPRITE_9: -1988812685
-      Ochroniarz_walk_front_SPRITE_11: 947473732
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
