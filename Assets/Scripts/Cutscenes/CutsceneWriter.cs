@@ -8,7 +8,8 @@ public class CutsceneWriter : MonoBehaviour {
     public static CutsceneWriter Instance = null;
     [SerializeField] private TextMeshProUGUI textMeshPro;
     [SerializeField] private float typingSpeed = 100f;
-    private bool isTyping = false;
+    private bool _isTyping = false;
+    private Coroutine _current;
     private string _fullText;
 
     private void Awake() {
@@ -19,18 +20,22 @@ public class CutsceneWriter : MonoBehaviour {
 
     public void StartTyping(string text) {
         _fullText = text;
-        StartCoroutine(TypeText());
+        if (_isTyping) {
+            StopCoroutine(_current);
+            _isTyping = false;
+        }
+        _current = StartCoroutine(TypeText());
     }
-    
+
     private IEnumerator TypeText() {
         textMeshPro.text = "";
-        isTyping = true;
+        _isTyping = true;
         foreach (char c in _fullText)
         {
             textMeshPro.text += c;
             yield return new WaitForSeconds(typingSpeed);
         }
-
-        isTyping = false;
+        yield return new WaitForSeconds(typingSpeed);
+        _isTyping = false;
     }
 }
