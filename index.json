@@ -129,6 +129,21 @@
     "title": "Namespace CustomInput | Czasoport Documentation",
     "keywords": "Namespace CustomInput Classes CInput Wrapper for automatically generated InputActions. Provides easier access to reading values from input, takes care of processing for common input values. Incorporates locking mechanism. InputTest"
   },
+  "api/Cutscene.Cutscene.html": {
+    "href": "api/Cutscene.Cutscene.html",
+    "title": "Class Cutscene | Czasoport Documentation",
+    "keywords": "Class Cutscene Namespace Cutscene public class Cutscene : MonoBehaviour Inheritance object Cutscene Fields incidents public List<UnityEvent> incidents Field Value List<UnityEvent> timeSchedule Scriptable object for cutscene public List<float> timeSchedule Field Value List<float> Methods StartScene() public void StartScene() TypeText(string) public void TypeText(string text) Parameters text string Update() public void Update()"
+  },
+  "api/Cutscene.WalkToPoint.html": {
+    "href": "api/Cutscene.WalkToPoint.html",
+    "title": "Class WalkToPoint | Czasoport Documentation",
+    "keywords": "Class WalkToPoint Namespace Cutscene public class WalkToPoint : MonoBehaviour Inheritance object WalkToPoint Methods Walk(float) public void Walk(float time) Parameters time float"
+  },
+  "api/Cutscene.html": {
+    "href": "api/Cutscene.html",
+    "title": "Namespace Cutscene | Czasoport Documentation",
+    "keywords": "Namespace Cutscene Classes Cutscene WalkToPoint"
+  },
   "api/DataPersistence.DataPersistenceManager.html": {
     "href": "api/DataPersistence.DataPersistenceManager.html",
     "title": "Class DataPersistenceManager | Czasoport Documentation",
@@ -258,6 +273,11 @@
     "href": "api/Global.CrossingLight.html",
     "title": "Class CrossingLight | Czasoport Documentation",
     "keywords": "Class CrossingLight Namespace Global public class CrossingLight : MonoBehaviour Inheritance object CrossingLight Fields lightChangeInterval public float lightChangeInterval Field Value float Methods BlockWay() public void BlockWay()"
+  },
+  "api/Global.CutsceneWriter.html": {
+    "href": "api/Global.CutsceneWriter.html",
+    "title": "Class CutsceneWriter | Czasoport Documentation",
+    "keywords": "Class CutsceneWriter Namespace Global public class CutsceneWriter : MonoBehaviour Inheritance object CutsceneWriter Fields Instance public static CutsceneWriter Instance Field Value CutsceneWriter Methods StartTyping(string) public void StartTyping(string text) Parameters text string"
   },
   "api/Global.Czasoport.html": {
     "href": "api/Global.Czasoport.html",
@@ -712,7 +732,7 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace | Czasoport Documentation",
-    "keywords": "Namespace Classes Audio Blocade ButtonSound CheckPlayerInArea CrossingLight Czasoport CzasoportPart DummyNPC ExampleSpline FinishScreenUI FollowWorld Following GeneralAdvancedTechniques GeneralBasic GeneralBasics2d GeneralCameraShake GeneralEasingTypes GeneralEventsListeners GeneralSequencer GeneralSimpleUI GeneralUISpace InputActions InteractionHighlightEventArgs KeyUI LTBezier LTBezierPath LTDescr LTDescrOptional LTEvent LTGUI LTRect LTSeq LTSpline Move a GameObject to a certain location LTUtility LeanAudio LeanAudioOptions LeanAudioStream LeanSmooth LeanTest LeanTester LeanTween LeanTweenExt LightFlicker LogoCinematic MusicPlayer API to play song with fade in effect and specified delay; NotificationManager NotificationUIController OldGUIExamplesCS PathBezier2d PathSpline2d PathSplineEndless PathSplinePerformance PathSplineTrack PathSplines Photocopier PhotocotierUI ScreenUI SettingsTests TeleportPlace TestingPunch TestingRigidbodyCS TestingZLegacy TestingZLegacyExt Timer TutorialManager TutorialNotification TutorialStage Fluent builder pattern: https://medium.com/xebia-engineering/fluent-builder-pattern-with-a-real-world-example-7b61be375a40 TutorialStageBuilder TutorialStageParser UnityInkFileHandler WithinLevelPortal Structs InputActions.GameActions InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IGameActions InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions Enums GeneralEventsListeners.MyEvents LTGUI.Element_Type LeanAudioOptions.LeanAudioWaveStyle LeanProp LeanTweenType TestingZLegacy.TimingType TestingZLegacyExt.TimingType TweenAction Delegates LTDescr.ActionMethodDelegate LTDescr.EaseTypeDelegate TestingZLegacy.NextFunc TestingZLegacyExt.NextFunc"
+    "keywords": "Namespace Classes Audio Blocade ButtonSound CheckPlayerInArea CrossingLight CutsceneWriter Czasoport CzasoportPart DummyNPC ExampleSpline FinishScreenUI FollowWorld Following GeneralAdvancedTechniques GeneralBasic GeneralBasics2d GeneralCameraShake GeneralEasingTypes GeneralEventsListeners GeneralSequencer GeneralSimpleUI GeneralUISpace InputActions InteractionHighlightEventArgs KeyUI LTBezier LTBezierPath LTDescr LTDescrOptional LTEvent LTGUI LTRect LTSeq LTSpline Move a GameObject to a certain location LTUtility LeanAudio LeanAudioOptions LeanAudioStream LeanSmooth LeanTest LeanTester LeanTween LeanTweenExt LightFlicker LogoCinematic MusicPlayer API to play song with fade in effect and specified delay; NotificationManager NotificationUIController OldGUIExamplesCS PathBezier2d PathSpline2d PathSplineEndless PathSplinePerformance PathSplineTrack PathSplines Photocopier PhotocotierUI ScreenUI SettingsTests TeleportPlace TestingPunch TestingRigidbodyCS TestingZLegacy TestingZLegacyExt Timer TutorialManager TutorialNotification TutorialStage Fluent builder pattern: https://medium.com/xebia-engineering/fluent-builder-pattern-with-a-real-world-example-7b61be375a40 TutorialStageBuilder TutorialStageParser UnityInkFileHandler WithinLevelPortal Structs InputActions.GameActions InputActions.InteractionsActions InputActions.InventoryActions InputActions.MouseActions InputActions.MovementActions InputActions.TeleportActions Interfaces InputActions.IGameActions InputActions.IInteractionsActions InputActions.IInventoryActions InputActions.IMouseActions InputActions.IMovementActions InputActions.ITeleportActions Enums GeneralEventsListeners.MyEvents LTGUI.Element_Type LeanAudioOptions.LeanAudioWaveStyle LeanProp LeanTweenType TestingZLegacy.TimingType TestingZLegacyExt.TimingType TweenAction Delegates LTDescr.ActionMethodDelegate LTDescr.EaseTypeDelegate TestingZLegacy.NextFunc TestingZLegacyExt.NextFunc"
   },
   "api/Ink.CharacterRange.html": {
     "href": "api/Ink.CharacterRange.html",
