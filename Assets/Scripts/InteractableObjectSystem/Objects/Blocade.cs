@@ -5,8 +5,7 @@ using InventorySystem;
 using Items;
 using UnityEngine;
 
-public class Blocade : MonoBehaviour
-{
+public class Blocade : MonoBehaviour {
     [SerializeField] private List<ItemSO> interactedWith;
     [SerializeField] private InteractableObject npcToTalk;
     [SerializeField] private bool opened = false;
@@ -31,8 +30,9 @@ public class Blocade : MonoBehaviour
             if (canGo) {
                 opened = true;
                 _collider.isTrigger = true;
-            } else {
-              npcToTalk.InteractionHand();  
+            }
+            else {
+                npcToTalk.InteractionHand();
             }
         }
     }

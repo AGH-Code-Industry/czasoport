@@ -34,7 +34,7 @@ namespace LevelTimeChange.LevelsLoader {
         [SerializeField] private Animator animator;
 
         private LevelManager _currentLevelManager;
-        private LevelInfoSO _currentLevel;
+        [SerializeField] private LevelInfoSO _currentLevel;
         private TimePlatformChangeSettingsSO _settings;
         private readonly CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.LEVEL_SYSTEM];
         private bool _isFirstLevelLoading = true;
