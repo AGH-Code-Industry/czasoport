@@ -47,10 +47,9 @@ The game world is divided into 3 spacetime zones:
 | Gilbert Guszcza   | Maciek Maziarz  | Angelika Chruszcz  |                     |
 | Mikołaj Gosztyła  |                 | Magdalena Duziak   |                     |
 | Stanisław Borowy  |                 | Martyna Wronka     |                     |
-| Bartosz Chochół   |                 | Julia Sikora       |                     |
 | Bartosz Chochół   |                 | Patrycja Albrycht  |                     |
 | Kamil Suhak       |                 | Szymon Krzysztofik |                     |
-| Kamil Butryn      |                 |                    |                     |
+| Kamil Butryn      |                 | Julia Sikora       |                     |
 | Wojciech Jurgielewicz|             |                    |                     |
 
 
