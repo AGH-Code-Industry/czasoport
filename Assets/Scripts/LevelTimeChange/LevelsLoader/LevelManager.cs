@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Application;
 using CoinPackage.Debugging;
+using DataPersistence;
 using UnityEngine;
 using Settings;
 
@@ -11,7 +12,7 @@ namespace LevelTimeChange.LevelsLoader {
     /// `LevelManager` is responsible for managing one 'level platform'. It activates and deactivates
     /// level content, talks with `LevelsManager` and `LevelPortal`s to perform `Discovery` process.
     /// </summary>
-    public class LevelManager : MonoBehaviour {
+    public class LevelManager : MonoBehaviour, IDataPersistence {
         [Tooltip("Asset for current level.")]
         public LevelInfoSO currentLevel;
         [Tooltip("Content object of this level.")]
@@ -21,6 +22,8 @@ namespace LevelTimeChange.LevelsLoader {
         [SerializeField] private GameObject pastPortalHolder;
         [SerializeField] private GameObject presentPortalHolder;
         [SerializeField] private GameObject futurePortalHolder;
+
+        public bool SceneObject { get; } = true;
 
         private List<LevelPortal> _teleports;
         private CLogger _logger = Loggers.LoggersList[Loggers.LoggerType.LEVEL_SYSTEM];
@@ -45,6 +48,8 @@ namespace LevelTimeChange.LevelsLoader {
         public void ActivateLevel() {
             _logger.Log($"Scene {currentLevel} is {"activating" % Colorize.Green}");
             levelContent.SetActive(true);
+
+            DataPersistenceManager.Instance.LoadSceneObjects();
         }
 
         /// <summary>
@@ -99,6 +104,16 @@ namespace LevelTimeChange.LevelsLoader {
         /// <param name="levelObject">Object that should be part of the current scene</param>
         public void AddLevelObject(GameObject levelObject) {
             levelObject.transform.SetParent(levelContent.transform);
+        }
+
+        public void LoadPersistentData(GameData gameData) {
+        }
+
+        public void SavePersistentData(ref GameData gameData) {
+            if (currentLevel.uniqueId == "")
+                return;
+
+            gameData.MarkLevelSaved(currentLevel.uniqueId);
         }
 
         private void FindTeleportsOnScene() {
