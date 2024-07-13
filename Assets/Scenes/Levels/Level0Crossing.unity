@@ -6833,7 +6833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &854426060
 Transform:
   m_ObjectHideFlags: 0
@@ -29486,9 +29486,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrossingLights
       objectReference: {fileID: 0}
+    - target: {fileID: 1710467744097672540, guid: c86395da457b51f48a10f021554f63f1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1710467744462673916, guid: c86395da457b51f48a10f021554f63f1, type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311586578994308509, guid: c86395da457b51f48a10f021554f63f1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8732502829504795187, guid: c86395da457b51f48a10f021554f63f1, type: 3}
       propertyPath: m_SortingOrder
