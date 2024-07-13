@@ -42,7 +42,7 @@ namespace Items {
                     );
             }
 
-            LeanTween.scale(this.gameObject, new Vector3(1.2f, 1.2f, 1f), 0.4f).setLoopPingPong();
+            //LeanTween.scale(this.gameObject, new Vector3(1.2f, 1.2f, 1f), 0.4f).setLoopPingPong();
             if (Durability == 0) Durability = ItemSO.durability;
         }
 
