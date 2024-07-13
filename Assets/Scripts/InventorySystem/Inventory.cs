@@ -179,6 +179,10 @@ namespace InventorySystem {
         /// <param name="item">`Item` to insert.</param>
         /// <returns></returns>
         public bool InsertItem(Item item, bool showNotification = true) {
+            foreach (var i in item.findInInventor(_items)) {
+                RemoveItem(out _items[i]);
+            }
+
             if (_itemsCount == _settings.itemsCount - 1) { // Inventory full
                 //NotificationManager.Instance.RaiseNotification(new Notification("Inventory is full", 3f));
                 if (_selectedSlot == 0) {
@@ -349,7 +353,7 @@ namespace InventorySystem {
                     break;
             }
             Transform transformOfContent = currentTimeTransform.transform.Find("Content")?.transform;
-            /*The line below is a result of "the best" fix at this moment for unexplained and paranormal tilemaps offsets in NewTutorial scene 
+            /*The line below is a result of "the best" fix at this moment for unexplained and paranormal tilemaps offsets in NewTutorial scene
              (tilemap's anchor position wasn't relative at all to the parent's ("Present", "Future")).
             Apparently including it to another GO (called "Content") fixed it when everything else failed. So this line applies only to this one scene*/
             if (!transformOfContent) transformOfContent = currentTimeTransform.transform.Find("Content/Content")?.transform;

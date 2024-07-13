@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using Application;
@@ -26,6 +27,8 @@ namespace Items {
         public bool BlockDestroying { get; set; } = false;
 
         public ItemSO ItemSO => itemSO;
+
+        [SerializeField] private List<Item> futureVersion;
         private int _durability = 0;
         public int Durability {
             get { return _durability; }
@@ -108,7 +111,7 @@ namespace Items {
 
         public void InteractionHand() {
             _logger.Log($"Item {this} is being {"short interacted" % Colorize.Green} with.", this);
-            Inventory.Instance.InsertItem(this);
+            if (Inventory.Instance.InsertItem(this)) RemoveFutureVersion();
         }
 
         public void LongInteractionHand() {
@@ -133,6 +136,23 @@ namespace Items {
 
         public override int GetHashCode() {
             return HashCode.Combine(base.GetHashCode(), ID);
+        }
+
+        public List<int> findInInventor(Item[] items) {
+            List<int> indexes = new List<int>();
+            int index;
+            foreach (var i in futureVersion) {
+                index = Array.FindIndex(items, a => a==i);
+                if (index != -1) indexes.Add(index);
+            }
+
+            return indexes;
+        }
+
+        private void RemoveFutureVersion() {
+            foreach (var v in futureVersion) {
+                if (v) Destroy(v.gameObject);
+            }
         }
     }
 }
