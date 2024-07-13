@@ -89,7 +89,7 @@
 
 
   <h1 id="InteractableObjectSystem_Objects_Pedestal" data-uid="InteractableObjectSystem.Objects.Pedestal" class="text-break">
-Class Pedestal  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/Pedestal.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class Pedestal  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/Pedestal.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class Pedestal  <a class="header-action link-secondary" title="View source" href
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Pedestal : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Pedestal : PersistentInteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable, IPersistentObject, IDataPersistence</code></pre>
   </div>
 
 
@@ -112,6 +112,7 @@ Class Pedestal  <a class="header-action link-secondary" title="View source" href
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="InteractableObjectSystem.InteractableObject.html">InteractableObject</a></div>
+      <div><a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html">PersistentInteractableObject</a></div>
       <div><span class="xref">Pedestal</span></div>
     </dd>
   </dl>
@@ -123,6 +124,8 @@ Class Pedestal  <a class="header-action link-secondary" title="View source" href
       <div><a class="xref" href="Interactions.Interfaces.IHandInteractable.html">IHandInteractable</a></div>
       <div><a class="xref" href="Interactions.Interfaces.ILongHandInteractable.html">ILongHandInteractable</a></div>
       <div><a class="xref" href="Interactions.Interfaces.ILongItemInteractable.html">ILongItemInteractable</a></div>
+      <div><a class="xref" href="DataPersistence.IPersistentObject.html">IPersistentObject</a></div>
+      <div><a class="xref" href="DataPersistence.IDataPersistence.html">IDataPersistence</a></div>
     </dd>
   </dl>
 
@@ -130,6 +133,12 @@ Class Pedestal  <a class="header-action link-secondary" title="View source" href
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_SceneObject">PersistentInteractableObject.SceneObject</a>
+    </div>
+    <div>
+      <a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_ID">PersistentInteractableObject.ID</a>
+    </div>
     <div>
       <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_definition">InteractableObject.definition</a>
     </div>
@@ -160,7 +169,7 @@ Class Pedestal  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="InteractableObjectSystem_Objects_Pedestal_InteractionItem_Items_Item_" data-uid="InteractableObjectSystem.Objects.Pedestal.InteractionItem(Items.Item)">
   InteractionItem(Item)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/Pedestal.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/Pedestal.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -192,11 +201,73 @@ Class Pedestal  <a class="header-action link-secondary" title="View source" href
 
 
 
+  <a id="InteractableObjectSystem_Objects_Pedestal_LoadPersistentData_" data-uid="InteractableObjectSystem.Objects.Pedestal.LoadPersistentData*"></a>
+
+  <h3 id="InteractableObjectSystem_Objects_Pedestal_LoadPersistentData_DataPersistence_GameData_" data-uid="InteractableObjectSystem.Objects.Pedestal.LoadPersistentData(DataPersistence.GameData)">
+  LoadPersistentData(GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/Pedestal.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void LoadPersistentData(GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="InteractableObjectSystem_Objects_Pedestal_SavePersistentData_" data-uid="InteractableObjectSystem.Objects.Pedestal.SavePersistentData*"></a>
+
+  <h3 id="InteractableObjectSystem_Objects_Pedestal_SavePersistentData_DataPersistence_GameData__" data-uid="InteractableObjectSystem.Objects.Pedestal.SavePersistentData(DataPersistence.GameData@)">
+  SavePersistentData(ref GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/Pedestal.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SavePersistentData(ref GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/Pedestal.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/Pedestal.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

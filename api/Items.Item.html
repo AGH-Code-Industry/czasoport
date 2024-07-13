@@ -89,7 +89,7 @@
 
 
   <h1 id="Items_Item" data-uid="Items.Item" class="text-break">
-Class Item  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class Item  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class Item  <a class="header-action link-secondary" title="View source" href="ht
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Item : MonoBehaviour, IHandInteractable, ILongHandInteractable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Item : MonoBehaviour, IHandInteractable, ILongHandInteractable, IPersistentObject, IDataPersistence</code></pre>
   </div>
 
 
@@ -120,6 +120,8 @@ Class Item  <a class="header-action link-secondary" title="View source" href="ht
     <dd>
       <div><a class="xref" href="Interactions.Interfaces.IHandInteractable.html">IHandInteractable</a></div>
       <div><a class="xref" href="Interactions.Interfaces.ILongHandInteractable.html">ILongHandInteractable</a></div>
+      <div><a class="xref" href="DataPersistence.IPersistentObject.html">IPersistentObject</a></div>
+      <div><a class="xref" href="DataPersistence.IDataPersistence.html">IDataPersistence</a></div>
     </dd>
   </dl>
 
@@ -138,7 +140,7 @@ Class Item  <a class="header-action link-secondary" title="View source" href="ht
 
   <h3 id="Items_Item__ctor" data-uid="Items.Item.#ctor">
   Item()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -164,7 +166,7 @@ Class Item  <a class="header-action link-secondary" title="View source" href="ht
 
   <h3 id="Items_Item__ctor_Items_ItemSO_" data-uid="Items.Item.#ctor(Items.ItemSO)">
   Item(ItemSO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -191,29 +193,31 @@ Class Item  <a class="header-action link-secondary" title="View source" href="ht
 
 
 
-  <h2 class="section" id="fields">Fields
+  <h2 class="section" id="properties">Properties
 </h2>
 
 
+  <a id="Items_Item_BlockDestroying_" data-uid="Items.Item.BlockDestroying*"></a>
 
-  <h3 id="Items_Item_uniqueId" data-uid="Items.Item.uniqueId">
-  uniqueId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Items_Item_BlockDestroying" data-uid="Items.Item.BlockDestroying">
+  BlockDestroying
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string uniqueId</code></pre>
+    <pre><code class="lang-csharp hljs">public bool BlockDestroying { get; set; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -224,16 +228,11 @@ Class Item  <a class="header-action link-secondary" title="View source" href="ht
 
 
 
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
   <a id="Items_Item_Durability_" data-uid="Items.Item.Durability*"></a>
 
   <h3 id="Items_Item_Durability" data-uid="Items.Item.Durability">
   Durability
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -260,11 +259,73 @@ Class Item  <a class="header-action link-secondary" title="View source" href="ht
 
 
 
+  <a id="Items_Item_Hidden_" data-uid="Items.Item.Hidden*"></a>
+
+  <h3 id="Items_Item_Hidden" data-uid="Items.Item.Hidden">
+  Hidden
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Hidden { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Items_Item_ID_" data-uid="Items.Item.ID*"></a>
+
+  <h3 id="Items_Item_ID" data-uid="Items.Item.ID">
+  ID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SerializableGuid ID { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Utils.SerializableGuid.html">SerializableGuid</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Items_Item_ItemSO_" data-uid="Items.Item.ItemSO*"></a>
 
   <h3 id="Items_Item_ItemSO" data-uid="Items.Item.ItemSO">
   ItemSO
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -291,27 +352,58 @@ Class Item  <a class="header-action link-secondary" title="View source" href="ht
 
 
 
-  <h2 class="section" id="methods">Methods
-</h2>
+  <a id="Items_Item_SceneObject_" data-uid="Items.Item.SceneObject*"></a>
 
-
-  <a id="Items_Item_Equals_" data-uid="Items.Item.Equals*"></a>
-
-  <h3 id="Items_Item_Equals_System_Object_" data-uid="Items.Item.Equals(System.Object)">
-  Equals(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Items_Item_SceneObject" data-uid="Items.Item.SceneObject">
+  SceneObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object other)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool SceneObject { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Items_Item_Equals_" data-uid="Items.Item.Equals*"></a>
+
+  <h3 id="Items_Item_Equals_Items_Item_" data-uid="Items.Item.Equals(Items.Item)">
+  Equals(Item)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool Equals(Item other)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>other</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dt><code>other</code> <a class="xref" href="Items.Item.html">Item</a></dt>
     <dd></dd>
   </dl>
 
@@ -331,11 +423,68 @@ Class Item  <a class="header-action link-secondary" title="View source" href="ht
 
 
 
+  <a id="Items_Item_GetHashCode_" data-uid="Items.Item.GetHashCode*"></a>
+
+  <h3 id="Items_Item_GetHashCode" data-uid="Items.Item.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Items_Item_Hide_" data-uid="Items.Item.Hide*"></a>
+
+  <h3 id="Items_Item_Hide" data-uid="Items.Item.Hide">
+  Hide()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Hide()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Items_Item_InteractionHand_" data-uid="Items.Item.InteractionHand*"></a>
 
   <h3 id="Items_Item_InteractionHand" data-uid="Items.Item.InteractionHand">
   InteractionHand()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -357,11 +506,42 @@ Class Item  <a class="header-action link-secondary" title="View source" href="ht
 
 
 
+  <a id="Items_Item_LoadPersistentData_" data-uid="Items.Item.LoadPersistentData*"></a>
+
+  <h3 id="Items_Item_LoadPersistentData_DataPersistence_GameData_" data-uid="Items.Item.LoadPersistentData(DataPersistence.GameData)">
+  LoadPersistentData(GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadPersistentData(GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Items_Item_LongInteractionHand_" data-uid="Items.Item.LongInteractionHand*"></a>
 
   <h3 id="Items_Item_LongInteractionHand" data-uid="Items.Item.LongInteractionHand">
   LongInteractionHand()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -383,11 +563,42 @@ Class Item  <a class="header-action link-secondary" title="View source" href="ht
 
 
 
+  <a id="Items_Item_SavePersistentData_" data-uid="Items.Item.SavePersistentData*"></a>
+
+  <h3 id="Items_Item_SavePersistentData_DataPersistence_GameData__" data-uid="Items.Item.SavePersistentData(DataPersistence.GameData@)">
+  SavePersistentData(ref GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SavePersistentData(ref GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Items_Item_ToString_" data-uid="Items.Item.ToString*"></a>
 
   <h3 id="Items_Item_ToString" data-uid="Items.Item.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -418,7 +629,7 @@ Class Item  <a class="header-action link-secondary" title="View source" href="ht
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Item.cs/#L17" class="edit-link">Edit this page</a>
         </div>
 
 

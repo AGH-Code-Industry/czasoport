@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Photocopier | Czasoport Documentation </title>
+      <title>Class PersistentInteractableObject | Czasoport Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Photocopier | Czasoport Documentation ">
+      <meta name="title" content="Class PersistentInteractableObject | Czasoport Documentation ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=Global_Photocopier.md&amp;value=---%0Auid%3A%20Global.Photocopier%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=InteractableObjectSystem_PersistentInteractableObject.md&amp;value=---%0Auid%3A%20InteractableObjectSystem.PersistentInteractableObject%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,16 +84,16 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Global.Photocopier">
+        <article data-uid="InteractableObjectSystem.PersistentInteractableObject">
 
 
 
-  <h1 id="Global_Photocopier" data-uid="Global.Photocopier" class="text-break">
-Class Photocopier  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <h1 id="InteractableObjectSystem_PersistentInteractableObject" data-uid="InteractableObjectSystem.PersistentInteractableObject" class="text-break">
+Class PersistentInteractableObject  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/PersistentInteractableObject.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Global.html">Global</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="InteractableObjectSystem.html">InteractableObjectSystem</a></dd></dl>
   
   </div>
 
@@ -101,7 +101,7 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Photocopier : PersistentInteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable, IPersistentObject, IDataPersistence</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class PersistentInteractableObject : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable, IPersistentObject, IDataPersistence</code></pre>
   </div>
 
 
@@ -112,8 +112,7 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="InteractableObjectSystem.InteractableObject.html">InteractableObject</a></div>
-      <div><a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html">PersistentInteractableObject</a></div>
-      <div><span class="xref">Photocopier</span></div>
+      <div><span class="xref">PersistentInteractableObject</span></div>
     </dd>
   </dl>
 
@@ -129,16 +128,21 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
     </dd>
   </dl>
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Global.Czasoport.html">Czasoport</a></div>
+      <div><a class="xref" href="Global.Photocopier.html">Photocopier</a></div>
+      <div><a class="xref" href="InteractableObjectSystem.Objects.BreakableRock.html">BreakableRock</a></div>
+      <div><a class="xref" href="InteractableObjectSystem.Objects.LockedDoor.html">LockedDoor</a></div>
+      <div><a class="xref" href="InteractableObjectSystem.Objects.Pedestal.html">Pedestal</a></div>
+      <div><a class="xref" href="InteractableObjectSystem.Objects.TapePlayer.html">TapePlayer</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_SceneObject">PersistentInteractableObject.SceneObject</a>
-    </div>
-    <div>
-      <a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_ID">PersistentInteractableObject.ID</a>
-    </div>
     <div>
       <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_definition">InteractableObject.definition</a>
     </div>
@@ -146,7 +150,13 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_Logger">InteractableObject.Logger</a>
     </div>
     <div>
+      <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_InteractionItem_Items_Item_">InteractableObject.InteractionItem(Item)</a>
+    </div>
+    <div>
       <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_LongInteractionItem_Items_Item_">InteractableObject.LongInteractionItem(Item)</a>
+    </div>
+    <div>
+      <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_InteractionHand">InteractableObject.InteractionHand()</a>
     </div>
     <div>
       <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_LongInteractionHand">InteractableObject.LongInteractionHand()</a>
@@ -158,57 +168,60 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
 
 
 
-  <h2 class="section" id="methods">Methods
+  <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="Global_Photocopier_InteractionHand_" data-uid="Global.Photocopier.InteractionHand*"></a>
+  <a id="InteractableObjectSystem_PersistentInteractableObject_ID_" data-uid="InteractableObjectSystem.PersistentInteractableObject.ID*"></a>
 
-  <h3 id="Global_Photocopier_InteractionHand" data-uid="Global.Photocopier.InteractionHand">
-  InteractionHand()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <h3 id="InteractableObjectSystem_PersistentInteractableObject_ID" data-uid="InteractableObjectSystem.PersistentInteractableObject.ID">
+  ID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/PersistentInteractableObject.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void InteractionHand()</code></pre>
+    <pre><code class="lang-csharp hljs">public SerializableGuid ID { get; set; }</code></pre>
   </div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-  <a id="Global_Photocopier_InteractionItem_" data-uid="Global.Photocopier.InteractionItem*"></a>
-
-  <h3 id="Global_Photocopier_InteractionItem_Items_Item_" data-uid="Global.Photocopier.InteractionItem(Items.Item)">
-  InteractionItem(Item)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L29"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool InteractionItem(Item item)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><code>item</code> <a class="xref" href="Items.Item.html">Item</a></dt>
+    <dt><a class="xref" href="Utils.SerializableGuid.html">SerializableGuid</a></dt>
     <dd></dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
+
+
+
+
+
+
+
+  <a id="InteractableObjectSystem_PersistentInteractableObject_SceneObject_" data-uid="InteractableObjectSystem.PersistentInteractableObject.SceneObject*"></a>
+
+  <h3 id="InteractableObjectSystem_PersistentInteractableObject_SceneObject" data-uid="InteractableObjectSystem.PersistentInteractableObject.SceneObject">
+  SceneObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/PersistentInteractableObject.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SceneObject { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
@@ -221,21 +234,22 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <h2 class="section" id="methods">Methods
+</h2>
 
 
+  <a id="InteractableObjectSystem_PersistentInteractableObject_LoadPersistentData_" data-uid="InteractableObjectSystem.PersistentInteractableObject.LoadPersistentData*"></a>
 
-  <a id="Global_Photocopier_LoadPersistentData_" data-uid="Global.Photocopier.LoadPersistentData*"></a>
-
-  <h3 id="Global_Photocopier_LoadPersistentData_DataPersistence_GameData_" data-uid="Global.Photocopier.LoadPersistentData(DataPersistence.GameData)">
+  <h3 id="InteractableObjectSystem_PersistentInteractableObject_LoadPersistentData_DataPersistence_GameData_" data-uid="InteractableObjectSystem.PersistentInteractableObject.LoadPersistentData(DataPersistence.GameData)">
   LoadPersistentData(GameData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/PersistentInteractableObject.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void LoadPersistentData(GameData gameData)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void LoadPersistentData(GameData gameData)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -255,18 +269,18 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
 
 
 
-  <a id="Global_Photocopier_SavePersistentData_" data-uid="Global.Photocopier.SavePersistentData*"></a>
+  <a id="InteractableObjectSystem_PersistentInteractableObject_SavePersistentData_" data-uid="InteractableObjectSystem.PersistentInteractableObject.SavePersistentData*"></a>
 
-  <h3 id="Global_Photocopier_SavePersistentData_DataPersistence_GameData__" data-uid="Global.Photocopier.SavePersistentData(DataPersistence.GameData@)">
+  <h3 id="InteractableObjectSystem_PersistentInteractableObject_SavePersistentData_DataPersistence_GameData__" data-uid="InteractableObjectSystem.PersistentInteractableObject.SavePersistentData(DataPersistence.GameData@)">
   SavePersistentData(ref GameData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/PersistentInteractableObject.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void SavePersistentData(ref GameData gameData)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void SavePersistentData(ref GameData gameData)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -290,7 +304,7 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/PersistentInteractableObject.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -89,7 +89,7 @@
 
 
   <h1 id="InteractableObjectSystem_Objects_TapePlayer" data-uid="InteractableObjectSystem.Objects.TapePlayer" class="text-break">
-Class TapePlayer  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/TapePlayer.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class TapePlayer  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/TapePlayer.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class TapePlayer  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TapePlayer : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable</code></pre>
+    <pre><code class="lang-csharp hljs">public class TapePlayer : PersistentInteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable, IPersistentObject, IDataPersistence</code></pre>
   </div>
 
 
@@ -112,6 +112,7 @@ Class TapePlayer  <a class="header-action link-secondary" title="View source" hr
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="InteractableObjectSystem.InteractableObject.html">InteractableObject</a></div>
+      <div><a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html">PersistentInteractableObject</a></div>
       <div><span class="xref">TapePlayer</span></div>
     </dd>
   </dl>
@@ -123,6 +124,8 @@ Class TapePlayer  <a class="header-action link-secondary" title="View source" hr
       <div><a class="xref" href="Interactions.Interfaces.IHandInteractable.html">IHandInteractable</a></div>
       <div><a class="xref" href="Interactions.Interfaces.ILongHandInteractable.html">ILongHandInteractable</a></div>
       <div><a class="xref" href="Interactions.Interfaces.ILongItemInteractable.html">ILongItemInteractable</a></div>
+      <div><a class="xref" href="DataPersistence.IPersistentObject.html">IPersistentObject</a></div>
+      <div><a class="xref" href="DataPersistence.IDataPersistence.html">IDataPersistence</a></div>
     </dd>
   </dl>
 
@@ -130,6 +133,12 @@ Class TapePlayer  <a class="header-action link-secondary" title="View source" hr
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_SceneObject">PersistentInteractableObject.SceneObject</a>
+    </div>
+    <div>
+      <a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_ID">PersistentInteractableObject.ID</a>
+    </div>
     <div>
       <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_definition">InteractableObject.definition</a>
     </div>
@@ -157,7 +166,7 @@ Class TapePlayer  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="InteractableObjectSystem_Objects_TapePlayer_InteractionHand" data-uid="InteractableObjectSystem.Objects.TapePlayer.InteractionHand">
   InteractionHand()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/TapePlayer.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/TapePlayer.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -183,7 +192,7 @@ Class TapePlayer  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="InteractableObjectSystem_Objects_TapePlayer_InteractionItem_Items_Item_" data-uid="InteractableObjectSystem.Objects.TapePlayer.InteractionItem(Items.Item)">
   InteractionItem(Item)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/TapePlayer.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/TapePlayer.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -215,11 +224,73 @@ Class TapePlayer  <a class="header-action link-secondary" title="View source" hr
 
 
 
+  <a id="InteractableObjectSystem_Objects_TapePlayer_LoadPersistentData_" data-uid="InteractableObjectSystem.Objects.TapePlayer.LoadPersistentData*"></a>
+
+  <h3 id="InteractableObjectSystem_Objects_TapePlayer_LoadPersistentData_DataPersistence_GameData_" data-uid="InteractableObjectSystem.Objects.TapePlayer.LoadPersistentData(DataPersistence.GameData)">
+  LoadPersistentData(GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/TapePlayer.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void LoadPersistentData(GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="InteractableObjectSystem_Objects_TapePlayer_SavePersistentData_" data-uid="InteractableObjectSystem.Objects.TapePlayer.SavePersistentData*"></a>
+
+  <h3 id="InteractableObjectSystem_Objects_TapePlayer_SavePersistentData_DataPersistence_GameData__" data-uid="InteractableObjectSystem.Objects.TapePlayer.SavePersistentData(DataPersistence.GameData@)">
+  SavePersistentData(ref GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/TapePlayer.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SavePersistentData(ref GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/TapePlayer.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/TapePlayer.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 
