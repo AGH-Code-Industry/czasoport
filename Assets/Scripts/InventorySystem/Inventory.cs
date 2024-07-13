@@ -21,6 +21,7 @@ using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using Unity.VisualScripting;
 using Utils;
 
 namespace InventorySystem {
@@ -348,6 +349,10 @@ namespace InventorySystem {
                     break;
             }
             Transform transformOfContent = currentTimeTransform.transform.Find("Content")?.transform;
+            /*The line below is a result of "the best" fix at this moment for unexplained and paranormal tilemaps offsets in NewTutorial scene 
+             (tilemap's anchor position wasn't relative at all to the parent's ("Present", "Future")).
+            Apparently including it to another GO (called "Content") fixed it when everything else failed. So this line applies only to this one scene*/
+            if (!transformOfContent) transformOfContent = currentTimeTransform.transform.Find("Content/Content")?.transform;
             Transform transformOfItems = transformOfContent.transform.Find("Items")?.transform;
             if (transformOfItems) {
                 currentTimeTransform = transformOfItems;
