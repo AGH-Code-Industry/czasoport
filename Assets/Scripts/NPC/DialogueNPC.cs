@@ -11,8 +11,9 @@ namespace NPC {
     public class DialogueNPC : InteractableObject {
         [SerializeField] private TextAsset dialogue;
         [SerializeField] private UnityEvent afterDialog = null;
+
         public override void InteractionHand() {
-            DialogueManager.I.StartDialogue(dialogue,afterDialog.Invoke);
+            DialogueManager.I.StartDialogue(dialogue, afterDialog.Invoke);
         }
 
         public override bool InteractionItem(Item item) {
