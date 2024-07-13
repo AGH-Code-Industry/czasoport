@@ -89,7 +89,7 @@
 
 
   <h1 id="Global_Photocopier" data-uid="Global.Photocopier" class="text-break">
-Class Photocopier  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class Photocopier  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Photocopier : PersistentInteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable, IPersistentObject, IDataPersistence</code></pre>
+    <pre><code class="lang-csharp hljs">public class Photocopier : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable</code></pre>
   </div>
 
 
@@ -112,7 +112,6 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="InteractableObjectSystem.InteractableObject.html">InteractableObject</a></div>
-      <div><a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html">PersistentInteractableObject</a></div>
       <div><span class="xref">Photocopier</span></div>
     </dd>
   </dl>
@@ -124,8 +123,6 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
       <div><a class="xref" href="Interactions.Interfaces.IHandInteractable.html">IHandInteractable</a></div>
       <div><a class="xref" href="Interactions.Interfaces.ILongHandInteractable.html">ILongHandInteractable</a></div>
       <div><a class="xref" href="Interactions.Interfaces.ILongItemInteractable.html">ILongItemInteractable</a></div>
-      <div><a class="xref" href="DataPersistence.IPersistentObject.html">IPersistentObject</a></div>
-      <div><a class="xref" href="DataPersistence.IDataPersistence.html">IDataPersistence</a></div>
     </dd>
   </dl>
 
@@ -133,12 +130,6 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_SceneObject">PersistentInteractableObject.SceneObject</a>
-    </div>
-    <div>
-      <a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_ID">PersistentInteractableObject.ID</a>
-    </div>
     <div>
       <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_definition">InteractableObject.definition</a>
     </div>
@@ -166,7 +157,7 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Global_Photocopier_InteractionHand" data-uid="Global.Photocopier.InteractionHand">
   InteractionHand()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -192,7 +183,7 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Global_Photocopier_InteractionItem_Items_Item_" data-uid="Global.Photocopier.InteractionItem(Items.Item)">
   InteractionItem(Item)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -224,73 +215,11 @@ Class Photocopier  <a class="header-action link-secondary" title="View source" h
 
 
 
-  <a id="Global_Photocopier_LoadPersistentData_" data-uid="Global.Photocopier.LoadPersistentData*"></a>
-
-  <h3 id="Global_Photocopier_LoadPersistentData_DataPersistence_GameData_" data-uid="Global.Photocopier.LoadPersistentData(DataPersistence.GameData)">
-  LoadPersistentData(GameData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L39"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void LoadPersistentData(GameData gameData)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Global_Photocopier_SavePersistentData_" data-uid="Global.Photocopier.SavePersistentData*"></a>
-
-  <h3 id="Global_Photocopier_SavePersistentData_DataPersistence_GameData__" data-uid="Global.Photocopier.SavePersistentData(DataPersistence.GameData@)">
-  SavePersistentData(ref GameData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L49"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void SavePersistentData(ref GameData gameData)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Photocopier.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

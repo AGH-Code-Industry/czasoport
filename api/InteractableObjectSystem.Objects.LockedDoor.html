@@ -89,7 +89,7 @@
 
 
   <h1 id="InteractableObjectSystem_Objects_LockedDoor" data-uid="InteractableObjectSystem.Objects.LockedDoor" class="text-break">
-Class LockedDoor  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class LockedDoor  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class LockedDoor  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LockedDoor : PersistentInteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable, IPersistentObject, IDataPersistence</code></pre>
+    <pre><code class="lang-csharp hljs">public class LockedDoor : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable</code></pre>
   </div>
 
 
@@ -112,7 +112,6 @@ Class LockedDoor  <a class="header-action link-secondary" title="View source" hr
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="InteractableObjectSystem.InteractableObject.html">InteractableObject</a></div>
-      <div><a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html">PersistentInteractableObject</a></div>
       <div><span class="xref">LockedDoor</span></div>
     </dd>
   </dl>
@@ -124,8 +123,6 @@ Class LockedDoor  <a class="header-action link-secondary" title="View source" hr
       <div><a class="xref" href="Interactions.Interfaces.IHandInteractable.html">IHandInteractable</a></div>
       <div><a class="xref" href="Interactions.Interfaces.ILongHandInteractable.html">ILongHandInteractable</a></div>
       <div><a class="xref" href="Interactions.Interfaces.ILongItemInteractable.html">ILongItemInteractable</a></div>
-      <div><a class="xref" href="DataPersistence.IPersistentObject.html">IPersistentObject</a></div>
-      <div><a class="xref" href="DataPersistence.IDataPersistence.html">IDataPersistence</a></div>
     </dd>
   </dl>
 
@@ -133,12 +130,6 @@ Class LockedDoor  <a class="header-action link-secondary" title="View source" hr
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_SceneObject">PersistentInteractableObject.SceneObject</a>
-    </div>
-    <div>
-      <a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_ID">PersistentInteractableObject.ID</a>
-    </div>
     <div>
       <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_definition">InteractableObject.definition</a>
     </div>
@@ -166,7 +157,7 @@ Class LockedDoor  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="InteractableObjectSystem_Objects_LockedDoor_CloseDoor" data-uid="InteractableObjectSystem.Objects.LockedDoor.CloseDoor">
   CloseDoor()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -192,7 +183,7 @@ Class LockedDoor  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="InteractableObjectSystem_Objects_LockedDoor_InteractionHand" data-uid="InteractableObjectSystem.Objects.LockedDoor.InteractionHand">
   InteractionHand()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -218,7 +209,7 @@ Class LockedDoor  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="InteractableObjectSystem_Objects_LockedDoor_InteractionItem_Items_Item_" data-uid="InteractableObjectSystem.Objects.LockedDoor.InteractionItem(Items.Item)">
   InteractionItem(Item)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -250,42 +241,11 @@ Class LockedDoor  <a class="header-action link-secondary" title="View source" hr
 
 
 
-  <a id="InteractableObjectSystem_Objects_LockedDoor_LoadPersistentData_" data-uid="InteractableObjectSystem.Objects.LockedDoor.LoadPersistentData*"></a>
-
-  <h3 id="InteractableObjectSystem_Objects_LockedDoor_LoadPersistentData_DataPersistence_GameData_" data-uid="InteractableObjectSystem.Objects.LockedDoor.LoadPersistentData(DataPersistence.GameData)">
-  LoadPersistentData(GameData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L114"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void LoadPersistentData(GameData gameData)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <a id="InteractableObjectSystem_Objects_LockedDoor_OpenDoor_" data-uid="InteractableObjectSystem.Objects.LockedDoor.OpenDoor*"></a>
 
   <h3 id="InteractableObjectSystem_Objects_LockedDoor_OpenDoor" data-uid="InteractableObjectSystem.Objects.LockedDoor.OpenDoor">
   OpenDoor()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -307,42 +267,11 @@ Class LockedDoor  <a class="header-action link-secondary" title="View source" hr
 
 
 
-  <a id="InteractableObjectSystem_Objects_LockedDoor_SavePersistentData_" data-uid="InteractableObjectSystem.Objects.LockedDoor.SavePersistentData*"></a>
-
-  <h3 id="InteractableObjectSystem_Objects_LockedDoor_SavePersistentData_DataPersistence_GameData__" data-uid="InteractableObjectSystem.Objects.LockedDoor.SavePersistentData(DataPersistence.GameData@)">
-  SavePersistentData(ref GameData)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L134"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void SavePersistentData(ref GameData gameData)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InteractableObjectSystem/Objects/LockedDoor.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

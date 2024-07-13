@@ -998,19 +998,6 @@ references:
   isSpec: "True"
   fullName: DataPersistence.DataPersistenceManager.LoadGameFromDisk
   nameWithType: DataPersistenceManager.LoadGameFromDisk
-- uid: DataPersistence.DataPersistenceManager.LoadSceneObjects
-  name: LoadSceneObjects()
-  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_LoadSceneObjects
-  commentId: M:DataPersistence.DataPersistenceManager.LoadSceneObjects
-  fullName: DataPersistence.DataPersistenceManager.LoadSceneObjects()
-  nameWithType: DataPersistenceManager.LoadSceneObjects()
-- uid: DataPersistence.DataPersistenceManager.LoadSceneObjects*
-  name: LoadSceneObjects
-  href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_LoadSceneObjects_
-  commentId: Overload:DataPersistence.DataPersistenceManager.LoadSceneObjects
-  isSpec: "True"
-  fullName: DataPersistence.DataPersistenceManager.LoadSceneObjects
-  nameWithType: DataPersistenceManager.LoadSceneObjects
 - uid: DataPersistence.DataPersistenceManager.SaveGame
   name: SaveGame()
   href: api/DataPersistence.DataPersistenceManager.html#DataPersistence_DataPersistenceManager_SaveGame
@@ -1043,226 +1030,12 @@ references:
   commentId: F:DataPersistence.DataPersistenceManager.gameData
   fullName: DataPersistence.DataPersistenceManager.gameData
   nameWithType: DataPersistenceManager.gameData
-- uid: DataPersistence.DataPersistenceTools
-  name: DataPersistenceTools
-  href: api/DataPersistence.DataPersistenceTools.html
-  commentId: T:DataPersistence.DataPersistenceTools
-  fullName: DataPersistence.DataPersistenceTools
-  nameWithType: DataPersistenceTools
 - uid: DataPersistence.DataTypes
   name: DataPersistence.DataTypes
   href: api/DataPersistence.DataTypes.html
   commentId: N:DataPersistence.DataTypes
   fullName: DataPersistence.DataTypes
   nameWithType: DataPersistence.DataTypes
-- uid: DataPersistence.DataTypes.Data
-  name: Data
-  href: api/DataPersistence.DataTypes.Data.html
-  commentId: T:DataPersistence.DataTypes.Data
-  fullName: DataPersistence.DataTypes.Data
-  nameWithType: Data
-- uid: DataPersistence.DataTypes.Data.Deserialize*
-  name: Deserialize
-  href: api/DataPersistence.DataTypes.Data.html#DataPersistence_DataTypes_Data_Deserialize_
-  commentId: Overload:DataPersistence.DataTypes.Data.Deserialize
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.Data.Deserialize
-  nameWithType: Data.Deserialize
-- uid: DataPersistence.DataTypes.Data.DeserializeInheritance
-  name: DeserializeInheritance()
-  href: api/DataPersistence.DataTypes.Data.html#DataPersistence_DataTypes_Data_DeserializeInheritance
-  commentId: M:DataPersistence.DataTypes.Data.DeserializeInheritance
-  fullName: DataPersistence.DataTypes.Data.DeserializeInheritance()
-  nameWithType: Data.DeserializeInheritance()
-- uid: DataPersistence.DataTypes.Data.DeserializeInheritance*
-  name: DeserializeInheritance
-  href: api/DataPersistence.DataTypes.Data.html#DataPersistence_DataTypes_Data_DeserializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.Data.DeserializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.Data.DeserializeInheritance
-  nameWithType: Data.DeserializeInheritance
-- uid: DataPersistence.DataTypes.Data.Deserialize``1
-  name: Deserialize<T>()
-  href: api/DataPersistence.DataTypes.Data.html#DataPersistence_DataTypes_Data_Deserialize__1
-  commentId: M:DataPersistence.DataTypes.Data.Deserialize``1
-  name.vb: Deserialize(Of T)()
-  fullName: DataPersistence.DataTypes.Data.Deserialize<T>()
-  fullName.vb: DataPersistence.DataTypes.Data.Deserialize(Of T)()
-  nameWithType: Data.Deserialize<T>()
-  nameWithType.vb: Data.Deserialize(Of T)()
-- uid: DataPersistence.DataTypes.Data.SerializeInheritance
-  name: SerializeInheritance()
-  href: api/DataPersistence.DataTypes.Data.html#DataPersistence_DataTypes_Data_SerializeInheritance
-  commentId: M:DataPersistence.DataTypes.Data.SerializeInheritance
-  fullName: DataPersistence.DataTypes.Data.SerializeInheritance()
-  nameWithType: Data.SerializeInheritance()
-- uid: DataPersistence.DataTypes.Data.SerializeInheritance*
-  name: SerializeInheritance
-  href: api/DataPersistence.DataTypes.Data.html#DataPersistence_DataTypes_Data_SerializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.Data.SerializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.Data.SerializeInheritance
-  nameWithType: Data.SerializeInheritance
-- uid: DataPersistence.DataTypes.Data.id
-  name: id
-  href: api/DataPersistence.DataTypes.Data.html#DataPersistence_DataTypes_Data_id
-  commentId: F:DataPersistence.DataTypes.Data.id
-  fullName: DataPersistence.DataTypes.Data.id
-  nameWithType: Data.id
-- uid: DataPersistence.DataTypes.Data.inheritanceJson
-  name: inheritanceJson
-  href: api/DataPersistence.DataTypes.Data.html#DataPersistence_DataTypes_Data_inheritanceJson
-  commentId: F:DataPersistence.DataTypes.Data.inheritanceJson
-  fullName: DataPersistence.DataTypes.Data.inheritanceJson
-  nameWithType: Data.inheritanceJson
-- uid: DataPersistence.DataTypes.DoorData
-  name: DoorData
-  href: api/DataPersistence.DataTypes.DoorData.html
-  commentId: T:DataPersistence.DataTypes.DoorData
-  fullName: DataPersistence.DataTypes.DoorData
-  nameWithType: DoorData
-- uid: DataPersistence.DataTypes.DoorData.DeserializeInheritance
-  name: DeserializeInheritance()
-  href: api/DataPersistence.DataTypes.DoorData.html#DataPersistence_DataTypes_DoorData_DeserializeInheritance
-  commentId: M:DataPersistence.DataTypes.DoorData.DeserializeInheritance
-  fullName: DataPersistence.DataTypes.DoorData.DeserializeInheritance()
-  nameWithType: DoorData.DeserializeInheritance()
-- uid: DataPersistence.DataTypes.DoorData.DeserializeInheritance*
-  name: DeserializeInheritance
-  href: api/DataPersistence.DataTypes.DoorData.html#DataPersistence_DataTypes_DoorData_DeserializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.DoorData.DeserializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.DoorData.DeserializeInheritance
-  nameWithType: DoorData.DeserializeInheritance
-- uid: DataPersistence.DataTypes.DoorData.DoorSubData
-  name: DoorData.DoorSubData
-  href: api/DataPersistence.DataTypes.DoorData.DoorSubData.html
-  commentId: T:DataPersistence.DataTypes.DoorData.DoorSubData
-  fullName: DataPersistence.DataTypes.DoorData.DoorSubData
-  nameWithType: DoorData.DoorSubData
-- uid: DataPersistence.DataTypes.DoorData.DoorSubData.doorState
-  name: doorState
-  href: api/DataPersistence.DataTypes.DoorData.DoorSubData.html#DataPersistence_DataTypes_DoorData_DoorSubData_doorState
-  commentId: F:DataPersistence.DataTypes.DoorData.DoorSubData.doorState
-  fullName: DataPersistence.DataTypes.DoorData.DoorSubData.doorState
-  nameWithType: DoorData.DoorSubData.doorState
-- uid: DataPersistence.DataTypes.DoorData.SerializeInheritance
-  name: SerializeInheritance()
-  href: api/DataPersistence.DataTypes.DoorData.html#DataPersistence_DataTypes_DoorData_SerializeInheritance
-  commentId: M:DataPersistence.DataTypes.DoorData.SerializeInheritance
-  fullName: DataPersistence.DataTypes.DoorData.SerializeInheritance()
-  nameWithType: DoorData.SerializeInheritance()
-- uid: DataPersistence.DataTypes.DoorData.SerializeInheritance*
-  name: SerializeInheritance
-  href: api/DataPersistence.DataTypes.DoorData.html#DataPersistence_DataTypes_DoorData_SerializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.DoorData.SerializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.DoorData.SerializeInheritance
-  nameWithType: DoorData.SerializeInheritance
-- uid: DataPersistence.DataTypes.DoorData.data
-  name: data
-  href: api/DataPersistence.DataTypes.DoorData.html#DataPersistence_DataTypes_DoorData_data
-  commentId: F:DataPersistence.DataTypes.DoorData.data
-  fullName: DataPersistence.DataTypes.DoorData.data
-  nameWithType: DoorData.data
-- uid: DataPersistence.DataTypes.InventoryItemData
-  name: InventoryItemData
-  href: api/DataPersistence.DataTypes.InventoryItemData.html
-  commentId: T:DataPersistence.DataTypes.InventoryItemData
-  fullName: DataPersistence.DataTypes.InventoryItemData
-  nameWithType: InventoryItemData
-- uid: DataPersistence.DataTypes.InventoryItemData.durability
-  name: durability
-  href: api/DataPersistence.DataTypes.InventoryItemData.html#DataPersistence_DataTypes_InventoryItemData_durability
-  commentId: F:DataPersistence.DataTypes.InventoryItemData.durability
-  fullName: DataPersistence.DataTypes.InventoryItemData.durability
-  nameWithType: InventoryItemData.durability
-- uid: DataPersistence.DataTypes.InventoryItemData.id
-  name: id
-  href: api/DataPersistence.DataTypes.InventoryItemData.html#DataPersistence_DataTypes_InventoryItemData_id
-  commentId: F:DataPersistence.DataTypes.InventoryItemData.id
-  fullName: DataPersistence.DataTypes.InventoryItemData.id
-  nameWithType: InventoryItemData.id
-- uid: DataPersistence.DataTypes.InventoryItemData.itemSO
-  name: itemSO
-  href: api/DataPersistence.DataTypes.InventoryItemData.html#DataPersistence_DataTypes_InventoryItemData_itemSO
-  commentId: F:DataPersistence.DataTypes.InventoryItemData.itemSO
-  fullName: DataPersistence.DataTypes.InventoryItemData.itemSO
-  nameWithType: InventoryItemData.itemSO
-- uid: DataPersistence.DataTypes.ItemData
-  name: ItemData
-  href: api/DataPersistence.DataTypes.ItemData.html
-  commentId: T:DataPersistence.DataTypes.ItemData
-  fullName: DataPersistence.DataTypes.ItemData
-  nameWithType: ItemData
-- uid: DataPersistence.DataTypes.ItemData.DeserializeInheritance
-  name: DeserializeInheritance()
-  href: api/DataPersistence.DataTypes.ItemData.html#DataPersistence_DataTypes_ItemData_DeserializeInheritance
-  commentId: M:DataPersistence.DataTypes.ItemData.DeserializeInheritance
-  fullName: DataPersistence.DataTypes.ItemData.DeserializeInheritance()
-  nameWithType: ItemData.DeserializeInheritance()
-- uid: DataPersistence.DataTypes.ItemData.DeserializeInheritance*
-  name: DeserializeInheritance
-  href: api/DataPersistence.DataTypes.ItemData.html#DataPersistence_DataTypes_ItemData_DeserializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.ItemData.DeserializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.ItemData.DeserializeInheritance
-  nameWithType: ItemData.DeserializeInheritance
-- uid: DataPersistence.DataTypes.ItemData.ItemSubData
-  name: ItemData.ItemSubData
-  href: api/DataPersistence.DataTypes.ItemData.ItemSubData.html
-  commentId: T:DataPersistence.DataTypes.ItemData.ItemSubData
-  fullName: DataPersistence.DataTypes.ItemData.ItemSubData
-  nameWithType: ItemData.ItemSubData
-- uid: DataPersistence.DataTypes.ItemData.ItemSubData.durability
-  name: durability
-  href: api/DataPersistence.DataTypes.ItemData.ItemSubData.html#DataPersistence_DataTypes_ItemData_ItemSubData_durability
-  commentId: F:DataPersistence.DataTypes.ItemData.ItemSubData.durability
-  fullName: DataPersistence.DataTypes.ItemData.ItemSubData.durability
-  nameWithType: ItemData.ItemSubData.durability
-- uid: DataPersistence.DataTypes.ItemData.ItemSubData.hidden
-  name: hidden
-  href: api/DataPersistence.DataTypes.ItemData.ItemSubData.html#DataPersistence_DataTypes_ItemData_ItemSubData_hidden
-  commentId: F:DataPersistence.DataTypes.ItemData.ItemSubData.hidden
-  fullName: DataPersistence.DataTypes.ItemData.ItemSubData.hidden
-  nameWithType: ItemData.ItemSubData.hidden
-- uid: DataPersistence.DataTypes.ItemData.ItemSubData.itemSo
-  name: itemSo
-  href: api/DataPersistence.DataTypes.ItemData.ItemSubData.html#DataPersistence_DataTypes_ItemData_ItemSubData_itemSo
-  commentId: F:DataPersistence.DataTypes.ItemData.ItemSubData.itemSo
-  fullName: DataPersistence.DataTypes.ItemData.ItemSubData.itemSo
-  nameWithType: ItemData.ItemSubData.itemSo
-- uid: DataPersistence.DataTypes.ItemData.ItemSubData.mapId
-  name: mapId
-  href: api/DataPersistence.DataTypes.ItemData.ItemSubData.html#DataPersistence_DataTypes_ItemData_ItemSubData_mapId
-  commentId: F:DataPersistence.DataTypes.ItemData.ItemSubData.mapId
-  fullName: DataPersistence.DataTypes.ItemData.ItemSubData.mapId
-  nameWithType: ItemData.ItemSubData.mapId
-- uid: DataPersistence.DataTypes.ItemData.ItemSubData.position
-  name: position
-  href: api/DataPersistence.DataTypes.ItemData.ItemSubData.html#DataPersistence_DataTypes_ItemData_ItemSubData_position
-  commentId: F:DataPersistence.DataTypes.ItemData.ItemSubData.position
-  fullName: DataPersistence.DataTypes.ItemData.ItemSubData.position
-  nameWithType: ItemData.ItemSubData.position
-- uid: DataPersistence.DataTypes.ItemData.SerializeInheritance
-  name: SerializeInheritance()
-  href: api/DataPersistence.DataTypes.ItemData.html#DataPersistence_DataTypes_ItemData_SerializeInheritance
-  commentId: M:DataPersistence.DataTypes.ItemData.SerializeInheritance
-  fullName: DataPersistence.DataTypes.ItemData.SerializeInheritance()
-  nameWithType: ItemData.SerializeInheritance()
-- uid: DataPersistence.DataTypes.ItemData.SerializeInheritance*
-  name: SerializeInheritance
-  href: api/DataPersistence.DataTypes.ItemData.html#DataPersistence_DataTypes_ItemData_SerializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.ItemData.SerializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.ItemData.SerializeInheritance
-  nameWithType: ItemData.SerializeInheritance
-- uid: DataPersistence.DataTypes.ItemData.data
-  name: data
-  href: api/DataPersistence.DataTypes.ItemData.html#DataPersistence_DataTypes_ItemData_data
-  commentId: F:DataPersistence.DataTypes.ItemData.data
-  fullName: DataPersistence.DataTypes.ItemData.data
-  nameWithType: ItemData.data
 - uid: DataPersistence.DataTypes.NotificationGameData
   name: NotificationGameData
   href: api/DataPersistence.DataTypes.NotificationGameData.html
@@ -1294,112 +1067,6 @@ references:
   commentId: F:DataPersistence.DataTypes.NotificationGameData.notificationHistory
   fullName: DataPersistence.DataTypes.NotificationGameData.notificationHistory
   nameWithType: NotificationGameData.notificationHistory
-- uid: DataPersistence.DataTypes.PedestalData
-  name: PedestalData
-  href: api/DataPersistence.DataTypes.PedestalData.html
-  commentId: T:DataPersistence.DataTypes.PedestalData
-  fullName: DataPersistence.DataTypes.PedestalData
-  nameWithType: PedestalData
-- uid: DataPersistence.DataTypes.PedestalData.DeserializeInheritance
-  name: DeserializeInheritance()
-  href: api/DataPersistence.DataTypes.PedestalData.html#DataPersistence_DataTypes_PedestalData_DeserializeInheritance
-  commentId: M:DataPersistence.DataTypes.PedestalData.DeserializeInheritance
-  fullName: DataPersistence.DataTypes.PedestalData.DeserializeInheritance()
-  nameWithType: PedestalData.DeserializeInheritance()
-- uid: DataPersistence.DataTypes.PedestalData.DeserializeInheritance*
-  name: DeserializeInheritance
-  href: api/DataPersistence.DataTypes.PedestalData.html#DataPersistence_DataTypes_PedestalData_DeserializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.PedestalData.DeserializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.PedestalData.DeserializeInheritance
-  nameWithType: PedestalData.DeserializeInheritance
-- uid: DataPersistence.DataTypes.PedestalData.PedestalSubData
-  name: PedestalData.PedestalSubData
-  href: api/DataPersistence.DataTypes.PedestalData.PedestalSubData.html
-  commentId: T:DataPersistence.DataTypes.PedestalData.PedestalSubData
-  fullName: DataPersistence.DataTypes.PedestalData.PedestalSubData
-  nameWithType: PedestalData.PedestalSubData
-- uid: DataPersistence.DataTypes.PedestalData.PedestalSubData.currentRock
-  name: currentRock
-  href: api/DataPersistence.DataTypes.PedestalData.PedestalSubData.html#DataPersistence_DataTypes_PedestalData_PedestalSubData_currentRock
-  commentId: F:DataPersistence.DataTypes.PedestalData.PedestalSubData.currentRock
-  fullName: DataPersistence.DataTypes.PedestalData.PedestalSubData.currentRock
-  nameWithType: PedestalData.PedestalSubData.currentRock
-- uid: DataPersistence.DataTypes.PedestalData.SerializeInheritance
-  name: SerializeInheritance()
-  href: api/DataPersistence.DataTypes.PedestalData.html#DataPersistence_DataTypes_PedestalData_SerializeInheritance
-  commentId: M:DataPersistence.DataTypes.PedestalData.SerializeInheritance
-  fullName: DataPersistence.DataTypes.PedestalData.SerializeInheritance()
-  nameWithType: PedestalData.SerializeInheritance()
-- uid: DataPersistence.DataTypes.PedestalData.SerializeInheritance*
-  name: SerializeInheritance
-  href: api/DataPersistence.DataTypes.PedestalData.html#DataPersistence_DataTypes_PedestalData_SerializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.PedestalData.SerializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.PedestalData.SerializeInheritance
-  nameWithType: PedestalData.SerializeInheritance
-- uid: DataPersistence.DataTypes.PedestalData.data
-  name: data
-  href: api/DataPersistence.DataTypes.PedestalData.html#DataPersistence_DataTypes_PedestalData_data
-  commentId: F:DataPersistence.DataTypes.PedestalData.data
-  fullName: DataPersistence.DataTypes.PedestalData.data
-  nameWithType: PedestalData.data
-- uid: DataPersistence.DataTypes.PhotocopierData
-  name: PhotocopierData
-  href: api/DataPersistence.DataTypes.PhotocopierData.html
-  commentId: T:DataPersistence.DataTypes.PhotocopierData
-  fullName: DataPersistence.DataTypes.PhotocopierData
-  nameWithType: PhotocopierData
-- uid: DataPersistence.DataTypes.PhotocopierData.DeserializeInheritance
-  name: DeserializeInheritance()
-  href: api/DataPersistence.DataTypes.PhotocopierData.html#DataPersistence_DataTypes_PhotocopierData_DeserializeInheritance
-  commentId: M:DataPersistence.DataTypes.PhotocopierData.DeserializeInheritance
-  fullName: DataPersistence.DataTypes.PhotocopierData.DeserializeInheritance()
-  nameWithType: PhotocopierData.DeserializeInheritance()
-- uid: DataPersistence.DataTypes.PhotocopierData.DeserializeInheritance*
-  name: DeserializeInheritance
-  href: api/DataPersistence.DataTypes.PhotocopierData.html#DataPersistence_DataTypes_PhotocopierData_DeserializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.PhotocopierData.DeserializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.PhotocopierData.DeserializeInheritance
-  nameWithType: PhotocopierData.DeserializeInheritance
-- uid: DataPersistence.DataTypes.PhotocopierData.PhotocopierSubData
-  name: PhotocopierData.PhotocopierSubData
-  href: api/DataPersistence.DataTypes.PhotocopierData.PhotocopierSubData.html
-  commentId: T:DataPersistence.DataTypes.PhotocopierData.PhotocopierSubData
-  fullName: DataPersistence.DataTypes.PhotocopierData.PhotocopierSubData
-  nameWithType: PhotocopierData.PhotocopierSubData
-- uid: DataPersistence.DataTypes.PhotocopierData.PhotocopierSubData.itemTaken
-  name: itemTaken
-  href: api/DataPersistence.DataTypes.PhotocopierData.PhotocopierSubData.html#DataPersistence_DataTypes_PhotocopierData_PhotocopierSubData_itemTaken
-  commentId: F:DataPersistence.DataTypes.PhotocopierData.PhotocopierSubData.itemTaken
-  fullName: DataPersistence.DataTypes.PhotocopierData.PhotocopierSubData.itemTaken
-  nameWithType: PhotocopierData.PhotocopierSubData.itemTaken
-- uid: DataPersistence.DataTypes.PhotocopierData.PhotocopierSubData.stage
-  name: stage
-  href: api/DataPersistence.DataTypes.PhotocopierData.PhotocopierSubData.html#DataPersistence_DataTypes_PhotocopierData_PhotocopierSubData_stage
-  commentId: F:DataPersistence.DataTypes.PhotocopierData.PhotocopierSubData.stage
-  fullName: DataPersistence.DataTypes.PhotocopierData.PhotocopierSubData.stage
-  nameWithType: PhotocopierData.PhotocopierSubData.stage
-- uid: DataPersistence.DataTypes.PhotocopierData.SerializeInheritance
-  name: SerializeInheritance()
-  href: api/DataPersistence.DataTypes.PhotocopierData.html#DataPersistence_DataTypes_PhotocopierData_SerializeInheritance
-  commentId: M:DataPersistence.DataTypes.PhotocopierData.SerializeInheritance
-  fullName: DataPersistence.DataTypes.PhotocopierData.SerializeInheritance()
-  nameWithType: PhotocopierData.SerializeInheritance()
-- uid: DataPersistence.DataTypes.PhotocopierData.SerializeInheritance*
-  name: SerializeInheritance
-  href: api/DataPersistence.DataTypes.PhotocopierData.html#DataPersistence_DataTypes_PhotocopierData_SerializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.PhotocopierData.SerializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.PhotocopierData.SerializeInheritance
-  nameWithType: PhotocopierData.SerializeInheritance
-- uid: DataPersistence.DataTypes.PhotocopierData.data
-  name: data
-  href: api/DataPersistence.DataTypes.PhotocopierData.html#DataPersistence_DataTypes_PhotocopierData_data
-  commentId: F:DataPersistence.DataTypes.PhotocopierData.data
-  fullName: DataPersistence.DataTypes.PhotocopierData.data
-  nameWithType: PhotocopierData.data
 - uid: DataPersistence.DataTypes.PlayerGameData
   name: PlayerGameData
   href: api/DataPersistence.DataTypes.PlayerGameData.html
@@ -1425,130 +1092,12 @@ references:
   fullName.vb: DataPersistence.DataTypes.PlayerGameData.New
   nameWithType: PlayerGameData.PlayerGameData
   nameWithType.vb: PlayerGameData.New
-- uid: DataPersistence.DataTypes.PlayerGameData.hasCzasoport
-  name: hasCzasoport
-  href: api/DataPersistence.DataTypes.PlayerGameData.html#DataPersistence_DataTypes_PlayerGameData_hasCzasoport
-  commentId: F:DataPersistence.DataTypes.PlayerGameData.hasCzasoport
-  fullName: DataPersistence.DataTypes.PlayerGameData.hasCzasoport
-  nameWithType: PlayerGameData.hasCzasoport
-- uid: DataPersistence.DataTypes.PlayerGameData.hasCzasoportPart
-  name: hasCzasoportPart
-  href: api/DataPersistence.DataTypes.PlayerGameData.html#DataPersistence_DataTypes_PlayerGameData_hasCzasoportPart
-  commentId: F:DataPersistence.DataTypes.PlayerGameData.hasCzasoportPart
-  fullName: DataPersistence.DataTypes.PlayerGameData.hasCzasoportPart
-  nameWithType: PlayerGameData.hasCzasoportPart
-- uid: DataPersistence.DataTypes.PlayerGameData.inventory
-  name: inventory
-  href: api/DataPersistence.DataTypes.PlayerGameData.html#DataPersistence_DataTypes_PlayerGameData_inventory
-  commentId: F:DataPersistence.DataTypes.PlayerGameData.inventory
-  fullName: DataPersistence.DataTypes.PlayerGameData.inventory
-  nameWithType: PlayerGameData.inventory
 - uid: DataPersistence.DataTypes.PlayerGameData.position
   name: position
   href: api/DataPersistence.DataTypes.PlayerGameData.html#DataPersistence_DataTypes_PlayerGameData_position
   commentId: F:DataPersistence.DataTypes.PlayerGameData.position
   fullName: DataPersistence.DataTypes.PlayerGameData.position
   nameWithType: PlayerGameData.position
-- uid: DataPersistence.DataTypes.RockData
-  name: RockData
-  href: api/DataPersistence.DataTypes.RockData.html
-  commentId: T:DataPersistence.DataTypes.RockData
-  fullName: DataPersistence.DataTypes.RockData
-  nameWithType: RockData
-- uid: DataPersistence.DataTypes.RockData.DeserializeInheritance
-  name: DeserializeInheritance()
-  href: api/DataPersistence.DataTypes.RockData.html#DataPersistence_DataTypes_RockData_DeserializeInheritance
-  commentId: M:DataPersistence.DataTypes.RockData.DeserializeInheritance
-  fullName: DataPersistence.DataTypes.RockData.DeserializeInheritance()
-  nameWithType: RockData.DeserializeInheritance()
-- uid: DataPersistence.DataTypes.RockData.DeserializeInheritance*
-  name: DeserializeInheritance
-  href: api/DataPersistence.DataTypes.RockData.html#DataPersistence_DataTypes_RockData_DeserializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.RockData.DeserializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.RockData.DeserializeInheritance
-  nameWithType: RockData.DeserializeInheritance
-- uid: DataPersistence.DataTypes.RockData.RockSubData
-  name: RockData.RockSubData
-  href: api/DataPersistence.DataTypes.RockData.RockSubData.html
-  commentId: T:DataPersistence.DataTypes.RockData.RockSubData
-  fullName: DataPersistence.DataTypes.RockData.RockSubData
-  nameWithType: RockData.RockSubData
-- uid: DataPersistence.DataTypes.RockData.RockSubData.state
-  name: state
-  href: api/DataPersistence.DataTypes.RockData.RockSubData.html#DataPersistence_DataTypes_RockData_RockSubData_state
-  commentId: F:DataPersistence.DataTypes.RockData.RockSubData.state
-  fullName: DataPersistence.DataTypes.RockData.RockSubData.state
-  nameWithType: RockData.RockSubData.state
-- uid: DataPersistence.DataTypes.RockData.SerializeInheritance
-  name: SerializeInheritance()
-  href: api/DataPersistence.DataTypes.RockData.html#DataPersistence_DataTypes_RockData_SerializeInheritance
-  commentId: M:DataPersistence.DataTypes.RockData.SerializeInheritance
-  fullName: DataPersistence.DataTypes.RockData.SerializeInheritance()
-  nameWithType: RockData.SerializeInheritance()
-- uid: DataPersistence.DataTypes.RockData.SerializeInheritance*
-  name: SerializeInheritance
-  href: api/DataPersistence.DataTypes.RockData.html#DataPersistence_DataTypes_RockData_SerializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.RockData.SerializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.RockData.SerializeInheritance
-  nameWithType: RockData.SerializeInheritance
-- uid: DataPersistence.DataTypes.RockData.data
-  name: data
-  href: api/DataPersistence.DataTypes.RockData.html#DataPersistence_DataTypes_RockData_data
-  commentId: F:DataPersistence.DataTypes.RockData.data
-  fullName: DataPersistence.DataTypes.RockData.data
-  nameWithType: RockData.data
-- uid: DataPersistence.DataTypes.TapePlayerData
-  name: TapePlayerData
-  href: api/DataPersistence.DataTypes.TapePlayerData.html
-  commentId: T:DataPersistence.DataTypes.TapePlayerData
-  fullName: DataPersistence.DataTypes.TapePlayerData
-  nameWithType: TapePlayerData
-- uid: DataPersistence.DataTypes.TapePlayerData.DeserializeInheritance
-  name: DeserializeInheritance()
-  href: api/DataPersistence.DataTypes.TapePlayerData.html#DataPersistence_DataTypes_TapePlayerData_DeserializeInheritance
-  commentId: M:DataPersistence.DataTypes.TapePlayerData.DeserializeInheritance
-  fullName: DataPersistence.DataTypes.TapePlayerData.DeserializeInheritance()
-  nameWithType: TapePlayerData.DeserializeInheritance()
-- uid: DataPersistence.DataTypes.TapePlayerData.DeserializeInheritance*
-  name: DeserializeInheritance
-  href: api/DataPersistence.DataTypes.TapePlayerData.html#DataPersistence_DataTypes_TapePlayerData_DeserializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.TapePlayerData.DeserializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.TapePlayerData.DeserializeInheritance
-  nameWithType: TapePlayerData.DeserializeInheritance
-- uid: DataPersistence.DataTypes.TapePlayerData.SerializeInheritance
-  name: SerializeInheritance()
-  href: api/DataPersistence.DataTypes.TapePlayerData.html#DataPersistence_DataTypes_TapePlayerData_SerializeInheritance
-  commentId: M:DataPersistence.DataTypes.TapePlayerData.SerializeInheritance
-  fullName: DataPersistence.DataTypes.TapePlayerData.SerializeInheritance()
-  nameWithType: TapePlayerData.SerializeInheritance()
-- uid: DataPersistence.DataTypes.TapePlayerData.SerializeInheritance*
-  name: SerializeInheritance
-  href: api/DataPersistence.DataTypes.TapePlayerData.html#DataPersistence_DataTypes_TapePlayerData_SerializeInheritance_
-  commentId: Overload:DataPersistence.DataTypes.TapePlayerData.SerializeInheritance
-  isSpec: "True"
-  fullName: DataPersistence.DataTypes.TapePlayerData.SerializeInheritance
-  nameWithType: TapePlayerData.SerializeInheritance
-- uid: DataPersistence.DataTypes.TapePlayerData.TapePlayerSubData
-  name: TapePlayerData.TapePlayerSubData
-  href: api/DataPersistence.DataTypes.TapePlayerData.TapePlayerSubData.html
-  commentId: T:DataPersistence.DataTypes.TapePlayerData.TapePlayerSubData
-  fullName: DataPersistence.DataTypes.TapePlayerData.TapePlayerSubData
-  nameWithType: TapePlayerData.TapePlayerSubData
-- uid: DataPersistence.DataTypes.TapePlayerData.TapePlayerSubData.playingMusic
-  name: playingMusic
-  href: api/DataPersistence.DataTypes.TapePlayerData.TapePlayerSubData.html#DataPersistence_DataTypes_TapePlayerData_TapePlayerSubData_playingMusic
-  commentId: F:DataPersistence.DataTypes.TapePlayerData.TapePlayerSubData.playingMusic
-  fullName: DataPersistence.DataTypes.TapePlayerData.TapePlayerSubData.playingMusic
-  nameWithType: TapePlayerData.TapePlayerSubData.playingMusic
-- uid: DataPersistence.DataTypes.TapePlayerData.data
-  name: data
-  href: api/DataPersistence.DataTypes.TapePlayerData.html#DataPersistence_DataTypes_TapePlayerData_data
-  commentId: F:DataPersistence.DataTypes.TapePlayerData.data
-  fullName: DataPersistence.DataTypes.TapePlayerData.data
-  nameWithType: TapePlayerData.data
 - uid: DataPersistence.DefaultSaveDataSO
   name: DefaultSaveDataSO
   href: api/DataPersistence.DefaultSaveDataSO.html
@@ -1649,106 +1198,6 @@ references:
   fullName.vb: DataPersistence.GameData.New
   nameWithType: GameData.GameData
   nameWithType.vb: GameData.New
-- uid: DataPersistence.GameData.ContainsObjectData(Utils.SerializableGuid)
-  name: ContainsObjectData(SerializableGuid)
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_ContainsObjectData_Utils_SerializableGuid_
-  commentId: M:DataPersistence.GameData.ContainsObjectData(Utils.SerializableGuid)
-  fullName: DataPersistence.GameData.ContainsObjectData(Utils.SerializableGuid)
-  nameWithType: GameData.ContainsObjectData(SerializableGuid)
-- uid: DataPersistence.GameData.ContainsObjectData*
-  name: ContainsObjectData
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_ContainsObjectData_
-  commentId: Overload:DataPersistence.GameData.ContainsObjectData
-  isSpec: "True"
-  fullName: DataPersistence.GameData.ContainsObjectData
-  nameWithType: GameData.ContainsObjectData
-- uid: DataPersistence.GameData.GetObjectData*
-  name: GetObjectData
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_GetObjectData_
-  commentId: Overload:DataPersistence.GameData.GetObjectData
-  isSpec: "True"
-  fullName: DataPersistence.GameData.GetObjectData
-  nameWithType: GameData.GetObjectData
-- uid: DataPersistence.GameData.GetObjectData``1(Utils.SerializableGuid)
-  name: GetObjectData<T>(SerializableGuid)
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_GetObjectData__1_Utils_SerializableGuid_
-  commentId: M:DataPersistence.GameData.GetObjectData``1(Utils.SerializableGuid)
-  name.vb: GetObjectData(Of T)(SerializableGuid)
-  fullName: DataPersistence.GameData.GetObjectData<T>(Utils.SerializableGuid)
-  fullName.vb: DataPersistence.GameData.GetObjectData(Of T)(Utils.SerializableGuid)
-  nameWithType: GameData.GetObjectData<T>(SerializableGuid)
-  nameWithType.vb: GameData.GetObjectData(Of T)(SerializableGuid)
-- uid: DataPersistence.GameData.GetObjectDatas
-  name: GetObjectDatas()
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_GetObjectDatas
-  commentId: M:DataPersistence.GameData.GetObjectDatas
-  fullName: DataPersistence.GameData.GetObjectDatas()
-  nameWithType: GameData.GetObjectDatas()
-- uid: DataPersistence.GameData.GetObjectDatas*
-  name: GetObjectDatas
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_GetObjectDatas_
-  commentId: Overload:DataPersistence.GameData.GetObjectDatas
-  isSpec: "True"
-  fullName: DataPersistence.GameData.GetObjectDatas
-  nameWithType: GameData.GetObjectDatas
-- uid: DataPersistence.GameData.IsLevelSaved(System.String)
-  name: IsLevelSaved(string)
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_IsLevelSaved_System_String_
-  commentId: M:DataPersistence.GameData.IsLevelSaved(System.String)
-  name.vb: IsLevelSaved(String)
-  fullName: DataPersistence.GameData.IsLevelSaved(string)
-  fullName.vb: DataPersistence.GameData.IsLevelSaved(String)
-  nameWithType: GameData.IsLevelSaved(string)
-  nameWithType.vb: GameData.IsLevelSaved(String)
-- uid: DataPersistence.GameData.IsLevelSaved*
-  name: IsLevelSaved
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_IsLevelSaved_
-  commentId: Overload:DataPersistence.GameData.IsLevelSaved
-  isSpec: "True"
-  fullName: DataPersistence.GameData.IsLevelSaved
-  nameWithType: GameData.IsLevelSaved
-- uid: DataPersistence.GameData.MarkLevelSaved(System.String)
-  name: MarkLevelSaved(string)
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_MarkLevelSaved_System_String_
-  commentId: M:DataPersistence.GameData.MarkLevelSaved(System.String)
-  name.vb: MarkLevelSaved(String)
-  fullName: DataPersistence.GameData.MarkLevelSaved(string)
-  fullName.vb: DataPersistence.GameData.MarkLevelSaved(String)
-  nameWithType: GameData.MarkLevelSaved(string)
-  nameWithType.vb: GameData.MarkLevelSaved(String)
-- uid: DataPersistence.GameData.MarkLevelSaved*
-  name: MarkLevelSaved
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_MarkLevelSaved_
-  commentId: Overload:DataPersistence.GameData.MarkLevelSaved
-  isSpec: "True"
-  fullName: DataPersistence.GameData.MarkLevelSaved
-  nameWithType: GameData.MarkLevelSaved
-- uid: DataPersistence.GameData.RemoveObjectData(Utils.SerializableGuid)
-  name: RemoveObjectData(SerializableGuid)
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_RemoveObjectData_Utils_SerializableGuid_
-  commentId: M:DataPersistence.GameData.RemoveObjectData(Utils.SerializableGuid)
-  fullName: DataPersistence.GameData.RemoveObjectData(Utils.SerializableGuid)
-  nameWithType: GameData.RemoveObjectData(SerializableGuid)
-- uid: DataPersistence.GameData.RemoveObjectData*
-  name: RemoveObjectData
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_RemoveObjectData_
-  commentId: Overload:DataPersistence.GameData.RemoveObjectData
-  isSpec: "True"
-  fullName: DataPersistence.GameData.RemoveObjectData
-  nameWithType: GameData.RemoveObjectData
-- uid: DataPersistence.GameData.SetObjectData(DataPersistence.DataTypes.Data)
-  name: SetObjectData(Data)
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_SetObjectData_DataPersistence_DataTypes_Data_
-  commentId: M:DataPersistence.GameData.SetObjectData(DataPersistence.DataTypes.Data)
-  fullName: DataPersistence.GameData.SetObjectData(DataPersistence.DataTypes.Data)
-  nameWithType: GameData.SetObjectData(Data)
-- uid: DataPersistence.GameData.SetObjectData*
-  name: SetObjectData
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_SetObjectData_
-  commentId: Overload:DataPersistence.GameData.SetObjectData
-  isSpec: "True"
-  fullName: DataPersistence.GameData.SetObjectData
-  nameWithType: GameData.SetObjectData
 - uid: DataPersistence.GameData.currentLevel
   name: currentLevel
   href: api/DataPersistence.GameData.html#DataPersistence_GameData_currentLevel
@@ -1761,12 +1210,6 @@ references:
   commentId: F:DataPersistence.GameData.currentTimeline
   fullName: DataPersistence.GameData.currentTimeline
   nameWithType: GameData.currentTimeline
-- uid: DataPersistence.GameData.itemHideout
-  name: itemHideout
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_itemHideout
-  commentId: F:DataPersistence.GameData.itemHideout
-  fullName: DataPersistence.GameData.itemHideout
-  nameWithType: GameData.itemHideout
 - uid: DataPersistence.GameData.notificationGameData
   name: notificationGameData
   href: api/DataPersistence.GameData.html#DataPersistence_GameData_notificationGameData
@@ -1779,12 +1222,6 @@ references:
   commentId: F:DataPersistence.GameData.playerGameData
   fullName: DataPersistence.GameData.playerGameData
   nameWithType: GameData.playerGameData
-- uid: DataPersistence.GameData.tutorialFinished
-  name: tutorialFinished
-  href: api/DataPersistence.GameData.html#DataPersistence_GameData_tutorialFinished
-  commentId: F:DataPersistence.GameData.tutorialFinished
-  fullName: DataPersistence.GameData.tutorialFinished
-  nameWithType: GameData.tutorialFinished
 - uid: DataPersistence.IDataPersistence
   name: IDataPersistence
   href: api/DataPersistence.IDataPersistence.html
@@ -1820,38 +1257,6 @@ references:
   isSpec: "True"
   fullName: DataPersistence.IDataPersistence.SavePersistentData
   nameWithType: IDataPersistence.SavePersistentData
-- uid: DataPersistence.IDataPersistence.SceneObject
-  name: SceneObject
-  href: api/DataPersistence.IDataPersistence.html#DataPersistence_IDataPersistence_SceneObject
-  commentId: P:DataPersistence.IDataPersistence.SceneObject
-  fullName: DataPersistence.IDataPersistence.SceneObject
-  nameWithType: IDataPersistence.SceneObject
-- uid: DataPersistence.IDataPersistence.SceneObject*
-  name: SceneObject
-  href: api/DataPersistence.IDataPersistence.html#DataPersistence_IDataPersistence_SceneObject_
-  commentId: Overload:DataPersistence.IDataPersistence.SceneObject
-  isSpec: "True"
-  fullName: DataPersistence.IDataPersistence.SceneObject
-  nameWithType: IDataPersistence.SceneObject
-- uid: DataPersistence.IPersistentObject
-  name: IPersistentObject
-  href: api/DataPersistence.IPersistentObject.html
-  commentId: T:DataPersistence.IPersistentObject
-  fullName: DataPersistence.IPersistentObject
-  nameWithType: IPersistentObject
-- uid: DataPersistence.IPersistentObject.ID
-  name: ID
-  href: api/DataPersistence.IPersistentObject.html#DataPersistence_IPersistentObject_ID
-  commentId: P:DataPersistence.IPersistentObject.ID
-  fullName: DataPersistence.IPersistentObject.ID
-  nameWithType: IPersistentObject.ID
-- uid: DataPersistence.IPersistentObject.ID*
-  name: ID
-  href: api/DataPersistence.IPersistentObject.html#DataPersistence_IPersistentObject_ID_
-  commentId: Overload:DataPersistence.IPersistentObject.ID
-  isSpec: "True"
-  fullName: DataPersistence.IPersistentObject.ID
-  nameWithType: IPersistentObject.ID
 - uid: DentedPixel
   name: DentedPixel
   href: api/DentedPixel.html
@@ -2314,35 +1719,6 @@ references:
   isSpec: "True"
   fullName: Czasoport.InteractionItem
   nameWithType: Czasoport.InteractionItem
-- uid: Global.Czasoport.LoadPersistentData(DataPersistence.GameData)
-  name: LoadPersistentData(GameData)
-  href: api/Global.Czasoport.html#Global_Czasoport_LoadPersistentData_DataPersistence_GameData_
-  commentId: M:Global.Czasoport.LoadPersistentData(DataPersistence.GameData)
-  fullName: Czasoport.LoadPersistentData(DataPersistence.GameData)
-  nameWithType: Czasoport.LoadPersistentData(GameData)
-- uid: Global.Czasoport.LoadPersistentData*
-  name: LoadPersistentData
-  href: api/Global.Czasoport.html#Global_Czasoport_LoadPersistentData_
-  commentId: Overload:Global.Czasoport.LoadPersistentData
-  isSpec: "True"
-  fullName: Czasoport.LoadPersistentData
-  nameWithType: Czasoport.LoadPersistentData
-- uid: Global.Czasoport.SavePersistentData(DataPersistence.GameData@)
-  name: SavePersistentData(ref GameData)
-  href: api/Global.Czasoport.html#Global_Czasoport_SavePersistentData_DataPersistence_GameData__
-  commentId: M:Global.Czasoport.SavePersistentData(DataPersistence.GameData@)
-  name.vb: SavePersistentData(GameData)
-  fullName: Czasoport.SavePersistentData(ref DataPersistence.GameData)
-  fullName.vb: Czasoport.SavePersistentData(DataPersistence.GameData)
-  nameWithType: Czasoport.SavePersistentData(ref GameData)
-  nameWithType.vb: Czasoport.SavePersistentData(GameData)
-- uid: Global.Czasoport.SavePersistentData*
-  name: SavePersistentData
-  href: api/Global.Czasoport.html#Global_Czasoport_SavePersistentData_
-  commentId: Overload:Global.Czasoport.SavePersistentData
-  isSpec: "True"
-  fullName: Czasoport.SavePersistentData
-  nameWithType: Czasoport.SavePersistentData
 - uid: Global.CzasoportPart
   name: CzasoportPart
   href: api/Global.CzasoportPart.html
@@ -13402,19 +12778,6 @@ references:
   isSpec: "True"
   fullName: NotificationManager.SavePersistentData
   nameWithType: NotificationManager.SavePersistentData
-- uid: Global.NotificationManager.SceneObject
-  name: SceneObject
-  href: api/Global.NotificationManager.html#Global_NotificationManager_SceneObject
-  commentId: P:Global.NotificationManager.SceneObject
-  fullName: NotificationManager.SceneObject
-  nameWithType: NotificationManager.SceneObject
-- uid: Global.NotificationManager.SceneObject*
-  name: SceneObject
-  href: api/Global.NotificationManager.html#Global_NotificationManager_SceneObject_
-  commentId: Overload:Global.NotificationManager.SceneObject
-  isSpec: "True"
-  fullName: NotificationManager.SceneObject
-  nameWithType: NotificationManager.SceneObject
 - uid: Global.NotificationManager.StartTutorial
   name: StartTutorial()
   href: api/Global.NotificationManager.html#Global_NotificationManager_StartTutorial
@@ -13709,35 +13072,6 @@ references:
   isSpec: "True"
   fullName: Photocopier.InteractionItem
   nameWithType: Photocopier.InteractionItem
-- uid: Global.Photocopier.LoadPersistentData(DataPersistence.GameData)
-  name: LoadPersistentData(GameData)
-  href: api/Global.Photocopier.html#Global_Photocopier_LoadPersistentData_DataPersistence_GameData_
-  commentId: M:Global.Photocopier.LoadPersistentData(DataPersistence.GameData)
-  fullName: Photocopier.LoadPersistentData(DataPersistence.GameData)
-  nameWithType: Photocopier.LoadPersistentData(GameData)
-- uid: Global.Photocopier.LoadPersistentData*
-  name: LoadPersistentData
-  href: api/Global.Photocopier.html#Global_Photocopier_LoadPersistentData_
-  commentId: Overload:Global.Photocopier.LoadPersistentData
-  isSpec: "True"
-  fullName: Photocopier.LoadPersistentData
-  nameWithType: Photocopier.LoadPersistentData
-- uid: Global.Photocopier.SavePersistentData(DataPersistence.GameData@)
-  name: SavePersistentData(ref GameData)
-  href: api/Global.Photocopier.html#Global_Photocopier_SavePersistentData_DataPersistence_GameData__
-  commentId: M:Global.Photocopier.SavePersistentData(DataPersistence.GameData@)
-  name.vb: SavePersistentData(GameData)
-  fullName: Photocopier.SavePersistentData(ref DataPersistence.GameData)
-  fullName.vb: Photocopier.SavePersistentData(DataPersistence.GameData)
-  nameWithType: Photocopier.SavePersistentData(ref GameData)
-  nameWithType.vb: Photocopier.SavePersistentData(GameData)
-- uid: Global.Photocopier.SavePersistentData*
-  name: SavePersistentData
-  href: api/Global.Photocopier.html#Global_Photocopier_SavePersistentData_
-  commentId: Overload:Global.Photocopier.SavePersistentData
-  isSpec: "True"
-  fullName: Photocopier.SavePersistentData
-  nameWithType: Photocopier.SavePersistentData
 - uid: Global.PhotocotierUI
   name: PhotocotierUI
   href: api/Global.PhotocotierUI.html
@@ -14739,48 +14073,6 @@ references:
   commentId: T:Global.TutorialManager
   fullName: TutorialManager
   nameWithType: TutorialManager
-- uid: Global.TutorialManager.LoadPersistentData(DataPersistence.GameData)
-  name: LoadPersistentData(GameData)
-  href: api/Global.TutorialManager.html#Global_TutorialManager_LoadPersistentData_DataPersistence_GameData_
-  commentId: M:Global.TutorialManager.LoadPersistentData(DataPersistence.GameData)
-  fullName: TutorialManager.LoadPersistentData(DataPersistence.GameData)
-  nameWithType: TutorialManager.LoadPersistentData(GameData)
-- uid: Global.TutorialManager.LoadPersistentData*
-  name: LoadPersistentData
-  href: api/Global.TutorialManager.html#Global_TutorialManager_LoadPersistentData_
-  commentId: Overload:Global.TutorialManager.LoadPersistentData
-  isSpec: "True"
-  fullName: TutorialManager.LoadPersistentData
-  nameWithType: TutorialManager.LoadPersistentData
-- uid: Global.TutorialManager.SavePersistentData(DataPersistence.GameData@)
-  name: SavePersistentData(ref GameData)
-  href: api/Global.TutorialManager.html#Global_TutorialManager_SavePersistentData_DataPersistence_GameData__
-  commentId: M:Global.TutorialManager.SavePersistentData(DataPersistence.GameData@)
-  name.vb: SavePersistentData(GameData)
-  fullName: TutorialManager.SavePersistentData(ref DataPersistence.GameData)
-  fullName.vb: TutorialManager.SavePersistentData(DataPersistence.GameData)
-  nameWithType: TutorialManager.SavePersistentData(ref GameData)
-  nameWithType.vb: TutorialManager.SavePersistentData(GameData)
-- uid: Global.TutorialManager.SavePersistentData*
-  name: SavePersistentData
-  href: api/Global.TutorialManager.html#Global_TutorialManager_SavePersistentData_
-  commentId: Overload:Global.TutorialManager.SavePersistentData
-  isSpec: "True"
-  fullName: TutorialManager.SavePersistentData
-  nameWithType: TutorialManager.SavePersistentData
-- uid: Global.TutorialManager.SceneObject
-  name: SceneObject
-  href: api/Global.TutorialManager.html#Global_TutorialManager_SceneObject
-  commentId: P:Global.TutorialManager.SceneObject
-  fullName: TutorialManager.SceneObject
-  nameWithType: TutorialManager.SceneObject
-- uid: Global.TutorialManager.SceneObject*
-  name: SceneObject
-  href: api/Global.TutorialManager.html#Global_TutorialManager_SceneObject_
-  commentId: Overload:Global.TutorialManager.SceneObject
-  isSpec: "True"
-  fullName: TutorialManager.SceneObject
-  nameWithType: TutorialManager.SceneObject
 - uid: Global.TutorialNotification
   name: TutorialNotification
   href: api/Global.TutorialNotification.html
@@ -35592,35 +34884,6 @@ references:
   isSpec: "True"
   fullName: InteractableObjectSystem.Objects.BreakableRock.InteractionItem
   nameWithType: BreakableRock.InteractionItem
-- uid: InteractableObjectSystem.Objects.BreakableRock.LoadPersistentData(DataPersistence.GameData)
-  name: LoadPersistentData(GameData)
-  href: api/InteractableObjectSystem.Objects.BreakableRock.html#InteractableObjectSystem_Objects_BreakableRock_LoadPersistentData_DataPersistence_GameData_
-  commentId: M:InteractableObjectSystem.Objects.BreakableRock.LoadPersistentData(DataPersistence.GameData)
-  fullName: InteractableObjectSystem.Objects.BreakableRock.LoadPersistentData(DataPersistence.GameData)
-  nameWithType: BreakableRock.LoadPersistentData(GameData)
-- uid: InteractableObjectSystem.Objects.BreakableRock.LoadPersistentData*
-  name: LoadPersistentData
-  href: api/InteractableObjectSystem.Objects.BreakableRock.html#InteractableObjectSystem_Objects_BreakableRock_LoadPersistentData_
-  commentId: Overload:InteractableObjectSystem.Objects.BreakableRock.LoadPersistentData
-  isSpec: "True"
-  fullName: InteractableObjectSystem.Objects.BreakableRock.LoadPersistentData
-  nameWithType: BreakableRock.LoadPersistentData
-- uid: InteractableObjectSystem.Objects.BreakableRock.SavePersistentData(DataPersistence.GameData@)
-  name: SavePersistentData(ref GameData)
-  href: api/InteractableObjectSystem.Objects.BreakableRock.html#InteractableObjectSystem_Objects_BreakableRock_SavePersistentData_DataPersistence_GameData__
-  commentId: M:InteractableObjectSystem.Objects.BreakableRock.SavePersistentData(DataPersistence.GameData@)
-  name.vb: SavePersistentData(GameData)
-  fullName: InteractableObjectSystem.Objects.BreakableRock.SavePersistentData(ref DataPersistence.GameData)
-  fullName.vb: InteractableObjectSystem.Objects.BreakableRock.SavePersistentData(DataPersistence.GameData)
-  nameWithType: BreakableRock.SavePersistentData(ref GameData)
-  nameWithType.vb: BreakableRock.SavePersistentData(GameData)
-- uid: InteractableObjectSystem.Objects.BreakableRock.SavePersistentData*
-  name: SavePersistentData
-  href: api/InteractableObjectSystem.Objects.BreakableRock.html#InteractableObjectSystem_Objects_BreakableRock_SavePersistentData_
-  commentId: Overload:InteractableObjectSystem.Objects.BreakableRock.SavePersistentData
-  isSpec: "True"
-  fullName: InteractableObjectSystem.Objects.BreakableRock.SavePersistentData
-  nameWithType: BreakableRock.SavePersistentData
 - uid: InteractableObjectSystem.Objects.ChangeInto
   name: ChangeInto
   href: api/InteractableObjectSystem.Objects.ChangeInto.html
@@ -35768,30 +35031,6 @@ references:
   isSpec: "True"
   fullName: InteractableObjectSystem.Objects.LockedDoor.CloseDoor
   nameWithType: LockedDoor.CloseDoor
-- uid: InteractableObjectSystem.Objects.LockedDoor.DoorState
-  name: LockedDoor.DoorState
-  href: api/InteractableObjectSystem.Objects.LockedDoor.DoorState.html
-  commentId: T:InteractableObjectSystem.Objects.LockedDoor.DoorState
-  fullName: InteractableObjectSystem.Objects.LockedDoor.DoorState
-  nameWithType: LockedDoor.DoorState
-- uid: InteractableObjectSystem.Objects.LockedDoor.DoorState.Closed
-  name: Closed
-  href: api/InteractableObjectSystem.Objects.LockedDoor.DoorState.html#InteractableObjectSystem_Objects_LockedDoor_DoorState_Closed
-  commentId: F:InteractableObjectSystem.Objects.LockedDoor.DoorState.Closed
-  fullName: InteractableObjectSystem.Objects.LockedDoor.DoorState.Closed
-  nameWithType: LockedDoor.DoorState.Closed
-- uid: InteractableObjectSystem.Objects.LockedDoor.DoorState.Locked
-  name: Locked
-  href: api/InteractableObjectSystem.Objects.LockedDoor.DoorState.html#InteractableObjectSystem_Objects_LockedDoor_DoorState_Locked
-  commentId: F:InteractableObjectSystem.Objects.LockedDoor.DoorState.Locked
-  fullName: InteractableObjectSystem.Objects.LockedDoor.DoorState.Locked
-  nameWithType: LockedDoor.DoorState.Locked
-- uid: InteractableObjectSystem.Objects.LockedDoor.DoorState.Opened
-  name: Opened
-  href: api/InteractableObjectSystem.Objects.LockedDoor.DoorState.html#InteractableObjectSystem_Objects_LockedDoor_DoorState_Opened
-  commentId: F:InteractableObjectSystem.Objects.LockedDoor.DoorState.Opened
-  fullName: InteractableObjectSystem.Objects.LockedDoor.DoorState.Opened
-  nameWithType: LockedDoor.DoorState.Opened
 - uid: InteractableObjectSystem.Objects.LockedDoor.InteractionHand
   name: InteractionHand()
   href: api/InteractableObjectSystem.Objects.LockedDoor.html#InteractableObjectSystem_Objects_LockedDoor_InteractionHand
@@ -35818,19 +35057,6 @@ references:
   isSpec: "True"
   fullName: InteractableObjectSystem.Objects.LockedDoor.InteractionItem
   nameWithType: LockedDoor.InteractionItem
-- uid: InteractableObjectSystem.Objects.LockedDoor.LoadPersistentData(DataPersistence.GameData)
-  name: LoadPersistentData(GameData)
-  href: api/InteractableObjectSystem.Objects.LockedDoor.html#InteractableObjectSystem_Objects_LockedDoor_LoadPersistentData_DataPersistence_GameData_
-  commentId: M:InteractableObjectSystem.Objects.LockedDoor.LoadPersistentData(DataPersistence.GameData)
-  fullName: InteractableObjectSystem.Objects.LockedDoor.LoadPersistentData(DataPersistence.GameData)
-  nameWithType: LockedDoor.LoadPersistentData(GameData)
-- uid: InteractableObjectSystem.Objects.LockedDoor.LoadPersistentData*
-  name: LoadPersistentData
-  href: api/InteractableObjectSystem.Objects.LockedDoor.html#InteractableObjectSystem_Objects_LockedDoor_LoadPersistentData_
-  commentId: Overload:InteractableObjectSystem.Objects.LockedDoor.LoadPersistentData
-  isSpec: "True"
-  fullName: InteractableObjectSystem.Objects.LockedDoor.LoadPersistentData
-  nameWithType: LockedDoor.LoadPersistentData
 - uid: InteractableObjectSystem.Objects.LockedDoor.OpenDoor
   name: OpenDoor()
   href: api/InteractableObjectSystem.Objects.LockedDoor.html#InteractableObjectSystem_Objects_LockedDoor_OpenDoor
@@ -35844,22 +35070,6 @@ references:
   isSpec: "True"
   fullName: InteractableObjectSystem.Objects.LockedDoor.OpenDoor
   nameWithType: LockedDoor.OpenDoor
-- uid: InteractableObjectSystem.Objects.LockedDoor.SavePersistentData(DataPersistence.GameData@)
-  name: SavePersistentData(ref GameData)
-  href: api/InteractableObjectSystem.Objects.LockedDoor.html#InteractableObjectSystem_Objects_LockedDoor_SavePersistentData_DataPersistence_GameData__
-  commentId: M:InteractableObjectSystem.Objects.LockedDoor.SavePersistentData(DataPersistence.GameData@)
-  name.vb: SavePersistentData(GameData)
-  fullName: InteractableObjectSystem.Objects.LockedDoor.SavePersistentData(ref DataPersistence.GameData)
-  fullName.vb: InteractableObjectSystem.Objects.LockedDoor.SavePersistentData(DataPersistence.GameData)
-  nameWithType: LockedDoor.SavePersistentData(ref GameData)
-  nameWithType.vb: LockedDoor.SavePersistentData(GameData)
-- uid: InteractableObjectSystem.Objects.LockedDoor.SavePersistentData*
-  name: SavePersistentData
-  href: api/InteractableObjectSystem.Objects.LockedDoor.html#InteractableObjectSystem_Objects_LockedDoor_SavePersistentData_
-  commentId: Overload:InteractableObjectSystem.Objects.LockedDoor.SavePersistentData
-  isSpec: "True"
-  fullName: InteractableObjectSystem.Objects.LockedDoor.SavePersistentData
-  nameWithType: LockedDoor.SavePersistentData
 - uid: InteractableObjectSystem.Objects.NoFireSign
   name: NoFireSign
   href: api/InteractableObjectSystem.Objects.NoFireSign.html
@@ -35898,35 +35108,6 @@ references:
   isSpec: "True"
   fullName: InteractableObjectSystem.Objects.Pedestal.InteractionItem
   nameWithType: Pedestal.InteractionItem
-- uid: InteractableObjectSystem.Objects.Pedestal.LoadPersistentData(DataPersistence.GameData)
-  name: LoadPersistentData(GameData)
-  href: api/InteractableObjectSystem.Objects.Pedestal.html#InteractableObjectSystem_Objects_Pedestal_LoadPersistentData_DataPersistence_GameData_
-  commentId: M:InteractableObjectSystem.Objects.Pedestal.LoadPersistentData(DataPersistence.GameData)
-  fullName: InteractableObjectSystem.Objects.Pedestal.LoadPersistentData(DataPersistence.GameData)
-  nameWithType: Pedestal.LoadPersistentData(GameData)
-- uid: InteractableObjectSystem.Objects.Pedestal.LoadPersistentData*
-  name: LoadPersistentData
-  href: api/InteractableObjectSystem.Objects.Pedestal.html#InteractableObjectSystem_Objects_Pedestal_LoadPersistentData_
-  commentId: Overload:InteractableObjectSystem.Objects.Pedestal.LoadPersistentData
-  isSpec: "True"
-  fullName: InteractableObjectSystem.Objects.Pedestal.LoadPersistentData
-  nameWithType: Pedestal.LoadPersistentData
-- uid: InteractableObjectSystem.Objects.Pedestal.SavePersistentData(DataPersistence.GameData@)
-  name: SavePersistentData(ref GameData)
-  href: api/InteractableObjectSystem.Objects.Pedestal.html#InteractableObjectSystem_Objects_Pedestal_SavePersistentData_DataPersistence_GameData__
-  commentId: M:InteractableObjectSystem.Objects.Pedestal.SavePersistentData(DataPersistence.GameData@)
-  name.vb: SavePersistentData(GameData)
-  fullName: InteractableObjectSystem.Objects.Pedestal.SavePersistentData(ref DataPersistence.GameData)
-  fullName.vb: InteractableObjectSystem.Objects.Pedestal.SavePersistentData(DataPersistence.GameData)
-  nameWithType: Pedestal.SavePersistentData(ref GameData)
-  nameWithType.vb: Pedestal.SavePersistentData(GameData)
-- uid: InteractableObjectSystem.Objects.Pedestal.SavePersistentData*
-  name: SavePersistentData
-  href: api/InteractableObjectSystem.Objects.Pedestal.html#InteractableObjectSystem_Objects_Pedestal_SavePersistentData_
-  commentId: Overload:InteractableObjectSystem.Objects.Pedestal.SavePersistentData
-  isSpec: "True"
-  fullName: InteractableObjectSystem.Objects.Pedestal.SavePersistentData
-  nameWithType: Pedestal.SavePersistentData
 - uid: InteractableObjectSystem.Objects.TapePlayer
   name: TapePlayer
   href: api/InteractableObjectSystem.Objects.TapePlayer.html
@@ -35959,96 +35140,6 @@ references:
   isSpec: "True"
   fullName: InteractableObjectSystem.Objects.TapePlayer.InteractionItem
   nameWithType: TapePlayer.InteractionItem
-- uid: InteractableObjectSystem.Objects.TapePlayer.LoadPersistentData(DataPersistence.GameData)
-  name: LoadPersistentData(GameData)
-  href: api/InteractableObjectSystem.Objects.TapePlayer.html#InteractableObjectSystem_Objects_TapePlayer_LoadPersistentData_DataPersistence_GameData_
-  commentId: M:InteractableObjectSystem.Objects.TapePlayer.LoadPersistentData(DataPersistence.GameData)
-  fullName: InteractableObjectSystem.Objects.TapePlayer.LoadPersistentData(DataPersistence.GameData)
-  nameWithType: TapePlayer.LoadPersistentData(GameData)
-- uid: InteractableObjectSystem.Objects.TapePlayer.LoadPersistentData*
-  name: LoadPersistentData
-  href: api/InteractableObjectSystem.Objects.TapePlayer.html#InteractableObjectSystem_Objects_TapePlayer_LoadPersistentData_
-  commentId: Overload:InteractableObjectSystem.Objects.TapePlayer.LoadPersistentData
-  isSpec: "True"
-  fullName: InteractableObjectSystem.Objects.TapePlayer.LoadPersistentData
-  nameWithType: TapePlayer.LoadPersistentData
-- uid: InteractableObjectSystem.Objects.TapePlayer.SavePersistentData(DataPersistence.GameData@)
-  name: SavePersistentData(ref GameData)
-  href: api/InteractableObjectSystem.Objects.TapePlayer.html#InteractableObjectSystem_Objects_TapePlayer_SavePersistentData_DataPersistence_GameData__
-  commentId: M:InteractableObjectSystem.Objects.TapePlayer.SavePersistentData(DataPersistence.GameData@)
-  name.vb: SavePersistentData(GameData)
-  fullName: InteractableObjectSystem.Objects.TapePlayer.SavePersistentData(ref DataPersistence.GameData)
-  fullName.vb: InteractableObjectSystem.Objects.TapePlayer.SavePersistentData(DataPersistence.GameData)
-  nameWithType: TapePlayer.SavePersistentData(ref GameData)
-  nameWithType.vb: TapePlayer.SavePersistentData(GameData)
-- uid: InteractableObjectSystem.Objects.TapePlayer.SavePersistentData*
-  name: SavePersistentData
-  href: api/InteractableObjectSystem.Objects.TapePlayer.html#InteractableObjectSystem_Objects_TapePlayer_SavePersistentData_
-  commentId: Overload:InteractableObjectSystem.Objects.TapePlayer.SavePersistentData
-  isSpec: "True"
-  fullName: InteractableObjectSystem.Objects.TapePlayer.SavePersistentData
-  nameWithType: TapePlayer.SavePersistentData
-- uid: InteractableObjectSystem.PersistentInteractableObject
-  name: PersistentInteractableObject
-  href: api/InteractableObjectSystem.PersistentInteractableObject.html
-  commentId: T:InteractableObjectSystem.PersistentInteractableObject
-  fullName: InteractableObjectSystem.PersistentInteractableObject
-  nameWithType: PersistentInteractableObject
-- uid: InteractableObjectSystem.PersistentInteractableObject.ID
-  name: ID
-  href: api/InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_ID
-  commentId: P:InteractableObjectSystem.PersistentInteractableObject.ID
-  fullName: InteractableObjectSystem.PersistentInteractableObject.ID
-  nameWithType: PersistentInteractableObject.ID
-- uid: InteractableObjectSystem.PersistentInteractableObject.ID*
-  name: ID
-  href: api/InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_ID_
-  commentId: Overload:InteractableObjectSystem.PersistentInteractableObject.ID
-  isSpec: "True"
-  fullName: InteractableObjectSystem.PersistentInteractableObject.ID
-  nameWithType: PersistentInteractableObject.ID
-- uid: InteractableObjectSystem.PersistentInteractableObject.LoadPersistentData(DataPersistence.GameData)
-  name: LoadPersistentData(GameData)
-  href: api/InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_LoadPersistentData_DataPersistence_GameData_
-  commentId: M:InteractableObjectSystem.PersistentInteractableObject.LoadPersistentData(DataPersistence.GameData)
-  fullName: InteractableObjectSystem.PersistentInteractableObject.LoadPersistentData(DataPersistence.GameData)
-  nameWithType: PersistentInteractableObject.LoadPersistentData(GameData)
-- uid: InteractableObjectSystem.PersistentInteractableObject.LoadPersistentData*
-  name: LoadPersistentData
-  href: api/InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_LoadPersistentData_
-  commentId: Overload:InteractableObjectSystem.PersistentInteractableObject.LoadPersistentData
-  isSpec: "True"
-  fullName: InteractableObjectSystem.PersistentInteractableObject.LoadPersistentData
-  nameWithType: PersistentInteractableObject.LoadPersistentData
-- uid: InteractableObjectSystem.PersistentInteractableObject.SavePersistentData(DataPersistence.GameData@)
-  name: SavePersistentData(ref GameData)
-  href: api/InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_SavePersistentData_DataPersistence_GameData__
-  commentId: M:InteractableObjectSystem.PersistentInteractableObject.SavePersistentData(DataPersistence.GameData@)
-  name.vb: SavePersistentData(GameData)
-  fullName: InteractableObjectSystem.PersistentInteractableObject.SavePersistentData(ref DataPersistence.GameData)
-  fullName.vb: InteractableObjectSystem.PersistentInteractableObject.SavePersistentData(DataPersistence.GameData)
-  nameWithType: PersistentInteractableObject.SavePersistentData(ref GameData)
-  nameWithType.vb: PersistentInteractableObject.SavePersistentData(GameData)
-- uid: InteractableObjectSystem.PersistentInteractableObject.SavePersistentData*
-  name: SavePersistentData
-  href: api/InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_SavePersistentData_
-  commentId: Overload:InteractableObjectSystem.PersistentInteractableObject.SavePersistentData
-  isSpec: "True"
-  fullName: InteractableObjectSystem.PersistentInteractableObject.SavePersistentData
-  nameWithType: PersistentInteractableObject.SavePersistentData
-- uid: InteractableObjectSystem.PersistentInteractableObject.SceneObject
-  name: SceneObject
-  href: api/InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_SceneObject
-  commentId: P:InteractableObjectSystem.PersistentInteractableObject.SceneObject
-  fullName: InteractableObjectSystem.PersistentInteractableObject.SceneObject
-  nameWithType: PersistentInteractableObject.SceneObject
-- uid: InteractableObjectSystem.PersistentInteractableObject.SceneObject*
-  name: SceneObject
-  href: api/InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_SceneObject_
-  commentId: Overload:InteractableObjectSystem.PersistentInteractableObject.SceneObject
-  isSpec: "True"
-  fullName: InteractableObjectSystem.PersistentInteractableObject.SceneObject
-  nameWithType: PersistentInteractableObject.SceneObject
 - uid: Interactions
   name: Interactions
   href: api/Interactions.html
@@ -36458,15 +35549,12 @@ references:
   isSpec: "True"
   fullName: InventorySystem.Inventory.GetSelectedItem
   nameWithType: Inventory.GetSelectedItem
-- uid: InventorySystem.Inventory.InsertItem(Items.Item,System.Boolean)
-  name: InsertItem(Item, bool)
-  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_InsertItem_Items_Item_System_Boolean_
-  commentId: M:InventorySystem.Inventory.InsertItem(Items.Item,System.Boolean)
-  name.vb: InsertItem(Item, Boolean)
-  fullName: InventorySystem.Inventory.InsertItem(Items.Item, bool)
-  fullName.vb: InventorySystem.Inventory.InsertItem(Items.Item, Boolean)
-  nameWithType: Inventory.InsertItem(Item, bool)
-  nameWithType.vb: Inventory.InsertItem(Item, Boolean)
+- uid: InventorySystem.Inventory.InsertItem(Items.Item)
+  name: InsertItem(Item)
+  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_InsertItem_Items_Item_
+  commentId: M:InventorySystem.Inventory.InsertItem(Items.Item)
+  fullName: InventorySystem.Inventory.InsertItem(Items.Item)
+  nameWithType: Inventory.InsertItem(Item)
 - uid: InventorySystem.Inventory.InsertItem*
   name: InsertItem
   href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_InsertItem_
@@ -36498,19 +35586,6 @@ references:
   commentId: E:InventorySystem.Inventory.ItemStateChanged
   fullName: InventorySystem.Inventory.ItemStateChanged
   nameWithType: Inventory.ItemStateChanged
-- uid: InventorySystem.Inventory.LoadPersistentData(DataPersistence.GameData)
-  name: LoadPersistentData(GameData)
-  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_LoadPersistentData_DataPersistence_GameData_
-  commentId: M:InventorySystem.Inventory.LoadPersistentData(DataPersistence.GameData)
-  fullName: InventorySystem.Inventory.LoadPersistentData(DataPersistence.GameData)
-  nameWithType: Inventory.LoadPersistentData(GameData)
-- uid: InventorySystem.Inventory.LoadPersistentData*
-  name: LoadPersistentData
-  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_LoadPersistentData_
-  commentId: Overload:InventorySystem.Inventory.LoadPersistentData
-  isSpec: "True"
-  fullName: InventorySystem.Inventory.LoadPersistentData
-  nameWithType: Inventory.LoadPersistentData
 - uid: InventorySystem.Inventory.RemoveItem(Items.Item@)
   name: RemoveItem(out Item)
   href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_RemoveItem_Items_Item__
@@ -36533,35 +35608,6 @@ references:
   isSpec: "True"
   fullName: InventorySystem.Inventory.RemoveItem
   nameWithType: Inventory.RemoveItem
-- uid: InventorySystem.Inventory.SavePersistentData(DataPersistence.GameData@)
-  name: SavePersistentData(ref GameData)
-  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_SavePersistentData_DataPersistence_GameData__
-  commentId: M:InventorySystem.Inventory.SavePersistentData(DataPersistence.GameData@)
-  name.vb: SavePersistentData(GameData)
-  fullName: InventorySystem.Inventory.SavePersistentData(ref DataPersistence.GameData)
-  fullName.vb: InventorySystem.Inventory.SavePersistentData(DataPersistence.GameData)
-  nameWithType: Inventory.SavePersistentData(ref GameData)
-  nameWithType.vb: Inventory.SavePersistentData(GameData)
-- uid: InventorySystem.Inventory.SavePersistentData*
-  name: SavePersistentData
-  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_SavePersistentData_
-  commentId: Overload:InventorySystem.Inventory.SavePersistentData
-  isSpec: "True"
-  fullName: InventorySystem.Inventory.SavePersistentData
-  nameWithType: Inventory.SavePersistentData
-- uid: InventorySystem.Inventory.SceneObject
-  name: SceneObject
-  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_SceneObject
-  commentId: P:InventorySystem.Inventory.SceneObject
-  fullName: InventorySystem.Inventory.SceneObject
-  nameWithType: Inventory.SceneObject
-- uid: InventorySystem.Inventory.SceneObject*
-  name: SceneObject
-  href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_SceneObject_
-  commentId: Overload:InventorySystem.Inventory.SceneObject
-  isSpec: "True"
-  fullName: InventorySystem.Inventory.SceneObject
-  nameWithType: Inventory.SceneObject
 - uid: InventorySystem.Inventory.SelectedSlotChanged
   name: SelectedSlotChanged
   href: api/InventorySystem.Inventory.html#InventorySystem_Inventory_SelectedSlotChanged
@@ -36839,19 +35885,6 @@ references:
   fullName.vb: Items.Item.New
   nameWithType: Item.Item
   nameWithType.vb: Item.New
-- uid: Items.Item.BlockDestroying
-  name: BlockDestroying
-  href: api/Items.Item.html#Items_Item_BlockDestroying
-  commentId: P:Items.Item.BlockDestroying
-  fullName: Items.Item.BlockDestroying
-  nameWithType: Item.BlockDestroying
-- uid: Items.Item.BlockDestroying*
-  name: BlockDestroying
-  href: api/Items.Item.html#Items_Item_BlockDestroying_
-  commentId: Overload:Items.Item.BlockDestroying
-  isSpec: "True"
-  fullName: Items.Item.BlockDestroying
-  nameWithType: Item.BlockDestroying
 - uid: Items.Item.Durability
   name: Durability
   href: api/Items.Item.html#Items_Item_Durability
@@ -36865,12 +35898,15 @@ references:
   isSpec: "True"
   fullName: Items.Item.Durability
   nameWithType: Item.Durability
-- uid: Items.Item.Equals(Items.Item)
-  name: Equals(Item)
-  href: api/Items.Item.html#Items_Item_Equals_Items_Item_
-  commentId: M:Items.Item.Equals(Items.Item)
-  fullName: Items.Item.Equals(Items.Item)
-  nameWithType: Item.Equals(Item)
+- uid: Items.Item.Equals(System.Object)
+  name: Equals(object)
+  href: api/Items.Item.html#Items_Item_Equals_System_Object_
+  commentId: M:Items.Item.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Items.Item.Equals(object)
+  fullName.vb: Items.Item.Equals(Object)
+  nameWithType: Item.Equals(object)
+  nameWithType.vb: Item.Equals(Object)
 - uid: Items.Item.Equals*
   name: Equals
   href: api/Items.Item.html#Items_Item_Equals_
@@ -36878,58 +35914,6 @@ references:
   isSpec: "True"
   fullName: Items.Item.Equals
   nameWithType: Item.Equals
-- uid: Items.Item.GetHashCode
-  name: GetHashCode()
-  href: api/Items.Item.html#Items_Item_GetHashCode
-  commentId: M:Items.Item.GetHashCode
-  fullName: Items.Item.GetHashCode()
-  nameWithType: Item.GetHashCode()
-- uid: Items.Item.GetHashCode*
-  name: GetHashCode
-  href: api/Items.Item.html#Items_Item_GetHashCode_
-  commentId: Overload:Items.Item.GetHashCode
-  isSpec: "True"
-  fullName: Items.Item.GetHashCode
-  nameWithType: Item.GetHashCode
-- uid: Items.Item.Hidden
-  name: Hidden
-  href: api/Items.Item.html#Items_Item_Hidden
-  commentId: P:Items.Item.Hidden
-  fullName: Items.Item.Hidden
-  nameWithType: Item.Hidden
-- uid: Items.Item.Hidden*
-  name: Hidden
-  href: api/Items.Item.html#Items_Item_Hidden_
-  commentId: Overload:Items.Item.Hidden
-  isSpec: "True"
-  fullName: Items.Item.Hidden
-  nameWithType: Item.Hidden
-- uid: Items.Item.Hide
-  name: Hide()
-  href: api/Items.Item.html#Items_Item_Hide
-  commentId: M:Items.Item.Hide
-  fullName: Items.Item.Hide()
-  nameWithType: Item.Hide()
-- uid: Items.Item.Hide*
-  name: Hide
-  href: api/Items.Item.html#Items_Item_Hide_
-  commentId: Overload:Items.Item.Hide
-  isSpec: "True"
-  fullName: Items.Item.Hide
-  nameWithType: Item.Hide
-- uid: Items.Item.ID
-  name: ID
-  href: api/Items.Item.html#Items_Item_ID
-  commentId: P:Items.Item.ID
-  fullName: Items.Item.ID
-  nameWithType: Item.ID
-- uid: Items.Item.ID*
-  name: ID
-  href: api/Items.Item.html#Items_Item_ID_
-  commentId: Overload:Items.Item.ID
-  isSpec: "True"
-  fullName: Items.Item.ID
-  nameWithType: Item.ID
 - uid: Items.Item.InteractionHand
   name: InteractionHand()
   href: api/Items.Item.html#Items_Item_InteractionHand
@@ -36956,19 +35940,6 @@ references:
   isSpec: "True"
   fullName: Items.Item.ItemSO
   nameWithType: Item.ItemSO
-- uid: Items.Item.LoadPersistentData(DataPersistence.GameData)
-  name: LoadPersistentData(GameData)
-  href: api/Items.Item.html#Items_Item_LoadPersistentData_DataPersistence_GameData_
-  commentId: M:Items.Item.LoadPersistentData(DataPersistence.GameData)
-  fullName: Items.Item.LoadPersistentData(DataPersistence.GameData)
-  nameWithType: Item.LoadPersistentData(GameData)
-- uid: Items.Item.LoadPersistentData*
-  name: LoadPersistentData
-  href: api/Items.Item.html#Items_Item_LoadPersistentData_
-  commentId: Overload:Items.Item.LoadPersistentData
-  isSpec: "True"
-  fullName: Items.Item.LoadPersistentData
-  nameWithType: Item.LoadPersistentData
 - uid: Items.Item.LongInteractionHand
   name: LongInteractionHand()
   href: api/Items.Item.html#Items_Item_LongInteractionHand
@@ -36982,35 +35953,6 @@ references:
   isSpec: "True"
   fullName: Items.Item.LongInteractionHand
   nameWithType: Item.LongInteractionHand
-- uid: Items.Item.SavePersistentData(DataPersistence.GameData@)
-  name: SavePersistentData(ref GameData)
-  href: api/Items.Item.html#Items_Item_SavePersistentData_DataPersistence_GameData__
-  commentId: M:Items.Item.SavePersistentData(DataPersistence.GameData@)
-  name.vb: SavePersistentData(GameData)
-  fullName: Items.Item.SavePersistentData(ref DataPersistence.GameData)
-  fullName.vb: Items.Item.SavePersistentData(DataPersistence.GameData)
-  nameWithType: Item.SavePersistentData(ref GameData)
-  nameWithType.vb: Item.SavePersistentData(GameData)
-- uid: Items.Item.SavePersistentData*
-  name: SavePersistentData
-  href: api/Items.Item.html#Items_Item_SavePersistentData_
-  commentId: Overload:Items.Item.SavePersistentData
-  isSpec: "True"
-  fullName: Items.Item.SavePersistentData
-  nameWithType: Item.SavePersistentData
-- uid: Items.Item.SceneObject
-  name: SceneObject
-  href: api/Items.Item.html#Items_Item_SceneObject
-  commentId: P:Items.Item.SceneObject
-  fullName: Items.Item.SceneObject
-  nameWithType: Item.SceneObject
-- uid: Items.Item.SceneObject*
-  name: SceneObject
-  href: api/Items.Item.html#Items_Item_SceneObject_
-  commentId: Overload:Items.Item.SceneObject
-  isSpec: "True"
-  fullName: Items.Item.SceneObject
-  nameWithType: Item.SceneObject
 - uid: Items.Item.ToString
   name: ToString()
   href: api/Items.Item.html#Items_Item_ToString
@@ -37024,6 +35966,12 @@ references:
   isSpec: "True"
   fullName: Items.Item.ToString
   nameWithType: Item.ToString
+- uid: Items.Item.uniqueId
+  name: uniqueId
+  href: api/Items.Item.html#Items_Item_uniqueId
+  commentId: F:Items.Item.uniqueId
+  fullName: Items.Item.uniqueId
+  nameWithType: Item.uniqueId
 - uid: Items.ItemSO
   name: ItemSO
   href: api/Items.ItemSO.html
@@ -37192,19 +36140,6 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.LevelsLoader.LevelManager.FindTimelineMaps
   nameWithType: LevelManager.FindTimelineMaps
-- uid: LevelTimeChange.LevelsLoader.LevelManager.LoadPersistentData(DataPersistence.GameData)
-  name: LoadPersistentData(GameData)
-  href: api/LevelTimeChange.LevelsLoader.LevelManager.html#LevelTimeChange_LevelsLoader_LevelManager_LoadPersistentData_DataPersistence_GameData_
-  commentId: M:LevelTimeChange.LevelsLoader.LevelManager.LoadPersistentData(DataPersistence.GameData)
-  fullName: LevelTimeChange.LevelsLoader.LevelManager.LoadPersistentData(DataPersistence.GameData)
-  nameWithType: LevelManager.LoadPersistentData(GameData)
-- uid: LevelTimeChange.LevelsLoader.LevelManager.LoadPersistentData*
-  name: LoadPersistentData
-  href: api/LevelTimeChange.LevelsLoader.LevelManager.html#LevelTimeChange_LevelsLoader_LevelManager_LoadPersistentData_
-  commentId: Overload:LevelTimeChange.LevelsLoader.LevelManager.LoadPersistentData
-  isSpec: "True"
-  fullName: LevelTimeChange.LevelsLoader.LevelManager.LoadPersistentData
-  nameWithType: LevelManager.LoadPersistentData
 - uid: LevelTimeChange.LevelsLoader.LevelManager.MakeDiscovery(LevelTimeChange.LevelsLoader.LevelInfoSO)
   name: MakeDiscovery(LevelInfoSO)
   href: api/LevelTimeChange.LevelsLoader.LevelManager.html#LevelTimeChange_LevelsLoader_LevelManager_MakeDiscovery_LevelTimeChange_LevelsLoader_LevelInfoSO_
@@ -37231,35 +36166,6 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.LevelsLoader.LevelManager.ReturnMatchingPortal
   nameWithType: LevelManager.ReturnMatchingPortal
-- uid: LevelTimeChange.LevelsLoader.LevelManager.SavePersistentData(DataPersistence.GameData@)
-  name: SavePersistentData(ref GameData)
-  href: api/LevelTimeChange.LevelsLoader.LevelManager.html#LevelTimeChange_LevelsLoader_LevelManager_SavePersistentData_DataPersistence_GameData__
-  commentId: M:LevelTimeChange.LevelsLoader.LevelManager.SavePersistentData(DataPersistence.GameData@)
-  name.vb: SavePersistentData(GameData)
-  fullName: LevelTimeChange.LevelsLoader.LevelManager.SavePersistentData(ref DataPersistence.GameData)
-  fullName.vb: LevelTimeChange.LevelsLoader.LevelManager.SavePersistentData(DataPersistence.GameData)
-  nameWithType: LevelManager.SavePersistentData(ref GameData)
-  nameWithType.vb: LevelManager.SavePersistentData(GameData)
-- uid: LevelTimeChange.LevelsLoader.LevelManager.SavePersistentData*
-  name: SavePersistentData
-  href: api/LevelTimeChange.LevelsLoader.LevelManager.html#LevelTimeChange_LevelsLoader_LevelManager_SavePersistentData_
-  commentId: Overload:LevelTimeChange.LevelsLoader.LevelManager.SavePersistentData
-  isSpec: "True"
-  fullName: LevelTimeChange.LevelsLoader.LevelManager.SavePersistentData
-  nameWithType: LevelManager.SavePersistentData
-- uid: LevelTimeChange.LevelsLoader.LevelManager.SceneObject
-  name: SceneObject
-  href: api/LevelTimeChange.LevelsLoader.LevelManager.html#LevelTimeChange_LevelsLoader_LevelManager_SceneObject
-  commentId: P:LevelTimeChange.LevelsLoader.LevelManager.SceneObject
-  fullName: LevelTimeChange.LevelsLoader.LevelManager.SceneObject
-  nameWithType: LevelManager.SceneObject
-- uid: LevelTimeChange.LevelsLoader.LevelManager.SceneObject*
-  name: SceneObject
-  href: api/LevelTimeChange.LevelsLoader.LevelManager.html#LevelTimeChange_LevelsLoader_LevelManager_SceneObject_
-  commentId: Overload:LevelTimeChange.LevelsLoader.LevelManager.SceneObject
-  isSpec: "True"
-  fullName: LevelTimeChange.LevelsLoader.LevelManager.SceneObject
-  nameWithType: LevelManager.SceneObject
 - uid: LevelTimeChange.LevelsLoader.LevelManager.ToString
   name: ToString()
   href: api/LevelTimeChange.LevelsLoader.LevelManager.html#LevelTimeChange_LevelsLoader_LevelManager_ToString
@@ -37474,19 +36380,6 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.LevelsLoader.LevelsManager.SavePersistentData
   nameWithType: LevelsManager.SavePersistentData
-- uid: LevelTimeChange.LevelsLoader.LevelsManager.SceneObject
-  name: SceneObject
-  href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_SceneObject
-  commentId: P:LevelTimeChange.LevelsLoader.LevelsManager.SceneObject
-  fullName: LevelTimeChange.LevelsLoader.LevelsManager.SceneObject
-  nameWithType: LevelsManager.SceneObject
-- uid: LevelTimeChange.LevelsLoader.LevelsManager.SceneObject*
-  name: SceneObject
-  href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_SceneObject_
-  commentId: Overload:LevelTimeChange.LevelsLoader.LevelsManager.SceneObject
-  isSpec: "True"
-  fullName: LevelTimeChange.LevelsLoader.LevelsManager.SceneObject
-  nameWithType: LevelsManager.SceneObject
 - uid: LevelTimeChange.LevelsLoader.LevelsManager.ToString
   name: ToString()
   href: api/LevelTimeChange.LevelsLoader.LevelsManager.html#LevelTimeChange_LevelsLoader_LevelsManager_ToString
@@ -37722,32 +36615,6 @@ references:
   commentId: F:LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.time
   fullName: LevelTimeChange.TimeChange.TimeChanger.OnTimeChangeEventArgs.time
   nameWithType: TimeChanger.OnTimeChangeEventArgs.time
-- uid: LevelTimeChange.TimeChange.TimeChanger.PickUpCzasoport
-  name: PickUpCzasoport()
-  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_PickUpCzasoport
-  commentId: M:LevelTimeChange.TimeChange.TimeChanger.PickUpCzasoport
-  fullName: LevelTimeChange.TimeChange.TimeChanger.PickUpCzasoport()
-  nameWithType: TimeChanger.PickUpCzasoport()
-- uid: LevelTimeChange.TimeChange.TimeChanger.PickUpCzasoport*
-  name: PickUpCzasoport
-  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_PickUpCzasoport_
-  commentId: Overload:LevelTimeChange.TimeChange.TimeChanger.PickUpCzasoport
-  isSpec: "True"
-  fullName: LevelTimeChange.TimeChange.TimeChanger.PickUpCzasoport
-  nameWithType: TimeChanger.PickUpCzasoport
-- uid: LevelTimeChange.TimeChange.TimeChanger.PickUpCzasoportPart(InteractableObjectSystem.InterObjectDefinition)
-  name: PickUpCzasoportPart(InterObjectDefinition)
-  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_PickUpCzasoportPart_InteractableObjectSystem_InterObjectDefinition_
-  commentId: M:LevelTimeChange.TimeChange.TimeChanger.PickUpCzasoportPart(InteractableObjectSystem.InterObjectDefinition)
-  fullName: LevelTimeChange.TimeChange.TimeChanger.PickUpCzasoportPart(InteractableObjectSystem.InterObjectDefinition)
-  nameWithType: TimeChanger.PickUpCzasoportPart(InterObjectDefinition)
-- uid: LevelTimeChange.TimeChange.TimeChanger.PickUpCzasoportPart*
-  name: PickUpCzasoportPart
-  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_PickUpCzasoportPart_
-  commentId: Overload:LevelTimeChange.TimeChange.TimeChanger.PickUpCzasoportPart
-  isSpec: "True"
-  fullName: LevelTimeChange.TimeChange.TimeChanger.PickUpCzasoportPart
-  nameWithType: TimeChanger.PickUpCzasoportPart
 - uid: LevelTimeChange.TimeChange.TimeChanger.SavePersistentData(DataPersistence.GameData@)
   name: SavePersistentData(ref GameData)
   href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_SavePersistentData_DataPersistence_GameData__
@@ -37764,19 +36631,6 @@ references:
   isSpec: "True"
   fullName: LevelTimeChange.TimeChange.TimeChanger.SavePersistentData
   nameWithType: TimeChanger.SavePersistentData
-- uid: LevelTimeChange.TimeChange.TimeChanger.SceneObject
-  name: SceneObject
-  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_SceneObject
-  commentId: P:LevelTimeChange.TimeChange.TimeChanger.SceneObject
-  fullName: LevelTimeChange.TimeChange.TimeChanger.SceneObject
-  nameWithType: TimeChanger.SceneObject
-- uid: LevelTimeChange.TimeChange.TimeChanger.SceneObject*
-  name: SceneObject
-  href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_SceneObject_
-  commentId: Overload:LevelTimeChange.TimeChange.TimeChanger.SceneObject
-  isSpec: "True"
-  fullName: LevelTimeChange.TimeChange.TimeChanger.SceneObject
-  nameWithType: TimeChanger.SceneObject
 - uid: LevelTimeChange.TimeChange.TimeChanger.TimeChangeUnlocked
   name: TimeChangeUnlocked
   href: api/LevelTimeChange.TimeChange.TimeChanger.html#LevelTimeChange_TimeChange_TimeChanger_TimeChangeUnlocked
@@ -38131,19 +36985,6 @@ references:
   isSpec: "True"
   fullName: PlayerScripts.Player.SavePersistentData
   nameWithType: Player.SavePersistentData
-- uid: PlayerScripts.Player.SceneObject
-  name: SceneObject
-  href: api/PlayerScripts.Player.html#PlayerScripts_Player_SceneObject
-  commentId: P:PlayerScripts.Player.SceneObject
-  fullName: PlayerScripts.Player.SceneObject
-  nameWithType: Player.SceneObject
-- uid: PlayerScripts.Player.SceneObject*
-  name: SceneObject
-  href: api/PlayerScripts.Player.html#PlayerScripts_Player_SceneObject_
-  commentId: Overload:PlayerScripts.Player.SceneObject
-  isSpec: "True"
-  fullName: PlayerScripts.Player.SceneObject
-  nameWithType: Player.SceneObject
 - uid: PlayerScripts.Player.ToString
   name: ToString()
   href: api/PlayerScripts.Player.html#PlayerScripts_Player_ToString
@@ -38345,116 +37186,6 @@ references:
   commentId: T:Utils.Attributes.ReadOnlyAttribute
   fullName: Utils.Attributes.ReadOnlyAttribute
   nameWithType: ReadOnlyAttribute
-- uid: Utils.SerializableGuid
-  name: SerializableGuid
-  href: api/Utils.SerializableGuid.html
-  commentId: T:Utils.SerializableGuid
-  fullName: Utils.SerializableGuid
-  nameWithType: SerializableGuid
-- uid: Utils.SerializableGuid.CompareTo(System.Object)
-  name: CompareTo(object)
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_CompareTo_System_Object_
-  commentId: M:Utils.SerializableGuid.CompareTo(System.Object)
-  name.vb: CompareTo(Object)
-  fullName: Utils.SerializableGuid.CompareTo(object)
-  fullName.vb: Utils.SerializableGuid.CompareTo(Object)
-  nameWithType: SerializableGuid.CompareTo(object)
-  nameWithType.vb: SerializableGuid.CompareTo(Object)
-- uid: Utils.SerializableGuid.CompareTo(Utils.SerializableGuid)
-  name: CompareTo(SerializableGuid)
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_CompareTo_Utils_SerializableGuid_
-  commentId: M:Utils.SerializableGuid.CompareTo(Utils.SerializableGuid)
-  fullName: Utils.SerializableGuid.CompareTo(Utils.SerializableGuid)
-  nameWithType: SerializableGuid.CompareTo(SerializableGuid)
-- uid: Utils.SerializableGuid.CompareTo*
-  name: CompareTo
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_CompareTo_
-  commentId: Overload:Utils.SerializableGuid.CompareTo
-  isSpec: "True"
-  fullName: Utils.SerializableGuid.CompareTo
-  nameWithType: SerializableGuid.CompareTo
-- uid: Utils.SerializableGuid.Equals(System.Object)
-  name: Equals(object)
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_Equals_System_Object_
-  commentId: M:Utils.SerializableGuid.Equals(System.Object)
-  name.vb: Equals(Object)
-  fullName: Utils.SerializableGuid.Equals(object)
-  fullName.vb: Utils.SerializableGuid.Equals(Object)
-  nameWithType: SerializableGuid.Equals(object)
-  nameWithType.vb: SerializableGuid.Equals(Object)
-- uid: Utils.SerializableGuid.Equals(Utils.SerializableGuid)
-  name: Equals(SerializableGuid)
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_Equals_Utils_SerializableGuid_
-  commentId: M:Utils.SerializableGuid.Equals(Utils.SerializableGuid)
-  fullName: Utils.SerializableGuid.Equals(Utils.SerializableGuid)
-  nameWithType: SerializableGuid.Equals(SerializableGuid)
-- uid: Utils.SerializableGuid.Equals*
-  name: Equals
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_Equals_
-  commentId: Overload:Utils.SerializableGuid.Equals
-  isSpec: "True"
-  fullName: Utils.SerializableGuid.Equals
-  nameWithType: SerializableGuid.Equals
-- uid: Utils.SerializableGuid.GetHashCode
-  name: GetHashCode()
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_GetHashCode
-  commentId: M:Utils.SerializableGuid.GetHashCode
-  fullName: Utils.SerializableGuid.GetHashCode()
-  nameWithType: SerializableGuid.GetHashCode()
-- uid: Utils.SerializableGuid.GetHashCode*
-  name: GetHashCode
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_GetHashCode_
-  commentId: Overload:Utils.SerializableGuid.GetHashCode
-  isSpec: "True"
-  fullName: Utils.SerializableGuid.GetHashCode
-  nameWithType: SerializableGuid.GetHashCode
-- uid: Utils.SerializableGuid.ToString
-  name: ToString()
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_ToString
-  commentId: M:Utils.SerializableGuid.ToString
-  fullName: Utils.SerializableGuid.ToString()
-  nameWithType: SerializableGuid.ToString()
-- uid: Utils.SerializableGuid.ToString*
-  name: ToString
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_ToString_
-  commentId: Overload:Utils.SerializableGuid.ToString
-  isSpec: "True"
-  fullName: Utils.SerializableGuid.ToString
-  nameWithType: SerializableGuid.ToString
-- uid: Utils.SerializableGuid.op_Implicit(System.Guid)~Utils.SerializableGuid
-  name: implicit operator SerializableGuid(Guid)
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_op_Implicit_System_Guid__Utils_SerializableGuid
-  commentId: M:Utils.SerializableGuid.op_Implicit(System.Guid)~Utils.SerializableGuid
-  name.vb: CType(Guid)
-  fullName: Utils.SerializableGuid.implicit operator Utils.SerializableGuid(System.Guid)
-  fullName.vb: Utils.SerializableGuid.CType(System.Guid)
-  nameWithType: SerializableGuid.implicit operator SerializableGuid(Guid)
-  nameWithType.vb: SerializableGuid.CType(Guid)
-- uid: Utils.SerializableGuid.op_Implicit(Utils.SerializableGuid)~System.Guid
-  name: implicit operator Guid(SerializableGuid)
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_op_Implicit_Utils_SerializableGuid__System_Guid
-  commentId: M:Utils.SerializableGuid.op_Implicit(Utils.SerializableGuid)~System.Guid
-  name.vb: CType(SerializableGuid)
-  fullName: Utils.SerializableGuid.implicit operator System.Guid(Utils.SerializableGuid)
-  fullName.vb: Utils.SerializableGuid.CType(Utils.SerializableGuid)
-  nameWithType: SerializableGuid.implicit operator Guid(SerializableGuid)
-  nameWithType.vb: SerializableGuid.CType(SerializableGuid)
-- uid: Utils.SerializableGuid.op_Implicit*
-  name: implicit operator
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_op_Implicit_
-  commentId: Overload:Utils.SerializableGuid.op_Implicit
-  isSpec: "True"
-  name.vb: CType
-  fullName: Utils.SerializableGuid.implicit operator
-  fullName.vb: Utils.SerializableGuid.CType
-  nameWithType: SerializableGuid.implicit operator
-  nameWithType.vb: SerializableGuid.CType
-- uid: Utils.SerializableGuid.value
-  name: value
-  href: api/Utils.SerializableGuid.html#Utils_SerializableGuid_value
-  commentId: F:Utils.SerializableGuid.value
-  fullName: Utils.SerializableGuid.value
-  nameWithType: SerializableGuid.value
 - uid: Utils.Singleton
   name: Utils.Singleton
   href: api/Utils.Singleton.html
