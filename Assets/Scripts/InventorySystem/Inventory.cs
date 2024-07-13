@@ -5,6 +5,8 @@ using Application;
 using Application.GlobalExceptions;
 using CoinPackage.Debugging;
 using CustomInput;
+using DataPersistence;
+using DataPersistence.DataTypes;
 using InventorySystem.EventArguments;
 using Items;
 using LevelTimeChange.LevelsLoader;
@@ -20,10 +22,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 using Unity.VisualScripting;
+using Utils;
 
 namespace InventorySystem {
-    public class Inventory : MonoBehaviour {
+    public class Inventory : MonoBehaviour, IDataPersistence {
         public static Inventory Instance;
+
+        public bool SceneObject { get; } = false;
 
         public event EventHandler<SelectedSlotChangedEventArgs> SelectedSlotChanged;
         public event EventHandler<ItemInsertedEventArgs> ItemInserted;
@@ -80,6 +85,55 @@ namespace InventorySystem {
             CInput.InputActions.Inventory.Drop.performed -= OnDropItemClicked;
         }
 
+        public void LoadPersistentData(GameData gameData) {
+            foreach (var itemData in gameData.playerGameData.inventory) {
+                var item = Instantiate(itemData.itemSO.prefab).GetComponent<Item>();
+                item.Durability = itemData.durability;
+                item.ID = itemData.id;
+                item.BlockDestroying = true;
+
+                InsertItem(item, false);
+            }
+
+            foreach (var hideoutItemID in gameData.itemHideout) {
+                if (ItemHideoutContainsItem(hideoutItemID))
+                    continue;
+
+                if (!gameData.ContainsObjectData(hideoutItemID)) {
+                    CDebug.LogError("Hideout item desynced with saves. It can lead to serious save issues!");
+                    continue;
+                }
+                var itemData = gameData.GetObjectData<ItemData>(hideoutItemID);
+
+                var item = Instantiate(itemData.data.itemSo.prefab, itemHideout).GetComponent<Item>();
+                item.Durability = itemData.data.durability;
+                item.ID = itemData.id;
+                item.BlockDestroying = true;
+            }
+        }
+
+        public void SavePersistentData(ref GameData gameData) {
+            var items = GetAllItems();
+
+            gameData.playerGameData.inventory.Clear();
+            foreach (var item in items) {
+                gameData.playerGameData.inventory.Add(new InventoryItemData {
+                    itemSO = item.ItemSO,
+                    durability = item.Durability,
+                    id = item.ID
+                });
+            }
+
+            gameData.itemHideout.Clear();
+            for (var i = 0; i < itemHideout.childCount; i++) {
+                var child = itemHideout.GetChild(i);
+                var item = child.GetComponentInChildren<Item>();
+                if (item.ID.value == "" || item.ID == Guid.Empty)
+                    continue;
+                gameData.itemHideout.Add(item.ID);
+            }
+        }
+
         /// <summary>
         /// Get currently selected item, but do not remove this item from inventory.
         /// </summary>
@@ -124,7 +178,7 @@ namespace InventorySystem {
         /// </summary>
         /// <param name="item">`Item` to insert.</param>
         /// <returns></returns>
-        public bool InsertItem(Item item) {
+        public bool InsertItem(Item item, bool showNotification = true) {
             if (_itemsCount == _settings.itemsCount - 1) { // Inventory full
                 //NotificationManager.Instance.RaiseNotification(new Notification("Inventory is full", 3f));
                 if (_selectedSlot == 0) {
@@ -160,9 +214,10 @@ namespace InventorySystem {
             }
 
             // Hide item
-            item = HideItem(item);
+            item.Hide();
 
-            NotificationManager.Instance.RaiseNotification(item.ItemSO.pickUpNotification);
+            if (showNotification)
+                NotificationManager.Instance.RaiseNotification(item.ItemSO.pickUpNotification);
 
             return true;
         }
@@ -181,7 +236,7 @@ namespace InventorySystem {
             });
             if (item.Durability <= 0) {
                 RemoveItem(out var removedItem);
-                Destroy(item.gameObject);
+                item.Hide();
             }
             return true;
         }
@@ -229,6 +284,17 @@ namespace InventorySystem {
             });
             _itemsCount--;
             return item is not null;
+        }
+
+        private bool ItemHideoutContainsItem(SerializableGuid id) {
+            for (var i = 0; i < itemHideout.childCount; i++) {
+                var child = itemHideout.GetChild(i);
+                var item = child.GetComponentInChildren<Item>();
+                if (item.ID.Equals(id))
+                    return true;
+            }
+
+            return false;
         }
 
         private void OnNextItemClicked(InputAction.CallbackContext ctx) {
@@ -297,19 +363,6 @@ namespace InventorySystem {
                 currentTimeTransform = emptyGameObject.transform;
             }
             return currentTimeTransform;
-        }
-
-        private Item HideItem(Item item) {
-            if (item.transform.parent == null) {
-                String itemUniqueId = item.uniqueId;
-                item = Instantiate(item);
-                item.uniqueId = itemUniqueId;
-            }
-            item.transform.SetParent(itemHideout);
-            item.transform.position = new Vector3(0f, 0f, 0f);
-            item.GetComponent<SpriteRenderer>().enabled = false;
-            item.GetComponent<CircleCollider2D>().enabled = false;
-            return item;
         }
 
         private void ShowItem(Item itemToFind) {

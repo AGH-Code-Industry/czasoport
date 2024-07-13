@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using DataPersistence;
+using DataPersistence.DataTypes;
 using Interactions;
 using Items;
 using NPC;
@@ -8,9 +10,11 @@ using UnityEngine;
 namespace InteractableObjectSystem.Objects {
     [RequireComponent(typeof(BoxCollider2D))]
     [RequireComponent(typeof(HighlightInteraction))]
-    public class TapePlayer : InteractableObject {
+    public class TapePlayer : PersistentInteractableObject {
         [SerializeField] private ItemSO _interactedWith;
         [SerializeField] private List<PathWalking> _NPCPathWalkings = new();
+
+        private bool _playingMusic = false;
 
         public override void InteractionHand() {
             NotificationManager.Instance.RaiseNotification(definition.failedHandInterNotification);
@@ -25,7 +29,37 @@ namespace InteractableObjectSystem.Objects {
             return false;
         }
 
+        public override void LoadPersistentData(GameData gameData) {
+            if (!gameData.ContainsObjectData(ID))
+                return;
+
+            var tapePlayerData = gameData.GetObjectData<TapePlayerData>(ID);
+            _playingMusic = tapePlayerData.data.playingMusic;
+            if (_playingMusic)
+                PlayMusic();
+        }
+
+        public override void SavePersistentData(ref GameData gameData) {
+            if (gameData.ContainsObjectData(ID)) {
+                var tapePlayerData = gameData.GetObjectData<TapePlayerData>(ID);
+                tapePlayerData.data.playingMusic = _playingMusic;
+                tapePlayerData.SerializeInheritance();
+                gameData.SetObjectData(tapePlayerData);
+            }
+            else {
+                var tapePlayerData = new TapePlayerData {
+                    data = new TapePlayerData.TapePlayerSubData() {
+                        playingMusic = _playingMusic
+                    },
+                    id = ID
+                };
+                tapePlayerData.SerializeInheritance();
+                gameData.SetObjectData(tapePlayerData);
+            }
+        }
+
         private void PlayMusic() {
+            _playingMusic = true;
             foreach (var pathWalking in _NPCPathWalkings) {
                 pathWalking.StartWalk();
             }
