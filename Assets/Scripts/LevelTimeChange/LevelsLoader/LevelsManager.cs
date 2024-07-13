@@ -22,7 +22,6 @@ namespace LevelTimeChange.LevelsLoader {
         /// Singleton instance of this class.
         /// </summary>
         public static LevelsManager Instance { get; private set; }
-        public bool SceneObject { get; } = false;
 
         public LevelManager CurrentLevelManager => _currentLevelManager;
         public event EventHandler OnLevelChange;
@@ -75,9 +74,6 @@ namespace LevelTimeChange.LevelsLoader {
         public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) {
             _logger.Log($"Changing level to {destinedLevelInfo}, destined portal: {destinationPortal}");
             OnLevelChange?.Invoke(this, EventArgs.Empty);
-
-            DataPersistenceManager.Instance.SaveGame();
-
             // Order of actions in this function is crucial, do not change it unless
             // you know what you are doing
             // FOR REAL, I WROTE THIS, THEN CHANGED IT AND IT BROKE
@@ -116,12 +112,12 @@ namespace LevelTimeChange.LevelsLoader {
 
             _player.position = destinationPortal.GetTeleportPoint(); // TODO: Change how we move the player
 
-            DataPersistenceManager.Instance.SaveGame();
-
             // oldLevel.DeactivateLevel();
 
             LoadLevels(newLevel);
             UnloadLevels(newLevel);
+
+
 
             animator.SetTrigger("End");
             yield return new WaitForSeconds(_settings.platformChangeAnimLength / 4);

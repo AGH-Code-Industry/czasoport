@@ -2,16 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
-using DataPersistence;
-using DataPersistence.DataTypes;
 using Items;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace InteractableObjectSystem.Objects {
-
     [RequireComponent(typeof(BoxCollider2D))]
-    public class BreakableRock : PersistentInteractableObject {
+    public class BreakableRock : InteractableObject {
+
         private enum RockState {
             NotDestroyed,
             Destroyed
@@ -51,41 +49,6 @@ namespace InteractableObjectSystem.Objects {
             return false;
         }
 
-        public override void LoadPersistentData(GameData gameData) {
-            if (!gameData.ContainsObjectData(ID))
-                return;
-
-            var rockData = gameData.GetObjectData<RockData>(ID);
-            switch ((RockState)rockData.data.state) {
-                case RockState.NotDestroyed:
-                    break;
-                case RockState.Destroyed:
-                    HideSprite();
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-        }
-
-        public override void SavePersistentData(ref GameData gameData) {
-            if (gameData.ContainsObjectData(ID)) {
-                var rockData = gameData.GetObjectData<RockData>(ID);
-                rockData.data.state = (int)_state;
-                rockData.SerializeInheritance();
-                gameData.SetObjectData(rockData);
-            }
-            else {
-                var rockData = new RockData {
-                    id = ID,
-                    data = new RockData.RockSubData {
-                        state = (int)_state
-                    }
-                };
-                rockData.SerializeInheritance();
-                gameData.SetObjectData(rockData);
-            }
-        }
-
         private void Break() {
             _state = RockState.Destroyed;
             _particleSystem.Play();
@@ -99,8 +62,7 @@ namespace InteractableObjectSystem.Objects {
 
         private void HideSprite() {
             _collider.enabled = false;
-            _renderer.enabled = false;
-            _state = RockState.Destroyed;
+            _renderer.sprite = null;
         }
     }
 }
