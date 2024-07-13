@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>9.0</LangVersion>
@@ -51,7 +51,6 @@
      <Compile Include="Assets\Scripts\Audio\SFX.cs" />
      <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\Fireplace.cs" />
      <Compile Include="Assets\Scripts\CustomInput\Locks\GameInputLock.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DataTypes\PedestalData.cs" />
      <Compile Include="Assets\Scripts\Items\Item.cs" />
      <Compile Include="Assets\Scripts\UI\TimeUIToogle.cs" />
      <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
@@ -67,9 +66,7 @@
      <Compile Include="Assets\Scripts\Dialogues\ChoiceProcessing\ChoiceContext.cs" />
      <Compile Include="Assets\Scripts\InventorySystem\UI\Test\TestEvents.cs" />
      <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasics2d.cs" />
-     <Compile Include="Assets\Scripts\Utils\SerializableGuid.cs" />
      <Compile Include="Assets\Scripts\InventorySystem\EventArguments\ItemStateChangedEventArgs.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DataTypes\DoorData.cs" />
      <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineTrack.cs" />
      <Compile Include="Assets\Scripts\DataPersistence\FileDataHandler.cs" />
      <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline.cs" />
@@ -84,7 +81,6 @@
      <Compile Include="Assets\Scripts\DataPersistence\DataTypes\PlayerGameData.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\Player.cs" />
      <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DataTypes\ItemData.cs" />
      <Compile Include="Assets\Scripts\Audio\GameSFX.cs" />
      <Compile Include="Assets\Scripts\Application\StartupManager.cs" />
      <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\TeleportPlace.cs" />
@@ -110,7 +106,6 @@
      <Compile Include="Assets\Scripts\Application\Timer.cs" />
      <Compile Include="Assets\Scripts\Notifications\TutorialNotification.cs" />
      <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DataTypes\InventoryItemData.cs" />
      <Compile Include="Assets\LeanTween\Examples\Archived\TestingPunch.cs" />
      <Compile Include="Assets\Scripts\CustomInput\Locks\TeleportLock.cs" />
      <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\ChangeInto.cs" />
@@ -125,7 +120,6 @@
      <Compile Include="Assets\Scripts\InventorySystem\InventorySettingsSO.cs" />
      <Compile Include="Assets\Scripts\Application\GlobalExceptions\SingletonOverrideException.cs" />
      <Compile Include="Assets\Scripts\Application\Loggers.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\IPersistentObject.cs" />
      <Compile Include="Assets\Scripts\Dialogues\DummyNPC.cs" />
      <Compile Include="Assets\Scripts\NPC\DialogueNPC.cs" />
      <Compile Include="Assets\Scripts\LevelTimeChange\LevelsLoader\LevelManager.cs" />
@@ -135,8 +129,6 @@
      <Compile Include="Assets\Scripts\Application\ApplicationSettingsSO.cs" />
      <Compile Include="Assets\Scripts\Interactions\Interfaces\IItemInteractable.cs" />
      <Compile Include="Assets\Scripts\CustomInput\Exceptions\NoMainCameraException.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DataTypes\Data.cs" />
-     <Compile Include="Assets\Scripts\InteractableObjectSystem\PersistentInteractableObject.cs" />
      <Compile Include="Assets\Scripts\Dialogues\DialogueManager.cs" />
      <Compile Include="Assets\Scripts\UI\Objects\CodeReader\ScreenUI.cs" />
      <Compile Include="Assets\Scripts\Interactions\Interfaces\IHandInteractable.cs" />
@@ -157,12 +149,10 @@
      <Compile Include="Assets\Scripts\Notifications\NotificationManager.cs" />
      <Compile Include="Assets\Scripts\UI\Menu.cs" />
      <Compile Include="Assets\Scripts\Utils\Attributes\ObjectIdentifierAttribute.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DataPersistenceTools.cs" />
      <Compile Include="Assets\LeanTween\Examples\Archived\OldGUIExamplesCS.cs" />
      <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier.cs" />
      <Compile Include="Assets\Scripts\Tutorial\TutorialStageParser.cs" />
      <Compile Include="Assets\Scripts\LevelTimeChange\TimeChange\Tests\PlayerTTCtest.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DataTypes\TapePlayerData.cs" />
      <Compile Include="Assets\Scripts\Dialogues\ChoiceProcessing\ChoicesProcessor.cs" />
      <Compile Include="Assets\Scripts\UI\Items\PhotocotierUI.cs" />
      <Compile Include="Assets\Scripts\Audio\GameMusicManager.cs" />
@@ -190,7 +180,6 @@
      <Compile Include="Assets\Scripts\Interactions\InteractionsSettingsSO.cs" />
      <Compile Include="Assets\LeanTween\Framework\LeanTween.cs" />
      <Compile Include="Assets\Scripts\LevelTimeChange\TimeChange\TimeChanger.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DataTypes\RockData.cs" />
      <Compile Include="Assets\Scripts\CustomInput\Interactions\CustomHold.cs" />
      <Compile Include="Assets\Scripts\Tutorial\TutorialStageBuilder\TutorialStageBuilder.cs" />
      <Compile Include="Assets\Scripts\InteractableObjectSystem\Objects\LockedChest.cs" />
@@ -205,7 +194,6 @@
      <Compile Include="Assets\Scripts\Minigames\PatrolVision.cs" />
      <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralUISpace.cs" />
      <Compile Include="Assets\Scripts\InventorySystem\Tests\InventoryGeneralTests.cs" />
-     <Compile Include="Assets\Scripts\DataPersistence\DataTypes\PhotocopierData.cs" />
      <Compile Include="Assets\Scripts\RiddlesScripts\Tutorial\CrossingLight.cs" />
      <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasic.cs" />
      <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplines.cs" />

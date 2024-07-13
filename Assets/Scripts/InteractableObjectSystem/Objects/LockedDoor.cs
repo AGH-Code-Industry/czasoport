@@ -2,17 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
-using DataPersistence;
-using DataPersistence.DataTypes;
 using Items;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace InteractableObjectSystem.Objects {
     [RequireComponent(typeof(BoxCollider2D))]
-    public class LockedDoor : PersistentInteractableObject {
+    public class LockedDoor : InteractableObject {
 
-        public enum DoorState {
+        private enum DoorState {
             Locked,
             Closed,
             Opened
@@ -108,45 +106,6 @@ namespace InteractableObjectSystem.Objects {
             _animator.ResetTrigger("OpenDoors");
             foreach (LockedDoor door in doorsInOtherTimes) {
                 door.CloseDoor();
-            }
-        }
-
-        public override void LoadPersistentData(GameData gameData) {
-            if (!gameData.ContainsObjectData(ID))
-                return;
-
-            var doorData = gameData.GetObjectData<DoorData>(ID);
-
-            switch (doorData.data.doorState) {
-                case DoorState.Locked:
-                    break;
-                case DoorState.Closed:
-                    UnlockDoor();
-                    break;
-                case DoorState.Opened:
-                    OpenDoor();
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-        }
-
-        public override void SavePersistentData(ref GameData gameData) {
-            if (gameData.ContainsObjectData(ID)) {
-                var doorData = gameData.GetObjectData<DoorData>(ID);
-                doorData.data.doorState = _state;
-                doorData.SerializeInheritance();
-                gameData.SetObjectData(doorData);
-            }
-            else {
-                var doorData = new DoorData {
-                    data = new DoorData.DoorSubData {
-                        doorState = _state
-                    },
-                    id = ID
-                };
-                doorData.SerializeInheritance();
-                gameData.SetObjectData(doorData);
             }
         }
     }

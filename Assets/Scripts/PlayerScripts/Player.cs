@@ -10,7 +10,6 @@ using Settings;
 namespace PlayerScripts {
     public class Player : MonoBehaviour, IDataPersistence {
         public static Player Instance { get; private set; }
-        public bool SceneObject { get; } = false;
 
         public event EventHandler OnPlayerMoved;
 
