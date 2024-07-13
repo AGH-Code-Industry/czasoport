@@ -12,7 +12,7 @@ namespace LevelTimeChange.TimeChange {
         private void Awake() {
             _collider = GetComponent<CircleCollider2D>();
             _collider.isTrigger = true;
-            _collider.offset = new Vector2(0, -0.1f);
+            _collider.offset = new Vector2(0, 0f);
         }
 
         /// <summary>
