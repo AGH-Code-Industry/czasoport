@@ -4,31 +4,22 @@ using LevelTimeChange;
 using LevelTimeChange.TimeChange;
 using System.Collections;
 using System.Collections.Generic;
-using DataPersistence;
 using UI;
 using UnityEngine;
 
-public class Czasoport : PersistentInteractableObject {
-
-
-
+public class Czasoport : InteractableObject {
     public override void InteractionHand() {
-        var timeChanger = FindObjectOfType<TimeChanger>();
-        timeChanger.PickUpCzasoport();
+        TimeChanger timeChanger = FindObjectOfType<TimeChanger>();
+        timeChanger.EnableTimeChange();
+        timeChanger.UnlockTimeline(TimeLine.Present);
+        timeChanger.UnlockTimeline(TimeLine.Future);
         NotificationManager.Instance.RaiseNotification(definition.successfulHandInterNotification);
-        Destroy(gameObject);
+        FindObjectOfType<TimeChangeUI>().UpdateTimeUI();
+        Destroy(this.gameObject);
     }
 
     public override bool InteractionItem(Item item) {
         InteractionHand();
         return false;
-    }
-
-    public override void LoadPersistentData(GameData gameData) {
-        if (gameData.playerGameData.hasCzasoport)
-            Destroy(gameObject);
-    }
-
-    public override void SavePersistentData(ref GameData gameData) {
     }
 }
