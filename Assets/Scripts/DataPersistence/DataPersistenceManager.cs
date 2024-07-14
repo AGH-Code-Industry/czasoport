@@ -51,7 +51,7 @@ namespace DataPersistence {
 
         public void LoadGame() {
             _logger.Log($"Loading game data into objects.");
-            var persistentObjects = FindPersistentObjects(false);
+            var persistentObjects = FindPersistentObjects();
             foreach (var persistentObject in persistentObjects) {
                 persistentObject.LoadPersistentData(gameData);
             }
@@ -59,8 +59,7 @@ namespace DataPersistence {
 
         public void SaveGame() {
             _logger.Log($"Saving game data from objects.");
-            var persistentObjects = FindPersistentObjects(false);
-            persistentObjects.AddRange(FindPersistentObjects(true));
+            var persistentObjects = FindPersistentObjects();
             foreach (var persistentObject in persistentObjects) {
                 _logger.Log($"Saving data for {persistentObject}");
                 persistentObject.SavePersistentData(ref gameData);
@@ -68,15 +67,8 @@ namespace DataPersistence {
             SaveGameToDisk();
         }
 
-        public void LoadSceneObjects() {
-            var persistentObjects = FindPersistentObjects(true);
-            foreach (var persistentObject in persistentObjects) {
-                persistentObject.LoadPersistentData(gameData);
-            }
-        }
-
-        private List<IDataPersistence> FindPersistentObjects(bool sceneObjects) {
-            var persistentObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>().Where(obj => obj.SceneObject == sceneObjects);
+        private List<IDataPersistence> FindPersistentObjects() {
+            IEnumerable<IDataPersistence> persistentObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>();
             return new List<IDataPersistence>(persistentObjects);
         }
     }
