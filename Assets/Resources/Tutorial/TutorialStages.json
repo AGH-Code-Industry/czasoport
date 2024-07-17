@@ -10,15 +10,34 @@
     "tutorialNotification": ["Press", "WSAD", "to move."]
   },
   {
-    "action": "TogglePause",
-    "conditionSatisfied": true,
-    "tutorialNotification": ["Press", "ESCAPE", "to pause the game."]
+    "action": "Interaction",
+    "conditionSatisfied": false,
+    "tutorialNotification": ["Press", "F", "to pick up an item."],
+    "specialCondition": "TimeChangeUnlocked"
+  },
+  {
+    "action": "TeleportBack",
+    "conditionSatisfied": false,
+    "tutorialNotification": ["Press", "Q", "to teleport back in time."],
+    "specialCondition": "OnTimeChangeBackward"
+  },
+  {
+    "action": "TeleportForward",
+    "conditionSatisfied": false,
+    "tutorialNotification": ["Press", "E", "to teleport to the future."],
+    "specialCondition": "OnTimeChangeForward"
   },
   {
     "action": "Interaction",
     "conditionSatisfied": false,
     "tutorialNotification": ["Press", "F", "to pick up an item."],
     "specialCondition": "ItemInserted"
+  },
+  {
+    "action": "Interaction",
+    "conditionSatisfied": false,
+    "tutorialNotification": ["Press", "F", "to interact with another item (try breaking the rock)."],
+    "specialCondition": "itemInteractionPerformed"
   },
   {
     "action": "NextItem",
@@ -37,28 +56,9 @@
     "specialCondition": "ItemRemoved"
   },
   {
-    "action": "Interaction",
-    "conditionSatisfied": false,
-    "tutorialNotification": ["Press", "F", "to interact with another item (try breaking the rock)."],
-    "specialCondition": "itemInteractionPerformed"
-  },
-  {
-    "action": "Interaction",
-    "conditionSatisfied": false,
-    "tutorialNotification": ["Good job! Now try to find the timeport."],
-    "specialCondition": "TimeChangeUnlocked"
-  },
-  {
-    "action": "TeleportBack",
-    "conditionSatisfied": false,
-    "tutorialNotification": ["Press", "Q", "to teleport back in time."],
-    "specialCondition": "OnTimeChangeBackward"
-  },
-  {
-    "action": "TeleportForward",
-    "conditionSatisfied": false,
-    "tutorialNotification": ["Press", "E", "to teleport to the future."],
-    "specialCondition": "OnTimeChangeForward"
+    "action": "TogglePause",
+    "conditionSatisfied": true,
+    "tutorialNotification": ["Press", "ESCAPE", "to pause the game."]
   },
   {
     "action": "",
