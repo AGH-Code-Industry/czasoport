@@ -16,7 +16,7 @@ namespace LevelTimeChange.LevelsLoader {
         [Tooltip("Asset for current level.")]
         public LevelInfoSO currentLevel;
         [Tooltip("Content object of this level.")]
-        [SerializeField] private GameObject levelContent;
+        [SerializeField] public GameObject levelContent;
 
         [Header("References to GameObjects that holds teleports.")]
         [SerializeField] private GameObject pastPortalHolder;
@@ -34,7 +34,7 @@ namespace LevelTimeChange.LevelsLoader {
             _teleports = new List<LevelPortal>();
 
             _logger.Log($"New scene has awoken: {currentLevel}");
-            LevelsManager.Instance.LoadedLevels.Add(currentLevel, this);
+            LevelsManager.Instance.LoadLevels(this);
             FindTeleportsOnScene();
             SetTimelinesPositions();
             FindNeighbouringLevels();
@@ -48,7 +48,6 @@ namespace LevelTimeChange.LevelsLoader {
         public void ActivateLevel() {
             _logger.Log($"Scene {currentLevel} is {"activating" % Colorize.Green}");
             levelContent.SetActive(true);
-
             DataPersistenceManager.Instance.LoadSceneObjects();
         }
 

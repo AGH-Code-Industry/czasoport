@@ -69,9 +69,9 @@ namespace Items {
 
                 if (itemData.data.mapId != LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId)
                     return;
-
                 Durability = itemData.data.durability;
                 itemSO = itemData.data.itemSo;
+                transform.parent = Inventory.Instance.FindTransformOfCurrentTime();
                 transform.position = itemData.data.position;
                 Hidden = itemData.data.hidden;
                 if (Hidden)

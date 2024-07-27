@@ -65,6 +65,7 @@ namespace LevelTimeChange.LevelsLoader {
             _isFirstLevelLoading = true;
             SceneManager.LoadScene(_currentLevel.sceneName, LoadSceneMode.Additive);
             // Wait for discovery process from loading level and then do rest of the setup
+            //LoadLevels(LoadedLevels[_currentLevel]);
         }
 
         /// <summary>
@@ -116,12 +117,12 @@ namespace LevelTimeChange.LevelsLoader {
 
             _player.position = destinationPortal.GetTeleportPoint(); // TODO: Change how we move the player
 
-            DataPersistenceManager.Instance.SaveGame();
+            //DataPersistenceManager.Instance.SaveGame();
 
             // oldLevel.DeactivateLevel();
 
-            LoadLevels(newLevel);
-            UnloadLevels(newLevel);
+            //LoadLevels(newLevel);
+            //UnloadLevels(newLevel);
 
             animator.SetTrigger("End");
             yield return new WaitForSeconds(_settings.platformChangeAnimLength / 4);
@@ -144,8 +145,6 @@ namespace LevelTimeChange.LevelsLoader {
                 _currentLevelManager.ActivateLevel();
                 _isFirstLevelLoading = false;
                 _logger.Log($"Finished setup of the first level loading level.");
-
-                LoadLevels(_currentLevelManager);
                 return;
             }
 
@@ -158,19 +157,22 @@ namespace LevelTimeChange.LevelsLoader {
             SceneManager.LoadSceneAsync(level.sceneName, LoadSceneMode.Additive);
         }
 
-        private void LoadLevels(LevelManager destinedLevel) {
+        public void LoadLevels(LevelManager destinedLevel) {
             _logger.Log($"Loading additional scenes.");
+            if (LoadedLevels.ContainsKey(destinedLevel.currentLevel)) return;
+            LoadedLevels.Add(destinedLevel.currentLevel,destinedLevel);
             foreach (var level in destinedLevel.neighborLevels) {
                 if (!LoadedLevels.ContainsKey(level)) {
                     LoadLevel(level);
+                    //LoadLevels(LoadedLevels[level]);
                 }
             }
         }
 
         private void UnLoadLevel(LevelInfoSO level) {
             _logger.Log($"Scene is being unloaded: {level}");
-            SceneManager.UnloadSceneAsync(level.sceneName);
-            LoadedLevels.Remove(level);
+            //SceneManager.UnloadSceneAsync(level.sceneName);
+            //LoadedLevels.Remove(level);
         }
 
         private void UnloadLevels(LevelManager levelInfo) {

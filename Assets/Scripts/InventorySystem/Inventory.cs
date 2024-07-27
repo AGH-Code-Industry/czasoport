@@ -333,7 +333,7 @@ namespace InventorySystem {
             //Instantiate(item.ItemSO.prefab, FindObjectOfType<Player>().gameObject.transform.position, Quaternion.identity, FindTransformOfCurrentTime());
         }
 
-        private Transform FindTransformOfCurrentTime() {
+        public Transform FindTransformOfCurrentTime() {
             Transform currentTimeTransform = this.transform;
             Player player = FindObjectOfType<Player>();
             TimelineMaps timelineMaps = FindObjectOfType<LevelsManager>().CurrentLevelManager.FindTimelineMaps();
@@ -349,7 +349,7 @@ namespace InventorySystem {
                     break;
             }
             Transform transformOfContent = currentTimeTransform.transform.Find("Content")?.transform;
-            /*The line below is a result of "the best" fix at this moment for unexplained and paranormal tilemaps offsets in NewTutorial scene 
+            /*The line below is a result of "the best" fix at this moment for unexplained and paranormal tilemaps offsets in NewTutorial scene
              (tilemap's anchor position wasn't relative at all to the parent's ("Present", "Future")).
             Apparently including it to another GO (called "Content") fixed it when everything else failed. So this line applies only to this one scene*/
             if (!transformOfContent) transformOfContent = currentTimeTransform.transform.Find("Content/Content")?.transform;
@@ -370,6 +370,7 @@ namespace InventorySystem {
                 Item item = child.gameObject.GetComponent<Item>();
                 Debug.Log(item.Equals(itemToFind));
                 if (item.Equals(itemToFind)) {
+                    item.Hidden = false;
                     item.transform.parent = FindTransformOfCurrentTime();
                     item.transform.position = FindObjectOfType<Player>().gameObject.transform.position;
                     item.GetComponent<SpriteRenderer>().enabled = true;
