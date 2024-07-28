@@ -5,6 +5,7 @@ using System.Linq;
 using Application;
 using Application.GlobalExceptions;
 using CoinPackage.Debugging;
+using LevelTimeChange.LevelsLoader;
 using Settings;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -58,6 +59,7 @@ namespace DataPersistence {
         }
 
         public void SaveGame() {
+            LevelsManager.Instance.ActivateContentAll();
             _logger.Log($"Saving game data from objects.");
             var persistentObjects = FindPersistentObjects(false);
             persistentObjects.AddRange(FindPersistentObjects(true));
@@ -66,6 +68,7 @@ namespace DataPersistence {
                 persistentObject.SavePersistentData(ref gameData);
             }
             SaveGameToDisk();
+            LevelsManager.Instance.DeactivateContentNotCurrent();
         }
 
         public void LoadSceneObjects() {

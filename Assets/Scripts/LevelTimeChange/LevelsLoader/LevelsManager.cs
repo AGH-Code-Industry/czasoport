@@ -110,16 +110,16 @@ namespace LevelTimeChange.LevelsLoader {
             var newLevel = LoadedLevels[destinedLevelInfo];
             var oldLevel = _currentLevelManager;
 
-            newLevel.ActivateLevel();
+            newLevel.levelContent.SetActive(true);
             _currentLevelManager = newLevel;
             _currentLevel = destinedLevelInfo;
-            oldLevel.DeactivateLevel();
+            oldLevel.levelContent.SetActive(false);
 
             _player.position = destinationPortal.GetTeleportPoint(); // TODO: Change how we move the player
 
             //DataPersistenceManager.Instance.SaveGame();
 
-            // oldLevel.DeactivateLevel();
+            //oldLevel.DeactivateLevel();
 
             //LoadLevels(newLevel);
             //UnloadLevels(newLevel);
@@ -202,6 +202,18 @@ namespace LevelTimeChange.LevelsLoader {
 
         public override string ToString() {
             return $"[LevelsManager]" % Colorize.Gold;
+        }
+
+        public void ActivateContentAll() {
+            foreach (var pair in LoadedLevels) {
+                if (pair.Key != _currentLevel) pair.Value.levelContent.SetActive(true);
+            }
+        }
+
+        public void DeactivateContentNotCurrent() {
+            foreach (var pair in LoadedLevels) {
+                if (pair.Key != _currentLevel) pair.Value.levelContent.SetActive(false);
+            }
         }
     }
 }

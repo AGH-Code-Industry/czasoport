@@ -32,13 +32,19 @@ namespace LevelTimeChange.LevelsLoader {
 
         private void Awake() {
             _teleports = new List<LevelPortal>();
-
             _logger.Log($"New scene has awoken: {currentLevel}");
             LevelsManager.Instance.LoadLevels(this);
             FindTeleportsOnScene();
             SetTimelinesPositions();
             FindNeighbouringLevels();
             DeactivateLevel();
+        }
+
+        private void Start() {
+            if (LevelsManager.Instance.CurrentLevelManager != this) {
+                ActivateLevel();
+                DeactivateLevel();
+            }
         }
 
         /// <summary>
