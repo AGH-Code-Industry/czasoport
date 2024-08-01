@@ -18,6 +18,7 @@ public class NotificationManager : MonoBehaviour, IDataPersistence {
     You can always change the Nofication class to change it's properties.
     */
     public static NotificationManager Instance;
+    public bool SceneObject { get; } = false;
 
     [SerializeField]
     TMP_Text _notificationMessage;

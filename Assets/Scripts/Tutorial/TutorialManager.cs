@@ -10,9 +10,12 @@ using InventorySystem.EventArguments;
 using LevelTimeChange.LevelsLoader;
 using Ink.Runtime;
 using System.IO;
+using DataPersistence;
 using Unity.VisualScripting;
 
-public class TutorialManager : MonoBehaviour {
+public class TutorialManager : MonoBehaviour, IDataPersistence {
+    public bool SceneObject { get; } = false;
+
     int stage = 1;
     List<TutorialStage> _stages = new List<TutorialStage>();
     List<TutorialNotification> _messages = new List<TutorialNotification>();
@@ -42,8 +45,6 @@ public class TutorialManager : MonoBehaviour {
         _stages = ParseJsonArray(json.text);
 
         LevelsManager.Instance.OnLevelChange += FinishTutorialOnLevelChange;
-
-        StartCoroutine(waitForTutorialToBegin(0.01f));
     }
 
 
@@ -149,5 +150,15 @@ public class TutorialManager : MonoBehaviour {
     IEnumerator EndTutorial() {
         yield return new WaitForSeconds(3f);
         NotificationManager.Instance.EndTutorial();
+    }
+
+    public void LoadPersistentData(GameData gameData) {
+        _tutorialFinished = gameData.tutorialFinished;
+        if (!_tutorialFinished)
+            StartCoroutine(waitForTutorialToBegin(0.01f));
+    }
+
+    public void SavePersistentData(ref GameData gameData) {
+        gameData.tutorialFinished = _tutorialFinished;
     }
 }

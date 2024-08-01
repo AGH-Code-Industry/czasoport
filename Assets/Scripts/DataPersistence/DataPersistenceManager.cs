@@ -5,6 +5,7 @@ using System.Linq;
 using Application;
 using Application.GlobalExceptions;
 using CoinPackage.Debugging;
+using LevelTimeChange.LevelsLoader;
 using Settings;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -51,24 +52,34 @@ namespace DataPersistence {
 
         public void LoadGame() {
             _logger.Log($"Loading game data into objects.");
-            var persistentObjects = FindPersistentObjects();
+            var persistentObjects = FindPersistentObjects(false);
             foreach (var persistentObject in persistentObjects) {
                 persistentObject.LoadPersistentData(gameData);
             }
         }
 
         public void SaveGame() {
+            LevelsManager.Instance.ActivateContentAll();
             _logger.Log($"Saving game data from objects.");
-            var persistentObjects = FindPersistentObjects();
+            var persistentObjects = FindPersistentObjects(false);
+            persistentObjects.AddRange(FindPersistentObjects(true));
             foreach (var persistentObject in persistentObjects) {
                 _logger.Log($"Saving data for {persistentObject}");
                 persistentObject.SavePersistentData(ref gameData);
             }
             SaveGameToDisk();
+            LevelsManager.Instance.DeactivateContentNotCurrent();
         }
 
-        private List<IDataPersistence> FindPersistentObjects() {
-            IEnumerable<IDataPersistence> persistentObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>();
+        public void LoadSceneObjects() {
+            var persistentObjects = FindPersistentObjects(true);
+            foreach (var persistentObject in persistentObjects) {
+                persistentObject.LoadPersistentData(gameData);
+            }
+        }
+
+        private List<IDataPersistence> FindPersistentObjects(bool sceneObjects) {
+            var persistentObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>().Where(obj => obj.SceneObject == sceneObjects);
             return new List<IDataPersistence>(persistentObjects);
         }
     }
