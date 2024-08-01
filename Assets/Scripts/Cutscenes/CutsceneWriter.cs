@@ -30,8 +30,7 @@ public class CutsceneWriter : MonoBehaviour {
     private IEnumerator TypeText() {
         textMeshPro.text = "";
         _isTyping = true;
-        foreach (char c in _fullText)
-        {
+        foreach (char c in _fullText) {
             textMeshPro.text += c;
             yield return new WaitForSeconds(typingSpeed);
         }

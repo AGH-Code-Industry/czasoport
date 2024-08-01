@@ -89,7 +89,7 @@ namespace Items {
                 itemData.data.position = transform.position;
                 Debug.Log(gameObject.scene.name);
                 var l = LevelsManager.Instance.LoadedLevels.Where(a => a.Key.sceneName == gameObject.scene.name).
-                    Select(e => (LevelInfoSO?) e.Key).
+                    Select(e => (LevelInfoSO?)e.Key).
                     FirstOrDefault();
                 itemData.data.mapId = l != null ? l.uniqueId : "";
                 itemData.data.hidden = Hidden;

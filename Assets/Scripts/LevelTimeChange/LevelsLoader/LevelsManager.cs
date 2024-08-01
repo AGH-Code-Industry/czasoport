@@ -159,7 +159,7 @@ namespace LevelTimeChange.LevelsLoader {
         public void LoadLevels(LevelManager destinedLevel) {
             _logger.Log($"Loading additional scenes.");
             if (LoadedLevels.ContainsKey(destinedLevel.currentLevel)) return;
-            LoadedLevels.Add(destinedLevel.currentLevel,destinedLevel);
+            LoadedLevels.Add(destinedLevel.currentLevel, destinedLevel);
             foreach (var level in destinedLevel.neighborLevels) {
                 if (!LoadedLevels.ContainsKey(level)) {
                     LoadLevel(level);
