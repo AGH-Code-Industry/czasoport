@@ -44,6 +44,7 @@ namespace LevelTimeChange.LevelsLoader {
             if (LevelsManager.Instance.CurrentLevelManager != this) {
                 ActivateLevel();
                 DeactivateLevel();
+                SetPortals();
             }
         }
 
@@ -51,10 +52,14 @@ namespace LevelTimeChange.LevelsLoader {
         /// It will set all level content to be active.
         /// Use it only when this level is going to be one played on by the player.
         /// </summary>
-        public void ActivateLevel() {
+        public void ActivateLevel(bool loadScene=true) {
             _logger.Log($"Scene {currentLevel} is {"activating" % Colorize.Green}");
             levelContent.SetActive(true);
-            DataPersistenceManager.Instance.LoadSceneObjects();
+            if (loadScene) DataPersistenceManager.Instance.LoadSceneObjects();
+        }
+
+        private void SetPortals() {
+            foreach (var portal in _teleports) portal.MakeDiscovery(currentLevel);
         }
 
         /// <summary>

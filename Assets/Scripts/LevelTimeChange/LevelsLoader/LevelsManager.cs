@@ -110,10 +110,10 @@ namespace LevelTimeChange.LevelsLoader {
             var newLevel = LoadedLevels[destinedLevelInfo];
             var oldLevel = _currentLevelManager;
 
-            newLevel.levelContent.SetActive(true);
+            newLevel.ActivateLevel(false);
             _currentLevelManager = newLevel;
             _currentLevel = destinedLevelInfo;
-            oldLevel.levelContent.SetActive(false);
+            oldLevel.DeactivateLevel();
 
             _player.position = destinationPortal.GetTeleportPoint(); // TODO: Change how we move the player
 
@@ -145,7 +145,6 @@ namespace LevelTimeChange.LevelsLoader {
                 _currentLevelManager.ActivateLevel();
                 _isFirstLevelLoading = false;
                 _logger.Log($"Finished setup of the first level loading level.");
-                return;
             }
 
             _logger.Log($"Level {level} reported for discovery, {"discovering" % Colorize.Green}.");
