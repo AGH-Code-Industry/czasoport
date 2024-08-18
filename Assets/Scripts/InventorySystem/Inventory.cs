@@ -91,9 +91,11 @@ namespace InventorySystem {
                 item.Durability = itemData.durability;
                 item.ID = itemData.id;
                 item.BlockDestroying = true;
-
+                _selectedSlot = itemData.slotId;
                 InsertItem(item, false);
             }
+
+            //_selectedSlot = 0;
 
             foreach (var hideoutItemID in gameData.itemHideout) {
                 if (ItemHideoutContainsItem(hideoutItemID))
@@ -117,8 +119,12 @@ namespace InventorySystem {
 
             gameData.playerGameData.inventory.Clear();
             foreach (var item in items) {
+                int slot = IndexItem(item.ItemSO);
+                if (slot == null) continue;
+
                 gameData.playerGameData.inventory.Add(new InventoryItemData {
                     itemSO = item.ItemSO,
+                    slotId = slot,
                     durability = item.Durability,
                     id = item.ID
                 });
@@ -160,6 +166,12 @@ namespace InventorySystem {
         public bool ContainsItem(ItemSO itemSO) {
             CDebug.Log($"Checking {itemSO}");
             return _items.Any(item => item != null && item.ItemSO == itemSO);
+        }
+
+        public int IndexItem(ItemSO itemSO) {
+            CDebug.Log($"Checking {itemSO}");
+            return Enumerable.Range(0, _items.Length).FirstOrDefault(
+                i => _items[i] != null && _items[i].ItemSO == itemSO);
         }
 
         /// <summary>

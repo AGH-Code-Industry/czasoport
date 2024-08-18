@@ -110,7 +110,7 @@ namespace LevelTimeChange.LevelsLoader {
             var newLevel = LoadedLevels[destinedLevelInfo];
             var oldLevel = _currentLevelManager;
 
-            newLevel.ActivateLevel();
+            newLevel.ActivateLevel(false);
             _currentLevelManager = newLevel;
             _currentLevel = destinedLevelInfo;
             oldLevel.DeactivateLevel();
@@ -119,7 +119,7 @@ namespace LevelTimeChange.LevelsLoader {
 
             //DataPersistenceManager.Instance.SaveGame();
 
-            // oldLevel.DeactivateLevel();
+            //oldLevel.DeactivateLevel();
 
             //LoadLevels(newLevel);
             //UnloadLevels(newLevel);
@@ -145,7 +145,6 @@ namespace LevelTimeChange.LevelsLoader {
                 _currentLevelManager.ActivateLevel();
                 _isFirstLevelLoading = false;
                 _logger.Log($"Finished setup of the first level loading level.");
-                return;
             }
 
             _logger.Log($"Level {level} reported for discovery, {"discovering" % Colorize.Green}.");
@@ -160,7 +159,7 @@ namespace LevelTimeChange.LevelsLoader {
         public void LoadLevels(LevelManager destinedLevel) {
             _logger.Log($"Loading additional scenes.");
             if (LoadedLevels.ContainsKey(destinedLevel.currentLevel)) return;
-            LoadedLevels.Add(destinedLevel.currentLevel,destinedLevel);
+            LoadedLevels.Add(destinedLevel.currentLevel, destinedLevel);
             foreach (var level in destinedLevel.neighborLevels) {
                 if (!LoadedLevels.ContainsKey(level)) {
                     LoadLevel(level);
@@ -202,6 +201,18 @@ namespace LevelTimeChange.LevelsLoader {
 
         public override string ToString() {
             return $"[LevelsManager]" % Colorize.Gold;
+        }
+
+        public void ActivateContentAll() {
+            foreach (var pair in LoadedLevels) {
+                if (pair.Key != _currentLevel) pair.Value.levelContent.SetActive(true);
+            }
+        }
+
+        public void DeactivateContentNotCurrent() {
+            foreach (var pair in LoadedLevels) {
+                if (pair.Key != _currentLevel) pair.Value.levelContent.SetActive(false);
+            }
         }
     }
 }

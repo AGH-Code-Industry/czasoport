@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using Application;
@@ -67,11 +68,12 @@ namespace Items {
             if (gameData.ContainsObjectData(ID)) {
                 var itemData = gameData.GetObjectData<ItemData>(ID);
 
-                if (itemData.data.mapId != LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId)
-                    return;
+                // if (itemData.data.mapId != LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId) return;
+                if (itemData.data.mapId == "") return;
                 Durability = itemData.data.durability;
                 itemSO = itemData.data.itemSo;
-                transform.parent = Inventory.Instance.FindTransformOfCurrentTime();
+                transform.parent = LevelsManager.Instance.LoadedLevels.First(a => a.Key.uniqueId == itemData.data.mapId)
+                    .Value.levelContent.transform;
                 transform.position = itemData.data.position;
                 Hidden = itemData.data.hidden;
                 if (Hidden)
@@ -85,7 +87,11 @@ namespace Items {
                 itemData.data.durability = Durability;
                 itemData.data.itemSo = ItemSO;
                 itemData.data.position = transform.position;
-                itemData.data.mapId = LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId;
+                Debug.Log(gameObject.scene.name);
+                var l = LevelsManager.Instance.LoadedLevels.Where(a => a.Key.sceneName == gameObject.scene.name).
+                    Select(e => (LevelInfoSO?)e.Key).
+                    FirstOrDefault();
+                itemData.data.mapId = l != null ? l.uniqueId : "";
                 itemData.data.hidden = Hidden;
                 itemData.SerializeInheritance();
                 gameData.SetObjectData(itemData);

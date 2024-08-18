@@ -29,7 +29,7 @@ namespace Cutscene {
         }
 
         public void Update() {
-            if(Input.GetKeyDown("x")) StartScene();
+            if (Input.GetKeyDown("x")) StartScene();
         }
 
         public void StartScene() {

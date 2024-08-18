@@ -32,7 +32,6 @@ namespace LevelTimeChange.LevelsLoader {
 
         private void Awake() {
             _teleports = new List<LevelPortal>();
-
             _logger.Log($"New scene has awoken: {currentLevel}");
             LevelsManager.Instance.LoadLevels(this);
             FindTeleportsOnScene();
@@ -41,14 +40,26 @@ namespace LevelTimeChange.LevelsLoader {
             DeactivateLevel();
         }
 
+        private void Start() {
+            if (LevelsManager.Instance.CurrentLevelManager != this) {
+                ActivateLevel();
+                DeactivateLevel();
+                SetPortals();
+            }
+        }
+
         /// <summary>
         /// It will set all level content to be active.
         /// Use it only when this level is going to be one played on by the player.
         /// </summary>
-        public void ActivateLevel() {
+        public void ActivateLevel(bool loadScene = true) {
             _logger.Log($"Scene {currentLevel} is {"activating" % Colorize.Green}");
             levelContent.SetActive(true);
-            DataPersistenceManager.Instance.LoadSceneObjects();
+            if (loadScene) DataPersistenceManager.Instance.LoadSceneObjects();
+        }
+
+        private void SetPortals() {
+            foreach (var portal in _teleports) portal.MakeDiscovery(currentLevel);
         }
 
         /// <summary>
