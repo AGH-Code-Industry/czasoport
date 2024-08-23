@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class TimelineMaps | Czasoport Documentation </title>
+      <title>Class ItemData | Czasoport Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class TimelineMaps | Czasoport Documentation ">
+      <meta name="title" content="Class ItemData | Czasoport Documentation ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=LevelTimeChange_LevelsLoader_TimelineMaps.md&amp;value=---%0Auid%3A%20LevelTimeChange.LevelsLoader.TimelineMaps%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/AGH-Code-Industry/czasoport/new/master/apiSpec/new?filename=DataPersistence_DataTypes_ItemData.md&amp;value=---%0Auid%3A%20DataPersistence.DataTypes.ItemData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,16 +84,16 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="LevelTimeChange.LevelsLoader.TimelineMaps">
+        <article data-uid="DataPersistence.DataTypes.ItemData">
 
 
 
-  <h1 id="LevelTimeChange_LevelsLoader_TimelineMaps" data-uid="LevelTimeChange.LevelsLoader.TimelineMaps" class="text-break">
-Class TimelineMaps  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  <h1 id="DataPersistence_DataTypes_ItemData" data-uid="DataPersistence.DataTypes.ItemData" class="text-break">
+Class ItemData  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/DataPersistence/DataTypes/ItemData.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="LevelTimeChange.html">LevelTimeChange</a>.<a class="xref" href="LevelTimeChange.LevelsLoader.html">LevelsLoader</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="DataPersistence.html">DataPersistence</a>.<a class="xref" href="DataPersistence.DataTypes.html">DataTypes</a></dd></dl>
   
   </div>
 
@@ -101,7 +101,7 @@ Class TimelineMaps  <a class="header-action link-secondary" title="View source" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TimelineMaps</code></pre>
+    <pre><code class="lang-csharp hljs">public class ItemData : Data</code></pre>
   </div>
 
 
@@ -111,7 +111,8 @@ Class TimelineMaps  <a class="header-action link-secondary" title="View source" 
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">TimelineMaps</span></div>
+      <div><a class="xref" href="DataPersistence.DataTypes.Data.html">Data</a></div>
+      <div><span class="xref">ItemData</span></div>
     </dd>
   </dl>
 
@@ -120,6 +121,15 @@ Class TimelineMaps  <a class="header-action link-secondary" title="View source" 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="DataPersistence.DataTypes.Data.html#DataPersistence_DataTypes_Data_id">Data.id</a>
+    </div>
+    <div>
+      <a class="xref" href="DataPersistence.DataTypes.Data.html#DataPersistence_DataTypes_Data_inheritanceJson">Data.inheritanceJson</a>
+    </div>
+    <div>
+      <a class="xref" href="DataPersistence.DataTypes.Data.html#DataPersistence_DataTypes_Data_Deserialize__1">Data.Deserialize&lt;T&gt;()</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -148,31 +158,29 @@ Class TimelineMaps  <a class="header-action link-secondary" title="View source" 
 
 
 
-  <h2 class="section" id="constructors">Constructors
+  <h2 class="section" id="fields">Fields
 </h2>
 
 
-  <a id="LevelTimeChange_LevelsLoader_TimelineMaps__ctor_" data-uid="LevelTimeChange.LevelsLoader.TimelineMaps.#ctor*"></a>
 
-  <h3 id="LevelTimeChange_LevelsLoader_TimelineMaps__ctor_Transform_Transform_Transform_" data-uid="LevelTimeChange.LevelsLoader.TimelineMaps.#ctor(Transform,Transform,Transform)">
-  TimelineMaps(Transform, Transform, Transform)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DataPersistence_DataTypes_ItemData_data" data-uid="DataPersistence.DataTypes.ItemData.data">
+  data
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/DataPersistence/DataTypes/ItemData.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TimelineMaps(Transform past, Transform present, Transform future)</code></pre>
+    <pre><code class="lang-csharp hljs">public ItemData.ItemSubData data</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
+
+
+
+  <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><code>past</code> <span class="xref">Transform</span></dt>
-    <dd></dd>
-    <dt><code>present</code> <span class="xref">Transform</span></dt>
-    <dd></dd>
-    <dt><code>future</code> <span class="xref">Transform</span></dt>
+    <dt><a class="xref" href="DataPersistence.DataTypes.ItemData.html">ItemData</a>.<a class="xref" href="DataPersistence.DataTypes.ItemData.ItemSubData.html">ItemSubData</a></dt>
     <dd></dd>
   </dl>
 
@@ -184,36 +192,28 @@ Class TimelineMaps  <a class="header-action link-secondary" title="View source" 
 
 
 
-
-
-
-  <h2 class="section" id="properties">Properties
+  <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="LevelTimeChange_LevelsLoader_TimelineMaps_future_" data-uid="LevelTimeChange.LevelsLoader.TimelineMaps.future*"></a>
+  <a id="DataPersistence_DataTypes_ItemData_DeserializeInheritance_" data-uid="DataPersistence.DataTypes.ItemData.DeserializeInheritance*"></a>
 
-  <h3 id="LevelTimeChange_LevelsLoader_TimelineMaps_future" data-uid="LevelTimeChange.LevelsLoader.TimelineMaps.future">
-  future
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DataPersistence_DataTypes_ItemData_DeserializeInheritance" data-uid="DataPersistence.DataTypes.ItemData.DeserializeInheritance">
+  DeserializeInheritance()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/DataPersistence/DataTypes/ItemData.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Transform future { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override void DeserializeInheritance()</code></pre>
   </div>
 
 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Transform</span></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -222,60 +222,24 @@ Class TimelineMaps  <a class="header-action link-secondary" title="View source" 
 
 
 
-  <a id="LevelTimeChange_LevelsLoader_TimelineMaps_past_" data-uid="LevelTimeChange.LevelsLoader.TimelineMaps.past*"></a>
+  <a id="DataPersistence_DataTypes_ItemData_SerializeInheritance_" data-uid="DataPersistence.DataTypes.ItemData.SerializeInheritance*"></a>
 
-  <h3 id="LevelTimeChange_LevelsLoader_TimelineMaps_past" data-uid="LevelTimeChange.LevelsLoader.TimelineMaps.past">
-  past
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  <h3 id="DataPersistence_DataTypes_ItemData_SerializeInheritance" data-uid="DataPersistence.DataTypes.ItemData.SerializeInheritance">
+  SerializeInheritance()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/DataPersistence/DataTypes/ItemData.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Transform past { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override void SerializeInheritance()</code></pre>
   </div>
 
 
 
 
 
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Transform</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="LevelTimeChange_LevelsLoader_TimelineMaps_present_" data-uid="LevelTimeChange.LevelsLoader.TimelineMaps.present*"></a>
-
-  <h3 id="LevelTimeChange_LevelsLoader_TimelineMaps_present" data-uid="LevelTimeChange.LevelsLoader.TimelineMaps.present">
-  present
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L199"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Transform present { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Transform</span></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -288,7 +252,7 @@ Class TimelineMaps  <a class="header-action link-secondary" title="View source" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/LevelTimeChange/LevelsLoader/LevelManager.cs/#L197" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/DataPersistence/DataTypes/ItemData.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

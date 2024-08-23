@@ -89,7 +89,7 @@
 
 
   <h1 id="InventorySystem_Inventory" data-uid="InventorySystem.Inventory" class="text-break">
-Class Inventory  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Class Inventory  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class Inventory  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Inventory : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class Inventory : MonoBehaviour, IDataPersistence</code></pre>
   </div>
 
 
@@ -115,6 +115,12 @@ Class Inventory  <a class="header-action link-secondary" title="View source" hre
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="DataPersistence.IDataPersistence.html">IDataPersistence</a></div>
+    </dd>
+  </dl>
 
 
 
@@ -130,7 +136,7 @@ Class Inventory  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="InventorySystem_Inventory_Instance" data-uid="InventorySystem.Inventory.Instance">
   Instance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -160,7 +166,7 @@ Class Inventory  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="InventorySystem_Inventory_itemHideout" data-uid="InventorySystem.Inventory.itemHideout">
   itemHideout
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -191,11 +197,42 @@ Class Inventory  <a class="header-action link-secondary" title="View source" hre
 </h2>
 
 
+  <a id="InventorySystem_Inventory_SceneObject_" data-uid="InventorySystem.Inventory.SceneObject*"></a>
+
+  <h3 id="InventorySystem_Inventory_SceneObject" data-uid="InventorySystem.Inventory.SceneObject">
+  SceneObject
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SceneObject { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="InventorySystem_Inventory_itemsCount_" data-uid="InventorySystem.Inventory.itemsCount*"></a>
 
   <h3 id="InventorySystem_Inventory_itemsCount" data-uid="InventorySystem.Inventory.itemsCount">
   itemsCount
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -230,7 +267,7 @@ Class Inventory  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="InventorySystem_Inventory_ContainsItem_Items_ItemSO_" data-uid="InventorySystem.Inventory.ContainsItem(Items.ItemSO)">
   ContainsItem(ItemSO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L166"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Check if inventory contains item with the same <code>ItemSO</code> definition.</p>
@@ -264,11 +301,42 @@ Class Inventory  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <a id="InventorySystem_Inventory_FindTransformOfCurrentTime_" data-uid="InventorySystem.Inventory.FindTransformOfCurrentTime*"></a>
+
+  <h3 id="InventorySystem_Inventory_FindTransformOfCurrentTime" data-uid="InventorySystem.Inventory.FindTransformOfCurrentTime">
+  FindTransformOfCurrentTime()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L348"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform FindTransformOfCurrentTime()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="InventorySystem_Inventory_GetAllItems_" data-uid="InventorySystem.Inventory.GetAllItems*"></a>
 
   <h3 id="InventorySystem_Inventory_GetAllItems" data-uid="InventorySystem.Inventory.GetAllItems">
   GetAllItems()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L182"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get list of items in inventory without removing them. All null values are removed, so items won't keep
@@ -302,7 +370,7 @@ their original indexes.</p>
 
   <h3 id="InventorySystem_Inventory_GetInventory" data-uid="InventorySystem.Inventory.GetInventory">
   GetInventory()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L157"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get inventory, including empty slots, without removing items in it. Items are placed on their corresponding indexes.</p>
@@ -335,7 +403,7 @@ their original indexes.</p>
 
   <h3 id="InventorySystem_Inventory_GetSelectedItem_Items_Item__" data-uid="InventorySystem.Inventory.GetSelectedItem(Items.Item@)">
   GetSelectedItem(out Item)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get currently selected item, but do not remove this item from inventory.</p>
@@ -370,11 +438,47 @@ their original indexes.</p>
 
 
 
+  <a id="InventorySystem_Inventory_IndexItem_" data-uid="InventorySystem.Inventory.IndexItem*"></a>
+
+  <h3 id="InventorySystem_Inventory_IndexItem_Items_ItemSO_" data-uid="InventorySystem.Inventory.IndexItem(Items.ItemSO)">
+  IndexItem(ItemSO)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int IndexItem(ItemSO itemSO)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>itemSO</code> <a class="xref" href="Items.ItemSO.html">ItemSO</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="InventorySystem_Inventory_InsertItem_" data-uid="InventorySystem.Inventory.InsertItem*"></a>
 
-  <h3 id="InventorySystem_Inventory_InsertItem_Items_Item_" data-uid="InventorySystem.Inventory.InsertItem(Items.Item)">
-  InsertItem(Item)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <h3 id="InventorySystem_Inventory_InsertItem_Items_Item_System_Boolean_" data-uid="InventorySystem.Inventory.InsertItem(Items.Item,System.Boolean)">
+  InsertItem(Item, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L193"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Insert item into inventory. If the selected slot is empty, then item is placed into that slot.</p>
@@ -382,7 +486,7 @@ their original indexes.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool InsertItem(Item item)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool InsertItem(Item item, bool showNotification = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -390,6 +494,8 @@ their original indexes.</p>
     <dt><code>item</code> <a class="xref" href="Items.Item.html">Item</a></dt>
     <dd><p><code>Item</code> to insert.</p>
 </dd>
+    <dt><code>showNotification</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
@@ -408,11 +514,42 @@ their original indexes.</p>
 
 
 
+  <a id="InventorySystem_Inventory_LoadPersistentData_" data-uid="InventorySystem.Inventory.LoadPersistentData*"></a>
+
+  <h3 id="InventorySystem_Inventory_LoadPersistentData_DataPersistence_GameData_" data-uid="InventorySystem.Inventory.LoadPersistentData(DataPersistence.GameData)">
+  LoadPersistentData(GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadPersistentData(GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="InventorySystem_Inventory_RemoveItem_" data-uid="InventorySystem.Inventory.RemoveItem*"></a>
 
   <h3 id="InventorySystem_Inventory_RemoveItem_Items_Item__" data-uid="InventorySystem.Inventory.RemoveItem(Items.Item@)">
   RemoveItem(out Item)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L261"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retrieve and remove item from the Inventory. Empty slot is always the result.</p>
@@ -451,7 +588,7 @@ their original indexes.</p>
 
   <h3 id="InventorySystem_Inventory_RemoveItem_Items_ItemSO_" data-uid="InventorySystem.Inventory.RemoveItem(Items.ItemSO)">
   RemoveItem(ItemSO)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L281"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes item based on provided ItemSO. If there are multiple items with the same ItemSO, only the first one will be removed.</p>
@@ -485,11 +622,42 @@ their original indexes.</p>
 
 
 
+  <a id="InventorySystem_Inventory_SavePersistentData_" data-uid="InventorySystem.Inventory.SavePersistentData*"></a>
+
+  <h3 id="InventorySystem_Inventory_SavePersistentData_DataPersistence_GameData__" data-uid="InventorySystem.Inventory.SavePersistentData(DataPersistence.GameData@)">
+  SavePersistentData(ref GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SavePersistentData(ref GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="InventorySystem_Inventory_UseItem_" data-uid="InventorySystem.Inventory.UseItem*"></a>
 
   <h3 id="InventorySystem_Inventory_UseItem" data-uid="InventorySystem.Inventory.UseItem">
   UseItem()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L242"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Changes durability of the selected item by one for each use. If durability is exactly 0,
@@ -526,7 +694,7 @@ removes item from inventory.</p>
 
   <h3 id="InventorySystem_Inventory_ItemInserted" data-uid="InventorySystem.Inventory.ItemInserted">
   ItemInserted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -556,7 +724,7 @@ removes item from inventory.</p>
 
   <h3 id="InventorySystem_Inventory_ItemRemoved" data-uid="InventorySystem.Inventory.ItemRemoved">
   ItemRemoved
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -586,7 +754,7 @@ removes item from inventory.</p>
 
   <h3 id="InventorySystem_Inventory_ItemStateChanged" data-uid="InventorySystem.Inventory.ItemStateChanged">
   ItemStateChanged
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -616,7 +784,7 @@ removes item from inventory.</p>
 
   <h3 id="InventorySystem_Inventory_SelectedSlotChanged" data-uid="InventorySystem.Inventory.SelectedSlotChanged">
   SelectedSlotChanged
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -647,7 +815,7 @@ removes item from inventory.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/InventorySystem/Inventory.cs/#L28" class="edit-link">Edit this page</a>
         </div>
 
 

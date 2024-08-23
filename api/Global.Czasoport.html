@@ -89,7 +89,7 @@
 
 
   <h1 id="Global_Czasoport" data-uid="Global.Czasoport" class="text-break">
-Class Czasoport  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Czasoport.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class Czasoport  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Czasoport.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class Czasoport  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Czasoport : InteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Czasoport : PersistentInteractableObject, IItemInteractable, IHandInteractable, ILongHandInteractable, ILongItemInteractable, IPersistentObject, IDataPersistence</code></pre>
   </div>
 
 
@@ -112,6 +112,7 @@ Class Czasoport  <a class="header-action link-secondary" title="View source" hre
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="InteractableObjectSystem.InteractableObject.html">InteractableObject</a></div>
+      <div><a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html">PersistentInteractableObject</a></div>
       <div><span class="xref">Czasoport</span></div>
     </dd>
   </dl>
@@ -123,6 +124,8 @@ Class Czasoport  <a class="header-action link-secondary" title="View source" hre
       <div><a class="xref" href="Interactions.Interfaces.IHandInteractable.html">IHandInteractable</a></div>
       <div><a class="xref" href="Interactions.Interfaces.ILongHandInteractable.html">ILongHandInteractable</a></div>
       <div><a class="xref" href="Interactions.Interfaces.ILongItemInteractable.html">ILongItemInteractable</a></div>
+      <div><a class="xref" href="DataPersistence.IPersistentObject.html">IPersistentObject</a></div>
+      <div><a class="xref" href="DataPersistence.IDataPersistence.html">IDataPersistence</a></div>
     </dd>
   </dl>
 
@@ -130,6 +133,12 @@ Class Czasoport  <a class="header-action link-secondary" title="View source" hre
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_SceneObject">PersistentInteractableObject.SceneObject</a>
+    </div>
+    <div>
+      <a class="xref" href="InteractableObjectSystem.PersistentInteractableObject.html#InteractableObjectSystem_PersistentInteractableObject_ID">PersistentInteractableObject.ID</a>
+    </div>
     <div>
       <a class="xref" href="InteractableObjectSystem.InteractableObject.html#InteractableObjectSystem_InteractableObject_definition">InteractableObject.definition</a>
     </div>
@@ -157,7 +166,7 @@ Class Czasoport  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Global_Czasoport_InteractionHand" data-uid="Global.Czasoport.InteractionHand">
   InteractionHand()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Czasoport.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Czasoport.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -183,7 +192,7 @@ Class Czasoport  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Global_Czasoport_InteractionItem_Items_Item_" data-uid="Global.Czasoport.InteractionItem(Items.Item)">
   InteractionItem(Item)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Czasoport.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Czasoport.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -215,11 +224,73 @@ Class Czasoport  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <a id="Global_Czasoport_LoadPersistentData_" data-uid="Global.Czasoport.LoadPersistentData*"></a>
+
+  <h3 id="Global_Czasoport_LoadPersistentData_DataPersistence_GameData_" data-uid="Global.Czasoport.LoadPersistentData(DataPersistence.GameData)">
+  LoadPersistentData(GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Czasoport.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void LoadPersistentData(GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Global_Czasoport_SavePersistentData_" data-uid="Global.Czasoport.SavePersistentData*"></a>
+
+  <h3 id="Global_Czasoport_SavePersistentData_DataPersistence_GameData__" data-uid="Global.Czasoport.SavePersistentData(DataPersistence.GameData@)">
+  SavePersistentData(ref GameData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Czasoport.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void SavePersistentData(ref GameData gameData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameData</code> <a class="xref" href="DataPersistence.GameData.html">GameData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Czasoport.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Items/Czasoport.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 
