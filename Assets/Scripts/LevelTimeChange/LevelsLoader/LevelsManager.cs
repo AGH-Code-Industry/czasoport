@@ -22,6 +22,7 @@ namespace LevelTimeChange.LevelsLoader {
         /// Singleton instance of this class.
         /// </summary>
         public static LevelsManager Instance { get; private set; }
+        public bool SceneObject { get; } = false;
 
         public LevelManager CurrentLevelManager => _currentLevelManager;
         public event EventHandler OnLevelChange;
@@ -64,6 +65,7 @@ namespace LevelTimeChange.LevelsLoader {
             _isFirstLevelLoading = true;
             SceneManager.LoadScene(_currentLevel.sceneName, LoadSceneMode.Additive);
             // Wait for discovery process from loading level and then do rest of the setup
+            //LoadLevels(LoadedLevels[_currentLevel]);
         }
 
         /// <summary>
@@ -74,6 +76,9 @@ namespace LevelTimeChange.LevelsLoader {
         public void ChangeLevel(LevelInfoSO destinedLevelInfo, LevelPortal destinationPortal) {
             _logger.Log($"Changing level to {destinedLevelInfo}, destined portal: {destinationPortal}");
             OnLevelChange?.Invoke(this, EventArgs.Empty);
+
+            DataPersistenceManager.Instance.SaveGame();
+
             // Order of actions in this function is crucial, do not change it unless
             // you know what you are doing
             // FOR REAL, I WROTE THIS, THEN CHANGED IT AND IT BROKE
@@ -105,19 +110,19 @@ namespace LevelTimeChange.LevelsLoader {
             var newLevel = LoadedLevels[destinedLevelInfo];
             var oldLevel = _currentLevelManager;
 
-            newLevel.ActivateLevel();
+            newLevel.ActivateLevel(false);
             _currentLevelManager = newLevel;
             _currentLevel = destinedLevelInfo;
             oldLevel.DeactivateLevel();
 
             _player.position = destinationPortal.GetTeleportPoint(); // TODO: Change how we move the player
 
-            // oldLevel.DeactivateLevel();
+            //DataPersistenceManager.Instance.SaveGame();
 
-            LoadLevels(newLevel);
-            UnloadLevels(newLevel);
+            //oldLevel.DeactivateLevel();
 
-
+            //LoadLevels(newLevel);
+            //UnloadLevels(newLevel);
 
             animator.SetTrigger("End");
             yield return new WaitForSeconds(_settings.platformChangeAnimLength / 4);
@@ -140,9 +145,6 @@ namespace LevelTimeChange.LevelsLoader {
                 _currentLevelManager.ActivateLevel();
                 _isFirstLevelLoading = false;
                 _logger.Log($"Finished setup of the first level loading level.");
-
-                LoadLevels(_currentLevelManager);
-                return;
             }
 
             _logger.Log($"Level {level} reported for discovery, {"discovering" % Colorize.Green}.");
@@ -154,19 +156,22 @@ namespace LevelTimeChange.LevelsLoader {
             SceneManager.LoadSceneAsync(level.sceneName, LoadSceneMode.Additive);
         }
 
-        private void LoadLevels(LevelManager destinedLevel) {
+        public void LoadLevels(LevelManager destinedLevel) {
             _logger.Log($"Loading additional scenes.");
+            if (LoadedLevels.ContainsKey(destinedLevel.currentLevel)) return;
+            LoadedLevels.Add(destinedLevel.currentLevel, destinedLevel);
             foreach (var level in destinedLevel.neighborLevels) {
                 if (!LoadedLevels.ContainsKey(level)) {
                     LoadLevel(level);
+                    //LoadLevels(LoadedLevels[level]);
                 }
             }
         }
 
         private void UnLoadLevel(LevelInfoSO level) {
             _logger.Log($"Scene is being unloaded: {level}");
-            SceneManager.UnloadSceneAsync(level.sceneName);
-            LoadedLevels.Remove(level);
+            //SceneManager.UnloadSceneAsync(level.sceneName);
+            //LoadedLevels.Remove(level);
         }
 
         private void UnloadLevels(LevelManager levelInfo) {
@@ -196,6 +201,18 @@ namespace LevelTimeChange.LevelsLoader {
 
         public override string ToString() {
             return $"[LevelsManager]" % Colorize.Gold;
+        }
+
+        public void ActivateContentAll() {
+            foreach (var pair in LoadedLevels) {
+                if (pair.Key != _currentLevel) pair.Value.levelContent.SetActive(true);
+            }
+        }
+
+        public void DeactivateContentNotCurrent() {
+            foreach (var pair in LoadedLevels) {
+                if (pair.Key != _currentLevel) pair.Value.levelContent.SetActive(false);
+            }
         }
     }
 }
