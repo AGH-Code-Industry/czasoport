@@ -5,6 +5,8 @@ using Application;
 using Application.GlobalExceptions;
 using CoinPackage.Debugging;
 using CustomInput;
+using DataPersistence;
+using DataPersistence.DataTypes;
 using InventorySystem.EventArguments;
 using Items;
 using LevelTimeChange.LevelsLoader;
@@ -19,10 +21,14 @@ using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using Unity.VisualScripting;
+using Utils;
 
 namespace InventorySystem {
-    public class Inventory : MonoBehaviour {
+    public class Inventory : MonoBehaviour, IDataPersistence {
         public static Inventory Instance;
+
+        public bool SceneObject { get; } = false;
 
         public event EventHandler<SelectedSlotChangedEventArgs> SelectedSlotChanged;
         public event EventHandler<ItemInsertedEventArgs> ItemInserted;
@@ -79,6 +85,61 @@ namespace InventorySystem {
             CInput.InputActions.Inventory.Drop.performed -= OnDropItemClicked;
         }
 
+        public void LoadPersistentData(GameData gameData) {
+            foreach (var itemData in gameData.playerGameData.inventory) {
+                var item = Instantiate(itemData.itemSO.prefab).GetComponent<Item>();
+                item.Durability = itemData.durability;
+                item.ID = itemData.id;
+                item.BlockDestroying = true;
+                _selectedSlot = itemData.slotId;
+                InsertItem(item, false);
+            }
+
+            //_selectedSlot = 0;
+
+            foreach (var hideoutItemID in gameData.itemHideout) {
+                if (ItemHideoutContainsItem(hideoutItemID))
+                    continue;
+
+                if (!gameData.ContainsObjectData(hideoutItemID)) {
+                    CDebug.LogError("Hideout item desynced with saves. It can lead to serious save issues!");
+                    continue;
+                }
+                var itemData = gameData.GetObjectData<ItemData>(hideoutItemID);
+
+                var item = Instantiate(itemData.data.itemSo.prefab, itemHideout).GetComponent<Item>();
+                item.Durability = itemData.data.durability;
+                item.ID = itemData.id;
+                item.BlockDestroying = true;
+            }
+        }
+
+        public void SavePersistentData(ref GameData gameData) {
+            var items = GetAllItems();
+
+            gameData.playerGameData.inventory.Clear();
+            foreach (var item in items) {
+                int slot = IndexItem(item.ItemSO);
+                if (slot == null) continue;
+
+                gameData.playerGameData.inventory.Add(new InventoryItemData {
+                    itemSO = item.ItemSO,
+                    slotId = slot,
+                    durability = item.Durability,
+                    id = item.ID
+                });
+            }
+
+            gameData.itemHideout.Clear();
+            for (var i = 0; i < itemHideout.childCount; i++) {
+                var child = itemHideout.GetChild(i);
+                var item = child.GetComponentInChildren<Item>();
+                if (item.ID.value == "" || item.ID == Guid.Empty)
+                    continue;
+                gameData.itemHideout.Add(item.ID);
+            }
+        }
+
         /// <summary>
         /// Get currently selected item, but do not remove this item from inventory.
         /// </summary>
@@ -107,6 +168,12 @@ namespace InventorySystem {
             return _items.Any(item => item != null && item.ItemSO == itemSO);
         }
 
+        public int IndexItem(ItemSO itemSO) {
+            CDebug.Log($"Checking {itemSO}");
+            return Enumerable.Range(0, _items.Length).FirstOrDefault(
+                i => _items[i] != null && _items[i].ItemSO == itemSO);
+        }
+
         /// <summary>
         /// Get list of items in inventory without removing them. All null values are removed, so items won't keep
         /// their original indexes.
@@ -123,7 +190,7 @@ namespace InventorySystem {
         /// </summary>
         /// <param name="item">`Item` to insert.</param>
         /// <returns></returns>
-        public bool InsertItem(Item item) {
+        public bool InsertItem(Item item, bool showNotification = true) {
             if (_itemsCount == _settings.itemsCount - 1) { // Inventory full
                 //NotificationManager.Instance.RaiseNotification(new Notification("Inventory is full", 3f));
                 if (_selectedSlot == 0) {
@@ -159,9 +226,10 @@ namespace InventorySystem {
             }
 
             // Hide item
-            item = HideItem(item);
+            item.Hide();
 
-            NotificationManager.Instance.RaiseNotification(item.ItemSO.pickUpNotification);
+            if (showNotification)
+                NotificationManager.Instance.RaiseNotification(item.ItemSO.pickUpNotification);
 
             return true;
         }
@@ -180,7 +248,7 @@ namespace InventorySystem {
             });
             if (item.Durability <= 0) {
                 RemoveItem(out var removedItem);
-                Destroy(item.gameObject);
+                item.Hide();
             }
             return true;
         }
@@ -230,6 +298,17 @@ namespace InventorySystem {
             return item is not null;
         }
 
+        private bool ItemHideoutContainsItem(SerializableGuid id) {
+            for (var i = 0; i < itemHideout.childCount; i++) {
+                var child = itemHideout.GetChild(i);
+                var item = child.GetComponentInChildren<Item>();
+                if (item.ID.Equals(id))
+                    return true;
+            }
+
+            return false;
+        }
+
         private void OnNextItemClicked(InputAction.CallbackContext ctx) {
             _selectedSlot++;
             _selectedSlot = _selectedSlot < _settings.itemsCount ? _selectedSlot : 0;
@@ -266,7 +345,7 @@ namespace InventorySystem {
             //Instantiate(item.ItemSO.prefab, FindObjectOfType<Player>().gameObject.transform.position, Quaternion.identity, FindTransformOfCurrentTime());
         }
 
-        private Transform FindTransformOfCurrentTime() {
+        public Transform FindTransformOfCurrentTime() {
             Transform currentTimeTransform = this.transform;
             Player player = FindObjectOfType<Player>();
             TimelineMaps timelineMaps = FindObjectOfType<LevelsManager>().CurrentLevelManager.FindTimelineMaps();
@@ -282,6 +361,10 @@ namespace InventorySystem {
                     break;
             }
             Transform transformOfContent = currentTimeTransform.transform.Find("Content")?.transform;
+            /*The line below is a result of "the best" fix at this moment for unexplained and paranormal tilemaps offsets in NewTutorial scene
+             (tilemap's anchor position wasn't relative at all to the parent's ("Present", "Future")).
+            Apparently including it to another GO (called "Content") fixed it when everything else failed. So this line applies only to this one scene*/
+            if (!transformOfContent) transformOfContent = currentTimeTransform.transform.Find("Content/Content")?.transform;
             Transform transformOfItems = transformOfContent.transform.Find("Items")?.transform;
             if (transformOfItems) {
                 currentTimeTransform = transformOfItems;
@@ -294,24 +377,12 @@ namespace InventorySystem {
             return currentTimeTransform;
         }
 
-        private Item HideItem(Item item) {
-            if (item.transform.parent == null) {
-                String itemUniqueId = item.uniqueId;
-                item = Instantiate(item);
-                item.uniqueId = itemUniqueId;
-            }
-            item.transform.SetParent(itemHideout);
-            item.transform.position = new Vector3(0f, 0f, 0f);
-            item.GetComponent<SpriteRenderer>().enabled = false;
-            item.GetComponent<CircleCollider2D>().enabled = false;
-            return item;
-        }
-
         private void ShowItem(Item itemToFind) {
             foreach (Transform child in itemHideout) {
                 Item item = child.gameObject.GetComponent<Item>();
                 Debug.Log(item.Equals(itemToFind));
                 if (item.Equals(itemToFind)) {
+                    item.Hidden = false;
                     item.transform.parent = FindTransformOfCurrentTime();
                     item.transform.position = FindObjectOfType<Player>().gameObject.transform.position;
                     item.GetComponent<SpriteRenderer>().enabled = true;
