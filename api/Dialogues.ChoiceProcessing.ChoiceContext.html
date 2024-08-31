@@ -89,7 +89,7 @@
 
 
   <h1 id="Dialogues_ChoiceProcessing_ChoiceContext" data-uid="Dialogues.ChoiceProcessing.ChoiceContext" class="text-break">
-Class ChoiceContext  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Class ChoiceContext  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -156,14 +156,14 @@ Class ChoiceContext  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Dialogues_ChoiceProcessing_ChoiceContext_GetItem" data-uid="Dialogues.ChoiceProcessing.ChoiceContext.GetItem">
   GetItem
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ItemSO GetItem { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;ItemSO&gt; GetItem { get; }</code></pre>
   </div>
 
 
@@ -172,7 +172,7 @@ Class ChoiceContext  <a class="header-action link-secondary" title="View source"
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="Items.ItemSO.html">ItemSO</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Items.ItemSO.html">ItemSO</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -187,7 +187,7 @@ Class ChoiceContext  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Dialogues_ChoiceProcessing_ChoiceContext_GetsItem" data-uid="Dialogues.ChoiceProcessing.ChoiceContext.GetsItem">
   GetsItem
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -218,7 +218,7 @@ Class ChoiceContext  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Dialogues_ChoiceProcessing_ChoiceContext_RequiredItem" data-uid="Dialogues.ChoiceProcessing.ChoiceContext.RequiredItem">
   RequiredItem
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -249,7 +249,7 @@ Class ChoiceContext  <a class="header-action link-secondary" title="View source"
 
   <h3 id="Dialogues_ChoiceProcessing_ChoiceContext_RequiresItem" data-uid="Dialogues.ChoiceProcessing.ChoiceContext.RequiresItem">
   RequiresItem
-  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -276,11 +276,46 @@ Class ChoiceContext  <a class="header-action link-secondary" title="View source"
 
 
 
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Dialogues_ChoiceProcessing_ChoiceContext_AddItem_" data-uid="Dialogues.ChoiceProcessing.ChoiceContext.AddItem*"></a>
+
+  <h3 id="Dialogues_ChoiceProcessing_ChoiceContext_AddItem_Items_ItemSO_" data-uid="Dialogues.ChoiceProcessing.ChoiceContext.AddItem(Items.ItemSO)">
+  AddItem(ItemSO)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddItem(ItemSO itemToAdd)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>itemToAdd</code> <a class="xref" href="Items.ItemSO.html">ItemSO</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L5" class="edit-link">Edit this page</a>
+          <a href="https://github.com/AGH-Code-Industry/czasoport/blob/master/Assets/Scripts/Dialogues/ChoiceProcessing/ChoiceContext.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 
