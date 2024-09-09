@@ -16,12 +16,14 @@ namespace UI {
         public void SetStroke(bool isActive) {
             if (isActive) {
                 _image.sprite = active;
-                _image.gameObject.transform.localScale = new Vector3(activeScale, activeScale, 1f);
+                if (tak) _image.gameObject.transform.localScale = new Vector3(activeScale, activeScale, 1f);
+                if (tak) _image.color = new Color(1f, 1f, 1f, 1f);
                 //if (tak) _image.color = Color.black;
             }
             else {
                 _image.sprite = disactive;
-                _image.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+                if (tak) _image.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+                if (tak) _image.color = new Color(0f, 0f, 0f, 0f);
                 //_image.color = Color.white;
             }
         }

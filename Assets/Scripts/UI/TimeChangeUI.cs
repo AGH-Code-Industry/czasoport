@@ -23,6 +23,7 @@ namespace UI {
 
         public void UnlockTimeUI() {
             TimeChanger.Instance.OnTimeChange += TimeChanger_OnTimeChange;
+            TimeChanger.Instance.OnTeleportationEnded += (object sender, EventArgs e) => CheckTeleportAbilities();
             Player.Instance.OnPlayerMoved += Player_OnPlayerMoved;
 
             ChangeSelectedTime(TimeChanger.Instance.actualTime);

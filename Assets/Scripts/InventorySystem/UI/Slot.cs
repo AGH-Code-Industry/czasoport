@@ -46,6 +46,7 @@ namespace InventorySystem.UI {
         /// </summary>
         public void Active() {
             _image.color = activeSlot;
+            _image.transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
         }
 
         /// <summary>
@@ -53,6 +54,7 @@ namespace InventorySystem.UI {
         /// </summary>
         public void Disactive() {
             _image.color = disactiveSlot;
+            _image.transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
         /// <summary>
