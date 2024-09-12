@@ -37,6 +37,7 @@ namespace InteractableObjectSystem.Objects {
                 _currentRock = item.ItemSO;
                 item.Hide();
                 Inventory.Instance.RemoveItem(item.ItemSO);
+                Destroy(item.gameObject);
                 Inventory.Instance.InsertItem(tempItem.GetComponent<Item>());
             }
 
