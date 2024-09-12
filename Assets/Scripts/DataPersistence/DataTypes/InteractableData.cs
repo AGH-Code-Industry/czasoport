@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using InteractableObjectSystem.Objects;
 using UnityEngine;
 
 namespace DataPersistence.DataTypes {
-    public class InteractableData :  Data {
+    public class InteractableData : Data {
         [Serializable]
         public class InteractableSubData {
             public int state;

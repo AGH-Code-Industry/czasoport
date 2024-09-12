@@ -21,6 +21,7 @@ namespace Interactions {
 
         public event EventHandler itemInteractionPerformed;
         public event EventHandler handInteractionPerformed;
+        public event EventHandler onFocusChange;
 
         // Objects near the player that we can interact with
         private List<GameObject> _interactableObjects;
@@ -125,24 +126,27 @@ namespace Interactions {
             if (_interactableObjects.Count == 0) {
                 _focusedObject = null;
                 _selectedObject = null;
+                onFocusChange?.Invoke(this, EventArgs.Empty);
                 return;
             }
 
             if (_focusedObject is null) {
                 GameObject g = GetNearestInteractable();
-                if (_selectedObject != g) {
-                    if (_selectedObject is not null) _selectedObject.GetComponent<IHighlightable>()?.DisableFocusedHighlight();
-                    _selectedObject = g;
-                }
+                if (_selectedObject != g) changeSelectedObject(g);
             }
             else {
-                if (_selectedObject is not null) _selectedObject.GetComponent<IHighlightable>()?.DisableFocusedHighlight();
-                _selectedObject = _focusedObject;
+                changeSelectedObject(_focusedObject);
             }
 
             if (!_selectedObject) return;
             // Despite warning, `_selectedObject` will never be null in this context
             _selectedObject.GetComponent<IHighlightable>()?.EnableFocusedHighlight();
+        }
+
+        private void changeSelectedObject(GameObject newSelectedObject) {
+            if (_selectedObject is not null) _selectedObject.GetComponent<IHighlightable>()?.DisableFocusedHighlight();
+            _selectedObject = newSelectedObject;
+            onFocusChange?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>
