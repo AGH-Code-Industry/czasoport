@@ -61,9 +61,6 @@ namespace Dialogues {
                             temp.GetComponent<Item>().InteractionHand();
                         }
                     }
-                    else {
-                        temp.GetComponent<Item>().InteractionHand();
-                    }
                 }
 
                 if (choiceContext.RequiresItem || choiceContext.GetsItem) {
