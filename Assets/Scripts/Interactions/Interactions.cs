@@ -125,7 +125,7 @@ namespace Interactions {
         private void UpdateSelectedInteractables() {
             if (_interactableObjects.Count == 0) {
                 _focusedObject = null;
-                changeSelectedObject(null);
+                _selectedObject = null;
                 return;
             }
 
