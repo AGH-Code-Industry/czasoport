@@ -126,6 +126,7 @@ namespace Interactions {
             if (_interactableObjects.Count == 0) {
                 _focusedObject = null;
                 _selectedObject = null;
+                onFocusChange?.Invoke(this, EventArgs.Empty);
                 return;
             }
 
