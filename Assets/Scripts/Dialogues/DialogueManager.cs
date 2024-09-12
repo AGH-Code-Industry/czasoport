@@ -94,7 +94,7 @@ namespace Dialogues {
                 EndDialogue();
                 return;
             }
-            
+
             _currentStory.Continue();
             if (_currentStory.state.currentChoices.Count == 0 && _currentStory.state.currentText == "") {
                 EndDialogue();
