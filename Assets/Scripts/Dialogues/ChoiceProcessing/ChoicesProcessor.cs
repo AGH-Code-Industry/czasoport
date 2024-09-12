@@ -62,6 +62,10 @@ namespace Dialogues {
                         }
                     }
                 }
+
+                if (choiceContext.RequiresItem || choiceContext.GetsItem) {
+                    DialogueManager.I.EndDialogue();
+                }
             });
             choiceButton.SetText(choice.text);
             if (choiceContext.RequiresItem) {
