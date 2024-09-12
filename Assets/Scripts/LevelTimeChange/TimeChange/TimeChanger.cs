@@ -19,6 +19,7 @@ namespace LevelTimeChange.TimeChange {
         public bool SceneObject { get; } = false;
 
         public event EventHandler<OnTimeChangeEventArgs> OnTimeChange;
+        public event EventHandler OnTeleportationEnded;
         public event EventHandler TimeChangeUnlocked;
 
         public class OnTimeChangeEventArgs : EventArgs {
@@ -135,8 +136,7 @@ namespace LevelTimeChange.TimeChange {
             cinemachineFramingTransposer.m_SoftZoneWidth = softZones.x;
             cinemachineFramingTransposer.m_SoftZoneHeight = softZones.y;
             CInput.TeleportLock.Unlock(key);
-
-
+            OnTeleportationEnded?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>
