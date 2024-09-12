@@ -2,14 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using CoinPackage.Debugging;
+using DataPersistence;
+using DataPersistence.DataTypes;
+using InteractableObjectSystem;
 using LevelTimeChange.TimeChange;
 using NPC;
 using PlayerScripts;
 using Settings;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Utils;
 
-public class CrossingLight : MonoBehaviour {
+public class CrossingLight : MonoBehaviour, IPersistentObject {
+    [field: SerializeField] public SerializableGuid ID { get; set; }
+    public bool SceneObject { get; }
 
     public float lightChangeInterval = 5f;
 
@@ -115,5 +121,32 @@ public class CrossingLight : MonoBehaviour {
         Player.Instance.transform.position = returnPosition.position;
         yield return new WaitForSeconds(_blackScreenAnimatorTimer / 2);
         _blackScreenAnimator.SetTrigger("End");
+    }
+
+    public void LoadPersistentData(GameData gameData) {
+        if (!gameData.ContainsObjectData(ID))
+            return;
+
+        var _data = gameData.GetObjectData<InteractableData>(ID);
+        if (_data.data.state == 1) BlockWay();
+    }
+
+    public void SavePersistentData(ref GameData gameData) {
+        if (gameData.ContainsObjectData(ID)) {
+            var crossingData = gameData.GetObjectData<InteractableData>(ID);
+            crossingData.data.state = _blocked ? 1 : 0;
+            crossingData.SerializeInheritance();
+            gameData.SetObjectData(crossingData);
+        }
+        else {
+            var crossingData = new InteractableData {
+                data = new InteractableData.InteractableSubData {
+                    state = _blocked ? 1 : 0
+                },
+                id = ID
+            };
+            crossingData.SerializeInheritance();
+            gameData.SetObjectData(crossingData);
+        }
     }
 }
