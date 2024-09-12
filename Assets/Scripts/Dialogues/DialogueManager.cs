@@ -1,6 +1,8 @@
 using System;
 using CoinPackage.Debugging;
+using CustomInput;
 using Ink.Runtime;
+using LevelTimeChange.TimeChange;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -43,6 +45,7 @@ namespace Dialogues {
         private void Start() {
             dialoguePanel.SetActive(false);
             dialogueText.SetText("No dialogues playing. If you see this, you have a bug.");
+            Interactions.Interactions.Instance.onFocusChange += (object sender, EventArgs e) => EndDialogue();
         }
 
         /// <summary>
@@ -62,6 +65,7 @@ namespace Dialogues {
             _dialogueActive = true;
             dialoguePanel.SetActive(true);
             dialogueStarted.Invoke();
+            CInput.InputActions.Teleport.Disable();
             ContinueDialogue();
             return true;
         }
@@ -77,6 +81,7 @@ namespace Dialogues {
             _dialogueActive = false;
             dialoguePanel.SetActive(false);
             dialogueEnded.Invoke();
+            CInput.InputActions.Teleport.Enable();
             _functionToCallback?.Invoke();
         }
 

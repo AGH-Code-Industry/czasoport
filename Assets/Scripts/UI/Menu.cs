@@ -21,6 +21,7 @@ namespace UI {
 
         /// <summary>
         /// Action called when user press Play button
+        /// 
         /// </summary>
         void PlayAction() {
             DataPersistenceManager.Instance.CreateNewGame();

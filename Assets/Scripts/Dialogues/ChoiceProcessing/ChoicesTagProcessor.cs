@@ -20,7 +20,8 @@ namespace Dialogues.ChoiceProcessing {
                         break;
                     case "getsItem":
                         var getItem = LoadResource<ItemSO>("ItemDefinitions/" + value);
-                        choiceContext.GetItem = getItem;
+                        choiceContext.AddItem(getItem);
+                        //choiceContext.GetItem = getItem;
                         break;
                     default:
                         throw new Exception($"Cannot process tag {key} with value {value}");
@@ -30,8 +31,9 @@ namespace Dialogues.ChoiceProcessing {
             return choiceContext;
         }
 
-        private static Dictionary<string, string> ProcessTags(string[] tagsString) {
-            var dictionary = new Dictionary<string, string>();
+        private static List<KeyValuePair<string, string>> ProcessTags(string[] tagsString) {
+            //var dictionary = new Dictionary<string, string>();
+            List<KeyValuePair<string, string>> dictionary = new List<KeyValuePair<string, string>>();
 
             foreach (var tagString in tagsString) {
                 string[] keyValue = tagString.Split(':', StringSplitOptions.RemoveEmptyEntries);
@@ -39,7 +41,7 @@ namespace Dialogues.ChoiceProcessing {
                 if (keyValue.Length == 2) {
                     string key = keyValue[0].Trim();
                     string value = keyValue[1].Trim();
-                    dictionary[key] = value;
+                    dictionary.Add(new KeyValuePair<string, string>(key, value));
                 }
                 else {
                     Logger.LogError("Invalid tag format. Tag must be in format 'key:value'.");

@@ -10,9 +10,12 @@ using InventorySystem.EventArguments;
 using LevelTimeChange.LevelsLoader;
 using Ink.Runtime;
 using System.IO;
+using DataPersistence;
 using Unity.VisualScripting;
 
-public class TutorialManager : MonoBehaviour {
+public class TutorialManager : MonoBehaviour, IDataPersistence {
+    public bool SceneObject { get; } = false;
+
     int stage = 1;
     List<TutorialStage> _stages = new List<TutorialStage>();
     List<TutorialNotification> _messages = new List<TutorialNotification>();
@@ -42,11 +45,20 @@ public class TutorialManager : MonoBehaviour {
         _stages = ParseJsonArray(json.text);
 
         LevelsManager.Instance.OnLevelChange += FinishTutorialOnLevelChange;
-
-        StartCoroutine(waitForTutorialToBegin(0.01f));
     }
 
-
+    /// <summary>
+    /// Each stage in the tutorial has it's description in the TutorialStages.json file. Every stage has 3 parameters and 1 optional one:
+    /// - action - specifies the action, after which tutorial moves to the next stage (it can be empty, than tutorial mvoes to the next
+    ///     stage on it's own, after some time)
+    /// - conditionSatisfied - it can be:
+    ///     - true - it means that stage doesn't need any addition condition to be satisfied
+    ///     - false - it means that addition condition is not yet satisfied
+    /// - tutorialNotification - displays a messega that comes with the stage:
+    ///     - when 1 message is provided, it is displayed in the middle of the screen
+    ///     - when 3 messages are provided, the second one has to be the key that allows the player to move to the next stage
+    /// - specialCondition - specified the addition condition that has to be satisfied before moving to the next stage
+    /// </summary>
     private List<TutorialStage> ParseJsonArray(string jsonString) {
         List<TutorialStage> tutorialStages = new List<TutorialStage>();
         var jsonArray = jsonString.Trim().TrimStart('[').TrimEnd(']').Split('}');
@@ -149,5 +161,15 @@ public class TutorialManager : MonoBehaviour {
     IEnumerator EndTutorial() {
         yield return new WaitForSeconds(3f);
         NotificationManager.Instance.EndTutorial();
+    }
+
+    public void LoadPersistentData(GameData gameData) {
+        _tutorialFinished = gameData.tutorialFinished;
+        if (!_tutorialFinished)
+            StartCoroutine(waitForTutorialToBegin(0.01f));
+    }
+
+    public void SavePersistentData(ref GameData gameData) {
+        gameData.tutorialFinished = _tutorialFinished;
     }
 }
