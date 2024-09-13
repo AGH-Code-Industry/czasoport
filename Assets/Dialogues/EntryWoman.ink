@@ -13,7 +13,7 @@ Hello, how can I help you?
 Bye. NEXT!
 -> DONE
 === administrator ===
-Find administrator and ask him about it. He should be at the very back of the building.
+I don't know anything about rafinery.
 -> DONE
 
 === tax ===
