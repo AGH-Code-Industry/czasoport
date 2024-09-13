@@ -59,6 +59,7 @@ namespace InteractableObjectSystem.Objects {
             }
             if (interactedWith.Contains(item.ItemSO)) {
                 OpenDoor();
+                Destroy(item.gameObject);
                 NotificationManager.Instance.RaiseNotification(definition.successfulItemInterNotification);
                 return true;
             }
