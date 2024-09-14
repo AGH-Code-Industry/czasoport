@@ -16,7 +16,7 @@ using Unity.VisualScripting;
 public class TutorialManager : MonoBehaviour, IDataPersistence {
     public bool SceneObject { get; } = false;
 
-    int stage = 1;
+    int stage = 0;
     List<TutorialStage> _stages = new List<TutorialStage>();
     List<TutorialNotification> _messages = new List<TutorialNotification>();
     float _timeToDisplayMessage = 1f;
@@ -124,10 +124,14 @@ public class TutorialManager : MonoBehaviour, IDataPersistence {
         yield return new WaitForSeconds(timeToWait);
         NotificationManager.Instance.StartTutorial();
         CInput.InputActions.Movement.Enable();
-        NotificationManager.Instance.RaiseTutorialNotification(_stages[0].GetTutorialNotification());
-        yield return new WaitForSeconds(_timeToDisplayMessage);
-        _stages[1].GetMainAction().performed += OnNextTutorialStage;
-        NotificationManager.Instance.RaiseTutorialNotification(_stages[1].GetTutorialNotification());
+        NotificationManager.Instance.RaiseTutorialNotification(_stages[stage].GetTutorialNotification());
+        if (stage == 0) {
+            yield return new WaitForSeconds(_timeToDisplayMessage);
+            stage++;
+            NotificationManager.Instance.RaiseTutorialNotification(_stages[stage].GetTutorialNotification());
+
+        }
+        _stages[stage].GetMainAction().performed += OnNextTutorialStage;
     }
 
     /// <summary>
@@ -165,11 +169,14 @@ public class TutorialManager : MonoBehaviour, IDataPersistence {
 
     public void LoadPersistentData(GameData gameData) {
         _tutorialFinished = gameData.tutorialFinished;
+        stage = gameData.tutorialStage;
+
         if (!_tutorialFinished)
             StartCoroutine(waitForTutorialToBegin(0.01f));
     }
 
     public void SavePersistentData(ref GameData gameData) {
         gameData.tutorialFinished = _tutorialFinished;
+        gameData.tutorialStage = stage;
     }
 }
