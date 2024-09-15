@@ -19,6 +19,7 @@ namespace LevelTimeChange.TimeChange {
         public bool SceneObject { get; } = false;
 
         public event EventHandler<OnTimeChangeEventArgs> OnTimeChange;
+        public event EventHandler<OnTimeChangeEventArgs> OnTryTimeChange;
         public event EventHandler OnTeleportationEnded;
         public event EventHandler TimeChangeUnlocked;
 
@@ -115,6 +116,12 @@ namespace LevelTimeChange.TimeChange {
                     time = _newTimeLine
                 });
                 StartCoroutine(ChangeTime());
+            }
+            else {
+                OnTryTimeChange?.Invoke(this, new OnTimeChangeEventArgs {
+                    previousTime = actualTime,
+                    time = _newTimeLine
+                });
             }
         }
 

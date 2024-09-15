@@ -21,12 +21,41 @@ namespace UI {
         [SerializeField] private Sprite TwoOrbsBackground;
         [SerializeField] private Sprite ThreeOrbsBackground;
 
+        private TimeUIToogle currentUI;
+        private Transform beginPosition;
+        private bool isMoving = false;
+
         public void UnlockTimeUI() {
             TimeChanger.Instance.OnTimeChange += TimeChanger_OnTimeChange;
+            TimeChanger.Instance.OnTryTimeChange += Instance_OnTryTimeChange;
             TimeChanger.Instance.OnTeleportationEnded += (object sender, EventArgs e) => CheckTeleportAbilities();
             Player.Instance.OnPlayerMoved += Player_OnPlayerMoved;
 
             ChangeSelectedTime(TimeChanger.Instance.actualTime);
+        }
+
+        private void Instance_OnTryTimeChange(object sender, TimeChanger.OnTimeChangeEventArgs e) {
+            beginPosition = currentUI.transform;
+            if (isMoving) return;
+            isMoving = true;
+            StartCoroutine(waiter(0.1f));
+            if (e.previousTime < e.time) {
+                LeanTween.moveLocalX(currentUI.gameObject, currentUI.transform.GetComponent<RectTransform>().localPosition.x + 40, 0.05f)
+                    .setOnComplete(() => {
+                        LeanTween.moveLocalX(currentUI.gameObject, currentUI.transform.GetComponent<RectTransform>().localPosition.x - 40, 0.05f);
+                    });
+            } else {
+                LeanTween.moveLocalX(currentUI.gameObject, currentUI.transform.GetComponent<RectTransform>().localPosition.x - 40, 0.05f)
+                    .setOnComplete(() => {
+                        LeanTween.moveLocalX(currentUI.gameObject, currentUI.transform.GetComponent<RectTransform>().localPosition.x + 40, 0.05f);
+                    });
+            }
+            currentUI.transform.position = beginPosition.position;
+        }
+
+        IEnumerator waiter(float seconds) {
+            yield return new WaitForSeconds(seconds);
+            isMoving = false;
         }
 
         public void UpdateTimeUI() {
@@ -54,6 +83,7 @@ namespace UI {
         }
 
         private void ToggleActualTime(TimeUIToogle timeImage, TimeUIToogle timeStroke, bool actual) {
+            if (actual) currentUI = timeImage;
             timeImage.SetStroke(actual);
             timeStroke.SetStroke(actual);
         }
