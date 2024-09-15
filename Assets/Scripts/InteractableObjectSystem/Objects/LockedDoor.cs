@@ -24,18 +24,19 @@ namespace InteractableObjectSystem.Objects {
         [SerializeField] private List<LockedDoor> doorsInOtherTimes;
 
         [SerializeField] private AudioSource doorAudioSource; // Add AudioSource field - Kasia Psuje
-
+        public EventHandler doorsOpened;
+        public EventHandler doorsClosed;
 
         private BoxCollider2D _collider;
         private BoxCollider2D _passage;
-        private DoorState _state;
+        [SerializeField]
+        private DoorState _state = DoorState.Locked;
         private Animator _animator;
 
         private void Awake() {
             _passage = transform.parent.GetComponent<BoxCollider2D>();
             _collider = GetComponent<BoxCollider2D>();
             _animator = GetComponent<Animator>();
-            _state = DoorState.Locked;
             _passage.enabled = false;
         }
 
@@ -84,6 +85,7 @@ namespace InteractableObjectSystem.Objects {
             foreach (LockedDoor door in doorsInOtherTimes) {
                 door.OpenDoor();
             }
+            doorsOpened?.Invoke(this, EventArgs.Empty);
         }
 
         IEnumerator OpenDoortsWithDelay(float delay) {
@@ -110,6 +112,7 @@ namespace InteractableObjectSystem.Objects {
             foreach (LockedDoor door in doorsInOtherTimes) {
                 door.CloseDoor();
             }
+            doorsClosed?.Invoke(this, EventArgs.Empty);
         }
 
         public override void LoadPersistentData(GameData gameData) {

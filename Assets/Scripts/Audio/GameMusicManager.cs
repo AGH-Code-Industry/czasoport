@@ -1,6 +1,8 @@
 using UnityEngine;
 using LevelTimeChange.TimeChange;
 using UnityEngine.Audio;
+using LevelTimeChange.LevelsLoader;
+using System;
 
 namespace AudioSystem {
     /// <summary>
@@ -36,7 +38,9 @@ namespace AudioSystem {
             _futureMusicState = new MusicState(FutureMusic);
 
             TimeChanger.Instance.OnTimeChange += OnTimeChangeHandler;
+            LevelsManager.Instance.OnLevelChangeFinished += (object sender, EventArgs e) => ApplyNewLevelMusic();
 
+            ApplyNewLevelMusic();
             ChangeMusic(_timeline);
         }
 
@@ -81,6 +85,18 @@ namespace AudioSystem {
                     musicPlayer.Play(_futureMusicState.clip, _futureMusicState.delay);
                     break;
             }
+        }
+
+        public void ApplyNewLevelMusic() {
+            if (LevelsManager.Instance.CurrentLevelManager == null) return;
+            LevelManager levelManager = LevelsManager.Instance.CurrentLevelManager;
+            _pastMusicState.clip = levelManager.PastMusic;
+            _presentMusicState.clip = levelManager.PresentMusic;
+            _futureMusicState.clip = levelManager.FutureMusic;
+            _pastMusicState.delay = 0f;
+            _presentMusicState.delay = 0f;
+            _futureMusicState.delay = 0f;
+            PlayMusic(_timeline);
         }
     }
 

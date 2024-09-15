@@ -23,6 +23,14 @@ namespace LevelTimeChange.LevelsLoader {
         [SerializeField] private GameObject presentPortalHolder;
         [SerializeField] private GameObject futurePortalHolder;
 
+        [SerializeField] private AudioClip pastMusic;
+        [SerializeField] private AudioClip presentMusic;
+        [SerializeField] private AudioClip futureMusic;
+
+        public AudioClip PastMusic => pastMusic;
+        public AudioClip PresentMusic => presentMusic;
+        public AudioClip FutureMusic => futureMusic;
+
         public bool SceneObject { get; } = true;
 
         private List<LevelPortal> _teleports;
