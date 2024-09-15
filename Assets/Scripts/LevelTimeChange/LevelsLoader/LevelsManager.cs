@@ -27,6 +27,7 @@ namespace LevelTimeChange.LevelsLoader {
 
         public LevelManager CurrentLevelManager => _currentLevelManager;
         public event EventHandler OnLevelChange;
+        public event EventHandler OnLevelChangeFinished;
 
         /// <summary>
         /// All currently loaded levels.
@@ -129,6 +130,7 @@ namespace LevelTimeChange.LevelsLoader {
             yield return new WaitForSeconds(_settings.platformChangeAnimLength / 4);
             CInput.MovementLock.Unlock(key);
             yield return new WaitForSeconds(_settings.platformChangeAnimLength / 4);
+            OnLevelChangeFinished?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>

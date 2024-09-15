@@ -38,7 +38,7 @@ namespace AudioSystem {
             _futureMusicState = new MusicState(FutureMusic);
 
             TimeChanger.Instance.OnTimeChange += OnTimeChangeHandler;
-            LevelsManager.Instance.OnLevelChange += (object sender, EventArgs e) => ApplyNewLevelMusic();
+            LevelsManager.Instance.OnLevelChangeFinished += (object sender, EventArgs e) => ApplyNewLevelMusic();
 
             ApplyNewLevelMusic();
             ChangeMusic(_timeline);
@@ -89,9 +89,14 @@ namespace AudioSystem {
 
         public void ApplyNewLevelMusic() {
             if (LevelsManager.Instance.CurrentLevelManager == null) return;
-            PastMusic = LevelsManager.Instance.CurrentLevelManager.PastMusic;
-            PresentMusic = LevelsManager.Instance.CurrentLevelManager.PresentMusic;
-            FutureMusic = LevelsManager.Instance.CurrentLevelManager.FutureMusic;
+            LevelManager levelManager = LevelsManager.Instance.CurrentLevelManager;
+            _pastMusicState.clip = levelManager.PastMusic;
+            _presentMusicState.clip = levelManager.PresentMusic;
+            _futureMusicState.clip = levelManager.FutureMusic;
+            _pastMusicState.delay = 0f;
+            _presentMusicState.delay = 0f;
+            _futureMusicState.delay = 0f;
+            PlayMusic(_timeline);
         }
     }
 
