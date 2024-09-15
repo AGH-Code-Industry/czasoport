@@ -1,23 +1,24 @@
 -> main
 
 === main ===
-Oh hello there, are you gonna ignore me like the rest of the tribe? 
-    * [Why do they ignore you?]
-        -> shame
-    * [...junkie]
-    ->DONE
-        
+Pss. Psst, hi my friend. Do you have a fire?
+ *[A fire? What would you need fire for? Don't you also have lava almost all around you?]
+  -> acces
+ * [Sorry, I don't have fire.]
+  -> bywaj
+
 === bywaj ===
-Oh...
+Damn it...Noone has fire for a poor me tlakahanian this days..
 -> DONE
 
-== shame ==
-You see... they don't exactly approve of my hobby. I would say it's quite unhealthy... By the way, do you have fire? 
-    * [Exhchange #requiresItem: Torch #getsItem: BeigeGem]
-        -> trade
-    * [I don't. Sorry.]
-        -> bywaj
-        
+=== acces ===
+Yeaah, well. Noone wants to see me near those places. Please friend give me a bit of fire and I will give you...a glue?
+How does that sound?
+* [Exhchange #requiresItem: pochodnia_plonaca #getsItem: klej]
+-> trade
+*[No, sorry.]
+->bywaj
+
 === trade ===
-Ahh, that's it. Thank you stranger. Here, have this gem, perhaps you will find some use for it.
+Hell yeah. Thanks man!
 -> DONE
