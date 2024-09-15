@@ -44,7 +44,8 @@ namespace UI {
                     .setOnComplete(() => {
                         LeanTween.moveLocalX(currentUI.gameObject, currentUI.transform.GetComponent<RectTransform>().localPosition.x - 40, 0.05f);
                     });
-            } else {
+            }
+            else {
                 LeanTween.moveLocalX(currentUI.gameObject, currentUI.transform.GetComponent<RectTransform>().localPosition.x - 40, 0.05f)
                     .setOnComplete(() => {
                         LeanTween.moveLocalX(currentUI.gameObject, currentUI.transform.GetComponent<RectTransform>().localPosition.x + 40, 0.05f);
