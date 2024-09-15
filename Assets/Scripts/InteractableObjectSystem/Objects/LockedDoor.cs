@@ -28,14 +28,14 @@ namespace InteractableObjectSystem.Objects {
 
         private BoxCollider2D _collider;
         private BoxCollider2D _passage;
-        private DoorState _state;
+        [SerializeField]
+        private DoorState _state = DoorState.Locked;
         private Animator _animator;
 
         private void Awake() {
             _passage = transform.parent.GetComponent<BoxCollider2D>();
             _collider = GetComponent<BoxCollider2D>();
             _animator = GetComponent<Animator>();
-            _state = DoorState.Locked;
             _passage.enabled = false;
         }
 
