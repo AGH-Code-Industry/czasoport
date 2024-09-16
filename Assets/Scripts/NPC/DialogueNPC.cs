@@ -20,5 +20,9 @@ namespace NPC {
             InteractionHand();
             return false;
         }
+
+        public void SetDialogue(TextAsset dialogue) {
+            this.dialogue = dialogue;
+        }
     }
 }

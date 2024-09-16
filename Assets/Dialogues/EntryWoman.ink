@@ -20,7 +20,7 @@ I don't know anything about rafinery.
 Hmmm. From what i remember he didn't fill the A38 form which was required for some tax assesment. Do I have the form?
 *[No.]
 -> okienko1
-*[Exhchange #requiresItem: A38 #getsItem: cleaner_to_artist]
+*[Exhchange #requiresItem: A38]
 -> trade
 
 
