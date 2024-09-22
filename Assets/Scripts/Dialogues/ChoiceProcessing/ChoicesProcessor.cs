@@ -4,7 +4,9 @@ using Ink.Runtime;
 using InteractableObjectSystem;
 using InventorySystem;
 using Items;
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Dialogues {
     public class ChoicesProcessor {
@@ -15,6 +17,8 @@ namespace Dialogues {
             _choicesPanel = choicesPanel;
             _choicesPrefab = choicesPrefab;
         }
+
+        public EventHandler<OnEchangeEventArgs> onEchange;
 
         public bool ProcessChoices(Story story) {
             foreach (Transform child in _choicesPanel.transform) {
@@ -44,6 +48,9 @@ namespace Dialogues {
                 // Item should be always available to remove, since this option is only available if the item is in the inventory
                 // But we can TODO add check here later
                 if (choiceContext.RequiresItem) {
+                    onEchange?.Invoke(this, new OnEchangeEventArgs() {
+                        itemSO = choiceContext.RequiredItem
+                    });
                     Inventory.Instance.RemoveItem(choiceContext.RequiredItem);
                 }
 

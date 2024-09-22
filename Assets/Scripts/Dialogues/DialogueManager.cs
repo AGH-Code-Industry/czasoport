@@ -25,7 +25,7 @@ namespace Dialogues {
         private readonly CLogger _logger = Application.Loggers.LoggersList[Application.Loggers.LoggerType.DIALOGUES];
 
 
-        private ChoicesProcessor _choicesProcessor;
+        public ChoicesProcessor _choicesProcessor;
         private Story _currentStory;
         private bool _dialogueActive;
         private bool _hasAvailableChoices;

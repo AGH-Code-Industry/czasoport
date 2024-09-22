@@ -18638,6 +18638,14 @@ PrefabInstance:
       value: LevelManager
       objectReference: {fileID: 0}
     - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
+      propertyPath: pastMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4555a4534f0669f42a90c66ea220802e, type: 3}
+    - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
+      propertyPath: futureMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: d8f81375d60975c478b182aaf49de3f2, type: 3}
+    - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
       propertyPath: currentLevel
       value: 
       objectReference: {fileID: 11400000, guid: 6c77fda041c3f8f4a9ed294e9aad100c, type: 2}
@@ -18645,6 +18653,10 @@ PrefabInstance:
       propertyPath: levelContent
       value: 
       objectReference: {fileID: 1902030874}
+    - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
+      propertyPath: presentMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: f4c7be125cd096345ab75a59b1d86dd4, type: 3}
     - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
       propertyPath: pastPortalHolder
       value: 
@@ -18672,7 +18684,7 @@ PrefabInstance:
     - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
       propertyPath: neighborLevels.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: b5f89fb8367cf377c89e6baa01aece6b, type: 2}
+      objectReference: {fileID: 11400000, guid: 526796cbb62b8b14c9f4b9a00daa934b, type: 2}
     - target: {fileID: 7497490790930085883, guid: fc6ddbc5d7983b84697ea7d62249c5b2, type: 3}
       propertyPath: teleportsHolders.Array.data[0]
       value: 
@@ -29547,7 +29559,7 @@ PrefabInstance:
     - target: {fileID: 5875354483563039617, guid: b85c762bb41a4104491d6c619ae515f7, type: 3}
       propertyPath: destinedLevel
       value: 
-      objectReference: {fileID: 11400000, guid: b5f89fb8367cf377c89e6baa01aece6b, type: 2}
+      objectReference: {fileID: 11400000, guid: 526796cbb62b8b14c9f4b9a00daa934b, type: 2}
     - target: {fileID: 5875354483563039622, guid: b85c762bb41a4104491d6c619ae515f7, type: 3}
       propertyPath: m_Name
       value: Portal (1)
