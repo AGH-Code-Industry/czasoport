@@ -90,6 +90,7 @@ namespace InteractableObjectSystem.Objects {
             }
             else {
                 _lockedDoor.CloseDoor();
+                _lockedDoor.LockDoor();
             }
         }
     }

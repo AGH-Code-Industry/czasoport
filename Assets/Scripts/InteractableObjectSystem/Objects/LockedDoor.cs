@@ -74,6 +74,12 @@ namespace InteractableObjectSystem.Objects {
             CDebug.Log("Unlocked");
         }
 
+        public void LockDoor() {
+            _state = DoorState.Locked;
+            _collider.enabled = true;
+            CDebug.Log("Locked");
+        }
+
         public void OpenDoor() {
             if (_state == DoorState.Opened)
                 return;
