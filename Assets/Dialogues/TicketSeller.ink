@@ -13,10 +13,8 @@ Then go away, and don't create an artificial queue. NEXT!
 
 === museum_tickets ===
 Tickets to the museum. You can't enter without one.
-You can buy normal for one blue gem and discounted for a small green gem.
+You can buy normal for one 10 blue gems and discounted for 10 green gems.
 Discounted only if you are citizen of this city,
-* [Exhchange #requiresItem: torch #getsItem: ticket]
--> trade
 *[No, I don't have the gems.]
 ->bywaj
 
