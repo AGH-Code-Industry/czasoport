@@ -14,7 +14,7 @@ Damn it...Noone has fire for a poor me tlakahanian this days..
 === acces ===
 Yeaah, well. Noone wants to see me near those places. Please friend give me a bit of fire and I will give you...a glue?
 How does that sound?
-* [Exhchange #requiresItem: pochodnia_plonaca #getsItem: klej]
+* [Exhchange #requiresItem: burningTorch #getsItem: glue]
 -> trade
 *[No, sorry.]
 ->bywaj
