@@ -25,7 +25,7 @@ What happened? I don't remember myself at this point, the atl level was rising s
 === glue ===
 I am slowly dying anyways, but if you had a glue or something else to attach my arm back... That would allow me to leave in peace.
 I am willing to even give you this mace of power in return. Do you want that?
-* [Exchange #requiresItem: klej #getsItem: bulawa]
+* [Exchange #requiresItem: glue #getsItem: bulawa]
         -> trade
 
 * [I don't have anything like that. Sorry..]
