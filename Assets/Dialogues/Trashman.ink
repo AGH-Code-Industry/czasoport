@@ -18,12 +18,12 @@ I'm just a cleaner, I don't know anything about that.
 === gem ===
 Oh, I found it on the ground near the entrance to the museum. If you want it I can give it to you but can you maybe help me a little?
     *[Sure, how can I help you?]
-        -> tax
- 
-     *[I don't have time for that right now.]
-        -> DONE
+       -> tax
+
+    *[I don't have time for that right now.]
+       -> DONE
 
 === tax ===
-Oh thanks. Okay listen. I never wanted to be a cleaner here, I want to be a musician, but some lady there told me a few months ago that I commited some kind of tax fraud and I need to do social work now. You look clever, I didn't commit any froud, maybe you can clear that out?
+Oh thanks. Okay listen. I never wanted to be a cleaner here, I want to be a musician, but some lady there told me a few months ago that I commited some kind of tax fraud and I need to do social work now. You look clever, I didn't commit any fraud, maybe you can clarify my situation?
 *[I will see what I can do.]
 -> DONE

@@ -4,11 +4,11 @@
 Hi, are you enjoying the exhibition?
     *[Who are you?]
         -> guard
-    * [I would enjoy it more if I knew what is it. Can you tell me a bit about those?]
+    * [I'd enjoy it more if I knew what it is. Can you tell me a bit about those?]
         -> exhibition
     * [Quite a bit, yes. But what does this sign say?]
         -> fire_hazard
-    * [Yes thank you for asking. Bye.]
+    * [I'm just passing by, thanks for asking though. Bye.]
         -> bye
 
 === bye ===
@@ -31,18 +31,16 @@ I'm not an expert myself haha, but I will try. This is for example a mace that w
 
 === fire_hazard ===
 Oh, it's a safety rule. You see, some of the things here are rather vulnerable and fire and heat can damage them.
-You've probably noticed how we all love atl right? The fire here is to remind everyone to not bring anything hot here.
+You've probably noticed how we all love atl right? The fire here is to remind everyone not to bring anything hot here.
 *[What happens if they do?]
 -> escape
 
 
 
 === escape ===
-Don't worry, nothing too bad, the museum just starts a super cold mode, and everyone have to leave the building immediately unless they want to harden and become a stone statue. But that way any fire, atl or anything else that is hot is immediately neutralized.
+Don't worry, nothing bad, the museum simply starts a Super Cold Mode Procedure, and everyone have to leave the building as fast as they can, unless they want to harden and become a stone statue. That way any heat source including atl, is immediately neutralized.
 
-*[Oh okay. I will remember that. Bye]
+*[Oh okay. I will remember that. Bye.]
 -> bye
 
-=== trade ===
-Thank you traveler! Now we can officially open the gates! Let's go people!
 ->DONE
