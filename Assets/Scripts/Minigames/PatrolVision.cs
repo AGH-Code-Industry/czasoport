@@ -26,7 +26,7 @@ namespace Minigames {
 
         private void OnTriggerStay2D(Collider2D other) {
             if (other.gameObject.CompareTag("Player")) {
-                if (!_toMinigame) return;
+                if (!_toMinigame && !stealthMissionManager.TargetInHand) return;
                 stealthMissionManager.RestartMinigame();
             }
         }
