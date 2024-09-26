@@ -4,7 +4,7 @@
 I don't recognize you. What are you doing here?
     *[Who are you?]
         -> mayor
-    * [What is happening here? ]
+    * [What is happening here?]
         -> parade
     * [Sorry, didn't mean to disturb you.]
         -> bye
@@ -13,21 +13,21 @@ I don't recognize you. What are you doing here?
 Goodbye...
 -> DONE
 === mayor ===
-I'm the most important person in this city. I'm the mayor. But I lack the most important thing in the city which is my mace so probably that's why you didn't recognize me.
+I'm the most important person in this city - the mayor. But I lack the most important thing in the city - my mace. Perhaps, that's why you didn't recognize me.
 
-*[Why you don't have it?]
+*[Why don't you have it?]
 ->lost_mace
 
 === lost_mace ===
-I've lost it somewhere. I'm not sure where. Can you look for it? It's very important please. Give it to me when you find it.
-*[Okay I will look for it]
+It has got lost in quite strange circumstances. Hmm, could I ask you for a favor, traveler? I'd be delighted if you could find it and deliver to me.
+*[Okay, I will search for your mace.]
 -> bye
-*[Exhchange #requiresItem: bulawa #getsItem: parada_se_idzie]
+*[Exchange #requiresItem: bulawa #getsItem: parada_se_idzie]
 -> trade
 
 
 === parade ===
-We are having a big parade to officially open new tombs. But we can't open it without my mace...
+We are having a grand parade to officially celebrate opening of the new tombs. But what is a city parade without its mayor with his magnificent mace?
 *[What happened to your mace?]
 -> lost_mace
 *[Good luck with it. Bye]
