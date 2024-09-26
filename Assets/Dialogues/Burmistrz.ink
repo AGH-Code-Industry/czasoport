@@ -22,7 +22,7 @@ I'm the most important person in this city - the mayor. But I lack the most impo
 It has got lost in quite strange circumstances. Hmm, could I ask you for a favor, traveler? I'd be delighted if you could find it and deliver to me.
 *[Okay, I will search for your mace.]
 -> bye
-*[Exchange #requiresItem: bulawa #getsItem: parada_se_idzie]
+*[Exchange #requiresItem: bulawa]
 -> trade
 
 
