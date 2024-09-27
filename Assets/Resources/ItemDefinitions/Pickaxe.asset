@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5ce5931d7433ff46b4ea648e04d74f4, type: 3}
-  m_Name: CzescOdGrajka
+  m_Name: Pickaxe
   m_EditorClassIdentifier: 
-  itemName: CzescOdGrajka
+  itemName: Pickaxe
   description: 
-  prefab: {fileID: 6366665273476071232, guid: 5dc91314b6ee5d642be2c69ecc9b9c22, type: 3}
-  image: {fileID: 21300000, guid: 297d53cc828f3c74ea5974a7be6eefc4, type: 3}
+  prefab: {fileID: 506710448698846194, guid: 56086961257da46468899853b745d006, type: 3}
+  image: {fileID: 21300000, guid: e9a32480c2fb1f448b2cf3ccb57b906d, type: 3}
   durability: 1
   interactionDistance: 0
   pickUpNotification:
-    message: An old timeport part. Must be Marcu's
-    displayTime: 1
+    message: Nice pickaxe, light, sharp...
+    displayTime: 3
   dropNotification:
     message: 
     displayTime: 0
