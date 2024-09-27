@@ -56,11 +56,8 @@ namespace Items {
         }
 
         public void LoadPersistentData(GameData gameData) {
-            //if (!gameData.IsLevelSaved(LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId)) return;
-
-            if (gameData.playerGameData.inventory.Any(it => it.id.Equals(ID))) {
-                if (!BlockDestroying && !Hidden)
-                    Destroy(gameObject);
+            if (gameData.playerGameData.inventory.Any(it => it.id.Equals(ID)) || gameData.itemHideout.Any(it => it.Equals(ID))) {
+                if (!BlockDestroying) Destroy(gameObject);
                 return;
             }
 
@@ -75,8 +72,7 @@ namespace Items {
                     .Value.levelContent.transform;
                 transform.position = itemData.data.position;
                 Hidden = itemData.data.hidden;
-                if (Hidden)
-                    Hide();
+                if (Hidden) Destroy(gameObject);
             }
         }
 
