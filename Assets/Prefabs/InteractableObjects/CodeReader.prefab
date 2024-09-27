@@ -1574,6 +1574,8 @@ MonoBehaviour:
   finishGameUI: {fileID: 1430023265}
   closeUIButton: {fileID: 580887421}
   codeUI: {fileID: 700120661}
+  sideDoors: {fileID: 0}
+  codeReader: {fileID: 3361149444581711952}
 --- !u!1 &418068178987469157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,8 +1609,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 418068179009678175}
   - {fileID: 1399763097}
+  - {fileID: 418068179009678175}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &418068178987469179
