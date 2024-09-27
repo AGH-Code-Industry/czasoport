@@ -4,7 +4,7 @@
 Hi. Did you managed to get the mineral?
     *[Not yet.]
         -> DONE
-    *[Yes, #requiresItem: czysty_mineral]
+    *[Yes, #requiresItem: KrysztalRozbity #getsItem: jakasCzescCzasoportu]
         -> czysty_mineral
     * [Sorry, didn't mean to disturb you.]
         -> bywaj
@@ -15,5 +15,5 @@ Bye.
 
 === czysty_mineral ===
 Wow it looks amazing. Thank you for your help it will definietely move our research forward. Please, take this as a thank you.
-[ getItem: gem2]
--> DONE
+    *[Thank you]
+        -> DONE
