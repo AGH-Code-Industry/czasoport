@@ -96,7 +96,7 @@ namespace InventorySystem {
             }
 
             //_selectedSlot = 0;
-
+            /*
             foreach (var hideoutItemID in gameData.itemHideout) {
                 if (ItemHideoutContainsItem(hideoutItemID))
                     continue;
@@ -112,6 +112,7 @@ namespace InventorySystem {
                 item.ID = itemData.id;
                 item.BlockDestroying = true;
             }
+            */
         }
 
         public void SavePersistentData(ref GameData gameData) {
@@ -129,7 +130,7 @@ namespace InventorySystem {
                     id = item.ID
                 });
             }
-
+            /*
             gameData.itemHideout.Clear();
             for (var i = 0; i < itemHideout.childCount; i++) {
                 var child = itemHideout.GetChild(i);
@@ -138,6 +139,7 @@ namespace InventorySystem {
                     continue;
                 gameData.itemHideout.Add(item.ID);
             }
+            */
         }
 
         /// <summary>
