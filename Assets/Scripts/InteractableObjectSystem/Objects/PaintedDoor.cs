@@ -6,6 +6,7 @@ using DataPersistence.DataTypes;
 using InventorySystem;
 using Items;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace InteractableObjectSystem.Objects {
     public class PaintedDoor : PersistentInteractableObject {
@@ -16,6 +17,7 @@ namespace InteractableObjectSystem.Objects {
             Green = 3
         }
 
+        public UnityEvent doOnGreen;
 
         [SerializeField] private ItemSO bluePaint;
         [SerializeField] private ItemSO yellowPaint;
@@ -68,6 +70,7 @@ namespace InteractableObjectSystem.Objects {
                     break;
                 case DoorColor.Green:
                     _spriteRenderer.color = new Color(0f, 1f, 0f);
+                    doOnGreen?.Invoke();
                     break;
             }
         }
