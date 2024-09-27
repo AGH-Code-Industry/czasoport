@@ -14,5 +14,5 @@ Bye.
 -> DONE
 
 === mineral ===
-oh. it looks like you need to put it into some strong acid for a long time to extract it from the stone. As my colleague for it.
+oh. it looks like you need to put it into some strong acid for a long time to extract it from the stone. We will work on it, maybe we will have in in ...100 years? Look for it in the future hehe. See you!
 -> DONE

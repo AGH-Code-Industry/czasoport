@@ -1,10 +1,10 @@
 -> main
 
 === main ===
-Hi. I've heard you get the mineral, is that true?
+Hi. Are you here for the acid for the mineral? I'm waiting for 70 years already...
     *[Not yet.]
         -> DONE
-    *[Yes, #requiresItem: geoda_zamknieta]
+    *[Yes, I have this. Can you help? #requiresItem: geoda_zamknieta]
         -> kwas
     * [Sorry, didn't mean to disturb you.]
         -> bywaj
