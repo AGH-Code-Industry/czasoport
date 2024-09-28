@@ -7,10 +7,10 @@ namespace AudioSystem {
     /// Base class for associating events with sound effects.
     /// </summary>
     public abstract class SFX : MonoBehaviour {
-
         public AudioSource audioSource;
+        public AudioSource walkAudioSource;
         public AudioMixer audioMixer;
-
+        
         void Start() {
             ApplyAudioSettings();
             BindSoundsWithEvents();
@@ -19,6 +19,7 @@ namespace AudioSystem {
         private void ApplyAudioSettings() {
             float volumeInDb = PlayerPrefs.GetFloat("SFXVolume", 1.0f);
             audioMixer.SetFloat("SFXVolume", volumeInDb);
+           
         }
 
         protected abstract void BindSoundsWithEvents();
@@ -33,5 +34,6 @@ namespace AudioSystem {
             audioSource.clip = clip;
             audioSource.Play();
         }
+        
     }
 }
