@@ -10,6 +10,7 @@ using LevelTimeChange.TimeChange;
 using PlayerScripts;
 using Settings;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Utils;
 
 namespace Minigames {
@@ -20,7 +21,8 @@ namespace Minigames {
         private GameObject _toSteal;
 
         private ItemSO _itemToSteal;
-        private Vector3 _targetPosition;
+        private Item _item = null;
+        [SerializeField] private Vector3 targetPosition;
         [SerializeField] private CheckPlayerInArea _area;
         [SerializeField] private Transform startPoint;
         [SerializeField] private Animator animator;
@@ -34,27 +36,45 @@ namespace Minigames {
             }
         }
 
-        private void Awake() {
-            Item item = null;
-            foreach (Transform child in transform) {
-                if(child.TryGetComponent<Item>(out item)) break;
-            }
-
-            if (item) _toSteal = item.gameObject;
-            else {
-                foreach (Transform child in Inventory.Instance.itemHideout)
-                    if (child.TryGetComponent<Item>(out item))
-                        if (item.ID.Equals(toStealId)) break;
-            }
-            
-            if (item) _toSteal = item.gameObject;
-        }
-
         private void Start() {
+            FindTarget();
+            Debug.Log(_toSteal);
+
+            animator = GameObject.FindGameObjectWithTag("TimeChangeAnimation").GetComponent<Animator>();
             StartMinigame();
         }
 
+        private void FindTarget() {
+            foreach (Transform child in transform) {
+                if (child.TryGetComponent(out _item)) {
+                    if (_item.ID.Equals(ID)) break;
+                }
+                else _item = null;
+            }
+
+            if (_item) {
+                _toSteal = _item.gameObject;
+                return;
+            }
+
+            foreach (Transform child in Inventory.Instance.itemHideout) {
+                if (child.TryGetComponent(out _item)) {
+                    if (_item.ID.Equals(toStealId)) break;
+                }
+                else _item = null;
+            }
+
+            if (_item) {
+                _toSteal = _item.gameObject;
+                _itemToSteal = _item.ItemSO;
+                if (Inventory.Instance.ContainsItem(_itemToSteal))
+                    TargetInHand = true;
+            }
+        }
+
         public void RestartMinigame() {
+            FindTarget();
+            Debug.Log(_toSteal);
             if (!_playerInArea) return;
             if (TargetInHand) ResetTarget();
             if (!_duringRestartingPos) StartCoroutine(SetPlayerToStart());
@@ -84,16 +104,13 @@ namespace Minigames {
             TargetInHand = false;
             Inventory.Instance.RemoveItem(_itemToSteal);
             _toSteal.transform.parent = transform;
-            _toSteal.transform.position = _targetPosition;
+            _toSteal.transform.localPosition = targetPosition;
             _toSteal.GetComponent<SpriteRenderer>().enabled = true;
             _toSteal.GetComponent<CircleCollider2D>().enabled = true;
         }
 
         public void StartMinigame() {
             if (_itemToSteal == null) return;
-            _itemToSteal = _toSteal.GetComponent<Item>().ItemSO;
-            _targetPosition = _toSteal.transform.position;
-            animator = TimeChanger.Instance.Animator;
             _animationTime = DeveloperSettings.Instance.tpcSettings.timelineChangeAnimLength;
             Inventory.Instance.ItemInserted += IsItemTargetInsert;
             Inventory.Instance.ItemRemoved += IsItemTargetRemove;

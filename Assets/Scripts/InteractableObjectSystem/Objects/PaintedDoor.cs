@@ -7,6 +7,7 @@ using InventorySystem;
 using Items;
 using UnityEngine;
 using UnityEngine.Events;
+using Utils;
 
 namespace InteractableObjectSystem.Objects {
     public class PaintedDoor : PersistentInteractableObject {
@@ -18,12 +19,14 @@ namespace InteractableObjectSystem.Objects {
         }
 
         public UnityEvent doOnGreen;
+        public List<SerializableGuid> emptyBuckets = new();
 
         [SerializeField] private ItemSO bluePaint;
         [SerializeField] private ItemSO yellowPaint;
+        [SerializeField] private ItemSO emptyBucket;
 
+        private int bucketsCounter = 0;
         private SpriteRenderer _spriteRenderer;
-
         private DoorColor _state = DoorColor.Gray;
 
         private void Awake() {
@@ -56,8 +59,15 @@ namespace InteractableObjectSystem.Objects {
             return false;
         }
 
-        private void ChangeState(DoorColor newState) {
+        private void ChangeState(DoorColor newState, bool createBucket = true) {
+            Item i;
             _state = newState;
+            if (createBucket) {
+                i = Instantiate(emptyBucket.prefab,transform).GetComponent<Item>();
+                i.transform.localPosition = new Vector3(0.338f, -0.65f, 0f);
+                i.ID = emptyBuckets[bucketsCounter];
+                bucketsCounter++;
+            }
             switch (_state) {
                 case DoorColor.Gray:
                     _spriteRenderer.color = new Color(1f, 1f, 1f);
@@ -82,16 +92,16 @@ namespace InteractableObjectSystem.Objects {
             var doorData = gameData.GetObjectData<InteractableData>(ID);
             switch (doorData.data.state) {
                 case 0:
-                    ChangeState(DoorColor.Gray);
+                    ChangeState(DoorColor.Gray,false);
                     break;
                 case 1:
-                    ChangeState(DoorColor.Blue);
+                    ChangeState(DoorColor.Blue,false);
                     break;
                 case 2:
-                    ChangeState(DoorColor.Yellow);
+                    ChangeState(DoorColor.Yellow,false);
                     break;
                 case 3:
-                    ChangeState(DoorColor.Green);
+                    ChangeState(DoorColor.Green,false);
                     break;
             }
         }
