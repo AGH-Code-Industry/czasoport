@@ -21,7 +21,6 @@ namespace AudioSystem {
             Debug.Log(value);
             audioMixer.SetFloat("SFXVolume", value);
             if (value <= -24f) audioMixer.SetFloat("SFXVolume", -80f);
-            
         }
     }
 }
