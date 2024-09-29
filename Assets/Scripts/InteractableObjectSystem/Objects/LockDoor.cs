@@ -23,6 +23,7 @@ namespace InteractableObjectSystem.Objects {
         public EventHandler doorsClosed;
 
         [SerializeField] private BoxCollider2D collider;
+        [SerializeField] private DoorLockState lockState = DoorLockState.Opened;
         [SerializeField] private Animator animator;
 
         public void UnlockDoor() {
