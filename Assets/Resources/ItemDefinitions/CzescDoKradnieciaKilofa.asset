@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ce5931d7433ff46b4ea648e04d74f4, type: 3}
+  m_Name: CzescDoKradnieciaKilofa
+  m_EditorClassIdentifier: 
+  itemName: CzescDoKradnieciaKilofa
+  description: 
+  prefab: {fileID: 1789037776791134096, guid: babf6415cc7e3de4a82d1fb8dab5e34a, type: 3}
+  image: {fileID: 21300000, guid: f55f2feeb69f850468d979eb6c74d64c, type: 3}
+  durability: 1
+  interactionDistance: 0
+  pickUpNotification:
+    message: Part of a pickaxe
+    displayTime: 3
+  dropNotification:
+    message: 
+    displayTime: 0

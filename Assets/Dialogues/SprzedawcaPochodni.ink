@@ -14,7 +14,7 @@ Goodbye, then. Come back if you need a torch!
 
 === torch ===
 Hmm, for this one? One pretty crystal I would say.
-* [Exhchange #requiresItem: ShinyRock #getsItem: torch]
+* [Exhchange #requiresItem: ShinyRock #getsItem: Torch]
         -> trade
 
 * [I don't need it now. Bye.]
