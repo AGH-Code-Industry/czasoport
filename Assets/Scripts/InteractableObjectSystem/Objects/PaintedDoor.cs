@@ -18,7 +18,6 @@ namespace InteractableObjectSystem.Objects {
             Green = 3
         }
 
-        public UnityEvent doOnHand;
         public UnityEvent doOnGreen;
         public List<SerializableGuid> emptyBuckets = new();
 
@@ -35,13 +34,11 @@ namespace InteractableObjectSystem.Objects {
         }
 
         public override void InteractionHand() {
-            doOnHand?.Invoke();
             NotificationManager.Instance.RaiseNotification(definition.failedHandInterNotification);
         }
 
         public override bool InteractionItem(Item item) {
             if (_state == DoorColor.Green) {
-                doOnHand?.Invoke();
                 return false;
             }
 
@@ -58,7 +55,6 @@ namespace InteractableObjectSystem.Objects {
                 return true;
             }
 
-            doOnHand?.Invoke();
             NotificationManager.Instance.RaiseNotification(definition.failedItemInterNotification);
             return false;
         }
