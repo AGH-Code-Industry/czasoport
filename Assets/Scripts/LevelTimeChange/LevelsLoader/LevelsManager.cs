@@ -79,7 +79,7 @@ namespace LevelTimeChange.LevelsLoader {
             _logger.Log($"Changing level to {destinedLevelInfo}, destined portal: {destinationPortal}");
             OnLevelChange?.Invoke(this, EventArgs.Empty);
 
-            DataPersistenceManager.Instance.SaveGame();
+            //DataPersistenceManager.Instance.SaveGame();
 
             // Order of actions in this function is crucial, do not change it unless
             // you know what you are doing
