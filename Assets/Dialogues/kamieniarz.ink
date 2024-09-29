@@ -1,10 +1,10 @@
 -> main
 
 === main ===
-Hi. I've heard you get the mineral, is that true?
+Hi. Are you here for the acid for the mineral? I'm waiting for 70 years already...
     *[Not yet.]
         -> DONE
-    *[Yes, #requiresItem: geoda_zamknieta]
+    *[Yes, I have this. Can you help? #requiresItem: KrysztalCaly #getsItem: Kwas #getsItem: KrysztalCaly]
         -> kwas
     * [Sorry, didn't mean to disturb you.]
         -> bywaj
@@ -14,5 +14,5 @@ Bye.
 
 === kwas ===
 Hmmm, it indeed looks astonishing. I think I have something that will work just fine for it. It works very slowly so maybe use it in the past so that we have results of it in the future? Please be carefull. 
-[ getItem: kwas]
+*[Thank you]
 -> DONE
