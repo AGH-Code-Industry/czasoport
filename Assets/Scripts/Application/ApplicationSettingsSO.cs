@@ -16,6 +16,9 @@ namespace Application {
         [Tooltip("Name of the scene to load when press Play button on menu.")]
         public string sceneToLoadName;
 
+        [Tooltip("Name of the scene to load when press Home button on menu.")]
+        public string sceneMenuName;
+
         [Tooltip("Time that the notificatino will be desplaying on screen")]
         public float notificationDuration;
         [Header("Resource paths")]
