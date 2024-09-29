@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7256744986904192265}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7256744986904192268
 SpriteRenderer:
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa2c9c1c68741b4866143bb28159ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scale: 0.02
 --- !u!114 &7256744986904192267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,12 +114,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   definition: {fileID: 11400000, guid: 1e37bcc5a50237240b6b375717ad1eac, type: 2}
+  <ID>k__BackingField:
+    value: 
   interactedWith:
   - {fileID: 0}
   openingSpeed: 0
   _openingDelay: 0
   doorsInOtherTimes: []
   doorAudioSource: {fileID: 5526166209766798825}
+  _state: 0
 --- !u!61 &8667698351802201332
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -129,6 +133,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -154,7 +177,7 @@ AudioSource:
   m_GameObject: {fileID: 7256744986904192265}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5638593604618275936, guid: 93c4e5565aef677b499f70f4b9e6a7bf, type: 2}
   m_audioClip: {fileID: 8300000, guid: 2d52cc032f454bc4e9072f72883c9656, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
