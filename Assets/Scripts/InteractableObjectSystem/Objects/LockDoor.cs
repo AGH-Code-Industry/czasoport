@@ -65,7 +65,8 @@ namespace InteractableObjectSystem.Objects {
             if (lockState == DoorLockState.Closed) {
                 OpenDoor();
                 return;
-            } else if (lockState == DoorLockState.Locked) return;
+            }
+            else if (lockState == DoorLockState.Locked) return;
             Debug.Log("Closing");
             animator.SetTrigger("CloseDoors");
             lockState = DoorLockState.Closed;
