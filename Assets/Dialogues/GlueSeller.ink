@@ -2,9 +2,9 @@
 
 === main ===
 Hello traveler, I don't think I recognize you. Are you interested in any of my goods?
-    * [Exhchange #requiresItem: Rock #getsItem: Rock]
+    * [Exchange #requiresItem: Rock #getsItem: Rock]
         -> trade
-    * [Exhchange #requiresItem: Crystal #getsItem: Torch #getsItem: Torch]
+    * [Exchange #requiresItem: Crystal #getsItem: Torch #getsItem: Torch]
         -> trade
     * [I don't want anything. Bye.]
         -> bywaj

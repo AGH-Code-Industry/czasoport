@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa2c9c1c68741b4866143bb28159ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scale: 0.02
 --- !u!95 &4424710348276894433
 Animator:
   serializedVersion: 5
@@ -130,7 +131,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4966375393726669735}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -198,3 +199,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   definition: {fileID: 0}
   dialogue: {fileID: 0}
+  afterDialog:
+    m_PersistentCalls:
+      m_Calls: []

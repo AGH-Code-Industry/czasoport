@@ -14,7 +14,6 @@ namespace AudioSystem {
         public AudioClip FutureMusic;
         public MusicPlayer musicPlayer;
         public AudioMixer audioMixer;
-
         class MusicState {
             public AudioClip clip;
             public float delay;

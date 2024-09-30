@@ -13,9 +13,9 @@ Bye. NEXT!
 
 === A38 ===
 To get the A38 form you need to fill in the blue form first. Do you have it?
-*[Exhchange #requiresItem: BlueForm #getsItem: A38]
+*[Exchange #requiresItem: BlueForm #getsItem: A38]
 -> trade
-*[No. I don't]
+*[No. I don't.]
 -> Noform
 
 

@@ -17,17 +17,17 @@ I don't know anything about rafinery.
 -> DONE
 
 === tax ===
-Hmmm. From what i remember he didn't fill the A38 form which was required for some tax assesment. Do I have the form?
+Hmmm. If I remember correctly, he didn't fill in the A38 form which was required for some tax assessment. Do you have the form?
 *[No.]
 -> okienko1
-*[Exhchange #requiresItem: A38 #getsItem: cleaner_to_artist]
+*[Exchange #requiresItem: A38]
 -> trade
 
 
 === okienko1===
-You can then find it in the window number 1. It's on the right. Thank you. NEXT!
+Then, you can find it in the window number 1. It's on the right. Thank you. NEXT!
 -> DONE
 
 === trade ===
-Okay, thanks. I will get on it in a minute. Thank you. NEXT!
+Okay. I will get on it in a minute. Thank you. NEXT!
 -> DONE

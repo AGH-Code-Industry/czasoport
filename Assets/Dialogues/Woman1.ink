@@ -24,7 +24,7 @@ There must have been a misinformation somewhere. To get the A38 form you need to
 === blue ===
 To get the blue form you need to fill in the orange one first. Do you have it?
     *[Exhchange #requiresItem: OrangeForm #getsItem: BlueForm]
--> trade
+        -> trade
     *[No]
         -> noBlue
         

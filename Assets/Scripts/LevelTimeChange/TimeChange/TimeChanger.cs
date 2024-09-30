@@ -53,9 +53,8 @@ namespace LevelTimeChange.TimeChange {
 
         private void Awake() {
             Instance = this;
-        }
+            _timeChangeUIgo = FindObjectOfType<TimeChangeUI>().gameObject;
 
-        private void Start() {
             _settings = DeveloperSettings.Instance.tpcSettings;
             _timeJump = _settings.offsetFromPresentPlatform;
 
@@ -74,7 +73,7 @@ namespace LevelTimeChange.TimeChange {
                 _boxes.Add(objectToSpawn.AddComponent<CheckCollider>());
             }
 
-            _timeChangeUIgo = FindObjectOfType<TimeChangeUI>().gameObject;
+
             _timeChangeUIgo.SetActive(false);
         }
 

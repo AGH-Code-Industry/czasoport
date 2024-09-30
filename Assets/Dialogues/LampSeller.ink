@@ -12,9 +12,9 @@ Bye!
 -> DONE
 
 == show ==
-    * [Exhchange #requiresItem: BeigeGem #getsItem: Torch]
+    * [Exchange #requiresItem: BeigeGem #getsItem: Torch]
         -> trade
-    * [Exhchange #requiresItem: PinkGem #getsItem: Torch]
+    * [Exchange #requiresItem: PinkGem #getsItem: Torch]
         -> trade
     * [I don't want anything. Bye.]
         -> bywaj

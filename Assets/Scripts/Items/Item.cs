@@ -56,12 +56,8 @@ namespace Items {
         }
 
         public void LoadPersistentData(GameData gameData) {
-            if (!gameData.IsLevelSaved(LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId))
-                return;
-
-            if (gameData.playerGameData.inventory.Any(it => it.id.Equals(ID))) {
-                if (!BlockDestroying && !Hidden)
-                    Destroy(gameObject);
+            if (gameData.playerGameData.inventory.Any(it => it.id.Equals(ID)) || gameData.itemHideout.Any(it => it.Equals(ID))) {
+                if (!BlockDestroying) Destroy(gameObject);
                 return;
             }
 
@@ -76,21 +72,21 @@ namespace Items {
                     .Value.levelContent.transform;
                 transform.position = itemData.data.position;
                 Hidden = itemData.data.hidden;
-                if (Hidden)
-                    Hide();
+                if (Hidden) Destroy(gameObject);
             }
         }
 
         public void SavePersistentData(ref GameData gameData) {
+            var l = LevelsManager.Instance.LoadedLevels.Where(a => a.Key.sceneName == gameObject.scene.name).
+                Select(e => (LevelInfoSO?)e.Key).
+                FirstOrDefault();
+
             if (gameData.ContainsObjectData(ID)) {
                 var itemData = gameData.GetObjectData<ItemData>(ID);
                 itemData.data.durability = Durability;
                 itemData.data.itemSo = ItemSO;
                 itemData.data.position = transform.position;
                 Debug.Log(gameObject.scene.name);
-                var l = LevelsManager.Instance.LoadedLevels.Where(a => a.Key.sceneName == gameObject.scene.name).
-                    Select(e => (LevelInfoSO?)e.Key).
-                    FirstOrDefault();
                 itemData.data.mapId = l != null ? l.uniqueId : "";
                 itemData.data.hidden = Hidden;
                 itemData.SerializeInheritance();
@@ -102,7 +98,7 @@ namespace Items {
                         durability = Durability,
                         itemSo = ItemSO,
                         position = transform.position,
-                        mapId = LevelsManager.Instance.CurrentLevelManager.currentLevel.uniqueId,
+                        mapId = l != null ? l.uniqueId : "",
                         hidden = Hidden
                     },
                     id = ID
