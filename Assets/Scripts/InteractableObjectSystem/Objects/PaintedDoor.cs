@@ -67,7 +67,7 @@ namespace InteractableObjectSystem.Objects {
             Item i;
             _state = newState;
             if (createBucket) {
-                i = Instantiate(emptyBucket.prefab,transform).GetComponent<Item>();
+                i = Instantiate(emptyBucket.prefab, transform).GetComponent<Item>();
                 i.transform.localPosition = new Vector3(0.338f, -0.65f, 0f);
                 i.ID = emptyBuckets[bucketsCounter];
                 bucketsCounter++;
@@ -96,16 +96,16 @@ namespace InteractableObjectSystem.Objects {
             var doorData = gameData.GetObjectData<InteractableData>(ID);
             switch (doorData.data.state) {
                 case 0:
-                    ChangeState(DoorColor.Gray,false);
+                    ChangeState(DoorColor.Gray, false);
                     break;
                 case 1:
-                    ChangeState(DoorColor.Blue,false);
+                    ChangeState(DoorColor.Blue, false);
                     break;
                 case 2:
-                    ChangeState(DoorColor.Yellow,false);
+                    ChangeState(DoorColor.Yellow, false);
                     break;
                 case 3:
-                    ChangeState(DoorColor.Green,false);
+                    ChangeState(DoorColor.Green, false);
                     break;
             }
         }

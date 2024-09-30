@@ -7,8 +7,7 @@ using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPCSwicher : MonoBehaviour
-{
+public class NPCSwicher : MonoBehaviour {
     [SerializeField] private GameObject npcToEnable;
     [SerializeField] private GameObject npcToDisable;
     [SerializeField] private ItemSO exchangingItem;

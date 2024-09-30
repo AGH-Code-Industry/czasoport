@@ -5,15 +5,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class TeamData
-{
+public class TeamData {
     public string[] Lead;
     public string[] Team;
 }
 
 [System.Serializable]
-public class CreatorsData
-{
+public class CreatorsData {
     public TeamData Programmers;
     public TeamData Designers;
     public TeamData Artists;
