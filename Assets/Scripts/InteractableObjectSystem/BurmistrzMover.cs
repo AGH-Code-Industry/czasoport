@@ -5,8 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BurmistrzMover : MonoBehaviour
-{
+public class BurmistrzMover : MonoBehaviour {
     [SerializeField] private ItemSO exchangingItem;
     [SerializeField] private List<PathWalking> _NPCPathWalkings = new();
 
