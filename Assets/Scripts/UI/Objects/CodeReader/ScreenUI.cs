@@ -1,5 +1,8 @@
 using CustomInput;
+using InteractableObjectSystem.Objects;
+using Interactions;
 using TMPro;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +11,8 @@ public class ScreenUI : MonoBehaviour {
     [SerializeField] private GameObject finishGameUI;
     [SerializeField] private Button closeUIButton;
     [SerializeField] private GameObject codeUI;
+    [SerializeField] private SideDoors sideDoors;
+    [SerializeField] private CodeReader codeReader;
     [SerializeField] private GameObject codeTextGO;
 
     private int _goodCode;
@@ -54,7 +59,11 @@ public class ScreenUI : MonoBehaviour {
 
     private void CheckCode() {
         if (int.Parse(_code) == _goodCode) {
-            ShowEndScreen();
+            sideDoors.Open();
+            CloseUI();
+            Destroy(codeReader.GetComponent<CodeReader>());
+            Destroy(codeReader.GetComponent<HighlightInteraction>());
+            codeReader.transform.GetChild(0).gameObject.SetActive(false);
         }
         else {
             BadCode();
@@ -69,12 +78,6 @@ public class ScreenUI : MonoBehaviour {
 
     private void UpdateScreen() {
         codeScreen.text = _code;
-    }
-
-    private void ShowEndScreen() {
-        finishGameUI.SetActive(true);
-        finishGameUI.GetComponent<FinishScreenUI>().ShowTime();
-        Timer.instance.StopTimer();
     }
 
     private void BadCode() {

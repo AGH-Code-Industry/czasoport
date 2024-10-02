@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8566019037023748180}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.000049114227, y: 0.0010323524, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1160757836312391469
 SpriteRenderer:
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 80bede34cb230f44aa0d5e4b0e98f644, type: 2}
+  - {fileID: -876546973899608171, guid: 5f1aae482af0c344ab25048e3e76e062, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 1c74d15b4157fe041ab5311c0697a580, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!58 &8414967345616257705
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -97,6 +97,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -115,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa2c9c1c68741b4866143bb28159ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scale: 0.02
 --- !u!114 &8076632602265472878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,5 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93e5d9009f94d67bba564705eadabb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueId: 
   itemSO: {fileID: 11400000, guid: 108b86b3f8bf8724a9b81e8262646ea9, type: 2}
+  <ID>k__BackingField:
+    value: 

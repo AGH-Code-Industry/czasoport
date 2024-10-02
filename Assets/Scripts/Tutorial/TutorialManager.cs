@@ -139,7 +139,7 @@ public class TutorialManager : MonoBehaviour, IDataPersistence {
     /// The order of the stages of tutorial is set by the list "_stages".
     /// </summary>
     private void OnNextTutorialStage(InputAction.CallbackContext context) {
-        if (!_stages[stage].IsConditionSatisfied()) return;
+        if (!_stages[stage].IsConditionSatisfied() || _tutorialFinished) return;
         _stages[stage].GetMainAction().performed -= OnNextTutorialStage;
         while (stage + 1 < _stages.Count && _stages[stage].IsActionPerformed() && _stages[stage].IsConditionSatisfied()) { stage++; }
         if (stage + 1 < _stages.Count) {

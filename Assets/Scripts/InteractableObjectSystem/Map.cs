@@ -4,8 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Map : InteractableObject
-{
+public class Map : InteractableObject {
     [SerializeField] private GameObject _bigMap;
 
     private void Start() {

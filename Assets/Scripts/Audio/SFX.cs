@@ -7,10 +7,9 @@ namespace AudioSystem {
     /// Base class for associating events with sound effects.
     /// </summary>
     public abstract class SFX : MonoBehaviour {
-
         public AudioSource audioSource;
+        public AudioSource walkAudioSource;
         public AudioMixer audioMixer;
-
         void Start() {
             ApplyAudioSettings();
             BindSoundsWithEvents();

@@ -53,10 +53,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a201b926c3f22749b4fcb9cbf3ef11b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toSteal: {fileID: 6131160002648295589}
+  <ID>k__BackingField:
+    value: 
+  <toStealId>k__BackingField:
+    value: 
+  toSteal: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
   _area: {fileID: 1399893945833703282}
   startPoint: {fileID: 1399893945179414124}
   animator: {fileID: 0}
+  TargetInHand: 0
 --- !u!1 &1399893944532319111
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,10 +601,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1160757836312391469, guid: e77a8211171840844aa02a9956a0c555, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8566019037023748180, guid: e77a8211171840844aa02a9956a0c555, type: 3}
       propertyPath: m_Name
       value: Crystal
@@ -611,11 +613,6 @@ PrefabInstance:
 --- !u!4 &2633555111972548799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 538911398926628942, guid: e77a8211171840844aa02a9956a0c555, type: 3}
-  m_PrefabInstance: {fileID: 2591502058035579121}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6131160002648295589 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8566019037023748180, guid: e77a8211171840844aa02a9956a0c555, type: 3}
   m_PrefabInstance: {fileID: 2591502058035579121}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7549950988395622903
