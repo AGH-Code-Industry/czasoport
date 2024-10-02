@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using CustomInput;
 using InteractableObjectSystem.Objects;
 using Interactions;
@@ -16,6 +13,7 @@ public class ScreenUI : MonoBehaviour {
     [SerializeField] private GameObject codeUI;
     [SerializeField] private SideDoors sideDoors;
     [SerializeField] private CodeReader codeReader;
+    [SerializeField] private GameObject codeTextGO;
 
     private int _goodCode;
     private Image _screenBackground;
@@ -96,6 +94,7 @@ public class ScreenUI : MonoBehaviour {
 
     private void CloseUI() {
         codeUI.SetActive(false);
+        codeTextGO.SetActive(false);
         CInput.InputActions.Movement.Enable();
     }
 }

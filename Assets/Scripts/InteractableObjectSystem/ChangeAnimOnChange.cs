@@ -5,8 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
-public class ChangeAnimOnChange : MonoBehaviour
-{
+public class ChangeAnimOnChange : MonoBehaviour {
     [SerializeField] private RuntimeAnimatorController animatorController;
     [SerializeField] private ItemSO exchangingItem;
 

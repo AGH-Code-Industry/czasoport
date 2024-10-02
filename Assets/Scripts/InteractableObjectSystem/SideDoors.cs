@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SideDoors : MonoBehaviour
-{
+public class SideDoors : MonoBehaviour {
     [SerializeField] private GameObject doors;
     public void Open() {
         Vector3 currentPos = doors.transform.localPosition;

@@ -4,8 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StraganMover : MonoBehaviour
-{
+public class StraganMover : MonoBehaviour {
     [SerializeField] private ItemSO _exchangingItem;
     [SerializeField] private GameObject _straganToMoveInFuture;
 
