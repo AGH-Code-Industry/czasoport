@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 80bede34cb230f44aa0d5e4b0e98f644, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,6 +118,9 @@ MonoBehaviour:
   definition: {fileID: 11400000, guid: a3cbd4d14530fd84196fedc79d80c35b, type: 2}
   <ID>k__BackingField:
     value: bb86d07c-d65b-8b96-cbcf-dff90a4b6c4f
+  doOnHand:
+    m_PersistentCalls:
+      m_Calls: []
   doOnGreen:
     m_PersistentCalls:
       m_Calls:
@@ -197,7 +200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379090708e98ed245b0ae6aad2fce918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingSpeed: 0
   openingDelay: 0
   doorAudioSource: {fileID: 5631276074669104560}
   animator: {fileID: 4088329204481172802}
