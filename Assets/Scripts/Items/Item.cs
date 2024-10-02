@@ -120,6 +120,9 @@ namespace Items {
         public void Hide() {
             Hidden = true;
             transform.SetParent(Inventory.Instance.itemHideout);
+            if (transform.GetChild(0) != null) {
+                transform.GetChild(0).gameObject.SetActive(false);
+            }
             //transform.position = new Vector3(0f, 0f, 0f);
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;

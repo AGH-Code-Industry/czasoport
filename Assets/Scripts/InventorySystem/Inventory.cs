@@ -387,6 +387,9 @@ namespace InventorySystem {
                     item.Hidden = false;
                     item.transform.parent = FindTransformOfCurrentTime();
                     item.transform.position = FindObjectOfType<Player>().gameObject.transform.position;
+                    if (item.transform.GetChild(0) != null) {
+                        item.transform.GetChild(0).gameObject.SetActive(true);
+                    }
                     item.GetComponent<SpriteRenderer>().enabled = true;
                     item.GetComponent<CircleCollider2D>().enabled = true;
                     return;
