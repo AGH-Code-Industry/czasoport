@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Dialogues;
+using Dialogues.ChoiceProcessing;
 using Interactions;
 using Items;
 using NPC;
@@ -25,6 +27,10 @@ namespace InteractableObjectSystem.Objects {
             foreach (var pathWalking in _NPCPathWalkings) {
                 pathWalking.StartWalk();
             }
+            FindObjectOfType<DialogueManager>()._choicesProcessor.onEchange?.Invoke(this, new OnEchangeEventArgs() {
+                itemSO = _interactedWith,
+                itemExchangedWithNPC = false
+            });
         }
     }
 }

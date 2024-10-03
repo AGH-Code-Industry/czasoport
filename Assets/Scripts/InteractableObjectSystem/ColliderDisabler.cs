@@ -13,14 +13,15 @@ public class ColliderDisabler : MonoBehaviour, IDataPersistence {
     [SerializeField] private Collider2D colliderToDisable;
     private bool _collid = true;
     [SerializeField] private ItemSO exchangingItem;
+    [SerializeField] private bool exchangedWithNPC = true;
 
     private void Start() {
         FindAnyObjectByType<DialogueManager>()._choicesProcessor.onEchange += (object sender, OnEchangeEventArgs e)
-            => CheckObject(e.itemSO);
+            => CheckObject(e.itemSO, e.itemExchangedWithNPC);
     }
 
-    private void CheckObject(ItemSO exchangingItem) {
-        if (exchangingItem == this.exchangingItem) {
+    private void CheckObject(ItemSO exchangingItem, bool b) {
+        if (exchangingItem == this.exchangingItem && exchangedWithNPC == b) {
             Collid(false);
         }
     }
