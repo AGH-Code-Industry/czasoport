@@ -11583,6 +11583,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3390690052993218106, guid: 76ac94d05c7da7d4da522ada366dfef4, type: 3}
+      propertyPath: fututeDoor
+      value: 
+      objectReference: {fileID: 1788384202}
     - target: {fileID: 6420350532636648631, guid: 76ac94d05c7da7d4da522ada366dfef4, type: 3}
       propertyPath: m_Name
       value: zamkniete2
@@ -28568,15 +28572,27 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: aaca332d2caf2634aa31596f33a3e5c1, type: 2}
     - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
+      propertyPath: futurePedestal
+      value: 
+      objectReference: {fileID: 1062420917}
+    - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
+      propertyPath: onGoodCrystalFuture
+      value: 
+      objectReference: {fileID: 21300000, guid: 257f9425c09e83e45b203d1ebf746a0c, type: 3}
+    - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
       propertyPath: <ID>k__BackingField.value
       value: bf3ca794-a559-ef3b-44e4-c3303fa242eb
       objectReference: {fileID: 0}
     - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
       propertyPath: OnGoodRock.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
       propertyPath: OnGoodRock.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
+      propertyPath: OnGoodRock.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
@@ -28584,7 +28600,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 100377930}
     - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
+      propertyPath: OnGoodRock.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4572611677138103298}
+    - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
       propertyPath: OnGoodRock.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
+      propertyPath: OnGoodRock.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
@@ -28592,11 +28616,23 @@ PrefabInstance:
       value: OpenDoor
       objectReference: {fileID: 0}
     - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
+      propertyPath: OnGoodRock.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
       propertyPath: OnGoodRock.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: InteractableObjectSystem.Objects.LockDoor, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
+      propertyPath: OnGoodRock.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SpawnPrefab, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
       propertyPath: OnGoodRock.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 637748797894227780, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
+      propertyPath: OnGoodRock.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1424390513933008006, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
@@ -28646,8 +28682,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1424390513933008006, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4572611677138103298}
   m_SourcePrefab: {fileID: 100100000, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
+--- !u!1 &4572611677138103292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1424390513933008006, guid: dbe98592525afe24ab5f1fe3e6448b0d, type: 3}
+  m_PrefabInstance: {fileID: 4572611677138103291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4572611677138103298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4572611677138103292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e496745a9e858a543a1077e83c6f1182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 5370347299850548355, guid: 81418614a78a222328fb76b1b7e2af8b, type: 3}
+  targetScene: Level0Refinery
+  targetPosition: {x: -15.11, y: 122.74, z: 0}
 --- !u!1001 &8989672332706080089
 PrefabInstance:
   m_ObjectHideFlags: 0

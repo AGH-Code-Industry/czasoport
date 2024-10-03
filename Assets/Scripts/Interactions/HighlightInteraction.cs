@@ -20,7 +20,7 @@ namespace Interactions {
         public EventHandler<InteractionHighlightEventArgs> onHighlightEnd;
 
 
-        private void Start() {
+        public void Start() {
             _sprite = GetComponent<SpriteRenderer>();
             _material = _sprite.material;
             _material.SetTexture("_texture", _sprite.sprite.texture);

@@ -13,7 +13,8 @@ namespace InteractableObjectSystem.Objects {
     public class Pedesta2 : PersistentInteractableObject {
         [SerializeField] private ItemSO goodCrystal;
         [SerializeField] private Sprite onGoodCrystal;
-
+        [SerializeField] private Sprite onGoodCrystalFuture;
+        [SerializeField] private SpriteRenderer futurePedestal;
         private bool _done = false;
         private SpriteRenderer _spriteRenderer = null;
 
@@ -33,8 +34,10 @@ namespace InteractableObjectSystem.Objects {
         }
 
         private void doIt() {
-            if (!_spriteRenderer) _spriteRenderer = GetComponent<SpriteRenderer>();
+            if (_spriteRenderer != null) _spriteRenderer = GetComponent<SpriteRenderer>();
             _spriteRenderer.sprite = onGoodCrystal;
+            GetComponent<HighlightInteraction>().Start();
+            futurePedestal.sprite = onGoodCrystalFuture;
             _done = true;
             OnGoodRock?.Invoke();
         }

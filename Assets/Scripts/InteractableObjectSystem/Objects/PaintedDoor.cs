@@ -21,7 +21,7 @@ namespace InteractableObjectSystem.Objects {
         public UnityEvent doOnHand;
         public UnityEvent doOnGreen;
         public List<SerializableGuid> emptyBuckets = new();
-
+        [SerializeField] private SpriteRenderer fututeDoor;
         [SerializeField] private ItemSO bluePaint;
         [SerializeField] private ItemSO yellowPaint;
         [SerializeField] private ItemSO emptyBucket;
@@ -75,15 +75,19 @@ namespace InteractableObjectSystem.Objects {
             switch (_state) {
                 case DoorColor.Gray:
                     _spriteRenderer.color = new Color(1f, 1f, 1f);
+                    fututeDoor.color = new Color(1f, 1f, 1f);
                     break;
                 case DoorColor.Blue:
                     _spriteRenderer.color = new Color(0f, 0f, 1f);
+                    fututeDoor.color = new Color(0f, 0f, 1f);
                     break;
                 case DoorColor.Yellow:
                     _spriteRenderer.color = new Color(0.9f, 0.9f, 0.2f);
+                    fututeDoor.color = new Color(0.9f, 0.9f, 0.2f);
                     break;
                 case DoorColor.Green:
                     _spriteRenderer.color = new Color(0f, 1f, 0f);
+                    fututeDoor.color = new Color(0f, 1f, 0f);
                     doOnGreen?.Invoke();
                     break;
             }
