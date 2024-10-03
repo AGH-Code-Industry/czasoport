@@ -10,71 +10,60 @@ namespace InteractableObjectSystem.Objects {
     public class LockDoor : MonoBehaviour {
 
         public enum DoorLockState {
+            Unlock,
             Locked,
             Closed,
             Opened
         }
 
-        [SerializeField] private float openingSpeed;
-        [SerializeField] private float _openingDelay;
+        [SerializeField] private float openingDelay;
 
         [SerializeField] private AudioSource doorAudioSource; // Add AudioSource field - Kasia Psuje
-        public EventHandler doorsOpened;
-        public EventHandler doorsClosed;
 
-        [SerializeField] private BoxCollider2D collider;
-        [SerializeField] private DoorLockState lockState = DoorLockState.Opened;
+        DoorLockState lockState;
         [SerializeField] private Animator animator;
 
+        public void Start() {
+            UnlockDoor();
+        }
+
         public void UnlockDoor() {
-            lockState = DoorLockState.Opened;
-            collider.enabled = false;
             CDebug.Log("Unlocked");
+            lockState = DoorLockState.Unlock;
+            OpenDoor();
         }
 
         public void ToLockDoor() {
-            lockState = DoorLockState.Locked;
-            collider.enabled = true;
             CDebug.Log("Locked");
+            lockState = DoorLockState.Locked;
+            CloseDoor();
         }
 
         public void OpenDoor() {
-            if (lockState == DoorLockState.Opened) {
-                CloseDoor();
-                return;
-            }
-            animator.SetTrigger("OpenDoors");
+            if (lockState == DoorLockState.Locked || lockState == DoorLockState.Opened) return;
+
+            animator.SetBool("Open",true);
+
             CDebug.Log("Opened");
             lockState = DoorLockState.Opened;
-            StartCoroutine(OpenDoortsWithDelay(_openingDelay));
-
-            doorsOpened?.Invoke(this, EventArgs.Empty);
+            StartCoroutine(OpenDoortsWithDelay(openingDelay));
         }
 
         IEnumerator OpenDoortsWithDelay(float delay) {
             yield return new WaitForSeconds(delay);
-            collider.enabled = false;
-            animator.ResetTrigger("CloseDoors");
-            // Play sound - Kasia Psuje
-            if (doorAudioSource != null && doorAudioSource.clip != null) { //- Kasia Psuje
-                doorAudioSource.Play(); //- Kasia Psuje
-            } //- Kasia Psuje
+            if (doorAudioSource != null && doorAudioSource.clip != null) {
+                doorAudioSource.Play();
+            }
         }
 
         public void CloseDoor() {
-            if (lockState == DoorLockState.Closed) {
-                OpenDoor();
-                return;
-            }
-            else if (lockState == DoorLockState.Locked) return;
+            if (lockState == DoorLockState.Closed) return;
             Debug.Log("Closing");
-            animator.SetTrigger("CloseDoors");
-            lockState = DoorLockState.Closed;
-            collider.enabled = true;
-            CDebug.Log("Closed");
-            animator.ResetTrigger("OpenDoors");
 
-            doorsClosed?.Invoke(this, EventArgs.Empty);
+            animator.SetBool("Open",false);
+
+            lockState = DoorLockState.Closed;
+            CDebug.Log("Closed");
         }
 
     }
