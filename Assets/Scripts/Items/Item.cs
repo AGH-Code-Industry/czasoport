@@ -27,7 +27,7 @@ namespace Items {
         public bool BlockDestroying { get; set; } = false;
 
         public ItemSO ItemSO => itemSO;
-        private bool _canPickup;
+        private bool _canPickup = true;
         public bool CanPickup {
             get { return _canPickup; }
             set { _canPickup = value; }

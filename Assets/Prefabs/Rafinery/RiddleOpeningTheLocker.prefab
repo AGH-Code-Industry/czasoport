@@ -50,6 +50,10 @@ PrefabInstance:
       propertyPath: interactedWith.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 31a7705c318501c43a4fb905c19a6777, type: 2}
+    - target: {fileID: 6066008717652046292, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
+      propertyPath: interactedWith.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 31a7705c318501c43a4fb905c19a6777, type: 2}
     - target: {fileID: 7256744986904192264, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.68
@@ -94,7 +98,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: LockedDoors
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2578294210084123456, guid: 8713f08640df4a528b9580091dacfc3c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
