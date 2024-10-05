@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ce5931d7433ff46b4ea648e04d74f4, type: 3}
+  m_Name: CircleKeyRafinery
+  m_EditorClassIdentifier: 
+  itemName: Key To Rafinery
+  description: Key for open rafinery (must be in good color)
+  prefab: {fileID: 695788076147071927, guid: ba1b768a92e33f0448a4cf142927a2d5, type: 3}
+  image: {fileID: 21300000, guid: 17ebcaf46cb2bfd4c83d3e78a2b2d18c, type: 3}
+  durability: 0
+  interactionDistance: 0
+  pickUpNotification:
+    message: 
+    displayTime: 0
+  dropNotification:
+    message: 
+    displayTime: 0

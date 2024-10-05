@@ -27,6 +27,11 @@ namespace Items {
         public bool BlockDestroying { get; set; } = false;
 
         public ItemSO ItemSO => itemSO;
+        private bool _canPickup;
+        public bool CanPickup {
+            get { return _canPickup; }
+            set { _canPickup = value; }
+        }
         private int _durability = 0;
         public int Durability {
             get { return _durability; }
@@ -110,7 +115,9 @@ namespace Items {
 
         public void InteractionHand() {
             _logger.Log($"Item {this} is being {"short interacted" % Colorize.Green} with.", this);
-            Inventory.Instance.InsertItem(this);
+            if (_canPickup) {
+                Inventory.Instance.InsertItem(this);
+            }
         }
 
         public void LongInteractionHand() {
@@ -138,6 +145,10 @@ namespace Items {
 
         public override int GetHashCode() {
             return HashCode.Combine(base.GetHashCode(), ID);
+        }
+
+        public void SetNewItemSO(ItemSO newItemSO) {
+            itemSO = newItemSO;
         }
     }
 }
