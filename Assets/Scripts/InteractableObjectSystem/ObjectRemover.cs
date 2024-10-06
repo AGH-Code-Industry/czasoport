@@ -1,34 +1,40 @@
+using DataPersistence.DataTypes;
+using DataPersistence;
 using Dialogues;
 using Items;
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using DataPersistence;
-using DataPersistence.DataTypes;
 using UnityEngine;
 using Utils;
 
-public class ColliderDisabler : MonoBehaviour, IDataPersistence {
+public class ObjectRemover : MonoBehaviour
+{
     [field: SerializeField] public SerializableGuid ID { get; set; }
-    [SerializeField] private Collider2D colliderToDisable;
+    [SerializeField] private List<GameObject> objectsToDisable;
     private bool _collid = true;
     [SerializeField] private ItemSO exchangingItem;
+    [SerializeField] private TypeSelector exchangingWithNPC = TypeSelector.YES;
 
     private void Start() {
         FindAnyObjectByType<DialogueManager>()._choicesProcessor.onEchange += (object sender, OnEchangeEventArgs e)
-            => CheckObject(e.itemSO);
+            => CheckObject(e.itemSO, e.itemExchangedWithNPC);
     }
 
-    private void CheckObject(ItemSO exchangingItem) {
-        if (exchangingItem == this.exchangingItem) {
-            Collid(false);
-        }
+    private void CheckObject(ItemSO exchangingItem, bool b) {
+        if (exchangingItem != this.exchangingItem) return;
+        if (exchangingWithNPC == TypeSelector.YES && !b) return;
+        if (exchangingWithNPC == TypeSelector.NO && b) return;
+
+        Collid(false);
     }
 
     private void Collid(bool collid) {
         if (collid) _collid = true;
         else _collid = false;
-        colliderToDisable.enabled = _collid;
+
+        foreach (GameObject go in objectsToDisable) {
+            go.SetActive(_collid);
+        }
     }
 
     public bool SceneObject { get; } = true;

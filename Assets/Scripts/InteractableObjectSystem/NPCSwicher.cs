@@ -1,4 +1,5 @@
 using Dialogues;
+using Interactions;
 using Items;
 using NPC;
 using System.Collections;
@@ -19,8 +20,23 @@ public class NPCSwicher : MonoBehaviour {
 
     private void CheckObject(ItemSO exchangingItem) {
         if (exchangingItem == this.exchangingItem) {
-            npcToDisable.SetActive(false);
             npcToEnable.SetActive(true);
+
+            //changing dialogue, animator and sprite
+            if (npcToEnable.GetComponent<DialogueNPC>() != null && npcToDisable.GetComponent<DialogueNPC>() != null) {
+                npcToDisable.GetComponent<DialogueNPC>().SetDialogue(npcToEnable.GetComponent<DialogueNPC>().GetDialogue());
+            }
+            else {
+                Destroy(npcToDisable.GetComponent<DialogueNPC>());
+                Destroy(npcToDisable.GetComponent<HighlightInteraction>());
+            }
+            npcToDisable.GetComponent<Animator>().runtimeAnimatorController = npcToEnable.GetComponent<Animator>().runtimeAnimatorController;
+            npcToDisable.GetComponent<SpriteRenderer>().sprite = npcToEnable.GetComponent<SpriteRenderer>().sprite;
+
+            //making the NPC not white
+            SpriteRenderer sprite = npcToDisable.GetComponent<SpriteRenderer>();
+            sprite.material.SetTexture("_texture", sprite.sprite.texture);
+            npcToEnable.SetActive(false);
         }
     }
 }
