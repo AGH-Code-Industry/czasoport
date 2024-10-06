@@ -5,8 +5,7 @@ using Items;
 using Notifications;
 using UnityEngine;
 
-public class RafineryKeyObject : InteractableObject
-{
+public class RafineryKeyObject : InteractableObject {
     public override void InteractionHand() {
         NotificationManager.Instance.RaiseNotification(new Notification("I have to adjust this key if I want to grab it", 6f));
     }

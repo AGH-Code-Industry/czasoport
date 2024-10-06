@@ -6,8 +6,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class ChartSetter : InteractableObject
-{
+public class ChartSetter : InteractableObject {
     [SerializeField] private GameObject _chartSetterUI;
     [SerializeField] private Button _closeButton;
     [SerializeField] private UILineRenderer _userLineRenderer;
@@ -30,10 +29,10 @@ public class ChartSetter : InteractableObject
 
     private void Awake() {
         _closeButton.onClick.AddListener(CloseChartSetter);
-        _upArrow.onClick.AddListener(delegate { ChangeAmplitude(1);});
-        _downArrow.onClick.AddListener(delegate { ChangeAmplitude(-1);});
-        _leftArrow.onClick.AddListener(delegate { ChangeFrequency(-1);});
-        _rightArrow.onClick.AddListener(delegate { ChangeFrequency(1);});
+        _upArrow.onClick.AddListener(delegate { ChangeAmplitude(1); });
+        _downArrow.onClick.AddListener(delegate { ChangeAmplitude(-1); });
+        _leftArrow.onClick.AddListener(delegate { ChangeFrequency(-1); });
+        _rightArrow.onClick.AddListener(delegate { ChangeFrequency(1); });
         GenerateGoodSineWave();
         GenerateUserSineWave();
         CloseChartSetter();
@@ -47,10 +46,8 @@ public class ChartSetter : InteractableObject
         _chartSetterUI.SetActive(false);
     }
 
-    private void GenerateGoodSineWave()
-    {
-        for (int i = 0; i < resolution; i++)
-        {
+    private void GenerateGoodSineWave() {
+        for (int i = 0; i < resolution; i++) {
             float x = i * (length / (resolution - 1));
             float y = goodAmplitude * Mathf.Sin(2 * Mathf.PI * goodFrequency * x);
 
@@ -62,8 +59,7 @@ public class ChartSetter : InteractableObject
         if (_block) return;
         _userLineRenderer.points.RemoveAll(_ => true);
         _userLineRenderer.gameObject.SetActive(false);
-        for (int i = 0; i < resolution; i++)
-        {
+        for (int i = 0; i < resolution; i++) {
             float x = i * (length / (resolution - 1));
             float y = userAmplitude * Mathf.Sin(2 * Mathf.PI * userFrequency * x);
 

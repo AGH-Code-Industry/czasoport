@@ -42,7 +42,7 @@ namespace InteractableObjectSystem.Objects {
         public void OpenDoor() {
             if (lockState == DoorLockState.Locked || lockState == DoorLockState.Opened) return;
 
-            animator.SetBool("Open",true);
+            animator.SetBool("Open", true);
 
             CDebug.Log("Opened");
             lockState = DoorLockState.Opened;
@@ -60,7 +60,7 @@ namespace InteractableObjectSystem.Objects {
             if (lockState == DoorLockState.Closed) return;
             Debug.Log("Closing");
 
-            animator.SetBool("Open",false);
+            animator.SetBool("Open", false);
 
             lockState = DoorLockState.Closed;
             CDebug.Log("Closed");
