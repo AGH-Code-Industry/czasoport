@@ -5,8 +5,7 @@ using DataPersistence;
 using LevelTimeChange.LevelsLoader;
 using UnityEngine;
 
-public class SpawnPrefab : MonoBehaviour
-{
+public class SpawnPrefab : MonoBehaviour {
     [SerializeField] private GameObject prefab;
     [SerializeField] private string targetScene;
     [SerializeField] private Vector3 targetPosition;

@@ -47,7 +47,7 @@ namespace InteractableObjectSystem.Objects {
                 return;
 
             var doorData = gameData.GetObjectData<InteractableData>(ID);
-            if (doorData.data.state == 1) Invoke("doIt",1f);
+            if (doorData.data.state == 1) Invoke("doIt", 1f);
         }
 
         public override void SavePersistentData(ref GameData gameData) {
