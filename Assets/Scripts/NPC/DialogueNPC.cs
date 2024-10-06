@@ -24,5 +24,9 @@ namespace NPC {
         public void SetDialogue(TextAsset dialogue) {
             this.dialogue = dialogue;
         }
+
+        public TextAsset GetDialogue() {
+            return dialogue;
+        }
     }
 }
