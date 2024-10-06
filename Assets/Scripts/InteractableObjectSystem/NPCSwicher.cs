@@ -25,7 +25,8 @@ public class NPCSwicher : MonoBehaviour {
             //changing dialogue, animator and sprite
             if (npcToEnable.GetComponent<DialogueNPC>() != null && npcToDisable.GetComponent<DialogueNPC>() != null) {
                 npcToDisable.GetComponent<DialogueNPC>().SetDialogue(npcToEnable.GetComponent<DialogueNPC>().GetDialogue());
-            } else {
+            }
+            else {
                 Destroy(npcToDisable.GetComponent<DialogueNPC>());
                 Destroy(npcToDisable.GetComponent<HighlightInteraction>());
             }
