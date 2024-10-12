@@ -1,13 +1,9 @@
 -> main
 
 === main ===
-We picked the new place. Is it correct now?
-    *[No]
-        -> DONE
-    *[Yes,  #requiresItem: geoda_zamknieta]
-        -> mineral
-    * [Sorry, didn't mean to disturb you.]
-        -> bywaj
+Oh we can see, that you got it! Good job. Come back later, when we manage to get the mineral opened to get the gift from us.
+    *[Opened?]
+        -> comebacklater
 
 === bywaj ===
 Bye.
