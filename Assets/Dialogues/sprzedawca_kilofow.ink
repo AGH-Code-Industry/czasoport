@@ -30,7 +30,7 @@ Because someone is stealing my components to make axes! I'm telling you it's the
 Thanks. Tell me when you know anything.
 *[Okay bye. ]
 -> bye
-*[#requestitem: CzescDoKradnieciaKilofa #getitem: Pickaxe]
+*[#requiresItem: CzescDoKradnieciaKilofa #getitem: Pickaxe]
 -> lost_components
 
 === lost_components ===
