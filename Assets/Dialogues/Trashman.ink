@@ -4,7 +4,7 @@
 Hi, I'm sorry I'm just cleaning here. Have I hindered you??
     *[I need an entry code to rafinery.]
         -> cleaning
-    * [How did you get that gemstone in your bag and can you give it to me?]
+    * [How did you get that device in your bag and can you give it to me?]
         -> gem
     * [No. Sorry, didn't mean to disturb you.]
         -> bywaj

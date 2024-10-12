@@ -9,11 +9,6 @@ Oh we can see, that you got it! Good job. Come back later, when we manage to get
 Bye.
 -> DONE
 
-===comebacklater===
-The thing that interests us the most is in the heart of this beauty. Like I said, come back in 3 months.
-    *[When?! I don't have that much time. Couldn't you just give me the gift now?]
-        -> nuhuh
-===nuhuh===
-That's not possible. Sorry, rules are rules. I mean if you could find a really strong acid...
-    *[Strong acid... give me the mineral back. I'll be back soon with its heart.]
+=== mineral ===
+oh. it looks like you need to put it into some strong acid for a long time to extract it from the stone. We will work on it, maybe we will have in in ...100 years? Look for it in the future hehe. See you!
 -> DONE

@@ -95,22 +95,23 @@ namespace InventorySystem {
                 InsertItem(item, false);
             }
 
-            //_selectedSlot = 0;
-
+            _selectedSlot = 0;
             foreach (var hideoutItemID in gameData.itemHideout) {
-                if (ItemHideoutContainsItem(hideoutItemID))
-                    continue;
-
                 if (!gameData.ContainsObjectData(hideoutItemID)) {
                     CDebug.LogError("Hideout item desynced with saves. It can lead to serious save issues!");
                     continue;
                 }
+
+                if (ItemHideoutContainsItem(hideoutItemID))
+                    continue;
+
                 var itemData = gameData.GetObjectData<ItemData>(hideoutItemID);
 
                 var item = Instantiate(itemData.data.itemSo.prefab, itemHideout).GetComponent<Item>();
                 item.Durability = itemData.data.durability;
                 item.ID = itemData.id;
                 item.BlockDestroying = true;
+                item.Hide();
             }
         }
 
@@ -138,6 +139,7 @@ namespace InventorySystem {
                     continue;
                 gameData.itemHideout.Add(item.ID);
             }
+
         }
 
         /// <summary>
@@ -385,6 +387,9 @@ namespace InventorySystem {
                     item.Hidden = false;
                     item.transform.parent = FindTransformOfCurrentTime();
                     item.transform.position = FindObjectOfType<Player>().gameObject.transform.position;
+                    if (item.transform.GetChild(0) != null) {
+                        item.transform.GetChild(0).gameObject.SetActive(true);
+                    }
                     item.GetComponent<SpriteRenderer>().enabled = true;
                     item.GetComponent<CircleCollider2D>().enabled = true;
                     return;

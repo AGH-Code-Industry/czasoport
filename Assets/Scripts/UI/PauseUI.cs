@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 using CoinPackage.Debugging;
 using Application;
 using DataPersistence;
+using Settings;
+using UnityEngine.SceneManagement;
 
 namespace UI {
     /// <summary>
@@ -17,6 +19,7 @@ namespace UI {
         [SerializeField] private GameObject menuPanel;
         [SerializeField] private Button resumeButton;
         [SerializeField] private Button saveButton;
+        [SerializeField] private Button homeButton;
         [SerializeField] private Button quitButton;
 
         private bool _gamePaused;
@@ -26,6 +29,7 @@ namespace UI {
 
             resumeButton.onClick.AddListener(ResumeGame);
             saveButton.onClick.AddListener(Save);
+            homeButton.onClick.AddListener(Home);
             quitButton.onClick.AddListener(UnityEngine.Application.Quit);
 
             Hide();
@@ -62,6 +66,17 @@ namespace UI {
 
         private void Save() {
             DataPersistenceManager.Instance.SaveGame();
+        }
+
+        private void Home() {
+            ResumeGame();
+            for (int i = 0; i < SceneManager.loadedSceneCount; i++) {
+                Scene scene = SceneManager.GetSceneAt(i);
+                if (scene.name != DeveloperSettings.Instance.appSettings.sceneMenuName)
+                    SceneManager.UnloadSceneAsync(scene);
+            }
+
+            SceneManager.LoadScene(DeveloperSettings.Instance.appSettings.sceneMenuName, LoadSceneMode.Single);
         }
 
         private void Show() {
