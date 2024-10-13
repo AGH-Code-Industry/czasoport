@@ -6,6 +6,7 @@ using DataPersistence;
 using DataPersistence.DataTypes;
 using Items;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 namespace InteractableObjectSystem.Objects {
@@ -19,6 +20,7 @@ namespace InteractableObjectSystem.Objects {
 
         [SerializeField] private List<ItemSO> _interactedWith;
         [SerializeField] private ParticleSystem _particleSystem;
+        [SerializeField] private UnityEvent actionWhenBroken = null;
         private BoxCollider2D _collider;
         private SpriteRenderer _renderer;
         private RockState _state;
@@ -95,6 +97,7 @@ namespace InteractableObjectSystem.Objects {
             _audioSource.Play();
             transform.GetChild(0).GetComponent<AudioSource>().enabled = true;
             transform.GetChild(0).GetComponent<AudioSource>().Play();
+            actionWhenBroken?.Invoke();
         }
 
         private void HideSprite() {

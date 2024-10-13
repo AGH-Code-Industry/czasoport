@@ -151,5 +151,7 @@ namespace Items {
         public void SetNewItemSO(ItemSO newItemSO) {
             itemSO = newItemSO;
         }
+
+        public ItemSO GetItemSO() { return itemSO; }
     }
 }

@@ -12,5 +12,5 @@ Goodbye. Come back when you need something!
 -> DONE
 === seller ===
 Oh yes! of course. Here it is, a pickaxe for your help on the past! Thanks a lot!
-*[ #getsItem: pickaxe]
+*[ #getsItem: Pickaxe]
 -> bye

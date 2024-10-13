@@ -12,6 +12,7 @@ public class NPCSwicher : MonoBehaviour {
     [SerializeField] private GameObject npcToEnable;
     [SerializeField] private GameObject npcToDisable;
     [SerializeField] private ItemSO exchangingItem;
+    [SerializeField] private Material _nonRedMaterial;
 
     private void Start() {
         FindAnyObjectByType<DialogueManager>()._choicesProcessor.onEchange += (object sender, OnEchangeEventArgs e)
@@ -41,6 +42,7 @@ public class NPCSwicher : MonoBehaviour {
 
         //making the NPC not white
         SpriteRenderer sprite = npcToDisable.GetComponent<SpriteRenderer>();
+        sprite.material = _nonRedMaterial;
         sprite.material.SetTexture("_texture", sprite.sprite.texture);
         npcToEnable.SetActive(false);
     }

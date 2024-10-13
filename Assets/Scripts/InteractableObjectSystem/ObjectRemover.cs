@@ -21,6 +21,7 @@ public class ObjectRemover : MonoBehaviour
     }
 
     private void CheckObject(ItemSO exchangingItem, bool b) {
+        if (exchangingItem == null) return;
         if (exchangingItem != this.exchangingItem) return;
         if (exchangingWithNPC == TypeSelector.YES && !b) return;
         if (exchangingWithNPC == TypeSelector.NO && b) return;
@@ -28,7 +29,7 @@ public class ObjectRemover : MonoBehaviour
         Collid(false);
     }
 
-    private void Collid(bool collid) {
+    public void Collid(bool collid) {
         if (collid) _collid = true;
         else _collid = false;
 
