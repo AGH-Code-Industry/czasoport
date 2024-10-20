@@ -14,8 +14,8 @@ yo, let me know when you find the rest.
 ===patrs===
 Dope! Give them to me!
     *[ #requiresItem: CzescOdGrajka]
-        -> bye
+        -> patrs
     *[ #requiresItem: CzescOdRafinerii]
-        -> bye
+        -> patrs
     *[ #requiresItem: CzescOdWykopalisk]
-        -> bye
+        -> patrs

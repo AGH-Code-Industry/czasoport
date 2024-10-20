@@ -12,8 +12,6 @@ using Interactions.Interfaces;
 using InventorySystem;
 using LevelTimeChange.LevelsLoader;
 using Utils;
-using Utils.Attributes;
-using static UnityEditor.Progress;
 
 namespace Items {
     [RequireComponent(typeof(CircleCollider2D))]

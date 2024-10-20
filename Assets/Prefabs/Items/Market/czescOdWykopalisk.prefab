@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.1418568, y: 3.8711839, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5014092087415171189}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 1489030847
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 297d53cc828f3c74ea5974a7be6eefc4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab207f12a48953b419bab4b63ea77282, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -159,17 +159,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471892374988085512}
     m_Modifications:
+    - target: {fileID: 2964798550623002169, guid: 2f9598865bbe82245911d53f589319a9, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3713676008373435140, guid: 2f9598865bbe82245911d53f589319a9, type: 3}
       propertyPath: m_Name
       value: ItemLight
       objectReference: {fileID: 0}
     - target: {fileID: 3911506900790324235, guid: 2f9598865bbe82245911d53f589319a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.116
+      value: 0.081
       objectReference: {fileID: 0}
     - target: {fileID: 3911506900790324235, guid: 2f9598865bbe82245911d53f589319a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.251
+      value: 0.016
       objectReference: {fileID: 0}
     - target: {fileID: 3911506900790324235, guid: 2f9598865bbe82245911d53f589319a9, type: 3}
       propertyPath: m_LocalPosition.z
