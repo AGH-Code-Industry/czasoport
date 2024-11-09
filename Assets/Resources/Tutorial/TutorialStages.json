@@ -34,12 +34,6 @@
     "specialCondition": "ItemInserted"
   },
   {
-    "action": "Interaction",
-    "conditionSatisfied": false,
-    "tutorialNotification": ["Press", "F", "to interact with another item (try breaking the rock)."],
-    "specialCondition": "itemInteractionPerformed"
-  },
-  {
     "action": "NextItem",
     "conditionSatisfied": true,
     "tutorialNotification": ["Press", "TAB", "to select the next slot in your inventory."]
@@ -48,6 +42,12 @@
     "action": "ChooseItem",
     "conditionSatisfied": true,
     "tutorialNotification": ["Press numbers", "1-6", "to select a specific slot."]
+  },
+  {
+    "action": "Interaction",
+    "conditionSatisfied": false,
+    "tutorialNotification": ["Press", "F", "to interact with another item (try breaking the rock)."],
+    "specialCondition": "itemInteractionPerformed"
   },
   {
     "action": "Drop",
