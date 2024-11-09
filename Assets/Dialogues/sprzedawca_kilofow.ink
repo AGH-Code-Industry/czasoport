@@ -1,7 +1,7 @@
 -> main
 
 === main ===
-This is my costumer! I'm done talking to you! Thief! What am I supposed to sell to him? Nothing?
+This is my customer! I'm done talking to you! Thief! What am I supposed to sell to him? Nothing?
 Sorry sir. Would you like something?
     *[Who are you?]
         -> seller
