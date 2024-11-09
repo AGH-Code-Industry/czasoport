@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class TeamData {
@@ -12,6 +13,8 @@ public class TeamData {
 
 [System.Serializable]
 public class CreatorsData {
+    public TeamData TeamLead;
+    public TeamData Initiator;
     public TeamData Programmers;
     public TeamData Designers;
     public TeamData Artists;
@@ -24,14 +27,20 @@ public class CreditsManager : MonoBehaviour {
     [SerializeField] private Transform container;
     [SerializeField] private Button quitButton;
 
+    [SerializeField] private AudioSource audioSource;
+
     private RectTransform rectTransform;
-    private float moveSpeed = 100f;
+    private float moveSpeed = 30f;
 
     private void Start() {
         var peopleJson = Resources.Load<TextAsset>("Credits/Creators");
         var creatorsData = JsonUtility.FromJson<CreatorsData>(peopleJson.text);
 
+        audioSource.Play();
+
         quitButton.onClick.AddListener(QuitGame);
+        SpawnRole(creatorsData.TeamLead, "Team Lead");
+        SpawnRole(creatorsData.Initiator, "Initiator");
         SpawnRole(creatorsData.Programmers, "Programmers");
         SpawnRole(creatorsData.Designers, "Designers");
         SpawnRole(creatorsData.Artists, "Artists");
@@ -57,6 +66,6 @@ public class CreditsManager : MonoBehaviour {
     }
 
     private void QuitGame() {
-        UnityEngine.Application.Quit();
+        SceneManager.LoadScene(0);
     }
 }

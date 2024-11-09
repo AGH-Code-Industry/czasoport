@@ -1,5 +1,6 @@
 using Dialogues;
 using Items;
+using LevelTimeChange.LevelsLoader;
 using NPC;
 using System.Collections;
 using System.Collections.Generic;
@@ -37,7 +38,7 @@ public class MarcusEnding : MonoBehaviour
 
     private void CheckForEndGame() {
         if (part1Provided && part2Provided && part3Provided) {
-            //End game
+            LevelsManager.Instance.EndGame();
         }
     }
 }

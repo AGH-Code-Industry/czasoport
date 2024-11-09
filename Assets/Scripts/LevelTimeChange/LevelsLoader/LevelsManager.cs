@@ -35,6 +35,7 @@ namespace LevelTimeChange.LevelsLoader {
         public Dictionary<LevelInfoSO, LevelManager> LoadedLevels;
 
         [SerializeField] private Animator animator;
+        [SerializeField] private String _endGameSceneName;
 
         private LevelManager _currentLevelManager;
         [SerializeField] private LevelInfoSO _currentLevel;
@@ -190,6 +191,10 @@ namespace LevelTimeChange.LevelsLoader {
             foreach (var scene in scenesToRemove) {
                 UnLoadLevel(scene);
             }
+        }
+
+        public void EndGame() {
+            SceneManager.LoadScene(_endGameSceneName);
         }
 
         public void LoadPersistentData(GameData gameData) {

@@ -47,6 +47,7 @@ public class Minigame_mining : MonoBehaviour
             _minigameCanvas.SetActive(false);
             FindObjectOfType<MiningQuestInit>().transform.tag = "Untagged";
             FindObjectOfType<MiningQuestInit>().GetComponent<SpriteRenderer>().sprite = _shovelDone;
+            FindObjectOfType<MiningQuestInit>().transform.GetChild(0)?.gameObject.SetActive(false);
         }
         _audioSource.Play();
     }

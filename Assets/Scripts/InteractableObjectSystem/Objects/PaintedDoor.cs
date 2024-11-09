@@ -66,12 +66,7 @@ namespace InteractableObjectSystem.Objects {
         private void ChangeState(DoorColor newState, bool createBucket = true) {
             Item i;
             _state = newState;
-            if (createBucket) {
-                i = Instantiate(emptyBucket.prefab, transform).GetComponent<Item>();
-                i.transform.localPosition = new Vector3(0.338f, -0.65f, 0f);
-                i.ID = emptyBuckets[bucketsCounter];
-                bucketsCounter++;
-            }
+
             switch (_state) {
                 case DoorColor.Gray:
                     _spriteRenderer.color = new Color(1f, 1f, 1f);

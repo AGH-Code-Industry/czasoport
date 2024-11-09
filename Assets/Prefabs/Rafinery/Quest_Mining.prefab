@@ -139,7 +139,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 55101148881373318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39d50096c524de341a0cc330e681dfa3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d7ecb6d44067f8439ba424dfce81f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _stones:
@@ -151,16 +151,16 @@ MonoBehaviour:
   - {fileID: 1543576959753130489}
   - {fileID: 802755049426048071}
   - {fileID: 6315796138859880692}
-  _minigameCanvas: {fileID: 55101148881373318}
+  _minigameCanvas: {fileID: 5799338778130605673}
   _empty: {fileID: -60999290, guid: 866a3207602b89d42995721038e8cb71, type: 3}
   _gemSprite: {fileID: 21300000, guid: 1c29123f90b26fe4a84a546e1a4af5dc, type: 3}
-  _player: {fileID: 7020438934670847311, guid: 2c4b00d23f1dafd44987d072862844c7, type: 3}
-  _gemPrefab: {fileID: 7203208433283981420, guid: 1b7098ee4402c0a469923bb2215cb78a, type: 3}
+  _player: {fileID: 0}
+  _gemPrefab: {fileID: 0}
   _sfxes:
-  - {fileID: 8300000, guid: 5b5918af5823b9a41b6cfd5a20e24020, type: 3}
-  - {fileID: 8300000, guid: 37ead2922937ad54dbe4983daccb3bb3, type: 3}
-  _audioSource: {fileID: 6009200275432111864}
-  _shovelDone: {fileID: -656957328, guid: 853d93eb8dcc72d4c9154ce0fc9c0f11, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  _audioSource: {fileID: 0}
+  _shovelDone: {fileID: 0}
 --- !u!1 &656492041802060465
 GameObject:
   m_ObjectHideFlags: 0

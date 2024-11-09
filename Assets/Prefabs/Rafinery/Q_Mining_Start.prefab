@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 1.453125, y: 2.109375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &4978293344850038499
@@ -144,8 +144,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8001477184514308628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4bf4b9397537b54c91949020ffbe028, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dee13c68a97ef844a7628f8223f02bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   definition: {fileID: 11400000, guid: 2c82a2826600d6247b09e06a8886d519, type: 2}
-  _miningQuestGO: {fileID: 55101148881373318, guid: 209713c4f6f31254e8f11973c09fad1f, type: 3}
+  _miningQuestGO: {fileID: 0}

@@ -387,7 +387,7 @@ namespace InventorySystem {
                     item.Hidden = false;
                     item.transform.parent = FindTransformOfCurrentTime();
                     item.transform.position = FindObjectOfType<Player>().gameObject.transform.position;
-                    if (item.transform.GetChild(0) != null) {
+                    if (item.transform.childCount > 0 && item.transform.GetChild(0) != null) {
                         item.transform.GetChild(0).gameObject.SetActive(true);
                     }
                     item.GetComponent<SpriteRenderer>().enabled = true;
